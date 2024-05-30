@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper myclass">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>마이페이지</h2>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">my class</a>
+            <a href="#">나의 정보</a>
+            <a href="#">나의 문의</a>
+            <a href="#">게시물 관리</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="tabs">
+          <div class="tab">
+            <ul>
+              <li class="active"><a href="#tab1">즐겨찾기</a></li>
+              <li><a href="#tab2">스크랩</a></li>
+              <li><a href="#tab3">내자료</a></li>
+            </ul>
+          </div>
+          <div class="pane-wrap">
+            <div id="tab1" class="pane">
+              <div class="sub-tabs">
+                <div class="tab">
+                  <ul>
+                    <li class="active"><a href="#tab1-1">초등</a></li>
+                    <li><a href="#tab1-2">중학</a></li>
+                    <li><a href="#tab1-3">고등</a></li>
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab1-1" class="pane">
+                    <section class="myclass-section fluid-vertical">
+                      <select name="" id="" class="size-xl fluid">
+                        <option value="">전체</option>
+                        <option value="">미래엔 교과서</option>
+                        <option value="">타사 교과서</option>
+                        <option value="">미래엔 서비스</option>
+                        <option value="">링크 즐겨찾기</option>
+                      </select>
+                      <div class="box-caution">
+                        <i class="icon size-md">
+                          <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                        </i>
+                        <div>
+                          <p>즐겨찾기 편집은 '즐겨찾기 설정'버튼을 통해서 진행해 주세요.</p>
+                          <button class="button size-sm margin-top-sm">
+                            <svg>
+                              <title>아이콘 - icon-setting</title>
+                              <use href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                            </svg> 즐겨찾기 설정 </button>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="myclass-section">
+                      <div class="list-wrap">
+                        <div class="list-title">
+                          <h4>미래엔 교과서</h4>
+                          <strong class="semi badge size-md mix-round primary-lighten">2</strong>
+                        </div>
+                        <div class="list-items type-box">
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">1</span>
+                            <div>
+                              <p class="text-xs">미래엔</p>
+                              <ul class="divider-group type-brace text-black">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>교과서명</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">2</span>
+                            <div>
+                              <p class="text-xs">미래엔</p>
+                              <ul class="divider-group type-brace text-black">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>교과서명</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-wrap">
+                        <div class="list-title">
+                          <h4>타사 교과서</h4>
+                          <strong class="semi badge size-md mix-round primary-lighten">3</strong>
+                        </div>
+                        <div class="list-items type-box">
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">1</span>
+                            <div>
+                              <p class="text-xs">출판사명 최대 10자</p>
+                              <ul class="divider-group type-brace text-black">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>교과서명</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">2</span>
+                            <div>
+                              <p class="text-xs">출판사명 최대 10자</p>
+                              <ul class="divider-group type-brace text-black">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>교과서명</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">3</span>
+                            <div>
+                              <p class="text-xs">출판사명 최대 10자</p>
+                              <ul class="divider-group type-brace text-black">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>교과서명</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-wrap">
+                        <div class="list-title">
+                          <h4>엠티처 서비스</h4>
+                          <strong class="semi badge size-md mix-round primary-lighten">10</strong>
+                        </div>
+                        <div class="list-items type-box">
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">1</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>기초학력</li>
+                              <li>기초학습지</li>
+                              <li>N학기</li>
+                              <li>교과서명</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">2</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">3</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">4</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">5</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">6</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">7</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">8</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">9</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">10</span>
+                            <ul class="divider-group type-brace text-black">
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                              <li>4Depth Name</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-wrap">
+                        <div class="list-title">
+                          <h4>링크 즐겨찾기</h4>
+                          <strong class="semi badge size-md mix-round primary-lighten">3</strong>
+                        </div>
+                        <div class="list-items type-box">
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">1</span>
+                            <p class="text-black">나만의 즐겨찾기 이름</p>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">2</span>
+                            <p class="text-black">나만의 즐겨찾기 이름 최대 25자까지 출력</p>
+                          </div>
+                          <div class="item">
+                            <span class="badge size-md type-rounded fill-light">3</span>
+                            <p class="text-black">긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div id="tab1-2" class="pane">
+                    <section class="myclass-section fluid-vertical">
+                      <select name="" id="" class="size-xl fluid">
+                        <option value="">전체</option>
+                        <option value="">미래엔 교과서</option>
+                        <option value="">미래엔 서비스</option>
+                        <option value="">링크 즐겨찾기</option>
+                      </select>
+                      <div class="box-caution">
+                        <i class="icon size-md">
+                          <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                        </i>
+                        <div>
+                          <p>즐겨찾기 편집은 '즐겨찾기 설정'버튼을 통해서 진행해 주세요.</p>
+                          <button class="button size-sm margin-top-sm">
+                            <svg>
+                              <title>아이콘 - icon-setting</title>
+                              <use href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                            </svg> 즐겨찾기 설정 </button>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="myclass-section">
+                      <div class="box-no-data">
+                        <p class="title">자주 이용하는 교과서 및 서비스를<br />즐겨찾기 등록해 보세요.</p>
+                        <p class="desc">수업 자료 이용이 더욱 편리해 집니다.</p>
+                      </div>
+                    </section>
+                  </div>
+                  <div id="tab1-3" class="pane">
+                    <section class="myclass-section fluid-vertical">
+                      <select name="" id="" class="size-xl fluid">
+                        <option value="">전체</option>
+                        <option value="">미래엔 교과서</option>
+                        <option value="">미래엔 서비스</option>
+                        <option value="">링크 즐겨찾기</option>
+                      </select>
+                      <div class="box-caution">
+                        <i class="icon size-md">
+                          <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                        </i>
+                        <div>
+                          <p>즐겨찾기 편집은 '즐겨찾기 설정'버튼을 통해서 진행해 주세요.</p>
+                          <button class="button size-sm margin-top-sm">
+                            <svg>
+                              <title>아이콘 - icon-setting</title>
+                              <use href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                            </svg> 즐겨찾기 설정 </button>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="myclass-section">
+                      <div class="box-no-data">
+                        <p class="title">자주 이용하는 교과서 및 서비스를<br />즐겨찾기 등록해 보세요.</p>
+                        <p class="desc">수업 자료 이용이 더욱 편리해 집니다.</p>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab2" class="pane">
+              <div class="sub-tabs">
+                <div class="tab">
+                  <ul>
+                    <li class="active"><a href="#tab2-1">교과서 자료</a></li>
+                    <li><a href="#tab2-2">게시글</a></li>
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab2-1" class="pane">
+                    <section class="myclass-section fluid-vertical type-border">
+                      <div class="box-caution">
+                        <i class="icon size-md">
+                          <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                        </i>
+                        <p>자료 삭제는 PC에서만 가능합니다.</p>
+                      </div>
+                      <div class="box-no-data">
+                        <p class="title">자료가 없습니다.</p>
+                      </div>
+                      <div class="list-items type-box">
+                        <div class="item">
+                          <div class="info-wrap">
+                            <p class="text-xs text-black">공통자료</p>
+                            <a href="#"><strong class="semi ellipsis-single text-black">자료명이 노출됩니다. 최대 한 줄 까지 노출됩니다.</strong></a>
+                            <ul class="divider-group type-brace text-xs">
+                              <li>초등</li>
+                              <li>####개정</li>
+                              <li>N학년</li>
+                              <li>N학기</li>
+                              <li>과목명</li>
+                              <li>대단원</li>
+                            </ul>
+                          </div>
+                          <div class="buttons extra">
+                            <button type="button" class="button size-sm type-icon" onclick="window.open('#')">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg>
+                            </button>
+                            <button class="button size-sm type-icon">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="info-wrap">
+                            <p class="text-xs text-black">공통자료</p>
+                            <a href="#"><strong class="semi ellipsis-single text-black">자료명이 노출됩니다. 최대 한 줄 까지 노출됩니다.</strong></a>
+                            <ul class="divider-group type-brace text-xs">
+                              <li>초등</li>
+                              <li>####개정</li>
+                              <li>N학년</li>
+                              <li>N학기</li>
+                              <li>과목명</li>
+                              <li>대단원</li>
+                            </ul>
+                          </div>
+                          <div class="buttons extra">
+                            <button type="button" class="button size-sm type-icon" onclick="window.open('#')">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg>
+                            </button>
+                            <button class="button size-sm type-icon">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="info-wrap">
+                            <p class="text-xs text-black">공통자료</p>
+                            <a href="#"><strong class="semi ellipsis-single text-black">자료명이 노출됩니다. 최대 한 줄 까지 노출됩니다.</strong></a>
+                            <ul class="divider-group type-brace text-xs">
+                              <li>초등</li>
+                              <li>####개정</li>
+                              <li>N학년</li>
+                              <li>N학기</li>
+                              <li>과목명</li>
+                              <li>대단원</li>
+                            </ul>
+                          </div>
+                          <div class="buttons extra">
+                            <button type="button" class="button size-sm type-icon" onclick="window.open('#')">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg>
+                            </button>
+                            <button class="button size-sm type-icon">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="info-wrap">
+                            <p class="text-xs text-black">공통자료</p>
+                            <a href="#"><strong class="semi ellipsis-single text-black">자료명이 노출됩니다. 최대 한 줄 까지 노출됩니다.</strong></a>
+                            <ul class="divider-group type-brace text-xs">
+                              <li>초등</li>
+                              <li>####개정</li>
+                              <li>N학년</li>
+                              <li>N학기</li>
+                              <li>과목명</li>
+                              <li>대단원</li>
+                            </ul>
+                          </div>
+                          <div class="buttons extra">
+                            <button type="button" class="button size-sm type-icon" onclick="window.open('#')">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg>
+                            </button>
+                            <button class="button size-sm type-icon">
+                              <svg>
+                                <use href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pagination">
+                        <button class="icon-button icon-first" disabled="">
+                          <svg>
+                            <title>첫페이지 아이콘</title>
+                            <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                          </svg>
+                        </button>
+                        <button class="icon-button icon-prev" disabled="">
+                          <svg>
+                            <title>이전 아이콘</title>
+                            <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                          </svg>
+                        </button>
+                        <button>1</button>
+                        <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                        <button class="current">2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button class="icon-button icon-next">
+                          <svg>
+                            <title>다음 아이콘</title>
+                            <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                          </svg>
+                        </button>
+                        <button class="icon-button icon-last">
+                          <svg>
+                            <title>마지막페이지 아이콘</title>
+                            <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </section>
+                  </div>
+                  <div id="tab2-2" class="pane">
+                    <section class="myclass-section fluid-vertical type-border">
+                      <div class="box-caution">
+                        <i class="icon size-md">
+                          <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                        </i>
+                        <p>자료 삭제는 PC에서만 가능합니다.</p>
+                      </div>
+                    </section>
+                    <div class="box-no-data">
+                      <p class="title">게시물이 없습니다.</p>
+                    </div>
+                    <div class="board-items scrap-post">
+                      <div class="item">
+                        <div class="item-inner">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')">
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm">
+                              <svg>
+                                <title>아이콘 공유하기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg> 공유하기 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')">
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm">
+                              <svg>
+                                <title>아이콘 공유하기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg> 공유하기 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="item-inner">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')">
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm">
+                              <svg>
+                                <title>아이콘 다운로드</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                              </svg> 다운로드 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')">
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm">
+                              <svg>
+                                <title>아이콘 다운로드</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                              </svg> 다운로드 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="item-inner">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')" disabled>
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm">
+                              <svg>
+                                <title>아이콘 다운로드</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                              </svg> 다운로드 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="item-inner">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')" disabled>
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm">
+                              <svg>
+                                <title>아이콘 공유하기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg> 공유하기 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="item-inner">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')">
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm" disabled>
+                              <svg>
+                                <title>아이콘 다운로드</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                              </svg> 다운로드 </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="item-inner">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="inner-wrap">
+                          <div class="text-wrap">
+                            <p class="title">제목이 노출됩니다. 최대 2줄까지 노출됩니다. 2출 초과시 말줄임 표기가 됩니다.</p>
+                            <ul class="divider-group type-brace">
+                              <li>학교급</li>
+                              <li>1Depth Name</li>
+                              <li>2Depth Name</li>
+                              <li>3Depth Name</li>
+                            </ul>
+                          </div>
+                          <div class="buttons fluid">
+                            <button type="button" class="button size-sm" onclick="window.open('#')">
+                              <svg>
+                                <title>아이콘 돋보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                              </svg> 미리보기 </button>
+                            <button type="button" class="button size-sm" disabled>
+                              <svg>
+                                <title>아이콘 공유하기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                              </svg> 공유하기 </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pagination">
+                      <button class="icon-button icon-first" disabled="">
+                        <svg>
+                          <title>첫페이지 아이콘</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button icon-prev" disabled="">
+                        <svg>
+                          <title>이전 아이콘</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                        </svg>
+                      </button>
+                      <button>1</button>
+                      <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                      <button class="current">2</button>
+                      <button>3</button>
+                      <button>4</button>
+                      <button>5</button>
+                      <button class="icon-button icon-next">
+                        <svg>
+                          <title>다음 아이콘</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button icon-last">
+                        <svg>
+                          <title>마지막페이지 아이콘</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab3" class="pane">
+              <form action="" class="my-data">
+                <fieldset class="no-margin">
+                  <select name="" id="" class="size-sm" disabled>
+                    <option value="" selected>초등</option>
+                  </select>
+                  <select name="" id="" class="size-sm">
+                    <option value="" selected>개정 전체</option>
+                    <option value="">2015</option>
+                    <option value="">2022</option>
+                  </select>
+                  <select name="" id="" class="size-sm">
+                    <option value="" selected>학년 전체</option>
+                    <option value="">1학년</option>
+                    <option value="">2학년</option>
+                    <option value="">3학년</option>
+                    <option value="">4학년</option>
+                    <option value="">5학년</option>
+                    <option value="">6학년</option>
+                  </select>
+                </fieldset>
+                <fieldset class="no-margin">
+                  <select name="" id="" class="size-sm">
+                    <option value="" selected>과목 전체</option>
+                    <option value="">국어</option>
+                    <option value="">영어</option>
+                    <option value="">수학</option>
+                    <option value="">사회</option>
+                    <option value="">과학</option>
+                  </select>
+                  <select name="" id="" class="size-sm">
+                    <option value="" selected>교과서 전체</option>
+                    <option value="">미래엔 교과서</option>
+                    <option value="">타사 교과서</option>
+                    <option value="">천재 교과서</option>
+                  </select>
+                </fieldset>
+                <fieldset class="no-margin">
+                  <input type="search" name="" id="" class="size-sm" placeholder="검색어를 입력해 주세요">
+                  <button class="button size-sm type-gray" title="검색">검색</button>
+                </fieldset>
+              </form>
+              <section class="myclass-section type-border">
+                <div class="box-caution">
+                  <i class="icon size-md">
+                    <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                  </i>
+                  <p>자료 삭제와 내 링크 등록은 PC에서만 가능합니다.</p>
+                </div>
+                <div class="box-no-data">
+                  <p class="title">등록된 내 자료가 없습니다.</p>
+                </div>
+                <div class="list-items type-box">
+                  <div class="item">
+                    <div class="info-wrap">
+                      <span class="badge fill-secondary type-round-box text-xxxs">나만보기</span>
+                      <p class="text-black margin-top-sm"><strong class="semi">자료등록시 입력한 자료명이 노출됩니다.</strong></p>
+                      <ul class="divider-group type-brace text-xs margin-top-sm">
+                        <li>학교급</li>
+                        <li>####개정</li>
+                        <li>N학년</li>
+                        <li>N학기</li>
+                        <li>단원</li>
+                        <li>차시</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="info-wrap">
+                      <span class="badge fill-green type-round-box text-xxxs">함께보기</span>
+                      <p class="text-black margin-top-sm"><strong class="semi">자료등록시 입력한 자료명이 노출됩니다.</strong></p>
+                      <ul class="divider-group type-brace text-xs margin-top-sm">
+                        <li>학교급</li>
+                        <li>####개정</li>
+                        <li>N학년</li>
+                        <li>N학기</li>
+                        <li>단원</li>
+                        <li>차시</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="info-wrap">
+                      <span class="badge fill-secondary type-round-box text-xxxs">나만보기</span>
+                      <p class="text-black margin-top-sm"><strong class="semi">자료등록시 입력한 자료명이 노출됩니다. 최대 30자까지 노출됩니다.</strong></p>
+                      <ul class="divider-group type-brace text-xs margin-top-sm">
+                        <li>학교급</li>
+                        <li>####개정</li>
+                        <li>N학년</li>
+                        <li>N학기</li>
+                        <li>단원</li>
+                        <li>차시</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="info-wrap">
+                      <span class="badge fill-green type-round-box text-xxxs">함께보기</span>
+                      <p class="text-black margin-top-sm"><strong class="semi">자료등록시 입력한 자료명이 노출됩니다. 최대 30자까지 노출됩니다.</strong></p>
+                      <ul class="divider-group type-brace text-xs margin-top-sm">
+                        <li>학교급</li>
+                        <li>####개정</li>
+                        <li>N학년</li>
+                        <li>N학기</li>
+                        <li>단원</li>
+                        <li>차시</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <button class="icon-button icon-first" disabled="">
+                    <svg>
+                      <title>첫페이지 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-button icon-prev" disabled="">
+                    <svg>
+                      <title>이전 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                    </svg>
+                  </button>
+                  <button>1</button>
+                  <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                  <button class="current">2</button>
+                  <button>3</button>
+                  <button>4</button>
+                  <button>5</button>
+                  <button class="icon-button icon-next">
+                    <svg>
+                      <title>다음 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-button icon-last">
+                    <svg>
+                      <title>마지막페이지 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

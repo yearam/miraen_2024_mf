@@ -1,0 +1,66 @@
+.policy-wrap {
+  padding-top: 80px;
+  border-top: 2px solid #000;
+}
+.policy-wrap .inner {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000;
+}
+.policy-wrap .desc {
+  text-align: center;
+}
+.policy-wrap .desc .title {
+  margin-top: 56px;
+  font-size: 34px;
+}
+.policy-wrap .desc p {
+  margin-top: 56px;
+}
+.policy-wrap .desc img {
+  width: 268px;
+}
+.policy-wrap .desc > span {
+  display: inline-block;
+  margin-top: 56px;
+  padding: 18px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+.policy-wrap ol {
+  margin-top: 56px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.policy-wrap ol li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+  border-bottom: 1px dashed #d2d2d2;
+}
+.policy-wrap ol li.align-top {
+  align-items: flex-start;
+  border-bottom: none;
+}
+.policy-wrap ol li .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+  background-color: var(--color-primary-400);
+  border-radius: 100%;
+}
+.policy-wrap ol li div {
+  width: calc(100% - 100px);
+}
+.policy-wrap .thank {
+  margin-top: 56px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}

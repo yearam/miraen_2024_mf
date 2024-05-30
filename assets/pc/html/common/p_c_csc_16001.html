@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <header class="header util-menu">
+        <div class="header-inner">
+          <div class="header-inner">
+            <div class="common-nav">
+              <a href="#" target="_blank">초등</a>
+              <a href="#" target="_blank">중학</a>
+              <a href="#" target="_blank">고등</a>
+              <div class="dropdown">
+                <button type="button"> 교과서 홍보관 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                  </svg>
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="#">엠티처 바로 접속</a>
+              <a href="#">즐겨찾기 추가</a>
+            </div>
+            <div class="common-nav">
+              <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                  <title>아이콘 - icon-play-rounded</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="aiclass">AI Class</a>
+              <a href="#" target="_blank" class="mkaive">M카이브</a>
+              <a href="#">로그아웃</a>
+              <a href="#" target="_blank">마이페이지</a>
+              <a href="#" target="_blank">고객센터</a>
+              <a href="#" target="_blank">이벤트</a>
+            </div>
+          </div>
+        </div>
+        <div class="util-wrap">
+          <div class="inner">
+            <h1 class="util-logo">
+              <div class="dropdown">
+                <button type="button" class="button type-text">
+                  <img src="/assets/images/common/logo-common.svg" alt="엠티처 로고" />
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중학"> 중학 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="고등"> 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div> 고객센터
+            </h1>
+            <div class="search-box">
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요">
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search-lg"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <!-- !NOTE : 기존 .header-inner class를 .gnb-wrap로 변경하여 스타일 수정 하였습니다. -->
+          <div class="gnb-wrap">
+            <!-- !NOTE : 기존 .gnb-wrap class를 .gnb-inner로 변경하여 스타일 수정 하였습니다. -->
+            <div class="gnb-inner">
+              <!-- !NOTE : 
+            1차 오픈을 위해 필터링 스크립트 처리 되어 있습니다. 교과서 이미지명 데이터가 들어가면 필터링 처리 됩니다.  데이터 바인딩 후 data- 접두사 붙어 있는 attribute는 삭제하시면 됩니다.
+          -->
+              <nav class="gnb">
+                <ul>
+                  <li class="active">
+                    <a href="#">공지사항</a>
+                  </li>
+                  <li>
+                    <a href="#">서비스안내</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">1:1 문의</a>
+                  </li>
+                  <li>
+                    <a href="#">필수 프로그램</a>
+                  </li>
+                  <li>
+                    <a href="#">전국 지사 안내</a>
+                  </li>
+                  <li>
+                    <a href="#">이벤트</a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- // gnb -->
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <main id="main-contents">
+          <div class="page-header">
+            <h2>필수 프로그램</h2>
+          </div>
+          <h3 class="title-check no-margin">교사 인증, 파일 다운로드 프로그램</h3>
+          <ul class="program-info-list">
+            <li>
+              <i class="icon"><img src="/assets/images/common/icon-gpki.svg" alt="GPKI 이미지"></i>
+              <div>
+                <p class="title">GPKI (EPKI)</p>
+                <p>교사인증을 위해 필요한 설치 프로그램 입니다.</p>
+              </div>
+              <button class="button type-icon">
+                <svg>
+                  <title>아이콘 다운로드</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <i class="icon"><img src="/assets/images/common/icon-k-solution.svg" alt="k solution 이미지"></i>
+              <div>
+                <p class="title">K Solution</p>
+                <p>교과자료 다운로드를 하기 위해 필요한 프로그램입니다.</p>
+              </div>
+              <a href="#" target="_blank" class="button type-text">
+                <svg>
+                  <title>아이콘 바로가기</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <h3 class="title-check margin-top">자료를 보기 위한 프로그램</h3>
+          <ul class="program-info-list">
+            <li>
+              <i class="icon"><img src="/assets/images/common/icon-hangul-lg.svg" alt="한컴 오피스뷰어 이미지"></i>
+              <div>
+                <p class="title">한컴오피스 뷰어</p>
+                <p>한글 문서를 열람하기 위해 필요한 프로그램입니다.</p>
+              </div>
+              <a href="https://www.hancom.com/cs_center/csDownload.do" target="_blank" class="button type-text">
+                <svg>
+                  <title>아이콘 바로가기</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <i class="icon"><img src="/assets/images/common/icon-ppt-lg.svg" alt="파워포인트 이미지"></i>
+              <div>
+                <p class="title">Microsoft<br />PowerPoint Viewer</p>
+                <p>PPT 문서를 열람하기 위해 필요한 프로그램입니다.</p>
+              </div>
+              <a href="https://www.microsoft.com/ko-kr/microsoft-365/powerpoint" target="_blank" class="button type-text">
+                <svg>
+                  <title>아이콘 바로가기</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <i class="icon"><img src="/assets/images/common/icon-pdf-lg.svg" alt="pdf 이미지"></i>
+              <div>
+                <p class="title">Adobe Reader</p>
+                <p>PDF 문서를 열람하기 위해 필요한 프로그램입니다.</p>
+              </div>
+              <a href="https://get.adobe.com/kr/reader/" target="_blank" class="button type-text">
+                <svg>
+                  <title>아이콘 바로가기</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <i class="icon"><img src="/assets/images/common/icon-media-lg.svg" alt="media 이미지"></i>
+              <div>
+                <p class="title">Windows Media Player</p>
+                <p>동영상 강의를 듣기 위해 필요한 프로그램입니다.</p>
+              </div>
+              <a href="https://support.microsoft.com/ko-kr/windows/windows-media-player-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-81718e0d-cfce-25b1-aee3-94596b658287" target="_blank" class="button type-text">
+                <svg>
+                  <title>아이콘 바로가기</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>

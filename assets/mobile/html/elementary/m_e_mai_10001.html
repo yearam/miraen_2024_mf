@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <link href="../../../mobile/css/main.css" rel="stylesheet" />
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-elementary">
+    <div class="wrapper">
+      <header class="">
+        <nav class="navigation-bar">
+          <div class="box-left">
+            <!-- !NOTE : 개발반영 위해 주석처리 target-obj="sitemap" -->
+            <button type="button" target-obj="sitemap">
+              <svg>
+                <title>메뉴 아이콘</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-menu"></use>
+              </svg> 메뉴 </button>
+            <button type="button">
+              <svg>
+                <title>검색 아이콘</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+              </svg> 검색 </button>
+          </div>
+          <a href="#" class="home">
+            <svg>
+              <title>홈 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-home-lined"></use>
+            </svg> 홈 </a>
+          <div class="box-right">
+            <button type="button" target-obj="history">
+              <svg>
+                <title>열람이력 아이콘</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-history"></use>
+              </svg> 열람이력 </button>
+            <button type="button">
+              <svg>
+                <title>마이페이지 아이콘</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-user"></use>
+              </svg> 마이 </button>
+          </div>
+        </nav>
+        <section class="header-bar">
+          <a href="/" class="logo">
+            <img src="/assets/images/common/logo-elementary.svg" alt="엠티처 초등">
+          </a>
+          <button class="icon-button">
+            <svg>
+              <title>아이콘 - icon-setting</title>
+              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-user"></use>
+            </svg>
+          </button>
+        </section>
+        <section class="gnb">
+          <nav>
+            <a href="#" class="active">홈</a>
+            <!-- !NOTE : 즐겨찾기 등록된 메뉴에는 .flag-bookmark 가 붙습니다. -->
+            <a href="#" class=" flag-bookmark">교과활동</a>
+            <a href="#" class="">평가자료</a>
+            <a href="#" class="">기초학력</a>
+            <a href="#" class="">특화자료실</a>
+            <a href="#" class="">창의적 체험활동</a>
+            <a href="#" class="">쉬는시간</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 초등 특화자료실 -->
+      <!-- 초등 창체 -->
+      <!-- 초등 쉬는시간 -->
+      <!-- 초등 기초학력  -->
+      <!-- 초등 교과 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <!-- !NOTE : menu에 page구분자 넣어주세요 -->
+      <main id="main-contents">
+        <section class="tabs">
+          <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+          <div class="tab">
+            <ul>
+              <li class="active"><a href="#tab1-1">즐겨찾기</a></li> <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+              <li><a href="#tab1-2">AI 클래스</a></li>
+            </ul>
+          </div>
+          <div class="pane-wrap">
+            <div id="tab1-1" class="pane">
+              <!-- tab content -->
+              <div class="bookmark-wrap fluid">
+                <div class="split-container">
+                  <h3>나의 즐겨찾기</h3>
+                  <div class="extra">
+                    <a href="/" class="button size-sm"> 설정하기 <svg>
+                        <title>아이콘 - icon-setting</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="slides">
+                  <div class="swiper-wrapper">
+                    <!-- case 1/4 교과 : 관리자에서 이미지를 등록해서 출력됩니다.-->
+                    <div class="swiper-slide">
+                      <div class="item-box">
+                        <img src="/assets/images/temp/img-subject02.png" alt="국어" class="cover">
+                      </div>
+                      <div class="buttons">
+                        <a href="#" class="button size-sm">수업하기</a>
+                        <a href="#" class="button size-sm">평가자료</a>
+                      </div>
+                    </div>
+                    <!-- case 2/4 타사 : 관리자에서 배경 컬러값을 받아서 넣는다고 합니다. 기본은 그린컬러가 깔립니다.-->
+                    <div class="swiper-slide">
+                      <div class="item-box" style="background-color: #fae9d9;">
+                        <img src="/assets/images/elementary/icon-main-test-reference.svg" alt="평가 자료실 아이콘">
+                        <div class="item-inner">
+                          <p class="title">수학 3-1</p>
+                          <p>아이스크림</p>
+                          <p>(홍길동)</p>
+                        </div>
+                      </div>
+                      <div class="buttons">
+                        <a href="#" class="button size-sm">바로가기</a>
+                      </div>
+                    </div>
+                    <!-- case 3/4 자사외부 : 아이콘, 사용자가 작성한 제목정보 25자-->
+                    <div class="swiper-slide">
+                      <div class="item-box">
+                        <img src="/assets/images/common/logo-alclass.svg" alt="우리 반 학습관리 솔루션 아이콘">
+                        <div class="item-inner text-dark"> 서비스명이 들어갑니다. </div>
+                      </div>
+                      <div class="buttons">
+                        <a href="#" class="button size-sm">바로가기</a>
+                      </div>
+                    </div>
+                    <!-- case 4/4 링크즐겨찾기 : 아이콘, 사용자가 작성한 제목정보 25자-->
+                    <div class="swiper-slide">
+                      <div class="item-box">
+                        <img src="/assets/images/common/logo-mchive.svg" alt="아이콘">
+                        <div class="item-inner">
+                          <p class="title">수학 3-1</p>
+                          <p>아이스크림</p>
+                          <p>(홍길동)</p>
+                        </div>
+                      </div>
+                      <div class="buttons">
+                        <a href="#" class="button size-sm">바로가기</a>
+                      </div>
+                    </div>
+                    <!-- 자사수학 -->
+                    <div class="swiper-slide">
+                      <div class="item-box">
+                        <img src="/assets/images/temp/img-subject03.png" alt="수학" class="cover">
+                      </div>
+                      <div class="buttons">
+                        <a href="#" class="button size-sm">수업하기</a>
+                        <a href="#" class="button size-sm">평가자료</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab1-2" class="pane">
+              <!-- tab content -->
+            </div>
+          </div>
+        </section>
+        <section class="slider-banner type-thick fluid">
+          <!-- !NOTE
+            1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+            2. .banner-inner, .button은 임시 display: none; 되어 있습니다.
+          -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="swiper-slide">
+                <div class="banner-inner">
+                  <span class="text-xs">반려견과 함께하는</span>
+                  <h2>학교종이 댕댕댕</h2>
+                  <p class="desc"> 반려동물 에티켓을 배우셨다면,<br /> 참여 후기를 남겨 주세요! </p>
+                </div>
+                <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+              </a>
+              <a href="#" class="swiper-slide">
+                <div class="banner-inner">
+                  <span class="text-xs">반려견과 함께하는</span>
+                  <h2>학교종이 댕댕댕</h2>
+                  <p class="desc"> 반려동물 에티켓을 배우셨다면,<br /> 참여 후기를 남겨 주세요! </p>
+                </div>
+                <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+              </a>
+              <a href="#" class="swiper-slide">
+                <div class="banner-inner">
+                  <span class="text-xs">반려견과 함께하는</span>
+                  <h2>학교종이 댕댕댕</h2>
+                  <p class="desc"> 반려동물 에티켓을 배우셨다면,<br /> 참여 후기를 남겨 주세요! </p>
+                </div>
+                <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="board-list type-thick fluid">
+          <div class="buttons type-rounded scrollable-x">
+            <!--/-- !NOTE 기본 라운드형 버튼 --//-->
+            <button type="button" class="button active">오늘의 수업</button>
+            <button type="button" class="button">쉬는시간</button>
+            <button type="button" class="button">음악제제듣기</button>
+            <button type="button" class="button">학급경영</button>
+            <button type="button" class="button">쉬는시간</button>
+          </div>
+          <div class="padding-side">
+            <div class="board-items">
+              <a href="#" class="item">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-recomend01.png" alt="">
+                </div>
+                <div class="inner-wrap">
+                  <span class="badge text-elementary size-md">국어 3-1 나</span>
+                  <ul class="divider-group">
+                    <li>1-(1) 단원</li>
+                    <li>12 차시</li>
+                  </ul>
+                  <p class="title">제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다. 제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다.</p>
+                </div>
+              </a>
+              <a href="#" class="item">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-recomend01.png" alt="">
+                </div>
+                <div class="inner-wrap">
+                  <span class="badge text-elementary size-md">국어 3-1 나</span>
+                  <ul class="divider-group">
+                    <li>1-(1) 단원</li>
+                    <li>12 차시</li>
+                  </ul>
+                  <p class="title">제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다. 제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다.</p>
+                </div>
+              </a>
+              <a href="#" class="item">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-recomend01.png" alt="">
+                </div>
+                <div class="inner-wrap">
+                  <span class="badge text-elementary size-md">국어 3-1 나</span>
+                  <ul class="divider-group">
+                    <li>1-(1) 단원</li>
+                    <li>12 차시</li>
+                  </ul>
+                  <p class="title">제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다. 제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다.</p>
+                </div>
+              </a>
+              <a href="#" class="item">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-recomend01.png" alt="">
+                  <!-- case 1 badge : 해당 콘텐츠가 동영상일 경우, 본 영역 내 영상 재생시간정보 출력.-->
+                  <span class="badge type-round-box">59:59</span>
+                </div>
+                <div class="inner-wrap">
+                  <span class="badge text-elementary size-md">텍스트가 길 경우 한줄표기가 됩니다 텍스트가 길 경우 한줄표기가 됩니다</span>
+                  <ul class="divider-group">
+                    <li>1-(1) 단원</li>
+                    <li>12 차시</li>
+                  </ul>
+                  <p class="title">제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다. 제목이 들어갑니다. 2줄까지 표현되고 말줄임 처리 됩니다.</p>
+                </div>
+              </a>
+              <button class="more-button button">
+                <svg>
+                  <title>아이콘 - icon-reload</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                </svg> 다음 컨텐츠 보기 <span>1<em>/4</em></span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="edu-slider type-thick fluid">
+          <div class="split-container">
+            <h3>계기교육</h3>
+            <div class="extra">
+              <a href="/" class="button size-sm"> 더보기 <svg>
+                  <title>아이콘 - icon-chevron-right</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="slider-header">
+            <h4>8월 재충전의 달</h4>
+          </div>
+          <div class="slides">
+            <div class="swiper-wrapper">
+              <a href="/" class="swiper-slide">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-sample01.png" alt="" />
+                  <span class="badge type-round-box">12월 28일</span>
+                </div>
+                <div class="inner-wrap">
+                  <p class="text-primary">국가안보</p>
+                  <p class="title">제목이 들어갑니다.제목이 들어갑니다.제목이 들어갑니다.제목이 들어갑니다.제목이 들어갑니다.</p>
+                  <p class="desc">안전한 TV에서 제공하는 워터파크 물놀이 안전수칙에 대한 영상 감상, 물놀이 안전수칙에 대한</p>
+                  <p class="summary">EBS 키즈</p>
+                </div>
+              </a>
+              <a href="/" class="swiper-slide">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-sample02.png" alt="" />
+                  <span class="badge type-round-box">12월 28일</span>
+                </div>
+                <div class="inner-wrap">
+                  <p class="text-primary">주제수업</p>
+                  <p class="title">플라스틱 파도가 밀려온다</p>
+                  <p class="desc">설명글이 들어갑니다.</p>
+                  <p class="summary">EBS 키즈</p>
+                </div>
+              </a>
+              <a href="/" class="swiper-slide">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-sample03.png" alt="" />
+                  <span class="badge type-round-box">12월 28일</span>
+                </div>
+                <div class="inner-wrap">
+                  <p class="text-primary">주제수업 한줄표기 주제수업 한줄표기 주제수업 한줄표기</p>
+                  <p class="title">플라스틱 파도가 밀려온다</p>
+                  <p class="desc">설명글이 들어갑니다.</p>
+                  <p class="summary">EBS 키즈</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="banners type-vertical type-thick fluid">
+          <!-- !NOTE
+            1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+            2. .banner-inner는 임시 display: none; 되어 있습니다.
+          -->
+          <a href="#">
+            <div class="banner-inner">
+              <h2>선생님 나눔 자료</h2>
+              <p class="desc"> 교과, 창의적 체험활동 및 학급 운영에<br> 필요한 자료를 함께 나누어요! </p>
+            </div>
+            <img src="/assets/images/temp/img-elementary-banner03@x2.png" alt="배너01">
+          </a>
+          <a href="#">
+            <div class="banner-inner">
+              <h2>선생님 나눔 자료</h2>
+              <p class="desc"> 교과, 창의적 체험활동 및 학급 운영에<br> 필요한 자료를 함께 나누어요! </p>
+            </div>
+            <img src="/assets/images/temp/img-elementary-banner04@x2.png" alt="배너01">
+          </a>
+        </section>
+        <section class="notice type-thick">
+          <span class="badge">공지</span>
+          <div class="title-wrap slides">
+            <div class="slider-vertical">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="guide-items"> Class123 로그인 연동종료 안내 </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="guide-items"> Class123 로그인 연동종료 안내2 </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="guide-items"> Class123 로그인 연동종료 안내3 </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="icon-button">
+            <svg>
+              <title>아이콘 - icon-chevron-right</title>
+              <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </section>
+        <section class="services ignore-last">
+          <div class="services-inner">
+            <a href="#">
+              <i class="icon-button">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-faq"></use>
+                </svg>
+              </i>
+              <h3>자주 찾는 질문</h3>
+            </a>
+            <a href="#">
+              <i class="icon-button">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-ask"></use>
+                </svg>
+              </i>
+              <h3>1:1 문의</h3>
+            </a>
+            <a href="#">
+              <i class="icon-button">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-remote"></use>
+                </svg>
+              </i>
+              <h3>원격지원 요청</h3>
+            </a>
+            <a href="#">
+              <i class="icon-button">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-map"></use>
+                </svg>
+              </i>
+              <h3>전국 지사 안내</h3>
+            </a>
+            <a href="#">
+              <i class="icon-button">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-telephone"></use>
+                </svg>
+              </i>
+              <h3>전화문의</h3>
+            </a>
+            <a href="#">
+              <i class="icon-button">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-kakao"></use>
+                </svg>
+              </i>
+              <h3>카카오톡 상담</h3>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 
+            ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sitemap" class="sitemap" no-dimd>
+        <!-- case01. 로그인 전 -->
+        <div class="login-box">
+          <div class="user-info">
+            <div class="gradebox">
+              <img src="/assets/images/common/icon-miraen-m.svg" alt="미래엔 아이콘" />
+            </div>
+            <p class="name">로그인해주세요.</p>
+          </div>
+          <a href="#" class="text-underline">회원가입</a>
+          <button class="icon-button close-button" close-obj="">
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- case02. 로그인 후 -->
+        <div class="login-box" style="display:none">
+          <div class="user-info checked">
+            <div class="gradebox">
+              <p>3학년</p>
+            </div>
+            <ul class="name">
+              <li>홍길동 선생님</li>
+              <li>미래엔 초등학교</li>
+            </ul>
+          </div>
+          <a href="#" class="text-underline">로그아웃</a>
+          <button class="icon-button close-button" close-obj="">
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="nav-tab">
+          <button class="icon-button prev">
+            <svg>
+              <title>아이콘 - icon-chevron-left</title>
+              <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+            </svg>
+          </button>
+          <button class="icon-button next">
+            <svg>
+              <title>아이콘 - icon-chevron-right</title>
+              <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+            </svg>
+          </button>
+          <div class="scrollable-x">
+            <div class="buttons type-rounded">
+              <a href="#tex1" class="button">교과활동</a>
+              <a href="#tex2" class="button">평가자료</a>
+              <a href="#bae" class="button">기초학력</a>
+              <a href="#prd" class="button">특화자료실</a>
+              <a href="#cre" class="button">창의적 체험활동</a>
+              <a href="#brt" class="button">쉬는시간</a>
+              <a href="#tel" class="button">티처 LIVE</a>
+              <a href="#csc" class="button">고객센터</a>
+              <a href="#myp" class="button">마이페이지</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-container">
+          <div class="nav-list">
+            <div class="nav-item" id="tex1">
+              <!-- case01: 탭구도 있는 1뎁스 -->
+              <div class="nav-title">
+                <p>교과활동</p>
+                <ul class="text-divider semester">
+                  <!-- 클릭시 active 스위칭 -->
+                  <li class="active"><a href="#">1학기</a></li>
+                  <li><a href="#">2학기</a></li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">1학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">2학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">3학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">4학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">5학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회과 부도</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 실과 (이철현)</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">6학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회과 부도</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 실과 (이철현)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-item" id="tex2">
+              <!-- case01: 탭구도 있는 1뎁스 -->
+              <div class="nav-title">
+                <p>평가자료</p>
+                <ul class="text-divider semester">
+                  <!-- 클릭시 active 스위칭 -->
+                  <li class="active"><a href="#">1학기</a></li>
+                  <li><a href="#">2학기</a></li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">1학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">2학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">3학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">4학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">5학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회과 부도</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 실과 (이철현)</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="depth2">
+                <p class="title">6학년</p>
+                <ul class="depth3">
+                  <li>
+                    <a href="#">[2015] 국어 (가)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 국어 (나)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 수학 (장혜원)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회 (전종한)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 사회과 부도</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 과학 (신동훈)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 도덕</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 음악 (장기범)</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 미술</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 체육</a>
+                  </li>
+                  <li>
+                    <a href="#">[2015] 실과 (이철현)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-item" id="bae">
+              <div class="nav-title text-primary">기초학력</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">기초 학습지</a>
+                </li>
+                <li>
+                  <a href="#">한글 익히기</a>
+                </li>
+                <li>
+                  <a href="#">교과서 E-Book</a>
+                </li>
+                <li>
+                  <a href="#">스마트 수업</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item" id="prd">
+              <div class="nav-title text-primary">특화 자료실</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">국어</a>
+                </li>
+                <li>
+                  <a href="#">수학</a>
+                </li>
+                <li>
+                  <a href="#">사회</a>
+                </li>
+                <li>
+                  <a href="#">과학</a>
+                </li>
+                <li>
+                  <a href="#">애플 넘버스 자료실</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item" id="cre">
+              <div class="nav-title text-primary">창의적 체험활동</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">계기교육</a>
+                </li>
+                <li>
+                  <a href="#">SW・AI교육</a>
+                </li>
+                <li>
+                  <a href="#">진로 교육</a>
+                </li>
+                <li>
+                  <a href="#">인성 교육</a>
+                </li>
+                <li>
+                  <a href="#">미디어리터러시</a>
+                </li>
+                <li>
+                  <a href="#">통일 교육</a>
+                </li>
+                <li>
+                  <a href="#">독도 교육</a>
+                </li>
+                <li>
+                  <a href="#">경제・금융 교육</a>
+                </li>
+                <li>
+                  <a href="#">인권 교육</a>
+                </li>
+                <li>
+                  <a href="#">다문화 교육</a>
+                </li>
+                <li>
+                  <a href="#">안전・건강 교육</a>
+                </li>
+                <li>
+                  <a href="#">민주시민 교육</a>
+                </li>
+                <li>
+                  <a href="#">환경・지속가능 발전 교육</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item" id="brt">
+              <div class="nav-title text-primary">쉬는 시간</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">재미있는 이야기</a>
+                </li>
+                <li>
+                  <a href="#">즐거운 놀이</a>
+                </li>
+                <li>
+                  <a href="#">신나는 미술</a>
+                </li>
+                <li>
+                  <a href="#">초간단 체육</a>
+                </li>
+                <li>
+                  <a href="#">슬기로운 탐구 생활</a>
+                </li>
+                <li>
+                  <a href="#">위대한 역사・인물</a>
+                </li>
+                <li>
+                  <a href="#">바른말 고운말</a>
+                </li>
+                <li>
+                  <a href="#">기초탄탄 수학송</a>
+                </li>
+                <li>
+                  <a href="#">10분완성 음악놀이</a>
+                </li>
+                <li>
+                  <a href="#">룰루랄라 학습송</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item" id="tel">
+              <div class="nav-title text-primary">티처 LIVE</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">Live강연</a>
+                </li>
+                <li>
+                  <a href="#">혁신수업N</a>
+                </li>
+                <li>
+                  <a href="#">콘텐츠</a>
+                </li>
+                <li>
+                  <a href="#">자료나눔</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item" id="csc">
+              <div class="nav-title text-primary">고객센터</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">공지사항</a>
+                </li>
+                <li>
+                  <a href="#">이용안내</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <a href="#">이벤트</a>
+                </li>
+                <li>
+                  <a href="#">1:1문의</a>
+                </li>
+                <li>
+                  <a href="#">참고서/교과서 구입안내</a>
+                </li>
+                <li>
+                  <a href="#">필수 프로그램</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item" id="myp">
+              <div class="nav-title text-primary">마이페이지</div>
+              <ul class="depth2">
+                <li>
+                  <a href="#">My Class</a>
+                </li>
+                <li>
+                  <a href="#">나의 정보</a>
+                </li>
+                <li>
+                  <a href="#">나의 문의</a>
+                </li>
+                <li>
+                  <a href="#">게시물 관리</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grade-link">
+          <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요
+				ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+          <ul>
+            <li class="active">
+              <a href="#" title="초등메인페이지 새창이동">초등</a>
+            </li>
+            <li class="">
+              <a href="#" title="중학등메인페이지 새창이동">중학</a>
+            </li>
+            <li class="">
+              <a href="#" title="고등메인페이지 새창이동">고등</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="history" class="history" no-dimd>
+        <div class="history-header"> 열람 이력 <button class="icon-button close-button" close-obj="">
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="history-body">
+          <div class="list-items no-mark">
+            <a href="#">
+              <span class="badge mix-round size-md gray">과목명</span>
+              <p class="title">[YYYY] 교과서명 최대 25자가 출력됩니다.(저자명 최대 5자까지)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">서비스명</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">서비스명</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

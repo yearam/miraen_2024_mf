@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper teacher-live">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>티처 LIVE</h2>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">LIVE 강연</a>
+            <a href="#">혁신수업N</a>
+            <a href="#">쌤OTT</a>
+            <a href="#">콘텐츠</a>
+            <a href="#">자료나눔</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="banner">
+          <img src="/assets/images/temp/img-banner-admin@x2.png" alt="">
+        </section>
+        <section class="tabs">
+          <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+          <div class="tab">
+            <ul>
+              <li class="active"><a href="#tab1-1">전체</a></li>
+              <li><a href="#tab1-2">온에어</a></li>
+              <li><a href="#tab1-3">다시보기</a></li> <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+            </ul>
+          </div>
+          <div class="pane-wrap">
+            <div id="tab1-1" class="pane">
+              <div class="board-list no-top-line">
+                <div class="sort">
+                  <div class="sort-inner">
+                    <span class="total"> 총 <strong class="text-primary">350</strong>건</span>
+                  </div>
+                  <div class="sort-group">
+                    <fieldset>
+                      <input type="search" class="size-sm" title="휴대전화번호 입력란" name="" id="search" placeholder="검색어를 입력해 주세요.">
+                      <button type="button" class="button size-sm type-gray">검색</button>
+                      <!-- <span class="caution">오류 메시지 나타납니다.</span> -->
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="lecture-list">
+                  <div class="item end">
+                    <a href="#" class="info-wrap">
+                      <div class="image-wrap type-rounded">
+                        <div class="overlay"><strong class="badge type-round-box size-sm fill-black">종료</strong></div>
+                        <img src="/assets/images/temp/img-live-lecture-list-1.png" alt="리스트 이미지">
+                      </div>
+                      <div class="title-wrap">
+                        <p class="title">다多락樂방 토크란?</p>
+                        <p class="desc">이제 연수가 아니라 선생님의 이야기를 나눠봐요!</p>
+                      </div>
+                    </a>
+                    <div class="time-table">
+                      <a href="#">
+                        <p class="round">1회차</p>
+                        <p class="time">2023-11-08(수) 19:00</p>
+                        <span class="badge type-rounded fill-elementary">진행중</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">2회차</p>
+                        <p class="time">2023-11-17(금) 20:00</p>
+                        <span class="badge type-rounded fill-secondary-elementary">사전신청</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">3회차</p>
+                        <p class="time">2023-11-20(월) 19:00</p>
+                        <span class="badge type-rounded fill-gray-100">종료</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">4회차</p>
+                        <p class="time">2023-12-17(금) 18:00</p>
+                        <span class="badge type-rounded">진행예정</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">5회차</p>
+                        <p class="time">2023-12-04(월) 14:00</p>
+                        <span class="badge type-rounded">진행예정</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">6회차</p>
+                        <p class="time">2023-12-14(월) 20:00</p>
+                        <span class="badge type-rounded fill-secondary-elementary">사전신청</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="info-wrap">
+                      <div class="image-wrap type-rounded">
+                        <div class="overlay"><strong class="badge type-round-box size-sm fill-black">종료</strong></div>
+                        <img src="/assets/images/temp/img-live-lecture-list-1.png" alt="리스트 이미지">
+                      </div>
+                      <div class="title-wrap">
+                        <p class="title">다多락樂방 토크란?</p>
+                        <p class="desc">이제 연수가 아니라 선생님의 이야기를 나눠봐요!</p>
+                      </div>
+                    </a>
+                    <div class="time-table">
+                      <a href="#">
+                        <p class="round">1회차</p>
+                        <p class="time">2023-11-08(수) 19:00</p>
+                        <span class="badge type-rounded fill-elementary">진행중</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">2회차</p>
+                        <p class="time">2023-11-17(금) 20:00</p>
+                        <span class="badge type-rounded fill-secondary-elementary">사전신청</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">3회차</p>
+                        <p class="time">2023-11-20(월) 19:00</p>
+                        <span class="badge type-rounded fill-gray-100">종료</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="info-wrap">
+                      <div class="image-wrap type-rounded">
+                        <div class="overlay"><strong class="badge type-round-box size-sm fill-black">종료</strong></div>
+                        <img src="/assets/images/temp/img-live-lecture-list-1.png" alt="리스트 이미지">
+                      </div>
+                      <div class="title-wrap">
+                        <p class="title">다多락樂방 토크란?</p>
+                        <p class="desc">이제 연수가 아니라 선생님의 이야기를 나눠봐요!</p>
+                      </div>
+                    </a>
+                    <div class="time-table">
+                      <a href="#">
+                        <p class="round">1회차</p>
+                        <p class="time">2023-11-08(수) 19:00</p>
+                        <span class="badge type-rounded fill-elementary">진행중</span>
+                      </a>
+                      <a href="#">
+                        <p class="round">2회차</p>
+                        <p class="time">2023-11-17(금) 20:00</p>
+                        <span class="badge type-rounded fill-secondary-elementary">사전신청</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="info-wrap">
+                      <div class="image-wrap type-rounded">
+                        <div class="overlay"><strong class="badge type-round-box size-sm fill-black">종료</strong></div>
+                        <img src="/assets/images/temp/img-live-lecture-list-1.png" alt="리스트 이미지">
+                      </div>
+                      <div class="title-wrap">
+                        <p class="title">최대 2줄 까지 노출됩니다. 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트</p>
+                        <p class="desc">최대 2줄 까지 노출됩니다. 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트</p>
+                      </div>
+                    </a>
+                    <div class="time-table">
+                      <a href="#">
+                        <p class="round">1회차</p>
+                        <p class="time">긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트 긴 글 테스트</p>
+                        <span class="badge type-rounded fill-elementary">진행중</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <button class="icon-button icon-first" disabled="">
+                    <svg>
+                      <title>첫페이지 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-button icon-prev" disabled="">
+                    <svg>
+                      <title>이전 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                    </svg>
+                  </button>
+                  <button>1</button>
+                  <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                  <button class="current">2</button>
+                  <button>3</button>
+                  <button>4</button>
+                  <button>5</button>
+                  <button class="icon-button icon-next">
+                    <svg>
+                      <title>다음 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-button icon-last">
+                    <svg>
+                      <title>마지막페이지 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="tab1-2" class="pane">
+              <div class="board-list no-top-line">
+                <div class="sort">
+                  <div class="sort-inner">
+                    <span class="total"> 총 <strong class="text-primary">350</strong>건</span>
+                  </div>
+                  <div class="sort-group">
+                    <fieldset>
+                      <input type="search" class="size-sm" title="휴대전화번호 입력란" name="" id="search" placeholder="검색어를 입력해 주세요.">
+                      <button type="button" class="button size-sm type-gray">검색</button>
+                      <!-- <span class="caution">오류 메시지 나타납니다.</span> -->
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="box-no-data">
+                  <p class="title">검색 결과가 없습니다.</p>
+                  <ul class="ul-dot">
+                    <li>검색어가 올바르게 입력되었는지 확인 해주세요.</li>
+                    <li>다른 검색어로 검색해주세요.</li>
+                    <li>특수문자는 제외하는 것이 좋습니다.</li>
+                    <li>검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.</li>
+                    <li>두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="tab1-3" class="pane">
+              <div class="box-no-data">
+                <p class="title">등록된 데이터가 없습니다.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

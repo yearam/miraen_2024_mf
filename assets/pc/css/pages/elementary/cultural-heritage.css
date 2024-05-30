@@ -1,0 +1,119 @@
+.cultural-heritage .ul-dot li::before {
+  background-color: #000;
+}
+.cultural-heritage .items {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 56px;
+}
+.cultural-heritage .items.intro-card {
+  margin-top: 40px;
+  padding: 0 81px;
+  gap: 16px;
+}
+.cultural-heritage .items.intro-card .item {
+  line-height: 0;
+}
+.cultural-heritage .items .item {
+  width: 258px;
+}
+.cultural-heritage .items .item img {
+  width: 100%;
+}
+.cultural-heritage .box {
+  padding: 40px 32px;
+  background-color: #fbfbfb;
+}
+.cultural-heritage .box-light {
+  padding: 20px 40px;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+.cultural-heritage .card-list-slider {
+  position: relative;
+  width: 100%;
+}
+.cultural-heritage .card-list-slider.move {
+  padding-bottom: 52px;
+}
+.cultural-heritage .card-list-slider .slider {
+  overflow-x: hidden;
+}
+.cultural-heritage .card-list-slider .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: auto;
+  border-radius: 4px;
+  line-height: 1.4;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+.cultural-heritage .card-list-slider .img-box {
+  overflow: hidden;
+  width: 100%;
+  line-height: 0;
+  border-radius: 4px 4px 0 0;
+}
+.cultural-heritage .card-list-slider .img-box img {
+  width: 100%;
+  filter: brightness(1.1) grayscale(10%) contrast(95%);
+}
+.cultural-heritage .card-list-slider .text-box {
+  flex-grow: 1;
+  position: relative;
+  padding: 32px 24px 12px;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+.cultural-heritage .card-list-slider .badge {
+  position: absolute;
+  top: 0;
+  left: 24px;
+  transform: translateY(-50%);
+}
+.cultural-heritage .card-list-slider .swiper-button-prev,
+.cultural-heritage .card-list-slider .swiper-button-next {
+  top: calc(50% - 26px);
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  z-index: 4;
+}
+.cultural-heritage .card-list-slider .swiper-button-prev.swiper-button-prev,
+.cultural-heritage .card-list-slider .swiper-button-next.swiper-button-prev {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.cultural-heritage .card-list-slider .swiper-button-prev.swiper-button-next,
+.cultural-heritage .card-list-slider .swiper-button-next.swiper-button-next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.cultural-heritage .card-list-slider .swiper-button-prev:hover::after,
+.cultural-heritage .card-list-slider .swiper-button-next:hover::after {
+  color: #fff;
+}
+.cultural-heritage .card-list-slider .swiper-button-prev.disabled,
+.cultural-heritage .card-list-slider .swiper-button-next.disabled {
+  pointer-events: none;
+}
+.cultural-heritage .card-list-slider .swiper-pagination {
+  bottom: 0;
+}
+.cultural-heritage .card-list-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #d2d2d2;
+  opacity: 1;
+}
+.cultural-heritage .card-list-slider .swiper-pagination-bullet-active, .cultural-heritage .card-list-slider .swiper-pagination-bullet:hover, .cultural-heritage .card-list-slider .swiper-pagination-bullet:focus {
+  background-color: var(--color-primary);
+}

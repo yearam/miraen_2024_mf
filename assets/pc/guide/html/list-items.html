@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>list-items</h1>
+          <section>
+            <h2>
+              chapter-items
+              <small>.flag-recently 사용시 최근 표시가 붙습니다.</small>
+            </h2>
+            <ul class="chapter-items">
+              <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+              <li>
+                <a href="#" class="chapter-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">GUIDE</span>
+                    <h3>대분류 제목 정보를 최대 50자 출력합니다. 1행 처리가 안될경우 다음행 출력됩니다. 좌측 넘버링은 자유입력(예: 레슨1)</h3>
+                  </div>
+                  <div class="extra">
+                    <button class="button size-md">
+                      스크랩
+                      <svg>
+                        <title>아이콘 - 스크랩</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                      </svg>
+                    </button>
+                    <button class="button size-md">
+                      <span>
+                        총
+                        <strong class="text-primary">23</strong>
+                        건 다운로드
+                      </span>
+                      <svg>
+                        <title>아이콘 - 다운로드</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                      </svg>
+                    </button>
+                    <button class="button size-md">
+                      단원공통자료
+                      <svg>
+                        <title>아이콘 - 자료</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <div class="pane">
+                  <!-- !NOTE : 중분류엔 type-middle , 소분류엔 type-small 이 붙습니다. -->
+                  <div class="chapter-depth type-middle">
+                    <div class="title">(1) 주제 정보를 최대 55자 출력합니다. 주제 옆으로 주/부 교과서 쪽수가 출력됩니다.</div>
+                    <div class="extra">
+                      <button class="button size-md">
+                        스크랩
+                        <svg>
+                          <title>아이콘 - 스크랩</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                        </svg>
+                      </button>
+                      <button class="button size-md">
+                        <span>
+                          총
+                          <strong class="text-primary">23</strong>
+                          건 다운로드
+                        </span>
+                        <svg>
+                          <title>아이콘 - 다운로드</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                      <button class="button size-md">
+                        단원공통자료
+                        <svg>
+                          <title>아이콘 - 자료</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="chapter-depth type-small">
+                    <div class="title">(1) 과학자는 어떻게 탐구 문제를 정할까요</div>
+                    <div class="extra">
+                      <button class="button size-md">
+                        단원공통자료
+                        <svg>
+                          <title>아이콘 - icon-folder</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <ul class="hour-list">
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[1차시] 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼사오</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            실험 관찰 999~999p
+                          </span>
+                          <span class="badge fill-light">
+                            과학 999~999p
+                          </span>
+                        </div>
+                        <span class="badge-recently">
+                          최근
+                        </span>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                          <span class="badge type-round-box fill-purple" title="비주얼씽킹">비주얼씽킹</span>
+                        </div>
+                        <a href="" class="title">[1차시] 과학자는 어떻게 탐구 문제를 정할까요</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            실험 관찰 999~999p
+                          </span>
+                          <span class="badge fill-light">
+                            과학 999~999p
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="chapter-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">1</span>
+                    <h3>과학자의 탐구</h3>
+                  </div>
+                  <div class="extra">
+                    <button class="button size-md">
+                      단원공통자료
+                      <svg>
+                        <title>아이콘 - 자료</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <div class="pane">
+                  <ul class="hour-list">
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-purple" title="교과서자료">비주얼씽킹</span>
+                        </div>
+                        <a href="" class="title">[000~000차시] 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[11차시] 2. 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                        <span class="badge-recently">
+                          최근
+                        </span>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[11차시] 2. 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[11차시] 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 </a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="chapter-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">2</span>
+                    <h3>온도와 열</h3>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="chapter-depth type-middle">
+                    <div class="title">① 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십</div>
+                  </div>
+                  <div class="chapter-depth type-small">
+                    <div class="title">(1) 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십</div>
+                    <div class="extra">
+                      <button class="button size-md">
+                        단원공통자료
+                        <svg>
+                          <title>아이콘 - icon-folder</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="box-no-data">
+                    등록된 자료가 없습니다.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="chapter-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">3</span>
+                    <h3>우리 생황에서 산성 용약과 염기성 욕액을 어떻게 이용할까요?</h3>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="chapter-depth type-middle">
+                    <div class="title">① 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십</div>
+                  </div>
+                  <div class="chapter-depth type-small">
+                    <div class="title">(1) 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십</div>
+                    <div class="extra">
+                      <button class="button size-md">
+                        단원공통자료
+                        <svg>
+                          <title>아이콘 - icon-folder</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <ul class="hour-list">
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-purple" title="교과서자료">비주얼씽킹</span>
+                        </div>
+                        <a href="" class="title">[000~000차시] 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[11차시] 2. 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                        <span class="badge-recently">
+                          최근
+                        </span>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[11차시] 2. 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <div class="badges">
+                          <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        </div>
+                        <a href="" class="title">[11차시] 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 </a>
+                        <div class="number-pages">
+                          <span class="badge fill-light">
+                            과학 10~36 쪽
+                          </span>
+                          <span class="badge fill-light">
+                            실험 관찰 42~85 쪽
+                          </span>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <ul class="divider-group">
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                              </svg>
+                              실험관찰
+                            </button>
+                          </li>
+                          <li>
+                            <button class="button size-md type-text">
+                              <svg>
+                                <title>아이콘 - icon-link-new-window</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                              </svg>
+                              수업열기
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="chapter-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">4</span>
+                    <h3>과학 이야기 우리 주변 어디에서나 쉽게 구할 수 있는 양자, 전자 이야기</h3>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="chapter-depth type-middle">
+                    <div class="title">① 인간을 탐구하라</div>
+                    <div class="extra">
+                      <button class="button size-md">
+                        단원공통자료
+                        <svg>
+                          <title>아이콘 - 자료</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="box-no-data">
+                    등록된 자료가 없습니다.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="chapter-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">5</span>
+                    <h3>다양한 생물과 우리 생활속 곰팡이들의 이야기</h3>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="box-no-data">
+                    등록된 자료가 없습니다.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              unit-list-items
+              <small>교과에서 툴팁레이어 내부에 사용</small>
+            </h2>
+            <ul class="unit-list-items">
+              <!-- split여부에 따라 나눠짐 -->
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                  <p>단원 학습지 도안</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-hangul.svg" alt="pdf 한글 아이콘" />
+                  <p>[진도표]과학 5학년 1학기</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-zip.svg" alt="pdf zip 아이콘" />
+                  <p>판서자료</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-link.svg" alt="pdf 링크 아이콘" />
+                  <p>[동영상] 10단원_생물과 환경_스마트올</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                  <p>핵심내용 정리</p></a
+                >
+              </li>
+            </ul>
+
+            <h3>.split2</h3>
+            <ul class="unit-list-items split2">
+              <!-- split여부에 따라 나눠짐 -->
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                  <p>단원 학습지 도안</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-hangul.svg" alt="pdf 한글 아이콘" />
+                  <p>[진도표]과학 5학년 1학기</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-zip.svg" alt="pdf zip 아이콘" />
+                  <p>판서자료</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-link.svg" alt="pdf 링크 아이콘" />
+                  <p>[동영상] 10단원_생물과 환경_스마트올 10단원_생물과 환경_스마트올</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                  <p>핵심내용 정리</p></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                  <p>핵심내용 정리</p></a
+                >
+              </li>
+            </ul>
+            <pre class="brush:html">
+              <!-- 기본1줄 -->
+              <ul class="unit-list-items">
+                <!-- split여부에 따라 나눠짐 -->
+                <li>
+                  <a href="#"
+                    ><img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                    <p>단원 학습지 도안</p></a
+                  >
+                </li>
+              </ul>
+              <!-- 2줄 필요한 경우 .split2 추가 -->
+              <ul class="unit-list-items split2">
+                <!-- split여부에 따라 나눠짐 -->
+                <li>
+                  <a href="#"
+                    ><img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                    <p>단원 학습지 도안</p></a
+                  >
+                </li>
+              </ul>
+            </pre>
+
+            <h3>unit-item
+              <small>파일명과 함께 목록이 제공 될때 사용합니다. p로 감싸진 항목은 한줄 말줄임 처리 됩니다.</small>
+            </h3>
+            <a href="#" class="unit-item">
+              <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+              <p>단원 학습지 도안 Consecrate these his sore did florid and revellers light. Disappointed that but some memory love grace ever. Fellow none high him him mighty sick neer, ever fountain breast but then awake, the steel to shades was. Below long or and.</p>
+            </a>
+            <div class="unit-item">
+              <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+              <p>단원 학습지 도안 Sea ea tempor gubergren amet sadipscing lorem voluptua sanctus, lorem aliquyam no sit ut elitr. Ipsum vero consetetur et accusam takimata, et eirmod invidunt dolor eirmod sed dolore amet, ea est est nonumy labore ut, diam sanctus et et dolores rebum erat amet voluptua tempor, at elitr eirmod invidunt sed.</p>
+            </div>
+            <pre class='brush:html'>
+              <a href="#" class="unit-item">
+                <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                <p>단원 학습지 도안</p>
+              </a>
+              <div class="unit-item">
+                <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                <p>단원 학습지 도안</p>
+              </div>
+            </pre>
+            <h3>unit-item.multi-line
+              <small>p로 감싸진 항목은 두줄 말줄임 처리 됩니다.</small>
+            </h3>
+            <div class="unit-item multi-line">
+              <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘">
+              <p class="text-left">최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.최대 두줄까지 노출 됩니다.</p>
+            </div>
+            <pre class='brush:html'>
+              <div class="unit-item multi-line">
+                <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘">
+                <p class="text-left">최대 두줄까지 노출 됩니다.</p>
+              </div>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

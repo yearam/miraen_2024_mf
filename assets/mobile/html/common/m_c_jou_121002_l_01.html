@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="popup-search-school">재학중 학교 검색</button>
+        </main>
+      </div>
+    </div>
+    <div class="popup-sheet" id="popup-search-school" init-show>
+      <div class="popup-container type-fix-height">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">재학중 학교 검색</div>
+        <form action="submit">
+          <div class="body">
+            <p class="body-title">학교명을 띄어쓰기 없이<br />정확하게 입력해 주세요</p>
+            <div class="forms">
+              <!-- !note :  class="flag-error" 붙이면 에러 메세지가 나타납니다. -->
+              <fieldset>
+                <input class="size-xl" type="search" name="" id="" placeholder="학교명을 입력해주세요" value="학교" />
+                <button class="button size-xl type-gray" title="검색"> 검색 </button>
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="buttons type-list">
+              <button class="block-button">
+                <ul class="divider-group">
+                  <li>경인교육대학교</li>
+                  <li>교육대학</li>
+                </ul>
+                <span>서울특별시 서초구 사평대로 45길 26</span>
+              </button>
+              <button class="block-button">
+                <ul class="divider-group">
+                  <li>서울교육대학교</li>
+                  <li>교육대학</li>
+                </ul>
+                <span>학교 주소 정보</span>
+              </button>
+              <button class="block-button">
+                <ul class="divider-group">
+                  <li>한양대 사범대학</li>
+                  <li>사범대학</li>
+                </ul>
+                <span>학교 주소 정보</span>
+              </button>
+              <button class="block-button">
+                <ul class="divider-group">
+                  <li>이화여대 사범대학</li>
+                  <li>사범대학</li>
+                </ul>
+                <span>학교 주소 정보</span>
+              </button>
+              <button class="block-button">
+                <ul class="divider-group">
+                  <li>학교명정보</li>
+                  <li>교대/사범 구분</li>
+                </ul>
+                <span>학교 주소 정보</span>
+              </button>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="button size-md type-dark" close-obj>취소</button>
+            <button class="button size-md type-primary">확인</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

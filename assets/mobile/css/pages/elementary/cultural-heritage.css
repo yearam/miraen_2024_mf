@@ -1,0 +1,167 @@
+.cultural-heritage .inner-wrap {
+  padding: 32px 20px;
+  border-top: 1px solid #e6e6e6;
+}
+.cultural-heritage .inner-wrap:last-child {
+  padding-bottom: 0;
+}
+.cultural-heritage .inner-wrap.type-thick {
+  border-top: 8px solid #f6f6f6;
+}
+.cultural-heritage .inner-wrap .tab {
+  padding-left: unset;
+  padding-right: unset;
+}
+.cultural-heritage .items {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 12px;
+}
+.cultural-heritage .items.intro-card {
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 0;
+}
+.cultural-heritage .items.intro-card .item {
+  line-height: 0;
+}
+.cultural-heritage .items .item {
+  counter-increment: itemIdx;
+}
+.cultural-heritage .items .desc {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 32px;
+  color: #000;
+}
+.cultural-heritage .items .desc::before {
+  content: counter(itemIdx);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-primary-400);
+  border-radius: 100%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+.cultural-heritage .box {
+  padding: 40px 32px;
+  background-color: #fbfbfb;
+}
+.cultural-heritage .box-light {
+  margin-top: 20px;
+  padding: 24px 16px;
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+}
+.cultural-heritage .card-list-slider {
+  position: relative;
+  width: 100%;
+}
+.cultural-heritage .card-list-slider .list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cultural-heritage .card-list-slider .slides {
+  overflow-x: hidden;
+}
+.cultural-heritage .card-list-slider .item {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 4px);
+  height: auto;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+.cultural-heritage .card-list-slider .img-box {
+  overflow: hidden;
+  width: 100%;
+  line-height: 0;
+  border-radius: 4px 4px 0 0;
+}
+.cultural-heritage .card-list-slider .img-box img {
+  width: 100%;
+  filter: brightness(1.1) grayscale(10%) contrast(95%);
+}
+.cultural-heritage .card-list-slider .text-box {
+  flex-grow: 1;
+  position: relative;
+  padding: 24px 16px;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+.cultural-heritage .card-list-slider .text-box p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+.cultural-heritage .card-list-slider .badge {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.cultural-heritage .card-list-slider .swiper-button-prev,
+.cultural-heritage .card-list-slider .swiper-button-next {
+  top: calc(50% - 26px);
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.cultural-heritage .card-list-slider .swiper-button-prev.swiper-button-prev,
+.cultural-heritage .card-list-slider .swiper-button-next.swiper-button-prev {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.cultural-heritage .card-list-slider .swiper-button-prev.swiper-button-next,
+.cultural-heritage .card-list-slider .swiper-button-next.swiper-button-next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.cultural-heritage .card-list-slider .swiper-button-prev.disabled,
+.cultural-heritage .card-list-slider .swiper-button-next.disabled {
+  pointer-events: none;
+}
+.cultural-heritage .card-list-slider .swiper-pagination {
+  position: static;
+  bottom: 0;
+}
+.cultural-heritage .card-list-slider .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+  margin: 0 2px;
+  background-color: #a4a4a4;
+  opacity: 1;
+}
+.cultural-heritage .card-list-slider .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 2px;
+  background-color: #000;
+}
+.cultural-heritage .utility {
+  padding: 12px 20px;
+  border-top: 1px solid #e6e6e6;
+}
+.cultural-heritage .section-list {
+  padding: 24px 20px 0;
+  border-top: 1px solid #e6e6e6;
+}
+.cultural-heritage .section-list .inner-header {
+  margin-bottom: 20px;
+}
+.cultural-heritage .section-list .inner-header h3 {
+  margin-top: 0;
+}

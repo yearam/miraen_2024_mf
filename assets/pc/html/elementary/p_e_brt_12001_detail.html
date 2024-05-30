@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-elementary">
+    <div class="wrapper">
+      <header class="header" school-grade="ELEMENT">
+        <div class="header-inner">
+          <div class="header-inner">
+            <div class="common-nav">
+              <a href="#" class="active" target="_blank">초등</a>
+              <a href="#" target="_blank">중학</a>
+              <a href="#" target="_blank">고등</a>
+              <div class="dropdown">
+                <button type="button"> 교과서 홍보관 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                  </svg>
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="#">엠티처 바로 접속</a>
+              <a href="#">즐겨찾기 추가</a>
+            </div>
+            <div class="common-nav">
+              <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                  <title>아이콘 - icon-play-rounded</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="aiclass">AI Class</a>
+              <a href="#" target="_blank" class="mkaive">M카이브</a>
+              <a href="#">로그아웃</a>
+              <a href="#" target="_blank">마이페이지</a>
+              <a href="#" target="_blank">고객센터</a>
+              <a href="#" target="_blank">이벤트</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <!-- !NOTE : 기존 .header-inner class를 .gnb-wrap로 변경하여 스타일 수정 하였습니다. -->
+          <div class="gnb-wrap">
+            <!-- !NOTE : 기존 .gnb-wrap class를 .gnb-inner로 변경하여 스타일 수정 하였습니다. -->
+            <div class="gnb-inner">
+              <h1 class="logo">
+                <a href="#">
+                  <img src="/assets/images/common/logo-elementary.svg" alt="엠티처 초등">
+                </a>
+              </h1>
+              <!-- !NOTE : 
+          1차 오픈을 위해 필터링 스크립트 처리 되어 있습니다. 교과서 이미지명 데이터가 들어가면 필터링 처리 됩니다.  데이터 바인딩 후 data- 접두사 붙어 있는 attribute는 삭제하시면 됩니다.
+        -->
+              <nav class="gnb">
+                <ul>
+                  <li>
+                    <a href="#menu1">교과활동</a>
+                    <div class="lnb-wrap" id="menu1">
+                      <div class="lnb-inner">
+                        <div class="grade-lnb">
+                          <ul>
+                            <li data-grade="01"><a href="#menu1-grade-1">1학년</a></li>
+                            <li data-grade="02"><a href="#menu1-grade-2">2학년</a></li>
+                            <li data-grade="03"><a href="#menu1-grade-3">3학년</a></li>
+                            <li class="active" data-grade="04"><a href="#menu1-grade-4">4학년</a></li>
+                            <li data-grade="05"><a href="#menu1-grade-5">5학년</a></li>
+                            <li data-grade="06"><a href="#menu1-grade-6">6학년</a></li>
+                          </ul>
+                          <div class="grade-contents">
+                            <div id="menu1-grade-1">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu1-revision-01" id="menu1-revision-01-2015" data-revision="2015" checked />
+                                    <label for="menu1-revision-01-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu1-revision-01" id="menu1-revision-01-2022" data-revision="2022">
+                                    <label for="menu1-revision-01-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu1-grade-2">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu1-revision-02" id="menu1-revision-02-2015" data-revision="2015" checked />
+                                    <label for="menu1-revision-02-2015">2015 개정</label>
+                                  </span>
+                                  <!-- !NOTE : 2022년 필요할 때 사용하세요. -->
+                                  <span>
+                                    <input type="radio" name="menu1-revision-02" id="menu1-revision-02-2022" data-revision="2022">
+                                    <label for="menu1-revision-02-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu1-grade-3">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu1-revision-03" id="menu1-revision-03-2015" data-revision="2015" checked />
+                                    <label for="menu1-revision-03-2015">2015 개정</label>
+                                  </span>
+                                  <!-- !NOTE : 2022년 필요할 때 사용하세요. -->
+                                  <span>
+                                    <input type="radio" name="menu1-revision-03" id="menu1-revision-03-2022" data-revision="2022">
+                                    <label for="menu1-revision-03-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu1-grade-4">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu1-revision-04" id="menu1-revision-04-2015" data-revision="2015" checked />
+                                    <label for="menu1-revision-04-2015">2015 개정</label>
+                                  </span>
+                                  <!-- !NOTE : 2022년 필요할 때 사용하세요.  -->
+                                  <span>
+                                    <input type="radio" name="menu1-revision-04" id="menu1-revision-04-2022" data-revision="2022">
+                                    <label for="menu1-revision-04-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu1-grade-5">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu1-revision-05" id="menu1-revision-05-2015" data-revision="2015" checked />
+                                    <label for="menu1-revision-05-2015">2015 개정</label>
+                                  </span>
+                                  <!-- !NOTE : 2022년 필요할 때 사용하세요.  -->
+                                  <span>
+                                    <input type="radio" name="menu1-revision-05" id="menu1-revision-05-2022" data-revision="2022">
+                                    <label for="menu1-revision-05-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-PC.png" alt="실과" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">실과 &#40;이철현&#41;</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu1-grade-6">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu1-revision-06" id="menu1-revision-06-2015" data-revision="2015" checked />
+                                    <label for="menu1-revision-06-2015">2015 개정</label>
+                                  </span>
+                                  <!-- !NOTE : 2022년 필요할 때 사용하세요.  -->
+                                  <span>
+                                    <input type="radio" name="menu1-revision-06" id="menu1-revision-06-2022" data-revision="2022">
+                                    <label for="menu1-revision-06-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <!-- 2학기 -->
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-PC.png" alt="실과" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">실과 &#40;이철현&#41;</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="banners">
+                          <!-- !NOTE
+                        1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                        2. .banner-inner는 임시 display: none; 되어 있습니다.
+                      -->
+                          <a href="#">
+                            <div class="banner-inner">
+                              <h2> 애플 넘버스,<br /> 어떤 서비스일까요? </h2>
+                              <p class="desc"> 학생 공동 작업이 가능한 넘버스 앱을 <br /> 활용하여 새로운 학습 방식으로 <br /> 학생들의 참여도를 높여 보세요! </p>
+                              <button type="button" class="banner-button">자세히보기</button>
+                            </div>
+                            <img src="/assets/images/common/img-open-banner.png" alt="2023년 신학기, 새로운 엠티처를 만나세요!" />
+                          </a>
+                        </div>
+                      </div>
+                      <button type="button" class="close-button">닫기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu2">평가자료</a>
+                    <div class="lnb-wrap" id="menu2">
+                      <div class="lnb-inner">
+                        <div class="grade-lnb">
+                          <ul>
+                            <li class="active" data-grade="01"><a href="#menu2-grade-1">1학년</a></li>
+                            <li data-grade="02"><a href="#menu2-grade-2">2학년</a></li>
+                            <li data-grade="03"><a href="#menu2-grade-3">3학년</a></li>
+                            <li data-grade="04"><a href="#menu2-grade-4">4학년</a></li>
+                            <li data-grade="05"><a href="#menu2-grade-5">5학년</a></li>
+                            <li data-grade="06"><a href="#menu2-grade-6">6학년</a></li>
+                          </ul>
+                          <div class="grade-contents">
+                            <div id="menu2-grade-1">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu2-revision-01" id="menu2-revision-01-2015" data-revision="2015" checked />
+                                    <label for="menu2-revision-01-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu2-revision-01" id="menu2-revision-01-2022" data-revision="2022">
+                                    <label for="menu2-revision-01-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-01-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu2-grade-2">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu2-revision-02" id="menu2-revision-02-2015" data-revision="2015" checked />
+                                    <label for="menu2-revision-02-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu2-revision-02" id="menu2-revision-02-2022" data-revision="2022">
+                                    <label for="menu2-revision-02-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-02-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu2-grade-3">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu2-revision-03" id="menu2-revision-03-2015" data-revision="2015" checked />
+                                    <label for="menu2-revision-03-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu2-revision-03" id="menu2-revision-03-2022" data-revision="2022">
+                                    <label for="menu2-revision-03-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-03-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu2-grade-4">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu2-revision-04" id="menu2-revision-04-2015" data-revision="2015" checked />
+                                    <label for="menu2-revision-04-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu2-revision-04" id="menu2-revision-04-2022" data-revision="2022">
+                                    <label for="menu2-revision-04-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-04-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu2-grade-5">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu2-revision-05" id="menu2-revision-05-2015" data-revision="2015" checked />
+                                    <label for="menu2-revision-05-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu2-revision-05" id="menu2-revision-05-2022" data-revision="2022">
+                                    <label for="menu2-revision-05-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-05-00-PC.png" alt="실과" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">실과 &#40;이철현&#41;</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div id="menu2-grade-6">
+                              <div class="lnb-header">
+                                <div class="buttons type-rounded">
+                                  <span>
+                                    <input type="radio" name="menu2-revision-06" id="menu2-revision-06-2015" data-revision="2015" checked />
+                                    <label for="menu2-revision-06-2015">2015 개정</label>
+                                  </span>
+                                  <span>
+                                    <input type="radio" name="menu2-revision-06" id="menu2-revision-06-2022" data-revision="2022">
+                                    <label for="menu2-revision-06-2022">2022 개정</label>
+                                  </span>
+                                </div>
+                                <div class="sort">
+                                  <button type="button" class="active" data-semester="01">1학기</button>
+                                  <button type="button" data-semester="02">2학기</button>
+                                </div>
+                              </div>
+                              <div class="lnb-contents">
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-01-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <!-- 2학기 -->
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-KOA.png" alt="국어 (가)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;가&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-KOB.png" alt="국어 (나)" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">국어 &#40;나&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-MT.png" alt="수학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">수학 &#40;장혜원&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-SO.png" alt="사회" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회 &#40;전종한&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-SO-SUB.png" alt="사회과 부도" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">사회과 부도</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-02-SI.png" alt="과학" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">과학 &#40;신동훈&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-EI.png" alt="도덕" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">도덕</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-MU.png" alt="음악" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">음악 &#40;장기범&#41;</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-AT.png" alt="미술" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">미술</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-PE.png" alt="체육" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">체육</span>
+                                  </div>
+                                </a>
+                                <a href="#">
+                                  <div class="thumb">
+                                    <img src="/assets/images/book-cover/2015-ELEMENT-06-00-PC.png" alt="실과" />
+                                  </div>
+                                  <div class="badges">
+                                    <span class="badge">2015</span>
+                                    <span class="text-data">실과 &#40;이철현&#41;</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="banners">
+                          <!-- !NOTE
+                        1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                        2. .banner-inner는 임시 display: none; 되어 있습니다.
+                      -->
+                          <a href="#">
+                            <div class="banner-inner">
+                              <h2> 애플 넘버스,<br /> 어떤 서비스일까요? </h2>
+                              <p class="desc"> 학생 공동 작업이 가능한 넘버스 앱을 <br /> 활용하여 새로운 학습 방식으로 <br /> 학생들의 참여도를 높여 보세요! </p>
+                              <button type="button" class="banner-button">자세히보기</button>
+                            </div>
+                            <img src="/assets/images/common/img-open-banner.png" alt="2023년 신학기, 새로운 엠티처를 만나세요!" />
+                          </a>
+                        </div>
+                      </div>
+                      <button type="button" class="close-button">닫기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu3">기초학력</a>
+                    <div class="lnb-wrap" id="menu3">
+                      <!-- !NOTE 01-07 초등 기초학력/특화자료실/창의적체험활동/쉬는시간 메뉴만 type-line 클래스 추가됩니다. -->
+                      <div class="lnb-inner type-line">
+                        <ul class="lnb">
+                          <li class="depth-2">
+                            <a href="#">기초 학습지</a>
+                            <div class="depth-3">
+                              <a href="#">어휘</a>
+                              <a href="#">연산</a>
+                              <a href="#">영단어</a>
+                              <a href="#">한자<span class="new">N</span></a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">한글 익히기<span class="new">N</span></a>
+                            <div class="depth-3">
+                              <a href="#">사자성어</a>
+                              <a href="#">맞춤법</a>
+                              <a href="#">마술로 배우는 한글 영상 수업 같이 놀기 활동지 주제별로 한글 익히기</a>
+                              <a href="#">초등학교 저학년 기초한글 주제별 낱말 익히기</a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">교과서 E-Book</a>
+                            <div class="depth-3">
+                              <a href="#">교과서 E-Book 001</a>
+                              <a href="#">교과서 E-Book 002</a>
+                              <a href="#">교과서 E-Book 003</a>
+                              <a href="#">교과서 E-Book 004</a>
+                              <a href="#">교과서 E-Book 005</a>
+                              <a href="#">교과서 E-Book 006</a>
+                              <a href="#">교과서 E-Book 007</a>
+                              <a href="#">교과서 E-Book 008</a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">스마트 수업</a>
+                            <div class="depth-3">
+                              <a href="#">교과서 E-Book 001</a>
+                              <a href="#">교과서 E-Book 002</a>
+                              <a href="#">교과서 E-Book 003</a>
+                              <a href="#">교과서 E-Book 004</a>
+                              <a href="#">교과서 E-Book 005</a>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="banners">
+                          <!-- !NOTE
+                        1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                        2. .banner-inner는 임시 display: none; 되어 있습니다.
+                      -->
+                          <a href="#">
+                            <div class="banner-inner">
+                              <h2> 애플 넘버스,<br /> 어떤 서비스일까요? </h2>
+                              <p class="desc"> 학생 공동 작업이 가능한 넘버스 앱을 <br /> 활용하여 새로운 학습 방식으로 <br /> 학생들의 참여도를 높여 보세요! </p>
+                              <button type="button" class="banner-button">자세히보기</button>
+                            </div>
+                            <img src="/assets/images/common/img-open-banner.png" alt="2023년 신학기, 새로운 엠티처를 만나세요!" />
+                          </a>
+                        </div>
+                      </div>
+                      <button type="button" class="close-button">닫기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu4">특화자료실</a>
+                    <div class="lnb-wrap" id="menu4">
+                      <div class="lnb-inner type-line">
+                        <ul class="lnb">
+                          <li class="depth-2">
+                            <a href="#">국어</a>
+                            <div class="depth-3">
+                              <a href="#">국어 작품 감상실</a>
+                              <a href="#">작품읽기</a>
+                              <a href="#">연극 놀이터</a>
+                              <a href="#">특수 교육 자료실</a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">수학</a>
+                            <div class="depth-3">
+                              <a href="#">수학 스마트 교구</a>
+                              <a href="#">과학 스마트 교구</a>
+                              <a href="#">마술로 배우는 한글 영상 수업 같이 놀기 활동지 주제별로 한글 익히기</a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">사회</a>
+                            <div class="depth-3">
+                              <a href="#">사회 디지털 교과서</a>
+                              <a href="#">역사 문화 탐방</a>
+                              <a href="#">문화유산 보물 찾기</a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">과학</a>
+                            <div class="depth-3">
+                              <a href="#">다른 탐구 활동지</a>
+                              <a href="#">디지털 실험실</a>
+                            </div>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">애플 넘버스 자료실</a>
+                          </li>
+                        </ul>
+                        <div class="banners">
+                          <!-- !NOTE
+                        1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                        2. .banner-inner는 임시 display: none; 되어 있습니다.
+                      -->
+                          <a href="#">
+                            <div class="banner-inner">
+                              <h2> 애플 넘버스,<br /> 어떤 서비스일까요? </h2>
+                              <p class="desc"> 학생 공동 작업이 가능한 넘버스 앱을 <br /> 활용하여 새로운 학습 방식으로 <br /> 학생들의 참여도를 높여 보세요! </p>
+                              <button type="button" class="banner-button">자세히보기</button>
+                            </div>
+                            <img src="/assets/images/common/img-open-banner.png" alt="2023년 신학기, 새로운 엠티처를 만나세요!" />
+                          </a>
+                        </div>
+                      </div>
+                      <button type="button" class="close-button">닫기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu5">창의적 체험 활동</a>
+                    <div class="lnb-wrap" id="menu5">
+                      <div class="lnb-inner type-line">
+                        <ul class="lnb">
+                          <li class="depth-2">
+                            <a href="#">계기 교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">SW&#183;AI 교육<span class="new">n</span></a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">진로 교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">인성교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">미디어리터러시</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">통일 교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">독도 교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">경제&#183;금융 교육<span class="new">n</span></a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">인권 교육<span class="new">n</span></a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">다문화 교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">안전/건강 교육<span class="new">n</span></a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">민주시민 교육</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">환경/지속가능발전 교육</a>
+                          </li>
+                        </ul>
+                        <div class="banners">
+                          <!-- !NOTE
+                        1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                        2. .banner-inner는 임시 display: none; 되어 있습니다.
+                      -->
+                          <a href="#">
+                            <div class="banner-inner">
+                              <h2> 애플 넘버스,<br /> 어떤 서비스일까요? </h2>
+                              <p class="desc"> 학생 공동 작업이 가능한 넘버스 앱을 <br /> 활용하여 새로운 학습 방식으로 <br /> 학생들의 참여도를 높여 보세요! </p>
+                              <button type="button" class="banner-button">자세히보기</button>
+                            </div>
+                            <img src="/assets/images/common/img-open-banner.png" alt="2023년 신학기, 새로운 엠티처를 만나세요!" />
+                          </a>
+                        </div>
+                      </div>
+                      <button type="button" class="close-button">닫기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu6">쉬는 시간</a>
+                    <div class="lnb-wrap" id="menu6">
+                      <div class="lnb-inner type-line">
+                        <ul class="lnb">
+                          <li class="depth-2">
+                            <a href="#">재미있는 이야기</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">즐거운 놀이<span class="new">n</span></a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">신나는 미술</a>
+                          </li>
+                          <li class="depth-2">
+                            <a href="#">초간단 체육</a>
+                          </li>
+                          <li class="depth-2"><a href="#">슬기로운 탐구 생활</a></li>
+                          <li class="depth-2"><a href="#">위해한 역사/인물</a></li>
+                          <li class="depth-2"><a href="#">바른말 고운말</a></li>
+                          <li class="depth-2"><a href="#">기초탄탄 수학송<span class="new">n</span></a></li>
+                          <li class="depth-2"><a href="#">10분 완성 음악 놀이<span class="new">n</span></a></li>
+                          <li class="depth-2"><a href="#">룰루랄라 학습송</a></li>
+                        </ul>
+                        <div class="banners">
+                          <!-- !NOTE
+                        1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                        2. .banner-inner는 임시 display: none; 되어 있습니다.
+                      -->
+                          <a href="#">
+                            <div class="banner-inner">
+                              <h2> 애플 넘버스,<br /> 어떤 서비스일까요? </h2>
+                              <p class="desc"> 학생 공동 작업이 가능한 넘버스 앱을 <br /> 활용하여 새로운 학습 방식으로 <br /> 학생들의 참여도를 높여 보세요! </p>
+                              <button type="button" class="banner-button">자세히보기</button>
+                            </div>
+                            <img src="/assets/images/common/img-open-banner.png" alt="2023년 신학기, 새로운 엠티처를 만나세요!" />
+                          </a>
+                        </div>
+                      </div>
+                      <button type="button" class="close-button">닫기</button>
+                    </div>
+                  </li>
+                  <!-- 요청사항 : 2월 오픈시 숨김처리 -->
+                  <!-- <li>
+              <a href="https://www.naver.com/" target="_blank">티처 LIVE</a>
+            </li> -->
+                </ul>
+              </nav>
+              <!-- // gnb -->
+            </div>
+            <div class="buttons">
+              <!-- 검색 -->
+              <form action="" class="search">
+                <div class="search-inner">
+                  <input type="text" name="" id="" placeholder="검색어를 입력해 주세요" />
+                  <button type="button" class="icon-button icon-search" title="검색">
+                    <svg>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+              <!-- 사이트 맵 -->
+              <div class="site-map">
+                <button type="button" class="icon-button">
+                  <svg>
+                    <title>사이트 맵 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-menu"></use>
+                  </svg>
+                </button>
+                <div class="site-map-inner">
+                  <div class="slider-view-auto fluid">
+                    <div class="swiper slides">
+                      <!-- !NOTE : 10개 이상일 때 동작하도록 ui.js에서 처리되어 있음-->
+                      <div class="swiper-wrapper">
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-subject-MU.svg" alt="음악 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">음악 2-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-EL.svg" alt="영어 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">영어 2-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-KO.svg" alt="국어 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">국어 2-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-SO.svg" alt="사회 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">사회 2-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-EL.svg" alt="영어 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">영어 4-1</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-SI.svg" alt="과학 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">과학 2-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-external.svg" alt="외부 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">사회 2-3</p>
+                            <p class="desc text-xs">금성사</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-SO.svg" alt="사회 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">사회 2-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-external.svg" alt="외부 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">실과 1-5</p>
+                            <p class="desc text-xs">금성사</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-MT.svg" alt="수학 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">수학 6-2</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-MT.svg" alt="수학 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">수학 6-3</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-EI.svg" alt="도덕 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">도덕 5-1</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-PC.svg" alt="체육 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">체육 5-1</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                        <a href="/" class="swiper-slide">
+                          <div class="images">
+                            <img src="/assets/images/elementary/icon-AT.svg" alt="미술 아이콘" />
+                          </div>
+                          <div class="inner-wrap">
+                            <p class="title">미술 5-1</p>
+                            <p class="desc text-xs">미래엔</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-buttons">
+                      <button class="swiper-button-prev"></button>
+                      <button class="swiper-button-next"></button>
+                    </div>
+                  </div>
+                  <ul class="depth-items">
+                    <li class="depth-1">
+                      <h2><a href="#">교과활동</a></h2>
+                      <div class="depth-2">
+                        <a href="#">1학년</a>
+                        <a href="#">2학년</a>
+                        <a href="#">3학년</a>
+                        <a href="#">4학년</a>
+                        <a href="#">5학년</a>
+                        <a href="#">6학년</a>
+                      </div>
+                    </li>
+                    <li class="depth-1">
+                      <h2><a href="#">평가 자료</a></h2>
+                      <div class="depth-2">
+                        <a href="#">1학년<span class="new">n</span></a>
+                        <a href="#">2학년</a>
+                        <a href="#">3학년</a>
+                        <a href="#">4학년</a>
+                        <a href="#">5학년</a>
+                        <a href="#">6학년</a>
+                      </div>
+                    </li>
+                    <li class="depth-1">
+                      <h2>기초 학력</h2>
+                      <div class="depth-2">
+                        <a href="#">기초학습지</a>
+                        <a href="#">한글 익히기<span class="new">n</span></a>
+                        <a href="#">교과서 E-Book</a>
+                        <a href="#">스마트 수업</a>
+                      </div>
+                    </li>
+                    <li class="depth-1">
+                      <h2>특화 자료실</h2>
+                      <div class="depth-2">
+                        <a href="#">국어</a>
+                        <a href="#">수학</a>
+                        <a href="#">사회</a>
+                        <a href="#">과학</a>
+                        <a href="#">애플 넘버스 자료실<span class="new">n</span></a>
+                      </div>
+                    </li>
+                    <li class="depth-1">
+                      <h2>창의적 체험활동</h2>
+                      <div class="depth-2">
+                        <a href="#">계기 교육</a>
+                        <a href="#">SWAI 교육</a>
+                        <a href="#">진로 교육</a>
+                        <a href="#">인성 교육</a>
+                        <a href="#">미디어리터러시</a>
+                        <a href="#">통일 교육</a>
+                        <a href="#">독도 교육</a>
+                        <a href="#">경제 금융 교육<span class="new">n</span></a>
+                        <a href="#">인권 교육</a>
+                        <a href="#">다문화 교육</a>
+                        <a href="#">안전 건강 교육</a>
+                        <a href="#">민주 시민 교육<span class="new">n</span></a>
+                        <a href="#">환경 지속가능발전 교육</a>
+                      </div>
+                    </li>
+                    <li class="depth-1">
+                      <h2>쉬는 시간</h2>
+                      <div class="depth-2">
+                        <a href="#">재미있는 이야기</a>
+                        <a href="#">즐거운 놀이</a>
+                        <a href="#">신나는 미술</a>
+                        <a href="#">초간단 체육</a>
+                        <a href="#">슬기로운 탐구 생활</a>
+                        <a href="#">위대한 역사 / 인물</a>
+                        <a href="#">바른말 고운말</a>
+                        <a href="#">기초탄탄 수학송</a>
+                        <a href="#">10분 완성 음악 놀이</a>
+                        <a href="#">룰루랄라 학습송</a>
+                      </div>
+                    </li>
+                    <!-- 요청사항 : 2월 오픈시 숨김처리 -->
+                    <!-- <li class="depth-1">
+                <h2>티처 LIVE</h2>
+                <div class="depth-2">
+                  <a href="#">LIVE 강연</a>
+                  <a href="#">혁신수업 N</a>
+                  <a href="#">콘텐츠</a>
+                  <a href="#">자료나눔</a>
+                </div>
+              </li> -->
+                    <li class="depth-1">
+                      <h2>마이페이지</h2>
+                      <div class="depth-2">
+                        <a href="#">My Class</a>
+                        <a href="#">나의 정보</a>
+                        <a href="#">나의 문의</a>
+                        <a href="#">게시물 관리</a>
+                      </div>
+                    </li>
+                    <li class="depth-1">
+                      <h2>고객센터</h2>
+                      <div class="depth-2">
+                        <a href="#">공지사항</a>
+                        <a href="#">이용안내</a>
+                        <a href="#">이벤트</a>
+                        <a href="#">자주 찾는 질문</a>
+                        <a href="#">1:1 문의</a>
+                        <a href="#">참고서/교과서 구입 안내</a>
+                        <a href="#">6필수 프로그램학년</a>
+                      </div>
+                    </li>
+                    <li class="depth-1"></li>
+                  </ul>
+                  <button type="button" class="close-button">닫기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="gnb-dim"></div>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <!-- !NOTE : menu에 page구분자 넣어주세요 -->
+        <!-- !NOTE .type-fold 를 붙이면 비교과로 변경됩니다.  -->
+        <aside id="snb">
+          <div class="snb-inner">
+            <div class="snb-header">
+              <strong>쉬는 시간</strong>
+            </div>
+            <!-- !NOTE <div class="grade-lnb">제거하고 <ul class="items">를 subject-items로 변경하였습니다. -->
+            <ul class="subject-items">
+              <li class="active"><a href="#">재미있는 이야기</a></li>
+              <li><a href="#">즐거운 놀이</a></li>
+              <li><a href="#">신나는 미술</a></li>
+              <li><a href="#">초간단 체육</a></li>
+              <li><a href="#">슬기로운 탐구 생활</a></li>
+              <li><a href="#">위대한 역사/인물</a></li>
+              <li><a href="#">바른말 고운말</a></li>
+              <li><a href="#">기초탄탄 수학송</a></li>
+              <li><a href="#">10분완성 음악놀이</a></li>
+              <li><a href="#">룰루랄라 학습송</a></li>
+            </ul>
+          </div>
+        </aside>
+        <main id="main-contents">
+          <div class="page-header">
+            <ul>
+              <li>
+                <h2>신나는 미술</h2>
+              </li>
+              <li>
+                <span class="switcher">
+                  <input type="checkbox" id="switcher" checked="checked" />
+                  <label for="switcher">즐겨찾기등록</label>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="board-view">
+            <div class="header">
+              <h3>
+                <span class="text-primary">[tab name]</span> 게시물 제목 정보가 최대 90자 출력됩니다. 게시물 제목 정보가 최대 90자 출력됩니다. 게시물 제목 정보가 최대 90자 출력됩니다.
+              </h3>
+              <div class="board-buttons">
+                <div class="buttons">
+                  <!-- !NOTE : 스크랩버튼은 toggle-this 에 active 클래스가 on/off 됩니다.  -->
+                  <button type="button" class="button type-icon size-sm toggle-this">
+                    <svg>
+                      <title>아이콘 스크랩</title>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="button type-icon size-sm">
+                    <svg>
+                      <title>아이콘 공유</title>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button type="button" class="like size-sm toggle-this">
+                  <svg>
+                    <title>아이콘 좋아요</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                  </svg> 99 </button>
+              </div>
+            </div>
+            <div class="view-body">
+              <!-- !NOTE 유튜브 영상 영역 class="video-box"를 class="youtube-box"로 변경하였습니다. -->
+              <div class="youtube-box">
+                <!-- !NOTE : 비디오 영역 입니다. -->
+                <iframe src="https://www.youtube.com/embed/DYT5qw5S83A?si=_SRMOLBA-PEZ6QEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-box">
+                <video src="/assets/images/temp/video.mp4" controls="" preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0"></video>
+              </div>
+              <p class="summary-box">
+                <!-- !NOTE : 요약 영역 입니다. --> 내용 요약 영역
+              </p>
+              <!-- 에디터 입력된 값이 여기 들어갑니다. //////////////////////////////////////////////////////////////////////////////////////// -->
+              <div class="editor-area">
+                <p> 해당 콘텐츠 게시물에 등록된 상세 정보 출력 영역입니다. 해당 콘텐츠 게시물에 등록된 상세 정보 출력 영역입니다. 해당 콘텐츠 게시물에 등록된 상세 정보 출력 영역입니다. 해당 콘텐츠 게시물에 등록된 상세 정보 출력 영역입니다. 해당 콘텐츠 게시물에 등록된 상세 정보 출력 영역입니다. 해당 콘텐츠 게시물에 등록된 상세 정보 출력 영역입니다. </p>
+              </div>
+              <!-- // 에디터 입력된 값이 여기 들어갑니다. //////////////////////////////////////////////////////////////////////////////////////// -->
+              <!-- !NOTE : combo 혹은 source 둘중 하나라도 true면 .etc-box 가 출력 됩니다. -->
+              <div class="etc-box">
+                <div class="source-box">
+                  <h4>출처</h4>
+                  <span>EBS</span>
+                </div>
+              </div>
+            </div>
+            <div class="board-pagination">
+              <a href="#">
+                <span> 이전글 <svg>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-up"></use>
+                  </svg>
+                </span>
+                <p>이전글 타이틀 최대 한줄까지 표시 됩니다.</p>
+              </a>
+              <a href="#">
+                <span> 다음글 <svg>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                  </svg>
+                </span>
+                <p>다음글 타이틀 최대 한줄까지 표시 됩니다.</p>
+              </a>
+            </div>
+            <div class="page-buttons align-right">
+              <button class="button size-lg">
+                <svg>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-menu"></use>
+                </svg> 목록 </button>
+            </div>
+            <div class="recommend">
+              <h3>연관추천</h3>
+              <div class="board-items margin-top-lg">
+                <a href="#" class="item ">
+                  <div class="image-wrap">
+                    <img src="/assets/images/temp/img-board01.png" alt="" />
+                    <div class="info-media">
+                      <img src="/assets/images/common/icon-clip-elementary.svg" alt="clip-elementary 아이콘" />
+                      <span class="time">59:59</span>
+                    </div>
+                  </div>
+                  <div class="inner-wrap">
+                    <div class="text-wrap">
+                      <p class="title">게시물의 제목 정보가 출력됩니다. 최대 두 줄 까지 출력됩니다.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- //.item -->
+                <a href="#" class="item ">
+                  <div class="image-wrap">
+                    <img src="/assets/images/temp/img-board01.png" alt="" />
+                    <div class="info-media">
+                      <img src="/assets/images/common/icon-clip-elementary.svg" alt="clip-elementary 아이콘" />
+                      <span class="time">59:59</span>
+                    </div>
+                  </div>
+                  <div class="inner-wrap">
+                    <div class="text-wrap">
+                      <p class="title">게시물의 제목 정보가 출력됩니다. 최대 두 줄 까지 출력됩니다.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- //.item -->
+                <a href="#" class="item ">
+                  <div class="image-wrap">
+                    <img src="/assets/images/temp/img-board01.png" alt="" />
+                    <div class="info-media">
+                      <img src="/assets/images/common/icon-clip-elementary.svg" alt="clip-elementary 아이콘" />
+                      <span class="time">59:59</span>
+                    </div>
+                  </div>
+                  <div class="inner-wrap">
+                    <div class="text-wrap">
+                      <p class="title">게시물의 제목 정보가 출력됩니다. 최대 두 줄 까지 출력됩니다.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- //.item -->
+                <a href="#" class="item ">
+                  <div class="image-wrap">
+                    <img src="/assets/images/temp/img-board01.png" alt="" />
+                    <div class="info-media">
+                      <img src="/assets/images/common/icon-clip-elementary.svg" alt="clip-elementary 아이콘" />
+                      <span class="time">59:59</span>
+                    </div>
+                  </div>
+                  <div class="inner-wrap">
+                    <div class="text-wrap">
+                      <p class="title">게시물의 제목 정보가 출력됩니다. 최대 두 줄 까지 출력됩니다.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- //.item -->
+              </div>
+            </div>
+            <div class="comment">
+              <div class="inner-wrap">
+                <div class="write-box">
+                  <h3>댓글</h3>
+                  <div class="textarea">
+                    <textarea name="" id="" rows="2" placeholder="비방, 욕설 작성 시 이용에 제한될 수 있습니다."></textarea>
+                    <div class="buttons">
+                      <span class="digits">0/200</span>
+                      <button class="button size-lg type-secondary">등록</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="comments">
+                  <div class="split-container">
+                    <h3>총 <span class="text-primary">10</span>개</h3>
+                    <span class="ox">
+                      <input type="checkbox" id="my-comments" />
+                      <label for="my-comments">내가 작성한 댓글</label>
+                    </span>
+                  </div>
+                  <ul>
+                    <!-- !NOTE : CASE 1/5 기본 -->
+                    <li>
+                      <p class="user-id">작성자명 맨 뒤 6글자가 *로 마스킹 됩니다.</p>
+                      <p class="comment-text">작성된 텍스트가 이곳에 들어갑니다.</p>
+                      <span class="date">2023-11-20</span>
+                      <div class="dropdown">
+                        <button class="icon-button">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-kebab" />
+                          </svg>
+                        </button>
+                        <ul class="items">
+                          <li><a href="#" class="button size-md type-light">수정</a></li>
+                          <li><a href="#" class="button size-md type-light">삭제</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- !NOTE : CASE 2/5 내가 작성한 댓글 : flag-my 클래스가 붙습니다. -->
+                    <li class="flag-my">
+                      <p class="user-id">123******</p>
+                      <p class="comment-text">내가 작성한 댓글에는 flag-my 클래스가 붙습니다. .flag-my클래스가 붙으면 우측 버튼이 노출됩니다.(우측 상단 케밥 메뉴)</p>
+                      <span class="date">2023-11-21</span>
+                      <!-- !NOTE : .flag-my 하위의 .icon-button 만 노출됩니다. -->
+                      <div class="dropdown">
+                        <button class="icon-button">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-kebab" />
+                          </svg>
+                        </button>
+                        <ul class="items">
+                          <li><a href="#">수정</a></li>
+                          <li><a href="#">삭제</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- !NOTE : CASE 3/5 댓글 수정 : flag-modify 클래스가 붙어야 합니다.
+                    flag-modify 클래스로 .comment-text, .date, .comment-menu -> display: none; 처리 됩니다. -->
+                    <li class="flag-modify">
+                      <p class="user-id">123******</p>
+                      <p class="comment-text">수정모드 케이스 입니다. 케밥 메뉴의 수정 버튼을 누르면 이렇게 됩니다. placeholder에는 기존에 있던 .comment-text의 내용을 넣어주세요.</p>
+                      <span class="date">2023-11-21</span>
+                      <div class="comment-modify">
+                        <textarea name="" id="" rows="5" placeholder="수정모드 케이스 입니다. 케밥 메뉴의 수정 버튼을 누르면 이렇게 됩니다. placeholder에는 기존에 있던 .comment-text의 내용을 넣어주세요."></textarea>
+                        <div class="buttons align-right">
+                          <button class="button size-md type-white">취소</button>
+                          <button class="button size-md type-primary-light">저장</button>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <button class="icon-button">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-kebab" />
+                          </svg>
+                        </button>
+                        <ul class="items">
+                          <li><a href="#">수정</a></li>
+                          <li><a href="#">삭제</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- !NOTE :  CASE 4/5 댓글이 없을 시 -->
+                    <li>
+                      <div class="box-no-data"> 등록된 댓글이 없습니다. </div>
+                    </li>
+                    <li class="flag-my">
+                      <p class="user-id">123******</p>
+                      <p class="comment-text">글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때 글씨 많을 때</p>
+                      <span class="date">2023-11-21</span>
+                      <!-- !NOTE : .flag-my 하위의 .icon-button 만 노출됩니다. -->
+                      <div class="dropdown">
+                        <button class="icon-button">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-kebab" />
+                          </svg>
+                        </button>
+                        <ul class="items">
+                          <li><a href="#">수정</a></li>
+                          <li><a href="#">삭제</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- !NOTE :  CASE 5/5 티처 LIVE > 기대평 작성 케이스일 때  -->
+                    <li>
+                      <div class="block-wrap">
+                        <ul class="divider-group">
+                          <li>
+                            <p class="user-id">username******</p>
+                          </li>
+                          <li>
+                            <p class="user-job">초등학교 선생님</p>
+                          </li>
+                        </ul>
+                        <!-- !NOTE : 공유 여부에 따라 노출 or 비노출 -->
+                        <span class="badge fill-elementary type-rounded">공유완료</span>
+                      </div>
+                      <p class="comment-text">티처 LIVE 기대평 작성 케이스 일 경우의 케이스 입니다.</p>
+                      <span class="date">2023-11-20</span>
+                      <div class="dropdown">
+                        <button class="icon-button">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-kebab" />
+                          </svg>
+                        </button>
+                        <ul class="items">
+                          <li><a href="#" class="button size-md type-light">수정</a></li>
+                          <li><a href="#" class="button size-md type-light">삭제</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pagination">
+                <!-- !NOTE : 이전 리스트 없는 경우 disabled 추가필요 -->
+                <button class="icon-button icon-first" disabled=""> first <svg>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                  </svg>
+                </button>
+                <button class="icon-button icon-prev" disabled=""> prev <svg>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                  </svg>
+                </button>
+                <!-- !NOTE : 선택된 버튼에 .current 클래스 추가 사용 -->
+                <button class="current">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button class="icon-button icon-next"> next <svg>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </button>
+                <button class="icon-button icon-last"> last <svg>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="quick-menu" style="right:300px">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-miraen"></use>
+          </svg>
+        </span>
+        <div class="user-status">
+          <p class="user-name">로그인</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="login-box">
+          <form action="submit" class="form login-form">
+            <div class="input-wrap">
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-user"></use>
+                </svg>
+                <input type="search" name="" id="id" placeholder="아이디" title="ID" />
+              </div>
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-password"></use>
+                </svg>
+                <input type="password" name="" id="pw" placeholder="비밀번호" title="Password" />
+              </div>
+            </div>
+            <span class="ox login-ox">
+              <input type="checkbox" id="save-id" />
+              <label for="save-id">아이디 저장</label>
+            </span>
+            <button type="submit" class="fluid login-button">로그인</button>
+          </form>
+          <ul class="divider-group">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">ID&#47;PW 찾기</a></li>
+          </ul>
+          <div class="sns-box">
+            <button type="button" class="facebook" title="페이스북 로그인"></button>
+            <button type="button" class="kakao" title="카카오 로그인"></button>
+            <button type="button" class="naver" title="네이버 로그인"></button>
+            <button type="button" class="google" title="구글 로그인"></button>
+            <button type="button" class="whale" title="웨일 로그인"></button>
+          </div>
+        </div>
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <h4 class="text-primary"> 즐겨찾기 된<br />서비스가 없습니다. </h4>
+              <hr class="no-margin margin-top-lg">
+              <p class="margin-top-md"> 내가 수업하는<br /> 미래엔 교과서를 등록해<br /> 보세요 </p>
+              <button type="button" class="button type-secondary size-md margin-top-md"> 서비스 즐겨찾기 <svg>
+                  <title>아이콘 - icon-plus</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="quick-menu is-login on">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">3학년</span>
+        <div class="user-status">
+          <p class="user-name">홍길동</p>
+          <p class="school-name">미래엔 초등학교</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <ul class="menu-list">
+          <!-- icon버튼으로 바꾸기 -->
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick-logined">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <ul class="ul-dot size-sm">
+                <li><a href="#">국어 3-1 &#40;가&#41;</a></li>
+                <li><a href="#">국어 3-1 &#40;나&#41; &#40;도봉순&#41;</a></li>
+                <li><a href="#">수학 3-1</a></li>
+                <li><a href="#">사회 3-1</a></li>
+                <li><a href="#">과학 3-1</a></li>
+                <li><a href="#">도덕 3</a></li>
+                <li><a href="#">음악 3</a></li>
+                <li><a href="#">미술 3</a></li>
+                <li><a href="#">체육 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-write.svg" alt="판서 아이콘" /> 판서 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-timer.svg" alt="타이머 아이콘" /> 타이머 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-clipping.svg" alt="깜깜이 아이콘" /> 깜깜이 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-loudspeaker.svg" alt="주의집중 아이콘" /> 주의집중 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-presenter.svg" alt="발표자 선정 아이콘" /> 발표자 선정 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-marker.svg" alt="모둠 점수판 아이콘" /> 모둠 점수판 </a>
+          </li>
+        </ul>
+        <div class="bottom-buttons">
+          <a href="#" class="bottom-button">마이페이지</a>
+          <button type="button" class="bottom-button">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

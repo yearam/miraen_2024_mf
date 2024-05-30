@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>badge</h1>
+          <section>
+            <h2>
+              default
+              <!-- <small>기본 폰트 사이즈 11px/높이 21px, 폰트사이즈 줄어들 경우 높이값도 변경됩니다.</small> -->
+              <small>기본 사이즈는 폰트 사이즈 11px/높이 21px, 폰트사이즈 줄어들 경우 높이값도 변경됩니다.</small>
+            </h2>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 15%;" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>default (min-height: 20px)</th>
+                  <th>.size-md (min-height: 24px)</th>
+                  <th>.size-lg (min-height 28px)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <span class="badge"></span>
+                    <span class="badge">0</span>
+                    <span class="badge">default</span>
+                  </td>
+                  <td>
+                    <span class="badge size-md"></span>
+                    <span class="badge size-md">0</span>
+                    <span class="badge size-md">default</span>
+                  </td>
+                  <td>
+                    <span class="badge size-lg"></span>
+                    <span class="badge size-lg">0</span>
+                    <span class="badge size-lg">default</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>type-round-box</th>
+                  <td>
+                    <span class="badge type-round-box">0</span>
+                    <span class="badge type-round-box">default</span>
+                  </td>
+                  <td>
+                    <span class="badge type-round-box size-md">0</span>
+                    <span class="badge type-round-box size-md">라벨</span>
+                  </td>
+                  <td>
+                    <span class="badge type-round-box size-lg">0</span>
+                    <span class="badge type-round-box size-lg">라벨</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>type-rounded</th>
+                  <td>
+                    <span class="badge type-rounded">0</span>
+                    <span class="badge type-rounded">default</span>
+                  </td>
+                  <td>
+                    <span class="badge type-rounded size-md">0</span>
+                    <span class="badge type-rounded size-md">라벨</span>
+                  </td>
+                  <td>
+                    <span class="badge type-rounded size-lg">0</span>
+                    <span class="badge type-rounded size-lg">라벨</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>text-</th>
+                  <td>
+                    <span class="badge text-elementary">0</span>
+                    <span class="badge text-elementary">default</span>
+                  </td>
+                  <td>
+                    <span class="badge text-high size-md">0</span>
+                    <span class="badge text-high size-md">라벨</span>
+                  </td>
+                  <td>
+                    <span class="badge text-dark size-lg">0</span>
+                    <span class="badge text-dark size-lg">라벨</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre class="brush:html">
+              <span class="badge">0</span>
+              <span class="badge">default</span>
+              <span class="badge fill-primary" title="라벨명">라벨 .fill-primary</span>
+              <span class="badge fill-secondary" title="라벨명">라벨 .fill-secondary</span>
+              <span class="badge fill-skyblue" title="라벨명">라벨 .fill-skyblue</span>
+              <!-- 값이 없는 경우 dot 으로 표현됩니다  -->
+              <span class="badge fill-skyblue"></span>
+
+              <!-- height 25px는 .size-sm 으로 표현됩니다 -->
+              <span class="badge size-sm"></span>
+              <span class="badge size-sm">0</span>
+              <span class="badge size-sm">라벨</span>
+
+              <!-- height: 28px, font-size: 16px 은 .size-md로 표현됩니다. -->
+              <span class="badge size-md">0</span>
+              <span class="badge size-md">default</span>
+
+              <!-- .size-md.type-rounded 의 border-radius는 18px 입니다. -->
+              <span class="badge size-md type-rounded">0</span>
+              <span class="badge size-md type-rounded">라벨</span>
+            </pre>
+
+            <h3>실제 사용 케이스</h3>
+            <div class="badges">
+              <span class="badge type-round-box fill-skyblue">교과서 자료</span>
+              <span class="badge type-round-box fill-purple">비주얼씽킹</span>
+              <span class="badge type-round-box fill-orange">교구 수업</span>
+              <span class="badge type-round-box fill-primary">생각열기</span>
+              <span class="badge type-round-box fill-secondary">학습영상</span>
+              <span class="badge type-round-box fill-purple">탐구해요</span>
+              <span class="badge type-round-box fill-green">국어 3-1(가)</span>
+              <span class="badge type-round-box fill-gray-100">소멸</span>
+              <span class="badge type-round-box fill-gray-500">- 1,500</span>
+              <span class="badge type-round-box fill-primary-400"># 사이트 이용</span>
+              <span class="badge fill-elementary">초등</span>
+              <span class="badge fill-middle">중등</span>
+              <span class="badge fill-high">고등</span>
+              <span class="badge fill-all-grade">공통</span>
+              <span class="badge type-round-box text-elementary">초등</span>
+              <span class="badge type-round-box text-middle">중등</span>
+              <span class="badge type-round-box text-high">고등</span>
+              <span class="badge type-round-box text-all-grade">공통</span>
+            </div>
+            <pre class="brush:html">
+              <span class="badge type-round-box fill-skyblue">교과서 자료</span>
+              <span class="badge type-round-box fill-purple">비주얼씽킹</span>
+              <span class="badge type-round-box fill-orange">교구 수업</span>
+              <span class="badge type-round-box fill-primary">생각열기</span>
+              <span class="badge type-round-box fill-secondary">학습영상</span>
+              <span class="badge type-round-box fill-purple">탐구해요</span>
+              <span class="badge type-round-box fill-green">국어 3-1(가)</span>
+              <span class="badge type-round-box fill-gray-100">소멸</span>
+              <span class="badge type-round-box fill-gray-500">- 1,500</span>
+              <span class="badge type-round-box fill-primary-400"># 사이트 이용</span>
+            </pre>
+
+            <h3>컬러 케이스</h3>
+            <div class="badges">
+              <span class="badge">default</span>
+              <span class="badge fill-elementary">fill-elementary</span>
+              <span class="badge fill-middle">fill-middle</span>
+              <span class="badge fill-high">fill-high</span>
+              <span class="badge fill-all-grade">fill-all-grade</span>
+              <span class="badge fill-white">fill-white</span>
+              <span class="badge fill-black">fill-black</span>
+              <span class="badge fill-purple">fill-purple</span>
+              <span class="badge fill-orange">fill-orange</span>
+              <span class="badge fill-skyblue">fill-skyblue</span>
+              <span class="badge fill-green">fill-green</span>
+              <span class="badge fill-lighten">fill-lighten</span>
+              <span class="badge fill-light">fill-light</span>
+              <span class="badge fill-dark">fill-dark</span>
+              <span class="badge fill-primary">.fill-primary 로 사용시 초/중/고 각각의 컬러로 변경됩니다.</span>
+              <span class="badge fill-primary-400">fill-primary-400 초/중/고 각각의 컬러로 변경됩니다.</span>
+              <span class="badge fill-secondary">fill-secondary 초/중/고 각각의 컬러로 변경됩니다.</span>
+              <span class="badge fill-tertiary">fill-tertiary</span>
+              <span class="badge fill-error">fill-error</span>
+              <span class="badge fill-new">fill-new</span>
+            </div>
+            <pre class="brush:html">
+              <span class="badge">default</span>
+              <span class="badge fill-elementary">fill-elementary</span>
+              <span class="badge fill-middle">fill-middle</span>
+              <span class="badge fill-high">fill-high</span>
+              <span class="badge fill-all-grade">fill-all-grade</span>
+              <span class="badge fill-white">fill-white</span>
+              <span class="badge fill-black">fill-black</span>
+              <span class="badge fill-purple">fill-purple</span>
+              <span class="badge fill-orange">fill-orange</span>
+              <span class="badge fill-skyblue">fill-skyblue</span>
+              <span class="badge fill-green">fill-green</span>
+              <span class="badge fill-lighten">fill-lighten</span>
+              <span class="badge fill-light">fill-light</span>
+              <span class="badge fill-dark">fill-dark</span>
+              <span class="badge fill-primary">.fill-primary 로 사용시 초/중/고 각각의 컬러로 변경됩니다.</span>
+              <span class="badge fill-primary-400">fill-primary-400 초/중/고 각각의 컬러로 변경됩니다.</span>
+              <span class="badge fill-secondary">fill-secondary 초/중/고 각각의 컬러로 변경됩니다.</span>
+              <span class="badge fill-tertiary">fill-tertiary</span>
+              <span class="badge fill-error">fill-error</span>
+              <span class="badge fill-new">fill-new</span>
+            </pre>
+          </section>
+
+          <section>
+            <h2>.badge-recently</h2>
+            <span class="badge-recently"> 최근 </span>
+            <pre class="brush:html">
+              <span class="badge-recently"> 최근 </span>
+            </pre>
+          </section>
+          <section>
+            <h2>.badges : 여러개 사용시</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 15%;" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <div class="badges">
+                      <span class="badge fill-primary" title="라벨명">라벨 .fill-primary</span>
+                      <span class="badge fill-secondary" title="라벨명">라벨 .fill-secondary</span>
+                      <span class="badge fill-skyblue" title="라벨명">라벨 .fill-skyblue</span>
+                      <span class="badge fill-white" title="라벨명">라벨 .fill-white</span>
+                      <span class="badge fill-purple" title="라벨명">라벨 .fill-purple</span>
+                      <span class="badge fill-light" title="라벨명">라벨 .fill-light</span>
+                      <span class="badge fill-dark" title="라벨명">라벨 .fill-dark</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>type-tag</th>
+                  <td>
+                    <div class="badges type-tag">
+                      <a href="/" class="badge fill-primary" title="라벨명">라벨 .fill-primary</a>
+                      <a href="/" class="badge fill-secondary" title="라벨명">라벨 .fill-secondary</a>
+                      <a href="/" class="badge fill-skyblue" title="라벨명">라벨 .fill-skyblue</a>
+                      <a href="/" class="badge fill-white" title="라벨명">라벨 .fill-white</a>
+                      <a href="/" class="badge fill-purple" title="라벨명">라벨 .fill-purple</a>
+                      <a href="/" class="badge fill-light" title="라벨명">라벨 .fill-light</a>
+                      <a href="/" class="badge fill-dark" title="라벨명">라벨 .fill-dark</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre class="brush:html">
+              <div class="badges">
+                <span class="badge" title="라벨명">라벨</span>
+              </div>
+
+              <!-- type-tag -->
+              <div class="badges type-tag">
+                <a href="/" class="badge" title="라벨명">라벨</a>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>.info-media
+              <small>교과활동 - 동영상 정보표시</small>
+            </h2>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>icon + time </th>
+                  <th>icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="info-media" style="position: static;">
+                      <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘">
+                      <span class="time">59:59</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-media" style="position: static;">
+                      <img src="/assets/images/common/icon-clip.svg" alt="youtube 아이콘">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class='brush:html'>
+              <div class="info-media">
+                <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘">
+                <span class="time">59:59</span>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>.drop-badge<small>2줄 이상일 때 .badge가 밑으로 떨어짐</small></h2>
+            <p class="text-xs text-black margin-top-sm drop-badge">
+              <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자</strong>
+              <span class="badge type-rounded fill-light">사회 10~36쪽</span>
+            </p>
+            <p class="text-xs text-black margin-top-sm drop-badge">
+              <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자</strong>
+              <span class="badge type-rounded fill-light">사회 10~36쪽</span>
+            </p>
+            <pre class="brush:html">
+              <p class="text-xs text-black margin-top-sm drop-badge">
+                <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자</strong>
+                <span class="badge type-rounded fill-light">사회 10~36쪽</span>
+              </p>
+            </pre>
+          </section>
+
+          <section>
+            <h2>.type-tail</h2>
+            <span class="badge type-tail">33</span>
+            <pre class="brush:html">
+              <span class="badge type-tail">33</span>
+            </pre>
+          </section>
+
+          <section>
+            <h2>배경 + 텍스트에 색상들어감</h2>
+            <span class="badge mix-round primary">특화자료실</span>
+            <span class="badge mix-round gray">특화자료실</span>
+            
+            <pre class="brush:html">
+              <span class="badge mix-round primary">특화자료실</span>
+              <span class="badge mix-round gray">특화자료실</span>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

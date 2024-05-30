@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main class="guide-container">
+          <h1 class="guide-header">layout guide - 디자인 반영 전 기본 마크업 샘플 입니다.</h1>
+          <section>
+            <h2 class="guide-header">서브 기본 구조</h2>
+            <pre class="brush:html">
+              <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+              &lt;body class="theme-elementary">
+                <header></header>
+                <div class="container">
+                  <aside>
+                    <!-- SNB 영역입니다. -->
+                    snb
+                  </aside>
+                  <main>
+                    main contents area
+                  </main>
+                </div>
+                <footer></footer>
+                &lt;/body>
+            </pre>
+          </section>
+          <section>
+            <h2 class="guide-header">header</h2>
+            <p class="desc">초/중/고 모두 동일한 마크업을 사용합니다. 초/중/고 개별 컬러값은 각 카테고리마다 호출되는 스타일 파일에서 변경됩니다.</p>
+            <h3 class="guide-header">page-header</h3>
+            <div style="height: 400px;">
+            </div>
+            <pre class="brush:html">
+            </pre>
+          </section>
+          <section>
+            <h2>footer</h2>
+            <footer class="layout-footer">
+              <div class="footer-info">
+                <div class="inner">
+                  <div class="policy">
+                    <ul>
+                      <li><a href="#">이용약관</a></li>
+                      <li><a href="#">개인정보처리방침</a></li>
+                      <li><a href="#">저작권정책</a></li>
+                      <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                  </div>
+                  <div class="relate">
+                    <div class="sns">
+                      <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link ft-youtube" target="_blank"></a>
+                      <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link ft-facebook" target="_blank">facebook</a>
+                      <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link ft-kakao" target="_blank">kakao</a>
+                      <a href="https://blog.naver.com/mirae-n" class="ft-link ft-naver" target="_blank">naver</a>
+                    </div>
+                    <div class="family-site">
+                      <a class="button-family-site" title="패밀리사이트">Family site</a>
+                      <div class="family-site-pop">
+                        <div class="pop-head">
+                          미래엔
+                        </div>
+                        <div class="pop-body">
+                          <div class="family-list">
+                            <dl>
+                              <dt>본사</dt>
+                              <dd>미래엔</dd>
+                            </dl>
+                            <dl>
+                              <dt>브랜드</dt>
+                              <dd>미래엔 교과서</dd>
+                            </dl>
+                            <dl>
+                              <dt>서비스</dt>
+                              <dd>미래엔 에듀</dd>
+                            </dl>
+                            <dl>
+                              <dt>사회공헌</dt>
+                              <dd>인쇄서비스</dd>
+                              <dd>vol.321</dd>
+                              <dd>종고등 엠티처</dd>
+                            </dl>
+                            <dl>
+                              <dt>사회공헌</dt>
+                              <dd>목정미래재단</dd>
+                              <dd>교과서 박물관</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <address class="footer-address">
+                <div class="inner">
+                  <div class="ft-logo">
+                    <a href="#"><img src="/assets/images/common/ft-logo.png" alt="미래엔 로고" /></a>
+                  </div>
+                  <div class="ft-address">
+                    <ul>
+                      <li>(주)미래엔</li>
+                      <li>대표 신광수</li>
+                      <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                      <li>사업자등록번호 214-81-04977</li>
+                    </ul>
+                    <ul>
+                      <li>통신판매신고 서초04494호</li>
+                      <li>개인정보보호책임자 한범석</li>
+                      <li>이메일 mteacher@mirae-n.com</li>
+                    </ul>
+                    <ul>
+                      <li>Tel 1800-8890</li>
+                      <li>Fax 02-541-8152</li>
+                    </ul>
+                    <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+                  </div>
+                </div>
+              </address>
+            </footer>
+            <pre class="brush:html">
+                <footer class="layout-footer">
+                  <div class="footer-info">
+                    <div class="inner">
+                      <div class="policy">
+                        <ul>
+                          <li><a href="#">이용약관</a></li>
+                          <li><a href="#">개인정보처리방침</a></li>
+                          <li><a href="#">저작권정책</a></li>
+                          <li><a href="#">이메일무단수집거부</a></li>
+                        </ul>
+                      </div>
+                      <div class="relate">
+                        <div class="sns">
+                          <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link ft-youtube" target="_blank">youtube</a>
+                          <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link ft-facebook" target="_blank">facebook</a>
+                          <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link ft-kakao" target="_blank">kakao</a>
+                          <a href="https://blog.naver.com/mirae-n" class="ft-link ft-naver" target="_blank">naver</a>
+                        </div>
+                        <div class="family-site">
+                          <a class="button-family-site" title="패밀리사이트">Family site</a>
+                          <div class="family-site-pop">
+                            <div class="pop-head">
+                              미래엔
+                            </div>
+                            <div class="pop-body">
+                              <div class="family-list">
+                                <dl>
+                                  <dt>본사</dt>
+                                  <dd>미래엔</dd>
+                                </dl>
+                                <dl>
+                                  <dt>브랜드</dt>
+                                  <dd>미래엔 교과서</dd>
+                                </dl>
+                                <dl>
+                                  <dt>서비스</dt>
+                                  <dd>미래엔 에듀</dd>
+                                </dl>
+                                <dl>
+                                  <dt>사회공헌</dt>
+                                  <dd>인쇄서비스</dd>
+                                  <dd>vol.321</dd>
+                                  <dd>종고등 엠티처</dd>
+                                </dl>
+                                <dl>
+                                  <dt>사회공헌</dt>
+                                  <dd>목정미래재단</dd>
+                                  <dd>교과서 박물관</dd>
+                                </dl>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <address class="footer-address">
+                    <div class="inner">
+                      <div class="ft-logo">
+                        <a href="#"><img src="/assets/images/common/ft-logo.png" alt="미래엔 로고"></a>
+                      </div>
+                      <div class="ft-address">
+                        <ul>
+                          <li>(주)미래엔</li>
+                          <li>대표 신광수</li>
+                          <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                          <li>사업자등록번호 214-81-04977</li>
+                        </ul>
+                        <ul>
+                          <li>통신판매신고 서초04494호</li>
+                          <li>개인정보보호책임자 한범석</li>
+                          <li>이메일 mteacher@mirae-n.com</li>
+                        </ul>
+                        <ul>
+                          <li>Tel 1800-8890</li>
+                          <li>Fax 02-541-8152</li>
+                        </ul>
+                        <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+                      </div>
+                    </div>
+                  </address>        
+                </footer>
+              </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

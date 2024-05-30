@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+
+<body class="guide theme-elementary">
+	<div class="wrap">
+		<header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+		<div class="container">
+			<aside class="guide-aside">
+				<iframe src="menu.html" frameborder="0"></iframe>
+			</aside>
+			<main>
+				<h1>Popup</h1>
+				<section>
+					<h2>기본팝업</h2>
+					<ul class="ul-circle">
+						<li>popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width: 800 / .fluid = width
+							: 100%</li>
+						<li>init-show 라고 속성값을 붙이면 모달 초기값이 show 됩니다.</li>
+					</ul>
+					<table class="guide-table">
+						<thead>
+							<tr>
+								<th>default</th>
+								<th>size-sm</th>
+								<th>size-lg</th>
+								<th>size-xl</th>
+								<th>size-xxl</th>
+								<th>fluid</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><button class="button size-md" target-obj="popup-default">클릭시 팝업오픈 - 기본</button></td>
+								<td><button class="button size-md" target-obj="popup-sm">클릭시 팝업오픈 - small</button></td>
+								<td><button class="button size-md" target-obj="popup-lg">클릭시 팝업오픈 - large</button></td>
+								<td><button class="button size-md" target-obj="popup-xl">클릭시 팝업오픈 - xlarge</button></td>
+								<td><button class="button size-md" target-obj="popup-xxl">클릭시 팝업오픈 - xxlarge</button></td>
+								<td><button class="button size-md" target-obj="popup-fluid">클릭시 팝업오픈 - fluid</button></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<pre class="brush:js">
+							<!-- !NOTE : case 1/2 버튼 클릭하여 팝업 및 알럿 실행해야 하는 경우 : 
+							target-obj의 값을 원하는 팝업의 id 값과 동일하게 넣어주면 팝업 실행됩니다. -->
+							<button class="button size-md" target-obj="popup-default"></button>
+
+							<!-- !NOTE : case 2/2 클릭이벤트 없이 팝업 및 알럿 실행해야 하는 경우 : 아래 함수를 실행시켜 주면 됩니다. -->
+							openPopup({id: "모달or알럿 아이디"});
+							
+							<!-- !NOTE : 특정 조건 이후 팝업&알럿이 닫혀야 하는 경우 : 아래 함수를 실행시켜 주면 됩니다.-->
+							closePopup("모달or알럿 아이디");
+						</pre>
+
+					<h3>.popup-window : modal > window.open</h3>
+					<pre class='brush:html'>
+							<!-- !NOTE case 1/2 : 기본 모달인 경우 -->
+							<div class="popup">
+								<div class="popup-container">
+									<!-- 내부 구조는 동일합니다. -->
+								</div>
+							</div>
+							<!-- !NOTE case 2/2 : 윈도우 팝업인 경우 -->
+							<div class="popup-window">
+								<div class="popup-container">
+									<!-- 내부 구조는 동일합니다. -->
+								</div>
+							</div>
+						</pre>
+					<h3>팝업 사이즈별 적용 예</h3>
+					<div class="popup guide-position-clear">
+						<div class="popup-container">
+							<button class="icon-button close-button">
+								<svg>
+									<title>아이콘 - icon-close</title>
+									<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+								</svg>
+							</button>
+							<div class="header">
+								제목이 들어갑니다. 기본 넓이 560px;
+							</div>
+							<div class="body">
+								<p>팝업 컨텐츠 영역 최대 540 을 넘어서면 스크롤이 생깁니다.</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+							</div>
+							<div class="footer">
+								<button class="button size-xl type-dark">취소</button>
+								<button class="button size-xl type-primary">확인</button>
+							</div>
+						</div>
+						<div class="popup-container size-sm">
+							<button class="icon-button close-button">
+								<svg>
+									<title>아이콘 - icon-close</title>
+									<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+								</svg>
+							</button>
+							<div class="header">
+								제목이 들어갑니다. size-sm : 넓이 484px;
+							</div>
+							<div class="body">
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+							</div>
+							<div class="footer">
+								<button class="button size-xl type-dark">취소</button>
+								<button class="button size-xl type-primary">확인</button>
+							</div>
+						</div>
+						<div class="popup-container size-lg">
+							<button class="icon-button close-button">
+								<svg>
+									<title>아이콘 - icon-close</title>
+									<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+								</svg>
+							</button>
+							<div class="header">
+								제목이 들어갑니다. size-lg : 넓이 700px;
+							</div>
+							<div class="body">
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+							</div>
+							<div class="footer">
+								<button class="button size-xl type-dark">취소</button>
+								<button class="button size-xl type-primary">확인</button>
+							</div>
+						</div>
+						<div class="popup-container size-xl">
+							<button class="icon-button close-button">
+								<svg>
+									<title>아이콘 - icon-close</title>
+									<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+								</svg>
+							</button>
+							<div class="header">
+								제목이 들어갑니다. size-xl : 넓이 800px;
+							</div>
+							<div class="body">
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+							</div>
+							<div class="footer">
+								<button class="button size-xl type-dark">취소</button>
+								<button class="button size-xl type-primary">확인</button>
+							</div>
+						</div>
+						<div class="popup-container fluid">
+							<button class="icon-button close-button">
+								<svg>
+									<title>아이콘 - icon-close</title>
+									<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+								</svg>
+							</button>
+							<div class="header">
+								제목이 들어갑니다. fluid : 넓이 100%
+							</div>
+							<div class="body">
+								<p>
+									Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum
+									diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet
+									et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam
+									sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed
+									et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et.
+									Sit.
+								</p>
+							</div>
+							<div class="footer">
+								<button class="button size-xl type-dark">취소</button>
+								<button class="button size-xl type-primary">확인</button>
+							</div>
+						</div>
+					</div>
+					<pre class='brush:html'>
+							<!-- !NOTE : init-show 라고 속성값을 붙이면 모달 초기값이 show 됩니다. -->
+							<div class="popup" init-show>
+								<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+								<div class="popup-container">
+									<button class="icon-button close-button" close-obj>
+										<svg>
+											<title>아이콘 - icon-close</title>
+											<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+										</svg>
+									</button>
+									<div class="header">
+										size-sm : 넓이 484px
+									</div>
+									<div class="body">
+										<!-- contents area -->
+									</div>
+									<div class="footer">
+										<button class="button size-xl type-dark" close-obj>취소</button>
+										<button class="button size-xl type-primary">확인</button>
+									</div>
+								</div>
+							</div>
+						</pre>
+					<h3>.no-body-scroll: body 스크롤 미사용. 본문 내부 별도 스크롤 사용</h3>
+					<a href="/assets/pc/html/common/p_c_myp_11001_l.html" class="button size-md">마이페이지/나의포인트 바로가기</a>
+					<pre class='brush:html'>
+							<!-- !NOTE : class="popup"에 init-show 라고 속성값을 붙이면 모달 초기값이 show 됩니다. -->
+							<div class="popup" init-show="">
+								<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100%,
+									no-body-scroll를 추가하시면 max-height가 720px인 팝업이 생성 됩니다.  
+								-->
+								<div class="popup-container no-body-scroll">
+										<button class="icon-button close-button" close-obj="">
+												<svg>
+														<title>아이콘 - icon-close</title>
+														<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+												</svg>
+										</button>
+										<div class="header">
+											.no-body-scroll
+										</div>
+										<div class="body">
+												<!-- contents area -->
+										</div>
+										<div class="footer">
+												<button class="button size-xl type-dark" close-obj="">취소</button>
+												<button class="button size-xl type-primary">확인</button>
+										</div>
+								</div>
+							</div>
+						</pre>
+
+					<h3>no-dimd</h3>
+					<button class="button size-md type-third" target-obj="popup-no-dimd">no-dimd 팝업 오픈</button>
+					<pre class='brush:html'>
+							<!-- no-dimd 를 추가해 주시면 됩니다. -->
+							<div class="popup" no-dimd></div>
+						</pre>
+				</section>
+				<section>
+					<h2>alert</h2>
+					<button class="button size-md" target-obj="alert">알럿 기본</button>
+					<button class="button size-md" target-obj="alert-positive">알럿 긍정</button>
+					<button class="button size-md" target-obj="alert-negative">알럿 부정</button>
+					<div class="popup-alert  guide-position-clear">
+						<div class="popup-container">
+							<div class="body">
+								엠티처 자료는 ‘학교 수업’ 목적을 위해
+								사용할 수 있도록 저작권법의 보호를 받고 있습니다.
+								수업 외 목적으로 사용되지 않도록 주의해 주세요.
+							</div>
+							<div class="footer">
+								<button class="button size-lg type-dark" close-obj>취소</button>
+								<button class="button size-lg type-primary">확인</button>
+							</div>
+						</div>
+						<div class="popup-container">
+							<div class="body flag-positive">
+								엠티처 자료는 ‘학교 수업’ 목적을 위해
+								사용할 수 있도록 저작권법의 보호를 받고 있습니다.
+								수업 외 목적으로 사용되지 않도록 주의해 주세요.
+							</div>
+							<div class="footer">
+								<button class="button size-lg type-dark" close-obj>취소</button>
+								<button class="button size-lg type-primary">확인</button>
+							</div>
+						</div>
+						<div class="popup-container">
+							<div class="body flag-negative">
+								<p>로그인이 필요합니다.</p>
+								<p>로그인 페이지로 이동하시겠습니까?</p>
+							</div>
+							<div class="footer">
+								<button class="button size-lg type-dark" close-obj>취소</button>
+								<button class="button size-lg type-primary">확인</button>
+							</div>
+						</div>
+					</div>
+					<pre class='brush:html'>
+							<div class="popup-alert">
+								<div class="popup-container">
+									<!-- !NOTE : body 에 flag-positive flag-negative 가 들어가면 아이콘이 나타납니다. -->
+									<div class="body">
+										엠티처 자료는 ‘학교 수업’ 목적을 위해
+										사용할 수 있도록 저작권법의 보호를 받고 있습니다.
+										수업 외 목적으로 사용되지 않도록 주의해 주세요.
+									</div>
+									<div class="footer">
+										<button class="button size-lg type-dark" close-obj>취소</button>
+										<button class="button size-lg type-primary">확인</button>
+									</div>
+								</div>
+							</div>
+						</pre>
+				</section>
+				<section>
+					<h2>일주일 동안 보지 않기 팝업<small>일주일 동안 보지 않기가 checked일 때 일주일 동안 init-show 속성을 지워주세요</small></h2>
+				</section>
+			</main>
+		</div>
+	</div>
+	<footer class="footer"></footer>
+	</div>
+
+	<!-- 팝업 /////////////////////////////////////////////////////////////////////////-->
+	<div class="popup" id="popup-default">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .fluid = width : 100% -->
+		<div class="popup-container">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				기본 넓이 560px
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="popup-sm">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container size-sm">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-sm : 넓이 484px
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="popup-lg">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container size-lg">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-lg : 넓이 700px
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="popup-xl">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container size-xl">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-xl : 넓이 800px
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="popup-xxl">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container size-xxl">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-xxl : 넓이 1320px
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="popup-fluid">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container fluid">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				fluid : 넓이 100%
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="popup-height-auto">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container no-body-scroll">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				기본 넓이 560px; 최대 높이 720px;
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="popup" no-dimd id="popup-no-dimd">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .size-xl = width:800 / .fluid = width : 100% -->
+		<div class="popup-container">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			</button>
+			<div class="header">
+				size-sm : 넓이 484px
+			</div>
+			<div class="body">
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+				<p>
+					Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam
+					lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea
+					diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no
+					ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est
+					sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+				</p>
+			</div>
+			<div class="footer">
+				<button class="button size-xl type-dark" close-obj>취소</button>
+				<button class="button size-xl type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-alert" id="alert">
+		<div class="popup-container">
+			<div class="body">
+				엠티처 자료는 ‘학교 수업’ 목적을 위해
+				사용할 수 있도록 저작권법의 보호를 받고 있습니다.
+				수업 외 목적으로 사용되지 않도록 주의해 주세요.
+			</div>
+			<div class="footer">
+				<button class="button size-lg type-dark" close-obj>취소</button>
+				<button class="button size-lg type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup-alert" id="alert-positive">
+		<div class="popup-container">
+			<div class="body flag-positive">
+				엠티처 자료는 ‘학교 수업’ 목적을 위해
+				사용할 수 있도록 저작권법의 보호를 받고 있습니다.
+				수업 외 목적으로 사용되지 않도록 주의해 주세요.
+			</div>
+			<div class="footer">
+				<button class="button size-lg type-dark" close-obj>취소</button>
+				<button class="button size-lg type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup-alert" id="alert-negative">
+		<div class="popup-container">
+			<div class="body flag-negative">
+				<p>로그인이 필요합니다.</p>
+				<p>로그인 페이지로 이동하시겠습니까?</p>
+			</div>
+			<div class="footer">
+				<button class="button size-lg type-dark" close-obj>취소</button>
+				<button class="button size-lg type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="init-show-test">
+		<!-- init-show -->
+		<div class="popup-container">
+			<button class="icon-button close-button" close-obj>
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				init-show case
+			</div>
+			<div class="body">
+				init-show 를 붙이시면 초기상태가 show 상태로 나타납니다.
+			</div>
+			<div class="footer">
+				<button class="button size-sm type-dark" close-obj>취소</button>
+				<button class="button size-sm type-primary">확인</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

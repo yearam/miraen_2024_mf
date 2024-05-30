@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/middle.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main id="middle">
+          <h1>중학 메뉴구조도</h1>
+          <ul class="quick_menu">
+            <li><a href="#top">top</a></li>
+          </ul>
+          <section>
+            <h2>notice</h2>
+            <ul class="ul-decimal">
+              <li>230120 변경된 메뉴구조도 반영. 페이지 코드 변경</li>
+              <li>11-30 푸터레이어 변경</li>
+              <li>12-13 가상스크롤 플러그인 head 호출 추가</li>
+              <li>12-13 툴팁 플러그인 head 호출 추가</li>
+              <li>12-15 업무제외 페이지 표시</li>
+              <li>01-02 공통게시판>리스트 클릭 링크영역 .title, .desc로 확대</li>
+              <li>01-02 공통게시판>상세 : 에디터 영역 분리</li>
+              <li>01-05 날짜 입력방식 변경  yy.mm.dd - yyyy-mm-dd </li>
+              <li>01-19 푸터 미래엔 영문 로고 svg 공통화</li>
+              <li>02-19 퀵메뉴 상단 슬라이드 마크업 변경</li>
+              <li>03-25 퀵메뉴 상단 버튼 내 .toggle-arrow title속성 삭제</li>
+              <li>03-25 헤더 검정교과서 -> 교과서 홍보관 문구 변경</li>
+              <li>03-27 헤더 엠티처 로고 background-image -> image 태그 형식으로 변경</li>
+            </ul>
+          </section>
+          <section id="menu-mai">
+            <h2>main</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" />
+                <col width="240px" />
+                <col width="200px" />
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>@메인</td>
+                    <td></td>
+                    <td class="page-code">p_m_mai_10001</td>
+                    <td class="finish">10/25</td>
+                    <td>04-01</td>
+                    <td>01-22</td>
+                    <td class="desc">
+                      <p>12-27 메인 비주얼 슬라이드 하단 버튼 class 교체 및 디자인 수정</p>
+                      <p>01-22 공지사항 그룹핑 변경</p>
+                      <p>02-27 헤더 개인화 GNB 내교과서 badge 추가</p>
+                      <p>04-01 하단 배너 type-size-fixed클래스 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>교과 drop menu</td>
+                    <td></td>
+                    <td class="page-code">p_m_mai_10001</td>
+                    <td class="finish">10/25</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">page code : p_m_mai_10002_l  메인페이지 Header에서 확인가능합니다.</td>
+                  </tr>
+                  <tr>
+                    <td>site map</td>
+                    <td></td>
+                    <td class="page-code">p_m_mai_10001</td>
+                    <td class="finish">10/25</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">page code : p_m_mai_10003_l  메인페이지 Header에서 확인가능합니다.</td>
+                  </tr>
+                  <tr>
+                    <td>즐겨찾기</td>
+                    <td>즐겨찾기 설정 팝업</td>
+                    <td class="page-code">p_m_mai_10004_l</td>
+                    <td class="finish">12-26</td>
+                    <td></td>
+                    <td>01-30</td>
+                    <td class="desc">
+                      <p>01-30 교과 건수 span태그 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>즐겨찾기 설정 팝업<br/>- 링크등록 팝업</td>
+                    <td class="page-code">p_m_mai_10004_l_01</td>
+                    <td class="finish">12-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-tex">
+            <h2>교과서(수업하기/자료모아보기)</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="160px" />
+                  <col width="240px" />
+                  <col width="200px" />
+                  <col width="80px" span="3" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>@교과서<br />(수업하기/자료모아보기)</td>
+                    <td></td>
+                    <td class="page-code">p_m_tex_10001</td>
+                    <td class="finish">11-08</td>
+                    <td>01-09</td>
+                    <td>01-08</td>
+                    <td class="desc">
+                      <p>11-29 기획검수-전체 접기/펼치기 스크립트 주석처리, 자료 모아보기 tab 필터 제목영역 제거, 필터 type-row7 추가</p>
+                      <p>12-13 자료모아보기 : url 경로인 경우 우측 버튼 아이콘 변경</p>
+                      <p>12-13 자료모아보기 : 상세보기 버튼 disabled 인 경우 케이스 추가</p>
+                      <p>12-26 LNB : 텍스트 디자인에 맞춰 반영 / 자료모아보기 : 특화자료 탭 다운로드 버튼 추가</p>
+                      <p>01-09 기획검수반영 : 교과서 특화자료 다운로드 케이스 추가,  핀버튼 active 가능하게 변경, 뱃지 다중사용 삭제</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td>단원별 자료</td>
+                    <td>팝업</td>
+                    <td class="page-code">p_m_tex_10001_l_01</td>
+                    <td class="finish">02-09</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">누락분 추가화면</td>
+                  </tr>
+                  <tr>
+                    <td>유형별 자료</td>
+                    <td>팝업</td>
+                    <td class="page-code">p_m_tex_10001_l_02</td>
+                    <td class="finish">02-09</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">누락분 추가화면</td>
+                  </tr>
+                  <tr class="exception">
+                    <td>차시창</td>
+                    <td></td>
+                    <td class="page-code">p_m_tex_11001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">제외</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-edi-cre">
+            <h2>특화 자료실</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="160px" span="2" />
+                  <col width="240px" />
+                  <col width="200px" />
+                  <col width="80px" span="3" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>2depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>수업혁신자료</td>
+                    <td>이달의 수업 나눔</td>
+                    <td></td>
+                    <td class="page-code">p_m_edi_10001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>과목별 교수 지원자료</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_edi_11001</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_edi_11001_02</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_edi_11001_detail</td>
+                    <td class="finish">12-11</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-21 Tab Name 제거</p>
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>비주얼씽킹</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_edi_12001</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_edi_12001_02</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_edi_12001_detail</td>
+                    <td class="finish">12-11</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>하브루타</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_edi_13001</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_edi_13001_02</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_edi_13001_detail</td>
+                    <td class="finish">12-11</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교수평기 일체화</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_edi_14001</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_edi_14001_02</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_edi_14001_detail</td>
+                    <td class="finish">12-11</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학급 경영</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_edi_15001</td>
+                    <td class="finish">12-11</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_edi_15001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_edi_15001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>창의적 체험활동</td>
+                    <td>계기교육</td>
+                    <td>카드형 리스트</td>
+                    <td class="page-code">p_m_cre_10001</td>
+                    <td class="finish">12-14</td>
+                    <td>03-25</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                      <p>01-08 배너 통 이미지에서 데이터 처리로 변경</p>
+                      <p>03-25 필터내 버튼 buttons에 no-toggle클래스 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_10001_detail</td>
+                    <td class="finish">12-14</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>sw/ai 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_11001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_11001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_11001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>진로 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_12001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_12001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_12001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>인성 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_13001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_13001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_13001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>미디어리터러시</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_14001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_14001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_14001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>통일 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_15001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_15001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_15001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>독도 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_16001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_16001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_16001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>경제/금융 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_17001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_17001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_17001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>인권 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_18001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_18001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_18001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>다문화 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_19001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_19001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_19001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>안전/건강 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_20001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_20001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_20001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>민주시민 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_21001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_21001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_21001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>환경/지속가능 발전 교육</td>
+                    <td>갤러리형</td>
+                    <td class="page-code">p_m_cre_22001</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리스트형</td>
+                    <td class="page-code">p_m_cre_22001_02</td>
+                    <td class="finish">12-12</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 출처 항목 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_m_cre_22001_detail</td>
+                    <td class="finish">12-12</td>
+                    <td>01-15</td>
+                    <td>12-28</td>
+                    <td class="desc">
+                      <p>12-28 연관 추천 리스트 링크영역 변경 .title > .item</p>
+                      <p>01-15 유튜브 비디오 영역 class명 젼경 .video-box > .youtube-box</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-cop">
+            <h2>콘텐츠 플러스</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="160px" />
+                  <col width="240px" />
+                  <col width="200px" />
+                  <col width="80px" span="3" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="exception">
+                    <td>애플 넘버스 자료실</td>
+                    <td></td>
+                    <td class="page-code">p_m_cop_10001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">업무 제외</td>
+                  </tr>
+                  <tr>
+                    <td>문학책방</td>
+                    <td></td>
+                    <td class="page-code">p_m_cop_11001</td>
+                    <td class="finish">12-19</td>
+                    <td>12-21</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 작가소개 탭 : 검색 셀렉트 삭제</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>역사 매트릭스 자료실</td>
+                    <td></td>
+                    <td class="page-code"></td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">업무 제외</td>
+                  </tr>
+                  <tr>
+                    <td>특수교육 국어 자료실</td>
+                    <td></td>
+                    <td class="page-code">p_m_cop_13001</td>
+                    <td class="finish">12-18</td>
+                    <td>01-05</td>
+                    <td>12-21</td>
+                    <td class="desc">
+                      <p>12-21 다운로드 버튼 클릭시 나오는 알럿 메세지 변경</p>
+                      <p>01-05 .inner-header.is-extra 하위요소 .extra 변경</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>꿈나침반</td>
+                    <td></td>
+                    <td class="page-code">p_m_cop_14001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">업무 제외</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

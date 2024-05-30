@@ -1,0 +1,51 @@
+/* body[theme='theme-dark-2'] #viewer-hd {background-color: var(--color-dark); border-color:var(--color-black); color:white}
+body[theme='theme-dark-2'] #viewer-tool li > button {border-color:var(--color-black)} */
+
+
+body[theme='theme-dark-2']{
+	--color-primary-preview:#02A39F;
+	--color-bg-toolbar:#222;
+	--color-bg-aside:#222;
+	--color-line:#000;
+	--color-drawing-outline:#000;
+	--color-drawing-inner-line: #e6e6e6;
+  --color-bg-drawing:#fff;
+}
+body[theme='theme-dark-2'] #drawing:after{
+	background:url('data:image/svg+xml,<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11L0.937822 0.5L13.0622 0.499999L7 11Z" fill="%23000000"/></svg>') center center no-repeat;
+}
+body[theme='theme-dark-2'] .font_family_wrap:after,
+body[theme='theme-dark-2'] .font_size_wrap:after,
+body[theme='theme-dark-2'] .font_color_wrap:after,
+body[theme='theme-dark-2'] .stroke_width_wrap:after,
+body[theme='theme-dark-2'] .select_hlighter_color_wrap:after,
+body[theme='theme-dark-2'] .select_hlighter_width_wrap:after,
+body[theme='theme-dark-2'] .sticker_wrap:after,
+body[theme='theme-dark-2'] .arrow_wrap:after,
+body[theme='theme-dark-2'] .arrow_color_wrap:after,
+body[theme='theme-dark-2'] .line_color_wrap:after,
+body[theme='theme-dark-2'] .select_arrow_direction_wrap:after,
+body[theme='theme-dark-2'] .select_arrow_width_wrap:after,
+body[theme='theme-dark-2'] .select_arrow_dash_wrap:after{
+		
+		background:url('data:image/svg+xml,<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11L0.937822 0.5L13.0622 0.499999L7 11Z" fill="%23000000"/></svg>') center center no-repeat;
+}
+/* text color */
+body[theme='theme-dark-2'] #viewer-hd,
+body[theme='theme-dark-2'] #file-info{color:#fff}
+body[theme='theme-dark-2'] .thumbnails{color:var(--color-gray-200)}
+body[theme='theme-dark-2'] #course-info {color:var(--color-gray-200)}
+
+
+/* 그리기 */
+body[theme='theme-dark-2'] .icon-tool5 {background-image: url("../img/viewer-skin/icon/white/drawing.svg")}
+body[theme='theme-dark-2'] .icon-tool6 {background-image: url("../img/viewer-skin/icon/white/drawing.svg")}
+body[theme='theme-dark-2'] .icon-fullscreen{background-image: url("../img/viewer-skin/icon/white/icon-fullscreen.svg")}
+body[theme='theme-dark-2'] .icon-download{background-image: url("../img/viewer-skin/icon/white/download.svg")}
+body[theme='theme-dark-2'] .icon-scrap{background-image: url("../img/viewer-skin/icon/white/scrap.svg")}
+body[theme='theme-dark-2'] .scrapped .icon-scrap{background-image: url("../img/viewer-skin/icon/white/scraped.svg")}
+body[theme='theme-dark-2'] .icon-tool-account {background-image: url("../img/viewer-skin/icon/white/zoomout.svg");}
+body[theme='theme-dark-2'] .icon-tool-account2 {background-image: url("../img/viewer-skin/icon/white/zoomin.svg");}
+body[theme='theme-dark-2'] .icon-tool-account3 {background-image: url("../img/viewer-skin/icon/white/bookmark.svg")}
+body[theme='theme-dark-2'] .icon-tool-account3.bookmarked {background-image: url("../img/viewer-skin/icon/white/bookmarked.svg")}
+body[theme='theme-dark-2'] .icon-tool-more{background-image: url("../img/viewer-skin/icon/white/setting.svg");}

@@ -1,0 +1,50 @@
+@import url(./all-grades.css);
+:root {
+  --color-primary: #02a39f;
+  --color-primary-bg: #e6f4f4;
+  --color-primary-50: #f9fbfc;
+  --color-primary-100: #e8f6f6;
+  --color-primary-150: #f2fafa;
+  --color-primary-200: #d1eeed;
+  --color-primary-300: #8cd5d3;
+  --color-primary-400: #36bac1;
+  --color-primary-600: #1e9fa7;
+  --color-primary-700: #017c81;
+  --color-primary-800: #015c61;
+  --color-primary-disabled: #88a8a7;
+  --color-secondary: #f28b9c;
+  --color-secondary-500: #e26f8e;
+  --color-secondary-600: #d66384;
+  --color-gradient-start: #07CAC5;
+  --color-gradient-end: #007875;
+  --button-primary: #02a39f;
+  --button-primary-hover: #015c61;
+  --button-primary-disable: #57AAA0;
+  --button-secondary: #36bac1;
+  --button-secondary-hover: #015c61;
+  --button-secondary-disable: #57AAA0;
+  --button-third: #f28b9c;
+  --button-third-hover: #e26f8e;
+  --button-third-hover: #d66384;
+  --logo-images: url("/assets/images/common/logo-elementary.svg");
+  --logo-mteacher: url("/assets/images/elementary/logo-mteacher.svg");
+  --bg-elementary-prd-reference: url("/assets/images/elementary/bg-prd-reference@x2.png");
+  --bg-middle-prd-reference: url("/assets/images/middle/bg-prd-reference@x2.png");
+  --bg-high-prd-reference: url("/assets/images/high/bg-prd-reference@x2.png");
+  --icon-chevron-down: url("/assets/images/elementary/icon-chevron-down.svg");
+  --icon-star: url("/assets/images/elementary/icon-star.svg");
+  --icon-bookmark-on: url("/assets/images/elementary/icon-bookmark-on.svg");
+  --icon-caution-filled: url("/assets/images/elementary/icon-caution-filled.svg");
+  --icon-caution-line: url("/assets/images/elementary/icon-caution-line.svg");
+  --icon-check: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 9.6L8.2 13.8L16 6" stroke="%2302A39F" stroke-width="2"/></svg>');
+}
+
+.theme-elementary .loading .popup-container {
+  background-image: url(/assets/images/elementary/bg-loading.png);
+}
+.theme-elementary .loading .bar-wrap {
+  background-color: #01cbc6;
+  -moz-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25) inset, 0px 9px 14px 0px #06ada9;
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25) inset, 0px 9px 14px 0px #06ada9;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25) inset, 0px 9px 14px 0px #06ada9;
+}

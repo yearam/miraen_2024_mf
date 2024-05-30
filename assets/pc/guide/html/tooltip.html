@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>tooltip & toast</h1>
+					<section>
+						<h2>Toast
+              <small> data-trigger="sticky" 사용하여 기본 show 상태 입니다.</small>
+            </h2>
+            <ul class="ul-dot">
+              <li>webui-popover plugin 을 사용하고 있습니다. <a href="https://www.jsdelivr.com/package/npm/webui-popover" class="button size-md type-text">plugin : popover</a></li>
+            </ul>
+            <h3>위치
+              <small>//values: auto,top,right,bottom,left,top-right,top-left,bottom-right,bottom-left,auto-top,auto-right,auto-bottom,auto-left,horizontal,vertical</small>
+            </h3>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>left</th>
+                  <th>top</th>
+                  <th>bottom</th>
+                  <th>right</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button type="button" class="tooltip-trigger" data-trigger="sticky" data-placement="auto-left" data-content="popover content left"> data-placement : auto-left</button>
+                  </td>
+                  <td>
+                    <button type="button" class="tooltip-trigger" data-trigger="sticky" data-placement="auto-top" data-content="popover content top"> data-placement : auto-top</button>
+                  </td>
+                  <td>
+                    <button type="button" class="tooltip-trigger" data-trigger="sticky" data-placement="auto-bottom" data-content="popover content bottom"> data-placement : auto-bottom</button>
+                  </td>
+                  <td>
+                    <button type="button" class="tooltip-trigger" data-trigger="sticky" data-placement="auto-right" data-content="popover content"> data-placement : auto-right</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class='brush:html'>
+              <!-- !NOTE : 툴팁의 위치는 data-placement 로 제어합니다.auto- 로 시작되는 경우 페이지내 툴팁의 위치에 따라.. 위/아래 좌/우 등이 변경됩니다.
+              //values: auto,top,right,bottom,left,top-right,top-left,bottom-right,bottom-left,auto-top,auto-right,auto-bottom,auto-left,horizontal,vertical -->
+              <button type="button" class="tooltip-trigger" data-placement="auto-left" data-content="popover content left"> data-placement : auto-left</button>
+              <button type="button" class="tooltip-trigger" data-placement="auto-top" data-content="popover content top"> data-placement : auto-top</button>
+              <button type="button" class="tooltip-trigger" data-placement="auto-bottom" data-content="popover content bottom"> data-placement : auto-bottom</button>
+              <button type="button" class="tooltip-trigger" data-placement="auto-right" data-content="popover content"> data-placement : auto-right</button>
+            </pre>
+
+            <h4>ex.</h4>
+            <span class="switcher tooltip-trigger" data-placement="top" data-trigger="sticky">
+              <input type="checkbox" id="reg-favorite">
+              <label for="reg-favorite">즐겨찾기 등록</label>
+            </span>
+            <div  class="webui-popover-content">
+              <div class="text-black"><strong>즐겨찾기</strong>를 추가하였습니다.</div>
+            </div>
+            <pre class='brush:html'>
+              <span class="switcher tooltip-trigger" data-placement="top" data-trigger="sticky">
+                <input type="checkbox" id="reg-favorite">
+                <label for="reg-favorite">즐겨찾기 등록</label>
+              </span>
+              <div  class="webui-popover-content">
+                <div class="text-black"><strong>즐겨찾기</strong>를 추가하였습니다.</div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>Tooltip
+              <small>버튼을 click하거나 hover 했을때 show 됩니다.</small>
+            </h2>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>default</th>
+                  <th>dimd</th>
+                  <th>dimd + 버튼 딤드제외</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button type="button" class="button size-md tooltip-trigger" data-content="trigger default click">click</button>
+                  </td>
+                  <td>
+                    <button type="button" class="button size-md tooltip-trigger" data-content="backdrop" data-backdrop>click - dimd</button>
+                  </td>
+                  <td>
+                    <button type="button" class="button size-md tooltip-trigger" data-content="backdrop, focus" data-backdrop data-focus>click - dimd - fucus button</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class='brush:html'>
+              <!-- !NOTE : 간단한 안내문은 data-content 로 사용하시면 됩니다.
+                //case 2: [data-backdrop], [data-focus] -->
+                <button type="button" class="tooltip-trigger" data-content="trigger default click">click</button>
+                <button type="button" class="tooltip-trigger" data-content="backdrop" data-backdrop>click - dimd</button>
+                <button type="button" class="tooltip-trigger" data-content="backdrop, focus" data-backdrop data-focus>click - dimd - fucus button</button>
+
+              <!-- !NOTE : 목록 또는 표 제공 필요시, 버튼 다음 요소로 .webui-popover-content 추가하여 컨텐츠를 제공합니다.-->
+              <button type="button" class="tooltip-trigger" data-trigger="hover" data-title="Title" data-placement="auto-bottom" data-width="300">
+                <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+              </button>
+              <div  class="webui-popover-content">
+                <ul class="ul-dot">
+                  <li>text1</li>
+                  <li>text2</li>
+                </ul>
+              </div>
+            </pre>
+                                <h3>hover</h3>
+            <button type="button" class="tooltip-trigger" data-trigger="hover" data-title="Title" data-placement="auto-bottom" data-width="300">
+              <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+            </button>
+            <div  class="webui-popover-content">
+							<ul class="ul-dot">
+                <li>text1</li>
+                <li>text2</li>
+              </ul>
+						</div>
+            <pre class='brush:html'>
+              <!-- data-trigger="hover" 로 이벤트를 제어 합니다. -->
+              <button type="button" class="tooltip-trigger" data-trigger="hover" data-title="Title" data-placement="auto-bottom">
+                <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+              </button>
+              <div  class="webui-popover-content">
+                ...contents...
+              </div>
+            </pre>
+
+            <h3>popup 내부 사용</h3>
+            <button class="button size-md" target-obj="popup-default">클릭시 팝업오픈 - 기본</button>
+            <pre class='brush:html'>
+              <!-- !NOTE : [data-container="#팝업아이디 .popup-container"] 사용시 입력한 클래스 내부에 tooltip layer 가 생성됩니다. -->
+              <button type="button" class="tooltip-trigger" data-trigger="hover" data-title="Title" data-placement="auto-bottom" data-width="300" data-container="#popup-default .popup-container">
+                <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘">
+              </button>
+              <div  class="webui-popover-content">
+                <ul class="ul-dot">
+                  <li>text1</li>
+                  <li>text2</li>
+                </ul>
+              </div>
+            </pre>
+
+            <h3>closeable</h3>
+            <!-- !NOTE : [data-closedsable] 사용시 닫기 버튼이 사라집니다. -->
+            <button type="button" class="button size-md tooltip-trigger" data-content="closeable contents"  data-placement="bottom" data-closeable>
+              closeable
+            </button>
+            <pre class='brush:html'>
+              <!-- !NOTE : [data-closeable] 사용시 닫기 버튼이 생깁니다. -->
+              <button type="button" class="button size-md tooltip-trigger" data-title="closeable" data-placement="bottom" data-closeable>
+                closeable
+              </button>
+            </pre>
+
+            <h3>data-style</h3>
+            <!-- !NOTE : [data-style] 사용시 입력한 클래스로 해당 툴팁을 제어할 수 있습니다. -->
+            <button type="button" class="tooltip-trigger" data-title="Title" data-placement="auto-bottom" data-width="300" data-style="theme-dark">
+              <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+            </button>
+            <div  class="webui-popover-content">
+							<ul class="ul-dot">
+                <li>text1</li>
+                <li>text2</li>
+              </ul>
+						</div>
+            <pre class='brush:html'>
+              <!-- !NOTE : [data-container] 사용시 입력한 클래스 내부에 tooltip layer 가 생성됩니다. -->
+              <button type="button" class="tooltip-trigger" data-title="Title" data-placement="auto-bottom" data-width="300" data-style="theme-dark">
+                <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+              </button>
+              <div  class="webui-popover-content">
+                <ul class="ul-dot">
+                  <li>text1</li>
+                  <li>text2</li>
+                </ul>
+              </div>
+            </pre>
+
+            <h3>단원공통자료 툴팁팝업</h3>
+            <button type="button" class="button size-md tooltip-trigger" data-title="단원공통자료" data-placement="bottom" data-style="theme-dark" data-backdrop data-focus data-closeable>
+              단원공통자료
+              <svg>
+                <title>아이콘 - 자료</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+              </svg>
+            </button>
+            <div  class="webui-popover-content">
+              <ul class="unit-list-items">
+                <!-- split여부에 따라 나눠짐 -->
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                    <p>단원 학습지 도안</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-hangul.svg" alt="pdf 한글 아이콘" />
+                    <p>[진도표]과학 5학년 1학기</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-zip.svg" alt="pdf zip 아이콘" />
+                    <p>판서자료</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-link.svg" alt="pdf 링크 아이콘" />
+                    <p>[동영상] 10단원_생물과 환경_스마트올</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                    <p>핵심내용 정리</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <pre class='brush:html'>
+              <!-- !NOTE: [data-backdrop, data-focus]를 넣어준 툴팁 -->
+              <button type="button" class="button size-md tooltip-trigger" data-title="단원공통자료" data-placement="auto-bottom" data-style="theme-dark" data-focus data-backdrop>
+                단원공통자료
+                <svg>
+                  <title>아이콘 - 자료</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                </svg>
+              </button>
+              <div  class="webui-popover-content"></div>
+            </pre>
+					</section>
+      </div>
+    </div>
+    <footer class="footer"></footer>
+  </div>
+
+	<!-- 팝업 -->
+  <div class="popup" id="popup-default">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 720 -->
+		<div class="popup-container">
+			<button class="icon-button close-button" close-obj="">
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-sm : 넓이 484px
+			</div>
+      <form action="">
+        <div class="body">
+            <button type="button" class="tooltip-trigger" data-trigger="click" data-title="Title01" data-placement="auto-bottom" data-width="300" data-container="#popup-default .popup-container">
+              <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+            </button>
+            <div  class="webui-popover-content">
+              <ul class="ul-dot">
+                <li>text1</li>
+                <li>text2</li>
+              </ul>
+            </div>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+        </div>
+        <div class="footer">
+          <button class="button size-xl type-dark" close-obj="">취소</button>
+          <button class="button size-xl type-primary">확인</button>
+        </div>
+      </form>
+		</div>
+	</div>
+  <div class="popup" id="popup-default-2">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 720 -->
+		<div class="popup-container">
+			<button class="icon-button close-button" close-obj="">
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-sm : 넓이 484px
+			</div>
+      <form action="">
+        <div class="body">
+            <button type="button" class="tooltip-trigger" data-trigger="click" data-title="Title02" data-placement="auto-bottom" data-width="300" data-container="#popup-default-2 .popup-container">
+              <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+            </button>
+            <div  class="webui-popover-content">
+              <ul class="ul-dot">
+                <li>text1</li>
+                <li>text2</li>
+              </ul>
+            </div>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+        </div>
+        <div class="footer">
+          <button class="button size-xl type-dark" close-obj="">취소</button>
+          <button class="button size-xl type-primary">확인</button>
+        </div>
+      </form>
+		</div>
+	</div>
+  <div class="popup" id="popup-default-3">
+		<!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 720 -->
+		<div class="popup-container">
+			<button class="icon-button close-button" close-obj="">
+				<svg>
+					<title>아이콘 - icon-close</title>
+					<use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="header">
+				size-sm : 넓이 484px
+			</div>
+      <form action="">
+        <div class="body">
+            <button type="button" class="tooltip-trigger" data-trigger="click" data-title="Title03" data-placement="auto-bottom" data-width="300" data-container="#popup-default-3 .popup-container">
+              <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+            </button>
+            <div  class="webui-popover-content">
+              <ul class="ul-dot">
+                <li>text1</li>
+                <li>text2</li>
+              </ul>
+            </div>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+          <p>
+            Vero sea kasd kasd erat est duo clita. Est nonumy sit no clita justo diam invidunt eirmod. Stet ipsum diam lorem dolore sed ea clita at. Ea sit et diam ipsum no accusam, et sanctus et vero takimata amet et, diam sea diam justo eos lorem ea, tempor justo at sea sed takimata dolor et rebum kasd. Accusam sed duo consetetur no ipsum no. Kasd dolores diam no amet diam. Elitr dolore no et amet labore est sed et, ea erat lorem ea ea est sed at rebum sed, magna dolores invidunt et est et rebum erat dolore et. Sit.
+          </p>
+        </div>
+        <div class="footer">
+          <button class="button size-xl type-dark" close-obj="">취소</button>
+          <button class="button size-xl type-primary">확인</button>
+        </div>
+      </form>
+		</div>
+	</div>
+  </body>
+</html>

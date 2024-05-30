@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>button guide - 디자인 반영 전 기본 마크업 샘플 입니다.</h1>
+          <section>
+            <h2>
+              default
+
+              <small>초/중/고 모두 동일한 마크업을 사용합니다. 초/중/고 개별 컬러값은 각 카테고리마다 호출되는 스타일 파일에서 변경됩니다.</small>
+            </h2>
+            <ul class="ul-circle">
+              <li>type-gray : 주로 폼과 함께 사용</li>
+              <li>type-third : main에서 사용</li>
+              <li>type-white : 버튼 기본 넓이, 높이값을 갖음. type-text는 기본 넓이, 높이갑을 갖지않음.</li>
+            </ul>
+            <div class="overflow-container">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="15%" />
+                  <col span="3" width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>.size-sm <br/>(height 32px)</th>
+                    <th>.size-md <br/>(height 40px)</th>
+                    <th>.size-xl <br/>(height 52px)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>default</th>
+                    <td>
+                      <a href="" class="button size-sm">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-primary</th>
+                    <td>
+                      <a href="" class="button size-sm type-primary">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-primary">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-primary">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-primary">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-primary">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-primary">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-primary-light</th>
+                    <td>
+                      <a href="" class="button size-sm type-primary-light">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-primary-light">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-primary-light">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-primary-light">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-primary-light">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-primary-light">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-secondary</th>
+                    <td>
+                      <a href="" class="button size-sm type-secondary">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-secondary">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-secondary">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-secondary">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-secondary">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-secondary">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-third</th>
+                    <td>
+                      <a href="" class="button size-sm type-third">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-third">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-third">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-third">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-third">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-third">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-dark</th>
+                    <td>
+                      <a href="" class="button size-sm type-dark">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-dark">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-dark">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-dark">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-dark">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-dark">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-gray</th>
+                    <td>
+                      <a href="" class="button size-sm type-gray">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-gray">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-gray">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-gray">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-gray">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-gray">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-line</th>
+                    <td>
+                      <a href="" class="button size-sm type-line">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-line">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-line">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-line">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-line">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-line">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-text</th>
+                    <td>
+                      <a href="" class="button size-sm type-text">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-text">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-text">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-text">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-text">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-text">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-white</th>
+                    <td>
+                      <a href="" class="button size-sm type-white">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-white">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-white">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-white">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-white">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-white">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre class="brush:html">
+              <!-- default -->
+              <a href="" class="button size-md">링크</a>
+              <button class="button size-md">버튼</button>
+              <!-- primary -->
+              <a href="" class="button size-md type-primary">링크</a>
+              <button class="button size-md type-primary">버튼</button>
+              <!-- secondary -->
+              <a href="" class="button size-md type-secondary">링크</a>
+              <button class="button size-md type-secondary">버튼</button>
+
+              <!-- with icon -->
+              <a href="" class="button size-sm">
+                링크
+                <svg>
+                  <title>아이콘 표현명</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </a>
+              <button class="button size-sm">
+                button
+                <svg>
+                  <title>아이콘 표현명</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+            </pre>
+            <section><iframe src="button-middle.html" frameborder="0" style="height: 1000px;"></iframe></section>
+            <section><iframe src="button-high.html" frameborder="0" style="height: 1000px;"></iframe></section>
+            <h3>
+              type-icon
+            </h3>
+            <div class="overflow-container">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="15%" />
+                  <col span="3" width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>.size-xs (height 28px)</th>
+                    <th>.size-sm (height 32px)</th>
+                    <th>.size-md (height 40px)</th>
+                    <th>.size-xl (height 52px)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>default</th>
+                    <td>
+                      <a href="" class="button size-xs type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-primary</th>
+                    <td>
+                      <a href="" class="button size-xs type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-primary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-secondary</th>
+                    <td>
+                      <a href="" class="button size-xs type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-secondary type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-dark</th>
+                    <td>
+                      <a href="" class="button size-xs type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-dark type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-gray</th>
+                    <td>
+                      <a href="" class="button size-xs type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-gray type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-line</th>
+                    <td>
+                      <a href="" class="button size-xs type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-line type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>.type-text</th>
+                    <td>
+                      <a href="" class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-sm type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl type-text type-icon">
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre class="brush:html">
+              <!-- !NOTE : type-icon 추가 시 텍스트와 함께 들어가는 아이콘보다 사이즈 커짐. -->
+              <button class="button type-icon size-md" title="다운로드">
+                <svg>
+                  <title>아이콘 다운로드</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+            </pre>
+
+            <h3>disabled</h3>
+            <div class="overflow-container">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="15%" />
+                  <col span="3" width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>.size-sm (height 32px)</th>
+                    <th>.size-md (height 40px)</th>
+                    <th>.size-xl (height 52px)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>default</th>
+                    <td>
+                      <a href="" class="button size-sm disabled">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-sm" disabled="disabled">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-md disabled">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-md" disabled="disabled">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <a href="" class="button size-xl disabled">
+                        링크
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </a>
+                      <button class="button size-xl" disabled="disabled">
+                        버튼
+                        <svg>
+                          <title>아이콘 다운로드</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre class="brush:html">
+              <a href="" class="button size-md disabled">링크</a>
+              <button class="button size-md" disabled>버튼</button>
+              <a href="" class="button size-md type-primary disabled">링크</a>
+              <button class="button size-md type-primary" disabled>버튼</button>
+            </pre>
+
+            <h3>
+              fluid
+              <small>full width 사용해야 할때</small>
+            </h3>
+            <a href="" class="button size-md fluid">링크</a>
+            <pre class="brush:html">
+                <a href="" class="button size-md fluid">링크</a>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              toggle
+              <small>.active 클래스가 토글 됩니다.</small>
+            </h2>
+              <table class="guide-table">
+                <colgroup>
+                  <col style="width: 30%;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>toggle-this</th>
+                    <th>toggle-group</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button type="button" class="button type-icon size-sm toggle-this">
+                        <svg>
+                          <title>아이콘 핀</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <div class="toggle-group">
+                        <button class="button size-md">버튼1</button>
+                        <button class="button size-md type-icon">
+                          <svg>
+                            <title>아이콘 다운로드</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                          </svg>
+                        </button>
+                        <!-- !NOTE : 선택된 항목에 active -->
+                        <button class="button size-md type-icon active">
+                          <svg>
+                            <title>아이콘 다운로드</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre class="brush:html">
+              <!-- !NOTE : 스크랩버튼은 toggle-this 에 active 클래스가 on/off 됩니다.  -->
+              <button type="button" class="button type-icon size-sm toggle-this">
+                <svg>
+                  <title>아이콘 스크랩</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                </svg>
+              </button>
+
+              <!-- toggle group -->
+              <div class="toggle-group">
+                <button class="button size-md">버튼1</button>
+                <button class="button size-md type-icon">
+                  <svg>
+                    <title>아이콘 다운로드</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                  </svg>
+                </button>
+                <!-- !NOTE : 선택된 항목에 active -->
+                <button class="button size-md type-icon active">
+                  <svg>
+                    <title>아이콘 다운로드</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>divider-group</h2>
+            <div class="divider-group">
+              <button class="button size-md">버튼</button>
+              <button class="button size-md">
+                버튼2
+                <svg>
+                  <title>아이콘 다운로드</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+              <button class="button size-md">
+                버튼3
+                <svg>
+                  <title>아이콘 다운로드</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="divider-group type-outlined">
+              <button class="button size-md">버튼</button>
+              <button class="button size-md">
+                버튼2
+                <svg>
+                  <title>아이콘 다운로드</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+              <button class="button size-md">
+                버튼3
+                <svg>
+                  <title>아이콘 다운로드</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                </svg>
+              </button>
+            </div>
+            <pre class="brush:html">
+              <!-- 경계선 들어간 버튼들에 사용 -->
+              <div class="divider-group">
+                <button class="button size-md">버튼</button>
+                <button class="button size-md">
+                  버튼2
+                  <svg>
+                    <title>아이콘 다운로드</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- !NOTE 선있는 경우 .type-outlined 추가 -->
+              <div class="divider-group type-outlined">
+                <button class="button size-md">버튼</button>
+                <button class="button size-md">
+                  버튼2
+                  <svg>
+                    <title>아이콘 다운로드</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+            <h3>텍스트 간 경계선 또는 type-text 버튼에는 ul li 구조를 사용</h3>
+            <ul class="divider-group">
+              <li>일반 텍스트</li>
+              <li>일반 텍스트</li>
+            </ul>
+            <br /><br />
+
+            <ul class="divider-group">
+              <li>
+                <button type="button" class="button button-md type-text">
+                  <svg><use xlink:href="/assets/images/svg-sprite-solid.svg#icon-copy"></use></svg>
+                  교과서 링크 복사
+                </button>
+              </li>
+              <li>
+                <span class="switcher">
+                  <input type="checkbox" id="reg-favorite" />
+                  <label for="reg-favorite">즐겨찾기 등록</label>
+                </span>
+              </li>
+            </ul>
+            <pre class="brush:html">
+              <ul class="divider-group">
+                <li>일반 텍스트</li>
+                <li>일반 텍스트</li>
+              </ul>
+              <ul class="divider-group">
+                <li>
+                  <button type="button" class="button button-md type-text">
+                    <svg><use xlink:href="/assets/images/svg-sprite-solid.svg#icon-copy"></use></svg>
+                    교과서 링크 복사
+                  </button>
+                </li>
+                <li>
+                  <span class="switcher">
+                    <input type="checkbox" id="reg-favorite" />
+                    <label for="reg-favorite">즐겨찾기 등록</label>
+                  </span>
+                </li>
+              </ul>
+              <br /><br />
+            </pre>
+          </section>
+          <section>
+            <h2>buttons</h2>
+            <h3>가로정렬 기본</h3>
+            <div class="buttons">
+              <button class="button size-md">버튼1</button>
+              <button class="button size-md">버튼2</button>
+              <button class="button size-md type-secondary">버튼3</button>
+            </div>
+            <h3>우측정렬</h3>
+            <div class="buttons align-right">
+              <button class="button size-md">버튼1</button>
+              <button class="button size-md">버튼2</button>
+              <button class="button size-md type-secondary">버튼3</button>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons">
+                <button class="button size-md">버튼1</button>
+                <button class="button size-md">버튼2</button>
+                <button class="button size-md type-secondary">버튼3</button>
+              </div>
+
+              <div class="buttons align-right">
+                <button class="button size-md">버튼1</button>
+                <button class="button size-md">버튼2</button>
+                <button class="button size-md type-secondary">버튼3</button>
+              </div>
+            </pre>
+            <h3>.type-vertical 세로정렬</h3>
+            <div class="buttons type-vertical">
+              <button class="button size-md">버튼1</button>
+              <button class="button size-md">버튼2</button>
+              <button class="button size-md type-secondary">버튼3</button>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-vertical">
+                <button class="button size-md">버튼1</button>
+                <button class="button size-md">버튼2</button>
+                <button class="button size-md type-secondary">버튼3</button>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h3>single selection : .type-rounded</h3>
+            <div class="buttons type-rounded">
+              <span>
+                <input type="radio" name="radio2" id="buttons2-1" checked />
+                <label for="buttons2-1">1개만 선택되는 경우 radio button으로 사용</label>
+              </span>
+              <span>
+                <input type="radio" name="radio2" id="buttons2-2" />
+                <label for="buttons2-2">radio unchecked</label>
+              </span>
+              <span>
+                <input type="radio" name="radio2" id="buttons2-3" />
+                <label for="buttons2-3">radio</label>
+              </span>
+              <span>
+                <input type="radio" name="radio2" id="buttons2-4" />
+                <label for="buttons2-4">radio </label>
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-rounded">
+                <span>
+                  <input type="radio" name="radio2" id="buttons2-1" checked />
+                  <label for="buttons2-1">1개만 선택되는 경우 radio button으로 사용</label>
+                </span>
+                <span>
+                  <input type="radio" name="radio2" id="buttons2-2" />
+                  <label for="buttons2-2">radio unchecked</label>
+                </span>
+                <span>
+                  <input type="radio" name="radio2" id="buttons2-3" />
+                  <label for="buttons2-3">radio</label>
+                </span>
+                <span>
+                  <input type="radio" name="radio2" id="buttons2-4" />
+                  <label for="buttons2-4">radio </label>
+                </span>
+              </div>
+            </pre>
+            <h3>single selection : .type-rounded button</h3>
+            <div class="buttons type-rounded">
+              <!-- !NOTE 기본 라운드형 버튼 -->
+              <a href="">버튼</a>
+              <button type="button">버튼</button>
+              <a href="" class="button">버튼</a>
+              <button type="button" class="button">버튼</button>
+
+              <!-- !NOTE 기본 라운드형 버튼 클릭시 -->
+              <a href="" class="active">버튼 .active</a>
+              <button type="button" class="active">버튼 .active</button>
+              <a href="" class="button active">버튼 .active</a>
+              <button type="button" class="button active">버튼 .active</button>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-rounded">
+                <!-- !NOTE 기본 라운드형 버튼 -->
+                <a href="">버튼</a>
+                <button type="button">버튼</button>
+                <a href="" class="button">버튼</a>
+                <button type="button" class="button">버튼</button>
+                <!-- !NOTE 기본 라운드형 버튼 클릭시 -->
+                <a href="" class="active">버튼 .active</a>
+                <button type="button" class="active">버튼 .active</button>
+                <a href="" class="button active">버튼 .active</a>
+                <button type="button" class="button active">버튼 .active</button>
+              </div>
+            </pre>
+            <h3>multi selection : .type-rounded</h3>
+            <div class="buttons type-rounded">
+              <span>
+                <input type="checkbox" name="checkbox1" id="buttons4-1" checked />
+                <label for="buttons4-1">다중 선택되는 경우 checkbox button으로 사용</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox1" id="buttons4-2" />
+                <label for="buttons4-2">checkbox unchecked</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox1" id="buttons4-3" />
+                <label for="buttons4-3">checkbox</label>
+              </span>
+              <span>
+                <input type="checkbox" id="buttons4-4" />
+                <label for="buttons4-4">checkbox </label>
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-rounded">
+                <span>
+                  <input type="checkbox" name="checkbox1" id="buttons4-1" checked />
+                  <label for="buttons4-1">다중 선택되는 경우 checkbox button으로 사용</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox1" id="buttons4-2" />
+                  <label for="buttons4-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox1" id="buttons4-3" />
+                  <label for="buttons4-3">checkbox</label>
+                </span>
+                <span>
+                  <input type="checkbox" id="buttons4-4" />
+                  <label for="buttons4-4">checkbox </label>
+                </span>
+              </div>
+            </pre>
+            <h3>primary selection : .type-rounded.type-primary</h3>
+            <div class="buttons type-rounded type-primary">
+              <span>
+                <input type="checkbox" name="checkbox2" id="buttons5-1" checked />
+                <label for="buttons5-1">다중 선택되는 경우 checkbox button으로 사용</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox2" id="buttons5-2" />
+                <label for="buttons5-2">checkbox unchecked</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox2" id="buttons5-3" />
+                <label for="buttons5-3">checkbox</label>
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-rounded type-primary">
+                <span>
+                  <input type="checkbox" name="checkbox2" id="buttons5-1" checked />
+                  <label for="buttons5-1">다중 선택되는 경우 checkbox button으로 사용</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox2" id="buttons5-2" />
+                  <label for="buttons5-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox2" id="buttons5-3" />
+                  <label for="buttons5-3">checkbox</label>
+                </span>
+              </div>
+            </pre>
+            <h3>primary active selection : .type-rounded.type-primary-active</h3>
+            <div class="buttons type-rounded type-primary-active">
+              <span>
+                <input type="checkbox" name="checkbox3" id="buttons6-1" checked />
+                <label for="buttons6-1">다중 선택되는 경우 checkbox button으로 사용</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox3" id="buttons6-2" />
+                <label for="buttons6-2">checkbox unchecked</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox3" id="buttons6-3" />
+                <label for="buttons6-3">checkbox</label>
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-rounded type-primary-active">
+                <span>
+                  <input type="checkbox" name="checkbox3" id="buttons6-1" checked />
+                  <label for="buttons6-1">다중 선택되는 경우 checkbox button으로 사용</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox3" id="buttons6-2" />
+                  <label for="buttons6-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox3" id="buttons6-3" />
+                  <label for="buttons6-3">checkbox</label>
+                </span>
+              </div>
+            </pre>
+            <h3>primary active line selection : .type-rounded.type-primary-active-line</h3>
+            <div class="buttons type-rounded type-primary-active-line">
+              <span>
+                <input type="checkbox" name="checkbox4" id="buttons6-4" checked />
+                <label for="buttons6-4">다중 선택되는 경우 checkbox button으로 사용</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox4" id="buttons6-5" />
+                <label for="buttons6-5">checkbox unchecked</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox4" id="buttons6-6" />
+                <label for="buttons6-6">checkbox</label>
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-rounded type-primary-active-line">
+                <span>
+                  <input type="checkbox" name="checkbox4" id="buttons6-4" checked />
+                  <label for="buttons6-4">다중 선택되는 경우 checkbox button으로 사용</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox4" id="buttons6-5" />
+                  <label for="buttons6-5">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox4" id="buttons6-6" />
+                  <label for="buttons6-6">checkbox</label>
+                </span>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              page-buttons
+              <small>페이지 하단에서 전체 페이지를 제어하는 버튼일 때 사용</small>
+            </h2>
+            <div class="overflow-container">
+              <table class="guide-table">
+                <colgroup>
+                  <col style="width: 15%;" />
+                </colgroup>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <div class="page-buttons">
+                      <button class="button size-md">버튼</button>
+                      <button class="button size-md">버튼</button>
+                      <button class="button size-md type-primary">버튼</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.fluid</th>
+                  <td>
+                    <div class="page-buttons fluid">
+                      <button class="button size-md">버튼</button>
+                      <button class="button size-md">버튼</button>
+                      <button class="button size-md type-primary">버튼</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.type-form</th>
+                  <td>
+                    <div class="page-buttons type-form">
+                      <button type="button" class="button size-md type-dark">취소</button>
+                      <button type="submit" class="button size-md type-primary">저장</button>
+                      <a href="#" class="button size-md position-right">목록</a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <pre class="brush:html">
+              <!-- 기본 정렬 -->
+              <div class="page-buttons">
+                <button class="button size-md">버튼</button>
+                <button class="button size-md">버튼</button>
+                <button class="button size-md type-primary">버튼</button>
+              </div>
+              <!-- 100% N분할 -->
+              <div class="page-buttons fluid">
+                <button class="button size-md">버튼</button>
+                <button class="button size-md">버튼</button>
+                <button class="button size-md type-primary">버튼</button>
+              </div>
+              <!-- form 하단 버튼 (min-width: 168px; 입니다.)-->
+              <div class="page-buttons type-form">
+                <button type="button" class="button size-md type-dark">취소</button>
+                <button type="submit" class="button size-md type-primary">저장</button>
+                <a href="#" class="button size-md position-right">목록</a>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>기타 예외버튼</h2>
+
+            <h3>
+              light-button
+              <small>중/고등 메인페이지에서 사용. 높이 40px</small>
+            </h3>
+            <a href="" class="light-button">
+              <img src="/assets/images/common/icon-main-dvd.svg" alt="교사용 DVD 다운로드 아이콘" />
+              링크
+            </a>
+            <button class="light-button">
+              <img src="/assets/images/common/icon-main-reference.svg" alt="교사용 DVD 다운로드 아이콘" />
+
+              버튼
+            </button>
+            <pre class="brush:html">
+              <a href="" class="light-button">
+                <img src="/assets/images/elementary/icon-subject1.svg" alt="" />
+                링크
+              </a>
+              <button class="light-button">
+                <img src="/assets/images/elementary/icon-subject2.svg" alt="" />
+                버튼
+              </button>
+            </pre>
+
+            <h3>top-button</h3>
+
+            <a href="#top" class="icon-button top-button" title="위로 이동" style="position: relative; bottom: inherit; right: inherit;">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+              </svg>
+            </a>
+            <pre class="brush:html">
+              <a href="#top" class="icon-button top-button" title="위로 이동">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-top"></use>
+                </svg>
+              </a>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              alert-button
+              <small>중/고등 GNB에서 사용</small>
+            </h2>
+            <span class="alert-button">
+              <a href="#">국어 1-1(신유식)</a>
+              <button type="button" class="icon-button" title="삭제">
+                <svg>
+                  <title>버튼 제거</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                </svg>
+              </button>
+            </span>
+            <span class="alert-button">
+              <a href="#">인문학적 감성과 도덕적 상상력 (정창우)</a>
+              <button type="button" class="icon-button" title="삭제">
+                <svg>
+                  <title>버튼 제거</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                </svg>
+              </button>
+            </span>
+            <h3>.type-primary-light </h3>
+            <span class="alert-button type-primary-light">
+              <a href="#">국어 1-1(신유식)</a>
+              <button type="button" class="icon-button" title="삭제">
+                <svg>
+                  <title>버튼 제거</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                </svg>
+              </button>
+            </span>
+            <span class="alert-button type-primary-light">
+              <a href="#">인문학적 감성과 도덕적 상상력 (정창우)</a>
+              <button type="button" class="icon-button" title="삭제">
+                <svg>
+                  <title>버튼 제거</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                </svg>
+              </button>
+            </span>
+              <pre class="brush:html">
+              <span class="alert-button">
+                <a href="#">국어 1-1(신유식)</a>
+                <button type="button" class="icon-button" title="삭제">
+                  <svg>
+                    <title>버튼 제거</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-delete"></use>
+                  </svg>
+                </button>
+              </span>
+            </pre>
+          </section>
+          <section>
+            <h2>block-button</h2>
+            <div class="buttons">
+              <button class="block-button">
+                <ul class="divider-group text-black">
+                  <li>서울 원촌초등학교</li>
+                  <li>초등학교</li>
+                </ul>
+                <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</span>
+              </button>
+              <button class="block-button">
+                <ul class="divider-group text-black">
+                  <li>서울 원촌초등학교</li>
+                  <li>초등학교</li>
+                </ul>
+                <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</span>
+              </button>
+            </div>
+            <pre class="brush:html">                          
+              <div class="buttons">
+                <button class="block-button">
+                  <ul class="divider-group text-black">
+                    <li>서울 원촌초등학교</li>
+                    <li>초등학교</li>
+                  </ul>
+                  <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</sp>
+                </button>
+                <button class="block-button">
+                  <ul class="divider-group text-black">
+                    <li>서울 원촌초등학교</li>
+                    <li>초등학교</li>
+                  </ul>
+                  <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</span>
+                </button>
+              </div>
+            </pre>
+            <h4>type-row2</h4>
+            <div class="buttons type-row2">
+              <button class="block-button">
+                <img src="/assets/images/common/icon-certify-key.svg" alt="키 인증" />
+                <span class="text-black">GPKI/EPKI 인증</span>
+                <span class="text-xs">
+                  보안 설치 및 GPKI/EPKI 인증 절차 후 회원가입을 진행할 수 있습니다.
+                </span>
+              </button>
+              <button class="block-button">
+                <img src="/assets/images/common/icon-certify-mail.svg" alt="메일 인증" />
+                <span class="text-black">공직자 메일 인증</span>
+                <span class="text-xs">
+                  공직자 메일로 발송한 인증코드로 교사를 인증 할 수 있습니다.
+                </span>
+              </button>
+            </div>
+            <pre class="brush:html">
+              <div class="buttons type-row2">
+                <button class="block-button">
+                  <img src="/assets/images/common/icon-certify-key.svg" alt="키 인증" />
+                  <span class="text-black">GPKI/EPKI 인증</span>
+                  <span class="text-xs">
+                    보안 설치 및 GPKI/EPKI 인증 절차 후 회원가입을 진행할 수 있습니다.
+                  </span>
+                </button>
+                <button class="block-button">
+                  <img src="/assets/images/common/icon-certify-mail.svg" alt="메일 인증" />
+                  <span class="text-black">공직자 메일 인증</span>
+                  <span class="text-xs">
+                    공직자 메일로 발송한 인증코드로 교사를 인증 할 수 있습니다.
+                  </span>
+                </button>
+              </div>
+            </pre>
+            <h4>type-list</h4>
+            <div class="buttons type-list">
+              <button class="block-button">
+                <ul class="divider-group text-black">
+                  <li>서울 원촌초등학교</li>
+                  <li>초등학교</li>
+                </ul>
+                <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</span>
+              </button>
+              <button class="block-button">
+                <ul class="divider-group text-black">
+                  <li>서울 원촌초등학교</li>
+                  <li>초등학교</li>
+                </ul>
+                <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</span>
+              </button>
+            </div>
+            <pre class="brush:html">                          
+              <div class="buttons">
+                <button class="block-button">
+                  <ul class="divider-group text-black">
+                    <li>서울 원촌초등학교</li>
+                    <li>초등학교</li>
+                  </ul>
+                  <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</sp>
+                </button>
+                <button class="block-button">
+                  <ul class="divider-group text-black">
+                    <li>서울 원촌초등학교</li>
+                    <li>초등학교</li>
+                  </ul>
+                  <span class="margin-top-xs">서울특별시 서초구 사평대로 45길 26</span>
+                </button>
+              </div>
+            </pre>
+            <h4>type-textbook
+              <small>중고등 교과서</small>
+            </h4>
+            <button class="block-button type-textbook">
+              <strong>
+                NNN. 분류 번호명 최대 10자, 대분류 제목 정보를 최대 50자, 최대 60자까지 출력되는 영역입니다. 정보 양에 따라 말줄임 표기 없이 모두출력됩니다.
+              </strong>
+              <svg>
+                <title> 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+              </svg>
+            </button>
+          </section>
+          <section>
+            <h2>
+              icon-button
+              <small>아이콘 추가 시 svg-sprite-solid.svg 하단에 심볼 추가하고 아이디값 정의 / 컬러값을 currentColor로 변경</small>
+            </h2>
+            <div>
+              <table class="guide-table">
+                <colgroup>
+                  <col style="width: 15%;" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th>default</th>
+                    <th>.size-md (height 32px)</th>
+                  </tr>
+                  <tr>
+                    <th>default</th>
+                    <td>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-setting</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-download</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-arrow-right</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-right"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-star</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-star"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-kakao</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-kakao"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-map</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-map"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-telephone</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-telephone"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-remote</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-remote"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-arrow-up</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-arrow-left</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-left"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-faq</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-faq"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-ask</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-ask"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-book</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-link-new-window</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-folder</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-pin</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-search</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-share</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="icon-button size-md">
+                        <img src="/assets/images/common/icon-pdf.svg" alt="pdf">
+                      </button>
+                      <button class="icon-button size-md">
+                        <img src="/assets/images/common/icon-hangul.svg" alt="한글">
+                      </button>
+                      <button class="icon-button size-md">
+                        <img src="/assets/images/common/icon-zip.svg" alt="zip">
+                      </button>
+                      <button class="icon-button size-md">
+                        <svg>
+                          <title>아이콘 - icon-setting</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>disabled</th>
+                    <td>
+                      <button class="icon-button" disabled="disabled">
+                        <svg>
+                          <title>아이콘 - icon-setting</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button" disabled="disabled">
+                        <svg>
+                          <title>아이콘 - icon-download</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button" disabled="disabled">
+                        <svg>
+                          <title>아이콘 - icon-arrow-right</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-right"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="icon-button size-md" disabled="disabled">
+                        <img src="/assets/images/common/icon-pdf.svg" alt="pdf">
+                      </button>
+                      <button class="icon-button size-md" disabled="disabled">
+                        <img src="/assets/images/common/icon-hangul.svg" alt="한글">
+                      </button>
+                      <button class="icon-button size-md" disabled="disabled">
+                        <img src="/assets/images/common/icon-zip.svg" alt="zip">
+                      </button>
+                      <button class="icon-button size-md" disabled="disabled">
+                        <svg>
+                          <title>아이콘 - icon-setting</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>quickmenu</th>
+                    <td>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-quick-miraen</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-miraen"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-quick-user</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-user"></use>
+                        </svg>
+                      </button>
+                      <button class="icon-button">
+                        <svg>
+                          <title>아이콘 - icon-quick-password</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-password"></use>
+                        </svg>
+                      </button>
+                    </td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre class="brush:html">
+              <button class="icon-button" title="버튼명">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-down" />
+                </svg>
+              </button>
+
+              <!-- disabled -->
+              <button class="icon-button" title="버튼명" disabled="disabled">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-down" />
+                </svg>
+              </button>
+            </pre>
+          </section>
+          <section>
+            <h2>pagination</h2>
+            <div class="pagination">
+              <!-- !TODO 이전 리스트 없는 경우 disabled 추가필요 -->
+              <button class="icon-button icon-first" disabled="">
+                <svg>
+                  <title>첫페이지 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                </svg>
+              </button>
+              <button class="icon-button icon-prev" disabled="">
+                <svg>
+                  <title>이전 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                </svg>
+              </button>
+              <button>1</button>
+              <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+              <button class="current">2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button class="icon-button icon-next">
+                <svg>
+                  <title>다음 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </button>
+              <button class="icon-button icon-last">
+                <svg>
+                  <title>마지막페이지 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                </svg>
+              </button>
+            </div>
+            <pre class="brush:html">
+              <div class="pagination">
+                <!-- !TODO 이전 리스트 없는 경우 disabled 추가필요 -->
+                <button class="icon-button icon-first" disabled="">
+                  <svg>
+                    <title>첫페이지 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                  </svg>
+                </button>
+                <button class="icon-button icon-prev" disabled="">
+                  <svg>
+                    <title>이전 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                  </svg>
+                </button>
+                <button>1</button>
+                <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                <button class="current">2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button class="icon-button icon-next">
+                  <svg>
+                    <title>다음 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </button>
+                <button class="icon-button icon-last">
+                  <svg>
+                    <title>마지막페이지 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>like</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+                <col span="2" width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>.size-sm (height 28px)</th>
+                  <th>.size-lg (height 40px)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <button type="button" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </button>
+                    <a href="" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </a>
+                    <span class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" class="like size-lg toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </button>
+                    <a href="" class="like size-lg toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </a>
+                    <span class="like size-lg toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.active</th>
+                  <td>
+                    <button type="button" class="like size-sm toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </button>
+                    <a href="" class="like size-sm toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </a>
+                    <span class="like size-sm toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" class="like size-lg toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </button>
+                    <a href="" class="like size-lg toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </a>
+                    <span class="like size-lg toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                      99
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <!-- default -->
+              <button type="button" class="like size-sm toggle-this">
+                <svg>
+                  <title>아이콘 좋아요</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                </svg>
+                99
+              </button>
+              <a href=""class="like size-sm toggle-this">
+                <svg>
+                  <title>아이콘 좋아요</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                </svg>
+                99
+              </a>
+              <span class="like size-sm toggle-this">
+                <svg>
+                  <title>아이콘 좋아요</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                </svg>
+                99
+              </span>
+            </pre>
+          </section>
+          <section>
+            <h2>type-select
+              <small>특수국어, 교과서 쪽 검색</small>
+            </h2>
+            <button type="button" class="button type-select size-md">type-select</button>
+            <a href="#" class="button type-select size-md">type-select</a>
+
+            <pre class="brush:html">
+              <button type="button" class="button type-select size-md">type-select</button>
+              <a href="#" class="button type-select size-md">type-select</a>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>switcher</h1>
+          <section>
+            <h2>.switcher</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>단독사용</th>
+                  <td>
+                    <span class="switcher">
+                      <input type="checkbox" id="switcher1-1" />
+                      <label for="switcher1-1"></label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>설명글 있는 경우</th>
+                  <td>
+                    <span class="switcher">
+                      <input type="checkbox" id="switcher1-2" checked />
+                      <label for="switcher1-2">단독사용 설명글 있는 경우</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.reverse</th>
+                  <td>
+                    <span class="switcher reverse">
+                      <input type="checkbox" id="switcher1-3" />
+                      <label for="switcher1-3">.switcher.reverse</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.type-tertiary</th>
+                  <td>
+                    <span class="switcher type-tertiary">
+                      <input type="checkbox" id="switcher1-4" checked />
+                      <label for="switcher1-4">.type-tertiary</label>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+                <!-- 텍스트 라벨 없는 경우 -->
+                <span class="switcher">
+                    <input type="checkbox" id="switcher1-1" />
+                    <label for="switcher1-1"></label>
+                </span>
+                <!-- 텍스트 라벨 있는 경우 -->
+                <span class="switcher">
+                    <input type="checkbox" id="switcher1-2" />
+                    <label for="switcher1-2">단독사용 설명글 있는 경우</label>
+                </span>
+                <!-- .reverse -->
+                <span class="switcher reverse">
+                  <input type="checkbox" id="switcher1-3" />
+                  <label for="switcher1-3">.switcher.reverse</label>
+                </span>
+                <!-- tertiary color switcher -->
+                <span class="switcher type-tertiary">
+                  <input type="checkbox" id="switcher1-4" checked />
+                  <label for="switcher1-4">.type-tertiary</label>
+                </span>
+            </pre>
+
+            <h3>.ox-group</h3>
+            <div class="ox-group">
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-1" />
+                <label for="switcher2-1">그룹사용하는 경우</label>
+              </span>
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-2" checked />
+                <label for="switcher2-2">checked</label>
+              </span>
+
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-3" disabled />
+                <label for="switcher2-3">disabled</label>
+              </span>
+
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-4" checked disabled />
+                <label for="switcher2-4">checked disabled</label>
+              </span>
+
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-5" />
+                <label for="switcher2-5">글 길어지는 경우 aliquyam sed at sed sit sed. sed lorem voluptua duo sanctus sea sanctus est vero diam, tempor duo sit gubergren sadipscing, tempor accusam dolor ipsum et dolor rebum. sed at labore stet at, rebum ea invidunt elitr duo sed. ipsum dolores dolore diam nonumy eirmod clita lorem, eos gubergren duo.</label>
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="ox-group">
+                  <span class="switcher">
+                      <input type="checkbox" id="switcher2-1" />
+                      <label for="switcher2-1">그룹사용하는 경우</label>
+                  </span>
+                  <span class="switcher">
+                      <input type="checkbox" id="switcher2-2" checked />
+                      <label for="switcher2-2">checked</label>
+                  </span>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>.text-switcher</h2>
+            <span class="text-switcher">
+              <input type="checkbox" id="switcher3-1">
+              <label for="switcher3-1"></label>
+            </span>
+            <pre class="brush:html">
+              <span class="text-switcher">
+                <input type="checkbox" id="switcher3-1">
+                <label for="switcher3-1"></label>
+              </span>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

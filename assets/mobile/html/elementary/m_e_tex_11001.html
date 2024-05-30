@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-elementary">
+    <div class="wrapper">
+      <main id="main-contents">
+        <button class="button size-sm" target-obj="popup-sheet">수업하기</button>
+      </main>
+    </div>
+    <!-- !NOTE 차시창 > 수업하기 팝업입니다. -->
+    <div class="popup-sheet" id="popup-sheet" init-show="">
+      <div class="popup-container">
+        <button class="icon-button close-button" close-obj="">
+          <svg>
+            <title>닫기 아이콘</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header"> 수업하기 </div>
+        <div class="body fluid">
+          <!-- contents -->
+          <section class="padding-side">
+            <div class="period-card">
+              <div class="inner-wrap">
+                <ul class="divider-group type-brace">
+                  <li>N학년</li>
+                  <li>N학기</li>
+                  <li>과목이름정보</li>
+                  <li>분류번호명 최대10자+대분류명정보 최대40자</li>
+                  <li>분류번호명 최대10자+중분류명정보 최대35자</li>
+                  <li>분류번호명 최대10자+소분류명정보 최대20자</li>
+                </ul>
+                <p class="title">[000 ~ 000차시] 주제 이름 정보 최대 55자 주제 이름 정보 최대 55자 주제 이름 정보 최대 55자 주제 이름 정</p>
+                <div class="number-pages type-roundbox">
+                  <span>실험 관찰 999~999p</span>
+                  <span>과학 999~999p</span>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <div class="toggle-group">
+                  <button class="button size-sm type-icon">
+                    <svg>
+                      <title>아이콘 다운로드</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                    </svg>
+                  </button>
+                  <!-- !NOTE : 선택된 항목에 active -->
+                  <button class="button size-sm type-icon">
+                    <svg>
+                      <title>아이콘 다운로드</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="button size-sm type-primary"> 다른차시보기 <svg>
+                    <title>아이콘 다운로드</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+          <div class="tabs">
+            <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+            <div class="tab">
+              <ul>
+                <li class="active"><a href="#tab1-1">학습 목차</a></li> <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                <li><a href="#tab1-2">보충 자료</a></li>
+              </ul>
+            </div>
+            <div class="pane-wrap">
+              <div id="tab1-1" class="pane">
+                <!-- tab content -->
+                <section class="padding-side">
+                  <div class="roundbox-outlined type-light-primary">
+                    <p class="caution-info">수업 편집은 PC에서만 가능하며, 내가 편집하여 저장한 수업하기 목차도 PC에서만 확인 가능합니다.</p>
+                  </div>
+                  <ul class="lesson-items">
+                    <!-- !NOTE lesson-data가 없는 경우는<li>영역 전체가 없어집니다. -->
+                    <li>
+                      <p class="title">단원도입</p>
+                      <div class="lesson-data">
+                        <!-- !NOTE 코너명 + 수업명이 짧은 경우 입니다. 
+                        수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #C43CB4;">GUIDE</span>
+                            </div>
+                            <strong>[코너이름정보] 수업명 최대 60자를 말줄임 없이 출력</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 코너명 + 수업명이 긴 경우 입니다. -->
+                        <div class="data">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">코너명 최대 10자</span>
+                            </div>
+                            <strong>[코너이름정보] 수업명 최대 60자를 말줄임 없이 출력 총 80자 출력 수업명 최대 60자를 말줄임 없이 출력 총 80자 출력</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="title">도입</p>
+                      <div class="lesson-data">
+                        <!-- !NOTE 데이터가 없는 경우 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short">
+                          <div class="image-wrap">
+                            <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">생각열기</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 이미지가 없는 경우 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short no-image">
+                          <div class="image-wrap">
+                            <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">생각열기</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 비디오가 없는 경우 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short no-video">
+                          <div class="image-wrap">
+                            <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #C43CB4;">탐구해요</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 압축파일이 없는 경우 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short no-zip">
+                          <div class="image-wrap">
+                            <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">코너명 최대 10자</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 링크가 없는 경우 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short no-link">
+                          <div class="image-wrap">
+                            <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">코너명 최대 10자</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 음원이 없는 경우 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short no-sound">
+                          <div class="image-wrap">
+                            <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">코너명 최대 10자</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="title">전개</p>
+                      <div class="lesson-data">
+                        <!-- !NOTE 기본형 -->
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #f28b9c;">학습영상</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">생각열기</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="title">정리</p>
+                      <div class="lesson-data">
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #f28b9c;">학습영상</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                        <!-- !NOTE 코너명 + 수업명이 짧으면 .data에 .size-short가 붙습니다. -->
+                        <div class="data size-short">
+                          <div class="image-wrap">
+                            <img src="/assets/images/temp/img-board01.png" alt="">
+                          </div>
+                          <a href="#">
+                            <div class="badges">
+                              <!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
+                              <span class="badge type-round-box" style="background-color: #36BAC1;">생각열기</span>
+                            </div>
+                            <strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+                            <span class="number"> (사회 16~17쪽) </span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div id="tab1-2" class="pane">
+                <!-- tab content -->
+                <div class="tabs type-line">
+                  <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+                  <div class="tab">
+                    <ul>
+                      <li class="active"><a href="#tab-rounded-1">전체</a></li>
+                      <li><a href="#tab-rounded-2">멀티미디어</a></li>
+                      <li><a href="#tab-rounded-3">수업 자료</a></li>
+                      <li><a href="#tab-rounded-4">평가 자료</a></li>
+                      <li><a href="#tab-rounded-5">연구 자료</a></li>
+                      <li><a href="#tab-rounded-6">내 자료</a></li>
+                    </ul>
+                  </div>
+                  <div class="pane-wrap">
+                    <div id="tab-rounded-1" class="pane">
+                      <!-- contents -->
+                      <section class="padding-side">
+                        <ul class="lesson-items">
+                          <!-- !NOTE lesson-data가 없는 경우는<li>영역 전체가 없어집니다. -->
+                          <li>
+                            <p class="title">해당 자료 구분명</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                          <li>
+                            <p class="title">멀티미디어 자료</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>교과서 자료</strong>
+                                  <span class="desc">[5~6차시] 017쪽 활동</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>국어 작품 감상실</strong>
+                                  <span class="desc">자료명 이름 정보를 최대 2줄까지 출력합니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                    <div id="tab-rounded-2" class="pane">
+                      <!-- contents -->
+                      <section class="padding-side">
+                        <ul class="lesson-items">
+                          <li>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="전체">전체</option>
+                              <option value="option1">option1</option>
+                              <option value="option2">option2</option>
+                              <option value="option3">option3</option>
+                            </select>
+                            <p class="title">멀티미디어 자료</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>교과서 자료</strong>
+                                  <span class="desc">[5~6차시] 017쪽 활동</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>국어 작품 감상실</strong>
+                                  <span class="desc">자료명 이름 정보를 최대 2줄까지 출력합니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                    <div id="tab-rounded-3" class="pane">
+                      <!-- contents -->
+                      <section class="padding-side">
+                        <ul class="lesson-items">
+                          <li>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="전체">전체</option>
+                              <option value="option1">option1</option>
+                              <option value="option2">option2</option>
+                              <option value="option3">option3</option>
+                            </select>
+                            <p class="title">수업 자료</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>교과서 자료</strong>
+                                  <span class="desc">[5~6차시] 017쪽 활동</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>국어 작품 감상실</strong>
+                                  <span class="desc">자료명 이름 정보를 최대 2줄까지 출력합니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                    <div id="tab-rounded-4" class="pane">
+                      <!-- contents -->
+                      <section class="padding-side">
+                        <ul class="lesson-items">
+                          <li>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="전체">전체</option>
+                              <option value="option1">option1</option>
+                              <option value="option2">option2</option>
+                              <option value="option3">option3</option>
+                            </select>
+                            <p class="title">평가 자료</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>교과서 자료</strong>
+                                  <span class="desc">[5~6차시] 017쪽 활동</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>국어 작품 감상실</strong>
+                                  <span class="desc">자료명 이름 정보를 최대 2줄까지 출력합니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                    <div id="tab-rounded-5" class="pane">
+                      <!-- contents -->
+                      <section class="padding-side">
+                        <ul class="lesson-items">
+                          <li>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="전체">전체</option>
+                              <option value="option1">option1</option>
+                              <option value="option2">option2</option>
+                              <option value="option3">option3</option>
+                            </select>
+                            <p class="title">연구 자료</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>분류명 정보</strong>
+                                  <span class="desc">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>교과서 자료</strong>
+                                  <span class="desc">[5~6차시] 017쪽 활동</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <strong>국어 작품 감상실</strong>
+                                  <span class="desc">자료명 이름 정보를 최대 2줄까지 출력합니다.</span>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                    <div id="tab-rounded-6" class="pane">
+                      <!-- contents -->
+                      <section class="padding-side">
+                        <ul class="lesson-items">
+                          <li>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="전체">내 링크 자료</option>
+                              <option value="option1">option1</option>
+                              <option value="option2">option2</option>
+                              <option value="option3">option3</option>
+                            </select>
+                            <p class="title">내 자료</p>
+                            <div class="lesson-data">
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <span class="badge type-round-box">함께 보기</span>
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <ul class="divider-group type-brace">
+                                    <li class="category">하위 분류 정보</li>
+                                    <li>학년</li>
+                                    <li>학기</li>
+                                    <li>과목</li>
+                                    <li>대분류-중분류-소분류</li>
+                                    <li>NNN~NNN차시</li>
+                                  </ul>
+                                  <strong class="ellipsis-multi">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</strong>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <ul class="divider-group type-brace">
+                                    <li class="category">내 링크 자료</li>
+                                    <li>5학년</li>
+                                    <li>2학기</li>
+                                    <li>국어(가)</li>
+                                    <li>1-(1)-①</li>
+                                    <li>120 ~ 121차시</li>
+                                  </ul>
+                                  <strong class="ellipsis-multi">자료명 정보를 최대 2줄까지 출력합니다. 2출 초과시 말줄임 표기됩니다.</strong>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <!-- !NOTE data에 link 이미지가 없을 시 .no-link가 추가됩니다. -->
+                              <div class="data no-link size-short">
+                                <div class="image-wrap">
+                                  <span class="badge type-round-box">함께 보기</span>
+                                  <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                                </div>
+                                <a href="#">
+                                  <ul class="divider-group type-brace">
+                                    <li class="category">내 링크 자료</li>
+                                    <li>5학년</li>
+                                    <li>2학기</li>
+                                    <li>국어(가)</li>
+                                    <li>1-(1)-①</li>
+                                    <li>120 ~ 121차시</li>
+                                  </ul>
+                                  <strong class="ellipsis-multi">[5~6차시] 017쪽 활동</strong>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="data size-short">
+                                <div class="image-wrap">
+                                  <img src="/assets/images/temp/img-board01.png" alt="">
+                                </div>
+                                <a href="#">
+                                  <ul class="divider-group type-brace">
+                                    <li class="category">내 링크 자료</li>
+                                    <li>5학년</li>
+                                    <li>2학기</li>
+                                    <li>국어(가)</li>
+                                    <li>1-(1)-①</li>
+                                    <li>120 ~ 121차시</li>
+                                  </ul>
+                                  <strong class="ellipsis-multi">자료명 이름 정보를 최대 2줄까지 출력합니다.</strong>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <!-- !NOTE data에 link 이미지가 없을 시 .no-link가 추가됩니다. -->
+                              <div class="data no-link size-short">
+                                <div class="image-wrap">
+                                  <!-- <img src="/assets/images/temp/img-board01.png" alt=""> -->
+                                </div>
+                                <a href="#">
+                                  <ul class="divider-group type-brace">
+                                    <li class="category">내 링크 자료</li>
+                                    <li>5학년</li>
+                                    <li>2학기</li>
+                                    <li>국어(가)</li>
+                                    <li>1-(1)-①</li>
+                                    <li>120 ~ 121차시</li>
+                                  </ul>
+                                  <strong class="ellipsis-multi">[5~6차시] 017쪽 활동</strong>
+                                </a>
+                                <button type="button" class="button type-icon size-sm">
+                                  <svg>
+                                    <title>아이콘 공유</title>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <button type="button" class="more-button button">
+                              <svg>
+                                <title>아이콘 더보기</title>
+                                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                              </svg> 더보기 <span>3<em>/16</em></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <button class="button size-md type-secondary">
+            <svg>
+              <title>파일 아이콘</title>
+              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-file-filled"></use>
+            </svg> 수업하기 </button>
+          <button class="button size-md">
+            <svg>
+              <title>공유 아이콘</title>
+              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+            </svg> 수업공유하기 </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

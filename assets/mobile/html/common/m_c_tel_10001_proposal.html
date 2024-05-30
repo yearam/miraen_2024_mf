@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper teacher-live">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>강연 신청하기</h2>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="lecture-view">
+          <div class="header">
+            <h2>프로그램 제목이 노출됩니다. 프로그램 제목이 길어져도 모든 텍스트가 노출됩니다.</h2>
+          </div>
+          <div class="program-title">
+            <div class="image-wrap type-rounded">
+              <img src="/assets/images/temp/img-live-lecture-list-1.png" alt="">
+            </div>
+            <div class="text-wrap">
+              <p class="title">찾아서 다운 받느니 우리가 만든다! 디지털콘텐츠제작소</p>
+              <ul class="ul-dot">
+                <li>LIVE 강연에서 같이 이야기 하고싶은 선생님께서는 아래 신청서를 작성해 주세요.</li>
+                <li>신청 후에는 신청하신 회차 당일 실시간 LIVE 참여링크가 핸드폰 문자로 자동 발송 됩니다.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <form action="">
+          <section class="full">
+            <div class="program-info">
+              <h3 class="title">신청 강연</h3>
+              <p class="date">2023-11-08(수) 19:00</p>
+              <p class="desc">교사들이 꼭 알아야 할 생활지도 고시 및 해설</p>
+            </div>
+            <div class="program-info">
+              <h3 class="title">함께 신청하면 좋은 강연</h3>
+              <div class="list-items type-box">
+                <div class="item">
+                  <div class="block-wrap">
+                    <span class="ox">
+                      <input type="checkbox" id="lecture-01" checked="">
+                      <label for="lecture-01"></label>
+                    </span>
+                    <div>
+                      <p class="date">2023-11-08(수) 19:00</p>
+                      <p class="desc">온전한 수업 안전한 교실<a href="#">자세히 보기</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="block-wrap">
+                    <span class="ox">
+                      <input type="checkbox" id="lecture-02">
+                      <label for="lecture-02"></label>
+                    </span>
+                    <div>
+                      <p class="date">2023-11-08(수) 19:00</p>
+                      <p class="desc">온전한 수업 안전한 교실 온전한 수업 안전한 교실 온전한 수업 안전한 교실<a href="#">자세히 보기</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="size-lg type-thick">
+            <h3 class="title"><span class="text-primary">(필수)</span> 신청자 정보 입력</h3>
+            <div class="forms required">
+              <label for="user-name">ID</label>
+              <fieldset>
+                <input type="search" class="size-xl" title="아이디 입력란" name="" id="user-id" placeholder="아이디를 입력해 주세요" value="test1234" required="required" disabled="disabled">
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-name">이름</label>
+              <fieldset>
+                <input type="search" class="size-xl" title="이름 입력란" name="" id="user-name" placeholder="이름을 입력해 주세요" value="홍길동" required="required" disabled="disabled">
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-name">휴대폰번호</label>
+              <fieldset>
+                <input class="size-xl" type="search" title="휴대폰번호 입력란" name="" id="user-pnum" placeholder="휴대폰 번호를 입력해주세요" value="01012341234" required="required">
+                <button type="button" class="button size-xl type-gray">휴대폰 번호 변경</button>
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-school-name">학교명</label>
+              <fieldset>
+                <input class="size-xl" type="search" title="학교명 입력란" name="" id="user-school-name" placeholder="학교명을 입력해 주세요" value="서울테스트초등학교" required="" />
+                <button type="button" class="button size-xl type-gray">학교변경</button>
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+          </section>
+          <section class="size-lg type-thick">
+            <h3 class="title"><span class="text-primary">(필수)</span> 2023 다락방 토크를 알게 된 매체는 무엇인가요?</h3>
+            <ul class="survey-list">
+              <li>
+                <span class="ox">
+                  <input type="radio" name="ox-radio1" id="ox-radio1-1" checked="">
+                  <label for="ox-radio1-1">엠티처 문자 메시지</label>
+                </span>
+              </li>
+              <li>
+                <span class="ox">
+                  <input type="radio" name="ox-radio1" id="ox-radio1-2">
+                  <label for="ox-radio1-2">엠티처 사이트 방문</label>
+                </span>
+              </li>
+              <li>
+                <span class="ox">
+                  <input type="radio" name="ox-radio1" id="ox-radio1-3">
+                  <label for="ox-radio1-3">인디스쿨</label>
+                </span>
+              </li>
+              <li>
+                <span class="ox">
+                  <input type="radio" name="ox-radio1" id="ox-radio1-4">
+                  <label for="ox-radio1-4">카카오톡 알림</label>
+                </span>
+              </li>
+              <li>
+                <span class="ox">
+                  <input type="radio" name="ox-radio1" id="ox-radio1-5">
+                  <label for="ox-radio1-5">동료 교사 추천</label>
+                </span>
+              </li>
+              <li>
+                <div class="block-wrap">
+                  <span class="ox">
+                    <input type="radio" name="ox-radio1" id="ox-radio1-6">
+                    <label for="ox-radio1-6">기타</label>
+                  </span>
+                  <input type="search" name="" id="" class="size-xl input-etc">
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="banner">
+            <img src="/assets/images/temp/img-banner-admin@x2.png" alt="">
+          </section>
+          <section class="size-lg">
+            <h3 class="title">
+              <span class="ox">
+                <input type="checkbox" name="ox-policy" id="ox-policy">
+                <label for="ox-policy" class="text-black"><span class="text-primary">(필수)</span> 개인정보 수집 및 활용 동의</label>
+              </span>
+            </h3>
+            <div class="box-gray-scroll box-policy">
+              <ol class="ol-policy">
+                <li> 1. 수집하는 개인정보의 항목 및 수집방법 <ul>
+                    <li> 가. 수집하는 개인정보의 항목 <ul>
+                        <li> 1) 회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다. <ul>
+                            <li> 가) 필수항목 <ul>
+                                <li>① 일반 회원 : 이름, 생년월일, 아이디, 비밀번호, 휴대폰 번호, 전자우편주소</li>
+                                <li>② 교사 회원 : 이름, 생년월일, 아이디, 비밀번호, 휴대폰 번호, 전자우편주소, 교사인증, 학교명, 담당과목</li>
+                              </ul>
+                            </li>
+                            <li> 나) 수집금지항목 <ul>
+                                <li>① 민감 정보 : 회원의 소중한 인권을 침해할 우려가 있는 정보 (인종, 사상 및 신조, 정치적성향 이나 범죄기록, 의료정보 등)</li>
+                                <li>② 단, 법령에서 민감정보의 처리를 요구하거나 허용하는 경우에는 반드시 사전에 이용자에게 해당사실을 알리고 동의를 구하도록 하겠습니다.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li> 2) 서비스이용과정이나 사업처리과정에서 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다. <ul>
+                            <li>가) 일반 이용 : IP address, 쿠키(cookie), 방문일시, OS 종류, 브라우저 종류, 방문(접속)기록, 불량이용기록, 서비스이용기록 등</li>
+                            <li>나) 모바일 서비스 : 이동통신사정보, 단말기모델, 단말기식별번호, OS종류 및 버전, PUSH 토큰, 접속기록, 세션아이디, MAC Address 등. 다만 단말기에 관한 정보는 개인을 식별할 수 없는 형태로 수집되며, 회사는 임의로 수집된 정보를 바탕으로 개인을 식별하는 일체의 활동을 하지 않습니다.</li>
+                            <li>다) 페이스북 : 회원 이름</li>
+                            <li>라) 카카오스토리 : 회원 이름</li>
+                            <li>마) 인스타그램 : 회원 이름</li>
+                            <li>바) 엔에이치엔에듀 주식회사 : 회원 이름, 연락처, 이메일</li>
+                          </ul>
+                        </li>
+                        <li> 3) 부가서비스 및 맞춤식서비스 이용 또는 이벤트 응모 과정에서 해당 서비스의 이용자에 한해서 개인정보 추가수집에 대한 동의를 받은 경우 아래와 같은 정보들이 수집될 수 있습니다. <ul>
+                            <li>- 경품 배송 또는 계정 등록 후 사용가능한 쿠폰경품 등의 배송을 위한 배송지, 이름, 유선전화번호, 휴대폰 번호, 전자우편주소, 이용정지/해지 사유, 중복가입확인정보</li>
+                          </ul>
+                        </li>
+                        <li> 4) 유료서비스 이용 과정에서 아래와 같은 결제정보들이 수집될 수 있습니다. <ul>
+                            <li>가) 신용카드 결제 시 : 카드사, 결제승인번호 등</li>
+                            <li>나) 휴대전화 결제 시 : 이동통신사명</li>
+                            <li>다) 실시간계좌이체 시 : 은행명, 현금 영수증 승인번호</li>
+                            <li>라) 무통장 입금 시 : 현금 영수증 승인번호</li>
+                            <li>마) 상품권 이용 시 : 상품권번호 등</li>
+                            <li>바) 쿠폰 이용 시 : 쿠폰번호 등</li>
+                            <li>사) 환불 시 : 환불계좌정보(은행명, 계좌번호, 예금주명)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li> 나. 개인정보 수집방법 <ul>
+                        <li> 회사는 홈페이지, 유·무선전화(휴대전화 포함), 전자우편, 모사전송(팩스) 등의 방법으로 아래와 같은 경로로 개인정보를 수집합니다. <ul>
+                            <li>1) 회원가입, 회원정보수정</li>
+                            <li>2) 게시판, Q&amp;A, 상담, 고객센터, 이벤트응모, 배송요청</li>
+                            <li>3) 제휴사로부터의 제공</li>
+                            <li>4) 생성정보 수집 툴 또는 로그분석 프로그램을 통한 수집</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li> 2. 개인정보의 수집 및 이용목적 <ul>
+                    <li> 회사는 수집한 개인정보를 다음의 목적을 위하여 활용합니다. 이용자가 제공한 정보는 아래 목적에 필요한 용도 외에는 사용되지 않으며, 이용 목적이 변경되는 경우에는 사전동의를 구할 것입니다. <ul>
+                        <li> 가. 서비스 제공에 관한 계약이행 및 서비스 제공에 따른 요금정산 <ul>
+                            <li>1) 콘텐츠 제공, 특정 맞춤서비스 제공</li>
+                            <li>2) 물품배송 또는 청구서 등 발송</li>
+                            <li>3) 금융거래 본인인증 및 금융서비스</li>
+                            <li>4) 구매 및 요금결제, 요금추심 등</li>
+                          </ul>
+                        </li>
+                        <li> 나. 회원관리 <ul>
+                            <li>1) 회원제 서비스 이용 및 제한적 본인 확인방법에 따른 본인확인, 개인식별</li>
+                            <li>2) 불량회원의 부정이용 방지와 비인가사용 방지</li>
+                            <li>3) 가입의사 확인, 가입 및 가입횟수 제한</li>
+                            <li>4) 분쟁조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달</li>
+                          </ul>
+                        </li>
+                        <li> 다. 신규서비스 개발 및 마케팅·광고에의 활용 <ul>
+                            <li>1) 신규서비스 개발 및 맞춤서비스 제공</li>
+                            <li>2) 통계학적 특성에 따른 서비스제공 및 광고게재, 서비스의 유효성 확인</li>
+                            <li>3) 이벤트 및 광고성 정보 제공 및 참여기회 제공</li>
+                            <li>4) 접속빈도 파악 등에 대한 통계</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li> 3. 개인정보의 보유 및 이용기간 <ul>
+                    <li> 회원 가입 및 관리 목적으로 수집된 개인정보는 회원 가입일로부터 회원 탈퇴일까지 보유o이용되며 회원 탈퇴 시 즉시 파기됩니다. 단, 다음의 정보에 대해서는 아래의 사유로 명시한 기간 동안 보존하게 됩니다. <ul>
+                        <li> 가. 회사 내부방침에 의한 정보 보존 <ul>
+                            <li>- 보존항목 : 이름, 생년월일, 아이디, 비밀번호, 휴대폰 번호, 전자우편주소</li>
+                            <li>- 보존근거 : 서비스 이용의 혼선 방지, 불법적 이용자에 관한 관련 기관에 대한 수사 협조</li>
+                            <li>- 보존기간 : 1년</li>
+                          </ul>
+                        </li>
+                        <li> 나. 관련 법령에 의한 정보 보존 <ul>
+                            <li> 관계 법령의 규정에 의하여 회원정보를 보존할 필요가 있는 경우에는 해당 법령에서 규정한 일정 기간 동안 회원정보를 보관합니다. 이 경우 회사는 회원정보를 해당 목적으로만 보존하며 보존기간은 아래와 같습니다. <ul>
+                                <li> 1) 계약 또는 청약 철회 등에 관한 기록 <ul>
+                                    <li>- 보존근거 : 전자상거래 등에서의 소비자보호에 관한 법률</li>
+                                    <li>- 보존기간 : 5년</li>
+                                  </ul>
+                                </li>
+                                <li> 2) 전자금융거래 (대금결제 및 재화 등의 공급)에 관한 기록 <ul>
+                                    <li>- 보존근거 : 전자금융거래법</li>
+                                    <li>- 보존기간 : 5년</li>
+                                  </ul>
+                                </li>
+                                <li> 3) 소비자의 불만 또는 분쟁처리에 관한 기록 <ul>
+                                    <li>- 보존근거 : 전자상거래 등에서의 소비자보호에 관한 법률</li>
+                                    <li>- 보존기간 : 3년</li>
+                                  </ul>
+                                </li>
+                                <li> 4) 본인 확인에 관한 기록 <ul>
+                                    <li>- 보존근거 : 정보통신망 이용촉진 및 소비자보호에 관한 법률</li>
+                                    <li>- 보존기간 : 6개월</li>
+                                  </ul>
+                                </li>
+                                <li> 5) 서비스 이용 관련 개인정보 (웹사이트 방문기록) <ul>
+                                    <li>- 보존근거 : 통신비밀보호법</li>
+                                    <li>- 보존기간 : 3개월</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <p>※ 개인정보 수집 및 활용 동의에 거부하실 수 있습니다. 다만 동의 거부 시에는 회원 가입을 하실 수 없습니다</p>
+            </div>
+          </section>
+          <section class="page-buttons">
+            <button type="button" class="button size-md type-dark">취소</button>
+            <button type="button" class="button size-md type-primary">신청하기</button>
+          </section>
+        </form>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

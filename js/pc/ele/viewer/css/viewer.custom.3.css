@@ -1,0 +1,565 @@
+/* body[theme='theme-dark-2'] */
+
+body[theme='theme-dark-2'] #viewer-aside-list-inner {
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+body[theme='theme-dark-2'] #viewer-aside-list-inner::-webkit-scrollbar {
+    width: 11px;
+}
+
+body[theme='theme-dark-2'] #viewer-aside-list-inner::-webkit-scrollbar-thumb {
+    background-color: #494b4b;
+    border-radius: 50px 50px 50px 50px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+}
+
+body[theme='theme-dark-2'] #viewer-aside-list-inner::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-color: #dbedfb;
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+body[theme='theme-dark-2'] #viewer-aside {
+    background-color: #2c302f;
+}
+
+body[theme='theme-dark-2'] #viewer-aside-inner {
+    overflow-y: visible;
+    padding-top: 0px;
+    left: 0px;
+    bottom: 52px;
+}
+
+body[theme='theme-dark-2'] #page_list {
+    margin-bottom: 36px;
+    padding-left: 4px;
+}
+
+body[theme='theme-dark-2'] .no-toc-area {
+    background-color: #191a18;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+body[theme='theme-dark-2'] .no-toc-area .course-file {
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+body[theme='theme-dark-2'] .no-toc-area .course-file .widget-title {
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+body[theme='theme-dark-2'] .no-toc-area .course-file ul.row {
+    margin-left: 36px;
+    padding-bottom: 20px;
+}
+
+body[theme='theme-dark-2'] .course-btm {
+    background-color: #2c3030;
+    border-bottom-color: #181a1a;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 52px;
+}
+
+body[theme='theme-dark-2'] .icon-aside-open-txt {
+    background-color: #3a4441;
+    bottom: 0px;
+    height: 52px;
+    left: -52px !important;
+}
+
+body[theme='theme-dark-2'] #course_name {
+    color: #00cbb4;
+    margin-left: 0px;
+    width: 100%;
+    padding: 14px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 24px;
+    background-image: none;
+    background-color: #191a18;
+    border-bottom-color: #323432;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+body[theme='theme-dark-2'] .course-title {
+    margin-bottom: 0px;
+}
+
+body[theme='theme-dark-2'] .no-toc-area .subtitle {
+    margin-left: 0px;
+    margin-bottom: 10px;
+    padding: 14px;
+    width: 100%;
+    font-size: 20px;
+    color: #00cbb4;
+    background-color: #191a18;
+    text-align: left;
+    padding-left: 24px;
+    border-bottom-color: black;
+}
+
+body[theme='theme-dark-2'] .course a {
+    color: white;
+    /* font-weight: normal; */
+}
+
+body[theme='theme-dark-2'] .course strong, body[theme='theme-dark-2'] .course-file strong {
+    color: white;
+}
+
+/* body[theme='theme-dark-2'] .course strong::before {
+    content: '| ';
+}
+body[theme='theme-dark-2'] .course strong::after {
+    content: ' | ';
+    margin-right: 5px;
+} */
+
+/* body[theme='theme-dark-2'] .course .only_corner strong::before {
+    content: '';
+}
+body[theme='theme-dark-2'] .course .only_corner strong::after {
+    content: '';
+    margin-right: 0px;
+} */
+
+/* body[theme='theme-dark-2'] .course a:hover {
+    color: #a1ffcb;
+}
+
+body[theme='theme-dark-2'] .course a:hover strong {
+    color: #a1ffcb;
+} */
+
+body[theme='theme-dark-2'] .course .active>a {
+    color: #a1ffcb;
+    /* font-weight: normal; */
+}
+
+body[theme='theme-dark-2'] .course .active>a>strong {
+    color: #a1ffcb;
+}
+
+body[theme='theme-dark-2'] .course-file .row li a {
+    color: #869292;
+    font-weight: normal;
+}
+
+body[theme='theme-dark-2'] .course-file h3 {
+    color: #f7f7f7;
+}
+
+body[theme='theme-dark-2'] .course-file a:hover {
+    color: #00cbb4 !important;
+}
+body[theme='theme-dark-2'] .course-file a:hover strong {
+    color: #00cbb4;
+}
+
+body[theme='theme-dark-2'] .bg-pink, body[theme='theme-dark-2'] .bg-sky, body[theme='theme-dark-2'] .bg-purple, body[theme='theme-dark-2'] .ft-purple, body[theme='theme-dark-2'] .bg-peach {
+    color: #f7f7f7;
+}
+
+body[theme='theme-dark-2'] .btn-pink:hover, body[theme='theme-dark-2'] .btn-sky:hover, body[theme='theme-dark-2'] .btn-purple:hover, body[theme='theme-dark-2'] .btn-peach:hover {
+    background-color: transparent
+}
+
+body[theme='theme-dark-2'] #viewer-aside, body[theme='theme-dark-2'] .no-toc-area, body[theme='theme-dark-2'] .course-btm {
+    box-shadow: none;
+}
+
+body[theme='theme-dark-2'] .no-toc-area.folded {
+    height: 52px;
+    padding-top: 0px;
+    overflow-y: hidden;
+    background-color: transparent;
+    box-shadow: none;
+    /* bottom: 0;
+    position: relative; */
+    /* position: absolute; */
+    border-bottom-color: #191a18;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+body[theme='theme-dark-2'] .no-toc-area.folded .subtitle {
+    margin-left: 0px;
+    width: 100%;
+    background-color: #191a18;
+    height: 52px;
+    margin-top: 0px;
+    color: #00cbb4;
+}
+
+body[theme='theme-dark-2'] .icon-nav-fold {
+    float: right;
+    margin-top: -5px;
+    cursor: pointer;
+    background-image: url("no-toc-area-close.png")
+}
+
+body[theme='theme-dark-2'] .no-toc-area.folded .icon-nav-fold {
+    background-image: url("no-toc-area-open.png")
+}
+
+body[theme='theme-dark-2'] .course::before {
+    /* border-left: 1px solid #3b3b3b; */
+}
+
+body[theme='theme-dark-2'] .course .active:before {
+    /* background: #00be86; */
+    background: transparent;
+}
+
+body[theme='theme-dark-2'] .course .active:after {
+    content: none;
+}
+
+body[theme='theme-dark-2'] #viewer-hd {
+    background: #2c302f;
+    border: none;
+    color: white;
+}
+
+body[theme='theme-dark-2'] .more-layer a {
+    background: #2c302f;
+}
+
+body[theme='theme-dark-2'] #page {
+    background: #1f2121;
+    border: none;
+    color: white;
+}
+
+body[theme='theme-dark-2'] #total_page {
+    color: white;
+}
+body[theme='theme-dark-2'] #viewer-tool {
+    /* padding-left: 20px; */
+}
+
+body[theme='theme-dark-2'] #viewer-tool>li {
+    /* padding-right: 20px; */
+}
+body[theme='theme-dark-2'] #viewer-tool>li>button,
+body[theme='theme-dark-2'] #viewer-tool>li>a>button {
+    color: white;
+}
+
+body[theme='theme-dark-2'] [class^=icon-tool] {
+    background-size: 70% auto;
+}
+
+body[theme='theme-dark-2'] .icon-tool {
+    background-image: url(ic_01.png)
+}
+
+body[theme='theme-dark-2'] .icon-tool2 {
+    background-image: url(ic_02.png)
+}
+
+body[theme='theme-dark-2'] .icon-tool3 {
+    background-image: url(ic_03.png)
+}
+
+body[theme='theme-dark-2'] .icon-tool4 {
+    background-image: url(ic_04.png)
+}
+
+body[theme='theme-dark-2'] .icon-tool5 {
+    background-image: url(ic_05.png)
+}
+
+body[theme='theme-dark-2'] .icon-tool-more {
+    background-size: 10% auto;
+}
+
+body[theme='theme-dark-2'] [class^=icon-tool-account] {
+    background-size: 50% auto;
+}
+
+body[theme='theme-dark-2'] .icon-tool-minus {
+    background-image: url("icon-tool-minus.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool-plus {
+    background-image: url("icon-tool-plus.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool-move {
+    background-image: url("icon-tool-move.png")
+}
+
+body[theme='theme-dark-2'] #viewer-tool>li>.active {
+    /* border-color: #f7f7f7; */
+    /* color: #f7f7f7; */
+}
+
+body[theme='theme-dark-2'] #page b {
+    color: #00cbb4;
+}
+
+body[theme='theme-dark-2'] .popup.tools {
+    background-color: #2c302f;
+}
+
+body[theme='theme-dark-2'] .course h3 {
+    color: #8e9692;
+}
+
+body[theme='theme-dark-2'] .icon-tool, body[theme='theme-dark-2'] .icon-tool2, body[theme='theme-dark-2'] .icon-tool3, body[theme='theme-dark-2'] .icon-tool4, body[theme='theme-dark-2'] .icon-tool5, body[theme='theme-dark-2'] .icon-tool6 {
+    background-size: 24px 24px;
+}
+
+body[theme='theme-dark-2'] .icon-tool {
+    background-image: url("ic_01.png");
+}
+
+body[theme='theme-dark-2'] .icon-tool2 {
+    background-image: url("ic_02.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool3 {
+    background-image: url("ic_03.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool4 {
+    background-image: url("ic_04.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool5 {
+    background-image: url("ic_05.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool6 {
+    background-image: url("ic_06_on.png")
+}
+
+body[theme='theme-dark-2'] .active .icon-tool {
+    background-image: url("ic_01.png")
+}
+
+body[theme='theme-dark-2'] .active .icon-tool2 {
+    background-image: url("ic_02.png")
+}
+
+body[theme='theme-dark-2'] .active .icon-tool3 {
+    background-image: url("ic_03.png")
+}
+
+body[theme='theme-dark-2'] .active .icon-tool4 {
+    background-image: url("ic_04.png")
+}
+
+body[theme='theme-dark-2'] .active .icon-tool5 {
+    background-image: url("ic_05.png")
+}
+
+body[theme='theme-dark-2'] .active .icon-tool6 {
+    background-image: url("ic_06.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool-account, body[theme='theme-dark-2'] .icon-tool-account2, body[theme='theme-dark-2'] .icon-tool-account3 {
+    background-size: 24px 24px;
+}
+
+body[theme='theme-dark-2'] .icon-tool-account {
+    background-image: url("zoomin.png");
+}
+
+body[theme='theme-dark-2'] .icon-tool-account2 {
+    background-image: url("zoomout.png")
+}
+
+body[theme='theme-dark-2'] .icon-tool-account3 {
+    background-image: url("bookmark.png")
+}
+
+
+body[theme='theme-dark-2'] .icon-tool-more {
+    background-size: 26px 26px;
+}
+
+body[theme='theme-dark-2'] .icon-tool-more {
+    background-image: url("icon-tool-more.png")
+}
+
+body[theme='theme-dark-2'] .icon-prev, body[theme='theme-dark-2'] .icon-next {
+    background-size: 100% 100%;
+    background-image: url("icon-prev.png")
+}
+
+body[theme='theme-dark-2'] .icon-link {
+    background-image: url(ic_link.png);
+}
+body[theme='theme-dark-2'] .icon-link-html {
+    background-image: url(ic_smartppt.png);
+}
+body[theme='theme-dark-2'] .icon-link-audio {
+    background-image: url(ic_sound.png);
+}
+body[theme='theme-dark-2'] .icon-link-video {
+    background-image: url(ic_movie.png);
+}
+body[theme='theme-dark-2'] .icon-link-pic {
+    background-image: url(ic_01.png);
+}
+body[theme='theme-dark-2'] .icon-link-png {
+    background-image: url(ic_png.png);
+}
+body[theme='theme-dark-2'] .icon-link-gif {
+    background-image: url(ic_gif.png);
+}
+body[theme='theme-dark-2'] .icon-link-xls {
+    background-image: url(ic_excel.png);
+}
+body[theme='theme-dark-2'] .icon-link-doc {
+    background-image: url(ic_word.png);
+}
+body[theme='theme-dark-2'] .icon-link-ppt {
+    background-image: url(ic_ppt.png);
+}
+body[theme='theme-dark-2'] .icon-link-pdf {
+    background-image: url(ic_pdf.png);
+}
+body[theme='theme-dark-2'] .icon-link-hwp {
+    background-image: url(ic_hwp.png);
+}
+
+body[theme='theme-dark-2'] .subject.active .icon-link {
+    background-image: url(ic_link.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-html {
+    background-image: url(ic_smartppt.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-audio {
+    background-image: url(ic_sound.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-video {
+    background-image: url(ic_movie.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-pic {
+    background-image: url(ic_01.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-png {
+    background-image: url(ic_png.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-gif {
+    background-image: url(ic_gif.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-xls {
+    background-image: url(ic_excel.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-doc {
+    background-image: url(ic_word.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-ppt {
+    background-image: url(ic_ppt.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-pdf {
+    background-image: url(ic_pdf.png);
+}
+body[theme='theme-dark-2'] .subject.active .icon-link-hwp {
+    background-image: url(ic_hwp.png);
+}
+
+body[theme='theme-dark-2'] .icon-link, body[theme='theme-dark-2'] .icon-link-html
+, body[theme='theme-dark-2'] .icon-link-audio, body[theme='theme-dark-2'] .icon-link-video
+, body[theme='theme-dark-2'] .icon-link-pic, body[theme='theme-dark-2'] .icon-link-png
+, body[theme='theme-dark-2'] .icon-link-gif, body[theme='theme-dark-2'] .icon-link-xls
+, body[theme='theme-dark-2'] .icon-link-doc, body[theme='theme-dark-2'] .icon-link-ppt
+, body[theme='theme-dark-2'] .icon-link-pdf, body[theme='theme-dark-2'] .icon-link-hwp {
+    background-size: 21px 20px;
+}
+
+body[theme='theme-dark-2'] .popup.tools {
+    background-color: #2c302f;
+}
+
+body[theme='theme-dark-2'] #module-modal .modal-header {
+    background: #2c302f;
+}
+
+body[theme='theme-dark-2'] #list-all {
+    background: #2c302f;
+    border-bottom: 1px solid white;
+}
+body[theme='theme-dark-2'] #list-all section {
+    background-color: inherit;
+}
+
+body[theme='theme-dark-2'] #list-all section ul li a {
+    color: #f7f7f7;
+}
+
+body[theme='theme-dark-2'] #list-all section ul li a::before {
+    display: none;
+}
+
+body[theme='theme-dark-2'] #list-all section ul li a::after {
+    display: none;
+}
+
+body[theme='theme-dark-2'] #list-all section ul li.active {
+    background: #3b3b3b;
+    /* background: #00cbb4; */
+}
+
+body[theme='theme-dark-2'] #list-all section ul li.active a {
+    color: #00cbb4;
+    /* color: white; */
+}
+
+
+
+
+body[theme='theme-dark-2'] .icon-aside-open-txt .icon-aside-opened {
+    background-image: url(icon-aside-close.png);
+}
+body[theme='theme-dark-2'] .icon-aside-open-txt .icon-aside-opened:hover {
+    background-image: url(icon-aside-close-hover.png);
+}
+body[theme='theme-dark-2'] .aside-close .icon-aside-open-txt .icon-aside-opened {
+    background-image: url(icon-aside-open.png);
+}
+body[theme='theme-dark-2'] .aside-close .icon-aside-open-txt .icon-aside-opened:hover {
+    background-image: url(icon-aside-open-hover.png);
+}
+
+
+
+body[theme='theme-dark-2'] #page_list li.subject a.title:hover span {
+    /* border-bottom-color: #8e9692; */
+}
+body[theme='theme-dark-2'] #page_list li.subject.active a.title:hover span {
+    border-bottom-color: transparent;
+}
+
+body[theme='theme-dark-2'] .course .subject.active a.title::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #2c302f;
+    border-bottom: 5px solid transparent;
+}
+body[theme='theme-dark-2'] #page_list li.subject.active {
+    padding-left: 11px;
+}
+
+body[theme='theme-dark-2'] .icon-tool-account3.bookmarked {
+    background-image: url(icon-bookmarked.png);
+}

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <main>
+        <h1>list-items
+          <small>a 링크 사용시 우측 &lt; 나타납니다. 링크 해제시</small>
+        </h1>
+        <section>
+          <div class="list-items">
+            <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">교과서 이름 정보 출력 이름정보 25자(저자명 최대 5자까지)</p>
+            </a>
+            <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">국어(가)</p>
+            </a>
+            <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">국어(나)</p>
+            </a>
+            <a href="#">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">수학(장혜원)</p>
+            </a>
+            <div class="item">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">링크 없는 경우 예</p>
+            </div>
+            <div class="item">
+              <i class="icon size-md type-round-box">
+                <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘">
+              </i>
+              <span class="title">자료명 최대 2줄까지 노출합니다. 2줄 이상 초과할 경우 말줄임표시합니다.</span>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>a에 &gt; 없는 리스트(navigation-bar 열람이력에 사용)</h2>
+          <div class="list-items no-mark">
+            <a href="#">
+              <span class="badge mix-round size-md gray">과목명</span>
+              <p class="title">[YYYY] 교과서명 최대 25자가 출력됩니다.(저자명 최대 5자까지)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md gray">수학</span>
+              <p class="title">[2015] 수학(황선욱)</p>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">서비스명</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+            <a href="#">
+              <span class="badge mix-round size-md primary">특화자료실</span>
+              <ul class="depth">
+                <li>1Depth Title</li>
+                <li>2Depth Title</li>
+                <li>3Depth Title</li>
+                <li>4Depth Title</li>
+              </ul>
+            </a>
+          </div>
+          <pre class='brush:html'>
+            <div class="list-items no-mark">
+              <a href="#">
+                <span class="badge mix-round size-md gray">과목명</span>
+                <p class="title">[YYYY] 교과서명 최대 25자가 출력됩니다.(저자명 최대 5자까지)</p>
+              </a>
+              <a href="#">
+                <span class="badge mix-round size-md gray">수학</span>
+                <p class="title">[2015] 수학(황선욱)</p>
+              </a>
+              <a href="#">
+                <span class="badge mix-round size-md primary">서비스명</span>
+                <ul class="depth">
+                  <li>1Depth Title</li>
+                  <li>2Depth Title</li>
+                  <li>3Depth Title</li>
+                  <li>4Depth Title</li>
+                </ul>
+              </a>
+              <a href="#">
+                <span class="badge mix-round size-md primary">특화자료실</span>
+                <ul class="depth">
+                  <li>1Depth Title</li>
+                  <li>2Depth Title</li>
+                  <li>3Depth Title</li>
+                  <li>4Depth Title</li>
+                </ul>
+              </a>
+            </div>
+          </pre>
+        </section>
+        <section>
+          <h2>.list-items.type-check</h2>
+          <div class="list-items type-check">
+            <a href="#" class="active">
+              1. 순서에 따라 조리 있게 말해요
+            </a>
+            <a href="#">
+              2. 의견을 교환하며 나눠요
+            </a>
+            <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">국어(가)</p>
+            </a>
+            <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">국어(나)</p>
+            </a>
+            <a href="#">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">수학(장혜원)</p>
+            </a>
+            <div class="item">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">링크 없는 경우 예</p>
+            </div>
+            <div class="item">
+              <i class="icon size-md type-round-box">
+                <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘">
+              </i>
+              <span class="title">자료명 최대 2줄까지 노출합니다. 2줄 이상 초과할 경우 말줄임표시합니다.</span>
+            </div>
+          </div>
+        </section>
+        <section class="fluid">
+          <h3>.type-box : 링크 있음 - 교과 > 교과서 설정에 사용</h3>
+          <div class="list-items type-box">
+            <a href="#">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">교과서 이름 정보 출력 이름정보 25자(저자명 최대 5자까지)</p>
+            </a>
+            <a href="#">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">국어(가)</p>
+            </a>
+            <a href="#">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">국어(나)</p>
+            </a>
+            <a href="#">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">수학(장혜원)</p>
+            </a>
+            <div class="item">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">링크 없는 경우 예</p>
+            </div>
+            <div class="item">
+              <i class="icon size-md type-round-box">
+                <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘">
+              </i>
+              <span class="title">자료명 최대 2줄까지 노출합니다. 2줄 이상 초과할 경우 말줄임표시합니다.</span>
+            </div>
+          </div>
+          <pre class='brush:html'>
+            <div class="chapter-list">
+              <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">교과서 이름 정보 출력 이름정보 25자(저자명 최대 5자까지)</p>
+              </a>
+              <a href="#">
+                <span class="badge type-rounded fill-light">2022</span>
+                <p class="title">국어(가)</p>
+              </a>
+              <!-- !NOTE : 링크 없는 경우 a > div.item -->
+              <div class="item">
+              <span class="badge type-rounded fill-light">2022</span>
+              <p class="title">링크 없는 경우 예</p>
+              </div>
+              <div class="item">
+                <i class="icon size-md type-round-box">
+                  <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘">
+                </i>
+                <span class="title">자료명 최대 2줄까지 노출합니다. 2줄 이상 초과할 경우 말줄임표시합니다.</span>
+              </div>
+            </div>
+          </pre>
+        </section>
+        <section class="fluid">
+          <h2>
+            default
+          </h2>
+          <ul class="chapter-list">
+            <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+            <li>
+              <a href="#" class="list-depth action">
+                <div class="header-wrap">
+                  <span class="number-unit">GUIDE</span>
+                  <h3>대분류 제목 정보를 최대 40자 출력합니다. 1행 처리가 안될경우 다음행 출력됩니다. 좌측 넘버링은 자유입력(예: 레슨1)</h3>
+                </div>
+                <div class="extra">
+                  <button class="button size-sm">공통자료</button>
+                </div>
+              </a>
+              <div class="pane">
+                <!-- !NOTE : 중분류엔 type-middle , 소분류엔 type-small 이 붙습니다. -->
+                <div class="list-depth type-middle">
+                  <div class="header-wrap">
+                    <span class="number-unit">(1)</span>
+                    <h4>중분류 주제 정보를 최대 35자 출력합니다. (1행으로 처리가 안될 경우, 다음행으로 출력)</h4>
+                  </div>
+                  <div class="extra">
+                    <button class="button size-sm">공통자료</button>
+                  </div>
+                </div>
+                <div class="list-depth type-small">
+                  <div class="header-wrap">
+                    <span class="number-unit">(1)</span>
+                    <h5>소분류 주제 정보를 최대 20자 출력합니다. (1행으로 처리가 안될 경우, 다음행으로 출력)</h5>
+                  </div>
+                  <div class="extra">
+                    <button class="button size-sm">공통자료</button>
+                  </div>
+                </div>
+                <ul class="hour-list">
+                  <li>
+                    <div class="header-wrap">
+                      <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                      <a href="#" class="title">[1차시] 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼사오
+                      </a>
+                    </div>
+                    <div class="inline-wrap">
+                      <div class="number-pages">
+                        <span>실험 관찰 999~999p</span>
+                        <span>과학 999~999p</span>
+                      </div>
+                      <span class="badge-recently">최근진도</span>
+                    </div>
+                    <div class="page-buttons">
+                      <button class="button size-sm">최대열자까지최대열자</button>
+                      <button class="button size-sm">수업열기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="header-wrap">
+                      <span class="badge type-round-box fill-purple" title="비주얼씽킹">비주얼씽킹</span>
+                      <a href="#" class="title">[1차시] 과학자는 어떻게 탐구 문제를 정할까요</a>
+                    </div>
+                    <div class="number-pages">
+                      <span>실험 관찰 999~999p</span>
+                      <span>과학 999~999p</span>
+                    </div>
+                    <div class="page-buttons">
+                      <button class="button size-sm">최대열자까지최대열자</button>
+                      <button class="button size-sm">수업열기</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="list-depth action">
+                <div class="header-wrap">
+                  <span class="number-unit">1</span>
+                  <h3>과학자의 탐구</h3>
+                </div>
+                <div class="extra">
+                  <button class="button size-sm">공통자료</button>
+                </div>
+              </a>
+              <div class="pane">
+                <ul class="hour-list">
+                  <li>
+                    <div class="header-wrap">
+                      <span class="badge type-round-box fill-purple" title="교과서자료">비주얼씽킹</span>
+                      <a href="#" class="title">[000~000차시] 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                    </div>
+                    <div class="number-pages">
+                      <span>과학 10~36 쪽</span>
+                      <span>실험 관찰 42~85 쪽</span>
+                    </div>
+                    <div class="page-buttons">
+                      <button class="button size-sm">최대열자까지최대열자</button>
+                      <button class="button size-sm">수업열기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="header-wrap">
+                      <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                      <a href="#" class="title">[11차시] 2. 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기
+                      </a>
+                    </div>
+                    <div class="inline-wrap">
+                      <div class="number-pages">
+                        <span>실험 관찰 999~999p</span>
+                        <span>과학 999~999p</span>
+                      </div>
+                      <span class="badge-recently">최근진도</span>
+                    </div>
+                    <div class="page-buttons">
+                      <button class="button size-sm">최대열자까지최대열자</button>
+                      <button class="button size-sm">수업열기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="header-wrap">
+                      <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                      <a href="#" class="title">[11차시] 2. 과학이야기 우리 주변 어디에나 있는 산물질과 염기성 물질과학 이야기</a>
+                    </div>
+                    <div class="number-pages">
+                      <span>과학 10~36 쪽</span>
+                      <span>실험 관찰 42~85 쪽</span>
+                    </div>
+                    <div class="page-buttons">
+                      <button class="button size-sm">최대열자까지최대열자</button>
+                      <button class="button size-sm">수업열기</button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="header-wrap">
+                      <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                      <a href="#" class="title">[11차시] 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 육칠팔구십 일이삼사오 </a>
+                    </div>
+                    <div class="number-pages">
+                      <span>과학 10~36 쪽</span>
+                      <span>실험 관찰 42~85 쪽</span>
+                    </div>
+                    <div class="page-buttons">
+                      <button class="button size-sm">최대열자까지최대열자</button>
+                      <button class="button size-sm">수업열기</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <pre class='brush:html'>
+            <ul class="chapter-list">
+              <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+              <li>
+                <a href="#" class="list-depth action">
+                  <div class="header-wrap">
+                    <span class="number-unit">GUIDE</span>
+                    <h3>대분류 제목 정보를 최대 40자 출력합니다. 1행 처리가 안될경우 다음행 출력됩니다. 좌측 넘버링은 자유입력(예: 레슨1)</h3>
+                  </div>
+                  <div class="extra">
+                    <button class="button size-sm">공통자료</button>
+                  </div>
+                </a>
+                <div class="pane">
+                  <!-- !NOTE : 중분류엔 type-middle , 소분류엔 type-small 이 붙습니다. -->
+                  <div class="list-depth type-middle">
+                    <div class="header-wrap">
+                      <span class="number-unit">(1)</span>
+                      <h4>중분류 주제 정보를 최대 35자 출력합니다. (1행으로 처리가 안될 경우, 다음행으로 출력)</h4>
+                    </div>
+                    <div class="extra">
+                      <button class="button size-sm">공통자료</button>
+                    </div>
+                  </div>
+                  <div class="list-depth type-small">
+                    <div class="header-wrap">
+                      <span class="number-unit">(1)</span>
+                      <h5>소분류 주제 정보를 최대 20자 출력합니다. (1행으로 처리가 안될 경우, 다음행으로 출력)</h5>
+                    </div>
+                    <div class="extra">
+                      <button class="button size-sm">공통자료</button>
+                    </div>
+                  </div>
+                  <ul class="hour-list">
+                    <li>
+                      <div class="header-wrap">
+                        <span class="badge type-round-box fill-skyblue" title="교과서자료">교과서자료</span>
+                        <a href="#" class="title">[1차시] 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼 사오육칠 팔구십 일이삼사오
+                        </a>
+                      </div>
+                      <div class="inline-wrap">
+                        <div class="number-pages">
+                          <span>실험 관찰 999~999p</span>
+                          <span>과학 999~999p</span>
+                        </div>
+                        <span class="badge-recently">최근진도</span>
+                      </div>
+                      <div class="page-buttons">
+                        <button class="button size-sm">최대열자까지최대열자</button>
+                        <button class="button size-sm">수업열기</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-wrap">
+                        <span class="badge type-round-box fill-purple" title="비주얼씽킹">비주얼씽킹</span>
+                        <a href="#" class="title">[1차시] 과학자는 어떻게 탐구 문제를 정할까요</a>
+                      </div>
+                      <div class="number-pages">
+                        <span>실험 관찰 999~999p</span>
+                        <span>과학 999~999p</span>
+                      </div>
+                      <div class="page-buttons">
+                        <button class="button size-sm">최대열자까지최대열자</button>
+                        <button class="button size-sm">수업열기</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </pre>
+          <h3>.type-mono</h3>
+          <ul class="chapter-list type-mono">
+            <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+            <li>
+              <a href="#" class="list-depth action">
+                <div class="header-wrap">
+                  <h3>교과서 공통 자료 (총 1,531건)</h3>
+                </div>
+              </a>
+              <div class="pane">
+                <!-- !NOTE : 교과서 공통자료 리스트 입니다. -->
+                <ul class="chapter-items">
+                  <li>
+                    <div class="inner-wrap">
+                      <i class="icon size-md type-round-box">
+                        <img src="/assets/images/common/icon-word.svg" alt="워드 아이콘">
+                      </i>
+                      <a href="#" class="title">자료 이름 정보 출력 최대 40자까지</a>
+                    </div>
+                    <div class="buttons">
+                      <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                        <svg>
+                          <title>아이콘 돋보기</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button type="button" class="button type-icon size-sm">
+                        <svg>
+                          <title>아이콘 공유</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner-wrap">
+                      <i class="icon size-md type-round-box">
+                        <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘">
+                      </i>
+                      <a href="#" class="title">자료 이름 정보 출력 최대 40자까지 출력합니다.</a>
+                    </div>
+                    <div class="buttons">
+                      <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                        <svg>
+                          <title>아이콘 돋보기</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button type="button" class="button type-icon size-sm">
+                        <svg>
+                          <title>아이콘 공유</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner-wrap">
+                      <i class="icon size-md type-round-box">
+                        <img src="/assets/images/common/icon-ppt.svg" alt="파워포인트 아이콘">
+                      </i>
+                      <a href="#" class="title">평가 계획 및 기준안</a>
+                    </div>
+                    <div class="buttons">
+                      <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                        <svg>
+                          <title>아이콘 돋보기</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button type="button" class="button type-icon size-sm">
+                        <svg>
+                          <title>아이콘 공유</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner-wrap">
+                      <i class="icon size-md type-round-box">
+                        <img src="/assets/images/common/icon-excel.svg" alt="엑셀 아이콘">
+                      </i>
+                      <a href="#" class="title">평가 계획 및 기준안</a>
+                    </div>
+                    <div class="buttons">
+                      <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                        <svg>
+                          <title>아이콘 돋보기</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button type="button" class="button type-icon size-sm">
+                        <svg>
+                          <title>아이콘 공유</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <pre class='brush:html'>
+            <ul class="chapter-list type-mono">
+              <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+              <li>
+                <a href="#" class="list-depth action">
+                  <div class="header-wrap">
+                    <h3>교과서 공통 자료 (총 1,531건)</h3>
+                  </div>
+                </a>
+                <div class="pane">
+                  <!-- !NOTE : 교과서 공통자료 리스트 입니다. -->
+                  <ul class="chapter-items">
+                    <li>
+                      <div class="inner-wrap">
+                        <i class="icon size-md type-round-box">
+                          <img src="/assets/images/common/icon-word.svg" alt="워드 아이콘">
+                        </i>
+                        <a href="#" class="title">자료 이름 정보 출력 최대 40자까지</a>
+                      </div>
+                      <div class="buttons">
+                        <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                          <svg>
+                            <title>아이콘 돋보기</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="button type-icon size-sm">
+                          <svg>
+                            <title>아이콘 공유</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner-wrap">
+                        <i class="icon size-md type-round-box">
+                          <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘">
+                        </i>
+                        <a href="#" class="title">자료 이름 정보 출력 최대 40자까지 출력합니다.</a>
+                      </div>
+                      <div class="buttons">
+                        <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                          <svg>
+                            <title>아이콘 돋보기</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="button type-icon size-sm">
+                          <svg>
+                            <title>아이콘 공유</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner-wrap">
+                        <i class="icon size-md type-round-box">
+                          <img src="/assets/images/common/icon-ppt.svg" alt="파워포인트 아이콘">
+                        </i>
+                        <a href="#" class="title">평가 계획 및 기준안</a>
+                      </div>
+                      <div class="buttons">
+                        <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                          <svg>
+                            <title>아이콘 돋보기</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="button type-icon size-sm">
+                          <svg>
+                            <title>아이콘 공유</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner-wrap">
+                        <i class="icon size-md type-round-box">
+                          <img src="/assets/images/common/icon-excel.svg" alt="엑셀 아이콘">
+                        </i>
+                        <a href="#" class="title">평가 계획 및 기준안</a>
+                      </div>
+                      <div class="buttons">
+                        <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                          <svg>
+                            <title>아이콘 돋보기</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="button type-icon size-sm">
+                          <svg>
+                            <title>아이콘 공유</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </pre>
+          
+          <h3>chapter-items
+            <small>교과서 자료 리스트 입니다.</small>
+          </h3>
+          <ul class="chapter-items">
+            <li>
+              <div class="inner-wrap">
+                <i class="icon size-md type-round-box">
+                  <img src="/assets/images/common/icon-word.svg" alt="워드 아이콘">
+                </i>
+                <a href="#" class="title">자료 이름 정보 출력 최대 40자까지</a>
+              </div>
+              <div class="buttons">
+                <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                  <svg>
+                    <title>아이콘 돋보기</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <button type="button" class="button type-icon size-sm">
+                  <svg>
+                    <title>아이콘 공유</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="inner-wrap">
+                <i class="icon size-md type-round-box">
+                  <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘">
+                </i>
+                <a href="#" class="title">자료 이름 정보 출력 최대 40자까지 출력합니다.</a>
+              </div>
+              <div class="buttons">
+                <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                  <svg>
+                    <title>아이콘 돋보기</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <button type="button" class="button type-icon size-sm">
+                  <svg>
+                    <title>아이콘 공유</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li>
+              <ul class="divider-group">
+                <li>1단원</li>
+                <li>공통자료</li>
+              </ul>
+              <div class="inner-wrap">
+                <i class="icon size-md type-round-box">
+                  <img src="/assets/images/common/icon-ppt.svg" alt="파워포인트 아이콘">
+                </i>
+                <a href="#" class="title">평가 계획 및 기준안</a>
+              </div>
+              <div class="buttons">
+                <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                  <svg>
+                    <title>아이콘 돋보기</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <button type="button" class="button type-icon size-sm">
+                  <svg>
+                    <title>아이콘 공유</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li>
+              <ul class="divider-group">
+                <li>1단원</li>
+                <li>공통자료</li>
+              </ul>
+              <div class="inner-wrap">
+                <i class="icon size-md type-round-box">
+                  <img src="/assets/images/common/icon-excel.svg" alt="엑셀 아이콘">
+                </i>
+                <a href="#" class="title">평가 계획 및 기준안</a>
+              </div>
+              <div class="buttons">
+                <button type="button" class="button type-icon size-sm" onclick="window.open('#')">
+                  <svg>
+                    <title>아이콘 돋보기</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <button type="button" class="button type-icon size-sm">
+                  <svg>
+                    <title>아이콘 공유</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="fluid">
+          <h2>filter-list
+            <small>레이어 필터 리스트 입니다.</small>
+          </h2>
+          <ul class="filter-list">
+            <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+            <li>
+              <a href="" class="list-depth action">
+                <div class="header-wrap">
+                  <h3>학년</h3>
+                  <span class="extra">1학년, 2학년, 3학년, 6학년</span>
+                </div>
+              </a>
+              <div class="pane">
+                <div class="filter-items">
+                  <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                  <button type="button">카테고리 항목 최대 10개</button>
+                  <button type="button">1학년</button>
+                  <button type="button">2학년</button>
+                  <button type="button">3학년</button>
+                  <button type="button">4학년</button>
+                  <button type="button">5학년</button>
+                  <button type="button">6학년</button>
+                  <button type="button">카테고리 항목 이름 정보 출력 최대 2줄</button>
+                  <button type="button">카테고리 항목 이름 정보 출력 최대 2줄</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="" class="list-depth action">
+                <div class="header-wrap">
+                  <h3>카테고리 이름 출력최대15자</h3>
+                  <span class="extra">1학년, 2학년, 3학년, 6학년</span>
+                </div>
+              </a>
+              <div class="pane">
+                <div class="filter-items">
+                  <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                  <button type="button">카테고리 항목 최대 10개</button>
+                  <button type="button">카테고리 항목</button>
+                  <button type="button">카테고리 항목</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="" class="list-depth action">
+                <div class="header-wrap">
+                  <h3>테마</h3>
+                  <span class="extra">나의 생활, 가족과 이웃, 학교 생활, 나의 생활</span>
+                </div>
+              </a>
+              <div class="pane">
+                <div class="filter-items">
+                  <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                  <button type="button">카테고리 항목 최대 10개</button>
+                  <button type="button">카테고리 항목</button>
+                  <button type="button">카테고리 항목</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="" class="list-depth action">
+                <div class="header-wrap">
+                  <h3>구분</h3>
+                  <span class="extra">온/오프, 온라인</span>
+                </div>
+              </a>
+              <div class="pane">
+                <div class="filter-items">
+                  <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                  <button type="button">카테고리 항목 최대 10개</button>
+                  <button type="button">카테고리 항목</button>
+                  <button type="button">카테고리 항목</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="" class="list-depth action">
+                <div class="header-wrap">
+                  <h3>카테고리 이름 출력</h3>
+                  <span class="extra">온/오프, 온라인</span>
+                </div>
+              </a>
+              <div class="pane">
+                <div class="filter-items">
+                  <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                  <button type="button">카테고리 항목 최대 10개</button>
+                  <button type="button">카테고리 항목</button>
+                  <button type="button">카테고리 항목</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="fluid">
+          <h2>
+            gray-depth-items
+            <small>기초학력 스마트수업에 사용</small>
+          </h2>
+          <ul class="gray-depth-items">
+            <li>
+              <div class="text-wrap">
+                <h3>1.재미가 톡톡</h3>
+                <p>(1) 소단원명 최대 2줄 20자 까지 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info</p>
+              </div>
+              <ul class="list-wrap">
+                <li>
+                  <span class="hour">3~4차시</span>
+                  <div class="inner-wrap">
+                    <a href="#" class="title">차시명을 최대 20자 출력합니다. 차시명은 최대 2줄까지 노출됩니다.</a>
+                    <div class="buttons">
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="number-pages">
+                    <span>주교과서 NNN~NNNp</span>
+                    <span>부교과서 NNN~NNNp</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hour">3~4차시</span>
+                  <div class="inner-wrap">
+                    <a href="#" class="title">교통수단의 발달로 생활 모습은 어떻게 달라졌을까요</a>
+                    <div class="buttons">
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="number-pages">
+                    <span>사회 교과서 110~115p</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hour">3~4차시</span>
+                  <div class="inner-wrap">
+                    <a href="#" class="title">교통수단의 발달로 생활 모습은 어떻게 달라졌을까요</a>
+                    <div class="buttons">
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="number-pages">
+                    <span>사회 교과서 110~115p</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="text-wrap">
+                <h3>1.재미가 톡톡</h3>
+                <p>(1) 소단원명 최대 2줄 20자 까지 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info</p>
+              </div>
+              <ul class="list-wrap">
+                <li>
+                  <span class="hour">3~4차시</span>
+                  <div class="inner-wrap">
+                    <a href="#" class="title">차시명을 최대 20자 출력합니다. 차시명은 최대 2줄까지 노출됩니다.</a>
+                    <div class="buttons">
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                      <button class="button size-sm type-icon">
+                        <svg>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="number-pages">
+                    <span>주교과서 NNN~NNNp</span>
+                    <span>부교과서 NNN~NNNp</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <pre class='brush:html'>
+            <ul class="gray-depth-items">
+              <li>
+                <div class="text-wrap">
+                  <h3>1.재미가 톡톡</h3>
+                  <p>(1) 소단원명 최대 2줄 20자 까지 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info</p>
+                </div>
+                <ul class="list-wrap">
+                  <li>
+                    <span class="hour">3~4차시</span>
+                    <div class="inner-wrap">
+                      <a href="#" class="title">차시명을 최대 20자 출력합니다. 차시명은 최대 2줄까지 노출됩니다.</a>
+                      <div class="buttons">
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="number-pages">
+                      <span>주교과서 NNN~NNNp</span>
+                      <span>부교과서 NNN~NNNp</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="hour">3~4차시</span>
+                    <div class="inner-wrap">
+                      <a href="#" class="title">교통수단의 발달로 생활 모습은 어떻게 달라졌을까요</a>
+                      <div class="buttons">
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="number-pages">
+                      <span>사회 교과서 110~115p</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="hour">3~4차시</span>
+                    <div class="inner-wrap">
+                      <a href="#" class="title">교통수단의 발달로 생활 모습은 어떻게 달라졌을까요</a>
+                      <div class="buttons">
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="number-pages">
+                      <span>사회 교과서 110~115p</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="text-wrap">
+                  <h3>1.재미가 톡톡</h3>
+                  <p>(1) 소단원명 최대 2줄 20자 까지 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info Max 2Line 소단원 Title Info</p>
+                </div>
+                <ul class="list-wrap">
+                  <li>
+                    <span class="hour">3~4차시</span>
+                    <div class="inner-wrap">
+                      <a href="#" class="title">차시명을 최대 20자 출력합니다. 차시명은 최대 2줄까지 노출됩니다.</a>
+                      <div class="buttons">
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                        <button class="button size-sm type-icon">
+                          <svg>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-copy"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="number-pages">
+                      <span>주교과서 NNN~NNNp</span>
+                      <span>부교과서 NNN~NNNp</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </pre>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

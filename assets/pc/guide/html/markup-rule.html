@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>HTML</h1>
+          <section>
+            <h2>마크업 규칙</h2>
+            <ul class="ul-circle">
+              <li>클릭했을 때 이벤트가 발생하는 경우 button 태그를 사용한다.</li>
+              <li>클릭했을 때 다른 페이지로 넘어가는 경우 a 태그를 사용한다.</li>
+              <li>a 태그 안에 button 태그를 넣는 등 인터랙티브 요소에 인터랙티브 요소를 넣지 않도록 한다.</li>
+              <li>단락이 아닌 경우, 단순히 block 속성을 사용하기 위해서 p 태그를 사용하지 않는다.</li>
+              <li>heading 태그는 레벨 순서를 지켜 작성한다.</li>
+              <li>button 태그에는 type을 명시한다.</li>
+              <li>레이아웃을 표현하기 위하여 표를 사용하지 않는다.</li>
+              <li>특수기호는 Entity name을 사용하여 entity 코드로 변환한다.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>웹접근성</h2>
+            <ul class="ul-circle">
+              <li>img 요소의 alt 속성은 반드시 제공되어야 하며, 의미없는 이미지에 한하여 빈 값을 허용한다.</li>
+              <li>input 요소는 label과 연결하거나 title 값을 지정하여야 한다.</li>
+              <li>분리된 입력폼은 각각 title 값을 지정하여야 한다.</li>
+              <li>적절한 label 텍스트 또는 title를 사용하여야 한다.</li>
+              <li>적절한 태그로 작성이 어려울 경우 wai-aria를 활용하여 웹접근성을 강화할 수 있다.</li>
+              <li>body 상단에 본문 바로가기 링크를 제공하여야 한다.</li>
+              <li>키보드 탭키 이동으로 접근이 불가능한 내용이 없어야 한다.</li>
+            </ul>
+            <a href="https://accessibility.naver.com/accessibility" target="_blank" class="button size-lg type-primary">Naver accessibility guide</a>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

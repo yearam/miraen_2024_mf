@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Radio & Checkbox</h1>
+          <section>
+            <h2>.ox : radio</h2>
+            <span class="ox">
+              <input type="radio" id="ox-radio-1" checked />
+              <label for="ox-radio-1"></label>
+            </span>
+            <br /><br />
+            <span class="ox">
+              <input type="radio" id="ox-radio-2" />
+              <label for="ox-radio-2">단독사용하는 경우</label>
+            </span>
+            <pre class="brush:html">
+                <!-- 라벨 텍스트 없는 경우 -->
+                <span class="ox">
+                    <input type="radio" id="ox-radio-1" checked />
+                    <label for="ox-radio-1"></label>
+                </span>
+                <!-- 라벨 텍스트 있는 경우 -->
+                <span class="ox">
+                    <input type="radio" id="ox-radio-2" checked />
+                    <label for="ox-radio-1">단독사용하는 경우</label>
+                </span>
+            </pre>
+            <h3>
+              .ox-group
+              <small>name의 값을 동일하게 사용해야 radio 그룹으로 동작합니다.</small>
+            </h3>
+            <div class="ox-group">
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-1" checked />
+                <label for="ox-radio1-1">radio checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-2" />
+                <label for="ox-radio1-2">radio unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-3" disabled />
+                <label for="ox-radio1-3">radio disabled</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-4" disabled checked />
+                <label for="ox-radio1-4">radio disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-5" />
+                <label for="ox-radio1-5"
+                  >radio long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <!-- default : 가로형 -->
+                <div class="ox-group">
+                    <span class="ox">
+                        <input type="radio" name="radio1" id="ox-radio1-1" checked />
+                        <label for="ox-radio1-1">radio checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="radio" name="radio1" id="ox-radio1-2" />
+                        <label for="ox-radio1-2">radio unchecked</label>
+                    </span>
+                </div>
+            </pre>
+            <h3>.ox-group.type-vertical</h3>
+            <div class="ox-group type-vertical">
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-1" checked />
+                <label for="ox-radio2-1">radio checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-2" />
+                <label for="ox-radio2-2">radio unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-3" disabled />
+                <label for="ox-radio2-3">radio disabled</label>
+              </span>
+              <span class="ox">
+                <input type="radio" id="ox-radio2-4" disabled checked />
+                <label for="ox-radio2-4">radio disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-5" />
+                <label for="ox-radio2-5"
+                  >radio long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group type-vertical">
+                    <span class="ox">
+                        <input type="radio" name="radio2" id="ox-radio2-1" checked />
+                        <label for="ox-radio2-1">radio checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="radio" name="radio2" id="ox-radio2-2" />
+                        <label for="ox-radio2-2">radio unchecked</label>
+                    </span>
+                </div>
+            </pre>
+          </section>
+          <section>
+            <h2>.ox : checkbox</h2>
+            <span class="ox">
+              <input type="checkbox" id="ox1" />
+              <label for="ox1"></label>
+            </span>
+            <br /><br />
+            <span class="ox">
+              <input type="checkbox" id="ox2" checked />
+              <label for="ox2">단독사용하는 경우</label>
+            </span>
+            <pre class="brush:html">
+                <!-- 라벨 텍스트 없는 경우 -->
+                <span class="ox">
+                    <input type="checkbox" id="ox1" checked />
+                    <label for="ox1"></label>
+                </span>
+                <!-- 라벨 텍스트 있는 경우 -->
+                <span class="ox">
+                    <input type="checkbox" id="ox2" checked />
+                    <label for="ox2">단독사용하는 경우</label>
+                </span>
+            </pre>
+            <h3>.ox-group</h3>
+            <div class="ox-group">
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-2" checked />
+                <label for="ox-check1-2">checkbox checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-3" />
+                <label for="ox-check1-3">checkbox unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-4" disabled />
+                <label for="ox-check1-4">checkbox disabled</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-4" disabled checked />
+                <label for="ox-check1-4">checkbox disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-5" />
+                <label for="ox-check1-5"
+                  >checkbox long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group">
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-2" checked />
+                        <label for="ox-check1-2">checkbox checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-3" />
+                        <label for="ox-check1-3">checkbox unchecked</label>
+                    </span>
+                </div>
+            </pre>
+            <h3>.ox-group.type-vertical</h3>
+            <div class="ox-group type-vertical">
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-2" checked />
+                <label for="ox-check2-2">checkbox checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-3" />
+                <label for="ox-check2-3">checkbox unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-4" disabled />
+                <label for="ox-check2-4">checkbox disabled</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-4" disabled checked />
+                <label for="ox-check2-4">checkbox disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-5" />
+                <label for="ox-check2-5"
+                  >checkbox long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group type-vertical">
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-2" checked />
+                        <label for="ox-check1-2">checkbox checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-3" />
+                        <label for="ox-check1-3">checkbox unchecked</label>
+                    </span>
+                </div>
+            </pre>
+            <!-- 
+            <h3>.group-button.ox-group <small>다중선택 버튼 그룹</small></h3>
+            <div class="group-button ox-group">
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check3-1" checked />
+                    <label for="ox-check3-1">checkbox checked</label>
+                </span>
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check3-2" />
+                    <label for="ox-check3-2">checkbox unchecked</label>
+                </span>
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check3-3" />
+                    <label for="ox-check3-3">checkbox 3</label>
+                </span>
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check3-4" disabled />
+                    <label for="ox-check3-4">checkbox disabled</label>
+                </span>
+            </div>
+            <br />
+            <div class="group-button ox-group fluid">
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check4-1" checked />
+                    <label for="ox-check4-1">checkbox checked</label>
+                </span>
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check4-2" />
+                    <label for="ox-check4-2">checkbox unchecked</label>
+                </span>
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check4-3" />
+                    <label for="ox-check4-3">checkbox 3</label>
+                </span>
+                <span class="ox">
+                    <input type="checkbox" name="checkbox1" id="ox-check4-4" disabled />
+                    <label for="ox-check4-4">checkbox disabled</label>
+                </span>
+            </div> 
+            -->
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+    <!-- <div id="myModal">
+      ss
+    </div> -->
+  </body>
+</html>

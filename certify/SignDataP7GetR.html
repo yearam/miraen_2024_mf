@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		
+		<title></title>
+		<!-- 전자인증 모듈 설정 //-->
+		<link rel="stylesheet" type="text/css" href="/toolkit/unisignweb/rsrc/css/certcommon.css?v=1" />
+		<script type="text/javascript" src="/toolkit/unisignweb/js/unisignwebclient.js?v=1"></script>
+		<script type="text/javascript" src="./UniSignWeb_Multi_Init_Nim.js?v=1"></script>
+		<!-- 전자인증 모듈 설정 //-->
+		<script>			
+
+
+		function GetRValueFromKey(userDN) {
+			unisign.GetRValueFromKey(userDN, "", function( resultObject ) {
+
+				var rValueBox = document.getElementById('rvalue');
+
+				if( !resultObject || resultObject.resultCode != 0 ){
+					alert( resultObject.resultMessage + "\n오류코드 : " + resultObject.resultCode );
+					return;
+				}
+				rValueBox.value=resultObject.RValue;  // R 값 
+			})
+		}
+
+		function SignData() 
+		{
+			if (document.frm.plainText.value == "")
+			{
+				alert("서명할 원문이 없습니다.");
+				return;
+			}
+
+			unisign.SignDataNonEnveloped( document.frm.plainText.value, null, "", function( resultObject ) 
+			{
+				document.frm.signedText.value = resultObject.signedData; //결과출력
+				if( !resultObject || resultObject.resultCode !=0 )
+				{
+					alert( resultObject.resultMessage + "\n오류코드 : " + resultObject.resultCode );
+					return;
+				}
+				
+				GetRValueFromKey(resultObject.certAttrs.subjectName);
+				//alert('전자서명에 성공했습니다.');
+
+			});
+				
+		}
+
+		function FnSign() 
+		{
+			SignData();
+		}
+		function Send()
+		{
+			if (document.frm.signedText.value == "")
+			{
+				alert("전자서명값이 없습니다.");
+				return;
+			}
+			document.frm.method = "post";
+			document.frm.action = "verifyGetR.jsp";
+			document.frm.submit();
+		
+		}
+
+		</script>
+	</head>
+	<body>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td height="37" bgcolor="#0099CC">&nbsp;<font color="#FFFFFF"><b>[전자서명 페이지]</b></font> 
+      </td>
+    </tr>
+  </table>
+  <h3><font color="red">  hidden  처리 대상 : 원문, 전자서명값</font></h3><br>
+		서버에서 신원확인을 하는 샘플 , 인증서 전자서명 + DB에 저장된 주민/사업자번호를 통해 신원확인 검증한다. <br>
+	<br><br>
+		<form name="frm" onsubmit="return false">
+		<table cellpadding="0" cellspacing="0" width="100%"  align = "center">
+			<tr>
+				<td align = "center">
+					
+					<textarea name="plainText" rows="5" cols="40">TestData</textarea> 
+					<br>
+					<br><br>DB에서 검색할 주민/사업자번호 <br> 
+					<input type = text id="ssn" name="ssn" value = ""><br><br><br>
+					<input type = "button" value = "전자서명(인증서선택)" onclick="FnSign();" >
+				</td>
+		
+				<td align = "center">전자서명값<br>
+					<textarea name="signedText" rows="5" cols="40"></textarea>
+					<br><br>
+					<center>
+						<br><br>사용자 인증서 R값<br><textarea id="rvalue" name="rvalue" rows="5" cols="40"> 
+					</textarea>
+					</center>
+					<br>
+						<input type=button value="전송(verifyGetR.jsp)" onclick="Send();">	
+				</td>
+
+			</tr>
+		</table>
+		
+		</form>
+	</body>
+</html>
+
+
+

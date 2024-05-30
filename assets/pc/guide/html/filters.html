@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Filters</h1>
+          <section>
+            <h2>
+              default
+              <small>checkbox형이 기본입니다.</small>
+            </h2>
+            <div class="filters">
+              <div class="ox-group">
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter1-0" />
+                  <label for="ox-filter1-0">우당탕당 아이쿠 시즌2</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter1-1" />
+                  <label for="ox-filter1-1">스트레칭</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter1-2" disabled="" />
+                  <label for="ox-filter1-2">disabled</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter1-3" checked disabled="" />
+                  <label for="ox-filter1-3">disabled checked</label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <div class="ox-group">
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter1-1">
+                    <label for="ox-filter1-1">스트레칭</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter1-2">
+                    <label for="ox-filter1-2">미니 올림픽</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter1-3">
+                    <label for="ox-filter1-3">리듬 체육</label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+
+            <h3>default radio
+              <small>radio형일 경우입니다.</small>
+            </h3>
+            <div class="filters">
+              <div class="ox-group">
+                <span class="ox">
+                  <input type="radio" id="ox-radio1-0" />
+                  <label for="ox-radio1-0">우당탕당 아이쿠 시즌2</label>
+                </span>
+                <span class="ox">
+                  <input type="radio" id="ox-radio1-1" />
+                  <label for="ox-radio1-1">스트레칭</label>
+                </span>
+                <span class="ox">
+                  <input type="radio" id="ox-radio1-2" disabled="" />
+                  <label for="ox-radio1-2">disabled</label>
+                </span>
+                <span class="ox">
+                  <input type="radio" id="ox-radio1-3" checked="" disabled="" />
+                  <label for="ox-radio1-3">disabled checked</label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <div class="ox-group">
+                  <span class="ox">
+                    <input type="radio" id="ox-radio1-0" />
+                    <label for="ox-radio1-0">우당탕당 아이쿠 시즌2</label>
+                  </span>
+                  <span class="ox">
+                    <input type="radio" id="ox-radio1-1" />
+                    <label for="ox-radio1-1">스트레칭</label>
+                  </span>
+                  <span class="ox">
+                    <input type="radio" id="ox-radio1-2" disabled="" />
+                    <label for="ox-radio1-2">disabled</label>
+                  </span>
+                  <span class="ox">
+                    <input type="radio" id="ox-radio1-3" checked="" disabled="" />
+                    <label for="ox-radio1-3">disabled checked</label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+
+            <h3>.filters.type-row7
+              <small>한줄에 7개가 오는 경우 입니다. (예: 교과활동)</small>
+            </h3>
+            <div class="filters type-row7">
+              <div class="ox-group">
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-1" />
+                  <label for="ox-filter10-1">스트레칭</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-2" />
+                  <label for="ox-filter10-2">미니 올림픽</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-3" />
+                  <label for="ox-filter10-3">리듬 체육</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-4" />
+                  <label for="ox-filter10-4">스트레칭</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-5" />
+                  <label for="ox-filter10-5">미니 올림픽</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-6" />
+                  <label for="ox-filter10-6">리듬 체육</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter10-7" />
+                  <label for="ox-filter10-7">스트레칭</label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters type-row7">
+                <div class="ox-group">
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-1" />
+                    <label for="ox-filter10-1">스트레칭</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-2" />
+                    <label for="ox-filter10-2">미니 올림픽</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-3" />
+                    <label for="ox-filter10-3">리듬 체육</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-4" />
+                    <label for="ox-filter10-4">스트레칭</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-5" />
+                    <label for="ox-filter10-5">미니 올림픽</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-6" />
+                    <label for="ox-filter10-6">리듬 체육</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter10-7" />
+                    <label for="ox-filter10-7">스트레칭</label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+
+            <h3>
+              button형 필터
+              <small>기본형은 buttons multi selection : .type-rounded.type-primary 와 동일한 색상입니다.</small>
+            </h3>
+            <div class="filters">
+              <div class="buttons type-rounded type-primary">
+                <span>
+                  <input type="checkbox" name="checkbox1" id="filter2-1" checked="" />
+                  <label for="filter2-1">전체</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox1" id="filter2-2" disabled="" />
+                  <label for="filter2-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox1" id="filter2-3" />
+                  <label for="filter2-3">checkbox</label>
+                </span>
+                <span>
+                  <input type="checkbox" id="filter2-4" />
+                  <label for="filter2-4">checkbox </label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <div class="buttons type-rounded type-primary">
+                  <span>
+                    <input type="checkbox" name="checkbox1" id="filter2-1" checked="" />
+                    <label for="filter2-1">전체</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox1" id="filter2-2" />
+                    <label for="filter2-2">checkbox unchecked</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox1" id="filter2-3" />
+                    <label for="filter2-3">checkbox</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" id="filter2-4" />
+                    <label for="filter2-4">checkbox </label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+
+            <h3> button형 필터 .type-rounded 일 경우</h3>
+            <div class="filters">
+              <div class="buttons type-rounded">
+                <span>
+                  <input type="checkbox" name="checkbox10" id="filter10-1" checked="" />
+                  <label for="filter10-1">전체</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox10" id="filter10-2" disabled="" />
+                  <label for="filter10-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox10" id="filter10-3" />
+                  <label for="filter10-3">checkbox</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox10" id="filter10-4" />
+                  <label for="filter10-4">checkbox </label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <div class="buttons type-rounded">
+                  <span>
+                    <input type="checkbox" name="checkbox10" id="filter10-1" checked="" />
+                    <label for="filter10-1">전체</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox10" id="filter10-2" disabled="" />
+                    <label for="filter10-2">checkbox unchecked</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox10" id="filter10-3" />
+                    <label for="filter10-3">checkbox</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox10" id="filter10-4" />
+                    <label for="filter10-4">checkbox </label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+
+            <h3> button형 필터 .type-rounded.type-primary-active 일 경우</h3>
+            <div class="filters">
+              <div class="buttons type-rounded type-primary-active">
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-1" checked="" />
+                  <label for="filter11-1">전체</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-2" disabled="" />
+                  <label for="filter11-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-3" />
+                  <label for="filter11-3">checkbox</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-4" />
+                  <label for="filter11-4">checkbox </label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <div class="buttons type-rounded type-primary-active">
+                  <span>
+                    <input type="checkbox" name="checkbox11" id="filter11-1" checked="" />
+                    <label for="filter11-1">전체</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox11" id="filter11-2" />
+                    <label for="filter11-2">checkbox unchecked</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox11" id="filter11-3" />
+                    <label for="filter11-3">checkbox</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="checkbox11" id="filter11-4" />
+                    <label for="filter11-4">checkbox </label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+            <h3> button형 필터 .type-rounded 속 버튼 일 경우</h3>
+            <div class="filters">
+              <div class="buttons type-rounded">
+                <!-- !NOTE 클릭시 active가 생깁니다. -->
+                <a href="" class="active">전체</a>
+                <a href="" class="disabled">버튼</a>
+                <a href="">버튼</a>
+                <a href="">버튼</a>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <div class="buttons type-rounded">
+                  <!-- !NOTE 클릭시 active가 생깁니다. -->
+                  <a href="" class="active">전체</a>
+                  <a href="">버튼</a>
+                  <a href="">버튼</a>
+                  <a href="">버튼</a>
+                </div>
+              </div>
+            </pre>
+
+            <h3>title이 있는 경우</h3>
+            <div class="filters">
+              <strong class="title">자료유형</strong>
+              <div class="ox-group">
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter3-1" />
+                  <label for="ox-filter3-1">전체</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter3-2" />
+                  <label for="ox-filter3-2">교과서</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter3-3" />
+                  <label for="ox-filter3-3">교사용 교과서</label>
+                </span>
+                <span class="ox">
+                  <input type="checkbox" id="ox-filter3-4" />
+                  <label for="ox-filter3-4">지도서</label>
+                </span>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="filters">
+                <strong class="title">자료유형</strong>
+                <div class="ox-group">
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter3-1">
+                    <label for="ox-filter3-1">전체</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter3-2">
+                    <label for="ox-filter3-2">교과서</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter3-3">
+                    <label for="ox-filter3-3">교사용 교과서</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter3-4">
+                    <label for="ox-filter3-4">지도서</label>
+                  </span>
+                </div>
+              </div>
+            </pre>
+          </section>
+
+          <section>
+            <h2>
+              filter-wrap
+              <small>필터와 해제 영역을 포함 합니다.</small>
+            </h2>
+            <h3>default</h3>
+            <div class="filter-wrap">
+              <div class="filters">
+                <strong class="title">자료유형</strong>
+                <div class="ox-group">
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter4-1" />
+                    <label for="ox-filter4-1">전체</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter4-2" />
+                    <label for="ox-filter4-2">교과서</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter4-3" />
+                    <label for="ox-filter4-3">교사용 교과서</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter4-4" />
+                    <label for="ox-filter4-4">지도서</label>
+                  </span>
+                </div>
+              </div>
+              <!-- //.filters -->
+              <div class="filter-items">
+                <button type="button" class="button size-md">
+                  <svg>
+                    <title>아이콘 전체해제</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                  </svg>
+                  전체해제
+                </button>
+                <div class="inner-wrap">
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <!-- //.filter-items -->
+            </div>
+            <!-- //.filter-wrap -->
+            <pre class="brush:html">
+              <div class="filter-wrap">
+                <div class="filters">
+                  <strong class="title">자료유형</strong>
+                  <div class="ox-group">
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter4-1">
+                      <label for="ox-filter4-1">전체</label>
+                    </span>
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter4-2">
+                      <label for="ox-filter4-2">교과서</label>
+                    </span>
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter4-3">
+                      <label for="ox-filter4-3">교사용 교과서</label>
+                    </span>
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter4-4">
+                      <label for="ox-filter4-4">지도서</label>
+                    </span>
+                  </div>
+                </div>
+                <!-- //.filters -->
+                <div class="filter-items">
+                  <button type="button" class="button size-md">
+                    <svg>
+                      <title>아이콘 전체해제</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                    </svg>
+                    전체해제
+                  </button>
+                  <div class="inner-wrap">
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <!-- //.filter-items -->
+              </div>
+              <!-- //.filter-wrap -->
+            </pre>
+
+            <h3>배너가 있는 경우</h3>
+            <div class="filter-wrap">
+              <a href="" class="banner">
+                <img src="/assets/images/temp/img-filter-banner01.png" alt="쉽고 재미있게 즐기는 놀이체육 시간!" />
+              </a>
+              <div class="filters">
+                <strong class="title">자료유형</strong>
+                <div class="ox-group">
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter5-1" />
+                    <label for="ox-filter5-1">전체</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter5-2" />
+                    <label for="ox-filter5-2">교과서</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter5-3" />
+                    <label for="ox-filter5-3">교사용 교과서</label>
+                  </span>
+                  <span class="ox">
+                    <input type="checkbox" id="ox-filter5-4" />
+                    <label for="ox-filter5-4">지도서</label>
+                  </span>
+                </div>
+              </div>
+              <!-- //.filters -->
+              <div class="filter-items">
+                <button type="button" class="button size-md">
+                  <svg>
+                    <title>아이콘 전체해제</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                  </svg>
+                  전체해제
+                </button>
+                <div class="inner-wrap">
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    미니 올림픽
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    스트레칭
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    과학
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="item">
+                    사회과 부도
+                    <button class="button size-xs type-text type-icon">
+                      <svg>
+                        <title>아이콘 삭제</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <!-- //.filter-items -->
+            </div>
+            <!-- //.filter-wrap -->
+            <pre class="brush:html">
+              <div class="filter-wrap">
+                <a href="" class="banner">
+                  <img src="/assets/images/temp/img-filter-banner01.png" alt="쉽고 재미있게 즐기는 놀이체육 시간!">
+                </a>
+                <div class="filters">
+                  <strong class="title">자료유형</strong>
+                  <div class="ox-group">
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter5-1">
+                      <label for="ox-filter5-1">전체</label>
+                    </span>
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter5-2">
+                      <label for="ox-filter5-2">교과서</label>
+                    </span>
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter5-3">
+                      <label for="ox-filter5-3">교사용 교과서</label>
+                    </span>
+                    <span class="ox">
+                      <input type="checkbox" id="ox-filter5-4">
+                      <label for="ox-filter5-4">지도서</label>
+                    </span>
+                  </div>
+                </div>
+                <!-- //.filters -->
+                <div class="filter-items">
+                  <button type="button" class="button size-md">
+                    <svg>
+                      <title>아이콘 전체해제</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                    </svg>
+                    전체해제
+                  </button>
+                  <div class="inner-wrap">
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span> 
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span> 
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span> 
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span> 
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      미니 올림픽
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      스트레칭
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      과학
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                    <span class="item">
+                      사회과 부도
+                      <button class="button size-xs type-text type-icon">
+                        <svg>
+                          <title>아이콘 삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </span>
+                  </div> 
+                </div>
+                <!-- //.filter-items -->
+              </div>
+              <!-- //.filter-wrap -->
+            </pre>
+          </section>
+
+          <section>
+            <h2>With Tab</h2>
+            <h3>default</h3>
+            <div class="tabs fluid">
+              <div class="tab">
+                <ul>
+                  <li class="active"><a href="#tab1-1">tab1</a></li>
+                  <li><a href="#tab1-2">한글탭2</a></li>
+                  <li><a href="#tab1-3">탭명 3</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab1-1" class="pane">
+                  <div class="filters">
+                    <strong class="title">자료유형</strong>
+                    <div class="ox-group">
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-0" />
+                        <label for="ox-filter6-1">우당탕당 아이쿠 시즌2</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-1" />
+                        <label for="ox-filter6-1">전체</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-2" />
+                        <label for="ox-filter6-2">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-3" />
+                        <label for="ox-filter6-3">교사용 교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-4" />
+                        <label for="ox-filter6-4">지도서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-5" />
+                        <label for="ox-filter6-5">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-6" />
+                        <label for="ox-filter6-6">교사용 교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-7" />
+                        <label for="ox-filter6-7">지도서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-8" />
+                        <label for="ox-filter6-8">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-9" />
+                        <label for="ox-filter6-9">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-10" />
+                        <label for="ox-filter6-10">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-11" />
+                        <label for="ox-filter6-11">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-12" />
+                        <label for="ox-filter6-12">교과서</label>
+                      </span>
+                      <span class="ox">
+                        <input type="checkbox" id="ox-filter6-13" />
+                        <label for="ox-filter6-13">교과서</label>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- //.filters -->
+                </div>
+                <div id="tab1-2" class="pane">
+                  <p>tab contents1-2</p>
+                  <p>
+                    crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                    through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                  </p>
+                </div>
+                <div id="tab1-3" class="pane">
+                  <p>tab contents1-3</p>
+                  <p>
+                    labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                    diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="tabs fluid">
+                <div class="tab">
+                  <ul>
+                    <li class="active"><a href="#tab1-1">tab1</a></li>
+                    <li><a href="#tab1-2">한글탭2</a></li>
+                    <li><a href="#tab1-3">탭명 3</a></li>
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab1-1" class="pane">
+                    <div class="filters">
+                      <strong class="title">자료유형</strong>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-1">
+                          <label for="ox-filter6-1">전체</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-2">
+                          <label for="ox-filter6-2">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-3">
+                          <label for="ox-filter6-3">교사용 교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-4">
+                          <label for="ox-filter6-4">지도서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-5">
+                          <label for="ox-filter6-5">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-6">
+                          <label for="ox-filter6-6">교사용 교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-7">
+                          <label for="ox-filter6-7">지도서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-8">
+                          <label for="ox-filter6-8">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-9">
+                          <label for="ox-filter6-9">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-10">
+                          <label for="ox-filter6-10">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-11">
+                          <label for="ox-filter6-11">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-12">
+                          <label for="ox-filter6-12">교과서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter6-13">
+                          <label for="ox-filter6-13">교과서</label>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- //.filters -->
+                  </div>
+                  <div id="tab1-2" class="pane">
+                    <p>tab contents1-2</p>
+                    <p>
+                      crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                      through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                    </p>
+                  </div>
+                  <div id="tab1-3" class="pane">
+                    <p>tab contents1-3</p>
+                    <p>
+                      labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                      diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </pre>
+
+            <h3>버튼형</h3>
+            <div class="tabs fluid">
+              <div class="tab">
+                <ul>
+                  <li class="active"><a href="#tab2-1">N분할 탭1</a></li>
+                  <li><a href="#tab2-2">N분할 탭2</a></li>
+                  <li><a href="#tab2-3">N분할 탭3</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab2-1" class="pane">
+                  <div class="filters">
+                    <strong class="title">단원</strong>
+                    <div class="buttons type-rounded type-primary">
+                      <span>
+                        <input type="checkbox" name="checkbox1" id="filter7-1" checked="" />
+                        <label for="filter7-1">전체</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="checkbox1" id="filter7-2" />
+                        <label for="filter7-2">checkbox unchecked</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="checkbox1" id="filter7-3" />
+                        <label for="filter7-3">checkbox</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="filter7-4" />
+                        <label for="filter7-4">checkbox </label>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2-2" class="pane">
+                  <p>tab contents2-2</p>
+                  <p>
+                    crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                    through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                  </p>
+                </div>
+                <div id="tab2-3" class="pane">
+                  <p>tab contents2-3</p>
+                  <p>
+                    labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                    diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="tabs fluid">
+                <div class="tab">
+                  <ul>
+                    <li class="active"><a href="#tab2-1">N분할 탭1</a></li>
+                    <li><a href="#tab2-2">N분할 탭2</a></li>
+                    <li><a href="#tab2-3">N분할 탭3</a></li>
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab2-1" class="pane">
+                    <div class="filters buttons type-rounded type-primary">
+                      <span>
+                        <input type="checkbox" name="checkbox1" id="filter7-1" checked="">
+                        <label for="filter7-1">전체</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="checkbox1" id="filter7-2">
+                        <label for="filter7-2">checkbox unchecked</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="checkbox1" id="filter7-3">
+                        <label for="filter7-3">checkbox</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="filter7-4">
+                        <label for="filter7-4">checkbox </label>
+                      </span>
+                    </div>
+                  </div>
+                  <div id="tab2-2" class="pane">
+                    <p>tab contents2-2</p>
+                    <p>
+                      crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                      through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                    </p>
+                  </div>
+                  <div id="tab2-3" class="pane">
+                    <p>tab contents2-3</p>
+                    <p>
+                      labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                      diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </pre>
+
+            <h3>filter-wrap을 포함한 경우</h3>
+            <div class="tabs fluid">
+              <div class="tab">
+                <ul>
+                  <li class="active"><a href="#tab3-1">N분할 탭1</a></li>
+                  <li><a href="#tab3-2">N분할 탭2</a></li>
+                  <li><a href="#tab3-3">N분할 탭3</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab3-1" class="pane">
+                  <div class="filter-wrap">
+                    <a href="" class="banner">
+                      <img src="/assets/images/temp/img-filter-banner01.png" alt="쉽고 재미있게 즐기는 놀이체육 시간!" />
+                    </a>
+                    <div class="filters">
+                      <strong class="title">학년</strong>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter8-1" />
+                          <label for="ox-filter8-1">3학년</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter8-2" />
+                          <label for="ox-filter8-2">4학년</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter8-3" />
+                          <label for="ox-filter8-3">5학년</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter8-4" />
+                          <label for="ox-filter8-4">6학년</label>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- //.filters -->
+                    <div class="filters">
+                      <strong class="title">학기</strong>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter9-1" />
+                          <label for="ox-filter9-1">1학기</label>
+                        </span>
+                        <span class="ox">
+                          <input type="checkbox" id="ox-filter9-2" />
+                          <label for="ox-filter9-2">2학기</label>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- //.filters -->
+                    <div class="filter-items">
+                      <button type="button" class="button size-md">
+                        <svg>
+                          <title>아이콘 전체해제</title>
+                          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                        </svg>
+                        전체해제
+                      </button>
+                    </div>
+                    <!-- //.filter-items -->
+                  </div>
+                </div>
+                <div id="tab3-2" class="pane">
+                  <p>tab contents2-2</p>
+                  <p>
+                    crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                    through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                  </p>
+                </div>
+                <div id="tab3-3" class="pane">
+                  <p>tab contents2-3</p>
+                  <p>
+                    labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                    diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="tabs fluid">
+                <div class="tab">
+                  <ul>
+                    <li class="active"><a href="#tab3-1">N분할 탭1</a></li>
+                    <li><a href="#tab3-2">N분할 탭2</a></li>
+                    <li><a href="#tab3-3">N분할 탭3</a></li>
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab3-1" class="pane">
+                    <div class="filter-wrap">
+                      <a href="" class="banner">
+                        <img src="/assets/images/temp/img-filter-banner01.png" alt="쉽고 재미있게 즐기는 놀이체육 시간!">
+                      </a>
+                      <div class="filters">
+                        <strong class="title">학년</strong>
+                        <div class="ox-group">
+                          <span class="ox">
+                            <input type="checkbox" id="ox-filter8-1">
+                            <label for="ox-filter8-1">3학년</label>
+                          </span>
+                          <span class="ox">
+                            <input type="checkbox" id="ox-filter8-2">
+                            <label for="ox-filter8-2">4학년</label>
+                          </span>
+                          <span class="ox">
+                            <input type="checkbox" id="ox-filter8-3">
+                            <label for="ox-filter8-3">5학년</label>
+                          </span>
+                          <span class="ox">
+                            <input type="checkbox" id="ox-filter8-4">
+                            <label for="ox-filter8-4">6학년</label>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- //.filters -->
+                      <div class="filters">
+                        <strong class="title">학기</strong>
+                        <div class="ox-group">
+                          <span class="ox">
+                            <input type="checkbox" id="ox-filter9-1">
+                            <label for="ox-filter9-1">1학기</label>
+                          </span>
+                          <span class="ox">
+                            <input type="checkbox" id="ox-filter9-2">
+                            <label for="ox-filter9-2">2학기</label>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- //.filters -->
+                      <div class="filter-items">
+                        <button type="button" class="button size-md">
+                          <svg>
+                            <title>아이콘 전체해제</title>
+                            <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                          </svg>
+                          전체해제
+                        </button>
+                      </div>
+                      <!-- //.filter-items -->
+                    </div>
+                  </div>
+                  <div id="tab3-2" class="pane">
+                    <p>tab contents2-2</p>
+                    <p>
+                      crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                      through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                    </p>
+                  </div>
+                  <div id="tab3-3" class="pane">
+                    <p>tab contents2-3</p>
+                    <p>
+                      labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                      diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </pre>
+
+            <h3>필터 데이터 없는 경우</h3>
+            <div class="tabs fluid">
+              <div class="tab">
+                <ul>
+                  <li class="active"><a href="#tab4-1">기본 필터만 사용하는 경우</a></li>
+                  <li><a href="#tab4-2">필터영역에 배너 있는 경우</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab4-1" class="pane">
+                  <div class="filters">
+                    <div class="box-no-data">
+                      등록된 자료가 없습니다.
+                    </div>
+                  </div>
+                  
+                </div>
+                <div id="tab4-2" class="pane">
+                  <div class="filter-wrap">
+                    <a href="" class="banner">
+                      <img src="/assets/images/temp/img-filter-banner01.png" alt="쉽고 재미있게 즐기는 놀이체육 시간!" />
+                    </a>
+                    <div class="filters">
+                      <div class="box-no-data">
+                        등록된 자료가 없습니다.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <pre class='brush:html'>
+              <!-- .pane 하위로 들어갑니다. 데이터 없는 경우의 기준은 컨텐츠 영역을 .box-no-data 가 대체하면 됩니다. -->
+              <div class="filters">
+                <div class="box-no-data">
+                  등록된 자료가 없습니다.
+                </div>
+              </div>
+
+              <!-- 배너 있는 경우 하단 필터 영역만 교체 됩니다. -->
+              <div class="filter-wrap">
+                <a href="" class="banner">
+                  <img src="/assets/images/temp/img-filter-banner01.png" alt="쉽고 재미있게 즐기는 놀이체육 시간!" />
+                </a>
+                <div class="filters">
+                  <div class="box-no-data">
+                    등록된 자료가 없습니다.
+                  </div>
+                </div>
+              </div>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

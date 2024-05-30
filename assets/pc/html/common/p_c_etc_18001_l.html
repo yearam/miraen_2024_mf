@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="mteacher-shortcut">엠티처 바로 접속</button>
+        </main>
+      </div>
+    </div>
+    <div class="popup" id="mteacher-shortcut" init-show>
+      <div class="popup-container size-lg">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          <h3>엠티처 바로 접속</h3>
+        </div>
+        <div class="body">
+          <h3>엠티처를 가장 빠르게 이용하는 방법</h3>
+          <div class="box-light-gray box-shortcut">
+            <a href="#" class="ele" title="엠티처 초등 바로가기">엠티처 초등 바로가기</a>
+            <a href="#" class="mid" title="엠티처 중학 바로가기">엠티처 중학 바로가기</a>
+            <a href="#" class="high" title="엠티처 고등 바로가기">엠티처 고등 바로가기</a>
+          </div>
+          <div class="box-outlined-gray">
+            <h2>설치 방법</h2>
+            <p class="margin-top-sm">나의 학교급을 마우스로 선택 후, 아래와 같이 바탕화면으로 드래그해 주세요.</p>
+            <div class="margin-top-md"><img src="/assets/images/common/img-shortcut-example.png" alt="엠티처 바로가기 설치 방법"></div>
+          </div>
+        </div>
+        <div class="footer">
+          <button class="button size-xl type-primary" close-obj>닫기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

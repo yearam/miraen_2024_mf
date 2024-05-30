@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <link href="/assets/pc/css/pages/common/mchive.css" rel="stylesheet" />
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper mchive">
+      <header class="header util-menu header-mchive">
+        <div class="header-inner">
+          <div class="common-nav">
+            <a href="#" target="_blank">초등</a>
+            <a href="#" target="_blank">중학</a>
+            <a href="#" target="_blank">고등</a>
+            <div class="dropdown">
+              <button type="button"> 교과서 홍보관 <svg>
+                  <title>아이콘 화살표</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                </svg>
+              </button>
+              <div class="items">
+                <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <a href="#">엠티처 바로 접속</a>
+            <a href="#">즐겨찾기 추가</a>
+          </div>
+          <div class="common-nav">
+            <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                <title>아이콘 - icon-play-rounded</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="aiclass">AI Class</a>
+            <a href="#" target="_blank" class="mkaive">M카이브</a>
+            <a href="#">로그아웃</a>
+            <a href="#" target="_blank">마이페이지</a>
+            <a href="#" target="_blank">고객센터</a>
+            <a href="#" target="_blank">이벤트</a>
+          </div>
+        </div>
+        <div class="util-wrap">
+          <div class="inner">
+            <h1 class="util-logo">
+              <div class="dropdown">
+                <button type="button" class="button type-text">
+                  <img src="/assets/images/common/logo-m-chive.svg" alt="M카이브 로고" />
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중학"> 중학 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="고등"> 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </h1>
+            <!-- !NOTE : 검색어 입력시 active 붙이시면 리스트가 나옵니다.-->
+            <div class="search-box">
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요">
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search-lg"></use>
+                </svg>
+              </button>
+              <dl class="search-box-result">
+                <dt>
+                  <strong>최근 검색어</strong>
+                  <button type="button" class="button-delete-all">전체삭제</button>
+                </dt>
+                <dd>
+                  <ul class="search-result-list">
+                    <li>
+                      <a href="#"><strong class="semi">크리스마스</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">눈</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">한글용사아이야</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">초등학교</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">성탄절</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">크리스마스이브</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">산타할아버지는 없다</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">선물은 엄마 또는 아빠가 주는거야</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">2월 3일 대한민국VS호주전 누가 이길까요?</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#"><strong class="semi">초등학생은 축구볼까요?</strong></a>
+                      <span class="search-date">01.31</span>
+                      <button type="button" class="button-delete-search">
+                        <svg>
+                          <title>삭제</title>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="search-box-close">
+                    <button type="button" class="button-search-close">닫기</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <!-- !NOTE : 기존 .header-inner class를 .gnb-wrap로 변경하여 스타일 수정 하였습니다. -->
+          <div class="gnb-wrap">
+            <!-- !NOTE : 기존 .gnb-wrap class를 .gnb-inner로 변경하여 스타일 수정 하였습니다. -->
+            <div class="gnb-inner">
+              <!-- !NOTE : 
+        1차 오픈을 위해 필터링 스크립트 처리 되어 있습니다. 교과서 이미지명 데이터가 들어가면 필터링 처리 됩니다.  데이터 바인딩 후 data- 접두사 붙어 있는 attribute는 삭제하시면 됩니다.
+      -->
+              <nav class="gnb slides">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide active">
+                    <a href="#">전체</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">#내 자료실</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">#내 교과서</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">범교과 자료</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">1월 계기교육</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드1</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드2</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드3</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드4</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드5</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드6</a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#">추천키워드7</a>
+                  </li>
+                </ul>
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
+              </nav>
+              <!-- // gnb -->
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <aside id="snb">
+          <div class="snb-inner">
+            <div class="snb-header">
+              <strong>내 자료실</strong>
+            </div>
+            <ul class="subject-items">
+              <li class="active"><a href="#">북마크</a></li>
+              <li><a href="#">최근 본 자료</a></li>
+              <li><a href="#">나의 편집 영상</a></li>
+              <li><a href="#">나의 검색어</a></li>
+            </ul>
+          </div>
+        </aside>
+        <main id="main-contents">
+          <div class="mchive-head">
+            <div class="box-light-gray">
+              <div class="search-results">
+                <p class="text-xxl text-black"><strong class="text-primary">3학년</strong> 선생님들은 <strong class="text-primary">크리스마스</strong>를(을) 가장 많이 검색했어요</p>
+                <button class="button extra size-lg"><strong class="semi">검색 결과 보기</strong></button>
+              </div>
+            </div>
+          </div>
+          <div class="tabs fluid">
+            <div class="tab">
+              <ul>
+                <li class="active"><a href="#tab1">전체</a></li>
+                <li><a href="#tab2">동영상</a></li>
+                <li><a href="#tab3">이미지</a></li>
+                <li><a href="#tab4">음원</a></li>
+                <li><a href="#tab5">실감형</a></li>
+              </ul>
+            </div>
+            <div class="pane-wrap">
+              <div id="tab1" class="pane">
+                <div class="board-list no-top-line no-bottom-line">
+                  <div class="sort">
+                    <div class="sort-inner">
+                      <span class="total"> 총 <strong class="text-primary">1,350</strong>건</span>
+                    </div>
+                  </div>
+                  <p class="saw-day">오늘</p>
+                  <div class="board-items mchive-gallery">
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" checked="" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-union.svg" alt="union 아이콘" />
+                          <span class="time">실감형</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-all-grade"> [공통] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <i class="icon size-md">
+                          <img src="/assets/images/common/icon-saw-post.svg" alt="이미 본 컨텐츠 아이콘">
+                        </i>
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-elementary"> [초등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-music.svg" alt="music 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-middle"> [중학] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-img.svg" alt="img 아이콘" />
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-high"> [고등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" checked="" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-union.svg" alt="union 아이콘" />
+                          <span class="time">실감형</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-all-grade"> [공통] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <i class="icon size-md">
+                          <img src="/assets/images/common/icon-saw-post.svg" alt="이미 본 컨텐츠 아이콘">
+                        </i>
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-elementary"> [초등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-music.svg" alt="music 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-middle"> [중학] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-img.svg" alt="img 아이콘" />
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-high"> [고등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                  </div>
+                  <p class="saw-day">어제</p>
+                  <div class="board-items mchive-gallery">
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-union.svg" alt="union 아이콘" />
+                          <span class="time">실감형</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-all-grade"> [공통] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <i class="icon size-md">
+                          <img src="/assets/images/common/icon-saw-post.svg" alt="이미 본 컨텐츠 아이콘">
+                        </i>
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-elementary"> [초등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-music.svg" alt="music 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-middle"> [중학] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-img.svg" alt="img 아이콘" />
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-high"> [고등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-union.svg" alt="union 아이콘" />
+                          <span class="time">실감형</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-all-grade"> [공통] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <i class="icon size-md">
+                          <img src="/assets/images/common/icon-saw-post.svg" alt="이미 본 컨텐츠 아이콘">
+                        </i>
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-elementary"> [초등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-music.svg" alt="music 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-middle"> [중학] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-img.svg" alt="img 아이콘" />
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-high"> [고등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                  </div>
+                  <p class="saw-day">이전</p>
+                  <div class="board-items mchive-gallery">
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-union.svg" alt="union 아이콘" />
+                          <span class="time">실감형</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-all-grade"> [공통] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <i class="icon size-md">
+                          <img src="/assets/images/common/icon-saw-post.svg" alt="이미 본 컨텐츠 아이콘">
+                        </i>
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-elementary"> [초등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-music.svg" alt="music 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-middle"> [중학] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-img.svg" alt="img 아이콘" />
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-high"> [고등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-union.svg" alt="union 아이콘" />
+                          <span class="time">실감형</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-all-grade"> [공통] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <i class="icon size-md">
+                          <img src="/assets/images/common/icon-saw-post.svg" alt="이미 본 컨텐츠 아이콘">
+                        </i>
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-elementary"> [초등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-music.svg" alt="music 아이콘" />
+                          <span class="time">59:59</span>
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-middle"> [중학] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                    <div class="item">
+                      <div class="image-wrap">
+                        <img src="/assets/images/temp/img-board01.png" alt="" />
+                        <span class="ox ox-bookmark">
+                          <input type="checkbox" name="bookmark" id="bookmark" />
+                          <label for="bookmark"></label>
+                        </span>
+                        <div class="info-media">
+                          <img src="/assets/images/common/icon-img.svg" alt="img 아이콘" />
+                        </div>
+                        <div class="overlay">
+                          <ul class="divider-group type-brace">
+                            <li>1depth</li>
+                            <li>2depth</li>
+                            <li>3depth</li>
+                            <li>4depth</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="inner-wrap">
+                        <a href="#">
+                          <p class="title">
+                            <span class="grades text-high"> [고등] </span> 태조왕건은 어떻게 나라를 세우고 발해를 멸망시켰는가?
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //.item -->
+                  </div>
+                </div>
+                <div class="box-info">
+                  <p class="title"><strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong></p>
+                  <div class="body">
+                    <p> 엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br /> 소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다. </p>
+                    <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab2" class="pane">
+                <div class="board-list no-top-line">
+                  <div class="sort">
+                    <div class="sort-inner">
+                      <span class="total"> 총 <strong class="text-primary">1,350</strong>건</span>
+                    </div>
+                    <div class="sort-group extra">
+                      <select name="" id="" class="size-sm">
+                        <option value="one">최신순</option>
+                        <option value="two">조회순</option>
+                        <option value="three">가나다순</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="box-no-data"> 검색 조건에 맞는 컨텐츠가 없습니다. </div>
+                </div>
+                <div class="box-info">
+                  <p class="title"><strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong></p>
+                  <div class="body">
+                    <p> 엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br /> 소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다. </p>
+                    <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab3" class="pane">
+                <div class="board-list no-top-line">
+                  <div class="sort">
+                    <div class="sort-inner">
+                      <span class="total"> 총 <strong class="text-primary">1,350</strong>건</span>
+                    </div>
+                    <div class="sort-group extra">
+                      <select name="" id="" class="size-sm">
+                        <option value="one">최신순</option>
+                        <option value="two">조회순</option>
+                        <option value="three">가나다순</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="box-no-data"> 검색 조건에 맞는 컨텐츠가 없습니다. </div>
+                </div>
+                <div class="box-info">
+                  <p class="title"><strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong></p>
+                  <div class="body">
+                    <p> 엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br /> 소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다. </p>
+                    <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab4" class="pane">
+                <div class="board-list no-top-line">
+                  <div class="sort">
+                    <div class="sort-inner">
+                      <span class="total"> 총 <strong class="text-primary">1,350</strong>건</span>
+                    </div>
+                    <div class="sort-group extra">
+                      <select name="" id="" class="size-sm">
+                        <option value="one">최신순</option>
+                        <option value="two">조회순</option>
+                        <option value="three">가나다순</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="box-no-data"> 검색 조건에 맞는 컨텐츠가 없습니다. </div>
+                </div>
+                <div class="box-info">
+                  <p class="title"><strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong></p>
+                  <div class="body">
+                    <p> 엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br /> 소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다. </p>
+                    <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab5" class="pane">
+                <div class="board-list no-top-line">
+                  <div class="sort">
+                    <div class="sort-inner">
+                      <span class="total"> 총 <strong class="text-primary">1,350</strong>건</span>
+                    </div>
+                    <div class="sort-group extra">
+                      <select name="" id="" class="size-sm">
+                        <option value="one">최신순</option>
+                        <option value="two">조회순</option>
+                        <option value="three">가나다순</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="box-no-data"> 검색 조건에 맞는 컨텐츠가 없습니다. </div>
+                </div>
+                <div class="box-info">
+                  <p class="title"><strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong></p>
+                  <div class="body">
+                    <p> 엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br /> 소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다. </p>
+                    <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>

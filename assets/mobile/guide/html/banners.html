@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Banners</h1>
+          <section>
+            <h2>
+              default
+              <small>
+                Banner크기는 이미지 사이즈에 맞춰져 있으며<br />
+                이미지가 데이터로 제어 가능하도록 텍스트와 버튼은 position으로 위치가 잡혀 있습니다.
+              </small>
+            </h2>
+            <h3>.banners<small>.banner-inner는 임시 display:none 되어있습니다.</small></h3>
+            <div class="banners">
+              <a href="#">
+                <div class="banner-inner">
+                  <h2>
+                    애플 넘버스,<br />
+                    어떤 서비스일까요?
+                  </h2>
+                  <p class="desc">
+                    학생 공동 작업이 가능한 넘버스 앱을 <br />
+                    활용하여 새로운 학습 방식으로 <br />
+                    학생들의 참여도를 높여 보세요!
+                  </p>
+                  <button type="button" class="banner-button">자세히보기</button>
+                </div>
+                <img src="/assets/images/temp/img-elementary-header-banner.png" alt="배너01" style="width: 50%;" />
+              </a>
+            </div>
+            <pre class="brush:html">
+              <div class="banners">
+                <!-- !NOTE
+                  1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                  2. .banner-inner는 임시 display: none; 되어 있습니다.
+                -->
+                <a href="#">
+                  <div class="banner-inner">
+                    <h2>애플 넘버스,<br />
+                      어떤 서비스일까요?</h2>
+                    <p class="desc">학생 공동 작업이 가능한 넘버스 앱을 <br />
+                      활용하여 새로운 학습 방식으로 <br />
+                      학생들의 참여도를 높여 보세요!</p>
+                    <button type="button" class="banner-button">자세히보기</button>
+                  </div>
+                  <img src="/assets/images/temp/img-elementary-header-banner.png" alt="배너01" />
+                </a>
+              </div>
+            </pre>
+          </section>
+          <h2>slider-banner</h2>
+          <section class="slider-banner type-thick fluid">
+            <!-- !NOTE
+              1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+              2. .banner-inner, .button은 임시 display: none; 되어 있습니다.
+            -->
+            
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">
+                  <div class="banner-inner">
+                    <span class="text-xs">반려견과 함께하는</span>
+                    <h2>학교종이 댕댕댕</h2>
+                    <p class="desc">
+                      반려동물 에티켓을 배우셨다면,<br />
+                      참여 후기를 남겨 주세요!
+                    </p>
+                  </div>
+                  <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+                  <button type="button" class="button size-sm">후기 작성하기</button>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <div class="banner-inner">
+                    <span class="text-xs">반려견과 함께하는</span>
+                    <h2>학교종이 댕댕댕</h2>
+                    <p class="desc">
+                      반려동물 에티켓을 배우셨다면,<br />
+                      참여 후기를 남겨 주세요!
+                    </p>
+                  </div>
+                  <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+                  <button type="button" class="button size-sm">후기 작성하기</button>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <div class="banner-inner">
+                    <span class="text-xs">반려견과 함께하는</span>
+                    <h2>학교종이 댕댕댕</h2>
+                    <p class="desc">
+                      반려동물 에티켓을 배우셨다면,<br />
+                      참여 후기를 남겨 주세요!
+                    </p>
+                  </div>
+                  <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+                  <button type="button" class="button size-sm">후기 작성하기</button>
+                </a>
+              </div>
+            </div>
+          </section>
+          <pre class="brush:html">
+            <section class="slider-banner type-thick fluid">
+              <!-- !NOTE
+                1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                2. .banner-inner, .button은 임시 display: none; 되어 있습니다.
+              -->
+              
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <a href="#" class="swiper-slide">
+                    <div class="banner-inner">
+                      <span class="text-xs">반려견과 함께하는</span>
+                      <h2>학교종이 댕댕댕</h2>
+                      <p class="desc">
+                        반려동물 에티켓을 배우셨다면,<br />
+                        참여 후기를 남겨 주세요!
+                      </p>
+                    </div>
+                    <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+                    <button type="button" class="button size-sm">후기 작성하기</button>
+                  </a>
+                  <a href="#" class="swiper-slide">
+                    <div class="banner-inner">
+                      <span class="text-xs">반려견과 함께하는</span>
+                      <h2>학교종이 댕댕댕</h2>
+                      <p class="desc">
+                        반려동물 에티켓을 배우셨다면,<br />
+                        참여 후기를 남겨 주세요!
+                      </p>
+                    </div>
+                    <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+                    <button type="button" class="button size-sm">후기 작성하기</button>
+                  </a>
+                  <a href="#" class="swiper-slide">
+                    <div class="banner-inner">
+                      <span class="text-xs">반려견과 함께하는</span>
+                      <h2>학교종이 댕댕댕</h2>
+                      <p class="desc">
+                        반려동물 에티켓을 배우셨다면,<br />
+                        참여 후기를 남겨 주세요!
+                      </p>
+                    </div>
+                    <img src="/assets/images/temp/img-elementary-banner01@x2.png" alt="배너01" />
+                    <button type="button" class="button size-sm">후기 작성하기</button>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </pre>
+          <h2>type-vertical</h2>
+          <section class="banners type-thick fluid">
+            <!-- !NOTE
+              1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+              2. .banner-inner는 임시 display: none; 되어 있습니다.
+            -->
+            <a href="#">
+              <div class="banner-inner">
+                <h2>선생님 나눔 자료</h2>
+                <p class="desc"> 교과, 창의적 체험활동 및 학급 운영에<br> 필요한 자료를 함께 나누어요! </p>
+              </div>
+              <img src="/assets/images/temp/img-elementary-banner03@x2.png" alt="배너01">
+            </a>
+            <a href="#">
+              <div class="banner-inner">
+                <h2>선생님 나눔 자료</h2>
+                <p class="desc"> 교과, 창의적 체험활동 및 학급 운영에<br> 필요한 자료를 함께 나누어요! </p>
+              </div>
+              <img src="/assets/images/temp/img-elementary-banner04@x2.png" alt="배너01">
+            </a>
+          </section>
+          <pre class="brush:html">
+            <section class="banners type-thick fluid">
+              <!-- !NOTE
+                1. 배너 이미지는 데이터로 제어 가능하도록 .banner-inner의 내용이 imag태그 위에 position absolute로 노출 됩니다.
+                2. .banner-inner는 임시 display: none; 되어 있습니다.
+              -->
+              <a href="#">
+                <div class="banner-inner">
+                  <h2>선생님 나눔 자료</h2>
+                  <p class="desc"> 교과, 창의적 체험활동 및 학급 운영에<br> 필요한 자료를 함께 나누어요! </p>
+                </div>
+                <img src="/assets/images/temp/img-elementary-banner03@x2.png" alt="배너01">
+              </a>
+              <a href="#">
+                <div class="banner-inner">
+                  <h2>선생님 나눔 자료</h2>
+                  <p class="desc"> 교과, 창의적 체험활동 및 학급 운영에<br> 필요한 자료를 함께 나누어요! </p>
+                </div>
+                <img src="/assets/images/temp/img-elementary-banner04@x2.png" alt="배너01">
+              </a>
+            </section>
+          </pre>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

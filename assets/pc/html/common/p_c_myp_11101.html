@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <header class="header-members">
+      <div class="inner">
+        <img src="/assets/images/common/logo-m-teacher-white.svg" alt="엠티처" />
+        <span class="logo-mirae-n">
+          <svg>
+            <title>mirae N</title>
+            <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+          </svg>
+        </span>
+      </div>
+    </header>
+    <div class="wrapper members">
+      <form action="submit" class="form agree-form size-wide">
+        <section class="mypage-section">
+          <h3>기본정보</h3>
+          <div class="table-items type-view">
+            <table>
+              <caption> 기본정보 </caption>
+              <colgroup>
+                <col style="width: 200px;">
+                <col style="width: 90%;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row" class="required">이름</th>
+                  <td class="text-black">홍길동</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">아이디or이메일</th>
+                  <td class="text-black">
+                    <!-- !NOTE 기본 아이디or이메일 입니다. --> test999 <!-- !NOTE 연결된 sns 아이디 노출 시입니다. class="display-hide" 제거시 sns 아이디 나타납니다. -->
+                    <div class="inline-wrap display-hide">
+                      <i class="icon">
+                        <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+                      </i> KA-123456789
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">비밀번호</th>
+                  <td>
+                    <!-- !NOTE class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+                    <fieldset>
+                      <input class="size-xl" type="search" title="비밀번호 입력란" name="" id="user-password" placeholder="영문, 숫자, 특수문자를 조합하여 8 ~12자의 비밀번호를 입력해 주세요" required="required" />
+                      <span class="caution">오류 메시지 나타납니다.</span>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">비밀번호 확인</th>
+                  <td>
+                    <!-- !NOTE class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+                    <fieldset>
+                      <input class="size-xl" type="search" title="비밀번호 확인 입력란" name="" id="user-password" placeholder="비밀번호를 입력해 주세요" required="required" />
+                      <span class="caution">오류 메시지 나타납니다.</span>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">생년월일</th>
+                  <td>
+                    <!-- !NOTE class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+                    <fieldset class="flag-error">
+                      <input class="size-xl" type="search" title="생년월일 확인 입력란" name="" id="user-password" placeholder="생년(4자)" required="required" />
+                      <select class="size-xl fluid" name="" id="" title="월 선택">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="1">12342423 2342342</option>
+                      </select>
+                      <select class="size-xl fluid" name="" id="" title="일 선택">
+                        <option value="1">31</option>
+                      </select>
+                      <span class="caution">오류 메시지 나타납니다.</span>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">휴대폰 번호</th>
+                  <td>
+                    <fieldset>
+                      <input class="size-xl" type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="&#39;-&#39;를 제외한 휴대폰 번호를 입력해 주세요" />
+                      <button type="button" class="button size-xl type-gray">인증요청</button>
+                      <!-- <span class="caution">오류 메시지 나타납니다.</span> -->
+                    </fieldset>
+                    <!-- !NOTE class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+                    <!-- <fieldset class="flag-error">
+                      <input class="size-xl" type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="인증번호를 입력해 주세요" />
+                      <button type="button" class="button size-xl type-gray">인증하기</button>
+                      <span class="caution type-float">오류 메시지 나타납니다.</span>
+                    </fieldset>
+                    <div class="message-info type-gray"><span class="text-error">MM</span>분 <span class="text-error">SS</span>초 이내에 인증번호를 입력해 주세요.</div> -->
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">본인확인 이메일</th>
+                  <td>
+                    <!-- !NOTE class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+                    <fieldset>
+                      <input class="size-xl" type="search" title="이메일 입력란" name="" id="user-email" placeholder="이메일을 입력해 주세요" value="test@naver.com" required="required" />
+                      <span class="caution">오류 메시지 나타납니다.</span>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">주소</th>
+                  <td>
+                    <fieldset>
+                      <input class="size-xl" type="search" title="우편번호 입력란" name="" id="" placeholder="우편번호" />
+                      <button type="button" class="button size-xl type-gray">주소검색</button>
+                    </fieldset>
+                    <fieldset class="type-vertical">
+                      <input class="size-xl" type="search" title="주소 입력란" name="" id="" placeholder="주소를 검색해 주세요" />
+                      <input class="size-xl" type="search" title="주소 입력란" name="" id="" placeholder="상세 주소를 입력해 주세요" />
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">추가 연락처</th>
+                  <td>
+                    <fieldset>
+                      <input class="size-xl" type="search" title="추가 연락처 입력란" name="" id="" placeholder="추가 연락처를 입력해 주세요" />
+                    </fieldset>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- <section class="mypage-section">
+          <h3>개인정보 유효 기간</h3>
+          <p class="desc">개인정보 유효기간 경과 이후 개인정보를 분리저장/관리 또는 파기합니다.</p>
+          <div class="box-gray ox-group">
+            <span class="ox">
+              <input type="radio" name="radio1" id="ox-radio1-1" checked="">
+              <label for="ox-radio1-1">1년(기본)</label>
+            </span>
+            <span class="ox">
+              <input type="radio" name="radio1" id="ox-radio1-2">
+              <label for="ox-radio1-2">3년</label>
+            </span>
+            <span class="ox">
+              <input type="radio" name="radio1" id="ox-radio1-3">
+              <label for="ox-radio1-3">5년</label>
+            </span>
+            <span class="ox">
+              <input type="radio" name="radio1" id="ox-radio1-4">
+              <label for="ox-radio1-4">10년</label>
+            </span>
+          </div>
+        </section> -->
+        <section class="mypage-section">
+          <h3>교사인증</h3>
+          <div class="tabs type-line type-outlined fluid">
+            <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+            <div class="tab">
+              <ul>
+                <li><a href="#tab1-1">교사회원</a></li>
+                <li><a href="#tab1-2">예비 교사 회원</a></li>
+                <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+              </ul>
+            </div>
+            <div class="pane-wrap">
+              <div id="tab1-1" class="pane">
+                <div class="box-gray">
+                  <h4>인증 방법 선택</h4>
+                  <p class="desc">교사 인증을 하지 않으시면, 엠티처 서비스 이용에 제한될 수 있습니다.</p>
+                  <div class="buttons type-row4 margin-top-md">
+                    <button class="block-button">
+                      <img src="/assets/images/common/icon-certify-key.svg" alt="키 인증" />
+                      <strong class="text-black">GPKI/EPKI 인증</strong>
+                      <span class="text-xs"> 보안 설치 및 GPKI/EPKI 인증 절차 후 회원가입을 진행할 수 있습니다. </span>
+                    </button>
+                    <button class="block-button">
+                      <img src="/assets/images/common/icon-certify-mail.svg" alt="메일 인증" />
+                      <strong class="text-black">공직자 메일 인증</strong>
+                      <span class="text-xs"> 공직자 메일로 발송한 인증코드로 교사를 인증 할 수 있습니다. </span>
+                    </button>
+                    <button class="block-button">
+                      <img src="/assets/images/common/icon-certify-code.svg" alt="코드 인증" />
+                      <strong class="text-black">코드 인증</strong>
+                      <span class="text-xs"> 인증코드를 받은 선생님은 코드인증으로 간편하게 교사인증을 할 수 있습니다. </span>
+                    </button>
+                    <button class="block-button">
+                      <img src="/assets/images/common/icon-certify-document.svg" alt="서류 인증" />
+                      <strong class="text-black">서류 인증</strong>
+                      <span class="text-xs"> 교사 확인용 첨부 서류를 담당자가 확인하여 48시간 이내 승인해 드립니다. (주말/공휴일 제외) </span>
+                    </button>
+                  </div>
+                </div>
+                <!-- !NOTE 02-02 학교정보 테이블 위치 변경 , 버튼 컬러 변경 type-primary > type-secondary -->
+                <h3 class="margin-top-xxxl">학교정보</h3>
+                <div class="table-items type-view">
+                  <table>
+                    <caption> 학교정보 </caption>
+                    <colgroup>
+                      <col style="width: 200px;">
+                      <col style="width: 90%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">학교명</th>
+                        <td>
+                          <div class="block-wrap">
+                            <button type="button" class="button size-md type-secondary">학교명검색</button>
+                            <!-- !NOTE 학교명 추가 시입니다. class="display-hide" 제거시 학교명이 나타납니다. -->
+                            <p class="display-hide"><strong class="text-primary">[초등학교] [서울특별시]</strong> 서울장안초등학교</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 추가정보 기본 입니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td class="text-black"> 학교 검색 후 입력해 주세요. </td>
+                      </tr>
+                      <!-- !NOTE 초등학교 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <div class="grid-wrap">
+                            <span class="ox">
+                              <input type="radio" id="ox-radio-1" checked="">
+                              <label for="ox-radio-1">담임</label>
+                            </span>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="선택">선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <span class="ox">
+                              <input type="radio" id="ox-radio-2">
+                              <label for="ox-radio-2">전담과목</label>
+                            </span>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="선택">선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <span class="ox">
+                              <input type="radio" id="ox-radio-3">
+                              <label for="ox-radio-3">직위</label>
+                            </span>
+                            <select name="" id="" class="size-xl fluid">
+                              <option value="선택">선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 중/고 학교일 경우 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <fieldset>
+                            <select name="" id="" class="size-xl">
+                              <option value="과목 선택">과목 선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <select name="" id="" class="size-xl">
+                              <option value="교과서 선택">교과서 선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <button type="button" class="button size-xl type-line">추가</button>
+                          </fieldset>
+                          <div class="buttons margin-top-md">
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">추가정보 노출 추가정보 노출</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 기타 학교 초등학교일 경우 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <fieldset>
+                            <select name="" id="" class="size-xl">
+                              <option value="초등학교">초등학교</option>
+                            </select>
+                            <select name="" id="" class="size-xl">
+                              <option value="담임">담임</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <select name="" id="" class="size-xl">
+                              <option value="직위">직위</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                          </fieldset>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 기타 학교 중/고 학교일 경우 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <fieldset>
+                            <select name="" id="" class="size-xl">
+                              <option value="중학교">중학교</option>
+                              <option value="고등학교">고등학교</option>
+                            </select>
+                            <select name="" id="" class="size-xl">
+                              <option value="과목선택">과목선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <select name="" id="" class="size-xl">
+                              <option value="교과서 선택">교과서 선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <button type="button" class="button size-xl type-line">추가</button>
+                          </fieldset>
+                          <div class="buttons margin-top-md">
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">추가정보 노출 추가정보 노출</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 새로 작성된 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <p class="text-primary">※ 선생님께서 담당하시는 교육과정에 맞는 서비스 제공을 위해 학교급을 선택해주세요.</p>
+                          <div class="tabs type-sub fluid">
+                            <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+                            <div class="tab">
+                              <ul>
+                                <li><a href="#tab4-1">초등학교</a></li>
+                                <li class="active"><a href="#tab4-2">중학교</a></li>
+                                <li><a href="#tab4-3">고등학교</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                              </ul>
+                            </div>
+                            <div class="pane-wrap">
+                              <div id="tab4-1" class="pane">
+                                <!-- tab content -->
+                                <div class="forms">
+                                  <div class="ox-group">
+                                    <span class="ox">
+                                      <input type="radio" id="ox-radio-1" checked="">
+                                      <label for="ox-radio-1">담임</label>
+                                    </span>
+                                    <span class="ox">
+                                      <input type="radio" id="ox-radio-2">
+                                      <label for="ox-radio-2">전담과목</label>
+                                    </span>
+                                    <span class="ox">
+                                      <input type="radio" id="ox-radio-3">
+                                      <label for="ox-radio-3">직위</label>
+                                    </span>
+                                  </div>
+                                  <fieldset>
+                                    <select name="" id="" class="size-xl">
+                                      <option value="선택">선택</option>
+                                      <option value="two">옵션값 Second</option>
+                                      <option value="three">옵션값 Third</option>
+                                    </select>
+                                  </fieldset>
+                                </div>
+                              </div>
+                              <div id="tab4-2" class="pane">
+                                <!-- tab content -->
+                                <div class="form-group gutter-md">
+                                  <div class="forms">
+                                    <fieldset>
+                                      <select name="" id="" class="size-xl">
+                                        <option value="과목 선택">과목 선택</option>
+                                        <option value="two">옵션값 Second</option>
+                                        <option value="three">옵션값 Third</option>
+                                      </select>
+                                    </fieldset>
+                                  </div>
+                                  <div class="forms">
+                                    <fieldset>
+                                      <select name="" id="" class="size-xl">
+                                        <option value="교과서 선택">교과서 선택</option>
+                                        <option value="two">옵션값 Second</option>
+                                        <option value="three">옵션값 Third</option>
+                                      </select>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                                <button type="button" class="button size-xl type-line fluid margin-top-sm">
+                                  <svg>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                                  </svg> 교과서 추가 </button>
+                                <div class="buttons margin-top-md">
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">추가정보 노출 추가정보 노출</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                </div>
+                              </div>
+                              <div id="tab4-3" class="pane">
+                                <!-- tab content -->
+                                <div class="form-group gutter-md">
+                                  <div class="forms">
+                                    <fieldset>
+                                      <select name="" id="" class="size-xl">
+                                        <option value="과목 선택">과목 선택</option>
+                                        <option value="two">옵션값 Second</option>
+                                        <option value="three">옵션값 Third</option>
+                                      </select>
+                                    </fieldset>
+                                  </div>
+                                  <div class="forms">
+                                    <fieldset>
+                                      <select name="" id="" class="size-xl">
+                                        <option value="교과서 선택">교과서 선택</option>
+                                        <option value="two">옵션값 Second</option>
+                                        <option value="three">옵션값 Third</option>
+                                      </select>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                                <button type="button" class="button size-xl type-line fluid margin-top-sm">
+                                  <svg>
+                                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                                  </svg> 교과서 추가 </button>
+                                <div class="buttons margin-top-md">
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">추가정보 노출 추가정보 노출</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                  <span class="alert-button type-primary-light">
+                                    <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                                    <button type="button" class="icon-button" title="삭제">
+                                      <svg>
+                                        <title>버튼 제거</title>
+                                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                      </svg>
+                                    </button>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div id="tab1-2" class="pane">
+                <div class="box-gray">
+                  <!-- !NOTE 02-02 기획변경으로 추가건 -->
+                  <div class="limited-area">
+                    <!-- !NOTE case 1/3 인증 전 -->
+                    <div class="file-upload size-xl">
+                      <div class="inner-form">
+                        <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                        <button class="button type-gray">삭제</button>
+                      </div>
+                      <label for="file" class="button type-line">
+                        <svg>
+                          <title>아이콘 - icon-plus</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                        </svg>파일 선택 </label>
+                    </div>
+                    <!-- !NOTE case 2/3 인증 확인 중-->
+                    <hr class="margin-sm">
+                    <div class="block-wrap gutter-md">
+                      <strong class="badge fill-error size-sm type-round-box">인증 확인중</strong>
+                      <strong class="text-black">서울대학교 재학증명서.pdf</strong>
+                    </div>
+                    <hr class="margin-sm">
+                    <!-- !NOTE case 2/3 인증 완료 -->
+                    <hr class="margin-sm">
+                    <div class="block-wrap gutter-md">
+                      <strong class="badge fill-primary size-sm type-round-box">2024-01-30 인증완료</strong>
+                      <strong class="text-black">서울대학교 재학증명서.pdf</strong>
+                    </div>
+                    <hr class="margin-sm">
+                    <div class="margin-top-xl">
+                      <p class="text-black">※ 6개월 이내 발급 받은 재학증명서로 인증이 가능합니다.</p>
+                      <ul class="ul-dot size-md margin-top-md">
+                        <li>hwp, pdf, jpg 확장자 파일만 첨부하실 수 있습니다.</li>
+                        <li>서류 인증 후 48시간 이내 인증이 완료됩니다. (근무일 기준)</li>
+                        <li>인증 요청 후에는 파일을 수정할 수 없습니다.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- !NOTE 02-02 학교정보 테이블 위치 변경 , 버튼 컬러 변경 type-primary > type-secondary -->
+                <h3 class="margin-top-xxxl">학교정보</h3>
+                <div class="table-items type-view">
+                  <table>
+                    <caption> 학교정보 </caption>
+                    <colgroup>
+                      <col style="width: 200px;">
+                      <col style="width: 90%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">학교명</th>
+                        <td>
+                          <div class="block-wrap">
+                            <button type="button" class="button size-md type-secondary">학교명검색</button>
+                            <!-- !NOTE 학교명 추가 시입니다. class="display-hide" 제거시 학교명이 나타납니다. -->
+                            <p class="display-hide"><strong class="text-primary">[초등학교] [서울특별시]</strong> 서울장안초등학교</p>
+                          </div>
+                          <ul class="divider-group margin-top-lg">
+                            <li><strong class="text-primary">서울대학교</strong></li>
+                            <li><strong class="text-primary">서울시</strong></li>
+                            <li class="text-black">서울대학교</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 추가정보 기본 입니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <input type="text" class="size-xl fluid" placeholder="사범대의 경우 학과를 입력해 주세요.">
+                          <p class="text-black text-right margin-top-sm">※ 사범대 재학중인 회원만 학과를 입력해 주세요</p>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 초등학교 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <div class="grid-wrap">
+                            <span class="ox">
+                              <input type="radio" id="ox-radio-1" checked="">
+                              <label for="ox-radio-1">담임</label>
+                            </span>
+                            <select name="" id="">
+                              <option value="선택">선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <span class="ox">
+                              <input type="radio" id="ox-radio-2">
+                              <label for="ox-radio-2">전담과목</label>
+                            </span>
+                            <select name="" id="">
+                              <option value="선택">선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <span class="ox">
+                              <input type="radio" id="ox-radio-3">
+                              <label for="ox-radio-3">직위</label>
+                            </span>
+                            <select name="" id="">
+                              <option value="선택">선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 중/고 학교일 경우 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <div class="inline-wrap gutter-md">
+                            <select name="" id="">
+                              <option value="과목 선택">과목 선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <select name="" id="">
+                              <option value="교과서 선택">교과서 선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <button type="button" class="button size-md type-line">추가</button>
+                          </div>
+                          <div class="buttons margin-top-md">
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">추가정보 노출 추가정보 노출</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 기타 학교 초등학교일 경우 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <div class="inline-wrap gutter-md">
+                            <select name="" id="">
+                              <option value="초등학교">초등학교</option>
+                            </select>
+                            <select name="" id="">
+                              <option value="담임">담임</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <select name="" id="">
+                              <option value="직위">직위</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- !NOTE 기타 학교 중/고 학교일 경우 추가 정보 입력 입니다. class="display-hide" 제거시 추가정보가 나타납니다. -->
+                      <tr>
+                        <th scope="row">추가정보</th>
+                        <td>
+                          <div class="inline-wrap gutter-md">
+                            <select name="" id="">
+                              <option value="중학교">중학교</option>
+                              <option value="고등학교">고등학교</option>
+                            </select>
+                            <select name="" id="">
+                              <option value="과목선택">과목선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <select name="" id="">
+                              <option value="교과서 선택">교과서 선택</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                            <button type="button" class="button size-md type-line">추가</button>
+                          </div>
+                          <div class="buttons margin-top-md">
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">추가정보 노출 추가정보 노출</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                            <span class="alert-button type-primary-light">
+                              <a href="#">국어 / 국어1-1(신유식 외9명/2015개정)</a>
+                              <button type="button" class="icon-button" title="삭제">
+                                <svg>
+                                  <title>버튼 제거</title>
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                </svg>
+                              </button>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mypage-section">
+          <div class="split-container">
+            <div class="section-inner">
+              <h3>프로모션 알림 정보 수신</h3>
+              <p class="desc">신간도서, 이벤트 등의 안내를 받을 수 있습니다.</p>
+            </div>
+            <span class="ox">
+              <input type="checkbox" id="ox1">
+              <label for="ox1" class="text-black">전체동의</label>
+            </span>
+          </div>
+          <div class="table-items no-hover">
+            <table>
+              <caption> 테이블 제목을 넣어주세요. </caption>
+              <colgroup>
+                <col style="width: 70%;">
+                <col span="2" style="width: 15%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">문자</th>
+                  <th scope="col">이메일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="no-bg">미래엔 에듀</th>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox2" checked="">
+                      <label for="ox2"></label>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox3">
+                      <label for="ox3"></label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="no-bg">미래엔 인쇄서비스</th>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox4">
+                      <label for="ox4"></label>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox5" checked="">
+                      <label for="ox5"></label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="no-bg">도서몰</th>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox6">
+                      <label for="ox6"></label>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox7">
+                      <label for="ox7"></label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="no-bg">엠티처</th>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox8">
+                      <label for="ox8"></label>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox9">
+                      <label for="ox9"></label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="no-bg">웰리미 한글 진단 검사</th>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox10">
+                      <label for="ox10"></label>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="ox">
+                      <input type="checkbox" id="ox11">
+                      <label for="ox11"></label>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div class="page-buttons">
+          <button type="button" class="button size-xl type-dark">취소</button>
+          <button type="submit" class="button size-xl type-primary">정보수정</button>
+        </div>
+      </form>
+      <footer>MIRAEN CO., LTD. ALL Right Reserved</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <body>
+    <div class="wrapper members">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="">
+        <h2>회원가입</h2>
+        <button class="icon-button back" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+          </svg>
+        </button>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <div class="signin-chapter">
+          <div class="chapter">1</div>
+          <div class="chapter">2</div>
+          <div class="chapter active">3</div>
+          <div class="chapter">4</div>
+        </div>
+        <form action="submit">
+          <section>
+            <div class="forms required">
+              <label for="user-name">이름</label>
+              <!--  class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <fieldset>
+                <input class="size-xl" type="search" title="이름 입력란" name="" id="user-name" placeholder="이름을 입력해 주세요" required="required" />
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-id">아이디 또는 이메일</label>
+              <!--  class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <fieldset>
+                <input class="size-xl" type="search" title="아이디 입력란" name="" id="user-id" placeholder="최소 6자 이상의 아이디 또는 이메일 정보를 입력해 주세요" required="required" />
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <div class="label-with-extra">
+                <label for="user-email" class="no-margin">이메일</label>
+                <p>본인 확인 이메일 정보를 입력해 주세요.</p>
+              </div>
+              <!--  class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <fieldset>
+                <input class="size-xl" type="search" title="이메일 입력란" name="" id="user-email" placeholder="이메일을 입력해 주세요" required="required" />
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-password">비밀번호</label>
+              <!--  class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <fieldset>
+                <input class="size-xl" type="search" title="비밀번호 입력란" name="" id="user-password" placeholder="영문, 숫자, 특수문자를 조합하여 8 ~12자의 비밀번호를 입력해 주세요" required="required" />
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-password">비밀번호 확인</label>
+              <!--  class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <fieldset>
+                <input class="size-xl" type="search" title="비밀번호 확인 입력란" name="" id="user-password" placeholder="비밀번호를 입력해 주세요" required="required" />
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms required">
+              <label for="user-password">생년월일</label>
+              <!--  class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <!-- !NOTE : 생년 입력 에러 시 월,일 선택 에러메세지가 노출되게 해주세요 -->
+              <fieldset class="flag-error">
+                <input class="size-xl fluid" type="search" title="생년월일 확인 입력란" name="" id="user-password" placeholder="생년(4자)" required="required" />
+                <select class="size-xl" name="" id="" title="월 선택">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="1">12342423 2342342</option>
+                </select>
+                <select class="size-xl" name="" id="" title="일 선택">
+                  <option value="1">31</option>
+                </select>
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms">
+              <label for="user-pnum">휴대폰 번호</label>
+              <fieldset>
+                <input class="size-xl" type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="&#39;-&#39;를 제외한 휴대폰 번호를 입력해 주세요" />
+                <button type="button" class="button size-xl type-gray">인증요청</button>
+                <!-- <span class="caution">오류 메시지 나타납니다.</span> -->
+              </fieldset>
+            </div>
+          </section>
+          <section class="type-thick">
+            <h3 class="section-title">교사 인증</h3>
+            <p class="desc"> 교사 인증을 하지 않으시면, 엠티처 서비스 이용에 제한될 수 있습니다. </p>
+            <div class="tabs type-line type-outlined fluid">
+              <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+              <div class="tab">
+                <ul>
+                  <li><a href="#tab1-1">교사회원</a></li>
+                  <li><a href="#tab1-2">예비 교사 회원</a></li>
+                  <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab1-1" class="pane">
+                  <div class="box-gray">
+                    <div class="buttons type-row2">
+                      <button class="block-button active">
+                        <span class="badge type-round-box fill-primary">
+                          <i class="icon">
+                            <svg>
+                              <title>아이콘 - icon-check-half-rounded</title>
+                              <use href="/assets/images/svg-sprite-solid.svg#icon-check-half-rounded"></use>
+                            </svg>
+                          </i> 인증 </span>
+                        <img src="/assets/images/common/icon-certify-key.svg" alt="키 인증" />
+                        <strong>GPKI/EPKI 인증</strong>
+                        <p> 보안 설치 및 GPKI/EPKI 인증 절차 후 회원가입을 진행할 수 있습니다. </p>
+                        <p class="text-primary">※ PC에서만 인증 가능</p>
+                      </button>
+                      <button class="block-button">
+                        <span class="badge type-round-box fill-primary">
+                          <svg>
+                            <title>아이콘 - icon-check-half-rounded</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-check-half-rounded"></use>
+                          </svg> 인증 </span>
+                        <img src="/assets/images/common/icon-certify-mail.svg" alt="메일 인증" />
+                        <strong>공직자 메일 인증</strong>
+                        <p> 공직자 메일로 발송한 인증코드로 교사를 인증 할 수 있습니다. </p>
+                      </button>
+                      <button class="block-button">
+                        <span class="badge type-round-box fill-primary">
+                          <svg>
+                            <title>아이콘 - icon-check-half-rounded</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-check-half-rounded"></use>
+                          </svg> 인증 </span>
+                        <img src="/assets/images/common/icon-certify-code.svg" alt="코드 인증" />
+                        <strong>코드 인증</strong>
+                        <p> 인증코드를 받은 선생님은 코드인증으로 간편하게 교사인증을 할 수 있습니다. </p>
+                      </button>
+                      <button class="block-button">
+                        <span class="badge type-round-box fill-primary">
+                          <svg>
+                            <title>아이콘 - icon-check-half-rounded</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-check-half-rounded"></use>
+                          </svg> 인증 </span>
+                        <img src="/assets/images/common/icon-certify-document.svg" alt="서류 인증" />
+                        <strong>서류 인증</strong>
+                        <p> 교사 확인용 첨부 서류를 담당자가 확인하여 48시간 이내 승인해 드립니다. (주말/공휴일 제외) </p>
+                      </button>
+                    </div>
+                    <div class="box-white-round">
+                      <span class="ox">
+                        <input type="checkbox" id="ox2" />
+                        <label for="ox2" class="text-black">인증 나중에 하기</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="search-school">
+                    <h3>학교 정보</h3>
+                    <button class="button size-xl type-secondary fluid">
+                      <svg>
+                        <title>아이콘 - icon-search</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                      </svg> 학교 검색 </button>
+                    <div class="roundbox-outlined fill-lightest">
+                      <span class="badge type-rounded float-right">등록대기중</span>
+                      <ul class="divider-group text-black">
+                        <li>서울 원촌초등학교</li>
+                        <li>초등학교</li>
+                      </ul>
+                      <p class="address">서울특별시 서초구 사평대로 45길 26</p>
+                      <hr />
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="radio" name="ox-radio1" id="ox-radio1-1" checked="" />
+                          <label for="ox-radio1-1">담임</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" name="ox-radio1" id="ox-radio1-2" />
+                          <label for="ox-radio1-2">과목</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" name="ox-radio1" id="ox-radio1-3" />
+                          <label for="ox-radio1-3">직위</label>
+                        </span>
+                      </div>
+                      <select class="size-xl fluid" name="" id="" class="fluid">
+                        <option value="one">선택</option>
+                        <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                        <option value="three">옵션값 Third</option>
+                      </select>
+                      <p class="desc-primary"> ※ 선생님께서 담당하시는 교육과정에 맞는 서비스 제공을 위해 학교급을 선택해주세요. </p>
+                      <div class="tabs">
+                        <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+                        <div class="tab">
+                          <ul>
+                            <li><a href="#tab-sub1-1">초등학교</a></li>
+                            <li><a href="#tab-sub1-2">중학교</a></li>
+                            <li><a href="#tab-sub1-3">고등학교</a></li>
+                            <!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                          </ul>
+                        </div>
+                        <div class="pane-wrap">
+                          <div id="tab-sub1-1" class="pane box-line">
+                            <div class="ox-group">
+                              <span class="ox">
+                                <input type="checkbox" id="ox-check1-1" checked="" />
+                                <label for="ox-check1-1">담임</label>
+                              </span>
+                              <span class="ox">
+                                <input type="checkbox" id="ox-check1-2" checked="" />
+                                <label for="ox-check1-2">과목</label>
+                              </span>
+                              <span class="ox">
+                                <input type="checkbox" id="ox-check1-3" />
+                                <label for="ox-check1-3">직위</label>
+                              </span>
+                            </div>
+                            <select class="size-xl fluid" name="" id="" class="fluid">
+                              <option value="one">선택</option>
+                              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                          </div>
+                          <div id="tab-sub1-2" class="pane box-line">
+                            <div class="forms">
+                              <fieldset class="type-vertical">
+                                <select class="size-xl fluid" name="" id="" class="fluid">
+                                  <option value="one">선택</option>
+                                  <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                                  <option value="three">옵션값 Third</option>
+                                </select>
+                                <select class="size-xl fluid" name="" id="" class="fluid">
+                                  <option value="one">선택</option>
+                                  <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                                  <option value="three">옵션값 Third</option>
+                                </select>
+                                <button class="button type-line size-xl fluid">
+                                  <svg>
+                                    <title>아이콘 - icon-plus</title>
+                                    <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                                  </svg>교과서 추가 </button>
+                              </fieldset>
+                              <div class="buttons">
+                                <span class="alert-button type-primary-light">
+                                  <a href="#">과목명 (저자명)</a>
+                                  <button type="button" class="icon-button" title="삭제">
+                                    <svg>
+                                      <title>버튼 제거</title>
+                                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                    </svg>
+                                  </button>
+                                </span>
+                                <span class="alert-button type-primary-light">
+                                  <a href="#">과목명 (저자명)</a>
+                                  <button type="button" class="icon-button" title="삭제">
+                                    <svg>
+                                      <title>버튼 제거</title>
+                                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                    </svg>
+                                  </button>
+                                </span>
+                                <span class="alert-button type-primary-light">
+                                  <a href="#">인문학적 감성과 도덕적 상상력 (정창우)</a>
+                                  <button type="button" class="icon-button" title="삭제">
+                                    <svg>
+                                      <title>버튼 제거</title>
+                                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                    </svg>
+                                  </button>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="tab-sub1-3" class="pane box-line">
+                            <div class="forms">
+                              <fieldset class="type-vertical">
+                                <select class="size-xl fluid" name="" id="" class="fluid">
+                                  <option value="one">선택</option>
+                                  <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                                  <option value="three">옵션값 Third</option>
+                                </select>
+                                <select class="size-xl fluid" name="" id="" class="fluid">
+                                  <option value="one">선택</option>
+                                  <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                                  <option value="three">옵션값 Third</option>
+                                </select>
+                                <button class="button type-line size-xl fluid">
+                                  <svg>
+                                    <title>아이콘 - icon-plus</title>
+                                    <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                                  </svg>교과서 추가 </button>
+                              </fieldset>
+                              <div class="buttons">
+                                <span class="alert-button type-primary-light">
+                                  <a href="#">과목명 (저자명)</a>
+                                  <button type="button" class="icon-button" title="삭제">
+                                    <svg>
+                                      <title>버튼 제거</title>
+                                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                    </svg>
+                                  </button>
+                                </span>
+                                <span class="alert-button type-primary-light">
+                                  <a href="#">과목명 (저자명)</a>
+                                  <button type="button" class="icon-button" title="삭제">
+                                    <svg>
+                                      <title>버튼 제거</title>
+                                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                    </svg>
+                                  </button>
+                                </span>
+                                <span class="alert-button type-primary-light">
+                                  <a href="#">인문학적 감성과 도덕적 상상력 (정창우)</a>
+                                  <button type="button" class="icon-button" title="삭제">
+                                    <svg>
+                                      <title>버튼 제거</title>
+                                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                                    </svg>
+                                  </button>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab1-2" class="pane">
+                  <div class="box-gray">
+                    <div class="file-upload size-xl type-vertical">
+                      <div class="inner-form">
+                        <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                        <button class="button type-gray">삭제</button>
+                      </div>
+                      <label for="file" class="button type-line">
+                        <svg>
+                          <title>아이콘 - icon-plus</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                        </svg>파일 선택 </label>
+                    </div>
+                    <div class="desc-wrap">
+                      <p class="desc">※ 6개월 이내 발급 받은 재학증명서로 인증이 가능합니다.</p>
+                      <ul class="ul-dot size-md">
+                        <li>hwp, pdf, jpg 확장자 파일만 첨부하실 수 있습니다.</li>
+                        <li>서류 인증 후 48시간 이내 인증이 완료됩니다. (근무일 기준)</li>
+                        <li>인증 요청 후에는 파일을 수정할 수 없습니다.</li>
+                      </ul>
+                    </div>
+                    <div class="box-white-round">
+                      <span class="ox">
+                        <input type="checkbox" id="ox2" />
+                        <label for="ox2" class="text-black">인증 나중에 하기</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="search-school">
+                    <h3>재학 중 학교 정보</h3>
+                    <button class="button size-xl type-secondary fluid">
+                      <svg>
+                        <title>아이콘 - icon-search</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                      </svg> 학교 검색 </button>
+                    <div class="roundbox-outlined fill-lightest">
+                      <span class="badge type-rounded float-right">등록대기중</span>
+                      <ul class="divider-group text-black">
+                        <li>서울 원촌초등학교</li>
+                        <li>초등학교</li>
+                      </ul>
+                      <p class="address">서울특별시 서초구 사평대로 45길 26</p>
+                      <hr />
+                      <div class="forms">
+                        <label for="schoolCode" class="desc-primary">※ 사범대 재학중인 회원만 학과를 입력해 주세요</label>
+                        <input class="size-xl fluid" type="search" name="" id="schoolCode" placeholder="사범대의 경우 학과를 입력해 주세요." />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-buttons">
+            <button type="submit" class="button size-md fluid type-dark">이전 단계</button>
+            <button type="submit" class="button size-md fluid type-primary">다음 단계</button>
+          </section>
+        </form>
+      </main>
+      <footer class="login-footer">
+        <svg>
+          <title>mirae N</title>
+          <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+        </svg>
+        <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

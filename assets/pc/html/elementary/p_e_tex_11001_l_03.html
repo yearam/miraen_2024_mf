@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <link href="/assets/pc/css/pages/elementary/period-guide.css" rel="stylesheet" />
+  <body class="theme-elementary">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="period-guide-layer">교과 차시창 가이드</button>
+        </main>
+      </div>
+    </div>
+    <div class="period-guide-layer" id="period-guide-layer" no-dimd init-show>
+      <div class="period-guide">
+        <div class="guide-content">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close-white" />
+            </svg>
+          </button>
+          <div class="helper helper-01">
+            <h3>기본/저장 목차 보기</h3>
+            <p>해당 차시의 기본/저장 학습 목차를 확인할 수 있습니다.</p>
+            <p class="">저장된 목차가 있는 경우에만 노출됩니다.</p>
+          </div>
+          <div class="helper helper-02">
+            <h3>차시 이동</h3>
+            <p>다른 학년/과목의 차시나,<br />이전/다음 차시로 이동합니다.</p>
+          </div>
+          <div class="helper helper-03">
+            <h3>보충 자료 추가</h3>
+            <p>원하는 보충자료를 학습목차(완료)로<br />드래그하여 추가할 수 있습니다.</p>
+          </div>
+          <div class="helper helper-04">
+            <h3>학습 목차 편집</h3>
+            <p>상하로 드래그하여 순서를 변경하거나 삭제 버튼으로 자료를 삭제할 수 있습니다.<br />자료명을 클릭하면 해당 위치부터 수업을 시작할 수 있습니다.</p>
+          </div>
+          <div class="helper helper-05">
+            <h3>내 링크 등록</h3>
+            <p>수업에 활용할 자료의 링크를<br />직접 등록 할 수 있습니다.</p>
+          </div>
+          <div class="helper helper-06">
+            <h3>수업 시작 / 수업공유 하기</h3>
+            <p><span class="text-tertiary">수업시작하기</span> : 학습 목차의 첫 번째 자료부터 수업을 시작합니다.</p>
+            <p><span class="text-tertiary">수업공유하기</span> : 수업을 AI클래스를 통해 학생에게 공유합니다.</p>
+          </div>
+          <div class="helper helper-07">
+            <h3>특화자료</h3>
+            <p>교과별 수업에 이용 가능한<br />엠티처 특화 서비스를 안내합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

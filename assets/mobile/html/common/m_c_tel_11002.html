@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper members">
+      <main id="main-contents">
+        <button class="button" target-obj="join-review">독자후기 참여하기</button>
+      </main>
+    </div>
+    <div class="popup-sheet" id="join-review" init-show>
+      <div class="popup-container">
+        <button class="icon-button close-button" close-obj="">
+          <svg>
+            <title>닫기 아이콘</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">독자후기 참여하기</div>
+        <form action="submit">
+          <div class="body fluid">
+            <section class="size-lg no-border">
+              <div class="box-outlined-info fill-lightest no-margin">
+                <strong class="semi text-primary">남겨주신 독자후기가 매거진에 반영될 경우<br />커피상품권등 소정의 선물을 보내드리오니,개인정보를 확인해 주세요.</strong>
+                <ul class="ul-dot text-xs margin-top-md">
+                  <li>상품은 기프티콘으로 발송됩니다. 개인정보를 잘못 기재한 경우 재발송 되지 않으니 주의해 주세요!</li>
+                  <li>회원 정보 잘못 기재 시 발송이 지연될 수 있으며, 이미 발송된 경우 재발송되지 않습니다.</li>
+                  <li>아래 항목은 모두 필수 입력 항목입니다.</li>
+                  <li>수정된 정보는 [마이페이지]에도 동일하게 수정됩니다.</li>
+                </ul>
+              </div>
+              <div class="forms margin-top-lg required">
+                <label for="user-name">이름</label>
+                <fieldset>
+                  <input class="size-xl" type="search" title="이름 입력란" name="" id="user-name" value="홍길동" disabled="disabled" required="" />
+                </fieldset>
+              </div>
+              <div class="forms required">
+                <label for="user-pnum">휴대폰 번호</label>
+                <fieldset>
+                  <input class="size-xl" type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="휴대폰 번호를 입력해 주세요" required="" />
+                  <button type="button" class="button size-xl type-gray">인증요청</button>
+                  <span class="caution">오류 메시지 나타납니다.</span>
+                </fieldset>
+              </div>
+              <div class="forms required">
+                <label for="user-school-name">학교명</label>
+                <fieldset>
+                  <input class="size-xl" type="search" title="학교명 입력란" name="" id="user-school-name" placeholder="학교명을 입력해 주세요" required="" />
+                  <button type="button" class="button size-xl type-gray">학교변경</button>
+                  <span class="caution">오류 메시지 나타납니다.</span>
+                </fieldset>
+              </div>
+            </section>
+          </div>
+          <div class="footer">
+            <button type="submit" class="button size-md fluid type-dark">취소</button>
+            <button type="submit" class="button size-md fluid type-primary">신청하기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

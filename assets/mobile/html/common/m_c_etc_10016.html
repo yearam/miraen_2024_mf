@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="gate-wrapper">
+      <div class="gate-container">
+        <!-- <header class="gate-header">
+          <h1>
+            <svg>
+              <title>mirae N</title>
+              <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+            </svg>
+          </h1>
+          <h2>선생님을 잇다, 엠티처</h2>
+        </header> -->
+        <main>
+          <a href="#" class="origin-mteacher size-md"> 기존 엠티처에서 보기 <svg>
+              <title>아이콘 - icon-play-rounded</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+            </svg>
+          </a>
+          <div class="buttons">
+            <button type="button" class="gate-button type-elementary">
+              <img src="/assets/images/common/icon-arrow-rounded-elementary.svg" alt="화살표 초등">
+              <span class="logo">
+                <img src="/assets/images/common/logo-elementary.svg" alt="엠티처 초등 로고">
+              </span>
+            </button>
+            <button type="button" class="gate-button type-middle">
+              <img src="/assets/images/common/icon-arrow-rounded-middle.svg" alt="화살표 중학">
+              <span class="logo">
+                <img src="/assets/images/common/logo-middle.svg" alt="엠티처 중학 로고">
+              </span>
+            </button>
+            <button type="button" class="gate-button type-high">
+              <img src="/assets/images/common/icon-arrow-rounded-high.svg" alt="화살표 고등">
+              <span class="logo">
+                <img src="/assets/images/common/logo-high.svg" alt="엠티처 고등 로고">
+              </span>
+            </button>
+          </div>
+          <div class="gate-slider">
+            <div class="swiper visual-slider">
+              <div class="swiper-wrapper">
+                <!-- !NOTE 관리자단에서 새창 or 현재창으로 페이지 이동 선택한다고 합니다. 임시로 새창으로 작업하였습니다. -->
+                <a href="#" class="item swiper-slide" target="_blank">
+                  <img src="/assets/images/temp/img-etc-banner@x2.png" alt="혁신 수업 ‘N’">
+                </a>
+                <a href="#" class="item swiper-slide" target="_blank">
+                  <img src="/assets/images/temp/img-etc-banner@x2.png" alt="혁신 수업 ‘N’">
+                </a>
+                <a href="#" class="item swiper-slide" target="_blank">
+                  <img src="/assets/images/temp/img-etc-banner@x2.png" alt="혁신 수업 ‘N’">
+                </a>
+              </div>
+              <div class="controller">
+                <div class="controls">
+                  <button class="slider-button button-player pause" title="슬라이드 자동재생 정지">
+                    <svg>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pause"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="indicator">
+                  <span class="this-index">3</span>
+                  <span class="last-index">3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <a href="#" class="extra-button">
+              <div>
+                <img src="/assets/images/common/icon-aiclass-vertical.svg" alt="AI Class">
+              </div> AI Class
+            </a>
+            <a href="#" class="extra-button">
+              <div>
+                <img src="/assets/images/common/icon-mchive-black.svg" alt="M카이브">
+              </div> M카이브
+            </a>
+            <a href="#" class="extra-button">
+              <div>
+                <img src="/assets/images/common/icon-teacher-live.svg" alt="티처 LIVE">
+              </div> 티처 LIVE
+            </a>
+            <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" class="extra-button">
+              <div>
+                <img src="/assets/images/common/icon-text-book.svg" alt="미래엔 교과서">
+              </div> 미래엔 교과서
+            </a>
+            <a href="https://ele.m-teacher.co.kr/award/mjmirae10.mrn" class="extra-button">
+              <div>
+                <img src="/assets/images/common/icon-education.svg" alt="미래교육상">
+              </div> 미래교육상
+            </a>
+          </div>
+        </main>
+        <footer class="gate-footer">
+          <div class="customer">
+            <ul class="divider-group">
+              <li><a href="#">엠티처 고객센터</a></li>
+              <li><a href="#">엠티처 이벤트</a></li>
+            </ul>
+            <p>엠티처 고객센터 : 1800-8890</p>
+          </div>
+          <div class="logo-wrap">
+            <span class="logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </span>
+            <p>CO., LTD. ALL Right Reserved</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

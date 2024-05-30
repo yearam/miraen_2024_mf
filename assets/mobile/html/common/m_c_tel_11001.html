@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>티처 LIVE</h2>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">LIVE 강연</a>
+            <a href="#">혁신수업N</a>
+            <a href="#">쌤OTT</a>
+            <a href="#">콘텐츠</a>
+            <a href="#">자료나눔</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="tabs">
+          <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+          <div class="tab">
+            <ul>
+              <li class="active"><a href="#tab1">초등</a></li>
+              <li><a href="#tab2">중고등</a></li>
+            </ul>
+          </div>
+          <div class="pane-wrap">
+            <div id="tab1" class="pane">
+              <div class="webzine-title">
+                <div class="info-wrap">
+                  <div class="image-wrap type-rounded">
+                    <img src="/assets/images/temp/img-tel-magazine01.png" alt="혁신수업 N">
+                  </div>
+                  <div class="text-wrap">
+                    <p class="sub-title">선생님을 위한 수업 혁신 전문지</p>
+                    <h2>디지털 대전환 [2023 가을 Vol. 19]</h2>
+                    <ul class="ul-dot">
+                      <li>인터뷰 : 서울계성초등학교 조기성 선생님</li>
+                      <li>디지털 활용 수업 사례공유 이벤트</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="buttons fluid">
+                  <button type="button" class="button size-md type-secondary">
+                    <svg>
+                      <title>책 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-book"></use>
+                    </svg> E-Book 보기 </button>
+                  <button type="button" class="button size-md type-third">
+                    <svg>
+                      <title>다운로드 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                    </svg> PDF 다운로드 </button>
+                </div>
+              </div>
+              <div class="webzine-wrap type-thick">
+                <h3>INTERVIEW</h3>
+                <div class="youtube-box">
+                  <!-- !NOTE : 비디오 영역 입니다. -->
+                  <iframe src="https://www.youtube.com/embed/DYT5qw5S83A?si=_SRMOLBA-PEZ6QEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-box">
+                  <video src="/assets/images/temp/video.mp4" controls="" preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0"></video>
+                </div>
+              </div>
+              <div class="banners">
+                <a href="#" target="_blank">
+                  <img src="/assets/images/temp/img-tel-banner02@x2.png" alt="선생님 자료 나눔">
+                </a>
+              </div>
+              <div class="webzine-wrap">
+                <h3>WEBZINE</h3>
+                <ul class="webzine-list">
+                  <li>
+                    <a href="#">
+                      <img src="/assets/images/temp/img-tel-webzine01.png" alt="학습의 화룡점정을 꿈꾸는 메타버스 교육 이야기">
+                    </a>
+                    <button type="button" class="like size-sm toggle-this active">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/assets/images/temp/img-tel-webzine02.png" alt="메타버스, 교육의 변화 중심에 서다">
+                    </a>
+                    <button type="button" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/assets/images/temp/img-tel-webzine03.png" alt="메타버스 수업으로 교실을 확장하다">
+                    </a>
+                    <button type="button" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/assets/images/temp/img-tel-webzine04.png" alt="재미있는 수업놀이로 새 학기 학급 세우기">
+                    </a>
+                    <button type="button" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="/assets/images/temp/img-tel-webzine05.png" alt="교육용 메타버스 플랫폼의 이모저모">
+                    </a>
+                    <button type="button" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/assets/images/temp/img-tel-webzine06.png" alt="가상세계에서 소통하는 우리들의 세상">
+                    </a>
+                    <button type="button" class="like size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="webzine-wrap type-thick">
+                <h3>참여광장</h3>
+                <p>『혁신수업N』은 선생님의 마음과 通합니다. 매거진 속 인상적이었던 내용, 취재를 바라는 인물과 이슈 등을 작성해 주세요.</p>
+                <p class="text-primary margin-top-sm">* 참여광장에 남겨 주신 독자후기와 제안, 추천이 매거진에 반영될 경우 커피상품권 등 소정의 선물을 보내 드립니다.</p>
+              </div>
+              <form action="">
+                <div class="tabs">
+                  <div class="tab">
+                    <ul>
+                      <li class="active"><a href="#tab1-1">독자후기</a></li>
+                      <li><a href="#tab1-2">커버 피플 추천</a></li>
+                      <li><a href="#tab1-3">기사 제안하기</a></li>
+                    </ul>
+                  </div>
+                  <div class="pane-wrap">
+                    <div id="tab1-1" class="pane">
+                      <div class="webzine-wrap">
+                        <div class="forms select-wrap">
+                          <label for="webzine">웹진</label>
+                          <fieldset>
+                            <select name="" id="webzine" class="size-xl" title="웹진">
+                              <option value="Vol.19">2023 가을 ㅣ Vol.19</option>
+                              <option value="one">옵션값 First</option>
+                              <option value="two">옵션값 Second</option>
+                              <option value="three">옵션값 Third</option>
+                            </select>
+                          </fieldset>
+                        </div>
+                        <div class="forms write-review">
+                          <label for="review">후기 작성</label>
+                          <fieldset class="write-review">
+                            <textarea name="" id="review" cols="500" rows="6" placeholder="『혁신수업N』을 보고 인상적이었던 내용이나 칭찬하고 싶은 점, 아쉬웠던 점을 작성해주세요.&#13;&#10;이곳에 올려주신 후기는 웹진 관리자만 볼 수 있습니다.&#13;&#10;자유롭게 선생님의 의견과 후기를 보내주세요.&#13;&#10;참여광장 후기와 혁신수업N이벤트는 중복 당첨이 가능합니다."></textarea>
+                          </fieldset>
+                        </div>
+                        <span class="ox margin-top-md">
+                          <input type="checkbox" id="agree-1">
+                          <label for="agree-1"><strong class="text-black semi"><span class="text-primary">(필수) </span>개인정보 수집 및 활용 동의</strong></label>
+                        </span>
+                        <div class="page-buttons fluid margin-top-md">
+                          <button type="submit" class="button size-xl type-primary">저장</button>
+                        </div>
+                        <div class="review-slider">
+                          <h5>독자후기</h5>
+                          <div class="slides">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <ul class="divider-group">
+                                  <li><strong class="text-md">심정우 선생님</strong></li>
+                                  <li>마산고운초등학교</li>
+                                </ul>
+                                <p class="scrollbar-styled"> ‘아침운동으로 학교를 바꾸다’ 기사를 보고 아래와 같이 소감을 적어 봅니다. 매우 인상적인 교육입니다. 저도 6학년을 하면서 15년전에 비슷한 활동을 학급에서 한 적이 있어요. 30분 정도 일찍 와서 운동장을 걷거나 뛰고, 점심시간 이후에 잠깐 산책을 하는 정도로 운동을 하게 했지요.<br /><br />부산에 있는 기장 초등학교는 제가 했던 것 보다 훨씬 더 심화되고 다양한 접근의 아침 운동을 전개한 것 같아요. 맨발로 걷거나 뛰는 아침 운동, 줄넘기 등을 함께하는 심화 운동 등 여러 각도에서 하는 접근은 학생들에게 더욱 흥미로운 활동이 될 것 같네요. 좋은 기사를 만들어 주신 편집자와 기자님께 감사드리며 더욱 더 번창하시길 바랍니다. 현직 교사에게 많은 도움이 되는 미래앤의 혁신수업N매거진에게 거듭 감사드립니다. </p>
+                              </div>
+                              <div class="swiper-slide">
+                                <ul class="divider-group">
+                                  <li><strong class="text-md">심정우 선생님</strong></li>
+                                  <li>마산고운초등학교</li>
+                                </ul>
+                                <p class="scrollbar-styled"> ‘아침운동으로 학교를 바꾸다’ 기사를 보고 아래와 같이 소감을 적어 봅니다. 매우 인상적인 교육입니다. 저도 6학년을 하면서 15년전에 비슷한 활동을 학급에서 한 적이 있어요. 30분 정도 일찍 와서 운동장을 걷거나 뛰고, 점심시간 이후에 잠깐 산책을 하는 정도로 운동을 하게 했지요.<br /><br />부산에 있는 기장 초등학교는 제가 했던 것 보다 훨씬 더 심화되고 다양한 접근의 아침 운동을 전개한 것 같아요. 맨발로 걷거나 뛰는 아침 운동, 줄넘기 등을 함께하는 심화 운동 등 여러 각도에서 하는 접근은 학생들에게 더욱 흥미로운 활동이 될 것 같네요. 좋은 기사를 만들어 주신 편집자와 기자님께 감사드리며 더욱 더 번창하시길 바랍니다. 현직 교사에게 많은 도움이 되는 미래앤의 혁신수업N매거진에게 거듭 감사드립니다. </p>
+                              </div>
+                              <div class="swiper-slide">
+                                <ul class="divider-group">
+                                  <li><strong class="text-md">심정우 선생님</strong></li>
+                                  <li>마산고운초등학교</li>
+                                </ul>
+                                <p class="scrollbar-styled"> ‘아침운동으로 학교를 바꾸다’ 기사를 보고 아래와 같이 소감을 적어 봅니다. 매우 인상적인 교육입니다. 저도 6학년을 하면서 15년전에 비슷한 활동을 학급에서 한 적이 있어요. 30분 정도 일찍 와서 운동장을 걷거나 뛰고, 점심시간 이후에 잠깐 산책을 하는 정도로 운동을 하게 했지요.<br /><br />부산에 있는 기장 초등학교는 제가 했던 것 보다 훨씬 더 심화되고 다양한 접근의 아침 운동을 전개한 것 같아요. 맨발로 걷거나 뛰는 아침 운동, 줄넘기 등을 함께하는 심화 운동 등 여러 각도에서 하는 접근은 학생들에게 더욱 흥미로운 활동이 될 것 같네요. 좋은 기사를 만들어 주신 편집자와 기자님께 감사드리며 더욱 더 번창하시길 바랍니다. 현직 교사에게 많은 도움이 되는 미래앤의 혁신수업N매거진에게 거듭 감사드립니다. </p>
+                              </div>
+                              <div class="swiper-slide">
+                                <ul class="divider-group">
+                                  <li><strong class="text-md">심정우 선생님</strong></li>
+                                  <li>마산고운초등학교</li>
+                                </ul>
+                                <p class="scrollbar-styled"> ‘아침운동으로 학교를 바꾸다’ 기사를 보고 아래와 같이 소감을 적어 봅니다. 매우 인상적인 교육입니다. 저도 6학년을 하면서 15년전에 비슷한 활동을 학급에서 한 적이 있어요. 30분 정도 일찍 와서 운동장을 걷거나 뛰고, 점심시간 이후에 잠깐 산책을 하는 정도로 운동을 하게 했지요.<br /><br />부산에 있는 기장 초등학교는 제가 했던 것 보다 훨씬 더 심화되고 다양한 접근의 아침 운동을 전개한 것 같아요. 맨발로 걷거나 뛰는 아침 운동, 줄넘기 등을 함께하는 심화 운동 등 여러 각도에서 하는 접근은 학생들에게 더욱 흥미로운 활동이 될 것 같네요. 좋은 기사를 만들어 주신 편집자와 기자님께 감사드리며 더욱 더 번창하시길 바랍니다. 현직 교사에게 많은 도움이 되는 미래앤의 혁신수업N매거진에게 거듭 감사드립니다. </p>
+                              </div>
+                            </div>
+                            <button type="button" class="swiper-button-prev"></button>
+                            <button type="button" class="swiper-button-next"></button>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tab1-2" class="pane">
+                      <div class="webzine-wrap">
+                        <div class="forms">
+                          <label for="recommend-name">추천하는 분 이름</label>
+                          <fieldset>
+                            <input type="search" title="추천하는 분 이름 입력란" name="" id="recommend-name" placeholder="이름을 작성 주세요.">
+                          </fieldset>
+                        </div>
+                        <div class="forms">
+                          <label for="recommend-pnum">추천하는 분 연락처</label>
+                          <fieldset>
+                            <input type="search" title="추천하는 분 연락처 입력란" name="" id="recommend-pnum" placeholder="연락처는 숫자만 입력해 주세요.">
+                          </fieldset>
+                        </div>
+                        <div class="forms write-review">
+                          <label for="recommend-reason">추천 이유</label>
+                          <fieldset class="write-review">
+                            <textarea name="" id="recommend-reason" cols="500" rows="3" placeholder="교사로서의 철학이 남다른 선생님을 알고 계시다면 추천해 주세요. 추천하는 분의 이름, 추천하는 분의 연락처 그리고 추천하는 이유를 꼭 써주세요."></textarea>
+                          </fieldset>
+                        </div>
+                        <span class="ox margin-top-md">
+                          <input type="checkbox" id="agree-2">
+                          <label for="agree-2"><strong class="text-black semi"><span class="text-primary">(필수) </span>개인정보 수집 및 활용 동의</strong></label>
+                        </span>
+                        <div class="page-buttons fluid margin-top-md">
+                          <button type="submit" class="button size-xl type-primary">저장</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tab1-3" class="pane">
+                      <div class="webzine-wrap">
+                        <div class="forms write-review">
+                          <label for="proposal">추천 이유</label>
+                          <fieldset class="write-review">
+                            <textarea name="" id="proposal" cols="500" rows="2" placeholder="나누고 싶은 혁신 수업이나 집중 취재를 바라는 교육이슈가 있다면 작성해주세요."></textarea>
+                          </fieldset>
+                        </div>
+                        <div class="page-buttons fluid margin-top-md">
+                          <button type="submit" class="button size-xl type-primary">저장</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="webzine-wrap type-thick">
+                <h3>연도별 웹진 목록</h3>
+                <section class="tabs type-rounded">
+                  <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+                  <div class="tab">
+                    <ul>
+                      <li class="active"><a href="#tab-rounded-1">2023년</a></li>
+                      <li><a href="#tab-rounded-2">2022년</a></li>
+                      <li><a href="#tab-rounded-3">2021년</a></li>
+                      <li><a href="#tab-rounded-4">2020년</a></li>
+                      <li><a href="#tab-rounded-5">2019년</a></li>
+                    </ul>
+                  </div>
+                  <div class="pane-wrap">
+                    <div id="tab-rounded-1" class="pane">
+                      <div class="webzine-items">
+                        <a href="#" class="item">
+                          <div class="image-wrap type-rounded">
+                            <img src="/assets/images/temp/img-tel-magazine01.png" alt="">
+                          </div>
+                          <div class="badges">
+                            <span class="badge size-md type-round-box	text-secondary">2023 봄</span>
+                            <span class="badge size-md type-round-box	text-green">Vol.17</span>
+                          </div>
+                          <p class="item-title">메타버스</p>
+                        </a>
+                        <a href="#" class="item">
+                          <div class="image-wrap type-rounded">
+                            <img src="/assets/images/temp/img-tel-magazine02.png" alt="">
+                          </div>
+                          <div class="badges">
+                            <span class="badge size-md type-round-box	text-secondary">2023 여름</span>
+                            <span class="badge size-md type-round-box	text-green">Vol.18</span>
+                          </div>
+                          <p class="item-title">인성교육</p>
+                        </a>
+                        <a href="#" class="item">
+                          <div class="image-wrap type-rounded">
+                            <img src="/assets/images/temp/img-tel-magazine03.png" alt="">
+                          </div>
+                          <div class="badges">
+                            <span class="badge size-md type-round-box	text-secondary">2023 가을</span>
+                            <span class="badge size-md type-round-box	text-green">Vol.19</span>
+                          </div>
+                          <p class="item-title">디지털 대전환</p>
+                        </a>
+                        <a href="#" class="item">
+                          <div class="image-wrap type-rounded">
+                            <img src="/assets/images/temp/img-tel-magazine04.png" alt="">
+                          </div>
+                          <div class="badges">
+                            <span class="badge size-md type-round-box	text-secondary">2023 겨울</span>
+                            <span class="badge size-md type-round-box	text-green">Vol.20</span>
+                          </div>
+                          <p class="item-title">교육연극</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div id="tab2" class="pane">
+              <div class="box-no-data">
+                <p class="title">등록된 정보가 없습니다.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

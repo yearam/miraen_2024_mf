@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>	
+	<TITLE>인증서 관리프로그램 설치 &lt; 한국전자인증</TITLE>
+	<style type="text/css">
+		body,div,ul,ol,li,nav,section,footer{margin: 0px auto; padding: 0px; font-family :NanumGothic, dotum, Georgia, serif,san-serif; font-size : 14px;color: #333;}
+		h1,h2,h3,h4,h5{ margin: 0px; padding: 0px; font-weight: normal;}
+		ul,li{ list-style: none; }
+		a{text-decoration:none;border-radius:3px;}
+		
+		#setup{ width: 95%; height: 100%; margin: auto;}
+		#next{ padding: 10px}
+		#faq{ float: right; margin-bottom: 10px }
+		#list{ list-style: none; line-height: 150%;margin-top: 10px}
+		#bottom{ width: 100%; background: #f7f8f9;padding:15px 10px; position: fixed; bottom:100px;}
+		#floating{ position: fixed; bottom:7px; right:10px; z-index:1;}
+		
+		/* button */
+		#btn{ text-align: center; margin-top:15px}
+		#btn li{ display: inline; }
+		.bl_s a{height: 32px; line-height: 32px; border: 1px solid #244997; background: #2e58a6;color: #fff; padding: 7px 20px; margin:5px;font-size : 12px;}
+		.bl_s a:hover{color: #2e58a6; background: #fff}
+		.wh a{height: 32px; line-height: 32px;  background: #fff;color: #2e58a6;border: 1px solid #244997; padding: 10px 10px;font-size : 18px;}
+		.wh a:hover{ background: #2e58a6;color: #fff;}
+		.wh_s a{line-height: 32px;  background: #fff;color: #2e58a6;border: 1px solid #244997;  padding: 6px 18px; font-size : 12px;}
+		.wh_s a:hover{ background: #2e58a6;color: #fff;}
+		.rd_s a:hover{  background: #fff;color: #e55c5c;border: 1px solid #e55c5c; }
+		.rd_s a{ background: #e55c5c;color: #fff; line-height: 32px; padding: 7px 20px; font-size : 12px;}
+		.setting{ color: red;}
+		.flor{ float: right;  }
+		#setup{ max-width: 720px; }
+	
+		/* table */
+		table {border-collapse: collapse; width:100%; border-top: 2px solid #5e6062; border-left: 2px solid #fff; border-right: 2px solid #fff;margin-top:10px;text-align:center}
+		td{ background: #f7f8f9; font-size: 12px;}
+		td a{ color: #333; }
+		td a:hover{ color: #28459d}
+		th, td {padding:8px; border: 1px solid #dee0e2; line-height: 140%; }
+		td li{ text-align: left;line-height: 180%; background: url('../images/icon_dot.gif') no-repeat 0 8px; padding-left: 8px;margin-left: 5px}
+	</style>
+	<script type="text/javascript" src="../unisignweb/framework/json2.js" ></script>
+</head>
+<body>
+	<div style="text-align:center;height:130px; width:100%; background:#0066bb;margin-bottom:5px"><img src="http://www.unisign.co.kr/kbstarQR/images/module.jpg" alt="" /></div>
+
+	<div style="text-align:center"><img src="./CCimages/startstop.gif" class="loading" alt=""  /></div>
+
+	<div id="setup">
+		<ul id="list">
+			<li>•고객님의 안전한 인증서비스 이용을 위하여 인증프로그램을 설치합니다.</li>
+			<li>•설치를 마치신 후 반드시 새로고침 버튼을 눌러 주시기 바랍니다.</li>
+			<li>•설치화면이 반복적으로 나올 경우 웹브라우저를 종료하고 다시 접속하세요.</li>
+		</ul>
+		<br><br>
+		<div id="faq">
+			<span style="margin-right: 15px;">문의전화 1566-0566</span>
+			<span id="btn" class="wh_s"><a href="https://www.crosscert.com/support" target="_blank">원격지원서비스</a></span>&nbsp;&nbsp;
+			<span id="btn" class="rd_s"><a href="https://board.crosscert.com/faq/uni/9" target="_blank">프로그램 설치 오류 해결하기</a></span>
+		</div>
+		<table>
+			<tr>
+				<th width="150px">프로그램명</th>
+				<th>기능</th>
+				<th width="150px">설치상태</th>
+			</tr>
+			<tr>
+				<td>UniSign<br>(<span id="usversion"></span>)</td>
+				<td> 인증서 이동을 위한 응용프로그램입니다. </td>
+				<td id="install_2">
+					<span class="setting" id="install_txt_2">설치확인중</span><br />
+					<span id="btn_inatall_2" class="wh_s" style="display: none;"><a href="#" onclick="fnDownload()">설치하기</a></span>
+					<span id="btn_run_2" class="wh_s" style="display: none;"><a href="#" onclick="fnRun(2)">실행하기</a></span>
+				</td>
+			</tr>
+		</table>
+		<iframe id="us-downloadURL" name="us-downloadURL" width="0" height="0" style="display: none;"></iframe>
+		<div id="next" style="text-align: center">
+			설치가 완료되면 자동으로 페이지를 이동합니다.<br>
+			<!-- <span id="btn" class="bl_s"><a href="javascript:;" onclick="self.close()" style="font-weight: bold;">확인</a></span> -->
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+var isInstall = {unicrs:false};
+// OS
+var OSTYPE_WIN32					= "Win32";
+var OSTYPE_WIN64					= "Win64";
+var OSTYPE_MAC						= "MAC";
+var OSTYPE_UNKNOWN                  = "Unknown";
+var Client_OS						= "Win32";
+
+if(navigator.platform == OSTYPE_WIN32) Client_OS = OSTYPE_WIN32;
+else if(navigator.platform == OSTYPE_WIN64) Client_OS = OSTYPE_WIN64;
+else if(navigator.platform == "MacIntel") Client_OS = OSTYPE_MAC;
+else Client_OS = OSTYPE_UNKNOWN;
+
+var unicrsVersion = "2.0.17.0";
+var unicrsSrc = "https://127.0.0.1:15018";
+
+var mainPageUrl = "../unicrsv3_sample/kbstarQR/multi_pc_mobile_proc.html";
+var chkCount = 0;
+var versionCheck = false;
+var cntAdd = 0;
+var sessionID = Math.random();
+
+document.getElementById("usversion").innerHTML = "v" + unicrsVersion;
+
+function parseInt(s){
+	var ver = s.replace(/\./g, "");
+	return ver * 1;
+}
+
+function fnInstallOKGo(){
+	if(isInstall.unicrs == true){
+		setTimeout(function(){document.location.href = mainPageUrl;}, 500);
+	}else{
+		setTimeout(fnInstallOKGo, 1000);
+	}
+}
+
+function statusMsg(txt, cnt){
+	if(cnt) for(var i=0; i<cnt; i++) txt += ".";
+	document.getElementById("next").innerHTML = txt;
+}
+
+function isUpdate(ver, lst){
+	var l = lst.split('.'), 
+	c = ver.split('.'), len = Math.max(l.length, c.length);
+	
+	len = 3;
+	
+	for(var i=0; i<len; i++){
+		if ((l[i] && !c[i] && parseInt(l[i]) > 0) || (parseInt(l[i]) > parseInt(c[i]))) {
+            return true;
+        } else if ((c[i] && !l[i] && parseInt(c[i]) > 0) || (parseInt(l[i]) < parseInt(c[i]))) {
+        	return false;
+        }
+	}
+	return false;
+}
+
+function fnDownload(){
+	if(Client_OS == OSTYPE_MAC)
+		document.getElementById("us-downloadURL").src = './UniSignCRSV3Setup.pkg';	
+	else
+		document.getElementById("us-downloadURL").src = './UniSignCRSV3Setup.exe';	
+}
+
+
+function fnUniCRSCall(){
+	document.getElementById("hsmiframe").src = "UNICRSV3:///";
+	setTimeout(function(){document.location.reload();}, 5000);
+}
+var UniCRSVersion = function(data){
+	var currentVersion = data.split(":")[1];
+	var cv = currentVersion.split('.');
+	currentVersion = cv[0] + '.' + cv[1] + '.' + cv[2] + '.0';
+	
+	
+	if( isUpdate(currentVersion, unicrsVersion) ){
+		document.getElementById("install_txt_2").innerHTML = '업데이트 필요('+currentVersion+')';
+		document.getElementById("btn_inatall_2").style.display = 'block';
+		setTimeout(UniCRSChecker, 2000);
+	}else{
+		isInstall.unicrs = true;
+		document.getElementById("install_txt_2").innerHTML = '설치됨';
+		document.getElementById("btn_inatall_2").style.display = 'none';
+		statusMsg("인증서 이동 프로그램이 설치되었습니다");
+		fnInstallOKGo();
+	}
+}
+var count = 0;
+var UniCRSChecker = function(){
+	console.log(count++);
+	var fnResult2 = function(obj, r){
+		if(obj && obj.parentNode) obj.parentNode.removeChild(obj);
+		var fnlogic = function(){
+			if(r){
+				document.getElementById("install_txt_2").innerHTML = '버전확인중';
+				document.getElementById("btn_inatall_2").style.display = 'none';
+				
+				var j = document.createElement('script');
+				var url = unicrsSrc + "/VER?UniCRSVersion";
+				
+				j.setAttribute('src', url);
+				j.setAttribute('type', 'text/javascript');
+				
+				document.getElementsByTagName('body')[0].appendChild(j);
+			}else{
+				document.getElementById("install_txt_2").innerHTML = '설치안됨';
+				document.getElementById("btn_inatall_2").style.display = 'block';
+				if(navigator.userAgent.indexOf("Firefox") > -1){
+					statusMsg("인증서 이동 프로그램이 설치되어있지 않거나 실행중이 아닙니다<br>FireFox 브라우져일 경우 설치후 브라우져를 재시작 하셔야 합니다.");
+				}else if (navigator.userAgent.indexOf("MSIE 7.0") > -1 && navigator.userAgent.indexOf("compatible") < 0) {
+					statusMsg("사용중인 IE7 브라우져에서는 동작하지 않습니다. 타 브라우져 또는 IE버전을 업데이트 하시길 바랍니다.");
+				} else {
+					statusMsg("인증서 이동 프로그램이 설치되어있지 않거나 실행중이 아닙니다<br><br>실행하시기 바랍니다.");
+				}
+				setTimeout(UniCRSChecker, 1000);
+			}
+		}
+		setTimeout(fnlogic,200);
+	}
+
+	var chkImg;
+	if (navigator.userAgent.indexOf("MSIE 7.0") != -1) {
+		chkImg = document.createElement("<img id='uniImg' src='"+unicrsSrc + '/CRS?cd=' + Math.random() + "' onload='fnResult2(this, true)' onerror='fnResult2(this, false)' />");
+		chkImg.onerror = function() {fnResult2(chkImg, false);};
+		chkImg.onload = function() {fnResult2(chkImg, true);};
+		chkImg.style.display = "none";
+	} else {
+		chkImg = document.createElement('img');
+		chkImg.setAttribute('id', "uniImg");
+		chkImg.setAttribute('src', unicrsSrc + '/CRS?cd=' + Math.random());
+		chkImg.onerror = function() {fnResult2(chkImg, false);};
+		chkImg.onload = function() {fnResult2(chkImg, true);};
+		chkImg.style.display = "none";
+	}
+	document.body.appendChild(chkImg);
+}
+
+UniCRSChecker();
+</script>
+</html>

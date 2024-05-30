@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <link href="/assets/mobile/css/pages/common/service-guide.css" rel="stylesheet" />
+  <body class="theme-common">
+    <div class="wrapper service-guide">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>고객센터</h2>
+        <button type="button" class="logo-common" target-obj="grade-selector">
+          <img src="/assets/images/common/logo-common.svg" alt="엠티처 로고">
+        </button>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">공지사항</a>
+            <a href="#">이용안내</a>
+            <a href="#">FAQ</a>
+            <a href="#">1:1문의</a>
+            <a href="#">필수프로그램</a>
+            <a href="#">전국지사안내</a>
+            <a href="#">이벤트</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="full">
+          <h4 class="title-check no-margin">교사 인증, 파일 다운로드 프로그램</h4>
+          <div class="padding-side">
+            <ul class="program-info-list">
+              <li>
+                <i class="icon"><img src="/assets/images/common/icon-gpki.svg" alt="GPKI 이미지"></i>
+                <div>
+                  <p class="title">GPKI (EPKI)</p>
+                  <p>교사인증을 위해 필요한 설치 프로그램 입니다.</p>
+                </div>
+              </li>
+              <li>
+                <i class="icon"><img src="/assets/images/common/icon-k-solution.svg" alt="k solution 이미지"></i>
+                <div>
+                  <p class="title">K Solution</p>
+                  <p>교과자료 다운로드를 하기 위해 필요한 프로그램입니다.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <h4 class="title-check margin-top">자료를 보기 위한 프로그램</h4>
+          <div class="padding-side">
+            <ul class="program-info-list">
+              <li class="type-button">
+                <a href="https://www.hancom.com/cs_center/csDownload.do" target="_blank">
+                  <i class="icon"><img src="/assets/images/common/icon-hangul-lg.svg" alt="한컴 오피스뷰어 이미지"></i>
+                  <div>
+                    <p class="title">한컴오피스 뷰어</p>
+                    <p>한글 문서를 열람하기 위해 필요한 프로그램입니다.</p>
+                  </div>
+                  <em class="button type-text">
+                    <svg>
+                      <title>아이콘 바로가기</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </em>
+                </a>
+              </li>
+              <li class="type-button">
+                <a href="https://www.microsoft.com/ko-kr/microsoft-365/powerpoint" target="_blank">
+                  <i class="icon"><img src="/assets/images/common/icon-ppt-lg.svg" alt="파워포인트 이미지"></i>
+                  <div>
+                    <p class="title">Microsoft PowerPoint Viewer</p>
+                    <p>PPT 문서를 열람하기 위해 필요한 프로그램입니다.</p>
+                  </div>
+                  <em class="button type-text">
+                    <svg>
+                      <title>아이콘 바로가기</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </em>
+                </a>
+              </li>
+              <li class="type-button">
+                <a href="https://get.adobe.com/kr/reader/" target="_blank">
+                  <i class="icon"><img src="/assets/images/common/icon-pdf-lg.svg" alt="pdf 이미지"></i>
+                  <div>
+                    <p class="title">Adobe Reader</p>
+                    <p>PDF 문서를 열람하기 위해 필요한 프로그램입니다.</p>
+                  </div>
+                  <em class="button type-text">
+                    <svg>
+                      <title>아이콘 바로가기</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </em>
+                </a>
+              </li>
+              <li class="type-button">
+                <a href="https://support.microsoft.com/ko-kr/windows/windows-media-player-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-81718e0d-cfce-25b1-aee3-94596b658287" target="_blank">
+                  <i class="icon"><img src="/assets/images/common/icon-media-lg.svg" alt="media 이미지"></i>
+                  <div>
+                    <p class="title">Windows Media Player</p>
+                    <p>동영상 강의를 듣기 위해 필요한 프로그램입니다.</p>
+                  </div>
+                  <em class="button type-text">
+                    <svg>
+                      <title>아이콘 바로가기</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </em>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="grade-selector">
+      <div class="popup-container">
+        <div class="body">
+          <div class="list-items type-icon-box">
+            <a href="#" target="_blank" title="엠티처 초등 새창 열기">
+              <img src="/assets/images/common/logo-mteacher-elementary.svg" alt="엠티처 초등 로고" class="mteacher-logo">
+              <strong class="text-elementary semi">초등</strong>
+            </a>
+            <a href="#" target="_blank" title="엠티처 중학 새창 열기">
+              <img src="/assets/images/common/logo-mteacher-middle.svg" alt="엠티처 중학 로고" class="mteacher-logo">
+              <strong class="text-middle semi">중학</strong>
+            </a>
+            <a href="#" target="_blank" title="엠티처 고등 새창 열기">
+              <img src="/assets/images/common/logo-mteacher-high.svg" alt="엠티처 고등 로고" class="mteacher-logo">
+              <strong class="text-high semi">고등</strong>
+            </a>
+          </div>
+        </div>
+        <div class="footer">
+          <button type="button" class="button type-primary size-md" close-obj>닫기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

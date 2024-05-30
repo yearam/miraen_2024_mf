@@ -1,0 +1,69 @@
+<div id="us-div-import-cert" class="us-layout-popup us" oncontextmenu="return false" onselectstart="return false">
+		<div id="us-div-title" class="us-layer-title">
+			<p id="us-import-cert-lbl-title" class="us-layer-lbl-title"></p>
+			<button id="us-cls-btn" class="us-layer-cls-btn" type="button">
+				<img id="us-cls-btn-img" />
+			</button>
+		</div>
+		<div class="us-layer-body pd13">
+			<div class="us-layout-content">
+				<div class="us-cert-import-content drag">
+					
+					<div class="view-panel basic pd13 hide">
+						<ul id="us-content-basic-notice-ul" class="notice">
+							<li class="title"></li><li class="title"></li><li class="title"></li><li class="title"></li><li class="top-blank"></li><li class="left-blank"></li><li class="left-blank"></li>
+						</ul>
+					</div>
+					
+					<div class="view-panel drop-plz pd13 hide">
+						<ul id="us-content-drop-plz-ul" class="drop-plz">
+							<li></li>
+						</ul>
+					</div>
+					
+					<div class="view-panel cert-info pd13 hide">
+						<div>
+							<img id="us-import-cert-img" class="center"/>
+						</div>
+						<div id="us-txt-pfx-name" class="us-pfx-name"></div>
+						<ul class="us-list-sublist name">
+							<li></li><li></li>
+						</ul>
+						<ul class="us-list-sublist expire">
+							<li></li><li></li>
+						</ul>
+						<ul class="us-list-sublist issuer">
+							<li></li><li></li>
+						</ul>
+						<ul class="us-list-sublist password">
+							<li></li>
+							<li class="cls">
+								<form id="us-keyboard-secure-frm" name="us-keyboard-secure-frm" method="post" onsubmit="return false">
+									<input id="us-pw-text" name="us-pw" class="us-layout-pw-text" type="password"  autocomplete="off" data-enc="on" e2e_type="11" />
+									<div class="ly_v2 ly_import_cert_v2" id="us-import-cert-err-msg-capslock" style="display: none;">
+										<div class="ly_box"> <strong>Caps Lock</strong> <span id="us-import-cert-err-msg-capslock-text"></span> </div>
+										<span class="sp ly_point"></span>
+									</div>
+								</form>
+							</li>
+						</ul>
+						<div id="us-div-pfx-download" class="us-div-remember">
+							<input type="checkbox" id="us-cert-import-pfx-download"><span id="us-cert-import-pfx-download-txt"></span>
+						</div>
+						<div class="us-layer-btns">
+							<ul>
+								<li><input id="us-btn-cert-import" class="us-normal-btn btn-confirm" style="width: 200px;" type="button" /></li>
+								<li><input id="us-btn-re-try" class="us-normal-btn" type="button" /></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="file" class="hide" id="us-cert-import-file" multiple="multiple">
+			<div class="us-layer-btns">
+				<ul>
+					<li><input id="us-btn-import" class="us-normal-btn btn-confirm" style="width: 130px;" type="button" /></li>
+				</ul>
+			</div>
+		</div>
+	</div>

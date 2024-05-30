@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>typography</h1>
+          <section>
+            <h2>heading</h2>
+            <div>
+              <table class="guide-table">
+                <colgroup>
+                  <col style="width: 15%;" />
+                </colgroup>
+                <tr>
+                  <th>h2</th>
+                  <td>
+                    <h2>제목이 들어갑니다. heading text h2 - 18px / 700</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <th>h3</th>
+                  <td>
+                    <h3>제목이 들어갑니다. heading text h3 - 16px / 700</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <th>h4</th>
+                  <td>
+                    <h4>제목이 들어갑니다. heading text h4 - 14px / 700</h4>
+                  </td>
+                </tr>
+                <tr>
+                  <th>h5</th>
+                  <td>
+                    <h5>제목이 들어갑니다. heading text h5 - 14px / 500</h5>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <h3>.inner-header
+              <small>inner-header 로 감싸고 들어가는 h2, h3, h4, h5 타이틀은 지정된 하단 마진값을 갖습니다.</small>
+            </h3>
+            <div class="inner-header">
+              <h2>h2 타이틀 텍스트
+                <a href="#" class="tooltip-default" data-trigger="hover" data-content="popover content">
+                  <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                </a>
+              </h2>
+            </div>
+            <div class="inner-header">
+              <h3>h3 타이틀 텍스트
+                <a href="#" class="tooltip-default" data-trigger="hover" data-content="popover content">
+                  <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                </a>
+              </h3>
+            </div>
+            <div class="inner-header">
+              <h4>h4 타이틀 텍스트
+                <a href="#" class="tooltip-default" data-trigger="hover" data-content="popover content">
+                  <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                </a>
+              </h4>
+            </div>
+            <div class="inner-header">
+              <h5>h5 타이틀 텍스트
+                <a href="#" class="tooltip-default" data-trigger="hover" data-content="popover content">
+                  <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                </a>
+              </h5>
+            </div>
+
+            <pre class='brush:html'>
+              <div class="inner-header">
+                <h2>h2 타이틀 텍스트
+                  <a href="#" class="tooltip-default" data-trigger="hover" data-content="popover content">
+                    <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                  </a>
+                </h2>
+              </div>
+            </pre>
+
+            <h2>.inner-header.is-extra <small>.inner-header와 동일 선상에 무언가 있을 때</small></h2>
+            <div class="inner-header is-extra">
+              <h3>3학년 1학기</h3>
+              <div class="extra">
+                <button class="button size-md">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                  </svg>
+                  학기 자료 전체 다운로드
+                </button>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="inner-header is-extra">
+                <h3>3학년 1학기</h3>
+                <div class="extra">
+                  <button class="button size-md">
+                    <svg>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                    </svg>
+                    학기 자료 전체 다운로드
+                  </button>
+                </div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>color</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 15%;" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>elementary</th>
+                  <td class="text-elementary">텍스트 컬러 .text-elementary</td>
+                </tr>
+                <tr>
+                  <th>middle</th>
+                  <td class="text-middle">텍스트 컬러 .text-middle</td>
+                </tr>
+                <tr>
+                  <th>high</th>
+                  <td class="text-high">텍스트 컬러 .text-high</td>
+                </tr>
+                <tr>
+                  <th>all-grade</th>
+                  <td class="text-all-grade">텍스트 컬러 .text-all-grade</td>
+                </tr>
+                <tr>
+                  <th>white</th>
+                  <td class="fill-dark text-white">텍스트 컬러 .text-white</td>
+                </tr>
+                <tr>
+                  <th>black</th>
+                  <td class="text-black">텍스트 컬러 .text-black</td>
+                </tr>
+                <tr>
+                  <th>purple</th>
+                  <td class="text-purple">텍스트 컬러 .text-purple</td>
+                </tr>
+                <tr>
+                  <th>orange</th>
+                  <td class="text-orange">텍스트 컬러 .text-orange</td>
+                </tr>
+                <tr>
+                  <th>skyblue</th>
+                  <td class="text-skyblue">텍스트 컬러 .text-skyblue</td>
+                </tr>
+                <tr>
+                  <th>green</th>
+                  <td class="text-green">텍스트 컬러 .text-green</td>
+                </tr>
+                <tr>
+                  <th>dark</th>
+                  <td class="text-dark">텍스트 컬러 .text-dark</td>
+                </tr>
+                <tr>
+                  <th>primary</th>
+                  <td class="text-primary">텍스트 컬러 .text-primary</td>
+                </tr>
+                <tr>
+                  <th>primary-400</th>
+                  <td class="text-primary-400">텍스트 컬러 .text-primary-400</td>
+                </tr>
+                <tr>
+                  <th>secondary</th>
+                  <td class="text-secondary">텍스트 컬러 .text-secondary</td>
+                </tr>
+                <tr>
+                  <th>tertiary</th>
+                  <td class="text-tertiary">텍스트 컬러 .text-tertiary</td>
+                </tr>
+                <tr>
+                  <th>error</th>
+                  <td class="text-error">텍스트 컬러 .text-error</td>
+                </tr>
+                <tr>
+                  <th>new</th>
+                  <td class="text-new">텍스트 컬러 .text-new</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <p><span class="text-white">.text-white 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-error">.text-error 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-primary">.text-primary 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-secondary">.text-secondary 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-skyblue">.text-skyblue 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-purple">.text-purple 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-orange">.text-orange 클래스 </span> 텍스트 컬러 샘플</p>
+            </pre>
+          </section>
+          <section>
+            <h2>strong</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 15%;" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>strong.semi</th>
+                  <td><strong class="semi">strong.semi 클래스 </strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <strong class="semi">strong.semi 클래스 </strong>
+            </pre>
+          </section>
+          <section>
+            <h2>date</h2>
+            <span class="date">2023-11-21</span>
+            <pre class="brush:html">
+              <span class="date">2023-11-21</span>
+            </pre>
+          </section>
+          <section>
+            <h2>underline</h2>
+            <a href="#" class="text-underline">회원탈퇴하기</a>
+            <p class="text-underline">회원탈퇴하기</p>
+            <pre class="brush:html">
+              <a href="#" class="text-underline">회원탈퇴하기</a>
+              <p class="text-underline">회원탈퇴하기</p>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

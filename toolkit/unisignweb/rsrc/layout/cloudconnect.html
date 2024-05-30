@@ -1,0 +1,50 @@
+<div id="us-div-cloud" class="us-layout-cloud" oncontextmenu="return false" onselectstart="return false">
+    <div id="us-div-cloud-title" class="us-layer-title">
+        <p id="us-lbl-title" class="us-layer-lbl-title"> </p>
+    </div>  
+	<div class="us-layer-body">
+		<!-- 연결 -->
+		<div id='us-div-connect-pnl' class="us-layout-div-cloud-user">
+			<dl>
+            	<dt><span id="us-connect-name-lbl" class="us-layout-lbl" for="us-connect-name-textbox"> </span></dt>
+                <dd>
+                	<input id="us-connect-name-textbox" name="us-connect-name" class="us-layout-name-input-textbox" type="text" />
+                </dd>
+            </dl>
+        	<dl>
+            	<dt><span id="us-connect-hp-lbl" class="us-layout-lbl" for="us-connect-hp-textbox"> </span></dt>
+                <dd>
+                	<input id="us-connect-hp-textbox" maxlength=11 name="us-connect-hp" class="us-layout-hp-input-textbox" type="text" />
+                </dd>
+			</dl>			
+			<dl>
+            	<dt><span id="us-connect-birth-lbl" class="us-layout-lbl" for="us-connect-birth-textbox"> </span></dt>
+                <dd>
+                	<input id="us-connect-birth-textbox" maxlength=8 name="us-connect-birth" class="us-layout-birth-input-textbox" type="text" />
+                </dd>
+            </dl>
+			<div class="us-layout-div-auto-connect">
+				<input id="us-connect-auto-connect-checkbox" name="us-connect-auto-connect" style="margin: 4px 0 0 10px;" type="checkbox" />
+				<label id="us-connect-auto-connect-lbl" for="us-connect-auto-connect-checkbox" ></label>
+			</div>
+       </div>
+		<!-- MO 인증 -->
+		<div id='us-div-mo-pnl' class="us-layout-div-cloud-user">
+			<div>
+				<p id="us-mo-caption" class="us-mo-caption-title"> </p>
+			</div>
+			<div>
+ 				<div class="us-auth-pnl">
+					<p id="us-lbl-mo-title" class="us-mo-caption"> </p>
+					<span id="authtime"></span><br />
+					<span id="authcode" class='us-auth-code'></span>
+				</div>
+			</div>
+        </div>  
+	</div>
+    <button id="us-cls-img-btn" class="us-layer-cls-btn" type="button"><img id="us-cls-btn-img" /></button>
+
+	<div class="us-layer-cloud-btns">
+		<input id="us-btn" class="us-normal-btn btn-confirm us-layer-cloud-btn us-cloud-btn-disable" type="button" />
+	</div> 
+</div>

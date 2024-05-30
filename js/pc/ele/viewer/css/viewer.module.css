@@ -1,0 +1,337 @@
+/* modal */
+#module-modal.modal{position:absolute; overflow:hidden !important;z-index: 0 !important;}
+[device=mobile] #module-modal.modal {z-index: 90 !important;}
+
+#module-modal .modal-open .modal {overflow-x: hidden; overflow-y: hidden;}
+.modal-backdrop{z-index: -1 !important;}
+#module-modal .modal-dialog {min-width: 100%;margin: 0 auto;}
+#module-modal .modal-content{padding:0;/*border:2px solid #81d8b5;*/border:0;border-radius:0;background: #fff}
+#module-modal .modal-header .close {
+    font-size: 1rem; padding: 0px 0px 0px 0px;margin:0px auto;
+    opacity: 1;
+}
+#module-modal .modal-header .close span {
+    color: white;
+    text-shadow: none;
+}
+#module-modal .modal-tool-box{position: relative;width: 100%;height: 20px;}
+#module-modal .modal-header {padding: 5px 10px;background: #00cbb4;border-top-left-radius: 0;border-top-right-radius: 0;}
+#module-modal .modal-body{padding:0;overflow:hidden;}
+#module-modal .modal-dialog-centered .modal-content{max-height: 100%}
+
+#module-modal .modal-dialog {
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#module-modal .modal-content {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#module-modal .modal-body {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#module-body {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#module-body .carousel {
+    width: 100%;
+    height: 100%;
+}
+#module-body .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+#module-body .carousel-item {
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+}
+#content-body {
+    width: 100%;
+    height: 100%;
+}
+#content-scale {
+    width: 100%;
+    height: 100%;
+    display:flex;flex-direction:column;justify-content:center;
+}
+/* image */
+#module-modal .carousel-control-next, #module-modal .carousel-control-prev {width: 10%;}
+#module-modal .carousel-control-prev {position: absolute;left:auto;right: 210px; width: auto;}
+#module-modal .carousel-control-next {position: absolute;right: 130px; width: auto;}
+#module-page {
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    right: 150px;
+    padding: 0px;
+    width: 60px;
+    text-align: center;
+}
+#module-modal .carousel-control-next.hidden, #module-modal .carousel-control-prev.hidden {display: none !important;}
+#module-modal .carousel-control-prev-icon {background-image: url('../img/viewer/icon-prev.png');}
+#module-modal .carousel-control-next-icon {background-image: url('../img/viewer/icon-prev.png');transform: scale(-1,1);}
+#module-modal .carousel-control-prev-icon, #module-modal .carousel-control-next-icon{
+    width: 20px; height: 20px;background-repeat: no-repeat;background-size: auto 20px;
+}
+
+#module-title {    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+    line-height: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    margin-top: -15px;
+    display: inline-block;}
+#module-title strong{color: #efe9e9;font-size: 14px;font-weight:700}
+
+
+#module-modal.with-header .modal-body {
+    min-width: auto;
+    min-height: auto;
+    width: auto;
+    height: auto;
+}
+
+/* 
+#download {
+    position: absolute;
+    right: 35px;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 4px;
+
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-image: url('../img/viewer/icons/ffffff/download.png');
+    background-position-y: center;
+    background-position-x: left;
+    background-size: auto 20px;
+} */
+
+/* video */
+.video-title{line-height: 79px;font-size: 36px}
+.icon-video {width: 75px;height: 79px;background:url('../img/common/icon-video.png') no-repeat 0 50%/100% auto;margin-right: 20px;vertical-align: top}
+.video-player{margin: 0px; border:20px solid #00bd76;border-radius:10px;}
+.video-js{color:rgba(255,255,255,.5)}
+.video-js .vjs-button > .vjs-icon-placeholder:before, .vjs-icon-volume-mute:before, .video-js .vjs-mute-control .vjs-icon-placeholder:before{content: '' !important}
+.video-js .vjs-big-play-button{z-index:10; font-size: 0;top: 50%;left: 50%;width: 124px;height: 124px;background: url('../img/common/btn-play.png') no-repeat 0 0/100% auto;margin: -62px;}
+.video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus{background-color: transparent}
+.video-js .vjs-control-bar{z-index: 11; bottom:-90px;height: 90px;background: #00bd76;-ms-flex-align: center;align-items: center;width: calc(100% + 4px);left: -2px;}
+.video-js.vjs-fullscreen .vjs-control-bar{bottom: 0;padding-left: 10px;padding-right: 10px}
+.video-js .vjs-control{width: auto;height: auto;background-repeat: no-repeat;background-size:auto 100%;display: block}
+.video-js .vjs-play-control, .video-js .vjs-stop-control{width: 63px;height: 63px;margin-right:5px;background-image: url('../img/common/btn-play-sm.png')}
+.video-js .vjs-play-control:hover{background-image: url('../img/common/btn-play-sm_hover.png')}
+.video-js .vjs-play-control.vjs-playing{background-image: url('../img/common/btn-pause-sm.png')}
+.video-js .vjs-play-control.vjs-playing:hover{background-image: url('../img/common/btn-pause-sm_hover.png')}
+.video-js .vjs-stop-control{margin-right:30px;background-image: url('../img/common/btn-stop-sm.png')}
+.video-js .vjs-stop-control:hover{background-image: url('../img/common/btn-stop-sm_hover.png')}
+.video-js .vjs-progress-control{min-width: 0;-ms-flex: 1;flex: 1;margin-right:5px}
+.video-js .vjs-progress-control .vjs-progress-holder{margin: 0}
+.video-js .vjs-slider{background: #008e38;height:18px;border-radius:9em;outline: 0;box-shadow: none !important}
+.video-js .vjs-time-tooltip{top: -36px;padding: 2px 6px;line-height: 20px}
+.video-js .vjs-progress-control:hover .vjs-time-tooltip,.video-js .vjs-progress-control:hover .vjs-progress-holder:focus .vjs-time-tooltip{font-size: 14px}
+.video-js .vjs-load-progress{background: #008e38}
+.video-js .vjs-load-progress div{opacity: 0}
+.video-js .vjs-progress-holder .vjs-play-progress, .video-js .vjs-progress-holder .vjs-load-progress, .video-js .vjs-progress-holder .vjs-load-progress div{border-radius:9em}
+.video-js .vjs-play-progress{background: linear-gradient(to right, #f87e1a 0%,#ffb937 100%)}
+.video-js .vjs-play-progress:before{content: '';width: 32px;height: 37px;background: url('../img/common/progress-icon.png') no-repeat 0 0/100% auto;top: -9px;right: -15px;}
+.video-js .vjs-time-control{line-height: 13px;font-size:28px;width: 55px;padding: 0;box-sizing: content-box}
+.video-js .vjs-current-time{text-align: right;padding-right: 10px}
+.video-js .vjs-duration{text-align: left;padding-left: 10px;border-left: 2px solid rgba(255,255,255,.5)}
+.video-js .vjs-current-time{color: #fff}
+.video-js .vjs-remaining-time{display: none}
+.video-js .vjs-volume-panel.vjs-volume-panel-vertical{display: none;width: 56px;margin: 0 10px}
+.video-js .vjs-mute-control{width: 56px;height: 44px;background: url('../img/common/btn-vol.png') no-repeat 50% 50%/auto 26px;z-index: 1}
+.video-js .vjs-volume-panel:hover .vjs-mute-control{background-image: url('../img/common/btn-vol_hover.png')}
+.video-js .vjs-control-bar .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical{position: absolute;background: rgba(65, 41, 31, 0.6);bottom: -9px;left: 0;width: 100%;padding: 18px 0 62px;border-radius: 20px;height: auto;-webkit-transition-duration: .2s;transition-duration: .2s}
+.vjs-user-inactive.vjs-playing .vjs-control-bar{-webkit-transition-duration: .4s;transition-duration: .4s}
+.vjs-volume-bar.vjs-slider-vertical{width: 6px;height: 120px;margin: 0 auto;background: #e9e9e9}
+.vjs-slider-vertical .vjs-volume-level{width: 100%;border-radius: 3px;background: #ffd616}
+.vjs-slider-vertical .vjs-volume-level:before{content: '';width: 14px;height: 14px;border-radius: 100%;background: #ffd616;top: -4px;left: -4px;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3)}
+.video-js .vjs-fullscreen-control, .video-js .vjs-caption-control, .video-js .vjs-toggle-control{display: inline-block;vertical-align: middle;width:63px;height:63px;background: url("../img/common/btn-fullscreen.png") no-repeat 0 0/auto 100%;margin-right: 8px;margin-right: 10px}
+.video-js .vjs-caption-control{background-image: url('../img/common/btn-caption.png')}
+.vjs-resize-manager{border: 0}
+.video-js .vjs-progress-control .vjs-play-progress .vjs-time-tooltip{display: none}
+.video-js .vjs-toggle-control{background-image: url('../img/common/btn-video-toggle.png'); display: none;}
+.vjs-toggle-inactive .vjs-toggle-control{transform: scale(1,-1)}
+.vjs-toggle-control:hover .vjs-icon-placeholder{background-image: url('../img/common/toggle-on.png')}
+.video-caption{position: absolute;bottom: 105px;left: 0;right: 0;z-index: 0;font-size: 20px;text-align: center;display: none}
+.vjs-caption-active .video-caption{display: block}
+.vjs-user-inactive:not(.vjs-paused) .video-caption{bottom: 15px}
+[data-toggle=video-caption]:not(.playing-video-script){display:none}
+.video-caption p{display: inline-block;padding: 10px;line-height: 1.3;vertical-align: top;background: rgba(0,0,0,.7);color: #fff;font-weight: 500}
+.vjs-toggle-inactive .vjs-control-bar{background: none}
+.vjs-toggle-inactive .vjs-control-bar>.vjs-control:not(.vjs-toggle-control){opacity: 0;z-index: -1;pointer-events: none}
+
+
+.video-js .vjs-tech,
+.video-js .vjs-poster {
+    /* height:calc(100% - 70px) */
+}
+.video-js.vjs-fullscreen .vjs-tech,
+.video-js.vjs-fullscreen .vjs-poster{
+    /* height:auto; */
+    min-height: 100%;
+    /* height:calc(100% - 90px) */
+}
+
+.video-js.vjs-toggle-inactive .vjs-tech,
+.video-js.vjs-toggle-inactive .vjs-poster {
+    /* height:auto; */
+    height:100%
+}
+
+
+/* audio */
+#module-modal .video-player.audio .video-js{
+    padding-top: 50px;
+}
+#module-modal .video-player.audio .vjs-text-track-display {
+    display: none;
+}
+
+
+#drawing-control {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    display: inline;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    pointer-events: none;
+}
+
+#drawing-control.active {
+    pointer-events: all;
+}
+
+
+
+
+
+
+
+
+/* ì»¨íŠ¸ë¡¤ ì—°ê²° ëª¨ë‹¬ */
+#modal-control .modal-dialog {
+}
+#modal-control .modal-content{
+    border-radius: 0;
+}
+#modal-control .modal-header{
+    padding: 10px;
+    padding-top: 15px;
+    border-radius: 0;
+    border-top: 4px solid #00cbb4;
+}
+#modal-control .modal-header::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: calc(50% - 8px);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #00cbb4;
+}
+#modal-control .modal-title {
+    font-size: 1em;
+    margin: 0;
+    position: absolute;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    text-align: center;
+}
+#modal-control .modal-body{
+    /* background-color: #f7f7f7; */
+}
+#modal-control .modal-body h4 {
+    color: #00cbb4;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 4px;
+}
+#modal-control .modal-body .description {
+    color: #666666;
+    text-align: center;
+    font-size: 18px;
+    text-align: center;
+}
+#modal-control .modal-footer {
+    border: none;
+}
+#modal-control .modal-footer #btnCloseControll{
+    display: none;
+}
+#controllList {
+    margin-top: 20px;
+}
+
+
+
+#module-modal .video-player.audio .video-js{
+    padding-top: 50px;
+}
+#module-modal .video-player.audio .vjs-text-track-display {
+    display: none;
+}
+#module-modal .video-player.audio .video-js .vjs-big-play-button {
+    display: none;
+}
+#module-modal .vjs-time-tooltip, #module-modal .vjs-mouse-display {
+    display: none !important;
+}
+#module-modal .video-player.audio .vjs-progress-control {
+    margin-right: 20px;
+}
+/*  */
+#wrap ~ .vex.vex-theme-default .vex-content {
+    width: 300px;
+}
+#wrap ~ .vex.vex-theme-default .vex-dialog-button.vex-dialog-button-primary {
+    background-color: #00cbb4;
+}
+#wrap ~ .vex.vex-theme-default .vex-dialog-button.vex-dialog-button-primary,
+#wrap ~ .vex.vex-theme-default .vex-dialog-button.vex-dialog-button-secondary
+{
+    font-size: 4vw;
+    margin: 2vw 0;
+    width: 100%;
+}
+.video-player {
+    margin: 0 5%;
+}
+
+
+#pdf-iframe {
+    border: none;
+}
+
+[orientation=landscape] .vex.vex-theme-default {
+    padding: 50px;
+}
+
+[orientation=landscape] #wrap ~ .vex.vex-theme-default .vex-dialog-button.vex-dialog-button-primary,
+[orientation=landscape] #wrap ~ .vex.vex-theme-default .vex-dialog-button.vex-dialog-button-secondary {
+    font-size: 2vw;
+    margin: 2vh 0;
+    width: 100%;
+}

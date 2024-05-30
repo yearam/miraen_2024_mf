@@ -1,0 +1,307 @@
+/* smartphones, iPhone, portrait 480x320 phones */ 
+@charset "utf-8";
+/* @media screen 
+and (min-device-width : 319px) 
+and (max-device-width : 767px)
+and (orientation : portrait)  {  */
+    html {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        min-width: 100vw !important;
+        min-height: 100vh !important;
+    }
+    body {
+        position: relative;
+        width: 100vw !important;
+        height: 100vh; 
+        height: calc(var(--vh, 1vh) * 100);
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+    }
+    [orientation=portrait] #viewer-wrap {
+        /* position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0; */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    [orientation=portrait] #viewer-hd {
+        width: 100vw;
+        position: fixed;
+        touch-action: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    [orientation=portrait] #viewer-hd #viewer-tool {
+        width: 100vw;
+    }
+    [orientation=portrait] #viewer-content {
+        position: relative;
+        top: 0px;
+        margin-top: 0px;
+        height: calc(100vh - 100px);
+    }
+    [orientation=portrait] #viewer-aside  {
+        position: absolute;
+        top: 0px;
+        height: calc(100vh - 100px);;
+        touch-action: none;
+        z-index: 1000000;
+    }
+    [orientation=portrait] #module-modal.modal {
+        position: absolute;
+        overflow: hidden !important;
+        z-index: 0 !important;
+        width: 100vw !important;
+    }
+    [orientation=portrait] .icon-aside-open-txt .icon-aside-opened {
+        background-image: url("icon-aside-close-hover.png");
+    }
+    [orientation=portrait] .aside-close .icon-aside-open-txt .icon-aside-opened {
+        background-image: url("icon-aside-open-hover.png");
+    }
+    [orientation=portrait] #viewer-aside-list-inner {
+        touch-action: pan-y;
+        position: relative;
+        top : 0px;
+        bottom: 0px;
+        height: calc(100% - 67px);
+        overflow-y: scroll;
+    }
+    [orientation=portrait] #viewer-tool {
+        width: 100vw;
+    }
+    [orientation=portrait] #viewer-tool>li>button {
+        width: 50vw;
+        height: 50px;
+        min-height: 50px;
+        border-top: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    [orientation=portrait] #viewer-hd #viewer-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    [orientation=portrait] #viewer-hd .account {
+        width: 50vw;
+        height: 50px;
+        min-height: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    [orientation=portrait] #viewer-hd .account #zoom-level {
+        position: relative;
+        display: inline-block;
+        left: 18%;
+    }
+    [orientation=portrait] #viewer-hd .account .icon-tool-account {
+        position: relative;
+        left: 15%;
+    }
+    [orientation=portrait] #viewer-hd .account .icon-tool-account2 {
+        position: relative;
+        left: -35%;
+    }
+    [orientation=portrait] #viewer-hd #page {
+        width: 50vw;
+        height: 50px;
+        min-height: 50px;
+        background-color: #f7f8f8;
+        border-right-color : none;
+        border-right-style: none;
+        border-right-width: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+    }
+    [orientation=portrait] #viewer-hd #page #prev-content {
+        margin-right: 10px;
+    }
+    [orientation=portrait] #viewer-hd #page #next-content {
+        margin-left: 10px;
+    }
+    /* toast-wrap */
+    [orientation=portrait] .toast-wrap {
+        z-index: 9999999 !important;
+    }
+    [orientation=portrait] #drawing-button, #fullscreen {
+        display: none !important;
+    }
+/* } */
+/* @media screen 
+and (max-height: 575.98px)
+and (orientation : landscape)  {  */
+    [orientation=landscape] #module-modal.modal {
+        position: absolute;
+        overflow: hidden !important;
+        z-index: 0 !important;
+        width: 100vw !important;
+    }
+    [orientation=landscape] .icon-aside-open-txt .icon-aside-opened {
+        background-image: url("icon-aside-close-hover.png");
+    }
+    [orientation=landscape] .aside-close .icon-aside-open-txt .icon-aside-opened {
+        background-image: url("icon-aside-open-hover.png");
+    }
+    [orientation=landscape] #viewer-wrap {
+        /* position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0; */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    [orientation=landscape] #viewer-content {
+        width: 100vw;
+        margin-top: 0px;
+        height: calc(100vh - 50px);
+    }
+    [orientation=landscape] #viewer-aside  {
+        position: absolute;
+        width: 150px;
+        top: 0px;
+        height: calc(100vh - 50px);
+        touch-action: none;
+        z-index: 1000000;
+    }
+    [orientation=landscape] #viewer-aside-list-inner {
+        touch-action: pan-y;
+        position: relative;
+        top : 0px;
+        bottom: 0px;
+        height: calc(100% - 67px);
+        overflow-y: scroll;
+    }
+    [orientation=landscape] #viewer-hd {
+        position: fixed;
+        width: 100vw;
+        height: 50px;
+        touch-action: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    [orientation=landscape] #viewer-hd #viewer-tool,
+    [orientation=landscape] #viewer-hd #viewer-nav {
+        width: 50vw;
+    }
+    [orientation=landscape] #viewer-hd #page {
+        width: 25vw;
+        height: 50px;;
+        background-color: #f7f8f8;
+        border-right-color : none;
+        border-right-style: none;
+        border-right-width: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        border: none;
+    }
+    [orientation=landscape] #viewer-hd .account {
+        width: 25vw;
+        text-align: center;
+        height: 50px;
+        min-height: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    [orientation=landscape] #viewer-hd .account #zoom-level {
+        position: relative;
+        display: inline-block;
+        left: 28%;
+    }
+    [orientation=landscape] #viewer-hd .account .icon-tool-account {
+        position: relative;
+        left: 20%;
+    }
+    [orientation=landscape] #viewer-hd .account .icon-tool-account2 {
+        position: relative;
+        left: -17%;
+    }
+    [orientation=landscape] #page_list.thumbnails {
+        padding: 0 25px;
+        margin-top: 0px;
+    }
+    /* toast-wrap */
+    [orientation=landscape] .toast-wrap {
+        z-index: 9999999 !important;
+    }
+/* } */
+
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+/* @media screen and (min-width:481px)  { 
+    body {
+        background-color: blue;
+    }
+} */
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+/* @media screen and (min-width:641px)  { 
+    body {
+        background-color: green;
+    }
+} */
+
+

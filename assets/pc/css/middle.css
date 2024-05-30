@@ -1,0 +1,32 @@
+@import url(./all-grades.css);
+:root {
+  --color-primary: #c43cb4;
+  --color-primary-bg: #f7edf6;
+  --color-primary-50: #f9fbfc;
+  --color-primary-100: #faedf8;
+  --color-primary-150: #faf2f6;
+  --color-primary-200: #f1e4f4;
+  --color-primary-300: #dba3e0;
+  --color-primary-400: #cf7add;
+  --color-primary-600: #c43cb4;
+  --color-primary-700: #812a76;
+  --color-primary-800: #480161;
+  --color-primary-disabled: #c094ba;
+  --color-secondary: #36bac1;
+  --color-secondary-500: #00a4af;
+  --color-secondary-600: #0098a7;
+  --button-primary: #c43cb4;
+  --button-primary-hover: #480161;
+  --button-primary-disable: #BA7CB3;
+  --button-secondary: #cf7add;
+  --button-secondary-hover: #480161;
+  --button-secondary-disable: #BA7CB3;
+  --button-third: #36bac1;
+  --button-third-hover: #00a4af;
+  --button-third-disable: #57AAA0;
+  --logo-images: url("/assets/images/common/logo-middle.svg");
+  --logo-mteacher: url("/assets/images/middle/logo-mteacher.svg");
+  --bg-prd-reference: url("/assets/images/middle/bg-prd-reference.png");
+  --icon-star: url("/assets/images/middle/icon-star.svg");
+  --bg-loading: url("/assets/images/middle/bg-loading.png");
+}

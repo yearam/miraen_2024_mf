@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/high.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main id="high">
+          <h1>고등 메뉴구조도</h1>
+          <ul class="quick_menu">
+            <li><a href="#top">top</a></li>
+          </ul>
+          <section>
+            <h2>notice</h2>
+            <ul class="ul-decimal">
+              <li>03-27 헤더 엠티처 로고 background-image -> image 태그 형식으로 변경</li>
+            </ul>
+          </section>
+          <section id="menu-mai">
+            <h2>main</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" />
+                <col width="240px" />
+                <col width="200px" />
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>@메인</td>
+                    <td></td>
+                    <td class="page-code">m_h_mai_10001</td>
+                    <td class="finish">02-02</td>
+                    <td>03-18</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-08 section.services에 ignore-last클래스 추가</p>
+                      <p>03-18 즐겨찾기 로그인 전 케이스 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>즐겨찾기 설정</td>
+                    <td>팝업</td>
+                    <td class="page-code">m_h_mai_10005_l</td>
+                    <td class="finish">03-14</td>
+                    <td>03-15</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-15 no-data케이스 추가</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>site map</td>
+                    <td></td>
+                    <td class="page-code">m_h_mai_10001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">모든 페이지에 포함되어 있습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-tex">
+            <h2>교과서(수업하기/자료모아보기)</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="160px" />
+                  <col width="240px" />
+                  <col width="200px" />
+                  <col width="80px" span="3" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>@교과서<br />(수업하기/자료모아보기)</td>
+                    <td>교과서 설정</td>
+                    <td class="page-code">m_h_tex_10001</td>
+                    <td class="finish">02-13</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교과서 상세</td>
+                    <td class="page-code">m_h_tex_10001_detail</td>
+                    <td class="finish">02-14</td>
+                    <td>03-08</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>02-20 최근진도 배지 위치 변경에 따른 마크업 수정</p>
+                      <p>03-08 최하단 section에 ignore-last 클래스 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교과서 Filter 팝업</td>
+                    <td class="page-code">m_h_tex_10001_l_01</td>
+                    <td class="finish">02-13</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>자료 무단 배포 주의사항 알럿</td>
+                    <td class="page-code">m_h_tex_10001_l_02</td>
+                    <td class="finish">02-13</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>단원공통자료</td>
+                    <td>팝업</td>
+                    <td class="page-code">m_h_tex_10002_l</td>
+                    <td class="finish">02-13</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr class="exception">
+                    <td>차시창</td>
+                    <td></td>
+                    <td class="page-code">m_h_tex_11001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-edi-cre">
+            <h2>특화 자료실</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="160px" span="2" />
+                  <col width="240px" />
+                  <col width="200px" />
+                  <col width="80px" span="3" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>2depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>수업혁신자료</td>
+                    <td>이달의 수업 나눔</td>
+                    <td></td>
+                    <td class="page-code">m_h_edi_10001</td>
+                    <td class="finish">02-01</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>과목별 교수 지원자료</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_edi_11001</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_edi_11001_02</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_edi_11001_detail</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>비주얼씽킹</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_edi_12001</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_edi_12001_02</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_edi_12001_detail</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>하브루타</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_edi_13001</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_edi_13001_02</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_edi_13001_detail</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교수평기 일체화</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_edi_14001</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_edi_14001_02</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_edi_14001_detail</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학급 경영</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_edi_15001</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_edi_15001_02</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_edi_15001_detail</td>
+                    <td class="finish">02-04</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>창의적 체험활동</td>
+                    <td>계기교육</td>
+                    <td></td>
+                    <td class="page-code">m_h_cre_10001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_10001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-06 수업하기 외부링크 버튼 삭제</p>
+                      <p>02-13 연계교과 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>sw/ai 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_11001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_11001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_11001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>진로 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_12001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_12001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_12001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>인성 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_13001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_13001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_13001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>미디어리터러시</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_14001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_14001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_14001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>통일 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_15001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_15001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_15001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>독도 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_16001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_16001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_16001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>경제/금융 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_17001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_17001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_17001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>인권 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_18001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_18001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_18001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>다문화 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_19001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_19001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_19001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>안전/건강 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_20001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_20001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_20001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>민주시민 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_21001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_21001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_21001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>환경/지속가능 발전 교육</td>
+                    <td>리스트형</td>
+                    <td class="page-code">m_h_cre_22001</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>갤러리형</td>
+                    <td class="page-code">m_h_cre_22001_02</td>
+                    <td class="finish">01-31</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">m_h_cre_22001_detail</td>
+                    <td class="finish">01-31</td>
+                    <td>02-13</td>
+                    <td>02-13</td>
+                    <td class="desc">
+                      <p>02-13 수업하기 외부링크 버튼 삭제</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-cop">
+            <h2>콘텐츠 플러스</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <colgroup>
+                  <col width="160px" />
+                  <col width="240px" />
+                  <col width="200px" />
+                  <col width="80px" span="3" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="exception">
+                    <td>애플 넘버스 자료실</td>
+                    <td></td>
+                    <td class="page-code">m_h_cop_10001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>문학책방</td>
+                    <td></td>
+                    <td class="page-code">m_h_cop_11001</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>역사 매트릭스 자료실</td>
+                    <td></td>
+                    <td class="page-code">m_h_cop_12001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>특수교육 국어 자료실</td>
+                    <td></td>
+                    <td class="page-code">m_h_prd_14001</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>꿈나침반</td>
+                    <td></td>
+                    <td class="page-code">m_h_cop_14001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

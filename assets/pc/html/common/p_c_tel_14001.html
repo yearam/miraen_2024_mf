@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <header class="header teacher-live">
+        <div class="header-inner">
+          <div class="header-inner">
+            <div class="common-nav">
+              <a href="#" target="_blank">초등</a>
+              <a href="#" target="_blank">중학</a>
+              <a href="#" target="_blank">고등</a>
+              <div class="dropdown">
+                <button type="button"> 교과서 홍보관 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                  </svg>
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="#">엠티처 바로 접속</a>
+              <a href="#">즐겨찾기 추가</a>
+            </div>
+            <div class="common-nav">
+              <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                  <title>아이콘 - icon-play-rounded</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="aiclass">AI Class</a>
+              <a href="#" target="_blank" class="mkaive">M카이브</a>
+              <a href="#">로그아웃</a>
+              <a href="#" target="_blank">마이페이지</a>
+              <a href="#" target="_blank">고객센터</a>
+              <a href="#" target="_blank">이벤트</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <div class="gnb-wrap">
+            <div class="gnb-inner">
+              <h1 class="util-logo">
+                <div class="dropdown">
+                  <button type="button" class="button type-text">
+                    <img src="/assets/images/common/logo-teacher-live.svg" alt="티처 LIVE 로고" />
+                  </button>
+                  <div class="items">
+                    <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="button type-text" title="중학"> 중학 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="button type-text" title="고등"> 고등 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </h1>
+              <!-- !NOTE : 선택된 메뉴에 .active 가 붙어야 합니다. -->
+              <nav class="gnb">
+                <ul>
+                  <li class="active">
+                    <a href="https://www.youtube.com/" target="_blank">LIVE 강연</a>
+                  </li>
+                  <li>
+                    <a href="#menu2">혁신수업 N</a>
+                    <div class="lnb-wrap" id="menu2">
+                      <div class="lnb-inner">
+                        <ul class="lnb">
+                          <li>
+                            <a href="#">초등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu3">쌤OTT</a>
+                    <div class="lnb-wrap" id="menu3">
+                      <div class="lnb-inner">
+                        <ul class="lnb">
+                          <li>
+                            <a href="#">초등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">자료 나눔</a>
+                  </li>
+                  <li>
+                    <a href="#">이용안내</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <main id="main-contents">
+          <div class="page-header">
+            <h2>FAQ</h2>
+          </div>
+          <section class="faq-section">
+            <h3>자주 찾는 질문</h3>
+            <div class="slider-overflow">
+              <div class="slides">
+                <div class="swiper-wrapper">
+                  <!-- !NOTE class="swiper-slide" 를 클릭 시 해당 내용의 faq 팝업이 노출되고 swiper-slide-active 클래스가 추가 됩니다. -->
+                  <button class="swiper-slide">
+                    <i class="icon size-md text-primary">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                    <span class="title">콘텐츠 타이틀은 최대 50자까지 등록이 가능하며, 글자는 줄바꿈으로 모두 노출됩니다.</span>
+                    <span class="badge type-rounded size-sm fill-primary-400"># 사이트 이용</span>
+                  </button>
+                  <button class="swiper-slide">
+                    <i class="icon size-md text-primary">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                    <span class="title">대안학교, 국제학교 재직 중인 교사의 경우도 교사인증이 가능한가요?</span>
+                    <span class="badge type-rounded size-sm fill-primary-400"># 사이트 이용</span>
+                  </button>
+                  <button class="swiper-slide">
+                    <i class="icon size-md text-primary">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                    <span class="title">이전에 교사인증을 했는데, 관리자에게 문의하라고 합니다. 어떻게 해야 할까요?</span>
+                    <span class="badge type-rounded size-sm fill-primary-400"># 회원가입</span>
+                  </button>
+                  <button class="swiper-slide">
+                    <i class="icon size-md text-primary">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                    <span class="title">교사 인증을 위해 서류 첨부를 했지만 승인되지 않는거 같습니다.</span>
+                    <span class="badge type-rounded size-sm fill-primary-400"># 설치오류</span>
+                  </button>
+                  <button class="swiper-slide">
+                    <i class="icon size-md text-primary">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                    <span class="title">회원가입 시 정보 입력에서 재직 중인 학교 정보가 나오지 않습니다. 어떻게 해결해야 될지 알려주세요</span>
+                    <span class="badge type-rounded size-sm fill-primary-400"># 제안 및 개선사항</span>
+                  </button>
+                  <button class="swiper-slide">
+                    <i class="icon size-md text-primary">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                    <span class="title">회원가입 시 교사인증을 꼭 받아야 할까요?</span>
+                    <span class="badge type-rounded size-sm fill-primary-400"># 저작권</span>
+                  </button>
+                </div>
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
+              </div>
+            </div>
+          </section>
+          <section class="faq-section">
+            <form action="submit" class="form">
+              <div class="split-container">
+                <div class="buttons type-rounded">
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-1" checked="">
+                    <label for="buttons2-1">전체</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-2">
+                    <label for="buttons2-2">회원가입/인증</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-3">
+                    <label for="buttons2-3">사이트 이용</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-4">
+                    <label for="buttons2-4">자료 이용</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-5">
+                    <label for="buttons2-5">프로그램 설치/오류</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-6">
+                    <label for="buttons2-6">제안 및 개선사항</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-7">
+                    <label for="buttons2-7">청탁금지법</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-8">
+                    <label for="buttons2-8">저작권</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="radio2" id="buttons2-9">
+                    <label for="buttons2-9">기타</label>
+                  </span>
+                </div>
+                <div class="input-inner-extra">
+                  <input type="search" name="" id="" placeholder="검색어를 입력해 주세요">
+                  <button class="icon-button" title="검색">
+                    <svg>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <ul class="divider-group">
+                <li>
+                  <h3><span class="text-primary">전체</span> 에 대한 질문</h3>
+                </li>
+                <li><span class="total"><strong class="text-primary">1,350</strong> 건</span></li>
+              </ul>
+              <!-- !NOTE 필터 라디오 버튼을 눌렀거나 검색어 입력하여 결과가 노출 되었을 경우는 class="accordion" 부터 입니다. -->
+              <div class="accordion faq-items">
+                <ul>
+                  <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+                  <li class="active">
+                    <a href="#" class="action">
+                      <div class="header-wrap">
+                        <i class="icon size-lg type-rounded">
+                          <svg>
+                            <title>Q 아이콘</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                          </svg>
+                        </i>
+                        <span>회원가입/인증</span>
+                        <!-- !NOTE 새로 등록된 질문의 class="title" 안에 new 버튼이 생깁니다. -->
+                        <p class="title">콘텐츠 타이틀은 최대 50자까지 등록이 가능하며, 글자가 길어질 경우에는 줄바꿈으로 프론트에 모두 노출됩니다.<span class="new">n</span></p>
+                      </div>
+                    </a>
+                    <div class="pane">
+                      <div class="answer-wrap"> 에디터 영역으로 관리자에서 등록 됩니다. </div>
+                      <div class="split-container-info">
+                        <p> 원하시는 정보를 찾지 못하셨나요? 1:1 문의를 넘겨주시거나<br /> 고객센터(1800-8890)로 문의해 주시면 친절히 안내해 드리겠습니다. </p>
+                        <div class="extra">
+                          <button class="button size-md type-secondary">1:1 문의</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="action">
+                      <div class="header-wrap">
+                        <i class="icon size-lg type-rounded">
+                          <svg>
+                            <title>Q 아이콘</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                          </svg>
+                        </i>
+                        <span>회원가입/인증</span>
+                        <p class="title">교생 실습 중인 학생입니다. 회원가입을 하면 엠티처 서비스를 이용할 수 있나요?<span class="new">n</span></p>
+                      </div>
+                    </a>
+                    <div class="pane">
+                      <div class="answer-wrap"> 엠티처 이용 중 스크랩하신 자료는 "MY엠티처>스크랩 관리"에서 확인할 수 있습니다. <br /> 선생님의 수업 용도에 맞게 폴더를 생성하고, 자료를 자유롭게 이동시켜 선생님만의 수업연구실처럼 활용할 수 있습니다. </div>
+                      <div class="split-container-info">
+                        <p> 원하시는 정보를 찾지 못하셨나요? 1:1 문의를 넘겨주시거나<br /> 고객센터(1800-8890)로 문의해 주시면 친절히 안내해 드리겠습니다. </p>
+                        <div class="extra">
+                          <button class="button size-md type-secondary">1:1 문의</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="action">
+                      <div class="header-wrap">
+                        <i class="icon size-lg type-rounded">
+                          <svg>
+                            <title>Q 아이콘</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                          </svg>
+                        </i>
+                        <span>제안 및 개선사항</span>
+                        <p class="title">엠티처에 제안사항이 있는 경우, 어떻게 해야 하나요?</p>
+                      </div>
+                    </a>
+                    <div class="pane">
+                      <div class="answer-wrap"> 에디터 영역으로 관리자에서 등록 됩니다. </div>
+                      <div class="split-container-info">
+                        <p> 원하시는 정보를 찾지 못하셨나요? 1:1 문의를 넘겨주시거나<br /> 고객센터(1800-8890)로 문의해 주시면 친절히 안내해 드리겠습니다. </p>
+                        <div class="extra">
+                          <button class="button size-md type-secondary">1:1 문의</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="action">
+                      <div class="header-wrap">
+                        <i class="icon size-lg type-rounded">
+                          <svg>
+                            <title>Q 아이콘</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                          </svg>
+                        </i>
+                        <span>사이트 이용</span>
+                        <p class="title">선생님 인증 실패 시 해결 방안(인증서 발급 업체 추가 이슈)</p>
+                      </div>
+                    </a>
+                    <div class="pane">
+                      <div class="answer-wrap">
+                        <p class="text-black">에디터 영역으로 관리자에서 등록 됩니다.
+                      </div>
+                      <div class="split-container-info">
+                        <p> 원하시는 정보를 찾지 못하셨나요? 1:1 문의를 넘겨주시거나<br /> 고객센터(1800-8890)로 문의해 주시면 친절히 안내해 드리겠습니다. </p>
+                        <div class="extra">
+                          <button class="button size-md type-secondary">1:1 문의</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="pagination">
+                <!-- !TODO 이전 리스트 없는 경우 disabled 추가필요 -->
+                <button class="icon-button icon-first" disabled="">
+                  <svg>
+                    <title>첫페이지 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                  </svg>
+                </button>
+                <button class="icon-button icon-prev" disabled="">
+                  <svg>
+                    <title>이전 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                  </svg>
+                </button>
+                <button>1</button>
+                <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                <button class="current">2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button class="icon-button icon-next">
+                  <svg>
+                    <title>다음 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </button>
+                <button class="icon-button icon-last">
+                  <svg>
+                    <title>마지막페이지 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- //필터 라디오 버튼을 눌렀거나 검색어 입력하여 결과가 노출 되었을 경우 입니다. -->
+              <!-- !NOTE 검색어 입력하여 결과 없을 경우 입니다. -->
+              <div class="box-no-data"> 등록된 자료가 없습니다. </div>
+              <div class="box-gray">
+                <ul class="ul-dot">
+                  <li>검색어가 올바르게 입력되었는지 확인 해주세요.</li>
+                  <li>다른 검색어로 검색해주세요.</li>
+                  <li>특수문자는 제외하는 것이 좋습니다.</li>
+                  <li>검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.</li>
+                  <li>두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</li>
+                </ul>
+              </div>
+              <!-- //검색어 입력하여 결과 없을 경우 입니다. -->
+            </form>
+          </section>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>

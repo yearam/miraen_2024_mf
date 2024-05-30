@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Tabs</h1>
+            <h2>
+              default
+              <small>tab의 href의 값과 pane의 ID 값으로 연동 됩니다.<br>
+                tabs가 섹션의 역활을 포함하는 경우 section 에, 내부 컨텐츠로 포함되는 경우 div에 .tabs 클래스를 붙여 사용합니다.
+              </small>
+            </h2>
+            <h3>.tabs<small>li에 active가 붙어있으면 그 탭이 초기에 활성화됨.</small></h3>
+            <section>
+              <!-- 본페이지에서는 헤더 하단 선이 있어.. 첫번째 section  선 안보이게 처리되어 있음. 가이드 확인용으로 상단 section 추가 -->
+            </section>
+            <section class="tabs">
+              <div class="tab">
+                <ul>
+                  <li><a href="#tab1-1">tab1</a></li>
+                  <li><a href="#tab1-2">한글탭2</a></li>
+                  <li class="active"><a href="#tab1-3">탭명 3</a></li>
+                </ul>
+              </div>
+
+              <div class="pane-wrap">
+                <div id="tab1-1" class="pane">
+                  <p>tab contents1-1</p>
+                  <p>
+                    labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                    vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                  </p>
+                </div>
+                <div id="tab1-2" class="pane">
+                  <p>tab contents1-2</p>
+                  <p>
+                    crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                    through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                  </p>
+                </div>
+                <div id="tab1-3" class="pane">
+                  <p>tab contents1-3</p>
+                  <p>
+                    labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                    diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <pre class="brush:html">
+              <section class="tabs">
+                <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+                <div class="tab">
+                  <ul>
+                    <li><a href="#tab1-1">tab1</a></li>
+                    <li><a href="#tab1-2">한글탭2</a></li>
+                    <li class="active"><a href="#tab1-3">탭명 3</a></li> <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab1-1" class="pane">
+                    <!-- tab content -->
+                  </div>
+                  <div id="tab1-2" class="pane">
+                    <!-- tab content -->
+                  </div>
+                  <div id="tab1-3" class="pane">
+                    <!-- tab content -->
+                  </div>
+                </div>
+              </section>
+            </pre>
+          </section>
+          <h2>type-grid
+            <small>5개열로 배치되며, 5개 이상 항목은 아래로 떨어져 배치됩니다.</small>
+          </h2>
+          <section class="tabs type-grid">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab-grid1-1">tab-grid1-1</a></li>
+                <li><a href="#tab-grid1-2">한글탭2</a></li>
+                <li class="active"><a href="#tab-grid1-3">탭명 3</a></li>
+                <li><a href="#tab-grid1-4">탭명 4</a></li>
+                <li><a href="#tab-grid1-5">탭명 5</a></li>
+                <li><a href="#tab-grid1-6">탭명 6</a></li>
+              </ul>
+            </div>
+
+            <div class="pane-wrap">
+              <div id="tab-grid1-1" class="pane">
+                <p>tab contents1-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab-grid1-2" class="pane">
+                <p>tab contents1-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab-grid1-3" class="pane">
+                <p>tab contents1-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </section>
+          <h3>.type-cols-3</h3>
+          <section class="tabs type-grid type-cols-3">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab-grid2-1">tab-grid2-1</a></li>
+                <li><a href="#tab-grid2-2">한글탭2</a></li>
+                <li class="active"><a href="#tab-grid2-3">탭명 3</a></li>
+                <li><a href="#tab-grid2-4">탭명 4</a></li>
+                <li><a href="#tab-grid2-5">탭명 5</a></li>
+                <li><a href="#tab-grid2-6">탭명 6</a></li>
+              </ul>
+            </div>
+
+            <div class="pane-wrap">
+              <div id="tab-grid2-1" class="pane">
+                <p>tab contents1-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab-grid2-2" class="pane">
+                <p>tab contents1-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab-grid2-3" class="pane">
+                <p>tab contents1-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </section>
+          <h3>.type-cols-6</h3>
+          <section class="tabs type-grid type-cols-6">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab-grid3-1">tab-grid3-1</a></li>
+                <li><a href="#tab-grid3-2">한글탭2</a></li>
+                <li class="active"><a href="#tab-grid3-3">탭명 3</a></li>
+                <li><a href="#tab-grid3-4">탭명 4</a></li>
+                <li><a href="#tab-grid3-5">탭명 5</a></li>
+                <li><a href="#tab-grid3-6">탭명 6</a></li>
+                <li><a href="#tab-grid3-7">탭명 7</a></li>
+                <li><a href="#tab-grid3-8">탭명 8</a></li>
+                <li><a href="#tab-grid3-9">탭명 9</a></li>
+              </ul>
+            </div>
+
+            <div class="pane-wrap">
+              <div id="tab-grid3-1" class="pane">
+                <p>tab contents1-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab-grid3-2" class="pane">
+                <p>tab contents1-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab-grid3-3" class="pane">
+                <p>tab contents1-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </section>
+          <pre class='brush:html'>
+            <!-- !NOTE : type-cols-2, type-cols-3 , type-cols-6 으로 열마다 클래스 선택해 사용합니다. -->
+            <section class="tabs type-grid type-cols-3">
+              <div class="tab">
+                <ul>
+                  <li><a href="#tab-grid2-1">tab-grid2-1</a></li>
+                  <li><a href="#tab-grid2-2">한글탭2</a></li>
+                  <li class="active"><a href="#tab-grid2-3">탭명 3</a></li>
+                  <li><a href="#tab-grid2-4">탭명 4</a></li>
+                  <li><a href="#tab-grid2-5">탭명 5</a></li>
+                  <li><a href="#tab-grid2-6">탭명 6</a></li>
+                </ul>
+              </div>
+  
+              <div class="pane-wrap">
+                <div id="tab-grid2-1" class="pane">
+                  <!-- contents -->
+                </div>
+                <div id="tab-grid2-2" class="pane">
+                  <!-- contents -->
+                </div>
+                <div id="tab-grid2-3" class="pane">
+                  <!-- contents -->
+                </div>
+              </div>
+            </section>
+          </pre>
+          <h2>
+            type-line <small>주로 내부 컨텐츠 분리용으로 사용됩니다.</small>
+          </h2>
+          <h3>.tabs<small>li에 active가 붙어있으면 그 탭이 초기에 활성화됨.</small></h3>
+            <div class="tabs type-line">
+              <div class="tab">
+                <ul>
+                  <li><a href="#tab-line-1">tab1</a></li>
+                  <li><a href="#tab-line-2">한글탭2</a></li>
+                  <li class="active"><a href="#tab-line-3">탭명 3</a></li>
+                  <li><a href="#tab-line-4">Dolores sed voluptua et ea.</a></li>
+                  <li><a href="#tab-line-5">Seraphs that peace finds mothernot.</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab-line-1" class="pane">
+                  <p>tab contents3-1</p>
+                  <p>
+                    labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                    vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                  </p>
+                </div>
+                <div id="tab-line-2" class="pane">
+                  <p>tab contents3-2</p>
+                  <p>
+                    crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                    through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                  </p>
+                </div>
+                <div id="tab-line-3" class="pane">
+                  <p>tab contents3-3</p>
+                  <p>
+                    labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                    diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                  </p>
+                </div>
+              </div>
+            </div>
+          <pre class="brush:html">
+            <!-- !NOTE .type-line 를 붙이면 라운드형의 탭으로 변경됩니다. -->
+            <div class="tabs type-line">
+              <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+              <div class="tab"> 
+                <ul>
+                  <li><a href="#tab-rounded-1">tab1</a></li>
+                  <li><a href="#tab-rounded-2">한글탭2</a></li>
+                  <li class="active"><a href="#tab-rounded-3">탭명 3</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab-rounded-1" class="pane">
+                  <!-- contents -->
+                </div>
+                <div id="tab-rounded-2" class="pane">
+                  <!-- contents -->
+                </div>
+                <div id="tab-rounded-3" class="pane">
+                  <!-- contents -->
+                </div>
+              </div>
+            </div>
+          </pre>
+
+          <h3>
+            .type-outlined
+            <small>회원가입 페이지 사용</small>
+          </h3>
+          <div class="tabs type-line type-outlined fluid">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab4-1">N분할 탭1</a></li>
+                <li><a href="#tab4-2">N분할 탭2</a></li>
+                <li class="active"><a href="#tab4-3">N분할 탭3</a></li>
+              </ul>
+            </div>
+
+            <div class="pane-wrap">
+              <div id="tab4-1" class="pane">
+                <p>tab contents4-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab4-2" class="pane">
+                <p>tab contents4-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab4-3" class="pane">
+                <p>tab contents4-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <div class="tabs type-line type-outlined fluid">
+              <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+              <div class="tab"> 
+                <ul>
+                  <li><a href="#tab4-1">N분할 탭1</a></li>
+                  <li><a href="#tab4-2">N분할 탭2</a></li>
+                  <li class="active"><a href="#tab4-3">N분할 탭3</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab4-1" class="pane">
+                  <!-- tab content -->
+                </div>
+                <div id="tab4-2" class="pane">
+                  <!-- tab content -->
+                </div>
+                <div id="tab4-3" class="pane">
+                  <!-- tab content -->
+                </div>
+              </div>
+            </div>
+          </pre>
+
+          <h3>
+            .type-outlined-primary 
+            <small>즐겨찾기 설정 페이지 사용</small>
+          </h3>
+          <div class="tabs type-line type-outlined-primary fluid">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab4-1">N분할 탭1</a></li>
+                <li><a href="#tab4-2">N분할 탭2</a></li>
+                <li class="active"><a href="#tab4-3">N분할 탭3</a></li>
+              </ul>
+            </div>
+
+            <div class="pane-wrap">
+              <div id="tab4-1" class="pane">
+                <p>tab contents4-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab4-2" class="pane">
+                <p>tab contents4-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab4-3" class="pane">
+                <p>tab contents4-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <div class="tabs type-line type-outlined-primary fluid">
+              <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+              <div class="tab"> 
+                <ul>
+                  <li><a href="#tab4-1">N분할 탭1</a></li>
+                  <li><a href="#tab4-2">N분할 탭2</a></li>
+                  <li class="active"><a href="#tab4-3">N분할 탭3</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab4-1" class="pane">
+                  <!-- tab content -->
+                </div>
+                <div id="tab4-2" class="pane">
+                  <!-- tab content -->
+                </div>
+                <div id="tab4-3" class="pane">
+                  <!-- tab content -->
+                </div>
+              </div>
+            </div>
+          </pre>
+
+          <h3>
+            .type-round-box
+            <small>창의적 체험활동 계기 교육 페이지 사용</small>
+          </h3>
+          <div class="tabs type-round-box fluid">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab4-1">N분할 탭1</a></li>
+                <li><a href="#tab4-2">N분할 탭2</a></li>
+                <li class="active"><a href="#tab4-3">N분할 탭3</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+              </ul>
+            </div>
+
+            <div class="pane-wrap">
+              <div id="tab4-1" class="pane">
+                <p>tab contents4-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab4-2" class="pane">
+                <p>tab contents4-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab4-3" class="pane">
+                <p>tab contents4-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <div class="tabs type-round-box fluid">
+              <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+              <div class="tab"> 
+                <ul>
+                  <li><a href="#tab4-1">N분할 탭1</a></li>
+                  <li><a href="#tab4-2">N분할 탭2</a></li>
+                  <li class="active"><a href="#tab4-3">N분할 탭3</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab4-1" class="pane">
+                  <!-- tab content -->
+                </div>
+                <div id="tab4-2" class="pane">
+                  <!-- tab content -->
+                </div>
+                <div id="tab4-3" class="pane">
+                  <!-- tab content -->
+                </div>
+              </div>
+            </div>
+          </pre>
+
+          <h3>
+            이중 탭 .sub-tabs
+            <small>마이페이지 사용 (tabs 내부의 sub-tabs)</small>
+          </h3>
+          <div class="tabs">
+            <div class="tab">
+              <ul>
+                <li class="active"><a href="#tab5-1">탭1</a></li>
+                <li><a href="#tab5-2">탭2</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+              </ul>
+            </div>
+            <div class="pane-wrap">
+              <div id="tab5-1" class="pane">
+                <div class="sub-tabs">
+                  <div class="tab">
+                    <ul>
+                      <li class="active"><a href="#tab5-1-1">내부 탭1</a></li>
+                      <li><a href="#tab5-1-2">내부 탭2</a></li>
+                      <li><a href="#tab5-1-3">내부 탭3</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                    </ul>
+                  </div>
+                  <div class="pane-wrap">
+                    <div id="tab5-1-1" class="pane">
+                      <p>tab contents5-1-1</p>
+                      <p>
+                        labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                        vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                      </p>
+                    </div>
+                    <div id="tab5-1-2" class="pane">
+                      <p>tab contents5-1-2</p>
+                      <p>
+                        labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                        vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                      </p>
+                    </div>
+                    <div id="tab5-1-3" class="pane">
+                      <p>tab contents5-1-3</p>
+                      <p>
+                        labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                        vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab5-2" class="pane">
+                <p>tab contents5-2</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <div class="tabs">
+              <div class="tab">
+                <ul>
+                  <li class="active"><a href="#tab5-1">탭1</a></li>
+                  <li><a href="#tab5-2">탭2</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab5-1" class="pane">
+                  <div class="sub-tabs">
+                    <div class="tab">
+                      <ul>
+                        <li class="active"><a href="#tab5-1-1">내부 탭1</a></li>
+                        <li><a href="#tab5-1-2">내부 탭2</a></li>
+                        <li><a href="#tab5-1-3">내부 탭3</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                      </ul>
+                    </div>
+                    <div class="pane-wrap">
+                      <div id="tab5-1-1" class="pane">
+                        <p>tab contents5-1-1</p>
+                        <p>
+                          labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                          vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                        </p>
+                      </div>
+                      <div id="tab5-1-2" class="pane">
+                        <p>tab contents5-1-2</p>
+                        <p>
+                          labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                          vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                        </p>
+                      </div>
+                      <div id="tab5-1-3" class="pane">
+                        <p>tab contents5-1-3</p>
+                        <p>
+                          labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                          vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab5-2" class="pane">
+                  <p>tab contents5-2</p>
+                  <p>
+                    labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                    vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </pre>
+          <h2>
+            type-rounded
+            <small>서비스 안내에서 사용</small>
+          </h2> 
+          <div class="tabs type-rounded">
+            <div class="tab">
+              <ul>
+                <li><a href="#tab-rounded-1">tab1</a></li>
+                <li><a href="#tab-rounded-2">한글탭2</a></li>
+                <li class="active"><a href="#tab-rounded-3">탭명 3</a></li>
+                <li><a href="#tab-rounded-4">Dolores sed voluptua et ea.</a></li>
+                <li><a href="#tab-rounded-5">Seraphs that peace finds mothernot.</a></li>
+              </ul>
+            </div>
+            <div class="pane-wrap">
+              <div id="tab-rounded-1" class="pane">
+                <p>tab contents3-1</p>
+                <p>
+                  labore ut ea sea erat ut et sadipscing rebum dolor. dolore gubergren ut clita magna et sadipscing nonumy amet. ipsum et invidunt sed et et et ipsum. sanctus sadipscing et ea rebum sea ut dolores sit, et et elitr dolore lorem nonumy sea. dolores ipsum et accusam sed accusam stet duo at ut. kasd justo dolore amet at justo et, rebum est diam sed stet erat eirmod, aliquyam justo
+                  vero labore dolor diam nonumy, clita vero ea sed dolor dolores. tempor sed diam eos est gubergren sit ea dolor eirmod. ipsum sed ipsum sadipscing gubergren kasd amet voluptua voluptua, amet.
+                </p>
+              </div>
+              <div id="tab-rounded-2" class="pane">
+                <p>tab contents3-2</p>
+                <p>
+                  crime mighty counsel whilome bliss but, wrong to shades to steel. sins heavenly harold low later now in satiety ear resolved, almost departed there break it childe ah, mine noontide resolved scene his her though nor. pillared counsel land childe of one, might or from of massy dome. almost long in bacchanals eros his are deigned haply or. heal aught and a to thee. woe the
+                  through relief all would isle land from. fondly rhyme which knew pilgrimage third full.
+                </p>
+              </div>
+              <div id="tab-rounded-3" class="pane">
+                <p>tab contents3-3</p>
+                <p>
+                  labore stet ut et et rebum ipsum, et labore et sed lorem gubergren, sed tempor dolor vero voluptua, labore sea ipsum nonumy sadipscing ipsum ut aliquyam nonumy rebum, sanctus amet kasd sed accusam eos est sadipscing sit, lorem lorem et magna dolores, accusam kasd dolor lorem eos lorem rebum kasd. justo sit et diam clita diam ut accusam. nonumy et invidunt eos accusam ea ipsum
+                  diam et takimata. voluptua clita clita sed dolores ipsum tempor est, kasd dolores sea lorem rebum et et. dolor labore magna lorem lorem diam sea nonumy consetetur tempor. et sed at dolores duo eirmod, et.
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <!-- !NOTE .type-rounded 를 붙이면 라운드형의 탭으로 변경됩니다. -->
+            <div class="tabs type-rounded">
+              <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+              <div class="tab"> 
+                <ul>
+                  <li><a href="#tab-rounded-1">tab1</a></li>
+                  <li><a href="#tab-rounded-2">한글탭2</a></li>
+                  <li class="active"><a href="#tab-rounded-3">탭명 3</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab-rounded-1" class="pane">
+                  <!-- contents -->
+                </div>
+                <div id="tab-rounded-2" class="pane">
+                  <!-- contents -->
+                </div>
+                <div id="tab-rounded-3" class="pane">
+                  <!-- contents -->
+                </div>
+              </div>
+            </div>
+          </pre>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

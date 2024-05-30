@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>color</h1>
+					<section>
+						<h2>pirmary, secondary
+							<small>동일한 클래스명으로 초/중/고 각각의 primary 컬러가 적용됩니다.</small>
+						</h2>
+						<div>
+							<h3>초등</h3>
+              <div style="display: flex;flex-wrap:wrap;gap: 8px 8px;">
+                <span class="color-chip fill-primary">.fill-primary</span>
+                <span class="color-chip fill-primary-400">.fill-primary-400</span>
+                <span class="color-chip fill-secondary">.fill-primary</span>
+                <span class="color-chip fill-tertiary">.fill-tertiary</span>
+                <span class="text-primary">.text-primary</span>
+                <span class="text-primary-400">.text-primary-400</span>
+                <span class="text-secondary">.text-secondary</span>
+              </div>
+						</div>
+            <br />
+            <br />
+            <div>
+              <h3>중학</h3>
+              <iframe src="color-middle.html" frameborder="0"></iframe>
+            </div>
+            <div>
+                <h3>고등</h3>
+              <iframe src="color-high.html" frameborder="0"></iframe>
+            </div>
+					</section>
+					<section>
+						<h2>fill-color : badge 등에서 사용
+              <small>초/중/고 모두 지정된 컬러로 동일하게 적용됩니다.</small>
+            </h2>
+            <div style="display: flex;flex-wrap:wrap;gap: 8px 8px;">
+              <div class="color-chip fill-elementary">.fill-elementary</div>
+              <div class="color-chip fill-middle">.fill-middle</div>
+              <div class="color-chip fill-high">.fill-high</div>
+              <div class="color-chip fill-secondary-elementary">.fill-secondary-elementary</div>
+              <div class="color-chip fill-secondary-middle">.fill-secondary-middle</div>
+              <div class="color-chip fill-secondary-high">.fill-secondary-high</div>
+              <div class="color-chip fill-all-grade">.fill-all-grade</div>
+              <div class="color-chip fill-white">.fill-white</div>
+              <div class="color-chip fill-black">.fill-black</div>
+              <div class="color-chip fill-purple">.fill-purple</div>
+              <div class="color-chip fill-orange">.fill-orange</div>
+              <div class="color-chip fill-skyblue">.fill-skyblue</div>
+              <div class="color-chip fill-green">.fill-green</div>
+              <div class="color-chip fill-lighten text-black">.fill-lighten</div>
+              <div class="color-chip fill-light">.fill-light</div>
+              <div class="color-chip fill-dark">.fill-dark</div>
+              <div class="color-chip fill-tertiary">.fill-tertiary</div>
+              <div class="color-chip fill-error">.fill-error</div>
+              <div class="color-chip fill-new">.fill-new</div>
+            </div>
+            <pre class="brush:html">
+              <div class="fill-elementary">.fill-elementary</div>
+              <div class="fill-middle">.fill-middle</div>
+              <div class="fill-high">.fill-high</div>
+              <div class="fill-all-grade">.fill-all-grade</div>
+              <div class="fill-white">.fill-white</div>
+              <div class="fill-black">.fill-black</div>
+              <div class="fill-purple">.fill-purple</div>
+              <div class="fill-orange">.fill-orange</div>
+              <div class="fill-skyblue">.fill-skyblue</div>
+              <div class="fill-green">.fill-green</div>
+              <div class="fill-lighten">.fill-lighten</div>
+              <div class="fill-light">.fill-light</div>
+              <div class="fill-dark">.fill-dark</div>
+              <div class="fill-error">.fill-error</div>
+              <div class="fill-new">.fill-new</div>
+            </pre>
+					</section>
+          <section>
+            <h2>text-color</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 15%;" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>elementary</th>
+                  <td class="text-elementary">텍스트 컬러 .text-elementary</td>
+                </tr>
+                <tr>
+                  <th>middle</th>
+                  <td class="text-middle">텍스트 컬러 .text-middle</td>
+                </tr>
+                <tr>
+                  <th>high</th>
+                  <td class="text-high">텍스트 컬러 .text-high</td>
+                </tr>
+                <tr>
+                  <th>all-grade</th>
+                  <td class="text-all-grade">텍스트 컬러 .text-all-grade</td>
+                </tr>
+                <tr>
+                  <th>white</th>
+                  <td class="fill-dark text-white">텍스트 컬러 .text-white</td>
+                </tr>
+                <tr>
+                  <th>black</th>
+                  <td class="text-black">텍스트 컬러 .text-black</td>
+                </tr>
+                <tr>
+                  <th>purple</th>
+                  <td class="text-purple">텍스트 컬러 .text-purple</td>
+                </tr>
+                <tr>
+                  <th>orange</th>
+                  <td class="text-orange">텍스트 컬러 .text-orange</td>
+                </tr>
+                <tr>
+                  <th>skyblue</th>
+                  <td class="text-skyblue">텍스트 컬러 .text-skyblue</td>
+                </tr>
+                <tr>
+                  <th>green</th>
+                  <td class="text-green">텍스트 컬러 .text-green</td>
+                </tr>
+                <tr>
+                  <th>dark</th>
+                  <td class="text-dark">텍스트 컬러 .text-dark</td>
+                </tr>
+                <tr>
+                  <th>primary</th>
+                  <td class="text-primary">텍스트 컬러 .text-primary</td>
+                </tr>
+                <tr>
+                  <th>primary-400</th>
+                  <td class="text-primary-400">텍스트 컬러 .text-primary-400</td>
+                </tr>
+                <tr>
+                  <th>secondary</th>
+                  <td class="text-secondary">텍스트 컬러 .text-secondary</td>
+                </tr>
+                <tr>
+                  <th>tertiary</th>
+                  <td class="text-tertiary">텍스트 컬러 .text-tertiary</td>
+                </tr>
+                <tr>
+                  <th>error</th>
+                  <td class="text-error">텍스트 컬러 .text-error</td>
+                </tr>
+                <tr>
+                  <th>new</th>
+                  <td class="text-new">텍스트 컬러 .text-new</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <p><span class="text-white">.text-white 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-dark">.text-dark 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-black">.text-black 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-error">.text-error 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-primary">.text-primary 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-secondary">.text-secondary 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-skyblue">.text-skyblue 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-purple">.text-purple 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-orange">.text-orange 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-tertiary">.text-tertiary 클래스 </span> 텍스트 컬러 샘플</p>
+            </pre>
+          </section>
+          <section>
+            <h2>new</h2>
+            <span class="new">n</span>
+            <pre class="brush:html">
+              <span class="new">n</span>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <link href="/assets/mobile/css/pages/common/policy.css" rel="stylesheet" /><!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <main id="main-contents">
+        <button type="button" class="button" target-obj="refusal-email">이메일 무단 수집 거부</button>
+      </main>
+    </div>
+    <div class="popup-sheet" id="refusal-email" init-show>
+      <div class="popup-container type-fix-height policy">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>닫기 아이콘</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header"> 이메일 무단 수집 거부 </div>
+        <div class="body">
+          <div class="posting-date">
+            <svg>
+              <title>아이콘 - icon-check-half-rounded</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-check-half-rounded"></use>
+            </svg> 게시일 2020-12-28
+          </div>
+          <div class="policy-wrap email">
+            <img src="/assets/images/common/img-policy-email@x2.svg" alt="이메일 무단 수집 거부 이미지">
+            <p class="title">엠티처 홈페이지 내<br />이메일주소 무단 수집 거부</p>
+            <p> 본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반 시 정보통신망 이용 촉진 및 정보 보호 등에 관한 법률 등에 의해 형사 처벌됨을 유념하시기 바랍니다. </p>
+            <p>불법스팸대응센터 : <span class="underlined">www.spamcop.or.kr</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

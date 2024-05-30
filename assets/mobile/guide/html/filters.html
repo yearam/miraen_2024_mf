@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <main id="main-contents">
+        <h1>Filters</h1>
+        <section class="fluid">
+          <h2>
+            default
+            <small>2depth가 열리는 타입이 기본입니다.</small>
+          </h2>
+          <div class="filter-wrap">
+            <div class="filters">
+              <div class="buttons type-rounded scrollable-x">
+                <!-- !NOTE button 클릭시 active가 생깁니다. -->
+                <button type="button">
+                  카테고리
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  학년 
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  테마 
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  구분 
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  카테고리
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <button type="button" class="filter-button" target-obj="popup-sheet">
+                <svg>
+                  <title>필터 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                </svg>
+              </button>
+            </div>
+            <!-- !NOTE filters의 버튼을 클릭하면 filter-items에 display-show가 생깁니다.  -->
+            <div class="filter-items">
+              <div class="slides">
+                <div class="swiper-wrapper">
+                  <!-- !NOTE 6개 이상부터 슬라이드 동작합니다. 
+                    슬라이드가 페이지 단위로 넘어가기 위해 6개 단위로 슬라이드 생성되야 합니다. 
+                    (ex. 필터가 10개 인경우 빈슬라이드 2개 생성 필요) -->
+                  <div class="swiper-slide"><button type="button">카테고리 항목 최대 20자 카테고리</button></div>
+                  <div class="swiper-slide"><button type="button">카테고리 항목</button></div>
+                  <div class="swiper-slide"><button type="button" disabled="">카테고리 항목 unchecked</button></div>
+                  <div class="swiper-slide"><button type="button">1학년</button></div>
+                  <div class="swiper-slide"><button type="button">2학년</button></div>
+                  <div class="swiper-slide"><button type="button">3학년</button></div>
+                  <div class="swiper-slide"><button type="button">4학년</button></div>
+                  <div class="swiper-slide"><button type="button">5학년</button></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <div class="filter-wrap">
+              <div class="filters">
+                <div class="buttons type-rounded scrollable-x">
+                  <!-- !NOTE button 클릭시 active가 생깁니다. -->
+                  <button type="button">
+                    카테고리
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    학년 
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    테마 
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    구분 
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    카테고리
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button type="button" class="filter-button" target-obj="popup-sheet">
+                  <svg>
+                    <title>필터 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- !NOTE filters의 버튼을 클릭하면 filter-items에 display-show가 생깁니다.  -->
+              <div class="filter-items">
+                <div class="slides">
+                  <div class="swiper-wrapper">
+                    <!-- !NOTE 6개 이상부터 슬라이드 동작합니다. 
+                      슬라이드가 페이지 단위로 넘어가기 위해 6개 단위로 슬라이드 생성되야 합니다. 
+                      (ex. 필터가 10개 인경우 빈슬라이드 2개 생성 필요) -->
+                    <div class="swiper-slide"><button type="button">카테고리 항목 최대 20자 카테고리</button></div>
+                    <div class="swiper-slide"><button type="button">카테고리 항목</button></div>
+                    <div class="swiper-slide"><button type="button" disabled="">카테고리 항목 unchecked</button></div>
+                    <div class="swiper-slide"><button type="button">1학년</button></div>
+                    <div class="swiper-slide"><button type="button">2학년</button></div>
+                    <div class="swiper-slide"><button type="button">3학년</button></div>
+                    <div class="swiper-slide"><button type="button">4학년</button></div>
+                    <div class="swiper-slide"><button type="button">5학년</button></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </pre>
+
+          <h3>.type-section
+            <small>nav 하단에 바로붙을 시 상단 보더가 없는 경우 입니다.</small>
+          </h3>
+          <div class="filter-wrap type-section">
+            <div class="filters">
+              <div class="buttons type-rounded scrollable-x">
+                <!-- !NOTE button 클릭시 active가 생깁니다. -->
+                <button type="button">
+                  카테고리
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  학년 
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  테마 
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  구분 
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  카테고리
+                  <svg>
+                    <title>화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <button type="button" class="filter-button" target-obj="popup-sheet">
+                <svg>
+                  <title>필터 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                </svg>
+              </button>
+            </div>
+            <!-- !NOTE filters의 버튼을 클릭하면 filter-items에 display-show가 생깁니다.  -->
+            <div class="filter-items">
+              <div class="slides">
+                <div class="swiper-wrapper">
+                  <!-- !NOTE 6개 이상부터 슬라이드 동작합니다. 
+                    슬라이드가 페이지 단위로 넘어가기 위해 6개 단위로 슬라이드 생성되야 합니다. 
+                    (ex. 필터가 10개 인경우 빈슬라이드 2개 생성 필요) -->
+                  <div class="swiper-slide"><button type="button">카테고리 항목 최대 20자 카테고리</button></div>
+                  <div class="swiper-slide"><button type="button">카테고리 항목</button></div>
+                  <div class="swiper-slide"><button type="button">1학년</button></div>
+                  <div class="swiper-slide"><button type="button">2학년</button></div>
+                  <div class="swiper-slide"><button type="button">3학년</button></div>
+                  <div class="swiper-slide"><button type="button">4학년</button></div>
+                  <div class="swiper-slide"><button type="button">5학년</button></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <pre class="brush:html">
+            <div class="filter-wrap type-section">
+              <div class="filters">
+                <div class="buttons type-rounded scrollable-x">
+                  <!-- !NOTE button 클릭시 active가 생깁니다. -->
+                  <button type="button">
+                    카테고리
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    학년 
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    테마 
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    구분 
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    카테고리
+                    <svg>
+                      <title>화살표 아이콘</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button type="button" class="filter-button" target-obj="popup-sheet">
+                  <svg>
+                    <title>필터 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- !NOTE filters의 버튼을 클릭하면 filter-items에 display-show가 생깁니다.  -->
+              <div class="filter-items">
+                <div class="slides">
+                  <div class="swiper-wrapper">
+                    <!-- !NOTE 6개 이상부터 슬라이드 동작합니다. 
+                      슬라이드가 페이지 단위로 넘어가기 위해 6개 단위로 슬라이드 생성되야 합니다. 
+                      (ex. 필터가 10개 인경우 빈슬라이드 2개 생성 필요) -->
+                    <div class="swiper-slide"><button type="button">카테고리 항목 최대 20자 카테고리</button></div>
+                    <div class="swiper-slide"><button type="button">카테고리 항목</button></div>
+                    <div class="swiper-slide"><button type="button">1학년</button></div>
+                    <div class="swiper-slide"><button type="button">2학년</button></div>
+                    <div class="swiper-slide"><button type="button">3학년</button></div>
+                    <div class="swiper-slide"><button type="button">4학년</button></div>
+                    <div class="swiper-slide"><button type="button">5학년</button></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </pre>
+        </section>
+        <section class="fluid">
+          <h2>multi selection
+            <small>기본 사이즈는 height 32px입니다.</small>
+          </h2>
+          <div class="filters">
+            <div class="buttons type-rounded scrollable-x">
+              <span>
+                <input type="checkbox" name="checkbox11" id="filter11-1" checked="">
+                <label for="filter11-1">전체</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox11" id="filter11-2" disabled="">
+                <label for="filter11-2">checkbox unchecked</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox11" id="filter11-3">
+                <label for="filter11-3">checkbox</label>
+              </span>
+              <span>
+                <input type="checkbox" name="checkbox11" id="filter11-4">
+                <label for="filter11-4">checkbox </label>
+              </span>
+            </div>
+            <button type="button" class="filter-button" target-obj="popup-sheet">
+              <svg>
+                <title>필터 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+              </svg>
+            </button>
+          </div>
+          <pre class="brush:html">
+            <div class="filters">
+              <div class="buttons type-rounded scrollable-x">
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-1" checked="">
+                  <label for="filter11-1">전체</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-2" disabled="">
+                  <label for="filter11-2">checkbox unchecked</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-3">
+                  <label for="filter11-3">checkbox</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkbox11" id="filter11-4">
+                  <label for="filter11-4">checkbox </label>
+                </span>
+              </div>
+              <button type="button" class="filter-button" target-obj="popup-sheet">
+                <svg>
+                  <title>필터 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                </svg>
+              </button>
+            </div>
+          </pre>
+        </section>
+        <section class="fluid">
+          <h2>single selection
+            <small>기본 사이즈는 height 32px입니다.</small>
+          </h2>
+          <div class="filters">
+            <div class="buttons type-rounded scrollable-x">
+              <span>
+                <input type="radio" name="radio1" id="radio1-1" checked="">
+                <label for="radio1-1">전체</label>
+              </span>
+              <span>
+                <input type="radio" name="radio1" id="radio1-2" disabled="">
+                <label for="radio1-2">radio unchecked</label>
+              </span>
+              <span>
+                <input type="radio" name="radio1" id="radio1-3">
+                <label for="radio1-3">radio</label>
+              </span>
+              <span>
+                <input type="radio" name="radio1" id="radio1-4">
+                <label for="radio1-4">radio</label>
+              </span>
+            </div>
+            <button type="button" class="filter-button" target-obj="single-selection">
+              <svg>
+                <title>필터 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+              </svg>
+            </button>
+          </div>
+          <pre class="brush:html">
+            <div class="filters">
+              <div class="buttons type-rounded scrollable-x">
+                <span>
+                  <input type="radio" name="radio1" id="radio1-1" checked="">
+                  <label for="radio1-1">전체</label>
+                </span>
+                <span>
+                  <input type="radio" name="radio1" id="radio1-2" disabled="">
+                  <label for="radio1-2">radio unchecked</label>
+                </span>
+                <span>
+                  <input type="radio" name="radio1" id="radio1-3">
+                  <label for="radio1-3">radio</label>
+                </span>
+                <span>
+                  <input type="radio" name="radio1" id="radio1-4">
+                  <label for="radio1-4">radio</label>
+                </span>
+              </div>
+              <button type="button" class="filter-button" target-obj="popup-sheet">
+                <svg>
+                  <title>필터 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                </svg>
+              </button>
+            </div>
+          </pre>
+        </section>
+        <section class="fluid">
+          <h2>accordion-filters
+            <small>창의적 체험활동의 계기교육 아코디언 필터 입니다. <br /> 버튼 기본 사이즈 height 28px입니다.</small>
+          </h2>
+          <ul class="accordion-filters">
+            <!-- NOTE 아코디언 버튼 클릭시 li에 active가 추가 됩니다. -->
+            <li>
+              <p class="title">주제수업</p>
+              <div class="buttons type-rounded">
+                <a href="#">주제 최대 20자</a>
+                <a href="#" class="disabled">unchecked</a>
+                <a href="#">입춘</a>
+                <a href="#">주제수업을 노출합니다</a>
+                <a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십</a>
+              </div>
+              <button type="button">
+                <svg>
+                  <title>화살표 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <p class="title">행사명</p>
+              <div class="buttons type-rounded type-secondary">
+                <a href="#">행사명 최대 20자</a>
+                <a href="#" class="disabled">unchecked</a>
+                <a href="#">입춘</a>
+                <a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십</a>
+                <a href="#">행사명</a>
+              </div>
+              <button type="button">
+                <svg>
+                  <title>화살표 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <div class="popup-sheet" id="popup-sheet">
+      <div class="popup-container">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>닫기 아이콘</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          필터
+        </div>
+        <div class="body fluid">
+          <div class="accordion">
+            <ul class="filter-list">
+              <!-- full set : .action 이 아코디언 클릭영역 .pane이 펼쳐지는 영역 컨트롤 클래스 입니다. -->
+              <li>
+                <a href="" class="list-depth action">
+                  <div class="header-wrap">
+                    <h3>카테고리 이름 출력최대15자</h3>
+                    <span class="extra">1학년, 2학년, 3학년, 6학년</span>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="filter-items">
+                    <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                    <button type="button">카테고리 항목 최대 10개</button>
+                    <button type="button">카테고리 항목</button>
+                    <button type="button">카테고리 항목</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="list-depth action">
+                  <div class="header-wrap">
+                    <h3>카테고리 이름 출력</h3>
+                    <span class="extra">온/오프, 온라인</span>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="filter-items">
+                    <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                    <button type="button">카테고리 항목 최대 10개</button>
+                    <button type="button">카테고리 항목</button>
+                    <button type="button">카테고리 항목</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="list-depth action">
+                  <div class="header-wrap">
+                    <h3>옵션1</h3>
+                    <span class="extra">1학년, 2학년, 3학년, 6학년</span>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="filter-items">
+                    <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                    <button type="button">카테고리 항목 최대 10개</button>
+                    <button type="button" disabled="">카테고리 항목 unchecked</button>
+                    <button type="button">1학년</button>
+                    <button type="button">2학년</button>
+                    <button type="button">3학년</button>
+                    <button type="button">4학년</button>
+                    <button type="button">5학년</button>
+                    <button type="button">6학년</button>
+                    <button type="button">카테고리 항목 이름 정보 출력 최대 2줄</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="list-depth action">
+                  <div class="header-wrap">
+                    <h3>옵션2</h3>
+                    <span class="extra">나의 생활, 가족과 이웃, 학교 생활, 나의 생활</span>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="filter-items">
+                    <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                    <button type="button">카테고리 항목 최대 10개</button>
+                    <button type="button">카테고리 항목</button>
+                    <button type="button">카테고리 항목</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="list-depth action">
+                  <div class="header-wrap">
+                    <h3>옵션3</h3>
+                    <span class="extra">온/오프, 온라인</span>
+                  </div>
+                </a>
+                <div class="pane">
+                  <div class="filter-items">
+                    <button type="button">카테고리 항목 최대 20자 카테고리</button>
+                    <button type="button">카테고리 항목 최대 10개</button>
+                    <button type="button">카테고리 항목</button>
+                    <button type="button">카테고리 항목</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer">
+          <button class="button size-md">
+            <svg>
+              <title>초기화 아이콘</title>
+              <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+            </svg>
+            초기화
+          </button>
+          <button class="button size-md type-primary">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup-sheet" id="single-selection">
+      <div class="popup-container">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>닫기 아이콘</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          자료 유형
+        </div>
+        <div class="body">
+          <div class="buttons type-rounded type-primary-active-line gutter-sm">
+            <span>
+              <input type="checkbox" name="checkbox4" id="buttons6-1" checked="">
+              <label for="buttons6-1">option1</label>
+            </span>
+            <span>
+              <input type="checkbox" name="checkbox4" id="buttons6-2" disabled="">
+              <label for="buttons6-2">option2 unchecked</label>
+            </span>
+            <span>
+              <input type="checkbox" name="checkbox4" id="buttons6-3">
+              <label for="buttons6-3">option3</label>
+            </span>
+            <span>
+              <input type="checkbox" name="checkbox4" id="buttons6-4">
+              <label for="buttons6-4">option4</label>
+            </span>
+            <span>
+              <input type="checkbox" name="checkbox4" id="buttons6-5">
+              <label for="buttons6-5">option5</label>
+            </span>
+            <span>
+              <input type="checkbox" name="checkbox4" id="buttons6-6">
+              <label for="buttons6-6">option6</label>
+            </span>
+          </div>
+        </div>
+        <div class="footer">
+          <button class="button size-md">
+            <svg>
+              <title>초기화 아이콘</title>
+              <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+            </svg>
+            초기화
+          </button>
+          <button class="button size-md type-primary">선택 적용</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <header class="header util-menu">
+        <div class="header-inner">
+          <div class="common-nav">
+            <a href="#" target="_blank">초등</a>
+            <a href="#" target="_blank">중학</a>
+            <a href="#" target="_blank">고등</a>
+            <div class="dropdown">
+              <button type="button"> 교과서 홍보관 <svg>
+                  <title>아이콘 화살표</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                </svg>
+              </button>
+              <div class="items">
+                <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <a href="#">엠티처 바로 접속</a>
+            <a href="#">즐겨찾기 추가</a>
+          </div>
+          <div class="common-nav">
+            <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                <title>아이콘 - icon-play-rounded</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="aiclass">AI Class</a>
+            <a href="#" target="_blank" class="mkaive">M카이브</a>
+            <a href="#">로그아웃</a>
+            <a href="#" target="_blank">마이페이지</a>
+            <a href="#" target="_blank">고객센터</a>
+            <a href="#" target="_blank">이벤트</a>
+          </div>
+        </div>
+        <div class="util-wrap">
+          <div class="inner">
+            <h1 class="util-logo">
+              <div class="dropdown">
+                <button type="button" class="button type-text">
+                  <img src="/assets/images/common/logo-common.svg" alt="엠티처 로고" />
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중학"> 중학 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="고등"> 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div> 마이페이지
+            </h1>
+            <div class="search-box">
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요">
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search-lg"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <!-- !NOTE : 기존 .header-inner class를 .gnb-wrap로 변경하여 스타일 수정 하였습니다. -->
+          <div class="gnb-wrap">
+            <!-- !NOTE : 기존 .gnb-wrap class를 .gnb-inner로 변경하여 스타일 수정 하였습니다. -->
+            <div class="gnb-inner">
+              <!-- !NOTE : 
+            1차 오픈을 위해 필터링 스크립트 처리 되어 있습니다. 교과서 이미지명 데이터가 들어가면 필터링 처리 됩니다.  데이터 바인딩 후 data- 접두사 붙어 있는 attribute는 삭제하시면 됩니다.
+          -->
+              <nav class="gnb">
+                <ul>
+                  <li class="active">
+                    <a href="#">My Class</a>
+                  </li>
+                  <li>
+                    <a href="#">나의 정보</a>
+                  </li>
+                  <li>
+                    <a href="#">나의 문의</a>
+                  </li>
+                  <li>
+                    <a href="#">게시글 관리</a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- // gnb -->
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <main id="main-contents">
+          <div class="page-header">
+            <h2>My Class</h2>
+          </div>
+          <form action="submit" class="form">
+            <div class="tabs fluid">
+              <div class="tab">
+                <ul>
+                  <li><a href="#tab1">즐겨찾기</a></li>
+                  <li><a href="#tab2">스크랩</a></li>
+                  <li class="active"><a href="#tab3">내 자료</a></li>
+                </ul>
+              </div>
+              <div class="pane-wrap">
+                <div id="tab1" class="pane">
+                </div>
+                <div id="tab2" class="pane">
+                </div>
+                <div id="tab3" class="pane">
+                  <div class="filter-wrap">
+                    <div class="filters">
+                      <fieldset class="no-margin">
+                        <select name="" id="" disabled>
+                          <option value="" selected>초등</option>
+                        </select>
+                        <select name="" id="">
+                          <option value="" selected>개정 전체</option>
+                          <option value="">2015</option>
+                          <option value="">2022</option>
+                        </select>
+                        <select name="" id="">
+                          <option value="" selected>학년 전체</option>
+                          <option value="">1학년</option>
+                          <option value="">2학년</option>
+                          <option value="">3학년</option>
+                          <option value="">4학년</option>
+                          <option value="">5학년</option>
+                          <option value="">6학년</option>
+                        </select>
+                        <select name="" id="">
+                          <option value="" selected>과목 전체</option>
+                          <option value="">국어</option>
+                          <option value="">영어</option>
+                          <option value="">수학</option>
+                          <option value="">사회</option>
+                          <option value="">과학</option>
+                        </select>
+                        <select name="" id="">
+                          <option value="" selected>교과서 전체</option>
+                          <option value="">미래엔 교과서</option>
+                          <option value="">타사 교과서</option>
+                          <option value="">천재 교과서</option>
+                        </select>
+                        <div class="input-inner-extra">
+                          <input type="search" name="" id="" placeholder="검색어를 입력해 주세요">
+                          <button class="icon-button" title="검색">
+                            <svg>
+                              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="utility">
+                    <button type="button" class="button size-md" title="선택 삭제">
+                      <svg>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                      </svg> 선택 삭제 </button>
+                    <button type="button" class="button size-md" title="내 링크 등록">
+                      <svg>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-link"></use>
+                      </svg> 내 링크 등록 </button>
+                  </div>
+                  <!-- !NOTE : .filter-wrap에서 선택한 값 대로 table이 노출되어야 합니다. -->
+                  <div class="table-items"><!--  margin-top-lg -->
+                    <table>
+                      <caption> 내 자료 테이블 </caption>
+                      <colgroup>
+                        <col width="7%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="*">
+                        <col width="13%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">
+                            <span class="ox">
+                              <input type="checkbox" id="all-check">
+                              <label for="all-check"></label>
+                            </span>
+                          </th>
+                          <th scope="col">NO</th>
+                          <th scope="col">구분</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">등록일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="5" class="no-hover">
+                            <div class="box-no-data"> 등록된 내 자료가 없습니다. </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>40</td>
+                          <td><span class="badge type-round-box size-sm fill-secondary">나만보기</span></td>
+                          <td class="text-left">
+                            <a href="#">
+                              <div class="inline-wrap">
+                                <p class="title">자료명이 모두 노출됩니다. 제목이 길어지는 경우 줄바꿈으로 진행됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>39</td>
+                          <td><span class="badge type-round-box size-sm fill-green">함께보기</span></td>
+                          <td class="text-left">
+                            <a href="#" target="_blank">
+                              <div class="inline-wrap">
+                                <p class="title">링크명이 최대 30자 까지 노출됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>38</td>
+                          <td><span class="badge type-round-box size-sm fill-secondary">나만보기</span></td>
+                          <td class="text-left">
+                            <a href="#">
+                              <div class="inline-wrap">
+                                <p class="title">자료명이 모두 노출됩니다. 제목이 길어지는 경우 줄바꿈으로 진행됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>37</td>
+                          <td><span class="badge type-round-box size-sm fill-green">함께보기</span></td>
+                          <td class="text-left">
+                            <a href="#" target="_blank">
+                              <div class="inline-wrap">
+                                <p class="title">링크명이 최대 30자 까지 노출됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>36</td>
+                          <td><span class="badge type-round-box size-sm fill-secondary">나만보기</span></td>
+                          <td class="text-left">
+                            <a href="#">
+                              <div class="inline-wrap">
+                                <p class="title">자료명이 모두 노출됩니다. 제목이 길어지는 경우 줄바꿈으로 진행됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>35</td>
+                          <td><span class="badge type-round-box size-sm fill-green">함께보기</span></td>
+                          <td class="text-left">
+                            <a href="#" target="_blank">
+                              <div class="inline-wrap">
+                                <p class="title">링크명이 최대 30자 까지 노출됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>34</td>
+                          <td><span class="badge type-round-box size-sm fill-secondary">나만보기</span></td>
+                          <td class="text-left">
+                            <a href="#">
+                              <div class="inline-wrap">
+                                <p class="title">자료명이 모두 노출됩니다. 제목이 길어지는 경우 줄바꿈으로 진행됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>33</td>
+                          <td><span class="badge type-round-box size-sm fill-green">함께보기</span></td>
+                          <td class="text-left">
+                            <a href="#" target="_blank">
+                              <div class="inline-wrap">
+                                <p class="title">링크명이 최대 30자 까지 노출됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>32</td>
+                          <td><span class="badge type-round-box size-sm fill-secondary">나만보기</span></td>
+                          <td class="text-left">
+                            <a href="#">
+                              <div class="inline-wrap">
+                                <p class="title">자료명이 모두 노출됩니다. 제목이 길어지는 경우 줄바꿈으로 진행됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="ox">
+                              <input type="checkbox" id="check-1">
+                              <label for="check-1"></label>
+                            </span>
+                          </td>
+                          <td>31</td>
+                          <td><span class="badge type-round-box size-sm fill-green">함께보기</span></td>
+                          <td class="text-left">
+                            <a href="#" target="_blank">
+                              <div class="inline-wrap">
+                                <p class="title">링크명이 최대 30자 까지 노출됩니다.</p>
+                                <svg class="icon-size-sm">
+                                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single"></use>
+                                </svg>
+                              </div>
+                              <ul class="divider-group type-brace">
+                                <li>YYYY개정</li>
+                                <li>N학년</li>
+                                <li>N학기</li>
+                                <li>과목이름</li>
+                                <li>대단원명</li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>YYYY-MM-DD</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="pagination">
+                    <button class="icon-button icon-first" disabled="">
+                      <svg>
+                        <title>첫페이지 아이콘</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                      </svg>
+                    </button>
+                    <button class="icon-button icon-prev" disabled="">
+                      <svg>
+                        <title>이전 아이콘</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                      </svg>
+                    </button>
+                    <button>1</button>
+                    <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+                    <button class="current">2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button class="icon-button icon-next">
+                      <svg>
+                        <title>다음 아이콘</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <button class="icon-button icon-last">
+                      <svg>
+                        <title>마지막페이지 아이콘</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="quick-menu" style="right:300px">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-miraen"></use>
+          </svg>
+        </span>
+        <div class="user-status">
+          <p class="user-name">로그인</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="login-box">
+          <form action="submit" class="form login-form">
+            <div class="input-wrap">
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-user"></use>
+                </svg>
+                <input type="search" name="" id="id" placeholder="아이디" title="ID" />
+              </div>
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-password"></use>
+                </svg>
+                <input type="password" name="" id="pw" placeholder="비밀번호" title="Password" />
+              </div>
+            </div>
+            <span class="ox login-ox">
+              <input type="checkbox" id="save-id" />
+              <label for="save-id">아이디 저장</label>
+            </span>
+            <button type="submit" class="fluid login-button">로그인</button>
+          </form>
+          <ul class="divider-group">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">ID&#47;PW 찾기</a></li>
+          </ul>
+          <div class="sns-box">
+            <button type="button" class="facebook" title="페이스북 로그인"></button>
+            <button type="button" class="kakao" title="카카오 로그인"></button>
+            <button type="button" class="naver" title="네이버 로그인"></button>
+            <button type="button" class="google" title="구글 로그인"></button>
+            <button type="button" class="whale" title="웨일 로그인"></button>
+          </div>
+        </div>
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <h4 class="text-primary"> 즐겨찾기 된<br />서비스가 없습니다. </h4>
+              <hr class="no-margin margin-top-lg">
+              <p class="margin-top-md"> 내가 수업하는<br /> 미래엔 교과서를 등록해<br /> 보세요 </p>
+              <button type="button" class="button type-secondary size-md margin-top-md"> 서비스 즐겨찾기 <svg>
+                  <title>아이콘 - icon-plus</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="quick-menu is-login on">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">3학년</span>
+        <div class="user-status">
+          <p class="user-name">홍길동</p>
+          <p class="school-name">미래엔 초등학교</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <ul class="menu-list">
+          <!-- icon버튼으로 바꾸기 -->
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick-logined">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <ul class="ul-dot size-sm">
+                <li><a href="#">국어 3-1 &#40;가&#41;</a></li>
+                <li><a href="#">국어 3-1 &#40;나&#41; &#40;도봉순&#41;</a></li>
+                <li><a href="#">수학 3-1</a></li>
+                <li><a href="#">사회 3-1</a></li>
+                <li><a href="#">과학 3-1</a></li>
+                <li><a href="#">도덕 3</a></li>
+                <li><a href="#">음악 3</a></li>
+                <li><a href="#">미술 3</a></li>
+                <li><a href="#">체육 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-write.svg" alt="판서 아이콘" /> 판서 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-timer.svg" alt="타이머 아이콘" /> 타이머 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-clipping.svg" alt="깜깜이 아이콘" /> 깜깜이 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-loudspeaker.svg" alt="주의집중 아이콘" /> 주의집중 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-presenter.svg" alt="발표자 선정 아이콘" /> 발표자 선정 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-marker.svg" alt="모둠 점수판 아이콘" /> 모둠 점수판 </a>
+          </li>
+        </ul>
+        <div class="bottom-buttons">
+          <a href="#" class="bottom-button">마이페이지</a>
+          <button type="button" class="bottom-button">로그아웃</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="reg-my-link">
+      <div class="popup-container size-lg">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          <h3>내 링크 등록</h3>
+        </div>
+        <form action="">
+          <div class="body">
+            <div class="box-gray padding-sm text-black"> 수업에 활용하실 참고 사이트나, 영상 링크를 등록 하시면 학습 목차에 추가하여 편리하게 사용하실 수 있습니다. </div>
+            <div class="forms">
+              <label for="link-name">링크명</label>
+              <fieldset>
+                <input type="text" title="링크명" class="size-xl" name="" id="link-name" placeholder="3자 ~ 30자 까지의 자료명을 입력해 주세요.">
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms">
+              <label for="link-url">링크 URL</label>
+              <fieldset>
+                <input type="text" title="링크 URL" class="size-xl" name="" id="link-url" placeholder="">
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div>
+              <p class="text-black title-label">교과 정보</p>
+              <div class="roundbox-outlined split-vertical-line">
+                <div class="section">
+                  <ul class="divider-group type-brace">
+                    <li>5학년</li>
+                    <li>2학기</li>
+                    <li>국어(가)</li>
+                    <li>1-(1)</li>
+                    <li>121차시</li>
+                  </ul>
+                  <p class="text-xs text-black ellipsis-multi">
+                    <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹</strong>
+                  </p>
+                  <span class="badge type-rounded fill-light"> 사회 10~36쪽 </span>
+                </div>
+                <div class="extra align-middle">
+                  <button type="button" class="button size-md"> 교과 변경 <svg>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="title-label">
+                <p class="text-black">자료 구분</p>
+                <button type="button" class="tooltip-trigger" data-title="자료 구분" data-trigger="hover" data-placement="auto-bottom" data-container="popup-container" data-style="theme-primary">
+                  <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                </button>
+                <div class="webui-popover-content">
+                  <ul class="ul-dot">
+                    <li class="text-xs">나만 보기 : 업로드 한 자료는 내 자료에 저장되고, 내 수업에서만 활용할 수 있습니다.</li>
+                    <li class="text-xs">함께 보기 : 업로드 한 자료는 내 자료에 저장되고, 모든 선생님이 수업에 함께 활용할 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ox-group">
+                <span class="ox">
+                  <input type="radio" name="data" id="ox-data-1">
+                  <label for="ox-data-1">나만 보기</label>
+                </span>
+                <span class="ox">
+                  <input type="radio" name="data" id="ox-data-2" checked="">
+                  <label for="ox-data-2">함께 보기</label>
+                </span>
+              </div>
+            </div>
+            <!-- !NOTE : 함께 보기 radio가 checked 일 때 저작권 및 활용동의 박스가 노출 됩니다. -->
+            <div class="box-info padding-md">
+              <span class="ox">
+                <input type="checkbox" name="agree" id="ox-agree">
+                <label for="ox-agree">저작권 및 활용 동의</label>
+              </span>
+              <p class="margin-top-sm text-xs">본 자료에 사용된 폰트, 이미지, 영상 등의 모든 콘텐츠는 저작권법에 위배되지 않으며, 함께 보기로 업로드 한 자료는 엠티처 사이트 내 자유롭게 활용될 수 있음에 동의합니다.</p>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="button size-xl type-dark" close-obj>취소</button>
+            <button class="button size-xl type-primary">확인</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

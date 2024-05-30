@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper teacher-live">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>쌤OTT</h2>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">LIVE 강연</a>
+            <a href="#">혁신수업N</a>
+            <a href="#">쌤OTT</a>
+            <a href="#">콘텐츠</a>
+            <a href="#">자료나눔</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="size-lg">
+          <div class="channel-title">
+            <div class="image-wrap type-rounded">
+              <img src="/assets/images/temp/img-channel-title@x2.png" alt="">
+            </div>
+            <div class="text-wrap">
+              <p class="title">교육 연극 수업</p>
+              <p class="desc"> 생생한 이야기로 풍부한 감성과 무한한 창의력을 키워주는 교육 연극 수업입니다.<br /> 누구나 쉽게 따라하는 교육연극 수업의 모든 것! 생생한 이야기로 풍부한 감성과 무한한 창의력을 키워주는 교육 연극 수업입니다.<br /> 누구나 쉽게 따라하는 교육연극 수업의 모든 것! </p>
+            </div>
+          </div>
+        </section>
+        <section class="full type-thick">
+          <div class="board-list no-top-line">
+            <div class="sort">
+              <div class="sort-inner">
+                <span class="total"> 총 <strong class="text-primary">350</strong>건</span>
+              </div>
+              <fieldset>
+                <input type="search" class="size-sm" title="휴대전화번호 입력란" name="" id="search" placeholder="검색어를 입력해 주세요.">
+                <button type="button" class="button size-sm type-gray">검색</button>
+                <!-- <span class="caution">오류 메시지 나타납니다.</span> -->
+              </fieldset>
+            </div>
+            <div class="box-no-data">
+              <p class="title">검색 결과가 없습니다.</p>
+              <ul class="ul-dot">
+                <li>검색어가 올바르게 입력되었는지 확인 해주세요.</li>
+                <li>다른 검색어로 검색해주세요.</li>
+                <li>특수문자는 제외하는 것이 좋습니다.</li>
+                <li>검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.</li>
+                <li>두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="board-list no-top-line">
+            <div class="sort">
+              <div class="sort-inner">
+                <span class="total"> 총 <strong class="text-primary">350</strong>건</span>
+              </div>
+              <fieldset>
+                <input type="search" class="size-sm" title="휴대전화번호 입력란" name="" id="search" placeholder="검색어를 입력해 주세요.">
+                <button type="button" class="button size-sm type-gray">검색</button>
+                <!-- <span class="caution">오류 메시지 나타납니다.</span> -->
+              </fieldset>
+            </div>
+            <div class="board-items type-gallery">
+              <div class="item  ">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-board01.png" alt="" />
+                  <span class="badge fill-new type-round-box">NEW</span>
+                  <div class="info-media">
+                    <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                    <span class="time">59:59</span>
+                  </div>
+                </div>
+                <div class="inner-wrap">
+                  <div class="text-wrap">
+                    <p class="channel-name">채널명</p>
+                    <ul class="divider-group">
+                      <!-- !NOTE : 카테고리명은 최대 2개와 최대 10자만 노출 됩니다.  -->
+                    </ul>
+                    <a href="#">
+                      <p class="title">기본 Type - 게시물의 제목 정보가 출력됩니다 최대 2줄 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                      <p class="desc">게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                    </a>
+                  </div>
+                  <div class="board-buttons">
+                    <!-- !NOTE : 스크랩버튼은 toggle-this 에 active 클래스가 on/off 됩니다.  -->
+                    <button type="button" class="icon-button size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 스크랩</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="icon-button size-sm">
+                      <svg>
+                        <title>아이콘 공유</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="like toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </div>
+                </div>
+              </div>
+              <!-- //.item -->
+              <div class="item  ">
+                <div class="image-wrap">
+                  <img src="/assets/images/temp/img-board01.png" alt="" />
+                  <span class="badge fill-new type-round-box">NEW</span>
+                  <div class="info-media">
+                    <img src="/assets/images/common/icon-youtube.svg" alt="youtube 아이콘" />
+                    <span class="time">59:59</span>
+                  </div>
+                </div>
+                <div class="inner-wrap">
+                  <div class="text-wrap">
+                    <p class="channel-name">채널명</p>
+                    <ul class="divider-group">
+                      <!-- !NOTE : 카테고리명은 최대 2개와 최대 10자만 노출 됩니다.  -->
+                    </ul>
+                    <a href="#">
+                      <p class="title">기본 Type - 게시물의 제목 정보가 출력됩니다 최대 2줄 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                      <p class="desc">게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                    </a>
+                  </div>
+                  <div class="board-buttons">
+                    <!-- !NOTE : 스크랩버튼은 toggle-this 에 active 클래스가 on/off 됩니다.  -->
+                    <button type="button" class="icon-button size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 스크랩</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="icon-button size-sm">
+                      <svg>
+                        <title>아이콘 공유</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="like toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </div>
+                </div>
+              </div>
+              <!-- //.item -->
+              <div class="item  ">
+                <div class="image-wrap">
+                  <div class="info-media">
+                  </div>
+                </div>
+                <div class="inner-wrap">
+                  <div class="text-wrap">
+                    <p class="channel-name">채널명</p>
+                    <ul class="divider-group">
+                      <!-- !NOTE : 카테고리명은 최대 2개와 최대 10자만 노출 됩니다.  -->
+                    </ul>
+                    <a href="#">
+                      <p class="title">기본 Type - 게시물의 제목 정보가 출력됩니다 최대 2줄 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                      <p class="desc">게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                    </a>
+                  </div>
+                  <div class="board-buttons">
+                    <!-- !NOTE : 스크랩버튼은 toggle-this 에 active 클래스가 on/off 됩니다.  -->
+                    <button type="button" class="icon-button size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 스크랩</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="icon-button size-sm">
+                      <svg>
+                        <title>아이콘 공유</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="like toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </div>
+                </div>
+              </div>
+              <!-- //.item -->
+              <div class="item  ">
+                <div class="image-wrap">
+                  <div class="info-media">
+                  </div>
+                </div>
+                <div class="inner-wrap">
+                  <div class="text-wrap">
+                    <p class="channel-name">채널명</p>
+                    <ul class="divider-group">
+                      <!-- !NOTE : 카테고리명은 최대 2개와 최대 10자만 노출 됩니다.  -->
+                    </ul>
+                    <a href="#">
+                      <p class="title">기본 Type - 게시물의 제목 정보가 출력됩니다 최대 2줄 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                      <p class="desc">게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다. 게시물의 요약정보가 최대 두 줄까지 출력됩니다.</p>
+                    </a>
+                  </div>
+                  <div class="board-buttons">
+                    <!-- !NOTE : 스크랩버튼은 toggle-this 에 active 클래스가 on/off 됩니다.  -->
+                    <button type="button" class="icon-button size-sm toggle-this">
+                      <svg>
+                        <title>아이콘 스크랩</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="icon-button size-sm">
+                      <svg>
+                        <title>아이콘 공유</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="like toggle-this">
+                      <svg>
+                        <title>아이콘 좋아요</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg> 99 </button>
+                  </div>
+                </div>
+              </div>
+              <!-- //.item -->
+            </div>
+          </div>
+          <div class="pagination">
+            <button class="icon-button icon-first" disabled="">
+              <svg>
+                <title>첫페이지 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+              </svg>
+            </button>
+            <button class="icon-button icon-prev" disabled="">
+              <svg>
+                <title>이전 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+              </svg>
+            </button>
+            <button>1</button>
+            <!-- !TODO 선택된 버튼에 .current 클래스 추가 사용 -->
+            <button class="current">2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button class="icon-button icon-next">
+              <svg>
+                <title>다음 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+              </svg>
+            </button>
+            <button class="icon-button icon-last">
+              <svg>
+                <title>마지막페이지 아이콘</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

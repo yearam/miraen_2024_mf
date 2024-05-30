@@ -1,0 +1,46 @@
+/* ============= common ============== */
+.floL{float:left;}
+.floR{float:right;}
+.mar0{margin:0px;}
+.clrL{clear:left;}
+.clrR{clear:right;}
+.clrB{clear:both;}
+.unicrsv3-font{font-size:12px;font-family:malgun gothic,dotum,arial;color:#000;padding-right:5px;}
+.unicrsv3-sub-title{font-size:13px;font-family:malgun gothic,dotum,arial;color:#000;font-weight:bold;}
+
+#unicrsv3-export{border:5px solid #006edd;width:436px;height:485px;background:no-repeat center bottom;}
+#unicrsv3-import{border:5px solid #006edd;width:436px;height:300px;background:no-repeat center bottom;}
+
+/* =============header============== */
+#unicrsv3-header{border-bottom:1px solid #a7bdde;}
+#unicrsv3-header .title{height:25px;background-color:#006edd;cursor:move;font-size:12px;font-family:malgun gothic,dotum,arial;color:#fff;}
+#unicrsv3-header img{max-width: 100%;}
+#unicrsv3-header h1{padding: 0px !important; margin: 0px !important; line-height:0% !important;}
+
+/* =============content============== */
+#unicrsv3-content{margin:10px 15px;}
+#unicrsv3-content .unicrsv3-export-code{padding-bottom:10px;}
+#unicrsv3-content .col1{width:80px;height:19px;padding:0px 3px 0px;border-left:5px solid #006edd;top:50%;margin:5px 0px 0px;}
+#unicrsv3-content .gap{width:36px;height:28px;}
+#unicrsv3-content .unicrsv3-qrcode .col2{text-align:center;}
+#unicrsv3-content .unicrsv3-qrcode .col2 img{border:2px solid #c2d3ed;padding:5px 9px;background:#fff;}
+#unicrsv3-content input{text-align:center;border:2px solid #a7bdde;height:28px;width:94px;font-size:18px;border-radius:5px;ime-mode:disabled;}
+#unicrsv3-content ul{padding: 0px !important; list-style: none outside;}
+
+/* =============explain============== */
+#unicrsv3-explain{border:1px solid #a7bdde;padding:5px 10px 5px 10px;margin:0px 10px;background:#fff; padding:0x !important;}
+#unicrsv3-explain h2{font-weight:bold; padding: 0px !important;}
+#unicrsv3-explain ol {margin: 0px; padding: 0px;}
+#unicrsv3-explain ol li{padding-top:5px; list-style: none outside;}
+
+/* ==============tail=============== */
+#unicrsv3-export-tail .unicrsv3-ver{margin:10px 10px;}
+#unicrsv3-export-tail .unicrsv3-button{margin:5px 10px;}
+#unicrsv3-export-tail input{width:90px;cursor:pointer;text-shadow:-1px -1px 1px #fff;border:1px solid #9b9b9b;background:#f2f2f2;-webkit-box-shadow:2px 3px 0px #d5d5d5;-moz-box-shadow:2px 3px 0px #d5d5d5;box-shadow:2px 3px 0px #d5d5d5;}
+
+#unicrsv3-import-tail .unicrsv3-ver{margin:10px 10px;}
+#unicrsv3-import-tail .unicrsv3-button{padding:3px 5px 0px 90px;}
+#unicrsv3-import-tail input{width:90px;cursor:pointer;text-shadow:-1px -1px 1px #fff;border:1px solid #9b9b9b;background:#f2f2f2;-webkit-box-shadow:2px 3px 0px #d5d5d5;-moz-box-shadow:2px 3px 0px #d5d5d5;box-shadow:2px 3px 0px #d5d5d5;margin:0px 0px 0px 20px;}
+
+/*==============Version===============*/
+#unicrsv3-ver-text { margin-top: 7px;}

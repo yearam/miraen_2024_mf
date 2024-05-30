@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <header class="header teacher-live">
+        <div class="header-inner">
+          <div class="header-inner">
+            <div class="common-nav">
+              <a href="#" target="_blank">초등</a>
+              <a href="#" target="_blank">중학</a>
+              <a href="#" target="_blank">고등</a>
+              <div class="dropdown">
+                <button type="button"> 교과서 홍보관 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                  </svg>
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="#">엠티처 바로 접속</a>
+              <a href="#">즐겨찾기 추가</a>
+            </div>
+            <div class="common-nav">
+              <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                  <title>아이콘 - icon-play-rounded</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="aiclass">AI Class</a>
+              <a href="#" target="_blank" class="mkaive">M카이브</a>
+              <a href="#">로그아웃</a>
+              <a href="#" target="_blank">마이페이지</a>
+              <a href="#" target="_blank">고객센터</a>
+              <a href="#" target="_blank">이벤트</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <div class="gnb-wrap">
+            <div class="gnb-inner">
+              <h1 class="util-logo">
+                <div class="dropdown">
+                  <button type="button" class="button type-text">
+                    <img src="/assets/images/common/logo-teacher-live.svg" alt="티처 LIVE 로고" />
+                  </button>
+                  <div class="items">
+                    <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="button type-text" title="중학"> 중학 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="button type-text" title="고등"> 고등 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </h1>
+              <!-- !NOTE : 선택된 메뉴에 .active 가 붙어야 합니다. -->
+              <nav class="gnb">
+                <ul>
+                  <li class="active">
+                    <a href="https://www.youtube.com/" target="_blank">LIVE 강연</a>
+                  </li>
+                  <li>
+                    <a href="#menu2">혁신수업 N</a>
+                    <div class="lnb-wrap" id="menu2">
+                      <div class="lnb-inner">
+                        <ul class="lnb">
+                          <li>
+                            <a href="#">초등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu3">쌤OTT</a>
+                    <div class="lnb-wrap" id="menu3">
+                      <div class="lnb-inner">
+                        <ul class="lnb">
+                          <li>
+                            <a href="#">초등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">자료 나눔</a>
+                  </li>
+                  <li>
+                    <a href="#">이용안내</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <main id="main-contents">
+          <div class="page-header">
+            <h2>LIVE 강연</h2>
+          </div>
+          <div class="lecture-view">
+            <div class="header">
+              <div>
+                <h2>교사만이 아닌 교사들의 이야기 - 선생님도 할 수 있어!</h2>
+                <p class="date">강연일시 : 2023-11-08~2023-11-22</p>
+                <p class="desc"> 교사만으로는 만족할 수 없는 선생님들의 다양한 도전기!<br /> 해외 파견부터 콘텐츠 활동, 그리고 티튜버까지 다양한 활동을 하고 계시는 선생님들의 이야기를 만나보아요. </p>
+              </div>
+              <button class="button size-lg type-third">
+                <strong class="semi">같은 시즌 다른 강연 보기</strong>
+                <svg>
+                  <use href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="view-body">
+              <div class="lecture-list type-title">
+                <div class="item">
+                  <a href="#" class="img-wrap">
+                    <div class="overlay"><strong class="badge type-round-box size-sm fill-black">종료</strong></div>
+                    <img src="/assets/images/temp/img-live-lecture-list-1.png" alt="리스트 이미지">
+                  </a>
+                  <div class="info-wrap">
+                    <div class="text-wrap">
+                      <h2>찾아서 다운 받느니 우리가 만든다! 디지털콘텐츠제작소</h2>
+                      <p class="desc"> 디지털 수업자료의 선두 모임 이 모임은 왜 모이기 시작했을까?<br /> 이 모임에서 만드는 자료들은 대체 뭐길래? 그 자료들... 저도 나눠 주실 수 있나요? </p>
+                      <p class="date">강연일시 : 2023-11-25(토) 19:00</p>
+                    </div>
+                  </div>
+                  <div class="buttons type-vertical button-min-equal-sm">
+                    <button class="button size-lg fill-secondary-middle">
+                      <svg>
+                        <title>아이콘 - icon-tv</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-tv"></use>
+                      </svg>
+                      <strong class="semi">사전신청하기</strong>
+                    </button>
+                    <button class="button size-lg fill-green">
+                      <svg>
+                        <title>아이콘 - icon-calendar</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-calendar"></use>
+                      </svg>
+                      <strong class="semi">진행예정</strong>
+                    </button>
+                    <button class="button size-lg fill-secondary-elementary">
+                      <svg>
+                        <title>아이콘 - icon-play-rounded</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+                      </svg>
+                      <strong class="semi">LIVE 시청하기</strong>
+                    </button>
+                    <button class="button size-lg fill-gray-500">
+                      <svg>
+                        <title>아이콘 - icon-reload</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-reload"></use>
+                      </svg>
+                      <strong class="semi">다시보기</strong>
+                    </button>
+                    <button class="button size-lg">
+                      <svg>
+                        <title>아이콘 - icon-share</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+                      </svg>
+                      <strong class="semi">공유하기</strong>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="editor-area">
+                <img src="/assets/images/temp/img-teachers.png" alt="강사 이미지">
+              </div>
+              <div class="banners">
+                <a href="#"><img src="/assets/images/temp/img-banner-live-lecture-1.png" alt="관리자 페이지 등록 배너 이미지"></a>
+              </div>
+              <div class="box-info">
+                <strong class="text-elementary">엠티처 다락방 토크 참여 안내</strong>
+                <ol class="ul-decimal margin-top-md">
+                  <li>엠티처 디지털 강연회는 유튜브 라이브로 진행됩니다.</li>
+                  <li>LIVE 당일 오후 6시 30분에 라이브 방송 링크가 공개됩니다. 엠티처 선생님 회원은 누구나 무료로 시청할 수 있습니다.</li>
+                  <li>알림 또는 이벤트 참여를 원하시는 선생님은 사전 신청하기를 클릭하시고, 신청 내용을 작성하시면 기입하신 휴대폰 번호로 라이브 방송 링크를 보내드립니다.</li>
+                  <li>다락방 토크 신청은 11월 28일까지 가능하며, 모든 회차 중복 참여 가능합니다.</li>
+                  <li>모든 회차 종료 후, 추후 다시보기가 서비스 될 예정입니다. 단, 회차에 따라 다시보기를 제공하지 않는 경우도 있습니다.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="quick-menu" style="right:300px">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-miraen"></use>
+          </svg>
+        </span>
+        <div class="user-status">
+          <p class="user-name">로그인</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="login-box">
+          <form action="submit" class="form login-form">
+            <div class="input-wrap">
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-user"></use>
+                </svg>
+                <input type="search" name="" id="id" placeholder="아이디" title="ID" />
+              </div>
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-password"></use>
+                </svg>
+                <input type="password" name="" id="pw" placeholder="비밀번호" title="Password" />
+              </div>
+            </div>
+            <span class="ox login-ox">
+              <input type="checkbox" id="save-id" />
+              <label for="save-id">아이디 저장</label>
+            </span>
+            <button type="submit" class="fluid login-button">로그인</button>
+          </form>
+          <ul class="divider-group">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">ID&#47;PW 찾기</a></li>
+          </ul>
+          <div class="sns-box">
+            <button type="button" class="facebook" title="페이스북 로그인"></button>
+            <button type="button" class="kakao" title="카카오 로그인"></button>
+            <button type="button" class="naver" title="네이버 로그인"></button>
+            <button type="button" class="google" title="구글 로그인"></button>
+            <button type="button" class="whale" title="웨일 로그인"></button>
+          </div>
+        </div>
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <h4 class="text-primary"> 즐겨찾기 된<br />서비스가 없습니다. </h4>
+              <hr class="no-margin margin-top-lg">
+              <p class="margin-top-md"> 내가 수업하는<br /> 미래엔 교과서를 등록해<br /> 보세요 </p>
+              <button type="button" class="button type-secondary size-md margin-top-md"> 서비스 즐겨찾기 <svg>
+                  <title>아이콘 - icon-plus</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="quick-menu is-login on">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">3학년</span>
+        <div class="user-status">
+          <p class="user-name">홍길동</p>
+          <p class="school-name">미래엔 초등학교</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <ul class="menu-list">
+          <!-- icon버튼으로 바꾸기 -->
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick-logined">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <ul class="ul-dot size-sm">
+                <li><a href="#">국어 3-1 &#40;가&#41;</a></li>
+                <li><a href="#">국어 3-1 &#40;나&#41; &#40;도봉순&#41;</a></li>
+                <li><a href="#">수학 3-1</a></li>
+                <li><a href="#">사회 3-1</a></li>
+                <li><a href="#">과학 3-1</a></li>
+                <li><a href="#">도덕 3</a></li>
+                <li><a href="#">음악 3</a></li>
+                <li><a href="#">미술 3</a></li>
+                <li><a href="#">체육 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-write.svg" alt="판서 아이콘" /> 판서 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-timer.svg" alt="타이머 아이콘" /> 타이머 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-clipping.svg" alt="깜깜이 아이콘" /> 깜깜이 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-loudspeaker.svg" alt="주의집중 아이콘" /> 주의집중 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-presenter.svg" alt="발표자 선정 아이콘" /> 발표자 선정 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-marker.svg" alt="모둠 점수판 아이콘" /> 모둠 점수판 </a>
+          </li>
+        </ul>
+        <div class="bottom-buttons">
+          <a href="#" class="bottom-button">마이페이지</a>
+          <button type="button" class="bottom-button">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

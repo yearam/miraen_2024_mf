@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="popup-certify-papers">서류 인증</button>
+        </main>
+      </div>
+    </div>
+    <div class="popup-sheet" id="popup-certify-papers" init-show>
+      <div class="popup-container type-fix-height">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">서류 인증</div>
+        <form action="submit">
+          <div class="body">
+            <p class="body-title">재직증명서, 경력증명서 등<br />교사용 확인 서류로 인증하실 수 있습니다.</p>
+            <div class="file-upload size-xl type-vertical">
+              <div class="inner-form">
+                <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                <button class="button type-gray">삭제</button>
+              </div>
+              <label for="file" class="button type-line">
+                <svg>
+                  <title>아이콘 - icon-check</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-check"></use>
+                </svg>파일 선택 </label>
+            </div>
+            <div class="roundbox-outlined fill-lightest">
+              <ul class="ul-dot size-md margin-top-zero">
+                <li>hwp, pdf, jpg 확장자 파일만 첨부하실 수 있습니다.</li>
+                <li>서류 인증 후 48시간 이내 인증이 완료됩니다. (근무일 기준)</li>
+                <li>인증 요청 후에는 파일을 수정할 수 없습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="button size-md type-dark" close-obj>취소</button>
+            <button class="button size-md type-primary">확인</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

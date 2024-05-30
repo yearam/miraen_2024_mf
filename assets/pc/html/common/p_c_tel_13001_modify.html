@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <header class="header teacher-live">
+        <div class="header-inner">
+          <div class="header-inner">
+            <div class="common-nav">
+              <a href="#" target="_blank">초등</a>
+              <a href="#" target="_blank">중학</a>
+              <a href="#" target="_blank">고등</a>
+              <div class="dropdown">
+                <button type="button"> 교과서 홍보관 <svg>
+                    <title>아이콘 화살표</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                  </svg>
+                </button>
+                <div class="items">
+                  <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="button type-text" title="중고등"> 중 &middot; 고등 <svg>
+                      <title>아이콘 화살표</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="#">엠티처 바로 접속</a>
+              <a href="#">즐겨찾기 추가</a>
+            </div>
+            <div class="common-nav">
+              <a href="#" class="origin-mteacher size-sm"> 기존 엠티처에서 보기 <svg>
+                  <title>아이콘 - icon-play-rounded</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="aiclass">AI Class</a>
+              <a href="#" target="_blank" class="mkaive">M카이브</a>
+              <a href="#">로그아웃</a>
+              <a href="#" target="_blank">마이페이지</a>
+              <a href="#" target="_blank">고객센터</a>
+              <a href="#" target="_blank">이벤트</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-contents">
+          <div class="gnb-wrap">
+            <div class="gnb-inner">
+              <h1 class="util-logo">
+                <div class="dropdown">
+                  <button type="button" class="button type-text">
+                    <img src="/assets/images/common/logo-teacher-live.svg" alt="티처 LIVE 로고" />
+                  </button>
+                  <div class="items">
+                    <a href="#" class="button type-text" title="초등"> 초등 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="button type-text" title="중학"> 중학 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="button type-text" title="고등"> 고등 <svg>
+                        <title>아이콘 화살표</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </h1>
+              <!-- !NOTE : 선택된 메뉴에 .active 가 붙어야 합니다. -->
+              <nav class="gnb">
+                <ul>
+                  <li class="active">
+                    <a href="https://www.youtube.com/" target="_blank">LIVE 강연</a>
+                  </li>
+                  <li>
+                    <a href="#menu2">혁신수업 N</a>
+                    <div class="lnb-wrap" id="menu2">
+                      <div class="lnb-inner">
+                        <ul class="lnb">
+                          <li>
+                            <a href="#">초등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#menu3">쌤OTT</a>
+                    <div class="lnb-wrap" id="menu3">
+                      <div class="lnb-inner">
+                        <ul class="lnb">
+                          <li>
+                            <a href="#">초등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                          <li>
+                            <a href="#">중고등</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">자료 나눔</a>
+                  </li>
+                  <li>
+                    <a href="#">이용안내</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li class="home">
+            <a href="/" class="icon-button" title="첫페이지로">
+              <svg>
+                <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-home"></use>
+              </svg>
+            </a>
+          </li>
+          <li><a href="/">1depth</a></li>
+          <li><a href="/">2depth</a></li>
+          <li class="current">현재페이지명</li>
+        </ul>
+      </div>
+      <!-- 교과활동 수업하기 차시창 -->
+      <div class="container">
+        <main id="main-contents">
+          <div class="page-header">
+            <h2>자료나눔</h2>
+          </div>
+          <form action="" class="form teacher-live">
+            <div class="table-items type-view">
+              <table>
+                <caption> 자료나눔 게시글 등록 </caption>
+                <colgroup>
+                  <col width="200">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <!-- !NOTE 초등 교과 자료 게시글 작성일 경우의 연계 교과입니다.  -->
+                  <tr>
+                    <th scope="row" class="required">연계 교과</th>
+                    <td>
+                      <div class="block-wrap">
+                        <button class="button size-xl type-secondary">교과 선택</button>
+                        <ul class="divider-group type-brace">
+                          <li class="text-black text-sm">5학년</li>
+                          <li class="text-black text-sm">2학기</li>
+                          <li class="text-black text-sm">사회</li>
+                          <li class="text-black text-sm">단원명이 길어질 경우 줄바꿈하여 보여줍니다. 단원명이 길어질 경우 줄바꿈하여 보여줍니다. 단원명이 길어질 경우 줄바꿈하여 보여줍니다.단원명이 길어질 경우 줄바꿈하여 보여줍니다. 단원명이 길어질 경우 줄바꿈하여 보여줍니다. 단원명이 길어질 경우 줄바꿈하여 보여줍니다.</li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //초등 교과 자료 게시글 작성일 경우의 연계 교과입니다. -->
+                  <!-- !NOTE 중학 교과 자료 게시글 작성일 경우의 과목입니다.  -->
+                  <tr>
+                    <th scope="row" class="required">과목</th>
+                    <td>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-1">
+                          <label for="ox-filter1-2-1">공통</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-2">
+                          <label for="ox-filter1-2-2">국어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-3">
+                          <label for="ox-filter1-2-3">영어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-4">
+                          <label for="ox-filter1-2-4">수학</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-5">
+                          <label for="ox-filter1-2-5">사회</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-6">
+                          <label for="ox-filter1-2-6">역사</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-7">
+                          <label for="ox-filter1-2-7">도덕</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-8">
+                          <label for="ox-filter1-2-8">과학</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-9">
+                          <label for="ox-filter1-2-9">기술·가정</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-10">
+                          <label for="ox-filter1-2-10">음악</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-11">
+                          <label for="ox-filter1-2-11">미술</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-12">
+                          <label for="ox-filter1-2-12">체육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-13">
+                          <label for="ox-filter1-2-13">한문</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-14">
+                          <label for="ox-filter1-2-14">중국어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-15">
+                          <label for="ox-filter1-2-15">일본어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-16">
+                          <label for="ox-filter1-2-16">진로와 직업</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-2-17">
+                          <label for="ox-filter1-2-17">정보</label>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //중학 교과 자료 게시글 작성일 경우의 과목입니다. -->
+                  <!-- !NOTE 고등 교과 자료 게시글 작성일 경우의 과목입니다.  -->
+                  <tr>
+                    <th scope="row" class="required">과목</th>
+                    <td>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-1">
+                          <label for="ox-filter1-3-1">공통</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-2">
+                          <label for="ox-filter1-3-2">국어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-3">
+                          <label for="ox-filter1-3-3">영어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-4">
+                          <label for="ox-filter1-3-4">수학</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-5">
+                          <label for="ox-filter1-3-5">사회</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-6">
+                          <label for="ox-filter1-3-6">역사</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-7">
+                          <label for="ox-filter1-3-7">윤리</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-8">
+                          <label for="ox-filter1-3-8">과학</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-9">
+                          <label for="ox-filter1-3-9">기술·가정</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-10">
+                          <label for="ox-filter1-3-10">음악</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-11">
+                          <label for="ox-filter1-3-11">미술</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-12">
+                          <label for="ox-filter1-3-12">체육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-13">
+                          <label for="ox-filter1-3-13">중국어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-14">
+                          <label for="ox-filter1-3-14">일본어</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-15">
+                          <label for="ox-filter1-3-15">진로</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter1-3-16">
+                          <label for="ox-filter1-3-16">정보 및 기타</label>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //고등 교과 자료 게시글 작성일 경우의 과목입니다. -->
+                  <!-- !NOTE 창체 자료 게시글 작성일 경우의 주제 입니다.  -->
+                  <tr>
+                    <th scope="row" class="required">주제</th>
+                    <td>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-1">
+                          <label for="ox-filter4-1">계기교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-2">
+                          <label for="ox-filter4-2">SW・AI교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-3">
+                          <label for="ox-filter4-3">진로 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-4">
+                          <label for="ox-filter4-4">인성 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-5">
+                          <label for="ox-filter4-5">미디어리터러시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-6">
+                          <label for="ox-filter4-6">통일 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-7">
+                          <label for="ox-filter4-7">독도 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-8">
+                          <label for="ox-filter4-8">경제·금융 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-9">
+                          <label for="ox-filter4-9">인권 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-10">
+                          <label for="ox-filter4-10">다문화 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-11">
+                          <label for="ox-filter4-11">안전·건강 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-12">
+                          <label for="ox-filter4-12">민주시민 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-13">
+                          <label for="ox-filter4-13">환경·지속가능발전 교육</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-14">
+                          <label for="ox-filter4-14">체험 활동</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-15">
+                          <label for="ox-filter4-15">동아리 활동</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter4-16">
+                          <label for="ox-filter4-16">기타</label>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //창체 자료 게시글 작성일 경우의 주제 입니다. -->
+                  <!-- !NOTE 학급 경영 게시글 작성일 경우의 주제입니다.  -->
+                  <tr>
+                    <th scope="row" class="required">주제</th>
+                    <td>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-1">
+                          <label for="ox-filter5-1">놀이수업</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-2">
+                          <label for="ox-filter5-2">글쓰기·독서</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-3">
+                          <label for="ox-filter5-3">아침 활동</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-4">
+                          <label for="ox-filter5-4">방학 활동</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-5">
+                          <label for="ox-filter5-5">상담·생활지도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-6">
+                          <label for="ox-filter5-6">학교·학급 생활</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-7">
+                          <label for="ox-filter5-7">문서 양식</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter5-8">
+                          <label for="ox-filter5-8">기타</label>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //학급 경영 게시글 작성일 경우의 주제입니다. -->
+                  <!-- !NOTE 지역화 자료 게시글 작성일 경우의 지역입니다.  -->
+                  <tr>
+                    <th scope="row" class="required">지역</th>
+                    <td>
+                      <div class="ox-group">
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-1">
+                          <label for="ox-filter6-1">서울특별시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-2">
+                          <label for="ox-filter6-2">부산광역시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-3">
+                          <label for="ox-filter6-3">대구광역시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-4">
+                          <label for="ox-filter6-4">인천광역시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-5">
+                          <label for="ox-filter6-5">광주광역시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-6">
+                          <label for="ox-filter6-6">대전광역시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-7">
+                          <label for="ox-filter6-7">울산광역시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-8">
+                          <label for="ox-filter6-8">세종특별자치시</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-9">
+                          <label for="ox-filter6-9">경기도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-10">
+                          <label for="ox-filter6-10">강원특별자치도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-11">
+                          <label for="ox-filter6-11">충청북도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-12">
+                          <label for="ox-filter6-12">충청남도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-13">
+                          <label for="ox-filter6-13">전라북도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-14">
+                          <label for="ox-filter6-14">전라남도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-15">
+                          <label for="ox-filter6-15">경상북도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-16">
+                          <label for="ox-filter6-16">경상남도</label>
+                        </span>
+                        <span class="ox">
+                          <input type="radio" id="ox-filter6-17">
+                          <label for="ox-filter6-17">제주특별자치도</label>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //지역화 자료 게시글 작성일 경우의 지역입니다. -->
+                  <tr>
+                    <th scope="row" class="required">제목</th>
+                    <td>
+                      <input type="text" class="size-xl fluid" placeholder="제목을 입력 해주세요">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">대표 이미지</th>
+                    <td>
+                      <div class="image-upload">
+                        <div class="inner-wrap">
+                          <input type="file" name="" id="image" class="display-hide">
+                          <label for="image">
+                            <svg>
+                              <title>아이콘 - icon-plus</title>
+                              <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                            </svg>
+                          </label>
+                          <span class="image-wrap">
+                            <!-- // !NOTE 기본 이미지 입니다. 첨부 이미지가 있을시 기본 이미지 삭제 해주세요.
+                            <img src="/assets/images/common/img-no-data.png" alt="기본 이미지">
+                            //기본 이미지 입니다. 첨부 이미지가 있을시 기본 이미지 삭제 해주세요. -->
+                            <!-- // !NOTE 첨부 이미지일 경우 입니다. -->
+                            <img src="/assets/images/temp/img-tel-thumbnail.png" alt="">
+                            <!-- //첨부 이미지일 경우 입니다. -->
+                          </span>
+                        </div>
+                        <!-- !NOTE 첨부 이미지 수정 및 삭제 버튼 입니다. -->
+                        <div class="button-wrap">
+                          <button type="button" class="button type-icon size-md" title="수정">
+                            <svg>
+                              <title>수정 아이콘</title>
+                              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-modify"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button type-icon size-md" title="삭제">
+                            <svg>
+                              <title>삭제 아이콘</title>
+                              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <!-- //첨부 이미지 수정 및 삭제 버튼 입니다. -->
+                      </div>
+                      <ul class="ul-dot margin-top-md">
+                        <li>이미지를 등록하지 않으면 기본 이미지로 제공됩니다.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="required">내용</th>
+                    <td>
+                      <div class="textarea">
+                        <textarea name="" id="" rows="7" placeholder="내용을 입력하세요. (최소 10자)&#13;&#10;올려주신 자료를 잘 활용하기 위한 노하우나 TIP을 작성해주세요.&#13;&#10;선생님의 자세한 설명이 올려주신 자료를 사용할 다른 선생님들께 큰 도움이 됩니다.&#13;&#10;※ 본 게시판의 성격과 맞지 않거나 중복된 글, 규정에 맞지 않는 글은 게시자 통보 없이 삭제될 수 있습니다."></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">태그</th>
+                    <td>
+                      <div class="forms">
+                        <fieldset>
+                          <input type="text" class="size-xl">
+                          <input type="text" class="size-xl">
+                          <input type="text" class="size-xl">
+                          <input type="text" class="size-xl">
+                          <input type="text" class="size-xl">
+                        </fieldset>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">첨부파일</th>
+                    <td>
+                      <div class="file-upload size-xl">
+                        <label for="file" class="button type-line">
+                          <svg>
+                            <title>아이콘 - icon-plus</title>
+                            <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                          </svg>파일 선택 </label>
+                        <div class="inner-form display-hide">
+                          <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요.">
+                          <button class="button type-gray">삭제</button>
+                        </div>
+                      </div>
+                      <div class="file-items">
+                        <div class="item">
+                          <span>파일명.jpg</span>
+                          <button type="button" class="button size-md type-gray">삭제</button>
+                        </div>
+                        <div class="item">
+                          <span>파일명.hwp</span>
+                          <button type="button" class="button size-md type-gray">삭제</button>
+                        </div>
+                        <div class="item">
+                          <span>파일명3.jpg</span>
+                          <button type="button" class="button size-md type-gray">삭제</button>
+                        </div>
+                      </div>
+                      <ul class="ul-dot margin-top-md">
+                        <li>최대 10개까지 등록 가능하며, 파일당 최대 50MB까지 업로드 가능합니다.</li>
+                        <li>jpg, jpeg, png, bmp, gif, mp4, mp3, hwp, doc(docx), ppt(pptx), xls(xlsx), pdf, zip 확장자 파일만 첨부하실 수 있습니다.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="page-buttons type-form">
+              <button type="button" class="button size-xl type-dark">취소</button>
+              <button type="submit" class="button size-xl type-primary">등록</button>
+            </div>
+          </form>
+        </main>
+      </div>
+      <footer class="layout-footer">
+        <div class="footer-info">
+          <div class="inner">
+            <div class="policy">
+              <ul>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-2.frm" target="_blank">이용약관</a></li>
+                <li><a href="https://www.mirae-n.com/ft/mn-ft-1.frm" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/channel/UChdMHllT208TaLyEhiqjLAA" class="ft-link" target="_blank" title="새창으로 유튜브 사이트 가기">
+                <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+              </a>
+              <a href="https://www.facebook.com/HAPPY.miraeN/" class="ft-link" target="_blank" title="새창으로 페이스북 사이트 가기">
+                <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+              </a>
+              <a href="https://pf.kakao.com/_xixbxkJl" class="ft-link" target="_blank" title="새창으로 카카오 사이트 가기">
+                <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+              </a>
+              <a href="https://blog.naver.com/mirae-n" class="ft-link" target="_blank" title="새창으로 네이버 블로그 사이트 가기">
+                <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+              </a>
+            </div>
+            <button type="button" class="family-site-button" method-type="toggle" target-obj="family-site">Family site</button>
+            <div class="family-site" id="family-site">
+              <div class="wrap">
+                <button type="button" class="close-button" close-obj>닫기</button>
+                <ul class="list">
+                  <li>
+                    <h4><strong>본사</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔">미래엔</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>브랜드</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="미래엔 교과서">미래엔 교과서</a></li>
+                      <li><a href="#" target="_blank" title="미래엔 에듀">미래엔 에듀</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>서비스</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="인쇄서비스">인쇄서비스</a></li>
+                      <li><a href="#" target="_blank" title="Vol.321">Vol.321</a></li>
+                      <li><a href="#" target="_blank" title="초등 엠티처">초등 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="중학 엠티처">중학 엠티처</a></li>
+                      <li><a href="#" target="_blank" title="고등 엠티처">고등 엠티처</a></li>
+                      <li><a href="https://mall.m-teacher.co.kr/" target="_blank" title="라운지M">라운지M</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4><strong>사회공헌</strong></h4>
+                    <ul class="ul-dot size-sm">
+                      <li><a href="#" target="_blank" title="목정미래재단">목정미래재단</a></li>
+                      <li><a href="#" target="_blank" title="교과서 박물관">교과서 박물관</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <address class="footer-address">
+          <div class="inner">
+            <div class="ft-logo">
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+            </div>
+            <div class="ft-address">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>대표 신광수</li>
+                <li>주소 06532 서울특별시 서초구 신반포로 321</li>
+                <li>사업자등록번호 214-81-04977</li>
+              </ul>
+              <ul>
+                <li>통신판매신고 서초04494호</li>
+                <li>개인정보보호책임자 한범석</li>
+                <li>이메일 mteacher@mirae-n.com</li>
+              </ul>
+              <ul>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+              <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            </div>
+          </div>
+        </address>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="quick-menu" style="right:300px">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-miraen"></use>
+          </svg>
+        </span>
+        <div class="user-status">
+          <p class="user-name">로그인</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="login-box">
+          <form action="submit" class="form login-form">
+            <div class="input-wrap">
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-user"></use>
+                </svg>
+                <input type="search" name="" id="id" placeholder="아이디" title="ID" />
+              </div>
+              <div class="input-box">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-quick-password"></use>
+                </svg>
+                <input type="password" name="" id="pw" placeholder="비밀번호" title="Password" />
+              </div>
+            </div>
+            <span class="ox login-ox">
+              <input type="checkbox" id="save-id" />
+              <label for="save-id">아이디 저장</label>
+            </span>
+            <button type="submit" class="fluid login-button">로그인</button>
+          </form>
+          <ul class="divider-group">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">ID&#47;PW 찾기</a></li>
+          </ul>
+          <div class="sns-box">
+            <button type="button" class="facebook" title="페이스북 로그인"></button>
+            <button type="button" class="kakao" title="카카오 로그인"></button>
+            <button type="button" class="naver" title="네이버 로그인"></button>
+            <button type="button" class="google" title="구글 로그인"></button>
+            <button type="button" class="whale" title="웨일 로그인"></button>
+          </div>
+        </div>
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <h4 class="text-primary"> 즐겨찾기 된<br />서비스가 없습니다. </h4>
+              <hr class="no-margin margin-top-lg">
+              <p class="margin-top-md"> 내가 수업하는<br /> 미래엔 교과서를 등록해<br /> 보세요 </p>
+              <button type="button" class="button type-secondary size-md margin-top-md"> 서비스 즐겨찾기 <svg>
+                  <title>아이콘 - icon-plus</title>
+                  <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="quick-menu is-login on">
+      <button type="button" class="toggle-button" onclick="quickMenuButtonFunc(this);" title="클릭 시 퀵메뉴가 열립니다">
+        <span class="icon">3학년</span>
+        <div class="user-status">
+          <p class="user-name">홍길동</p>
+          <p class="school-name">미래엔 초등학교</p>
+        </div>
+        <span class="toggle-arrow"></span>
+      </button>
+      <div class="body">
+        <div class="swiper">
+          <div class="slide swiper-wrapper">
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+            <div class="slide-item swiper-slide">
+              <img src="/assets/images/temp/img-quick-slide.png" alt="퀵메뉴 슬라이드 배경 이미지">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <ul class="menu-list">
+          <!-- icon버튼으로 바꾸기 -->
+          <li>
+            <a href="#" class="tooltip-trigger" data-trigger="hover" data-placement="left" data-style="quick-logined">
+              <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" /> 즐겨찾기 </a>
+            <div class="webui-popover-content">
+              <ul class="ul-dot size-sm">
+                <li><a href="#">국어 3-1 &#40;가&#41;</a></li>
+                <li><a href="#">국어 3-1 &#40;나&#41; &#40;도봉순&#41;</a></li>
+                <li><a href="#">수학 3-1</a></li>
+                <li><a href="#">사회 3-1</a></li>
+                <li><a href="#">과학 3-1</a></li>
+                <li><a href="#">도덕 3</a></li>
+                <li><a href="#">음악 3</a></li>
+                <li><a href="#">미술 3</a></li>
+                <li><a href="#">체육 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-bulb.svg" alt="창의적 체험활동 아이콘" /> 창의적 체험활동 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-classn.svg" alt="혁신수업N 아이콘" /> 혁신수업N </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-quick-aiclass.svg" alt="AI클래스 아이콘" /> AI클래스 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-write.svg" alt="판서 아이콘" /> 판서 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-timer.svg" alt="타이머 아이콘" /> 타이머 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-clipping.svg" alt="깜깜이 아이콘" /> 깜깜이 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-loudspeaker.svg" alt="주의집중 아이콘" /> 주의집중 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-presenter.svg" alt="발표자 선정 아이콘" /> 발표자 선정 </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/assets/images/common/icon-marker.svg" alt="모둠 점수판 아이콘" /> 모둠 점수판 </a>
+          </li>
+        </ul>
+        <div class="bottom-buttons">
+          <a href="#" class="bottom-button">마이페이지</a>
+          <button type="button" class="bottom-button">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

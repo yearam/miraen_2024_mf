@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Box model</h1>
+          <section>
+            <h2>box-info</h2>
+            <div class="box-info">
+              <div class="title">
+                <strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong>
+              </div>
+              <div class="body">
+                <p>엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br />
+                  소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다.</p>
+                <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+              </div>
+            </div>
+            <pre class="brush:html">
+							<div class="box-info">
+								<div class="title">
+									<strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong>
+								</div>
+								<div class="body">
+									<p>엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br />
+                    소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다.</p>
+									<p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+								</div>
+							</div>
+						</pre>
+            <h2>box-outlined-info <small>고객센터 전국지사안내 사용</small></h2>
+            <div class="box-outlined-info">
+              <div class="title">
+                <strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong>
+              </div>
+              <div class="body">
+                <p>엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br />
+                  소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다.</p>
+                <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="box-outlined-info">
+                <div class="title">
+                  <strong>엠티처 자료 무단 배포 주의사항을 알려드립니다.</strong>
+                </div>
+                <div class="body">
+                  <p>엠티처 제공 자료는 '학교 수업' 목적을 위해서 사용할 수 있도록 저작권법의 보호를 받고 있습니다.<br />
+                    소중한 엠티처의 자료가 무단 배포 및 유출되지 않도록 선생님의 적극적인 협조 부탁드립니다.</p>
+                  <p>당사의 허락 없이 무단으로 이를 유출하거나 타 사이트에 게재하는 경우 저작권법 제 25조(학교 교육 목적 등에의 이용)에 따라 불이익을 받으실 수 있습니다.</p>
+                </div>
+              </div>
+            </pre>
+            <h3>타이틀만 사용시 <small>회원가입 팝업에서 사용</small></h3>
+            <div class="title-info">
+              유의사항
+            </div>
+            <pre class="brush:html">
+							<div class="title-info">
+								유의사항
+							</div>
+						</pre>
+            <h3>캡션 아이콘만 사용시 <small>교과활동 사용</small></h3>
+            <p class="caution-info">유의사항</p>
+            <pre class="brush:html">
+							<p class="caution-info">유의사항</p>
+						</pre>
+          </section>
+          <section>
+            <h2>.split-container-info</h2>
+            <div class="split-container-info">
+              <div class="text-black">
+                <strong class="semi">원하시는 정보를 찾지 못하셨나요?</strong>
+                <p>1:1 문의를 넘겨주시거나 고객센터로 문의해 주시면 친절히 안내해 드리겠습니다.</p>
+                <p class="tel-info">
+                  1800-8890
+                </p>
+              </div>
+              <div class="extra">
+                <button class="button size-md type-secondary">1:1 문의</button>
+              </div>
+            </div>
+            <pre class='brush:html'>
+              <div class="split-container-info">
+                <div class="text-black">
+                  <strong class="semi">원하시는 정보를 찾지 못하셨나요?</strong>
+                  <p>1:1 문의를 넘겨주시거나 고객센터로 문의해 주시면 친절히 안내해 드리겠습니다.</p>
+                  <p class="tel-info">
+                    1800-8890
+                  </p>
+                </div>
+                <div class="extra">
+                  <button class="button size-md type-secondary">1:1 문의</button>
+                </div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>box-no-data</h2>
+            <div class="box-no-data">
+              등록된 자료가 없습니다.
+            </div>
+            <pre class="brush:html">
+							<div class="box-no-data">
+								등록된 자료가 없습니다.
+							</div>
+						</pre>
+            <h2>box-no-data.type-border-bottom</h2>
+            <div class="box-no-data type-border-bottom">
+              등록된 자료가 없습니다.
+            </div>
+            <pre class="brush:html">
+							<div class="box-no-data type-border-bottom">
+								등록된 자료가 없습니다.
+							</div>
+						</pre>
+          </section>
+
+          <section>
+            <h2>
+              box-gray-scroll
+              <small>회원가입 - 약관에서 사용</small>
+            </h2>
+            <div class="box-gray-scroll">
+              <p>Et accusam est vero magna accusam nonumy sit gubergren, rebum elitr ut dolor aliquyam ipsum sit elitr nonumy, et magna amet no elitr erat lorem sadipscing amet, et sadipscing nonumy duo dolores eirmod. Est elitr et sit ut no voluptua duo. Amet sea erat amet sea, diam rebum et duo.</p>
+              <p>Et accusam est vero magna accusam nonumy sit gubergren, rebum elitr ut dolor aliquyam ipsum sit elitr nonumy, et magna amet no elitr erat lorem sadipscing amet, et sadipscing nonumy duo dolores eirmod. Est elitr et sit ut no voluptua duo. Amet sea erat amet sea, diam rebum et duo.</p>
+              <p>Et accusam est vero magna accusam nonumy sit gubergren, rebum elitr ut dolor aliquyam ipsum sit elitr nonumy, et magna amet no elitr erat lorem sadipscing amet, et sadipscing nonumy duo dolores eirmod. Est elitr et sit ut no voluptua duo. Amet sea erat amet sea, diam rebum et duo.</p>
+              <p>Et accusam est vero magna accusam nonumy sit gubergren, rebum elitr ut dolor aliquyam ipsum sit elitr nonumy, et magna amet no elitr erat lorem sadipscing amet, et sadipscing nonumy duo dolores eirmod. Est elitr et sit ut no voluptua duo. Amet sea erat amet sea, diam rebum et duo.</p>
+            </div>
+            <pre class="brush:html">
+							<div class="box-gray-scroll">
+								<!-- 내부 컨텐츠 들어갑니다. -->
+							</div>
+						</pre>
+          </section>
+
+          <section>
+            <h2>.box-gray</h2>
+            <div class="box-gray">
+              .box-gray
+              <div class="box-white-round">
+                .box-white-round
+              </div>
+            </div>
+            <pre class='brush:html'>
+              <div class="box-gray">
+                .box-gray
+                <div class="box-white-round">
+                  .box-white-round
+                </div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>box-outlined-gray
+              <small>회원가입 사용 .box-outlined-gray가 반복될 경우 경계선은 중첩됨</small>
+            </h2>
+            <div class="box-outlined-gray">
+              .box-outlined-gray
+            </div>
+            <div class="box-outlined-gray fill-lighten">
+              .box-outlined-gray.fill-lighten
+            </div>
+            <pre class='brush:html'>
+              <div class="box-outlined-gray">
+                .box-outlined-gray
+              </div>
+              <div class="box-outlined-gray fill-lighten">
+                .box-outlined-gray.fill-lighten
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>roundbox-outlined</h2>
+            <div class="roundbox-outlined">
+              roundbox-outlined
+            </div>
+            <h3>.type-light-primary
+              <small>교과활동 사용</small>
+            </h3>
+            <div class="roundbox-outlined type-light-primary">
+              .roundbox-outlined.type-light-primary
+            </div>
+            <h3>.split-vertical-line
+              <small>하위 항목이 세로 단위로 나눠지고 경계선이 생깁니다.</small>
+            </h3>
+            <div class="roundbox-outlined split-vertical-line">
+              <div class="section">
+                <ul class="divider-group type-brace">
+                  <li>5학년</li>
+                  <li>2학기</li>
+                  <li>국어(가)</li>
+                  <li>1-(1)</li>
+                  <li>121차시</li>
+                </ul>
+                <p class="text-xs text-black ellipsis-multi">
+                  <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹</strong>
+                </p>
+                <span class="badge type-rounded fill-light">
+                  사회 10~36쪽
+                </span>
+              </div>
+              <div class="extra align-middle">
+                <button type="button" class="button size-md">
+                  교과 변경
+                  <svg><use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use></svg>
+                </button>
+              </div>
+            </div>
+            <pre class='brush:html'>
+              <div class="roundbox-outlined">
+                roundbox-outlined
+              </div>
+              <div class="roundbox-outlined split-vertical-line">
+                <div class="section">
+                  <ul class="divider-group type-brace">
+                    <li>5학년</li>
+                    <li>2학기</li>
+                    <li>국어(가)</li>
+                    <li>1-(1)</li>
+                    <li>121차시</li>
+                  </ul>
+                  <p class="text-xs text-black ellipsis-multi">
+                    <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹</strong>
+                  </p>
+                  <span class="badge type-rounded fill-light">
+                    사회 10~36쪽
+                  </span>
+                </div>
+                <div class="extra align-middle">
+                  <button type="button" class="button size-md">
+                    교과 변경
+                    <svg><use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use></svg>
+                  </button>
+                </div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>box-caution</h2>
+            <div class="box-caution">
+              <i class="icon size-md">
+                <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+              </i>
+              <p>자료 삭제는 PC에서만 가능합니다.</p>
+            </div>
+            <pre class="brush:html">
+              <div class="box-caution">
+                <i class="icon size-md">
+                  <img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘">
+                </i>
+                <p>자료 삭제는 PC에서만 가능합니다.</p>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>roundbox-primary
+              <small>서비스안내 사용</small>
+            </h2>
+            <div class="roundbox-primary">
+              roundbox-primary
+            </div>
+            <pre class="brush:html">
+              <div class="roundbox-primary">
+                roundbox-primary
+              </div>
+						</pre>
+          </section>
+          <section>
+            <h2>box-error
+              <small>서비스안내 사용</small>
+            </h2>
+            <div class="box-error">
+              box-error
+            </div>
+            <pre class="brush:html">
+              <div class="box-error">
+                box-error
+              </div>
+						</pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

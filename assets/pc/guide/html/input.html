@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Input</h1>
+          <section>
+            <h2>
+              default
+              <small>height:36px</small>
+            </h2>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>placeholder</th>
+                  <th>value</th>
+                  <th>disabled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td><input type="search" name="" id="" placeholder="default input" />
+                  </td>
+                  <td><input type="search" name="" id="" value="default input" /></td>
+                  <td><input type="search" name="" id="" value="disabled" disabled /></td>
+                </tr>
+
+                <tr>
+                  <th>password</th>
+                  <td><input type="password" name="" id="" placeholder="비밀번호는 8자 이상 영문+숫자+특수문자 입니다." /></td>
+                  <td><input type="password" name="" id="" value="default input" /></td>
+                  <td><input type="password" name="" id="" value="disabled" disabled /></td>
+                </tr>
+                <tr>
+                  <th>number</th>
+                  <td><input type="number" name="" id="" placeholder="숫자를 입력하세요" /></td>
+                  <td><input type="number" name="" id="" value="2" /></td>
+                  <td><input type="number" name="" id="" value="4" disabled /></td>
+                </tr>
+                <tr>
+                  <th>data</th>
+                  <td><input type="date" name="" id="" required value="2024-06-01" /></td>
+                  <td><input type="date" name="" id="" required value="2024-06-01" /></td>
+                  <td><input type="date" name="" id="" required value="2024-06-01" disabled /></td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+                <!-- default text field -->
+                <input type="search" name="" id="" placeholder="default input" />
+                <input type="search" name="" id="" value="default input" />
+                <input type="search" name="" id="" value="disabled" disabled />
+                <!-- password -->
+                <input type="password" name="" id="" placeholder="" />
+                <!-- number -->
+                <input type="number" name="" id="" value="2" />
+                <!-- calendar input -->
+                <input type="date" name="" id="" required value="2024-06-01" />
+            </pre>
+            <h3>.size-xl</h3>
+            <input type="search" class="size-xl" name="" id="" placeholder="높이 56px" />
+            <pre class="brush:html">
+              <input type="search" class="size-xl" name="" id="" placeholder="높이 56px" />
+            </pre>
+          </section>
+          <section>
+            <h2>
+              input-inner-extra
+              <small>input + 버튼, input + 단위 등과 함께 사용되는 경우</small>
+            </h2>
+            <ul class="ul-circle">
+              <li>.type-dark : 로그인/회원가입 팝업에서 사용</li>
+            </ul>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>placeholder</th>
+                  <th>value</th>
+                  <th>disabled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <div class="input-inner-extra">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="input-inner-extra">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="input-inner-extra disabled">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" disabled="disabled" />
+                      <button class="icon-button" title="검색" disabled="disabled">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.type-dark</th>
+                  <td>
+                    <div class="input-inner-extra type-dark">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="input-inner-extra type-dark">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="input-inner-extra type-dark disabled">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" disabled="disabled" />
+                      <button class="icon-button" title="검색" disabled="disabled">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>ex : select + input</h3>
+            <div class="input-inner-extra">
+              <select name="" id="">
+                <option value="1">전체</option>
+                <option value="2">작성자</option>
+                <option value="3">작성일</option>
+              </select>
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="input-inner-extra">
+              <select name="" id="">
+                <option value="1">긴 문장 테스트 긴 문장 테스트</option>
+                <option value="2">작성자</option>
+                <option value="3">작성일</option>
+              </select>
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <pre class="brush:html">
+              <div class="input-inner-extra">
+                <input type="search" name="" id=""  placeholder="검색어를 입력해 주세요"  />
+                <button class="icon-button" title="검색">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- type-dark -->
+              <div class="input-inner-extra type-dark">
+                <input type="search" name="" id=""  placeholder="검색어를 입력해 주세요"  />
+                <button class="icon-button" title="검색">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+            <h3>.size-xl</h3>
+            <div class="input-inner-extra size-xl">
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="input-inner-extra size-xl">
+              <select name="" id="" class="size-xl">
+                <option value="1">전체</option>
+                <option value="2">작성자</option>
+                <option value="3">작성일</option>
+              </select>
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+
+            <pre class="brush:html">
+              <!-- size-xl 추가시 높이 59px -->
+              <div class="input-inner-extra size-xl">
+                <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                <button class="icon-button" title="검색">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

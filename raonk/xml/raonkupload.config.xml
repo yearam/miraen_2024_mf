@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RaonKUpload>
+    <license>
+        <product_key>2WEN3-C641-5J3I-8F360</product_key>
+        <license_key>lFEaxRlZpXg5lr58rRmekxPblXgUt+MTMnMAGnWfFhTZGgRZRJRYHCxYJ1hkwr6ZkfqFgsmIwfdMg93MB0dYD0qHksyMCr85wsaRBbzWkGmTkGZWkb5MCr85wsaRBbzWkGmTkGZWkcm5wW8ZkG5ZEbzPg9PFDQ6RCW6LDQVIkG5ZEbzPg9PFDQ6RCW6LDQVXEbDZBt6ZkfqFgsmIwfdMg93MB0dklxhUluhUtXhkzzilx5avt8lkyUYWlud5kxhVkxdWtXdUlxO=</license_key>
+        <license_key_html5>MlFxcjMqQWa8MJ89JjNvHchyMWatR+rsrOrAmOVelKsqmajqjpjZnDcZp2KHbJ3qHeIlafNobeura04rC1uZE1InHfdrDJ98bfxjCygVHmNsHmqVHy8rDJ98bfxjCygVHmNsHmqVHzN8bV9qHm8qFygha0hlEi3jDV3YEiUoHm8qFygha0hlEi3jDV3YEiUWFyEqCR3qHeIlafNobeura04rC1uHMcKtMSKtRWKHggLMc8xTR9MHdtZVMSu8HcKUHcuVRWutMcG=</license_key_html5>
+        <!-- <license_key_handler>EVOwi24E7iUzp7lSYITMjZCFy0+cuZcSvtNrYh8CbcaXyXyeqdd2S15xuws5XWmaaJe92vVdPW2UxN0rlfz3Tjra9muHCpyggdu7LQ/YqZeqqh0AqWM303Pdvent6+z7bMU0xHXoJLfusyOj9yxyl/xXrPgq4p7gkXMtKQY9/mI=</license_key_handler> -->
+        <!-- <product_key>FLE6M-2SSX-5L8R-40RD8</product_key>
+        <license_key>qSVamS5ZlFmxst58xuPrkxpUySp1t+MTMnMAGnWfFhTZGgRZRJRYHCxYJ1hkwr6ZkfqFgsmIwfdMg93MB0dYwbz9wr6ZkfqFgsmIwfdMg93MB0dYCr6ZkfqFgsmIwfdMg93MB0dYwbz9Cr6ZkfqFgsmIwfdMg93MB0dYBt6ZkfqFgsmIwfdMg93MB0dYwbz9Bt6ZkfqFgsmIwfdMg93MB0dkmRhUluhklRhWmt5UlQ5WnpZzyvVopypkyUZxtXdUlRlZlxvZlRlklRhVnh==
+        </license_key>
+        <license_key_html5>IkUxNk8qMlNcfR89cShJHcQtdkQ2R+rsrOrAmOVelKsqmajqjpjZnDcZp2KHbJ3qHeIlafNobeura04rC1uZbyg0bJ3qHeIlafNobeura04rC1uZDJ3qHeIlafNobeura04rC1uZbyg0DJ3qHeIlafNobeura04rC1uZCR3qHeIlafNobeura04rC1uZbyg0CR3qHeIlafNobeura04rC1uHNjKtMSKHMjKVNR8tMi8VOQqgdTUPQdQHdtqcRWutMjMqMcTqMjMHMjKUOK==</license_key_html5>
+        <license_key_handler>EVOwi24E7iUzp7lSYITMjFamYWoj8gt+/9c03trk+KqTkFTjVEytQxvl/Yyi/TRgezoUdHIzqHhO4hA4IdM5dHTz0qm/qxoVsfVb2luPAzN71c8NzW5qftM9QMUKLIVK8i+i2DAj1QlAJ3hXVHf13Jty/8OOhaYKpLRiQOZ4nz3=</license_key_handler> -->
+    </license>
+    <setting>
+        <width>800px</width>
+        <height desc="minHeight:120px,show_header_bar:0 일경우 minHeight:100px">250px</height>
+        <!-- color1는 전체(메인/전송창) 버튼bg, 전송창 전체전송 progressbar bg, 전송창 전송 퍼센트 컬러 포함 / color2는 footer bg /color3는 전송창 progressbar bg  -->
+        <skin_name desc="blue,red,green,orange,purple,silver,brown,darkgray,gold,gray,pink,yellow" css_root_path="" webfile_color="">bluegray</skin_name>
+        <lang>ko-kr</lang>
+        <mode views="list" desc="views : list - 리스트형태로 보기, thumbs - 썸네일형태로 보기">upload</mode>
+        <img_preview width="320px" height="280px">0</img_preview>
+        <show_status_bar show_limit="1" show_status="0" desc="1: 파일 제한 문구/현재 파일 상태 문구 보임, 0이면 숨김">1</show_status_bar>
+        <show_header_bar header_height="28px" desc="min header height:28px">1</show_header_bar>
+        <header_item>
+            <item width="" align="left" desc="사용자 업로드 헤더 설정, width: 넓이값,align: 필드 정렬값(left, right, center)"></item>
+        </header_item>
+        <show_button_bar_edit align="left" hide_html4_add="0" desc="버튼 위치 정렬 왼쪽 : left, 오른쪽 :right">add,add_folder,send,remove,remove_all,move_first,move_forward,move_backward,move_end</show_button_bar_edit>
+        <show_button_bar_view align="left" desc="버튼 위치 정렬 왼쪽 : left, 오른쪽 :right">open,saveandopen,saveandfolderopen,download,download_all,print</show_button_bar_view>
+        <button_bar_position desc="edit/view 버튼 영역 위치 설정, 기본값은 bottom 이고, top : 위, bottom : 아래로 버튼 위치">bottom</button_bar_position>
+        <border_style desc="solid,dashed,none">none</border_style>
+        <max_one_file_size desc="0: 제한없음" unit_desc="B: byte, KB: kilobyte, MB: megabyte, GB: gigabyte">300MB</max_one_file_size>
+        <max_total_file_size desc="0: 제한없음" unit_desc="B: byte, KB: kilobyte, MB: megabyte, GB: gigabyte">300MB</max_total_file_size>
+        <max_total_file_count desc="0: 제한없음, 0보다 큰 수 인 경우 해당 개수를 초과해서 첨부 불가">20</max_total_file_count>
+        <hide_list_info dexc="0: 업로드영역 이미지 보여줌, 1: 업로드영역 이미지 숨김">0</hide_list_info>
+        <extension allow_or_limit="0" desc="0: 제한으로 설정, 1: 허용으로 설정, 확장자는 ','로 구분">exe,bat,js,vbs,msi</extension>
+        <multi_file_select disable_mobile="0">1</multi_file_select>
+        <list_view_dbclick>1</list_view_dbclick>
+        <list_view_drag_and_drop>1</list_view_drag_and_drop>
+        <resume_mode upload="0" download="0"></resume_mode>
+        <folder_transfer>0</folder_transfer>
+        <timeout desc="unit:millisecond">0</timeout>
+        <automatic_connection desc="0: 기본값, 1: 묻지 않고 계속 다운로드/업로드 시도함">1</automatic_connection>
+        <show_checkbox desc="기본값 1, 1: 리스트+Header 사용, 0: 리스트에만 사용">1</show_checkbox>
+        <hide_context_menu desc="0: context 메뉴 사용, 1: context 메뉴 숨김">0</hide_context_menu>
+        <use_size_column desc="0: 파일 크기 사용 안함, 1: 파일 크기 사용 사용함">1</use_size_column>
+        <file_delimiter unit_delimiter="11" unit_attribute_delimiter="12" desc="파일구분자 설정"></file_delimiter>
+        <remove_context_item desc="우클릭 메뉴에서 삭제할 항목 입력(구분자는 ',')"></remove_context_item>
+        <remove_context_item_desc desc="remove_context_item 항목에 설정할 수 있는 값들의 설명 입니다.">
+            <!--<item desc="열기">open_current_file</item>-->
+            <item desc="전체 다운로드">download_all_file</item>
+            <item desc="다운로드 후 열기">download_and_open</item>
+        </remove_context_item_desc>
+        <use_script_event_control desc="매니저에서 발생하는 이벤트를 javascript로 보내줌">1</use_script_event_control>
+        <message_title desc="메세지창 title 설정">엠티처</message_title>
+        <large_files base_total_size="0" base_total_size_desc="사이즈 값을 넣어주면 첨부된 전체사이즈가 해당사이즈보다 커지는 시점부터 대용량표시" max_count="5" max_total_size="0" color="#007ace" text="대용량">0</large_files>
+        <cache_protect_mode desc="임시 인터넷 파일 설정을 자동으로 사용할 경우, 기본값 0 사용안함, 1이면 로드 다시 함">0</cache_protect_mode>
+        <file_sort sort_field="0" sort_ascdesc="0" auto_sort="0" desc="sort_field(정렬 대상 필드값) - 0:Name 필드, 1:Size 필드 / sort_ascdsc(정렬 방법(Asc, Desc)) - 0:오름차순, 1:내림차순 / auto_sort(자동 정렬 수행 방법) - 0:자동 정렬기능 사용 안함, 1:새로운 파일이 첨부되었을 경우 첫 번째, 두 번째 옵션으로 전체 다시 정렬, 2:새로 추가되는 파일만을 첫 번째, 두 번째 옵션으로 정렬">1</file_sort>
+        <file_move_context_menu desc="파일이동 메뉴를 우클릭 메뉴에 추가할지 여부 설정">0</file_move_context_menu>
+        <complete_event_reset_use desc="업로드 완료 이벤트에서 ResetUpload API 사용시 1로 설정해야함">0</complete_event_reset_use>
+        <user_message edit="" view="" desc="edit/view 에 문구 입력 사용, 기본값은 0 사용 안함, 1이면 사용">0</user_message>
+        <disable_alert_message>
+            <disable_delete_confirm desc="0: 모든 confirm창 활성, 1:모든 confirm창 비활성, 2:선택 항목제거만 confirm창 비활성, 3:전체 항목제거만 confirm창 비활성">0</disable_delete_confirm>
+            <duplication desc="1:파일 추가 중복 시 alert창 비활성">0</duplication>
+            <delete_unchosen desc="0:파일 삭제 시 선택된 파일이 없을 경우 alert창 활성, 1: 비활성">0</delete_unchosen>
+            <download_unchosen desc="0:파일 다운로드 시 선택된 파일이 없을 경우 alert창 활성, 1: 비활성">0</download_unchosen>
+            <open_unchosen desc="0:파일 열기 시 선택된 파일이 없을 경우 alert창 활성, 1: 비활성">0</open_unchosen>
+            <file_extension_detect desc="0:확장자 변조된 파일 첨부시 alert창 활성, 1: 비활성">0</file_extension_detect>
+        </disable_alert_message>
+        <allowed_zero_file_size desc="0byte의 파일 업로드를 허용할 지 여부, 기본값은 0:허용안함, 1:허용">1</allowed_zero_file_size>
+        <direct_download desc="서버 handler를 통하지 않고 직접 호출하여 다운로드함">0</direct_download>
+        <security>
+            <encrypt_param>1</encrypt_param>
+            <file_extension_detector desc="확장자 변조 검사 사용함/안함">0</file_extension_detector>
+            <file_integrity>0</file_integrity>
+            <file_encrypt desc="매니저모드 전용"></file_encrypt>
+            <delete_open_file desc="매니저모드 전용"></delete_open_file>
+            <handler_key>EVOwi24E7iUzp7lSYITMjZCFy0+cuZcSvtNrYh8CbcaXyXyeqdd2S15xuws5XWmaaJe92vVdPW2UxN0rlfz3Tjra9muHCpyggdu7LQ/YqZeqqh0AqWM303Pdvent6+z7bMU0xHXoJLfusyOj9yxyl/xXrPgq4p7gkXMtKQY9/mI=</handler_key>
+        </security>
+        <default_download_path desc="플러그인모드 전용">#|</default_download_path>
+
+        <!-- event -->
+        <use_add_event desc="0 : 리스트 컨트롤에서 파일추가시 event 발생안함, 1: event 발생함">1</use_add_event>
+        <use_delete_event desc="0 : 리스트 컨트롤에서 파일삭제시 event 발생안함, 1: event 발생함">1</use_delete_event>
+        <use_view_or_open_event desc="0 : 파일 열기 시 event 발생 안함, 1: event 발생함">1</use_view_or_open_event>
+        <use_uploading_cancel_event desc="0 : 파일 전송 시 취소 event 발생 안함, 1: 취소 event 발생함">1</use_uploading_cancel_event>
+        <use_download_event desc="0 : 파일 다운로드 시 event 발생 안함, 1: 취소 event 발생함">1</use_download_event>
+        <use_after_add_event desc="0 : 리스트 컨트롤에서 파일추가 후 event 발생안함, 1: event 발생함">1</use_after_add_event>
+        <use_after_add_end_time_event desc="0 : 리스트 컨트롤에서 모든 파일추가 완료 후 event 발생안함, 1: event 발생함">1</use_after_add_end_time_event>
+        <use_after_download_event desc="0 : 다운로드 완료 후 event 발생안함, 1: event 발생함">1</use_after_download_event>
+        <use_delete_end_time_event desc="0 : 리스트 컨트롤에서 모든 파일삭제 완료 후 event 발생안함, 1: event 발생함">1</use_delete_end_time_event>
+        <use_finish_downloaded_event desc="0 : 모든 파일 다운로드 완료 후 event 발생안함, 1: event 발생함">1</use_finish_downloaded_event>
+        <!-- event -->
+
+        <transfer_open_file desc="1:전송하려고 하는 파일이 열려있는 경우에도 전송을 함.(기본값) 0: 전송안함, 플러그인전용">0</transfer_open_file>
+        <select_by_clicked desc="1: 파일 리스트부분 클릭 시 체크박스도 체크됨, 기본값: 0">0</select_by_clicked>
+        <transfer_background_style desc="웹표준모드 전용"></transfer_background_style>
+        <use_dropzone desc="Drop Zone 사용 설정, 기본값은 0:미사용, 1:사용">0</use_dropzone>
+        <allow_open_extension desc="열기 동작시 popup으로 열기할 확장자명을 콤마(,)로 구분하여 설정(웹표준모드 전용)">bmp,gif,jpeg,jpg,png,tif,tiff,swf,htm,html,xml,txt</allow_open_extension>
+        <image_quality extension="" allow_or_limit="0" worker_count="5" desc="웹표준모드 전용">1</image_quality>
+
+        <use_install_guide zindex="1000">1</use_install_guide>
+        <allowed_realtime_download_add desc="다운로드 중에 새로운 다운로드 파일 추가함, 기본값 1(사용)">1</allowed_realtime_download_add>
+        <show_item_count desc="3~15(매니저 전용)">3</show_item_count>
+
+        <text>
+            <empty_download_file color="#000000" bold="1" italic="0" underline="0" strike="0" desc="보기모드에서 추가된 파일이 없을 때 띄울 메시지를 정의"></empty_download_file>
+        </text>
+        <use_single_download_dialog desc="단일 파일 다운로드 시 열기,저장,인쇄를 선택할 수 있는 팝업창이 나타남(플러그인 전용)">0</use_single_download_dialog>
+        <use_dbclick_open desc="0 : 더블클릭시 파일 열기 안됨, 1: 더블클릭시 파일 열기 됨(기본값)">1</use_dbclick_open>
+
+        <upload_transfer_window desc="업로드 전송창 UI 설정" upload_window_mode="0" download_window_mode="0" desc2="0: Modal, 1: Modalless">
+            <view desc="0,1,2">1</view>
+            <use_logo_image desc="0: logo 숨김, 1: logo 보여줌" logo_path="" logo_ver="1">1</use_logo_image>
+            <silent_upload desc="전송 팝업창 노출 여부, 기본값은 0:노출, 1:미노출, 2:일시정지,취소버튼 미노출">0</silent_upload>
+            <silent_download desc="다운로드 진행 팝업창 노출 여부, 기본값은 0:노출, 1:미노출, 2:일시정지,취소버튼 미노출">1</silent_download>
+            <ui_setting>
+                <system_title_upload></system_title_upload>
+                <system_title_download></system_title_download>
+                <speed_text desc="0,1,2">0</speed_text>
+                <speed_text_desc>1</speed_text_desc>
+                <use_setting>1</use_setting>
+            </ui_setting>
+        </upload_transfer_window>
+        <move_mouse_drag desc="0 : 파일리스트 마우스 드래그 이동 사용 안함(기본값), 1 : 파일리스트 마우스 드래그 이동 사용">1</move_mouse_drag>
+    </setting>
+    <uploader_setting>
+        <develop_langage desc=".NET(C#, ASP): NET, JAVA(JSP): JSP">JAVA(JSP)</develop_langage>
+        <!-- <handler_url desc="http를 포함한 웹으로 접근 가능한 경로로 작성">https://e.m-teacher.co.kr:8443/download.mrn</handler_url> -->
+        <handler_url desc="http를 포함한 웹으로 접근 가능한 경로로 작성">https://e.m-teacher.co.kr/pages/api/file/down/multi/download.mrn</handler_url>
+<!--        <viewer_handler_url>https://efs.raonwiz.com:8443/kupload/handler/raonkviewer.jsp</viewer_handler_url>-->
+<!--        <download_handler_url>/download.mrn</download_handler_url>-->
+<!--        <download_handler_url>https://api-cms.mirae-n.com/down_content</download_handler_url>-->
+        <async_upload desc="0: 동기, 1: 비동기">1</async_upload>
+        <!--<chunk_size unit_desc="B: byte, KB: kilobyte, MB: megabyte, GB: gigabyte">2MB</chunk_size>-->
+        <max_chunk_size unit_desc="B: byte, KB: kilobyte, MB: megabyte, GB: gigabyte">20MB</max_chunk_size>
+        <folder_name_rule desc="년월일폴더는 yyyy/ 또는 yyyy/mm 등으로 입력, 그 외에는 일반 폴더">/kufile/yyyy/mm</folder_name_rule>
+        <file_name_rule desc="GUID: guid, REALFILENAME: 실제파일명">GUID</file_name_rule>
+        <file_name_rule_ex desc="중복파일명처리, _ or # or i 중 택1 (i는 뒤에 숫자 자동증가)">_</file_name_rule_ex>
+    </uploader_setting>
+    <direct_download>1</direct_download>
+    <!-- <user_css_url>https://e.m-teacher.co.kr/static/raonk/css/RAONKUpload_custom_css.css</user_css_url> -->
+    <user_css_url>https://e.m-teacher.co.kr/raonk/css/RAONKUpload_custom_css.css</user_css_url>
+</RaonKUpload>

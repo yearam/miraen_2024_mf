@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <link href="/assets/mobile/css/pages/common/service-guide.css" rel="stylesheet" />
+  <body class="theme-common">
+    <div class="wrapper">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>고객센터</h2>
+        <button type="button" class="logo-common" target-obj="grade-selector">
+          <img src="/assets/images/common/logo-common.svg" alt="엠티처 로고">
+        </button>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">공지사항</a>
+            <a href="#">이용안내</a>
+            <a href="#">FAQ</a>
+            <a href="#">1:1문의</a>
+            <a href="#">필수프로그램</a>
+            <a href="#">전국지사안내</a>
+            <a href="#">이벤트</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="full">
+          <div class="visual-wrap">
+            <h2> 미래엔의<br /> 교수활동플랫폼<br />
+              <strong class="text-primary">엠티처</strong>
+            </h2>
+            <div class="logos">
+              <span class="logo">
+                <img src="/assets/images/common/logo-mteacher-elementary.svg" alt="엠티처 로고 초등">
+              </span>
+              <span class="logo">
+                <img src="/assets/images/common/logo-mteacher-middle.svg" alt="엠티처 로고 중학">
+              </span>
+              <span class="logo">
+                <img src="/assets/images/common/logo-mteacher-high.svg" alt="엠티처 로고 고등">
+              </span>
+            </div>
+            <p class="desc">교과서부터 양방향 수업 솔루션까지, 미래엔이 만들면 다릅니다.<br />엠티처에서 똑똑한 수업을 만나보세요.</p>
+          </div>
+        </section>
+        <section class="service-section">
+          <h2>다양한 교수지원 자료</h2>
+          <p class="summary">교과 수업과 학급 운영에 따른 꼭 필요한 모든 자료를 제공합니다.</p>
+          <div class="roundbox-outlined type-light-primary">
+            <strong class="text-black semi">수업 자료</strong>
+            <p>교과서자료부터 보충/심화자료까지, 빈틈 없는 수업을 만드는 풍부한 자료</p>
+          </div>
+          <div class="roundbox-outlined type-light-primary">
+            <strong class="text-black semi">평가 자료</strong>
+            <p>수행평가, 단원평가, 서술형 평가까지! 손쉽게 활용하는 유형별 평가자료</p>
+          </div>
+          <div class="roundbox-outlined type-light-primary">
+            <strong class="text-black semi">멀티미디어 자료</strong>
+            <p>교과서 맞춤 영상부터 뉴스, 유튜브 까지! 흥미로운 수업을 만드는 영상 자료</p>
+          </div>
+          <div class="roundbox-outlined type-light-primary">
+            <strong class="text-black semi">과목 특화 자료</strong>
+            <p>지도, 디지털 교구들의 방법으로, 수업의 질을 높이는 특화자료</p>
+          </div>
+          <div class="roundbox-outlined type-light-primary">
+            <strong class="text-black semi">과목 특화 자료</strong>
+            <p>선생님이 선생님을 위해 나누는 유용한 수업, 학급경영 자료</p>
+          </div>
+          <i class="gradient-arrow">
+            <img src="/assets/images/common/img-gradient-arrow.svg" alt="그라데이션 화살표">
+          </i>
+          <div class="roundbox-primary">
+            <p>엠티처의 자료는 'AI클래스'로 학생과 공유하여 결과 리포트를 받을 수 있습니다.</p>
+          </div>
+        </section>
+        <section class="no-border">
+          <h2 class="text-center">주요 서비스</h2>
+        </section>
+        <section class="tabs">
+          <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+          <div class="tab">
+            <ul>
+              <li class="active"><a href="#tab1-1">AI클래스</a></li>
+              <li><a href="#tab1-2">M카이브</a></li>
+              <li><a href="#tab1-3">티처 LIVE</a></li> <!-- !NOTE li에 active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+            </ul>
+          </div>
+          <div class="pane-wrap">
+            <div id="tab1-1" class="pane">
+              <!-- tab content -->
+              <div class="guide-section">
+                <p>선생님을 위한 학습 관리 솔루션</p>
+                <h4 class="ai">
+                  <img src="/assets/images/common/img-box-title-ai@x2.svg" alt="AI클래스 이미지">
+                </h4>
+                <div class="image-box">
+                  <img src="/assets/images/common/img-ai-class@x2.png" alt="AI클래스 이미지">
+                </div>
+                <p>AI클래스는 단 하나의 URL로 선생님과 학생을 잇는 양방향 온라인 서비스입니다. AI클래스로 선생님만의 수업 루틴을 만들고 스마트한 학습 관리를 시작하세요!</p>
+                <div class="box-outlined">
+                  <p class="text-black">진도에 맞는 학습지 또는 퀴즈를 선택하여 학생들과 공유하세요. 학생이 우리 반 라이브 클래스에서 학습을 제출하면, 선생님은 리포트를 통해 학습 과정부터 결과까지 누적하여 확인하실 수 있습니다.</p>
+                  <strong class="semi text-primary">누적된 학습 데이터와 선생님의 학습 반응은 AI 분석 시스템을 통해 교과별 학생 종합 리포트로 제공됩니다.</strong>
+                </div>
+              </div>
+              <div class="tabs type-rounded">
+                <div class="tab">
+                  <ul>
+                    <li class="active"><a href="#tab-rounded-1">AI 학습지</a></li>
+                    <li><a href="#tab-rounded-2">퀴즈온</a></li><!-- !NOTE li에 .active가 붙어있으면 그 탭이 초기에 활성화됨. -->
+                    <li><a href="#tab-rounded-3">리포트</a></li>
+                    <li><a href="#tab-rounded-4">클래스 관리</a></li>
+                    <li><a href="#tab-rounded-5">라이브 클래스</a></li>
+                  </ul>
+                </div>
+                <div class="pane-wrap">
+                  <div id="tab-rounded-1" class="pane">
+                    <!-- contents -->
+                    <div class="slider-section">
+                      <h2>AI 학습지</h2>
+                      <div class="service-slider">
+                        <div class="slides">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-ai-slider01@x2.png" alt="AI학습지 슬라이더 이미지 1">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-ai-slider02@x2.png" alt="AI학습지 슬라이더 이미지 2">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-ai-slider03@x2.png" alt="AI학습지 슬라이더 이미지 3">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                      <ul class="ul-dot">
+                        <li>미래엔 교과서의 단원별/유형별 자료 중 원하는 자료를 선택할 수 있습니다.</li>
+                        <li>공유 옵션에서 추가 학습을 선택하시면, 성취도에 따라 맞춤 추가 학습이 자동 생성됩니다.</li>
+                      </ul>
+                      <a href="#" class="button size-md">바로가기</a>
+                    </div>
+                  </div>
+                  <div id="tab-rounded-2" class="pane">
+                    <!-- contents -->
+                    <div class="slider-section">
+                      <h2>퀴즈온</h2>
+                      <div class="service-slider">
+                        <div class="slides">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-quiz-slider01@x2.png" alt="퀴즈온 슬라이더 이미지 1">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-quiz-slider02@x2.png" alt="퀴즈온 슬라이더 이미지 2">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                      <ul class="ul-dot">
+                        <li>수업에서 많이 활용되는 퀴즈 유형을 선택 또는 직접 만들어, 간편하게 공유할 수 있습니다.</li>
+                        <li>또한 공유 옵션에서 수업 상황에 필요한 환경을 설정하여 다양한 방법으로 활용할 수 있습니다.</li>
+                      </ul>
+                      <a href="#" class="button size-md">바로가기</a>
+                    </div>
+                  </div>
+                  <div id="tab-rounded-3" class="pane">
+                    <!-- contents -->
+                    <div class="slider-section">
+                      <h2>리포트</h2>
+                      <div class="service-slider">
+                        <div class="slides">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-report-slider01@x2.png" alt="리포트 슬라이더 이미지 1">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-report-slider02@x2.png" alt="리포트 슬라이더 이미지 2">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-report-slider03@x2.png" alt="리포트 슬라이더 이미지 3">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-report-slider04@x2.png" alt="리포트 슬라이더 이미지 4">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-report-slider05@x2.png" alt="리포트 슬라이더 이미지 5">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                      <ul class="ul-dot">
+                        <li>학생들의 응시 현황을 실시간으로 확인하며, 간편하게 피드백 할 수 있습니다.</li>
+                        <li>학생별 취약 영역에 대한 맞춤형 학습지도 다운로드 할 수 있습니다.</li>
+                      </ul>
+                      <a href="#" class="button size-md">바로가기</a>
+                    </div>
+                  </div>
+                  <div id="tab-rounded-4" class="pane">
+                    <!-- contents -->
+                    <div class="slider-section">
+                      <h2>클래스 관리</h2>
+                      <div class="service-slider">
+                        <div class="slides">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-report-slider01@x2.png" alt="클래스 관리 슬라이더 이미지 1">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                      <ul class="ul-dot">
+                        <li>클래스는 학습지를 공유하면서 간편 등록할 수 있으며, 학생 등록 또한 QR을 통해 라이브 클래스에 입장하면 자동으로 학생이 등록됩니다.</li>
+                      </ul>
+                      <a href="#" class="button size-md">바로가기</a>
+                    </div>
+                  </div>
+                  <div id="tab-rounded-5" class="pane">
+                    <!-- contents -->
+                    <div class="slider-section">
+                      <h2>라이브 클래스</h2>
+                      <div class="service-slider">
+                        <div class="slides">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-live-slider01@x2.png" alt="라이브 클래스 슬라이더 이미지 1">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-live-slider02@x2.png" alt="라이브 클래스 슬라이더 이미지 2">
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/assets/images/common/img-live-slider03@x2.png" alt="라이브 클래스 슬라이더 이미지 3">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                      <ul class="ul-dot">
+                        <li>선생님이 공유한 평가지는 라이브클래스에 1년간 누적되며, 교사의 등록 없이도 학생은 간단한 정보 입력으로 입장할 수 있습니다.</li>
+                        <li>입장이 완료되면 학생은 다양한 학습도구를 이용하여 간편하게 응시할 수 있으며, 자동채점된 평가 결과는 제출 후 바로 확인할 수 있습니다.</li>
+                      </ul>
+                      <a href="#" class="button size-md">바로가기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab1-2" class="pane">
+              <!-- tab content -->
+              <div class="guide-section">
+                <p>엠티처 멀티미디어 자료실</p>
+                <h4 class="mchive">
+                  <img src="/assets/images/common/img-box-title-mchive@x2.svg" alt="M카이브 이미지">
+                </h4>
+                <p class="margin-top-xl">M카이브는 동영상, 이미지, 오디오, 실감형 콘텐츠 등 교육용 멀티미디어 콘텐츠를 활용할 수 있는 디지털 아카이브입니다.</p>
+                <p class="margin-top-md">교과서 정보, 동료 선생님이 사용하는<br /> 콘텐츠 분석을 기반으로 수업에 활용할 수 있는<br /> 맞춤 콘텐츠를 추천해 드립니다. 즐거운 수업을 위한<br /> 다양한 멀티미디어 콘텐츠를 활용해 보세요.</p>
+                <p class="text-error">* M카이브는 PC 환경에서 이용할 수 있습니다.</p>
+                <!-- <div class="page-buttons">
+                  <a href="https://multi.m-teacher.co.kr/common/greeting.do" target="_blank" class="button size-md type-primary">
+                    바로가기
+                    <svg>
+                      <title>아이콘 - icon-chevron-right</title>
+                      <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                    </svg>
+                  </a>
+                </div> -->
+              </div>
+              <div class="slider-section">
+                <div class="service-slider">
+                  <div class="slides">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <strong>학생들의 흥미를 끄는<br /> 교육용 멀티미디어 콘텐츠 제공</strong>
+                        <img src="/assets/images/common/img-mchive-slider01@x2.png" alt="M카이브 슬라이더 이미지 1">
+                        <ul class="ul-dot">
+                          <li>기초 학력 증진을 위한 교과별, 단원별 멀티미디어 자료</li>
+                          <li>애니메이션, EBS 영상, 개념클립영상 등 다양한 유형의 영상 자료</li>
+                          <li>범교과 수업에 활용할 수 있는 시기별, 주제별 콘텐츠 추천</li>
+                        </ul>
+                      </div>
+                      <div class="swiper-slide">
+                        <strong>효과적인 수업을 위한<br /> 맞춤형 콘텐츠 추천</strong>
+                        <img src="/assets/images/common/img-mchive-slider02@x2.png" alt="M카이브 슬라이더 이미지 2">
+                        <ul class="ul-dot">
+                          <li>‘내교과서 설정’을 통해 수업에 바로 활용하는 콘텐츠 추천</li>
+                          <li>동일 교과/학년 선생님이 자주 사용하는 활용도 높은 콘텐츠 추천</li>
+                          <li>수업 자료 제작 및 평가 문항 출제를 위한 이미지 자료 제공</li>
+                        </ul>
+                      </div>
+                      <div class="swiper-slide">
+                        <strong>원격 수업 및 블렌디드 러닝을 위한<br /> 간편한 공유 기능</strong>
+                        <img src="/assets/images/common/img-mchive-slider03@x2.png" alt="M카이브 슬라이더 이미지 3">
+                        <ul class="ul-dot">
+                          <li>학습에 필요한 부분만 구간을 설정하여 맞춤형 수업 자료로 공유</li>
+                          <li>URL을 복사하여 학생에게 바로 공유</li>
+                          <li>PC, 태블릿, 스마트폰 등 모든 기기에서 활용 가능</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab1-3" class="pane">
+              <!-- tab content -->
+              <div class="guide-section">
+                <p>선생님의 오늘을 기록하고,<br /> 함께 만드는 내일의 수업 이야기</p>
+                <h4 class="live">
+                  <img src="/assets/images/common/img-box-title-live@x2.svg" alt="티처 LIVE 이미지">
+                </h4>
+                <div class="roundbox-outlined">
+                  <div class="inline-wrap gutter-lg">
+                    <div class="image-wrap">
+                      <img src="/assets/images/common/img-teacher-live01@x2.png" alt="혁신수업N 이미지">
+                    </div>
+                    <div class="text-wrap">
+                      <strong class="text-black semi">혁신수업N</strong>
+                      <p>선생님만을 위한 수업 혁신지가 한 단계 더 업그레이드 되었습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="roundbox-outlined">
+                  <div class="inline-wrap gutter-lg">
+                    <div class="image-wrap">
+                      <img src="/assets/images/common/img-teacher-live02@x2.png" alt="디지털 강연회 이미지">
+                    </div>
+                    <div class="text-wrap">
+                      <strong class="text-black semi">디지털 강연회</strong>
+                      <p>에듀테크 연수부터 토크까지, 함께 나누고 싶은 이야기를 담았습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="roundbox-outlined">
+                  <div class="inline-wrap gutter-lg">
+                    <div class="image-wrap">
+                      <img src="/assets/images/common/img-teacher-live03@x2.png" alt="선생님 자료 나눔 이미지">
+                    </div>
+                    <div class="text-wrap">
+                      <strong class="text-black semi">선생님 자료 나눔</strong>
+                      <p>학급경영, 교과 수업의 노하우를 선생님들과 공유하세요.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="service-section">
+          <h2>과목 특화 서비스</h2>
+          <a href="#" class="roundbox-outlined type-light-primary flag-elementary">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-korean.svg" alt="국어 작품 감상실 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">국어 작품 감상실</strong>
+                <p>풍부한 자료로 재미를 더하는 국어 시간 애니메이션으로 읽는 교과서 속 작품</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="roundbox-outlined type-light-primary flag-elementary">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-math.svg" alt="수학 스마트 교구 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">수학 스마트 교구</strong>
+                <p>다양한 서비스로 스마트해지는 수학 시간! 직접 조작하며 학습하는 체험 수학</p>
+              </div>
+            </div>
+          </a>
+          <div class="roundbox-outlined type-light-primary flag-elementary">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-social.svg" alt="사회 디지털 지역 교과서 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">사회 디지털 지역 교과서</strong>
+                <p>생동감 넘치는 자료로 흥미로운 사회 시간! 우리 고장 맞춤 온라인 학습</p>
+              </div>
+            </div>
+            <p class="box-error">* PC 환경에서 이용할 수 있습니다.</p>
+          </div>
+          <a href="#" class="roundbox-outlined type-light-primary flag-elementary">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-science.svg" alt="과학 디지털 실험실 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">과학 디지털 실험실</strong>
+                <p>실험 영상으로 원리를 이해하는 과학 시간! 탐구영상, 가상 실험 등 교과서 실험 총 집합!</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="roundbox-outlined type-light-primary flag-middle">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-special-korean.svg" alt="특수교육 국어 자료실 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">특수교육 국어 자료실</strong>
+                <p>실험 영상으로 원리를 이해하는 과학 시간! 탐구영상, 가상 실험 등 교과서 실험 총 집합!</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="roundbox-outlined type-light-primary flag-middle">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-apple-numbers.svg" alt="애플넘버스 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">애플넘버스</strong>
+                <p>교과서를 생생하게 보여주는 Numbers! 넘버스 앱으로 경험하는 새로운 수업</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="roundbox-outlined type-light-primary flag-high">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-bookstore.svg" alt="문학책방 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">문학책방</strong>
+                <p>작품별·작가별·시대별로 쉽고 빠르게 원하는 문학 교과 수업 자료 검색 가능!</p>
+              </div>
+            </div>
+          </a>
+          <div class="roundbox-outlined type-light-primary flag-high">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-history.svg" alt="역사 매트릭스 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">역사 매트릭스</strong>
+                <p>시대별·주제별로 수업하는 역사 자료실 이야기와 주제가 있는 특별한 역사 수업</p>
+              </div>
+            </div>
+            <p class="box-error">* PC 환경에서 이용할 수 있습니다.</p>
+          </div>
+          <div class="roundbox-outlined type-light-primary flag-high">
+            <div class="inline-wrap no-gutter">
+              <i class="icon size-xl">
+                <img src="/assets/images/common/icon-career.svg" alt="AI진로진학센터 아이콘">
+              </i>
+              <div class="text-wrap">
+                <strong class="text-black semi">AI진로진학센터</strong>
+                <p>AI 분석 프로그램을 통해 선생님의 입시 상담을 지원하는 인공지능 입시 서비스</p>
+              </div>
+            </div>
+            <p class="box-error">* PC 환경에서 이용할 수 있습니다.</p>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="grade-selector">
+      <div class="popup-container">
+        <div class="body">
+          <div class="list-items type-icon-box">
+            <a href="#" target="_blank" title="엠티처 초등 새창 열기">
+              <img src="/assets/images/common/logo-mteacher-elementary.svg" alt="엠티처 초등 로고" class="mteacher-logo">
+              <strong class="text-elementary semi">초등</strong>
+            </a>
+            <a href="#" target="_blank" title="엠티처 중학 새창 열기">
+              <img src="/assets/images/common/logo-mteacher-middle.svg" alt="엠티처 중학 로고" class="mteacher-logo">
+              <strong class="text-middle semi">중학</strong>
+            </a>
+            <a href="#" target="_blank" title="엠티처 고등 새창 열기">
+              <img src="/assets/images/common/logo-mteacher-high.svg" alt="엠티처 고등 로고" class="mteacher-logo">
+              <strong class="text-high semi">고등</strong>
+            </a>
+          </div>
+        </div>
+        <div class="footer">
+          <button type="button" class="button type-primary size-md" close-obj>닫기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

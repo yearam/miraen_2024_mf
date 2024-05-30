@@ -1,0 +1,263 @@
+.guide .wrap {
+  position: relative;
+}
+
+.guide .guide-position-clear {
+  position: relative;
+  display: block;
+}
+.guide .guide-position-clear .popup-container {
+  display: inline-flex;
+  position: relative;
+  top: unset;
+  left: unset;
+  animation: none;
+  outline: 1px solid #eee;
+  margin: 10px;
+  transform: none;
+  z-index: 2;
+}
+
+.guide-main {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+.guide-main > section {
+  margin: 0;
+  flex-grow: 1;
+  flex-basis: 25%;
+}
+
+.guide .container {
+  margin: 0 auto;
+}
+.guide iframe {
+  width: 100%;
+  /* min-height: 500px; */
+}
+.guide header.header {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #202020;
+}
+.guide header.header h1 {
+  font-size: 60px;
+  font-weight: 100;
+  color: white;
+  background-color: #202020;
+  padding: 40px 0 0 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: auto;
+  height: auto;
+  display: block;
+  text-transform: uppercase;
+}
+.guide header.header .button-snb {
+  background-color: white;
+  position: absolute !important;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+}
+
+.guide main > h1,
+.guide section > h2,
+.guide section > h3 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: #202020;
+}
+small {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #01a29f;
+}
+.guide main > h1 {
+  background-color: #eee;
+  padding: 20px 0;
+  font-size: 40px;
+  margin: 0;
+}
+.guide section > h2 {
+  font-size: 34px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.guide section > h2::before {
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 25px);
+  content: ' ';
+  width: 50px;
+  height: 2px;
+  background-color: #202020;
+}
+.guide section > h3 {
+  font-size: 26px;
+  text-align: left;
+}
+.guide section > h4 {
+  font-size: 22px;
+  color:var(--color-primary);
+  margin:40px 0  8px;
+}
+.guide footer {
+  border-top: 1px solid #eee;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+}
+.guide .color-chip{
+  display: inline-block;
+  width:180px;
+  height:100px;
+  color:white;
+}
+
+.guide-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.guide-list li {
+  font-size: 16px;
+  padding: 20px;
+  color: #aaa;
+}
+.guide-list li:not(:first-child) {
+  border-top: 1px solid #eee;
+}
+.guide-list li a {
+  color: #202020;
+}
+
+/* side menu */
+.guide-aside {
+  /*position:absolute; top:130px; bottom:0; left:0; */
+  display: none;
+  flex-shrink: 0;
+  margin-right: 40px;
+  background-color: white;
+  border-right: 1px solid #202020;
+}
+.guide-aside iframe {
+  height: calc(100vh - 130px);
+  max-width: 100%;
+}
+.guide-aside.show {
+  display: block;
+}
+.guide-aside.show + .guide-container,
+.guide-aside.show + .guide-container + .footer {
+  margin-left: 301px;
+}
+h1.guide-header {
+  font-size: 23px;
+  background-color: transparent;
+  text-align: left;
+  padding: 0 20px;
+  margin: 40px 0 0;
+  color: black;
+}
+
+.guide hr {
+  display: block;
+  border: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.guide-table {
+  border: 1px solid #202020;
+  border-collapse: collapse;
+  width: 100%;
+}
+.guide-table th,
+.guide-table td {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+.guide-table th {
+  background-color: #fafafa;
+}
+.guide-table thead + tbody td {
+  text-align: center;
+}
+.guide-table .valign-top {
+  vertical-align: top;
+}
+.guide-table .exception td{
+  text-decoration: line-through;
+}
+.ia th,
+.guide .ia td {
+  text-align: center;
+}
+.ia .page-code {
+  color: #aaa;
+  text-transform: uppercase;
+}
+.ia .page-code a {
+  color: #202020;
+  font-weight: 700;
+}
+.ia td.desc {
+  text-align: left;
+  font-size: 12px;
+}
+
+.quick_menu {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.quick_menu li a {
+  display: block;
+  width: 110px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-top: 1px solid #fff;
+  padding: 5px 5px 10px 10px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 10px 0 0 10px;
+  line-height: 1em;
+}
+.quick_menu li a:hover {
+  color: yellow;
+}
+.quick_menu li:first-child a {
+  text-align: center;
+  background-color: var(--color-secondary);
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+  font-size: 14px;
+}
+.quick_menu .ing {
+  display: block;
+  float: none;
+  width: 100%;
+  font-size: 12px;
+  /* height: 12px; */
+  /* line-height: 12px; */
+  margin-top: 5px;
+  /* background-color: #fff; */
+  color: #fff;
+  /* border-radius: 3px; */
+  /* opacity: 0.8; */
+}
+.quick_menu .finished {
+  text-decoration: line-through;
+  color: #999;
+}

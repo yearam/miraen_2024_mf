@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 mobile - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+    <link href="/assets/mobile/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <meta name="apple-mobile-web-app-title" content="엠티처 초등">
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <!-- !NOTE : 타이틀이 나오는 페이지의 경우 초/중/고 에 맞춰 아래 meta 태그를 붙여주셔야 합니다. -->
+      <meta name="theme-color" content="#ffffff">
+      <header class="type-border">
+        <h2>1:1 문의하기</h2>
+        <button class="icon-button close" title="버튼명">
+          <svg>
+            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <section class="gnb">
+          <nav>
+            <a href="#">my class</a>
+            <a href="#">나의 정보</a>
+            <a href="#">나의 문의</a>
+            <a href="#">게시물 관리</a>
+          </nav>
+        </section>
+      </header>
+      <!-- 초등 메뉴 리스트 -->
+      <!-- 중고등 메뉴 리스트 -->
+      <main id="main-contents">
+        <section class="mypage-section">
+          <div class="qna-box">
+            <div class="state-box">
+              <span class="badge type-round-box size-lg fill-primary">답변완료</span>
+              <span class="text-black">2024-02-01</span>
+            </div>
+            <div class="padding-default">
+              <ul class="divider-group type-dot">
+                <li>홍길동</li>
+                <li>초등학교</li>
+                <li>서울초등학교</li>
+                <li>담임(2학년)</li>
+              </ul>
+              <div class="qna-contents">
+                <span class="text-primary">[회원가입/인증]</span>
+                <em></em>
+                <span class="text-black">제목을 출력합니다. 최대 90자까지 작성 가능합니다. 제목을 출력합니다. 최대 90자까지 작성 가능합니다. 제목을 출력합니다. 최대 90자까지 작성 가능합니다.</span>
+              </div>
+              <p class="text-black"> 작성된 문의 내용을 출력합니다. 최대 400자까지 작성 가능합니다. 작성된 문의 내용을 출력합니다. 최대 400자까지 작성 가능합니다. 작성된 문의 내용을 출력합니다. 최대 400자까지 작성 가능합니다. </p>
+              <hr class="margin-md">
+              <ul class="attach-items">
+                <li>
+                  <p class="file-name">Attached File Name Max 1 Line Attached File Name Max 1 Line.hwp</p>
+                  <div class="extra">
+                    <button class="button size-sm type-icon">
+                      <svg>
+                        <title>아이콘 다운로드</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <p class="file-name">Attached File Name Max 1 Line Attached File Name Max 1 Line.hwp</p>
+                  <div class="extra">
+                    <button class="button size-sm type-icon">
+                      <svg>
+                        <title>아이콘 다운로드</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="box-info">
+              <div class="ox-wrap">
+                <span class="ox">
+                  <input type="checkbox" id="ox-spec">
+                  <label for="ox-spec" class="multi-line">
+                    <p class="text-black">PC/모바일 사양 정보제공에 동의합니다.</p>
+                  </label>
+                </span>
+                <p class="desc margin-top-xs">제공해주신 정보는 문제 발생의 원인 파악 및 문제 해결을 위해서만 사용됩니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="qna-box">
+            <span class="qna-title">답변</span>
+            <!-- <span class="badge mix-round size-lg primary-light">답변</span> -->
+            <p class="text-black">문의 답변 받은 내용을 출력합니다. 문의 답변 받은 내용을 출력합니다. 문의 답변 받은 내용을 출력합니다. 문의 답변 받은 내용을 출력합니다. 문의 답변 받은 내용을 출력합니다.</p>
+            <hr class="margin-md">
+            <ul class="attach-items">
+              <li>
+                <p class="file-name">Attached File Name Max 1 Line Attached File Name Max 1 Line.hwp</p>
+                <div class="extra">
+                  <button class="button size-sm type-icon">
+                    <svg>
+                      <title>아이콘 다운로드</title>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <p class="file-name">Attached File Name Max 1 Line Attached File Name Max 1 Line.hwp</p>
+                <div class="extra">
+                  <button class="button size-sm type-icon">
+                    <svg>
+                      <title>아이콘 다운로드</title>
+                      <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="buttons">
+            <a href="#" class="button size-md">
+              <svg>
+                <title>아이콘 - icon-menu</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-menu"></use>
+              </svg> 목록 </a>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-footer">
+        <div class="grade-link text-divider">
+          <ul>
+            <!-- 현재 focus에 따라 각 li에 .active를 부여 해주세요 -->
+            <!-- ex)현재 페이지가 초등이면 초등쪽 li에 active 부여 -->
+            <li><a href="#" title="초등메인페이지 이동">초등</a></li>
+            <li><a href="#" title="중학메인페이지 이동">중학</a></li>
+            <li><a href="#" title="고등메인페이지 이동">고등</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <div class="inner">
+            <div class="ft-logo">
+              <!-- <a href="#"> -->
+              <svg>
+                <title>mirae N</title>
+                <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+              </svg>
+              <!-- </a> -->
+            </div>
+            <div class="policy text-divider">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+              </ul>
+            </div>
+            <div class="ft-address text-divider">
+              <ul>
+                <li>(주)미래엔</li>
+                <li>Tel 1800-8890</li>
+                <li>Fax 02-541-8152</li>
+              </ul>
+            </div>
+            <p>MIRAEN CO., LTD. ALL Right Reserved</p>
+            <button class="button family" target-obj="popup-family-site"> 패밀리사이트 <svg>
+                <title>아이콘 - icon-chevron-down</title>
+                <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <!-- top button -->
+      <a href="#top" class="icon-button top-button" title="위로 이동">
+        <svg>
+          <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+      <!-- family site -->
+      <div class="popup-sheet family-site" id="popup-family-site">
+        <div class="popup-container">
+          <button class="icon-button close-button" close-obj>
+            <svg>
+              <title>닫기 아이콘</title>
+              <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="header"> Family Site </div>
+          <div class="body">
+            <div class="list-items">
+              <h4>본사</h4>
+              <a href="https://www.mirae-n.com/" title="새창열림"> 미래엔 </a>
+              <h4>브랜드</h4>
+              <a href="https://www.mirae-n.com/si/mn-si-1.frm?pageGubun=2" title="새창열림"> 미래엔 교과서 </a>
+              <a href="https://www.mirae-n.com/si/mn-si-2.frm" title="새창열림"> 미래엔 에듀 </a>
+              <h4>서비스</h4>
+              <a href="https://www.printn.co.kr/" title="새창열림"> 인쇄 서비스 </a>
+              <a href="https://mall.mirae-n.com/main/index.do" title="새창열림"> Vol.321 </a>
+              <a href="#" title="새창열림"> 초등 엠티처 </a>
+              <a href="#" title="새창열림"> 중학 엠티처 </a>
+              <a href="#" title="새창열림"> 고등 엠티처 </a>
+              <h4>사회공헌</h4>
+              <a href="http://www.mjmirae.or.kr/index.mrn" title="새창열림"> 목정미래재단 </a>
+              <a href="https://www.textbookmuseum.co.kr/index.mrn" title="새창열림"> 교과서 박물관 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

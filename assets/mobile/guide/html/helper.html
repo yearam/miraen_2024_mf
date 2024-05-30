@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 mobile 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+  
+    <script src="/assets/js/m.ui.js" type="text/javascript"></script>
+  
+  <link href="/assets/mobile/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrapper">
+      <header class="header">
+  <a href="/index.html">
+    <h1>mobile Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Helper</h1>
+          <section>
+            <h2>color</h2>
+            <h3>text-color</h3>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 15%;" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>elementary</th>
+                  <td class="text-elementary">텍스트 컬러 .text-elementary</td>
+                </tr>
+                <tr>
+                  <th>middle</th>
+                  <td class="text-middle">텍스트 컬러 .text-middle</td>
+                </tr>
+                <tr>
+                  <th>high</th>
+                  <td class="text-high">텍스트 컬러 .text-high</td>
+                </tr>
+                <tr>
+                  <th>all-grade</th>
+                  <td class="text-all-grade">텍스트 컬러 .text-all-grade</td>
+                </tr>
+                <tr>
+                  <th>white</th>
+                  <td class="fill-dark text-white">텍스트 컬러 .text-white</td>
+                </tr>
+                <tr>
+                  <th>black</th>
+                  <td class="text-black">텍스트 컬러 .text-black</td>
+                </tr>
+                <tr>
+                  <th>purple</th>
+                  <td class="text-purple">텍스트 컬러 .text-purple</td>
+                </tr>
+                <tr>
+                  <th>orange</th>
+                  <td class="text-orange">텍스트 컬러 .text-orange</td>
+                </tr>
+                <tr>
+                  <th>skyblue</th>
+                  <td class="text-skyblue">텍스트 컬러 .text-skyblue</td>
+                </tr>
+                <tr>
+                  <th>green</th>
+                  <td class="text-green">텍스트 컬러 .text-green</td>
+                </tr>
+                <tr>
+                  <th>dark</th>
+                  <td class="text-dark">텍스트 컬러 .text-dark</td>
+                </tr>
+                <tr>
+                  <th>primary</th>
+                  <td class="text-primary">텍스트 컬러 .text-primary</td>
+                </tr>
+                <tr>
+                  <th>primary-400</th>
+                  <td class="text-primary-400">텍스트 컬러 .text-primary-400</td>
+                </tr>
+                <tr>
+                  <th>secondary</th>
+                  <td class="text-secondary">텍스트 컬러 .text-secondary</td>
+                </tr>
+                <tr>
+                  <th>tertiary</th>
+                  <td class="text-tertiary">텍스트 컬러 .text-tertiary</td>
+                </tr>
+                <tr>
+                  <th>error</th>
+                  <td class="text-error">텍스트 컬러 .text-error</td>
+                </tr>
+                <tr>
+                  <th>new</th>
+                  <td class="text-new">텍스트 컬러 .text-new</td>
+                </tr>
+                
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <p><span class="text-white">.text-white 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-dark">.text-dark 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-black">.text-black 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-error">.text-error 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-primary">.text-primary 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-secondary">.text-secondary 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-skyblue">.text-skyblue 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-purple">.text-purple 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-orange">.text-orange 클래스 </span> 텍스트 컬러 샘플</p>
+              <p><span class="text-tertiary">.text-tertiary 클래스 </span> 텍스트 컬러 샘플</p>
+            </pre>
+          </section>
+          <section>
+            <h2>text-align</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>text-left</th>
+                  <td>
+                    <p class="text-left">Ipsum stet et sanctus dolore.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>text-center</th>
+                  <td>
+                    <p class="text-center">Ipsum stet et sanctus dolore.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>text-right</th>
+                  <td>
+                    <p class="text-right">Ipsum stet et sanctus dolore.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <!-- p, div td 등 모든 태그에 사용가능합니다 -->
+              <p class="text-left">Ipsum stet et sanctus dolore.</p>
+              <p class="text-center">Ipsum stet et sanctus dolore.</p>
+              <p class="text-right">Ipsum stet et sanctus dolore.</p>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              split-container
+              <small>단순히 좌우 영역 쪼개는 용도의 컨테이너가 필요할 때 사용</small>
+            </h2>
+            <div class="split-container">
+              <span class="ox">
+                <input type="checkbox" id="save-id" />
+                <label for="save-id" class="text-black">아이디 저장</label>
+              </span>
+              <ul class="divider-group">
+                <li><a href="#" class="">아이디 찾기</a></li>
+                <li><a href="#" class="">비밀번호 찾기</a></li>
+              </ul>
+            </div>
+            <pre class="brush:html">
+							<div class="split-container">
+								<!-- 2개 항목만 자식으로 갖게 넣어 사용합니다. -->
+							</div>
+						</pre>
+          </section>
+          <section>
+            <h2>
+              block-wrap
+              <small>각기 다른 요소를 묶어줄때 사용합니다.(기본간격 : 16px)</small>
+            </h2>
+            <div class="block-wrap">
+              국어 / 국어1-2 (신유식 외9명 2015개정)
+              <a href="#" class="button size-sm">
+                바로가기
+                <svg>
+                  <title>오른쪽 화살표 아이콘</title>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                </svg>
+              </a>
+            </div>
+            <pre class='brush:html'>
+              <div class="block-wrap">
+                국어 / 국어1-2 (신유식 외9명 2015개정)
+                <a href="#" class="button size-sm">
+                  바로가기
+                  <svg>
+                    <title>오른쪽 화살표 아이콘</title>
+                    <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              inline-wrap
+              <small>한 묶음으로 보여야 하는 inline-block 요소들 끼리를 묶어줄때 사용합니다.(기본간격 : 4px)</small>
+            </h2>
+            <div class="inline-wrap">
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+              </i>
+              KA-123456789
+            </div>
+            <pre class='brush:html'>
+              <div class="inline-wrap">
+                <i class="icon">
+                  <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+                </i>
+                KA-123456789
+              </div>
+            </pre>
+
+          </section>
+          <section>
+            <h2>구분선</h2>
+            <h3>hr</h3>
+            <hr />
+            <pre class="brush:html">
+              <hr>
+              </pre>
+            <h3>divider-line</h3>
+            <div class="divider-line">
+              <span>
+                또는
+              </span>
+            </div>
+            <pre class="brush:html">
+              <div class="divider-line">
+                <span>
+                  또는
+                </span>
+              </div>
+            </pre>
+            <h3>.divider-group</h3>
+            <ul class="divider-group">
+              <li>5학년</li>
+              <li>2학기</li>
+              <li>국어(가)</li>
+              <li>1-(1)</li>
+              <li>121차시</li>
+            </ul>
+            <pre class="brush:html">
+              <ul class="divider-group">
+                <li>5학년</li>
+                <li>2학기</li>
+                <li>국어(가)</li>
+                <li>1-(1)</li>
+                <li>121차시</li>
+              </ul>
+            </pre>
+            <h4>.divider-group.type-brace</h4>
+            <ul class="divider-group type-brace">
+              <li>5학년</li>
+              <li>2학기</li>
+              <li>국어(가)</li>
+              <li>1-(1)</li>
+              <li>121차시</li>
+            </ul>
+            <pre class="brush:html">
+              <ul class="divider-group type-brace">
+                <li>5학년</li>
+                <li>2학기</li>
+                <li>국어(가)</li>
+                <li>1-(1)</li>
+                <li>121차시</li>
+              </ul>
+            </pre>
+            <h4>.divider-group.type-dot</h4>
+            <ul class="divider-group type-dot text-black">
+              <li>2023-11-16</li>
+              <li>홍길동</li>
+              <li><span class="text-primary">[초등학교]</span> 서울 장안초등학교/담임</li>
+            </ul>
+            <pre class="brush:html">
+              <ul class="divider-group type-dot text-black">
+                <li>2023-11-16</li>
+                <li>홍길동</li>
+                <li><span class="text-primary">[초등학교]</span> 서울 장안초등학교/담임</li>
+              </ul>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              .number-pages
+              <small>교과활동 - 페이지수 표시에 사용</small>
+            </h2>
+            <div class="number-pages">
+              <span>실험 관찰 999~999p</span>
+              <span>과학 999~999p</span>
+            </div>
+            <pre class="brush:html">
+              <div class="number-pages">
+                <span>실험 관찰 999~999p</span>
+                <span>과학 999~999p</span>
+              </div>
+            </pre>
+            <h3>.type-roundbox
+              <small>교과활동 - 차시창 사용</small>
+            </h3>
+            <div class="number-pages type-roundbox">
+              <span>실험 관찰 999~999p</span>
+              <span>과학 999~999p</span>
+            </div>
+            <pre class="brush:html">
+              <div class="number-pages type-roundbox">
+                <span>실험 관찰 999~999p</span>
+                <span>과학 999~999p</span>
+              </div>
+            </pre>
+          </section> 
+          <section>
+            <h2>new</h2>
+            <span class="new">n</span>
+            <pre class="brush:html">
+              <span class="new">n</span>
+            </pre>
+          </section>
+                  <section>
+            <h2>show / hide
+              <small>show/hide 제어용으로만!! 사용합니다.</small>
+            </h2>
+            <pre class="brush:html">
+              <div class="display-hide">display:none</div>
+              <div class="display-show">display:block</div>
+              <div class="display-show-flex">display:flex</div>
+            </pre>
+          </section>
+          <section>
+            <h2>message-info</h2>
+            <div class="message-info">
+              즐겨찾기 편집은 ‘즐겨찾기 설정' 버튼을 통해서 진행해 주세요.
+            </div>
+            <div class="message-info type-gray">
+              즐겨찾기 편집은 ‘즐겨찾기 설정' 버튼을 통해서 진행해 주세요.
+            </div>
+            <pre class="brush:html">
+              <div class="message-info">
+                즐겨찾기 편집은 ‘즐겨찾기 설정' 버튼을 통해서 진행해 주세요.
+              </div>
+              <div class="message-info type-gray">
+                즐겨찾기 편집은 ‘즐겨찾기 설정' 버튼을 통해서 진행해 주세요.
+              </div>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

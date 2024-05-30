@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>Select</h1>          
+          <section>
+
+            <h2>
+              Select
+              <small>select2 plugin... 디자인 때문에 플러그인 변경 가능성 있음.. </small>
+            </h2>
+            <select name="" id="">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+            </select>
+            <select name="" id="" disabled>
+              <option value="">disabled select</option>
+            </select>
+            <pre class="brush:html">
+                <select name="" id="">
+                    <option value="one">옵션값 First</option>
+                    <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                    <option value="three">옵션값 Third</option>
+                </select>
+                <select name="" id="" disabled>
+                    <option value="">disabled select</option>
+                </select>
+            </pre>
+            <pre class="brush:js">
+                <!-- ui.js -->
+                function renderSelect2() {
+                  $('select').select2({
+                    //placeholder: '값을 선택하세요',
+                    minimumResultsForSearch: Infinity,
+                    dropdownAutoWidth: true,
+                  });
+                  $('select:disabled').select2({
+                    // placeholder: '값을 선택하세요',
+                    minimumResultsForSearch: Infinity,
+                    disabled: true,
+                    dropdownAutoWidth: true,
+                  });
+                }
+            </pre>
+
+            <h3>size-xl : height: 56px;</h3>
+            <select name="" id="" class="size-xl">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+            </select>
+            <h3>size-sm :height 28px</h3>
+            <select name="" id="" class="size-sm">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+            </select>
+            <pre class="brush:html">
+              <select name="" id="" class="size-xl">
+              </select>
+              <h3>size-sm :height 28px</h3>
+              <select name="" id="" class="size-sm">
+              </select>
+            </pre>
+
+            <h3>자동 넓이 삽입 test</h3>
+            <select name="" id="" class="size-sm">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+              <option value="four">옵션값 test - 01</option>
+              <option value="five">옵션값 test - 011123</option>
+              <option value="six">긴 글자 텍스트 테스트 입니다. 긴 글자 텍스트 테스트 입니다.  - 011123</option>
+            </select>
+            <select name="" id="" class="size-sm">
+              <option value="one">옵션값</option>
+            </select>
+
+            <h3>dropdown
+              <small>기본 방향 레이어 활성화 / .direction-top 사용시 위로 펼쳐짐.</small>
+            </h3>
+            <div class="dropdown-select size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어</span></button></li>
+                <li><button type="button"><span>수학수학수학수학수학수학수학수학수학수학</span><span class="badge type-rounded fill-light">[abcd ~ 사회 123]</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+                <li><button type="button"><span>사회</span></button></li>
+                <li><button type="button"><span>사회</span></button></li>
+                <li><button type="button"><span>사회</span></button></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <div class="dropdown-select size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어-긴 글자 텍스트 테스트 입니다. </span></button></li>
+                <li><button type="button"><span>Amet eirmod.</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <div class="dropdown-select size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어</span></button></li>
+                <li><button type="button"><span>Alone but will friend glorious spoiled flow, pleasure mood aisle.</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <pre class="brush:html">
+              <div class="dropdown-select size-xl">
+                <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+                <ul class="options">
+                  <li class="selected"><button type="button"><span>수학수학수학수학 수학수학수학수학수학수학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                  <li><button type="button"><span>영어</span></button></li>
+                  <li><button type="button"><span>사회</span></button></li>
+                </ul>
+              </div>
+            </pre>
+            <h4>direction-top</h4>
+            <div class="dropdown-select direction-top size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>과학과학과학과학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li><button type="button"><span>Noi le segreto propria</span><span class="badge type-rounded fill-light">사회 10~36쪽</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></button></li>
+                <li><button type="button"><span>Consetetur diam eos.</span></button></li>
+              </ul>
+            </div>
+            <div class="dropdown-select direction-top size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어</span></button></li>
+                <li><button type="button"><span>Eirmod justo amet.</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <pre class="brush:html">
+              <div class="dropdown-select direction-top size-xl">
+                <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+                <ul class="options">
+                  <li class="selected"><button type="button"><span>수학수학수학수학수학수학수학수학수학수학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                  <li><button type="button"><span>영어</span></button></li>
+                  <li><button type="button"><span>사회</span></button></li>
+                </ul>
+              </div>
+            </pre>
+
+            <h4>disabled select</h4>
+            <div class="dropdown-select disabled size-xl">
+              <button type="button" class="select-button" disabled><span>비활성화</span></button>
+              <ul class="options">
+                <li><button type="button"><span>과학과학과학과학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li class="disabled"><button type="button" disabled><span>긴글자 테스트 입니다. 긴글자 테스트 입니다.</span><span class="badge type-rounded fill-light">사회 10~36쪽</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></button></li>
+                <li><button type="button"><span>긴글자 테스트 입니다.</span></button></li>
+              </ul>
+            </div>
+            <pre class="brush:html">
+              <div class="dropdown-select disabled size-xl">
+                <button type="button" class="select-button" disabled><span>비활성화</span></button>
+                <ul class="options">
+                  <li><button type="button"><span>과학과학과학과학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                  <li class="disabled"><button type="button" disabled><span>긴글자 테스트 입니다. 긴글자 테스트 입니다.</span><span class="badge type-rounded fill-light">사회 10~36쪽</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></button></li>
+                  <li><button type="button"><span>긴글자 테스트 입니다.</span></button></li>
+                </ul>
+              </div>
+            </pre>
+
+            <h4>disabled option</h4>
+            <div class="dropdown-select direction-top size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li><button type="button"><span>과학과학과학과학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li class="disabled"><button type="button" disabled><span>disabled</span></button></li>
+                <li><button type="button"><span>긴글자 테스트 입니다.</span></button></li>
+              </ul>
+            </div>
+            <pre class="brush:html">
+              <div class="dropdown-select direction-top size-xl">
+                <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+                <ul class="options">
+                  <li><button type="button"><span>과학과학과학과학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                  <li class="disabled"><button type="button" disabled><span>disabled</span></button></li>
+                  <li><button type="button"><span>긴글자 테스트 입니다.</span></button></li>
+                </ul>
+              </div>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

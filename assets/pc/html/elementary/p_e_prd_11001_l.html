@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <link href="/assets/pc/css/pages/elementary/worksheet-download.css" rel="stylesheet" />
+  <body>
+    <!-- !NOTE : window.open 사용시 popup > popup-window 로 변경
+    아래 팝업은 가로 800 세로 720 사이즈 추천 -->
+    <div class="popup-window">
+      <div class="popup-container worksheet">
+        <button class="icon-button close-button">
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header"> 워크시트 다운로드 </div>
+        <div class="body">
+          <section class="color-primary">
+            <div class="title">
+              <div class="text">
+                <strong>온 작품 읽기<br />전 - 중 - 후 활동 안내</strong>
+                <p>미래엔 엠티처는 [온 작품 읽기]가 우리 교실 현장에 정착되어<br />아이들이 독서의 참 맛을 느끼는 데에 도움이 되고자 합니다.</p>
+              </div>
+              <img src="/assets/images/elementary/img-pop-worksheet-title-01.png" alt="온 작품 읽기 전-중-후 활동 안내 배경 이미지">
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <h4>온 작품 읽기 대표 워크시트</h4>
+              </div>
+              <div class="box-body">
+                <div class="items split-3">
+                  <div class="item">
+                    <div class="item-header">
+                      <h4><strong>독서 전</strong> 활동</h4>
+                    </div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-01-01.png" alt="독서 전 활동 예시 이미지">
+                    <ul class="divider-group">
+                      <li>
+                        <a href="https://api-cms.mirae-n.com/down_content?service=mteacher&params=2ZHcZSc%2FqbtQfzG1o8iEXqB8kDFC%2FouEhJs9vtQJXjYYRWaI2BviWTvQoP88t5jWNcjYgMzYCGzuAgBC1rPxRntJwfgWtF0dzzpXt52ZQGdH80Gm86HhPUNyV5UrlY2qiKerDjLwIZmu%2FkQTSF7Qkw%3D%3D" class="button size-md">
+                          <svg>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                          </svg> PDF </a>
+                      </li>
+                      <li>
+                        <a href="https://api-cms.mirae-n.com/down_content?service=mteacher&params=2ZHcZSc%2FqbtQfzG1o8iEXiwceDh8LLkclR%2FmTNyz9AHTXECMeOKQAK8M9J9LlpYOAImb1hHGsVftQmh9YcebdIoHdGA6RSoiiKsgSECrSK0Ri3tAR9yxgw1oaTKDBQ98fxSlNqUVz0IBDqmPYgZ%2BUQ%3D%3D" class="button size-md">
+                          <svg>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                          </svg> HWP </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <div class="item-header">
+                      <h4><strong>독서 중</strong> 활동</h4>
+                    </div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-01-02.png" alt="독서 중 활동 예시 이미지">
+                    <ul class="divider-group">
+                      <li>
+                        <a href="https://api-cms.mirae-n.com/down_content?service=mteacher&params=2ZHcZSc%2FqbtQfzG1o8iEXnTMu4q6J5XAZ8MjZondgvr7PB5gpCoinqHk6EM1LFEDCcKa1kZYEL%2Fszu%2F5HbyKdpNOJbL5cvCkWokSFzGIDUx0A07azkS24Z01%2BkDcQX97ryHm%2BefxD%2F0GSET1mDrGPQ%3D%3D" class="button size-md">
+                          <svg>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                          </svg> PDF </a>
+                      </li>
+                      <li>
+                        <a href="https://api-cms.mirae-n.com/down_content?service=mteacher&params=2ZHcZSc%2FqbtQfzG1o8iEXqJd6rEN56i7fFG%2BrBD8fZV28WqJmGJo18s0qYcneY1Rq%2BcTITsnVO1CiAjw4uT7YT7ROGZvKAEne%2FnaLr9hvsqhJRGXY1sTlM41ltwIXS2A78cXdWr9Aa3UHYSgj1OFPw%3D%3D" class="button size-md">
+                          <svg>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                          </svg> HWP </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <div class="item-header">
+                      <h4><strong>독서 후</strong> 활동</h4>
+                    </div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-01-03.png" alt="독서 후 활동 예시 이미지">
+                    <ul class="divider-group">
+                      <li>
+                        <a href="https://api-cms.mirae-n.com/down_content?service=mteacher&params=2ZHcZSc%2FqbtQfzG1o8iEXkFVN0Rq1fKn1itKK7Wg4imdvrRbyo7Thm9T03acBJlGgP3em5tCTEfL6%2FPDL1%2FRpK06Nppy04MuDUBHCVqx3E0%2FQezIRm9%2B9FB0hrdgg7ly29Q4kDYgVEioEdNEaM%2FyxQ%3D%3D" class="button size-md">
+                          <svg>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+                          </svg> PDF </a>
+                      </li>
+                      <li>
+                        <a href="https://api-cms.mirae-n.com/down_content?service=mteacher&params=2ZHcZSc%2FqbtQfzG1o8iEXng4EDkzCI2B5LpHflDuG9FWf1mtjyQZIILFpbYPlL7c9T5qIuhq%2FZUlhucN%2FdG9RcM2Vj9e3rkBLhvXIBVLI2gr1oeu6Na2K%2F2MCD7ZJLPWWtT03gaangZizkxkTDwlIA%3D%3D" class="button size-md">
+                          <svg>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-download"></use>
+                          </svg> HWP </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="color-secondary">
+            <div class="title">
+              <div class="text">
+                <strong>온 작품 읽기가<br />성공적으로 진행되려면?</strong>
+                <p>많은 독자들이 믿고 보는 아이세움의 동화, 역사, 과학,<br />교양 도서를 학년별 수준에 맞게 구성했습니다.</p>
+              </div>
+              <img src="/assets/images/elementary/img-pop-worksheet-title-02.png" alt="온 작품 읽기가 성공적으로 진행되려면?">
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <span class="badge size-md type-rounded fill-white text-secondary"><strong>01</strong></span>
+                <h4>온 작품 읽기 전</h4>
+              </div>
+              <div class="box-body">
+                <p>작품 읽기 전 활동지를 통해 책에 대한 흥미를 일으켜 보세요.<br />학생들의 상상력을 자극하는데 큰 도움이 됩니다.</p>
+                <div class="unit-item">
+                  <img src="/assets/images/common/icon-check-02.svg" alt="체크 02 아이콘">
+                  <h4>활동 예시</h4>
+                </div>
+                <div class="items split-3">
+                  <div class="item">
+                    <div class="img-title">표지 탐색하기</div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-02-01.png" alt="표지 탐색하기 참고 이미지">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <span class="badge size-md type-rounded fill-white text-secondary"><strong>02</strong></span>
+                <h4>온 작품 읽기 중</h4>
+              </div>
+              <div class="box-body">
+                <p>요약하기·추론하기·자세히 읽기 등 다양한 방법으로 책 내용을 제대로 이해하는 활동입니다.<br />작품을 읽으며, 책에 대한 내용을 좀 더 자세히 이해하고 생각하는 시간을 가져보세요.</p>
+                <div class="unit-item">
+                  <img src="/assets/images/common/icon-check-02.svg" alt="체크 02 아이콘">
+                  <h4>활동 예시</h4>
+                </div>
+                <div class="items split-3">
+                  <div class="item">
+                    <div class="img-title">어휘력 키우기</div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-03-01.png" alt="어휘력 키우기 참고 이미지">
+                  </div>
+                  <div class="item">
+                    <div class="img-title">등장인물에 이입하기</div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-03-02.png" alt="등장인물에 이입하기 참고 이미지">
+                  </div>
+                  <div class="item">
+                    <div class="img-title">줄거리 이해하기</div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-03-03.png" alt="줄거리 이해하기 참고 이미지">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <span class="badge size-md type-rounded fill-white text-secondary"><strong>03</strong></span>
+                <h4>온 작품 읽기 후</h4>
+              </div>
+              <div class="box-body">
+                <p>작품을 모두 읽고 책에 대한 느낀 점과 개인의 생각을 나누고 표현하는 시간을 가져보세요.</p>
+                <div class="unit-item">
+                  <img src="/assets/images/common/icon-check-02.svg" alt="체크 02 아이콘">
+                  <h4>활동 예시</h4>
+                </div>
+                <div class="items split-2">
+                  <div class="item">
+                    <div class="img-title">일기・편지 쓰기</div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-04-01.png" alt="일기, 편지 쓰기 참고 이미지">
+                  </div>
+                  <div class="item">
+                    <div class="img-title">인터뷰・주인공 이해하기</div>
+                    <img src="/assets/images/elementary/img-pop-worksheet-activity-04-02.png" alt="인터뷰, 주인공 이해하기 참고 이미지">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="footer">
+            <img src="/assets/images/elementary/img-pop-worksheet-footer.png" alt="워크시트 푸터 이미지">
+            <p class="text-black"><strong class="text-primary">미래엔 엠티처</strong>에서 선생님과 학생이 함께 온전하게 작품을 읽고<br />책의 즐거움과 흥미를 느끼는데 함께 하겠습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

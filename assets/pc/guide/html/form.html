@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>form</h1>
+          <section>
+            <h2>
+              Input
+              <small>height:36px</small>
+            </h2>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>placeholder</th>
+                  <th>value</th>
+                  <th>disabled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td><input type="search" name="" id="" placeholder="default input" /></td>
+                  <td><input type="search" name="" id="" value="default input" /></td>
+                  <td><input type="search" name="" id="" value="disabled" disabled /></td>
+                </tr>
+
+                <tr>
+                  <th>password</th>
+                  <td><input type="password" name="" id="" placeholder="비밀번호는 8자 이상 영문+숫자+특수문자 입니다." /></td>
+                  <td><input type="password" name="" id="" value="default input" /></td>
+                  <td><input type="password" name="" id="" value="disabled" disabled /></td>
+                </tr>
+                <tr>
+                  <th>number</th>
+                  <td><input type="number" name="" id="" placeholder="숫자를 입력하세요" /></td>
+                  <td><input type="number" name="" id="" value="2" /></td>
+                  <td><input type="number" name="" id="" value="4" disabled /></td>
+                </tr>
+                <tr>
+                  <th>data</th>
+                  <td><input type="date" name="" id="" required value="2024-06-01" /></td>
+                  <td><input type="date" name="" id="" required value="2024-06-01" /></td>
+                  <td><input type="date" name="" id="" required value="2024-06-01" disabled /></td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+                <!-- default text field -->
+                <input type="search" name="" id="" placeholder="default input" />
+                <input type="search" name="" id="" value="default input" />
+                <input type="search" name="" id="" value="disabled" disabled />
+                <!-- password -->
+                <input type="password" name="" id="" placeholder="" />
+                <!-- number -->
+                <input type="number" name="" id="" value="2" />
+                <!-- calendar input -->
+                <input type="date" name="" id="" required value="2024-06-01" />
+            </pre>
+            <h3>.size-xl</h3>
+            <input type="search" class="size-xl" name="" id="" placeholder="높이 56px" />
+            <pre class="brush:html">
+              <input type="search" class="size-xl" name="" id="" placeholder="높이 56px" />
+            </pre>
+          </section>
+          <section>
+            <h2>
+              input-inner-extra
+              <small>input + 버튼, input + 단위 등과 함께 사용되는 경우</small>
+            </h2>
+            <ul class="ul-circle">
+              <li>.type-dark : 로그인/회원가입 팝업에서 사용</li>
+            </ul>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>placeholder</th>
+                  <th>value</th>
+                  <th>disabled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <div class="input-inner-extra">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="input-inner-extra">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="input-inner-extra disabled">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" disabled="disabled" />
+                      <button class="icon-button" title="검색" disabled="disabled">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.type-dark</th>
+                  <td>
+                    <div class="input-inner-extra type-dark">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="input-inner-extra type-dark">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" />
+                      <button class="icon-button" title="검색">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="input-inner-extra type-dark disabled">
+                      <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" value="입력된 검색어" disabled="disabled" />
+                      <button class="icon-button" title="검색" disabled="disabled">
+                        <svg>
+                          <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>ex : select + input</h3>
+            <div class="input-inner-extra">
+              <select name="" id="">
+                <option value="1">전체</option>
+                <option value="2">작성자</option>
+                <option value="3">작성일</option>
+              </select>
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="input-inner-extra">
+              <select name="" id="">
+                <option value="1">긴 문장 테스트 긴 문장 테스트</option>
+                <option value="2">작성자</option>
+                <option value="3">작성일</option>
+              </select>
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <pre class="brush:html">
+              <div class="input-inner-extra">
+                <input type="search" name="" id=""  placeholder="검색어를 입력해 주세요"  />
+                <button class="icon-button" title="검색">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- type-dark -->
+              <div class="input-inner-extra type-dark">
+                <input type="search" name="" id=""  placeholder="검색어를 입력해 주세요"  />
+                <button class="icon-button" title="검색">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+            <h3>.size-xl</h3>
+            <div class="input-inner-extra size-xl">
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="input-inner-extra size-xl">
+              <select name="" id="" class="size-xl">
+                <option value="1">전체</option>
+                <option value="2">작성자</option>
+                <option value="3">작성일</option>
+              </select>
+              <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+              <button class="icon-button" title="검색">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+
+            <pre class="brush:html">
+              <!-- size-xl 추가시 높이 59px -->
+              <div class="input-inner-extra size-xl">
+                <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                <button class="icon-button" title="검색">
+                  <svg>
+                    <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              Select
+              <small>select2 plugin... 디자인 때문에 플러그인 변경 가능성 있음.. </small>
+            </h2>
+            <select name="" id="">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+            </select>
+            <select name="" id="" disabled>
+              <option value="">disabled select</option>
+            </select>
+            <pre class="brush:html">
+                <select name="" id="">
+                    <option value="one">옵션값 First</option>
+                    <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+                    <option value="three">옵션값 Third</option>
+                </select>
+                <select name="" id="" disabled>
+                    <option value="">disabled select</option>
+                </select>
+            </pre>
+            <pre class="brush:js">
+                <!-- ui.js -->
+                function renderSelect2() {
+                  $('select').select2({
+                    //placeholder: '값을 선택하세요',
+                    minimumResultsForSearch: Infinity,
+                    dropdownAutoWidth: true,
+                  });
+                  $('select:disabled').select2({
+                    // placeholder: '값을 선택하세요',
+                    minimumResultsForSearch: Infinity,
+                    disabled: true,
+                    dropdownAutoWidth: true,
+                  });
+                }
+            </pre>
+
+            <h3>size-xl : height: 56px;</h3>
+            <select name="" id="" class="size-xl">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+            </select>
+            <h3>size-sm :height 28px</h3>
+            <select name="" id="" class="size-sm">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+            </select>
+            <pre class="brush:html">
+              <select name="" id="" class="size-xl">
+              </select>
+              <h3>size-sm :height 28px</h3>
+              <select name="" id="" class="size-sm">
+              </select>
+            </pre>
+
+            <h3>dropdown
+              <small>기본 방향 레이어 활성화 / .direction-top 사용시 위로 펼쳐짐.</small>
+            </h3>
+            <div class="dropdown-select size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어</span></button></li>
+                <li><button type="button"><span>수학수학수학수학수학수학수학수학수학수학</span><span class="badge type-rounded fill-light">abcd</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <div class="dropdown-select size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어-asdfasdf</span></button></li>
+                <li><button type="button"><span>asdfasdfasdfa</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <div class="dropdown-select size-xl">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어</span></button></li>
+                <li><button type="button"><span>긴 글자 텍스트 테스트 입니다. </span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <h4>direction-top</h4>
+            <div class="dropdown-select size-xl direction-top">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>과학과학 과학과학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                <li><button type="button"><span>긴 글자 텍스트 테스트 입니다. </span><span class="badge type-rounded fill-light">사회 10~36쪽</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></button></li>
+                <li><button type="button"><span>긴 글자 텍스트 테스트 입니다. - 12313 </span></button></li>
+              </ul>
+            </div>
+            <div class="dropdown-select size-xl direction-top">
+              <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+              <ul class="options">
+                <li class="selected"><button type="button"><span>영어</span></button></li>
+                <li><button type="button"><span>긴 글자 텍스트 테스트 입니다. 13231515</span></li>
+                <li><button type="button"><span>사회</span></button></li>
+              </ul>
+            </div>
+            <pre class="brush:html">
+              <div class="dropdown-select size-xl">
+                <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+                <ul class="options">
+                  <li class="selected"><button type="button"><span>수학수학수학 학수학수학 수학수학수학수학</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                  <li><button type="button"><span>영어</span></button></li>
+                  <li><button type="button"><span>사회</span></button></li>
+                </ul>
+              </div>
+            </pre>
+
+            <h3>select2 option에 따른 넓이 테스트</h3>
+            <select name="" id="" class="size-sm">
+              <option value="one">옵션값 First</option>
+              <option value="two" disabled="disabled">옵션값 Second (disabled)</option>
+              <option value="three">옵션값 Third</option>
+              <option value="three">옵션값 긴 글자 텍스트 테스트 입니다. 긴 글자 텍스트 테스트 입니다. </option>
+            </select>
+          </section>
+
+          <section>
+            <h2>.ox : radio</h2>
+            <span class="ox">
+              <input type="radio" id="ox-radio-1" checked />
+              <label for="ox-radio-1"></label>
+            </span>
+            <br /><br />
+            <span class="ox">
+              <input type="radio" id="ox-radio-2" />
+              <label for="ox-radio-2">단독사용하는 경우</label>
+            </span>
+            <pre class="brush:html">
+                <!-- 라벨 텍스트 없는 경우 -->
+                <span class="ox">
+                    <input type="radio" id="ox-radio-1" checked />
+                    <label for="ox-radio-1"></label>
+                </span>
+                <!-- 라벨 텍스트 있는 경우 -->
+                <span class="ox">
+                    <input type="radio" id="ox-radio-2" checked />
+                    <label for="ox-radio-1">단독사용하는 경우</label>
+                </span>
+            </pre>
+            <h3>
+              .ox-group
+              <small>name의 값을 동일하게 사용해야 radio 그룹으로 동작합니다.</small>
+            </h3>
+            <div class="ox-group">
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-1" checked />
+                <label for="ox-radio1-1">radio checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-2" />
+                <label for="ox-radio1-2">radio unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-3" disabled />
+                <label for="ox-radio1-3">radio disabled</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-4" disabled checked />
+                <label for="ox-radio1-4">radio disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio1-1" id="ox-radio1-5" />
+                <label for="ox-radio1-5"
+                  >radio long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <!-- default : 가로형 -->
+                <div class="ox-group">
+                    <span class="ox">
+                        <input type="radio" name="radio1" id="ox-radio1-1" checked />
+                        <label for="ox-radio1-1">radio checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="radio" name="radio1" id="ox-radio1-2" />
+                        <label for="ox-radio1-2">radio unchecked</label>
+                    </span>
+                </div>
+            </pre>
+            <h3>.ox-group.type-vertical</h3>
+            <div class="ox-group type-vertical">
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-1" checked />
+                <label for="ox-radio2-1">radio checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-2" />
+                <label for="ox-radio2-2">radio unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-3" disabled />
+                <label for="ox-radio2-3">radio disabled</label>
+              </span>
+              <span class="ox">
+                <input type="radio" id="ox-radio2-4" disabled checked />
+                <label for="ox-radio2-4">radio disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="radio" name="radio2" id="ox-radio2-5" />
+                <label for="ox-radio2-5"
+                  >radio long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group type-vertical">
+                    <span class="ox">
+                        <input type="radio" name="radio2" id="ox-radio2-1" checked />
+                        <label for="ox-radio2-1">radio checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="radio" name="radio2" id="ox-radio2-2" />
+                        <label for="ox-radio2-2">radio unchecked</label>
+                    </span>
+                </div>
+            </pre>
+          </section>
+          <section>
+            <h2>.ox : checkbox</h2>
+            <span class="ox">
+              <input type="checkbox" id="ox1" />
+              <label for="ox1"></label>
+            </span>
+            <br /><br />
+            <span class="ox">
+              <input type="checkbox" id="ox2" checked />
+              <label for="ox2">단독사용하는 경우</label>
+            </span>
+            <pre class="brush:html">
+                <!-- 라벨 텍스트 없는 경우 -->
+                <span class="ox">
+                    <input type="checkbox" id="ox1" checked />
+                    <label for="ox1"></label>
+                </span>
+                <!-- 라벨 텍스트 있는 경우 -->
+                <span class="ox">
+                    <input type="checkbox" id="ox2" checked />
+                    <label for="ox2">단독사용하는 경우</label>
+                </span>
+            </pre>
+            <h3>.ox-group</h3>
+            <div class="ox-group">
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-2" checked />
+                <label for="ox-check1-2">checkbox checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-3" />
+                <label for="ox-check1-3">checkbox unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-4" disabled />
+                <label for="ox-check1-4">checkbox disabled</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-4" disabled checked />
+                <label for="ox-check1-4">checkbox disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check1-5" />
+                <label for="ox-check1-5"
+                  >checkbox long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group">
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-2" checked />
+                        <label for="ox-check1-2">checkbox checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-3" />
+                        <label for="ox-check1-3">checkbox unchecked</label>
+                    </span>
+                </div>
+            </pre>
+            <h3>.ox-group.type-vertical</h3>
+            <div class="ox-group type-vertical">
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-2" checked />
+                <label for="ox-check2-2">checkbox checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-3" />
+                <label for="ox-check2-3">checkbox unchecked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-4" disabled />
+                <label for="ox-check2-4">checkbox disabled</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-4" disabled checked />
+                <label for="ox-check2-4">checkbox disabled checked</label>
+              </span>
+              <span class="ox">
+                <input type="checkbox" id="ox-check2-5" />
+                <label for="ox-check2-5"
+                  >checkbox long text : invidunt invidunt dolores sit ipsum diam sed sed sit. et sadipscing et kasd eirmod amet gubergren kasd consetetur, dolores kasd et sed nonumy, amet ipsum magna at amet et, nonumy amet kasd duo eos nonumy at. rebum kasd ut nonumy et sit vero consetetur sanctus, amet nonumy diam duo accusam amet sit gubergren, at elitr sed dolor et, takimata et ipsum vero
+                  invidunt invidunt amet est ut. at rebum ipsum et sed dolores rebum. amet gubergren tempor kasd vero ea. et gubergren elitr dolor kasd et nonumy sed sed magna. amet no dolor et rebum aliquyam vero erat, sadipscing justo.</label
+                >
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group type-vertical">
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-2" checked />
+                        <label for="ox-check1-2">checkbox checked</label>
+                    </span>
+                    <span class="ox">
+                        <input type="checkbox" id="ox-check1-3" />
+                        <label for="ox-check1-3">checkbox unchecked</label>
+                    </span>
+                </div>
+            </pre>
+          </section>
+
+          <section>
+            <h2>.switcher</h2>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>단독사용</th>
+                  <td>
+                    <span class="switcher">
+                      <input type="checkbox" id="switcher1-1" />
+                      <label for="switcher1-1"></label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>설명글 있는 경우</th>
+                  <td>
+                    <span class="switcher">
+                      <input type="checkbox" id="switcher1-2" checked />
+                      <label for="switcher1-2">단독사용 설명글 있는 경우</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.reverse</th>
+                  <td>
+                    <span class="switcher reverse">
+                      <input type="checkbox" id="switcher1-3" />
+                      <label for="switcher1-3">.switcher.reverse</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>.type-tertiary</th>
+                  <td>
+                    <span class="switcher type-tertiary">
+                      <input type="checkbox" id="switcher1-4" checked />
+                      <label for="switcher1-4">.type-tertiary</label>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+                <!-- 텍스트 라벨 없는 경우 -->
+                <span class="switcher">
+                    <input type="checkbox" id="switcher1-1" />
+                    <label for="switcher1-1"></label>
+                </span>
+                <!-- 텍스트 라벨 있는 경우 -->
+                <span class="switcher">
+                    <input type="checkbox" id="switcher1-2" />
+                    <label for="switcher1-2">단독사용 설명글 있는 경우</label>
+                </span>
+                <!-- .reverse -->
+                <span class="switcher reverse">
+                  <input type="checkbox" id="switcher1-3" />
+                  <label for="switcher1-3">.switcher.reverse</label>
+                </span>
+                <!-- tertiary color switcher -->
+                <span class="switcher type-tertiary">
+                  <input type="checkbox" id="switcher1-4" checked />
+                  <label for="switcher1-4">.type-tertiary</label>
+                </span>
+            </pre>
+
+            <h3>.ox-group</h3>
+            <div class="ox-group">
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-1" />
+                <label for="switcher2-1">그룹사용하는 경우</label>
+              </span>
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-2" checked />
+                <label for="switcher2-2">checked</label>
+              </span>
+
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-3" disabled />
+                <label for="switcher2-3">disabled</label>
+              </span>
+
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-4" checked disabled />
+                <label for="switcher2-4">checked disabled</label>
+              </span>
+
+              <span class="switcher">
+                <input type="checkbox" id="switcher2-5" />
+                <label for="switcher2-5">글 길어지는 경우 aliquyam sed at sed sit sed. sed lorem voluptua duo sanctus sea sanctus est vero diam, tempor duo sit gubergren sadipscing, tempor accusam dolor ipsum et dolor rebum. sed at labore stet at, rebum ea invidunt elitr duo sed. ipsum dolores dolore diam nonumy eirmod clita lorem, eos gubergren duo.</label>
+              </span>
+            </div>
+            <pre class="brush:html">
+                <div class="ox-group">
+                    <span class="switcher">
+                        <input type="checkbox" id="switcher2-1" />
+                        <label for="switcher2-1">그룹사용하는 경우</label>
+                    </span>
+                    <span class="switcher">
+                        <input type="checkbox" id="switcher2-2" checked />
+                        <label for="switcher2-2">checked</label>
+                    </span>
+                </div>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Textarea</h2>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>default : placeholder</th>
+                  <th>default : value</th>
+                  <th>readonly</th>
+                  <th>disabled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><textarea name="" id="" cols="30" rows="5" placeholder="placeholder text"></textarea></td>
+                  <td><textarea name="" id="" cols="30" rows="5">입력된 텍스트 샘플 입니다.</textarea></td>
+                  <td><textarea name="" id="" cols="30" rows="5" readonly>입력된 텍스트 샘플 입니다.</textarea></td>
+                  <td><textarea name="" id="" cols="30" rows="5" disabled>입력된 텍스트 샘플 입니다.</textarea></td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+                <textarea name="" id="" cols="30" rows="5" placeholder="placeholder text"> 샘플 입니다.</textarea>
+                <textarea name="" id="" cols="30" rows="5">입력된 텍스트 샘플 입니다.</textarea>
+                <textarea name="" id="" cols="30" rows="5" readonly>입력된 텍스트 샘플 입니다.</textarea>
+                <textarea name="" id="" cols="30" rows="5" disabled>입력된 텍스트 샘플 입니다.</textarea>
+            </pre>
+            <h3>
+              .textarea
+              <small>rows 값으로 높이값이 결정됩니다. 기본 rows=5</small>
+            </h3>
+            <div class="textarea">
+              <textarea name="" id="" rows="5" placeholder="비방, 욕설 작성 시 이용에 제한될 수 있습니다."></textarea>
+              <div class="buttons">
+                <span class="digits">0/200</span>
+                <button class="button size-lg type-secondary">등록</button>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="textarea">
+                <textarea name="" id="" rows="5" placeholder="비방, 욕설 작성 시 이용에 제한될 수 있습니다."></textarea>
+                <div class="buttons">
+                  <span class="digits">0/200</span>
+                  <button class="button size-lg type-secondary">등록</button>
+                </div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>
+              file-upload
+              <small>placeholder text 를 받아서 입력하도록 스크립트 처리 되어 있습니다.</small>
+            </h2>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>default</th>
+                  <th>size-xl</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>기본 가로정렬</td>
+                  <td>
+                    <div class="file-upload">
+                      <div class="inner-form">
+                        <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                        <button class="button type-gray">삭제</button>
+                      </div>
+                      <label for="file" class="button type-line">
+                        <svg>
+                          <title>아이콘 - icon-plus</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="file-upload size-xl">
+                      <div class="inner-form">
+                        <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                        <button class="button type-gray">삭제</button>
+                      </div>
+                      <label for="file" class="button type-line">
+                        <svg>
+                          <title>아이콘 - icon-plus</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type-vertical</td>
+                  <td>
+                    <div class="file-upload type-vertical">
+                      <div class="inner-form">
+                        <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                        <button class="button type-gray">삭제</button>
+                      </div>
+                      <label for="file" class="button type-line">
+                        <svg>
+                          <title>아이콘 - icon-plus</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="file-upload size-xl type-vertical">
+                      <div class="inner-form">
+                        <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                        <button class="button type-gray">삭제</button>
+                      </div>
+                      <label for="file" class="button type-line">
+                        <svg>
+                          <title>아이콘 - icon-plus</title>
+                          <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre class="brush:html">
+              <div class="file-upload">
+                <div class="inner-form">
+                  <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                  <button class="button type-gray">삭제</button>
+                </div>
+                <label for="file" class="button type-line">
+                  <svg>
+                    <title>아이콘 - icon-plus</title>
+                    <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                </label>
+              </div>
+
+              <!-- size-xl -->
+              <div class="file-upload size-xl">
+                <div class="inner-form">
+                  <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                  <button class="button type-gray">삭제</button>
+                </div>
+                <label for="file" class="button type-line">
+                  <svg>
+                    <title>아이콘 - icon-plus</title>
+                    <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                </label>
+              </div>
+
+              <!-- type-vertical -->
+              <div class="file-upload size-xl type-vertical">
+                <div class="inner-form">
+                  <input type="file" name="" id="file" placeholder="파일을 첨부해 주세요." />
+                  <button class="button type-gray">삭제</button>
+                </div>
+                <label for="file" class="button type-line">
+                  <svg>
+                    <title>아이콘 - icon-plus</title>
+                    <use href="/assets/images/svg-sprite-solid.svg#icon-plus"></use></svg>파일 선택
+                </label>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>forms</h2>
+            <h3>
+              required
+              <small>.required 붙으면 * 나타납니다.</small>
+            </h3>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>default</th>
+                  <th>required</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="forms">
+                      <label for="user-name">이름</label>
+                      <fieldset>
+                        <input type="search" title="이름 입력란" name="" id="user-name" placeholder="이름을 입력해 주세요" required="required" />
+                        <span class="caution">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="forms required">
+                      <label for="user-name">이름</label>
+                      <fieldset>
+                        <input type="search" title="이름 입력란" name="" id="user-name" placeholder="이름을 입력해 주세요" required="required" />
+                        <span class="caution">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre class="brush:html">
+              <div class="forms required">
+                <label for="user-name">이름</label>
+                <fieldset>
+                  <input type="search" title="이름 입력란" name="" id="user-name" placeholder="이름을 입력해 주세요" required="required" />
+                  <span class="caution">오류 메시지 나타납니다.</span>
+                </fieldset>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h3>
+              fieldset
+              <small>fieldset에 .flag-error 붙으면 caution 나타납니다.</small>
+            </h3>
+            <ul class="ul-circle">
+              <li>기본형 에러메시지는 아래 항목을 밀어내고 나타납니다.</li>
+              <li>하단 항목을 가리고 오류메시지가 보여야 할때는 .caution에 type-float 를 추가해 줍니다.</li>
+            </ul>
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>default</th>
+                  <th>flag-error</th>
+                  <th>type-floating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="forms">
+                      <label for="user-name">기본상태</label>
+                      <fieldset>
+                        <div class="input-inner-extra">
+                          <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                          <button class="icon-button" title="검색">
+                            <svg>
+                              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <span class="caution">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                      <div class="message-info type-gray">안내메세지 있는 경우</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="forms">
+                      <label for="user-name">기본형 에러메시지는 아래 항목을 밀어내고 나타납니다.</label>
+                      <fieldset class="flag-error">
+                        <div class="input-inner-extra">
+                          <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                          <button class="icon-button" title="검색">
+                            <svg>
+                              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <span class="caution">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                      <div class="message-info type-gray">안내메세지 있는 경우</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="forms">
+                      <label for="user-name">하단 항목을 가리고 나타나야 할때 .type-float</label>
+                      <fieldset class="flag-error">
+                        <div class="input-inner-extra">
+                          <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                          <button class="icon-button" title="검색">
+                            <svg>
+                              <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <span class="caution type-float">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                      <div class="message-info type-gray">안내메세지 있는 경우</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre class="brush:html">
+              <div class="forms">
+                <label for="user-name">하단 항목을 가리고 나타나야 할때 .type-float</label>
+                <!-- !NOTE : flag-error 클래스로 caution이 show/hide 됩니다. -->
+                <fieldset class="flag-error">
+                  <div class="input-inner-extra">
+                    <input type="search" name="" id="" placeholder="검색어를 입력해 주세요" />
+                    <button class="icon-button" title="검색">
+                      <svg>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="caution type-float">오류 메시지 나타납니다.</span>
+                </fieldset>
+                <div class="message-info type-gray">안내메세지 있는 경우</div>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h3>
+              forms
+              <small>여러폼이 함께 사용되는 경우. 오류 메세지가 함께 떠야하는 항목을 fieldset으로 묶어줍니다.</small>
+            </h3>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <div class="forms">
+                      <label for="forms1">내부 항목들이 N 분할 되어 배치 됩니다.</label>
+                      <fieldset class="flag-error">
+                        <input type="search" title="생년월일 확인 입력란" name="" id="forms1" placeholder="생년(4자)" required="required" />
+                        <select name="" id="" title="월 선택">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="1">12342423 2342342</option>
+                        </select>
+                        <select name="" id="" title="일 선택">
+                          <option value="1">31</option>
+                        </select>
+                        <span class="caution">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                    </div>
+                    <pre class="brush:html">
+                      <div class="forms">
+                        <label for="forms1">내부 항목들이 N 분할 되어 배치 됩니다.</label>
+                        <fieldset class="flag-error">
+                          <input type="search" title="생년월일 확인 입력란" name="" id="forms1" placeholder="생년(4자)" required="required" />
+                          <select name="" id="" title="월 선택">
+                            <option value="1">1</option>
+                          </select>
+                          <select name="" id="" title="일 선택">
+                            <option value="1">31</option>
+                          </select>
+                          <span class="caution">오류 메시지 나타납니다.</span>
+                        </fieldset>
+                      </div>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>forms in button</th>
+                  <td>
+                    <div class="forms">
+                      <label for="user-pnum">버튼은 기본사이즈로 나타납니다.</label>
+                      <fieldset>
+                        <input type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="&#39;-&#39;를 제외한 휴대폰 번호를 입력해 주세요" />
+                        <button type="button" class="button size-md type-gray">인증요청</button>
+                      </fieldset>
+                    </div>
+                    <div class="forms">
+                      <fieldset>
+                        <input type="date" name="" id="" required="" value="2024-06-01">
+                        <span>~</span>
+                        <input type="date" name="" id="" required="" value="2024-06-01">
+                        <button class="button size-md type-line type-icon">
+                          <svg>
+                            <title>아이콘 다운로드</title>
+                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+                          </svg>
+                        </button>
+                      </fieldset>
+                    </div>
+                    <pre class="brush:html">
+                      <div class="forms">
+                        <label for="user-pnum">버튼은 기본사이즈로 나타납니다.</label>
+                        <fieldset>
+                          <input type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="&#39;-&#39;를 제외한 휴대폰 번호를 입력해 주세요" />
+                          <button type="button" class="button size-md type-gray">인증요청</button>
+                        </fieldset>
+                      </div>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>multiple row</th>
+                  <td>
+                    <div class="forms">
+                      <label for="user-pnum">휴대폰 번호</label>
+                      <fieldset>
+                        <input type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="&#39;-&#39;를 제외한 휴대폰 번호를 입력해 주세요" />
+                        <button type="button" class="button size-md type-gray">인증요청</button>
+                      </fieldset>
+                      <fieldset class="flag-error">
+                        <input type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="인증번호를 입력해 주세요" />
+                        <button type="button" class="button size-md type-gray">인증하기</button>
+                        <span class="caution type-float">오류 메시지 나타납니다.</span>
+                      </fieldset>
+                      <div class="message-info type-gray"><span class="text-error">MM</span>분 <span class="text-error">SS</span>초 이내에 인증번호를 입력해 주세요.</div>
+                    </div>
+                    <pre class="brush:html">
+                      <div class="forms">
+                        <label for="user-pnum">휴대폰 번호</label>
+                        <fieldset>
+                          <input type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="&#39;-&#39;를 제외한 휴대폰 번호를 입력해 주세요" />
+                          <button type="button" class="button size-md type-gray">인증요청</button>
+                        </fieldset>
+                        <fieldset class="flag-error">
+                          <input type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="인증번호를 입력해 주세요" />
+                          <button type="button" class="button size-md type-gray">인증하기</button>
+                          <span class="caution type-float">오류 메시지 나타납니다.</span>
+                        </fieldset>
+                        <div class="message-info type-gray"><span class="text-error">MM</span>분 <span class="text-error">SS</span>초 이내에 인증번호를 입력해 주세요.</div>
+                      </div>
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 class="margin-top-xl">.type-vertical</h4>
+            <div class="forms required">
+              <label for="forms1">내부 항목들이 N 분할 되어 배치 됩니다.</label>
+              <fieldset class="flag-error type-vertical">
+                <input type="search" title="생년월일 확인 입력란" name="" id="forms1" placeholder="생년(4자)" required="required" />
+                <select name="" id="" title="월 선택">
+                  <option value="1">1</option>
+                </select>
+                <select name="" id="" title="일 선택">
+                  <option value="1">31</option>
+                </select>
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <pre class="brush:html">
+              <div class="forms required">
+                <label for="forms1">내부 항목들이 N 분할 되어 배치 됩니다.</label>
+                <fieldset class="flag-error type-vertical">
+                  <input type="search" title="생년월일 확인 입력란" name="" id="forms1" placeholder="생년(4자)" required="required" />
+                  <select name="" id="" title="월 선택">
+                    <option value="1">1</option>
+                  </select>
+                  <select name="" id="" title="일 선택">
+                    <option value="1">31</option>
+                  </select>
+                  <span class="caution">오류 메시지 나타납니다.</span>
+                </fieldset>
+              </div>
+            </pre>
+          </section>
+          <section>
+            <h2>.form-group</h2>
+            <div class="form-group">
+              <div class="forms">
+                <label for="grade">학년</label>
+                <fieldset>
+                  <select name="grade" id="grade" class="size-xl" title="학년">
+                    <option value="1학년">1학년</option>
+                    <option value="2학년">2학년</option>
+                    <option value="3학년">3학년</option>
+                    <option value="4학년">4학년</option>
+                    <option value="5학년">5학년</option>
+                    <option value="6학년">6학년</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="forms">
+                <label for="semester">학기</label>
+                <fieldset>
+                  <select name="semester" id="semester" class="size-xl" title="학기">
+                    <option value="1학기">1학기</option>
+                    <option value="2학기">2학기</option>
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+            <pre class="brush:html">
+              <div class="form-group">
+                <div class="forms">
+                  <label for="grade">학년</label>
+                  <fieldset>
+                    <select name="grade" id="grade" class="size-xl" title="학년">
+                      <option value="1학년">1학년</option>
+                      <option value="2학년">2학년</option>
+                      <option value="3학년">3학년</option>
+                      <option value="4학년">4학년</option>
+                      <option value="5학년">5학년</option>
+                      <option value="6학년">6학년</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="forms">
+                  <label for="semester">학기</label>
+                  <fieldset>
+                    <select name="semester" id="semester" class="size-xl" title="학기">
+                      <option value="1학기">1학기</option>
+                      <option value="2학기">2학기</option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

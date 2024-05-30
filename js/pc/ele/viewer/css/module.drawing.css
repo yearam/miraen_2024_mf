@@ -1,0 +1,533 @@
+/* 툴바 - 그리기 */
+#drawing {
+	position: absolute;
+	bottom: 0;
+	white-space: nowrap;
+	z-index: 1110;
+	bottom: 83px;
+	left: 30px;
+	background: #fff;
+	box-shadow: 0 -1px 6px rgba(0, 0, 0, .1);
+	border:1px solid var(--color-primary-preview);
+}
+
+#drawing>* {
+	display: inline-block;
+	padding: 8px 12px;
+	/* padding: 8px 15px; */
+	vertical-align: top
+}
+
+#drawing>*+* {
+	border-left: 1px solid #e5e5e5
+}
+
+#drawing>*:last-child {
+	padding: 8px 3px
+}
+
+#palette {
+	display: none;
+	font-size: 0;
+}
+
+.palette {
+	/* margin:2px 13.5px; */
+	margin:2px 10px;
+	padding: 6px 7px;
+}
+.palette.active{
+	padding:  6px 7px;
+	background-color: #00cbb4;
+}
+.palette:nth-child(2) i {
+	border-color: #d5d5d5;
+}
+
+.palette i {
+	display: inline-block;
+	overflow: hidden;
+	width: 24px;
+	height: 24px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	text-indent: -9em;
+	vertical-align: middle
+}
+
+.palette.stroke_width i {
+	width: 18px;
+	height: 18px;
+	background-color: #000;
+	/* margin-right: 230px; */
+}
+/* .palette .active {
+	border-color: steelblue !important
+} */
+
+.drawing-section {
+	display: inline-block;
+	position: relative;
+	padding: 0 8px;
+	color: #666
+}
+
+.drawing-section>button {
+	height: 40px;
+}
+
+.drawing-section>button .caret {
+	top: 16px
+}
+
+.drawing-layer {
+	display: none;
+	overflow-y: auto;
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	max-height: 152px;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	border: 2px solid #00cbb4;
+	background: #fff;
+	font-size: 22px
+}
+
+.drawing-layer.active {
+	display: block
+}
+
+.drawing-layer .selected {
+	color: #00cbb4
+}
+
+#drawing-color {
+	width: 192px;
+	white-space: normal
+}
+
+.drawing-layer .palette {
+	margin: 2px;
+}
+
+.drawing-layer .palette.selected i {
+	box-shadow: 0 0 0 4px #00cbb4;
+}
+
+.stroke_width {
+	margin-left: 0 5px;
+	min-width: 50px;
+	padding: 0 7px;
+	margin-left: 30px;
+}
+.palette.stroke_width::before {
+	content: "";
+	position: absolute;
+	left: 790px;
+	bottom: 0;
+	height: 56px;
+	/* border-left: 1px solid #e5e5e5; */
+}
+.stroke_width_wrap {
+	box-shadow: 0 -1px 6px rgba(0, 0, 0, .1);
+	display: none;
+	position: absolute;
+	width: 280px;
+	height: 56px;
+	top: -56px;
+	left: 585px;
+	background-color: #fff;
+}
+
+.stroke_width_wrap .drawing_stroke_width {
+	cursor: pointer;
+}
+
+.stroke_width_wrap .drawing_stroke_width i {
+	background-color: #000;
+	/* background-color: #d0d0d0; */
+	display: inline-block;
+	overflow: hidden;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	text-align: -9em;
+	vertical-align: middle;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(1) {
+	padding: 13px 18px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(2) {
+	padding: 16px 18px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(3) {
+	padding: 19px 18px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(4) {
+	padding: 22px 18px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(5) {
+	padding: 24px 18px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(1) i {
+	width: 30px;
+	height: 30px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(2) i {
+	width: 24px;
+	height: 24px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(3) i {
+	width: 18px;
+	height: 18px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(4) i {
+	width: 12px;
+	height: 12px;
+}
+
+.stroke_width_wrap .drawing_stroke_width:nth-child(5) i {
+	width: 8px;
+	height: 8px;
+}
+
+#palette .stroke_width_wrap .drawing_stroke_width .active {
+	background-color: #00cbb4;
+}
+
+/* 선 굵기 range */
+#palette .lineRange {
+	vertical-align: middle;
+	margin-left: 20px;
+	-webkit-appearance: none;
+	width: 200px;
+	height: 8px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	border-radius: 10px;
+	top: 25px;
+	left: 785px;
+	position: absolute;
+}
+#palette .lineRange:hover {
+	opacity: 1;
+}
+#palette .lineRange::-webkit-slider-thumb {
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	background: #ddd;
+	cursor: pointer;
+	border-radius: 20px;
+	border: 4px solid #999;
+}
+#palette .lineRange::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #04AA6D;
+	cursor: pointer;
+}
+
+
+/* 텍스트 */
+
+#font_select {
+	padding: 6px 15px;
+}
+
+#font_select #font_family {
+	position: relative;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	margin: 0 10px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align : text-top;
+	font-family: "NanumGothic";
+}
+#font_family .ff_text {
+	display: inline-block;
+	padding: 7px;
+}
+#font_family .caret_change {
+	position: relative;
+	top: -17px;
+	border: 6px solid;
+	border-width: 7px 6px;
+	border-color: transparent transparent #666;
+	vertical-align: middle;
+}
+#font_family .caret {
+	/* position: relative;
+	top: 14px;
+	margin-left: 6px;
+	border: 6px solid;
+	border-width: 7px 6px;
+	border-color: #666 transparent transparent;
+	vertical-align: middle; */
+	position: relative;
+	top: -17px;
+	border: 6px solid;
+	border-width: 7px 6px;
+	border-color: transparent transparent #666;
+	vertical-align: middle;
+}
+.font_family_wrap {
+	display: none;
+	box-shadow:0 -1px 6px rgba(0,0,0,.1);
+	position: absolute;
+	width: 160px;
+	height: 150px;
+	top:-150px;
+	left:187px;
+	background-color: #fff;
+}
+.font_family_wrap .select_f_fm {
+	position: relative;
+	width: 100%;
+	height: 22.5px;
+	margin: 12px 0 12px 12px;
+	font-size: 17px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.font_family_wrap .select_f_fm:hover {
+	color: #00cbb4;
+}
+.select_font_family_1 {
+	font-family: "NanumGothic";
+	font-weight: 500;
+}
+.select_font_family_2 {
+	 font-family: "NanumSquare";
+	 font-weight: 500;
+}
+.select_font_family_3 {
+	font-family: "NanumSquare";
+	font-weight: 900;
+}
+.select_font_family_4 {
+	font-family: "NanumMyeongjo";
+	font-weight: 600;
+}
+#font_select #font_size {
+	position: relative;
+	width: 50px;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	margin: 0 10px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align : text-top;
+	font-family: "NanumGothic";
+}
+#font_size .fs_text {
+	display: inline-block;
+	width: 50px;
+	padding: 7px;
+}
+#font_size .caret_change {
+	position: relative;
+	top: -17px;
+	border: 6px solid;
+	border-width: 7px 6px;
+	border-color: transparent transparent #666;
+	vertical-align: middle;
+}
+#font_size .caret {
+	/* position: relative;
+	top: 14px;
+	margin-left: 6px;
+	border: 6px solid;
+	border-width: 7px 6px;
+	border-color: #666 transparent transparent;
+	vertical-align: middle; */
+	position: relative;
+	top: -17px;
+	border: 6px solid;
+	border-width: 7px 6px;
+	border-color: transparent transparent #666;
+	vertical-align: middle;
+}
+.font_size_wrap {
+	display: none;
+	box-shadow:0 -1px 6px rgba(0,0,0,.1);
+	position: absolute;
+	width: 70px;
+	height: 225px;
+	top:-225px;
+	left: 380px;
+	background-color: #fff;
+}
+.font_size_wrap .select_f_fs {
+	position: relative;
+	width: 100%;
+	height: 22.5px;
+	margin: 12px;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 500;
+}
+.font_size_wrap .select_f_fs:hover {
+	color: #00cbb4;
+}
+.icon-font-lg {
+	width: 40px;
+	height: 40px;
+	margin: 0 10px;
+	margin-left: 25px;
+	background: url("icon-font-lg.png") no-repeat 100% 100% center;
+}
+
+.icon-font-sm {
+	width: 40px;
+	height: 40px;
+	padding: 0 30px;
+	background: url("icon-font-sm.png") no-repeat 100% 100% center;
+	border-right: 1px solid #d0d0d0;
+}
+
+.icon-font-color {
+	width: 50px;
+	height: 40px;
+	margin: 0 10px;
+	background: url("../img/viewer/icon-font-color.png") no-repeat 100% 100% center;
+}
+
+.icon-font-color>span {
+	margin-left: 35px
+}
+
+.icon-font-color>.fc_change {
+	position: absolute;
+	width: 20px;
+	height: 6px;
+	margin-left: 13px;
+	margin-top: 7px;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: #000;
+	border: 1px solid #666;
+}
+
+.font_color_wrap {
+	display: none;
+	box-shadow: 0 -1px 6px rgba(0, 0, 0, .1);
+	position: absolute;
+	width: 515px;
+	height: 56px;
+	top: -56px;
+	left: 378px;
+	background-color: #fff;
+}
+
+.font_palette {
+	margin: 8px 7px;
+	padding: 2px 8px 8px 8px;
+}
+.font_palette.active {
+	background-color: #00cbb4;
+}
+
+.font_palette i {
+	display: inline-block;
+	overflow: hidden;
+	width: 24px;
+	height: 24px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	text-indent: -9em;
+	vertical-align: middle;
+}
+
+.font_family_select_1 {
+	font-family: "NanumGothic";
+}
+
+.font_family_select_2 {
+	font-family: "NanumSquare";
+}
+
+.font_family_select_3 {
+	font-family: "NanumSquare";
+	font-weight: bold;
+}
+
+.font_family_select_4 {
+	font-family: "NanumMyeongjo";
+}
+
+/* 화살표, 직선, 형광펜, 스티커 */
+
+#image_select {
+	display: none;
+	padding: 8px 15px;
+}
+
+#image_select button i {
+	display: inline-block;
+	text-indent: -1000em;
+}
+
+#image_select .img_select {
+	width: 40px;
+	height: 40px;
+	margin: 0 10px;
+	background-repeat: no-repeat;
+	background-size: 60% auto;
+	background-position: center;
+}
+
+#image_select .icon-arrow {
+	background-image: url("icon-figure.png");
+}
+
+#image_select .icon-arrow.active {
+	background-image: url("icon-figure-on.png");
+}
+
+#image_select .icon-line {
+	background-image: url("icon-figure2.png");
+}
+
+#image_select .icon-line.active {
+	background-image: url("icon-figure2-on.png");
+}
+
+#image_select .icon-hlighter {
+	background-image: url("icon-figure3.png");
+}
+
+#image_select .icon-hlighter.active {
+	background-image: url("icon-figure3-on.png");
+}
+
+#image_select .icon-sticker {
+	background-image: url("icon-figure4.png");
+}
+
+#image_select .icon-sticker.active {
+	background-image: url("icon-figure4-on.png");
+}
+
+#image_select .active {
+	background-color: #00cbb4;
+}
+
+/* 임시코드 나중에 삭제 예정 */
+/* #drawing{ display: none;} */

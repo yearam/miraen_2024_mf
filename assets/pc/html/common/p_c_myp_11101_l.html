@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="pnum-certification">휴대폰 번호 인증</button>
+        </main>
+      </div>
+    </div>
+    <div class="popup" id="pnum-certification" init-show>
+      <!-- !NOTE : popup body 영역 스크롤을 사용하지 않는 팝업입니다. -->
+      <div class="popup-container no-body-scroll">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header"> 휴대폰 번호 인증 </div>
+        <form action="submit">
+          <div class="body">
+            <div>
+              <p class="text-black text-center">휴대폰 번호를 변경하시면 회원정보도 함께 변경됩니다.</p>
+              <fieldset class="margin-top-md">
+                <!-- !NOTE : 입력했던 휴대폰 번호를 값으로 넣어주세요 -->
+                <input class="size-xl" type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" value="010-1234-1234" />
+                <button type="button" class="button size-xl type-gray">재 요청</button>
+              </fieldset>
+              <!-- !NOTE class="flag-error" 추가시 하단 오류메시지 나타납니다. -->
+              <fieldset class="flag-error">
+                <input class="size-xl" type="search" title="휴대폰 번호 입력란" name="" id="user-pnum" placeholder="인증번호를 입력해 주세요" />
+                <button type="button" class="button size-xl type-gray">인증하기</button>
+                <span class="caution type-float">오류 메시지 나타납니다.</span>
+              </fieldset>
+              <div class="message-info type-gray"><span class="text-error">MM</span>분 <span class="text-error">SS</span>초 이내에 인증번호를 입력해 주세요.</div>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="button size-xl type-dark" close-obj="">취소</button>
+            <button class="button size-xl type-primary">변경</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

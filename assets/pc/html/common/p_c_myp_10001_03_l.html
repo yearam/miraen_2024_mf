@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="reg-my-link">내 링크 등록</button>
+        </main>
+      </div>
+    </div>
+    <div class="popup" id="reg-my-link" init-show>
+      <div class="popup-container size-lg">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          <h3>내 링크 등록</h3>
+        </div>
+        <form action="">
+          <div class="body">
+            <div class="box-gray padding-sm text-black"> 수업에 활용하실 참고 사이트나, 영상 링크를 등록 하시면 학습 목차에 추가하여 편리하게 사용하실 수 있습니다. </div>
+            <div class="forms">
+              <label for="link-name">링크명</label>
+              <fieldset>
+                <input type="text" title="링크명" class="size-xl" name="" id="link-name" placeholder="3자 ~ 30자 까지의 자료명을 입력해 주세요.">
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <div class="forms">
+              <label for="link-url">링크 URL</label>
+              <fieldset>
+                <input type="text" title="링크 URL" class="size-xl" name="" id="link-url" placeholder="">
+                <span class="caution">오류 메시지 나타납니다.</span>
+              </fieldset>
+            </div>
+            <!-- !NOTE : 교과 선택 완료 후 교과 정보 내용이 변경 됩니다. -->
+            <!-- !NOTE : Before -->
+            <div class="forms">
+              <label for="textbook-info">교과 정보</label>
+              <fieldset>
+                <input type="text" title="교과서 선택란" name="" id="textbook-info" class="size-xl" placeholder="교과서를 선택해 주세요." readonly>
+                <button type="button" class="button size-xl" target-obj="select-tex-info">교과 선택</button>
+              </fieldset>
+            </div>
+            <!-- !NOTE : 교과 선택 완료 후 교과 정보 내용이 변경 됩니다. -->
+            <!-- !NOTE : After -->
+            <div>
+              <p class="text-black title-label">교과 정보</p>
+              <div class="roundbox-outlined split-vertical-line">
+                <div class="section">
+                  <ul class="divider-group type-brace">
+                    <li>5학년</li>
+                    <li>2학기</li>
+                    <li>국어(가)</li>
+                  </ul>
+                  <p class="text-xs text-black ellipsis-multi">
+                    <strong class="semi">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요.</strong>
+                  </p>
+                  <span class="badge type-rounded fill-light"> 사회 10~36쪽 </span>
+                </div>
+                <div class="extra align-middle">
+                  <button type="button" class="button size-xl disabled" target-obj="change-tex-info">교과 선택</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="title-label">
+                <p class="text-black">자료 구분</p>
+                <button type="button" class="tooltip-trigger" data-title="자료 구분" data-trigger="hover" data-placement="auto-bottom" data-container="popup-container" data-style="theme-primary">
+                  <img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+                </button>
+                <div class="webui-popover-content">
+                  <ul class="ul-dot">
+                    <li class="text-xs">나만 보기 : 업로드 한 자료는 내 자료에 저장되고, 내 수업에서만 활용할 수 있습니다.</li>
+                    <li class="text-xs">함께 보기 : 업로드 한 자료는 내 자료에 저장되고, 모든 선생님이 수업에 함께 활용할 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ox-group">
+                <span class="ox">
+                  <input type="radio" name="data" id="ox-data-1">
+                  <label for="ox-data-1">나만 보기</label>
+                </span>
+                <span class="ox">
+                  <input type="radio" name="data" id="ox-data-2" checked="">
+                  <label for="ox-data-2">함께 보기</label>
+                </span>
+              </div>
+            </div>
+            <!-- !NOTE : 함께 보기 radio가 checked 일 때 저작권 및 활용동의 박스가 노출 됩니다. -->
+            <div class="box-info padding-md">
+              <span class="ox">
+                <input type="checkbox" name="agree" id="ox-agree">
+                <label for="ox-agree">저작권 및 활용 동의</label>
+              </span>
+              <p class="margin-top-sm text-xs">본 자료에 사용된 폰트, 이미지, 영상 등의 모든 콘텐츠는 저작권법에 위배되지 않으며, 함께 보기로 업로드 한 자료는 엠티처 사이트 내 자유롭게 활용될 수 있음에 동의합니다.</p>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="button size-xl type-dark" close-obj>취소</button>
+            <button class="button size-xl type-primary">등록</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="select-tex-info">
+      <div class="popup-container size-lg">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          <h3>교과 정보 선택</h3>
+        </div>
+        <form action="submit">
+          <div class="body">
+            <div class="form-group">
+              <div class="forms required">
+                <label for="grade">학년</label>
+                <fieldset>
+                  <select name="grade" id="grade" class="size-xl" title="학년">
+                    <option value="1">1학년</option>
+                    <option value="2">2학년</option>
+                    <option value="3">3학년</option>
+                    <option value="4">4학년</option>
+                    <option value="5">5학년</option>
+                    <option value="6">6학년</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="forms required">
+                <label for="semester">학기</label>
+                <fieldset>
+                  <select name="semester" id="semester" class="size-xl" title="학기">
+                    <option value="1">1학기</option>
+                    <option value="2">2학기</option>
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+            <div class="forms required">
+              <label for="subject">과목</label>
+              <fieldset>
+                <select name="subject" id="subject" class="size-xl" title="과목">
+                  <option value="1">[2022] 사회 (저자명)</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="forms">
+              <label for="chapter">단원</label>
+              <fieldset class="type-vertical">
+                <select name="chapter01" id="chapter01" class="size-xl" title="단원 제목">
+                  <option value="1">[2022] 사회 (저자명)</option>
+                </select>
+                <select name="chapter02" id="chapter02" class="size-xl" title="단원 부제목">
+                  <option value="1">번호명. 옛사람들의 삶과 문화</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="forms">
+              <p class="title-label text-black">차시</p>
+              <fieldset>
+                <div class="dropdown-select size-xl direction-top">
+                  <!-- 하위 p태그 -> span태그로 변경 -->
+                  <button type="button" class="select-button"><span>값을 입력해주세요</span></button>
+                  <div class="options">
+                    <ul>
+                      <li class="selected"><button type="button"><span>[7~8차시] 올림, 버림, 반올림의 활용 덧셈[7~8차시] 올림, 버림, 반올림의 활용 덧셈[7~8차시] 올림, 버림, 반올림의 활용 덧셈[7~8차시] 올림, 버림, 반올림의 활용 덧셈</span><span class="badge type-rounded fill-light">사회 10~36쪽</span></li>
+                      <li><button type="button"><span>영어</span></button></li>
+                      <li><button type="button"><span>사회</span></button></li>
+                      <li><button type="button"><span>사회</span></button></li>
+                      <li><button type="button"><span>사회</span></button></li>
+                      <li><button type="button"><span>사회</span></button></li>
+                      <li><button type="button"><span>사회</span></button></li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="button size-xl type-dark" close-obj>취소</button>
+            <button class="button size-xl type-primary">변경</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

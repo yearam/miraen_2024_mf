@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main id="common">
+          <h1>공통/유틸 메뉴구조도</h1>
+          <ul class="quick_menu">
+            <li><a href="#">top</a></li>
+          </ul>
+          <section>
+            <h2>notice</h2>
+            <ul class="ul-decimal">
+              <li>230120 변경된 메뉴구조도 반영. 페이지 코드 변경</li>
+              <li>02-19 퀵메뉴 상단 슬라이드 마크업 변경</li>
+              <li>02-26 티처 LIVE 로고 변경</li>
+              <li>03-25 퀵메뉴 상단 버튼 내 .toggle-arrow title속성 삭제</li>
+            </ul>
+          </section>
+          <section id="menu1">
+            <h2>공통유틸</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" span="2" />
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>2depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>게이트 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_10016</td>
+                    <td class="finish">01-19</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr class="exception">
+                    <td>패밀리사이트</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_11001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">페이지 레이아웃에 포함되어 있음
+                      <a href="/assets/pc/html/template/template-sub.html" class="button" target="_blank">레이아웃 페이지</a>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>이메일 무단 수집 거부</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_12001</td>
+                    <td class="finish">12-20</td>
+                    <td></td>
+                    <td>03-05</td>
+                    <td class="desc">
+                      <p>03-05 고객센터 헤더로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>저작권 정책</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_13001</td>
+                    <td class="finish">12-20</td>
+                    <td></td>
+                    <td>03-05</td>
+                    <td class="desc">
+                      <p>03-05 고객센터 헤더로 변경</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>viewer</td>
+                    <td>스마트 수업</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_14001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>미리보기</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_14002</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">미리보기 솔루션에 적용되어 별도 마크업 없음</td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>저작 도구<br />(판서, 타이머, 깜깜이 등등)</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_14003</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>download</td>
+                    <td>multi download</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_15001</td>
+                    <td class="finish">12-11</td>
+                    <td>01-12</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-12 .table-item에 no-margin클래스 추가</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>toast msg</td>
+                    <td>즐겨찾기</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_16001</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                      <p>메세지 가이드는 스토리보드에 있다고 합니다.</p>
+                      <a href="/assets/pc/guide/html/tooltip.html" class="button size-sm type-third">toast guide</a>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>스크랩</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_16002</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                      <p>메세지 가이드는 스토리보드에 있다고 합니다.</p>
+                      <a href="/assets/pc/guide/html/tooltip.html" class="button size-sm type-third">toast guide</a>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>링크 복사</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_16003</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                      <p>메세지 가이드는 스토리보드에 있다고 합니다.</p>
+                      <a href="/assets/pc/guide/html/tooltip.html" class="button size-sm type-third">toast guide</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>공유하기</td>
+                    <td>sns 공유</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_17001</td>
+                    <td class="finish">01-19</td>
+                    <td>01-31</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-31 카카오, 밴드, 블로그 아이콘 변경</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>ai 클래스 공유</td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_17002</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">미진행. 외부 링크로 변경</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>엠티처 바로 접속</td>
+                    <td>팝업</td>
+                    <td class="page-code">p_c_etc_18001_l</td>
+                    <td class="finish">12-19</td>
+                    <td>01-18</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-18 button 속 strong태그 제거</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td>퀵메뉴</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">-</td>
+                    <td class="finish">12-29</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">레이아웃에 포함
+                      <a href="/assets/pc/html/template/template-sub.html" class="button" target="_blank">레이아웃 페이지</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>에러페이지 404</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_404</td>
+                    <td class="finish">02-13</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>에러페이지 500</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_etc_500</td>
+                    <td class="finish">02-13</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-log">
+            <h2>로그인</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" />
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>@로그인</td>
+                    <td></td>
+                    <td class="page-code">p_c_log_10001</td>
+                    <td class="finish">10/11</td>
+                    <td>01-19</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-jou">
+            <h2>회원가입</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" />
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>step 01. 약관동의</td>
+                    <td></td>
+                    <td class="page-code">p_c_jou_10001</td>
+                    <td class="finish">11-02</td>
+                    <td>01-19</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-12 약관 실데이터 적용 완료</p>
+                      <p>01-12 (필수)에 들어가는 클래스 requierd 에서 text-primary로 변경</p>
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>step 02. 가입수단 선택</td>
+                    <td></td>
+                    <td class="page-code">p_c_jou_11001</td>
+                    <td class="finish">11-02</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-12 인증요청, 인증확인 버튼 strong.semi 태그로 변경됐습니다</p>
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                      <p>01-18 button 속 strong태그 제거</p>
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>step 03. 회원정보입력</td>
+                    <td></td>
+                    <td class="page-code">p_c_jou_12001</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-12 이메일 label부분 마크업 변경</p>
+                      <p>01-12 휴대전화번호 인증요청, 인증확인 버튼 strong.semi 태그로 변경됐습니다</p>
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                      <p>01-18 button 속 strong태그 제거</p>
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(교사) 팝업</td>
+                    <td class="page-code">p_c_jou_121001_l_01</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(교사) 팝업<br/>- 검색결과 목록</td>
+                    <td class="page-code">p_c_jou_121001_l_02</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(교사) 팝업<br/>- 검색결과가 없습니다.</td>
+                    <td class="page-code">p_c_jou_121001_l_03</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(교사) 팝업<br/>- 검색결과가 없을때 학교주소검색</td>
+                    <td class="page-code">p_c_jou_121001_l_04</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(교사) 팝업<br/>- 검색결과가 없을때 학교주소검색<br/>- 검색결과 목록</td>
+                    <td class="page-code">p_c_jou_121001_l_05</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(교사) 팝업<br/>- 검색결과가 없을때 학교주소검색<br/>- 검색결과가 없습니다.</td>
+                    <td class="page-code">p_c_jou_121001_l_06</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교사회원/공직자 메일 인증 팝업</td>
+                    <td class="page-code">p_c_jou_121001_l_07</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교사회원/공직자 메일 인증 팝업<br/>- 인증번호 작성</td>
+                    <td class="page-code">p_c_jou_121001_l_08</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교사회원/코드인증 팝업</td>
+                    <td class="page-code">p_c_jou_121001_l_09</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121001_l 케이스별 샘플 _01~_10</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교사회원/서류인증 팝업</td>
+                    <td class="page-code">p_c_jou_121001_l_10</td>
+                    <td class="finish">11-17</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">p_c_jou_121001_l 케이스별 샘플 _01~_10</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(예비교사) 팝업</td>
+                    <td class="page-code">p_c_jou_121002_l_01</td>
+                    <td class="finish">11-17</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121002_l 케이스별 샘플 _01~_02</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>학교검색(예비교사) 팝업<br/>- 검색결과가 없습니다.</td>
+                    <td class="page-code">p_c_jou_121002_l_02</td>
+                    <td class="finish">11-17</td>
+                    <td>03-06</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>p_c_jou_121002_l 케이스별 샘플 _01~_02</p>
+                      <p>03-06 인풋 클리어 마크업 js > html 내부로 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>step 04. 회원가입 완료</td>
+                    <td></td>
+                    <td class="page-code">p_c_jou_13001</td>
+                    <td class="finish">11-17</td>
+                    <td>03-11</td>
+                    <td>03-06</td>
+                    <td class="desc">
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                      <p>03-11 .box-outlined-gray에 join-finish클래스 추가</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-myp">
+            <h2>마이페이지</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" span="2" />
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>2depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>my class</td>
+                    <td></td>
+                    <td>즐겨찾기 탭</td>
+                    <td class="page-code">p_c_myp_10001</td>
+                    <td class="finish">01-03</td>
+                    <td>01-12</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>01-12 링크영역 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>스크랩 탭<br/>- 교과서 자료</td>
+                    <td class="page-code">p_c_myp_10001_02_01</td>
+                    <td class="finish">01-03</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>스크랩 탭<br/>- 게시글</td>
+                    <td class="page-code">p_c_myp_10001_02_02</td>
+                    <td class="finish">01-03</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>내 자료 탭</td>
+                    <td class="page-code">p_c_myp_10001_03</td>
+                    <td class="finish">01-03</td>
+                    <td>02-20</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>02-20 .tooltip-trigger 클릭 시 상단이동 이슈로 인한 태그 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>내 링크 등록 팝업</td>
+                    <td class="page-code">p_c_myp_10001_03_l</td>
+                    <td class="finish">01-04</td>
+                    <td>02-20</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>02-20 .tooltip-trigger 클릭 시 상단이동 이슈로 인한 태그 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>교과 정보 선택 팝업</td>
+                    <td class="page-code">p_c_myp_10001_03_l_02</td>
+                    <td class="finish">01-04</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>나의 정보</td>
+                    <td></td>
+                    <td>인증 및 등록 완료 케이스</td>
+                    <td class="page-code">p_c_myp_11001</td>
+                    <td class="finish">01-02</td>
+                    <td>02-02</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>02-02 기획변경 : !NOTE 02-02 로 검색하시면 변경부분 나옵니다.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>인증 및 등록 미완료 케이스</td>
+                    <td class="page-code">p_c_myp_11001_02</td>
+                    <td class="finish">01-02</td>
+                    <td>02-02</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>02-02 기획변경 : !NOTE 02-02 로 검색하시면 변경부분 나옵니다.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>나의 포인트</td>
+                    <td>팝업</td>
+                    <td class="page-code">p_c_myp_11001_l</td>
+                    <td class="finish">01-08</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>나의 기본정보</td>
+                    <td></td>
+                    <td class="page-code">p_c_myp_11101</td>
+                    <td class="finish">01-04</td>
+                    <td>03-27</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>01-12 기획검수반영 : 표컬러</p>
+                      <p>01-17 기획요청으로 개인정보 유효 기간 주석처리 </p>
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                      <p>02-02 기획변경되어 학교정보 위치변경</p>
+                      <p>02-16 개발지원 추가정보 탭 추가</p>
+                      <p>03-27 추가정보내 select 사이즈 변경, fieldset태그로 그룹핑 했습니다.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>회원정보수정</td>
+                    <td></td>
+                    <td class="page-code">p_c_myp_11201</td>
+                    <td class="finish">01-03</td>
+                    <td>01-19</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교사 인증</td>
+                    <td></td>
+                    <td class="page-code">p_c_myp_11301</td>
+                    <td class="finish">11-17</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      회원가입-회원정보입력과 동일 페이지 입니다.
+                      <div class="buttons margin-top-xs">
+                        <a href="../../html/common/p_c_jou_121001_l_07.html" class="button size-sm type-third">교사회원/공직자 메일 인증 : p_c_jou_121001_l_07</a>
+                        <a href="../../html/common/p_c_jou_121001_l_08.html" class="button size-sm type-third">교사회원/공직자 메일 인증 - 인증번호 작성 : p_c_jou_121001_l_08</a>
+                        <a href="../../html/common/p_c_jou_121001_l_09.html" class="button size-sm type-third">교사회원/코드인증 : p_c_jou_121001_l_09</a>
+                        <a href="../../html/common/p_c_jou_121001_l_10.html" class="button size-sm type-third">교사회원/서류인증 : p_c_jou_121001_l_10</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>휴대폰 번호 인증 팝업</td>
+                    <td class="page-code">p_c_myp_11101_l</td>
+                    <td class="finish">01-15</td>
+                    <td>01-18</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>회원탈퇴</td>
+                    <td></td>
+                    <td class="page-code">p_c_myp_11401</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>01-02 기획서(SB_(통합)마이페이지_미래엔_v1.11_20231228) <br />
+                        p.42 4)미래엔 통합 탈퇴 페이지로 이동 https://oneid.mirae-n.com/simple/withdrawStep1.mrn 으로 기입되어 있습니다.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>나의 문의</td>
+                    <td></td>
+                    <td>리스트</td>
+                    <td class="page-code">p_c_myp_12001</td>
+                    <td class="finish">01-04</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1:1문의 입력 폼</td>
+                    <td class="page-code">p_c_myp_12001_02</td>
+                    <td class="finish">01/05</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1:1문의 입력 완료 케이스</td>
+                    <td class="page-code">p_c_myp_12001_02_02</td>
+                    <td class="finish">01/05</td>
+                    <td>01-16</td>
+                    <td>01-11</td>
+                    <td class="desc">
+                      <p>01-16 관리자 답변 항목 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>게시물 관리</td>
+                    <td></td>
+                    <td>나의 게시글 탭</td>
+                    <td class="page-code">p_c_myp_13001</td>
+                    <td class="finish">01-05</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>나의 댓글 탭</td>
+                    <td class="page-code">p_c_myp_13001_02</td>
+                    <td class="finish">01-05</td>
+                    <td></td>
+                    <td>01-11</td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-csc">
+            <h2>고객센터</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" />
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="exception">
+                    <td>@고객센터</td>
+                    <td></td>
+                    <td class="page-code">-</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>공지사항</td>
+                    <td>공지사항 테이블</td>
+                    <td class="page-code">p_c_csc_10001</td>
+                    <td class="finish">01-09</td>
+                    <td></td>
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>공지사항 상세</td>
+                    <td class="page-code">p_c_csc_10001_detail</td>
+                    <td class="finish">01-09</td>
+                    <td>01-16</td>
+                    <td>01-15</td>
+                    <td class="desc">
+                      <p>01-16 첨부파일 아이콘 변경 ㅣ 돋보기 > 다운로드</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>서비스 안내</td>
+                    <td></td>
+                    <td class="page-code">p_c_csc_11001</td>
+                    <td class="finish">01-29</td>
+                    <td>01-31</td>
+                    <td>01-31</td>
+                    <td class="desc">
+                      <p>01-31 문구수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>faq</td>
+                    <td></td>
+                    <td class="page-code">p_c_csc_12001</td>
+                    <td class="finish">01-11</td>
+                    <td></td> 
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>자주찾는 질문 팝업</td>
+                    <td class="page-code">p_c_csc_12001_l</td>
+                    <td class="finish">01-11</td>
+                    <td></td>
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>이벤트</td>
+                    <td></td>
+                    <td class="page-code">p_c_csc_13001</td>
+                    <td class="finish">01-11</td>
+                    <td></td>
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>1:1문의</td>
+                    <td></td>
+                    <td class="page-code">p_c_csc_14001</td>
+                    <td class="finish">01-11</td>
+                    <td>01-16</td>
+                    <td>01-15</td>
+                    <td class="desc">
+                      <p>01-16 기획검수 반영 : 게시정보 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>전국 지사 안내</td>
+                    <td></td>
+                    <td class="page-code">p_c_csc_15001</td>
+                    <td class="finish">01-11</td>
+                    <td></td>
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>필수 프로그램</td>
+                    <td></td>
+                    <td class="page-code">p_c_csc_16001</td>
+                    <td class="finish">01-11</td>
+                    <td></td>
+                    <td>01-15</td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-sea">
+            <h2>검색</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" />
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>@검색</td>
+                    <td>통합검색</td>
+                    <td class="page-code">p_c_sea_10001</td>
+                    <td class="finish">02-19</td>
+                    <td>03-21</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-12 각 카테고리 검색 결과에 pagination추가</p>
+                      <p>03-14 .accordion > li에 active클래스 추가</p>
+                      <p>03-21 M카이브 추가</p>
+                      <p>03-21 M카이브 동영상 시간 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>교과서 쪽 검색</td>
+                    <td class="page-code">p_c_sea_10001_02</td>
+                    <td class="finish">02-20</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-tel">
+            <h2>티처 LIVE</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" span="2"/>
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>2depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>LIVE 강연</td>
+                    <td></td>
+                    <td>대주제 강연 리스트</td>
+                    <td class="page-code">p_c_tel_10001</td>
+                    <td class="finish">01-18</td>
+                    <td>03-08</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>03-08 딤드 변경</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>소주제 강연 리스트</td>
+                    <td class="page-code">p_c_tel_10001_list</td>
+                    <td class="finish">01-18</td>
+                    <td>03-11</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p class="text-error">댓글 부분 케이스 추가 되었습니다</p>
+                      <p>03-11 강연 종료 케이스 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>강연 상세</td>
+                    <td class="page-code">p_c_tel_10001_detail</td>
+                    <td class="finish">01-18</td>
+                    <td></td>
+                    <td>03-04</td>
+                    <td class="desc">
+                      <p>03-04 단계별 버튼 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>이벤트 신청하기</td>
+                    <td class="page-code">p_c_tel_10001_proposal</td>
+                    <td class="finish">01-18</td>
+                    <td>03-08</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-19 헤더 미래엔 영문 로고 svg 공통화</p>
+                      <p>03-08 기획요청 - 기타 input size-xl > size-md로 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>이벤트 참여하기 팝업</td>
+                    <td class="page-code">p_c_tel_10001_l</td>
+                    <td class="finish">01-18</td>
+                    <td>01-22</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-22 텍스트 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>휴대폰 번호 인증 팝업</td>
+                    <td class="page-code">p_c_tel_10001_l_02</td>
+                    <td class="finish">01-15</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                      <p>마이페이지 &gt; 나의 정보 &gt; 휴대폰 번호 인증 팝업과 동일한 페이지 입니다.</p>
+                      <a href="../../html/common/p_c_myp_11101_l.html" class="button size-sm type-third">마이페이지 &gt; 나의 정보 &gt; 휴대폰 번호 인증: p_c_myp_11101_l</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>학교검색 팝업</td>
+                    <td class="page-code">p_c_tel_10001_l_03</td>
+                    <td class="finish">01-15</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">
+                      <p>회원가입 &gt; step 03. 회원정보입력 &gt; 학교검색 팝업과 동일 페이지 입니다.</p>
+                      <a href="../../html/common/p_c_jou_121001_l_01.html" class="button size-sm type-third">회원가입 &gt; step 03. 회원정보입력 &gt; 학교검색: p_c_jou_121001_l_01.html</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>혁신수업n</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_tel_11001</td>
+                    <td class="finish">01-17</td>
+                    <td>03-11</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                      <p>03-11 연도별 웹진 목록 이미지 grid 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>독자후기 참여하기 팝업</td>
+                    <td class="page-code">p_c_tel_11001_l</td>
+                    <td class="finish">01-17</td>
+                    <td>01-18</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-18 휴대전화번호 > 휴대폰 번호 로 단어 통일화 되었습니다.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>콘텐츠</td>
+                    <td>쌤 ott</td>
+                    <td>전체 채널 리스트</td>
+                    <td class="page-code">p_c_tel_12001</td>
+                    <td class="finish">01-10</td>
+                    <td>03-14</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-31 기획검수 반영. 노데이터 케이스 추가, 검색필드 추가</p>
+                      <p>03-13 채널 타이틀 썸네일 이미지 비율 변경 및 이미지 radius 고정</p>
+                      <p>03-14 채널 타이틀 썸네일 이미지 비율 이전으로 복구 요청</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>채널 내 컨텐츠 리스트</td>
+                    <td class="page-code">p_c_tel_12001_02</td>
+                    <td class="finish">01-10</td>
+                    <td>01-31</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-31 기획검수 반영. 노데이터 케이스 추가, 검색필드 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_c_tel_12001_detail</td>
+                    <td class="finish">01-10</td>
+                    <td>03-15</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-15 유튜브 비디오 영역 class명 변경 .video-box > .youtube-box</p>
+                      <p>03-15 컨텐츠 요약 영역 추가</p>
+                    </td>
+                  </tr>
+                  <tr class="exception">
+                    <td></td>
+                    <td>쌤연구실</td>
+                    <td></td>
+                    <td class="page-code">p_c_tel_12101</td>
+                    <td class="finish"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc">제외</td>
+                  </tr>
+                  <tr>
+                    <td>자료나눔</td>
+                    <td>초등</td>
+                    <td></td>
+                    <td class="page-code">p_c_tel_13001</td>
+                    <td class="finish">01-10</td>
+                    <td>02-28</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>02-28 기획변경 : 이미지에 시간 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>중학</td>
+                    <td></td>
+                    <td class="page-code">p_c_tel_13001_02</td>
+                    <td class="finish">01-10</td>
+                    <td>02-28</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>02-28 기획변경 : 이미지에 시간 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>고등</td>
+                    <td></td>
+                    <td class="page-code">p_c_tel_13001_03</td>
+                    <td class="finish">01-10</td>
+                    <td>02-28</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>02-28 기획변경 : 이미지에 시간 추가</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td class="page-code">p_c_tel_13001_detail</td>
+                    <td class="finish">01-10</td>
+                    <td>01-22</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>01-22 미리보기 삭제</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>게시글 작성</td>
+                    <td class="page-code">p_c_tel_13001_write</td>
+                    <td class="finish">01-11</td>
+                    <td>01-22</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>게시글 작성</p>
+                      <p>01-22 중학, 고등 연계교과 선택 필터 삭제</p>
+                      <p>01-22 중학, 고등 과목 선택 필터 복구</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>게시글 수정</td>
+                    <td class="page-code">p_c_tel_13001_modify</td>
+                    <td class="finish">01-11</td>
+                    <td>01-22</td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>게시글 수정</p>
+                      <p>01-22 중학, 고등 연계교과 선택 필터 삭제</p>
+                      <p>01-22 중학, 고등 과목 선택 필터 복구</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>이용안내</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">p_c_tel_14001</td>
+                    <td class="finish">02-06</td>
+                    <td></td>
+                    <td>01-20</td>
+                    <td class="desc">
+                      <p>SB_(초중고)티처 LIVE_v1.00_20231213.pptx p.134 콘텐츠 미정 - FAQ 형태로 사용 예정으로 표기 되어 있습니다. 01-10 현재 디자인 없습니다.</p>
+                      <p>IA_TOBE(Total)_미래엔(엠티처)_v0.11_20231120의 ia 상에 일련번호 없어 임시 번호 부여하였습니다.</p>
+                      <p>02-06 고객센터 FAQ 컨텐츠 동일하다고 합니다. 헤더제외</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="menu-mcv">
+            <h2>M카이브</h2>
+            <div class="ia">
+              <table class="guide-table">
+                <col width="160px" span="2"/>
+                <col width="240px" />
+                <col width="200px"/>
+                <col width="80px" span="3" />
+                <col width="*" />
+                <thead>
+                  <tr>
+                    <th>1depth</th>
+                    <th>2depth</th>
+                    <th>화면 명</th>
+                    <th>화면id</th>
+                    <th>완료일</th>
+                    <th>수정일</th>
+                    <th>검수여부</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>M카이브 레이아웃</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">m-chive-sample</td>
+                    <td class="finish">-</td>
+                    <td>03-12</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-12 좌측 메뉴 flex > grid로 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>M카이브 비디오</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">m-chive-video</td>
+                    <td class="finish">03-12</td>
+                    <td>03-20</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-13 비디오 icon 수정</p>
+                      <p>03-20 비디오 MediaElement.js 시작 방식 및 api 반영 방법 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>M카이브 오디오</td>
+                    <td></td>
+                    <td></td>
+                    <td class="page-code">m-chive-audio</td>
+                    <td class="finish">03-14</td>
+                    <td>03-20</td>
+                    <td></td>
+                    <td class="desc">03-20 오디오 MediaElement.js 시작 방식 수정</td>
+                  </tr>
+                  <tr>
+                    <td>전체</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td class="page-code">mcv001</td>
+                    <td class="finish">02-23</td>
+                    <td>03-05</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-05 구간편집 버튼 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>메인 팝업</td>
+                    <td></td>
+                    <td class="page-code">mcv002</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td class="page-code">mcv003</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td class="page-code">mcv003-js</td>
+                    <td class="finish">02-26</td>
+                    <td>03-13</td>
+                    <td></td>
+                    <td class="desc">
+                      <p>03-05 mediaelementjs 코드적용 버젼</p>
+                      <p>03-13 비디오 icon 수정</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>공유하기 팝업</td>
+                    <td>저장하기</td>
+                    <td class="page-code">mcv004_1</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>다시보기</td>
+                    <td class="page-code">mcv004_2</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>#내 자료실</td>
+                    <td>북마크</td>
+                    <td></td>
+                    <td class="page-code">mcv005</td>
+                    <td class="finish">02-23</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>최근 본 자료</td>
+                    <td></td>
+                    <td class="page-code">mcv006</td>
+                    <td class="finish">02-23</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>나의 편집 영상</td>
+                    <td></td>
+                    <td class="page-code">mcv007</td>
+                    <td class="finish">02-23</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>나의 검색어</td>
+                    <td></td>
+                    <td class="page-code">mcv008</td>
+                    <td class="finish">02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>#내 교과서</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td class="page-code">mcv009</td>
+                    <td class="finish">02-23</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>범교과 자료</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td class="page-code">mcv010</td>
+                    <td class="finish">02-23</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                  <tr>
+                    <td>추천키워드</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td class="page-code">mcv011</td>
+                    <td class="finish">02-23</td>
+                    <td></td>
+                    <td></td>
+                    <td class="desc"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

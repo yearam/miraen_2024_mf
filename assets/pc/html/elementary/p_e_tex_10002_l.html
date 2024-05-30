@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+  <body class="theme-elementary">
+    <div class="wrapper">
+      <div class="container">
+        <!-- !NOTE : menu에 page구분자 넣어주세요 -->
+        <main id="main-contents">
+          <h4>.modal-body안에 있는 .unit-data-list에 split클래스 추가하면 좌우로 나뉘는 레이아웃으로 변합니다.</h4>
+          <div class="buttons align-right">
+            <button type="button" class="button size-md tooltip-trigger" data-title="단원공통자료" data-placement="bottom" data-style="theme-dark" data-backdrop data-focus data-closeable> 단원공통자료 <svg>
+                <title>아이콘 - 자료</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+              </svg>
+            </button>
+            <div class="webui-popover-content">
+              <ul class="unit-list-items">
+                <!-- split여부에 따라 나눠짐 -->
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                    <p>단원 학습지 도안</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-hangul.svg" alt="pdf 한글 아이콘" />
+                    <p>[진도표]과학 5학년 1학기</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-zip.svg" alt="pdf zip 아이콘" />
+                    <p>판서자료</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-link.svg" alt="pdf 링크 아이콘" />
+                    <p>[동영상] 10단원_생물과 환경_스마트올</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                    <p>핵심내용 정리</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="button size-md tooltip-trigger" data-title="단원공통자료.split" data-placement="auto-bottom" data-style="theme-dark" data-backdrop data-focus> 단원공통자료.split <svg>
+                <title>아이콘 - 자료</title>
+                <use href="/assets/images/svg-sprite-solid.svg#icon-folder"></use>
+              </svg>
+            </button>
+            <div class="webui-popover-content">
+              <ul class="unit-list-items split2">
+                <!-- split여부에 따라 나눠짐 -->
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                    <p>단원 학습지 도안</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-hangul.svg" alt="pdf 한글 아이콘" />
+                    <p>[진도표]과학 5학년 1학기</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-zip.svg" alt="pdf zip 아이콘" />
+                    <p>판서자료</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-link.svg" alt="pdf 링크 아이콘" />
+                    <p>[동영상] 10단원_생물과 환경_스마트올 10단원_생물과 환경_스마트올</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                    <p>핵심내용 정리</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button">
+                    <img src="/assets/images/common/icon-word.svg" alt="pdf 워드 아이콘" />
+                    <p>핵심내용 정리</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

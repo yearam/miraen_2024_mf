@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠티처 pc 퍼블리싱 가이드</title>
+  <!-- <base href="../" target="_self" /> -->
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/plugin/select2.min.js"></script>
+  <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+  <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+  <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+  <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+  
+  
+  <link href="/assets/pc/css/elementary.min.css" rel="stylesheet" />
+  <!-- only use guide -->
+  <script src="../guide.js" type="text/javascript"></script>
+  <script src="../syntax-hightlight4/syntaxhighlighter.js"></script>
+  <link href="../syntax-hightlight4/theme-midnight.css" rel="stylesheet" />
+  <link href="../guide.css" rel="stylesheet" />
+</head>
+
+  <body class="guide theme-elementary">
+    <div class="wrap">
+      <header class="header">
+  <a href="/index.html">
+    <h1>pc Publishing Guide</h1>
+  </a>
+  <button class="button-snb">menu</button>
+</header>
+
+      <div class="container">
+        <aside class="guide-aside">
+          <iframe src="menu.html" frameborder="0"></iframe>
+        </aside>
+        <main>
+          <h1>icon & images guide - 디자인 반영 전 기본 마크업 샘플 입니다.</h1>
+          <section>
+            <h2>
+              default
+              <small>초/중/고 모두 Icon은 svg를 기본으로 사용하고, Images는 png를 기본으로 사용합니다.</small>
+            </h2>
+            <ul class="ul-decimal">
+              <li>
+                /assets/images/common : 초/중/고 공용 icon 및 images <br />
+                /assets/images/elementary : 초등 icon 및 images <br />
+                /assets/images/middle : 중학 icon 및 images <br />
+                /assets/images/high : 고등 icon 및 images <br />
+                /assets/images/temp : 샘플, dummy icon 및 images
+              </li>
+              <li>
+                icon명은 icon-xxx.svg, images명은 img-xxx.png를 기본으로 사용합니다. <br />
+                &#8251; logo는 제외 logo-xxx.svg <br />
+                &#8251; background-image는 제외 bg-xxx.svg 또는 bg-xxx.png
+              </li>
+              <li>
+                icon명은 디자인 그룹 명을 기본으로 사용하나 중복 명은 font awesome을 기준으로 합니다. <br />
+                &#8251; footer icon은 예외
+              </li>
+              <li>images 저장 시 2배를 기본으로 사용합니다.</li>
+            </ul>
+            <h3>common</h3>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 20%;" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <img src="/assets/images/common/icon-caution-filled.svg" alt="caution filled 아이콘" />
+                    <img src="/assets/images/common/icon-caution-filled-error.svg" alt="caution error 아이콘" />
+                    <img src="/assets/images/common/icon-caution-no-data.svg" alt="caution no data 아이콘" />
+                    <img src="/assets/images/common/icon-light-confirm.svg" alt="caution no data 아이콘" />
+                    <img src="/assets/images/common/icon-mchive.svg" alt="M카이브 아이콘" />
+                    <img src="/assets/images/common/icon-chevron-up-down.svg" alt="상하 화살표 아이콘" />
+                    <img src="/assets/images/common/icon-chevron-left-right.svg" alt="좌우 화살표 아이콘" />
+                    <img src="/assets/images/common/icon-check-02.svg" alt="체크 02 아이콘" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-caution-filled.svg" alt="caution filled 아이콘" />
+                      <img src="/assets/images/common/icon-caution-filled-error.svg" alt="caution error 아이콘" />
+                      <img src="/assets/images/common/icon-caution-no-data.svg" alt="caution no data 아이콘" />
+                      <img src="/assets/images/common/icon-light-confirm.svg" alt="caution no data 아이콘" />
+                      <img src="/assets/images/common/icon-mchive.svg" alt="M카이브 아이콘" />
+                      <img src="/assets/images/common/icon-chevron-up-down.svg" alt="상하 화살표 아이콘" />
+                      <img src="/assets/images/common/icon-chevron-left-right.svg" alt="좌우 화살표 아이콘" />
+                      <img src="/assets/images/common/icon-check-02.svg" alt="체크 02 아이콘" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>파일 확장자 대표 아이콘</th>
+                  <td>
+                    <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                    <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘" />
+                    <img src="/assets/images/common/icon-zip.svg" alt="zip 아이콘" />
+                    <img src="/assets/images/common/icon-link.svg" alt="링크 아이콘" />
+                    <img src="/assets/images/common/icon-word.svg" alt="워드 아이콘" />
+                    <img src="/assets/images/common/icon-youtube.svg" alt="유튜브 아이콘" />
+                    <img src="/assets/images/common/icon-media.svg" alt="영상 아이콘" />
+                    <img src="/assets/images/common/icon-excel.svg" alt="엑셀 아이콘" />
+                    <img src="/assets/images/common/icon-clip.svg" alt="클립 아이콘" />
+                    <img src="/assets/images/common/icon-ppt.svg" alt="파워포인트 아이콘" />
+                    <img src="/assets/images/common/icon-text.svg" alt="텍스트파일 아이콘" />
+                    <img src="/assets/images/common/icon-img.svg" alt="이미지파일 아이콘" />
+                    <img src="/assets/images/common/icon-music.svg" alt="음악파일 아이콘" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-pdf.svg" alt="pdf 아이콘" />
+                      <img src="/assets/images/common/icon-hangul.svg" alt="한글 아이콘" />
+                      <img src="/assets/images/common/icon-zip.svg" alt="zip 아이콘" />
+                      <img src="/assets/images/common/icon-link.svg" alt="링크 아이콘" />
+                      <img src="/assets/images/common/icon-word.svg" alt="워드 아이콘" />
+                      <img src="/assets/images/common/icon-youtube.svg" alt="유튜브 아이콘" />
+                      <img src="/assets/images/common/icon-media.svg" alt="영상 아이콘" />
+                      <img src="/assets/images/common/icon-excel.svg" alt="엑셀 아이콘" />
+                      <img src="/assets/images/common/icon-clip.svg" alt="클립 아이콘" />
+                      <img src="/assets/images/common/icon-ppt.svg" alt="파워포인트 아이콘" />
+                      <img src="/assets/images/common/icon-text.svg" alt="텍스트파일 아이콘" />
+                      <img src="/assets/images/common/icon-img.svg" alt="이미지파일 아이콘" />
+                      <img src="/assets/images/common/icon-music.svg" alt="음악파일 아이콘" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>header</th>
+                  <td>
+                    <img src="/assets/images/common/logo-elementary.svg" alt="엠티처 초등 로고" style="background-color: #000000;" />
+                    <img src="/assets/images/common/logo-middle.svg" alt="엠티처 중학 로고" style="background-color: #000000;" />
+                    <img src="/assets/images/common/logo-high.svg" alt="엠티처 고등 로고" style="background-color: #000000;" />
+                    <img src="/assets/images/common/logo-m-teacher-white.svg" alt="엠티처 로고" style="background-color: #000000;" />
+                    <img src="/assets/images/common/logo-common.svg" alt="엠티처 로고" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/logo-elementary.svg" alt="엠티처 초등 로고" style="background-color: #000000;" />
+                      <img src="/assets/images/common/logo-middle.svg" alt="엠티처 중학 로고" style="background-color: #000000;" />
+                      <img src="/assets/images/common/logo-high.svg" alt="엠티처 고등 로고" style="background-color: #000000;" />
+                      <img src="/assets/images/common/logo-m-teacher-white.svg" alt="엠티처 로고" style="background-color: #000000;" />
+                      <img src="/assets/images/common/logo-common.svg" alt="엠티처 로고" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>footer</th>
+                  <td>
+                    <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+                    <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+                    <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+                    <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-footer-youtube.svg" alt="유튜브 아이콘" />
+                      <img src="/assets/images/common/icon-footer-facebook.svg" alt="페이스북 아이콘" />
+                      <img src="/assets/images/common/icon-footer-kakao.svg" alt="카카오 아이콘" />
+                      <img src="/assets/images/common/icon-footer-naverblog.svg" alt="네이버 블로그 아이콘" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>main</th>
+                  <td>
+                    <img src="/assets/images/common/icon-aiclass.svg" alt="ai class 아이콘" />
+                    <img src="/assets/images/common/icon-main-dvd.svg" alt="교사용 DVD 다운로드 아이콘" />
+                    <img src="/assets/images/common/icon-main-reference.svg" alt="평가 자료실 아이콘" />
+                    <img src="/assets/images/common/icon-main-class.svg" alt="자유학기제 아이콘" />
+                    <img src="/assets/images/common/icon-main-creative.svg" alt="창의적 체험 활동 아이콘" />
+                    <img src="/assets/images/common/icon-main-professor.svg" alt="교수지원 자료집 다운로드 아이콘" />
+                    <img src="/assets/images/common/icon-main-career.svg" alt="AI 진로진학 아이콘" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-aiclass.svg" alt="ai class 아이콘" />
+                      <img src="/assets/images/common/icon-main-dvd.svg" alt="교사용 DVD 다운로드 아이콘" />
+                      <img src="/assets/images/common/icon-main-reference.svg" alt="평가 자료실 아이콘" />
+                      <img src="/assets/images/common/icon-main-class.svg" alt="자유학기제 아이콘" />
+                      <img src="/assets/images/common/icon-main-creative.svg" alt="창의적 체험 활동 아이콘" />
+                      <img src="/assets/images/common/icon-main-professor.svg" alt="교수지원 자료집 다운로드 아이콘" />
+                      <img src="/assets/images/common/icon-main-career.svg" alt="AI 진로진학 아이콘" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>quick menu</th>
+                  <td>
+                    <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" />
+                    <img src="/assets/images/common/icon-clipping.svg" alt="클립 아이콘" />
+                    <img src="/assets/images/common/icon-file.svg" alt="파일 아이콘" />
+                    <img src="/assets/images/common/icon-write.svg" alt="판서 아이콘" />
+                    <img src="/assets/images/common/icon-timer.svg" alt="타이머 아이콘" />
+                    <img src="/assets/images/common/icon-loudspeaker.svg" alt="스피커 아이콘" />
+                    <img src="/assets/images/common/icon-presenter.svg" alt="발표자 아이콘" />
+                    <img src="/assets/images/common/icon-marker.svg" alt="점수판 아이콘" />
+                    <img src="/assets/images/common/icon-bulb.svg" alt="전구 아이콘" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-star.svg" alt="즐겨찾기 아이콘" />
+                      <img src="/assets/images/common/icon-clipping.svg" alt="클립 아이콘" />
+                      <img src="/assets/images/common/icon-file.svg" alt="파일 아이콘" />
+                      <img src="/assets/images/common/icon-write.svg" alt="판서 아이콘" />
+                      <img src="/assets/images/common/icon-timer.svg" alt="타이머 아이콘" />
+                      <img src="/assets/images/common/icon-loudspeaker.svg" alt="스피커 아이콘" />
+                      <img src="/assets/images/common/icon-presenter.svg" alt="발표자 아이콘" />
+                      <img src="/assets/images/common/icon-marker.svg" alt="점수판 아이콘" />
+                      <img src="/assets/images/common/icon-bulb.svg" alt="전구 아이콘" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>SNS list</th>
+                  <td>
+                    <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘" />
+                    <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘" />
+                    <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘" />
+                    <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘" />
+                    <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘" />
+                    <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘" />
+                    <img src="/assets/images/common/icon-sns-x.svg" alt="엑스 아이콘" />
+                    <img src="/assets/images/common/icon-sns-kakao.svg" alt="카카오 아이콘" />
+                    <img src="/assets/images/common/icon-sns-band.svg" alt="밴드 아이콘" />
+                    <img src="/assets/images/common/icon-sns-blog.svg" alt="블로그 아이콘" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘" />
+                      <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘" />
+                      <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘" />
+                      <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘" />
+                      <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘" />
+                      <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘" />
+                      <img src="/assets/images/common/icon-sns-x.svg" alt="엑스 아이콘" />
+                      <img src="/assets/images/common/icon-sns-kakao.svg" alt="카카오 아이콘" />
+                      <img src="/assets/images/common/icon-sns-band.svg" alt="밴드 아이콘" />
+                      <img src="/assets/images/common/icon-sns-blog.svg" alt="블로그 아이콘" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>로그인/회원가입</th>
+                  <td>
+                    <img src="/assets/images/common/icon-certify-key.svg" alt="키 인증" />
+                    <img src="/assets/images/common/icon-certify-mail.svg" alt="메일 인증" />
+                    <img src="/assets/images/common/icon-certify-code.svg" alt="코드 인증" />
+                    <img src="/assets/images/common/icon-certify-document.svg" alt="서류 인증" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-certify-key.svg" alt="키 인증" />
+                      <img src="/assets/images/common/icon-certify-mail.svg" alt="메일 인증" />
+                      <img src="/assets/images/common/icon-certify-code.svg" alt="코드 인증" />
+                      <img src="/assets/images/common/icon-certify-document.svg" alt="서류 인증" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>마이페이지/나의정보-나의 포인트</th>
+                  <td>
+                    <img src="/assets/images/common/icon-point-shadow-available.svg" alt="사용가능 포인트" />
+                    <img src="/assets/images/common/icon-point-shadow-used.svg" alt="사용한 포인트" />
+                    <img src="/assets/images/common/icon-point-shadow-extinct.svg" alt="소멸예정 포인트" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-point-shadow-available.svg" alt="사용가능 포인트" />
+                      <img src="/assets/images/common/icon-point-shadow-used.svg" alt="사용한 포인트" />
+                      <img src="/assets/images/common/icon-point-shadow-extinct.svg" alt="소멸예정 포인트" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>게이트페이지</th>
+                  <td>
+                    <img src="/assets/images/common/icon-aiclass-vertical.svg" alt="AI Class" />
+                    <img src="/assets/images/common/icon-mchive-black.svg" alt="엠카이브" />
+                    <img src="/assets/images/common/icon-teacher-live.svg" alt="엠티처 LIVE" />
+                    <img src="/assets/images/common/icon-text-book.svg" alt="미래엔 교과서" />
+                    <img src="/assets/images/common/icon-education.svg" alt="미래교육상" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-aiclass-vertical.svg" alt="AI Class" />
+                      <img src="/assets/images/common/icon-mchive-black.svg" alt="엠카이브" />
+                      <img src="/assets/images/common/icon-teacher-live.svg" alt="엠티처 LIVE" />
+                      <img src="/assets/images/common/icon-text-book.svg" alt="미래엔 교과서" />
+                      <img src="/assets/images/common/icon-education.svg" alt="미래교육상" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>교과활동</th>
+                  <td>
+                    <img src="/assets/images/common/icon-bookmark.svg" alt="즐겨찾기" />
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-bookmark.svg" alt="즐겨찾기" />
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>학년별 엠티처 로고</th>
+                  <td>
+                    <img src="/assets/images/common/logo-mteacher-elementary.svg" alt="엠티처 로고 초등">
+                    <img src="/assets/images/common/logo-mteacher-middle.svg" alt="엠티처 로고 중학">
+                    <img src="/assets/images/common/logo-mteacher-high.svg" alt="엠티처 로고 고등">
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/logo-mteacher-elementary.svg" alt="엠티처 로고 초등">
+                      <img src="/assets/images/common/logo-mteacher-middle.svg" alt="엠티처 로고 중학">
+                      <img src="/assets/images/common/logo-mteacher-high.svg" alt="엠티처 로고 고등">
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>북마크</th>
+                  <td>
+                    <img src="/assets/images/common/img-bookmark-elementary.svg" alt="북마크 초등">
+                    <img src="/assets/images/common/img-bookmark-middle.svg" alt="북마크 중학">
+                    <img src="/assets/images/common/img-bookmark-high.svg" alt="북마크 고등">
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/img-bookmark-elementary.svg" alt="북마크 초등">
+                      <img src="/assets/images/common/img-bookmark-middle.svg" alt="북마크 중학">
+                      <img src="/assets/images/common/img-bookmark-high.svg" alt="북마크 고등">
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>M카이브</th>
+                  <td class="fill-dark">
+                    <img src="/assets/images/common/icon-pause-white.svg" alt="일시정지">
+                    <img src="/assets/images/common/icon-play-white.svg" alt="재생">
+                    <img src="/assets/images/common/icon-sound-mute.svg" alt="음소거">
+                    <img src="/assets/images/common/icon-sound-on.svg" alt="소리">
+                    <img src="/assets/images/common/icon-expand.svg" alt="확대">
+                    <img src="/assets/images/common/icon-reduction.svg" alt="축소">
+                    <img src="/assets/images/common/icon-circle-pause.svg" alt="구간편집">
+                    <pre class='brush:html'>
+                      <img src="/assets/images/common/icon-pause-white.svg" alt="일시정지">
+                      <img src="/assets/images/common/icon-play-white.svg" alt="재생">
+                      <img src="/assets/images/common/icon-sound-mute.svg" alt="음소거">
+                      <img src="/assets/images/common/icon-sound-on.svg" alt="소리">
+                      <img src="/assets/images/common/icon-expand.svg" alt="확대">
+                      <img src="/assets/images/common/icon-reduction.svg" alt="축소">
+                      <img src="/assets/images/common/icon-circle-pause.svg" alt="구간편집">
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>elementary</h3>
+            <table class="guide-table">
+              <tbody>
+                <tr>
+                  <th>icon-caution-filled</th>
+                  <th></th>
+                  <td><img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" /></td>
+                  <th>icon-caution-line</th>
+                  <th></th>
+                  <td><img src="/assets/images/elementary/icon-caution-line.svg" alt="caution line 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-main-test-reference</th>
+                  <th>평가 자료실</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-main-test-reference.svg" alt="평가 자료실 아이콘" />
+                  </td>
+
+                  <th>icon-main-world</th>
+                  <th></th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-main-world.svg" alt="아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-main-compass</th>
+                  <th>꿈나침반</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-main-compass.svg" alt="꿈 나침판 아이콘" />
+                  </td>
+                  <th>icon-bookmark-on</th>
+                  <th>교과활동</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-bookmark-on.svg" alt="꿈 나침판 아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-subject-MA</th>
+                  <th>과목-수학</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-MA.svg" alt="수학 아이콘" />
+                  </td>
+                  <th>icon-subject-SO</th>
+                  <th>과목-사회</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-SO.svg" alt="사회 아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-subject-EL</th>
+                  <th>과목-영어</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-EL.svg" alt="영어 아이콘" />
+                  </td>
+                  <th>icon-subject-KO</th>
+                  <th>과목-국어</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-KO.svg" alt="국어 아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-subject-SC</th>
+                  <th>과목-과학</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-SC.svg" alt="과학 아이콘" />
+                  </td>
+                  <th>icon-subject-AR</th>
+                  <th>과목-미술</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-AR.svg" alt="미술 아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-subject-PC</th>
+                  <th>과목-실과</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-PC.svg" alt="실과 아이콘" />
+                  </td>
+                  <th>icon-subject-MO</th>
+                  <th>과목-도덕</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-MO.svg" alt="도덕 아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-subject-MU</th>
+                  <th>과목-음악</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-MU.svg" alt="음악 아이콘" />
+                  </td>
+                  <th>icon-subject-PE</th>
+                  <th>과목-체육</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-subject-PE.svg" alt="체육 아이콘" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-favorite-link.svg</th>
+                  <th>즐겨찾기</th>
+                  <td>
+                    <img src="/assets/images/elementary/icon-favorite-link.svg" alt="즐겨찾기 아이콘" />
+                  </td>
+                  
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>middle</h3>
+            <table class="guide-table">
+              <tbody>
+                <tr>
+                  <th>icon-caution-filled</th>
+                  <th></th>
+                  <td><img src="/assets/images/middle/icon-caution-filled.svg" alt="caution success 아이콘" /></td>
+                  <th>icon-caution-line</th>
+                  <th></th>
+                  <td><img src="/assets/images/middle/icon-caution-line.svg" alt="caution line 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-main-dvd</th>
+                  <th>교사용 DVD 다운로드</th>
+                  <td><img src="/assets/images/middle/icon-main-dvd.svg" alt="교사용 DVD 다운로드 아이콘" /></td>
+                  <th>icon-main-reference</th>
+                  <th>수행평가 자료실</th>
+                  <td><img src="/assets/images/middle/icon-main-reference.svg" alt="수행평가 자료실 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-main-compass</th>
+                  <th>꿈 나침판</th>
+                  <td><img src="/assets/images/middle/icon-main-compass.svg" alt="꿈 나침판 아이콘" /></td>
+                  <th>icon-main-test-reference</th>
+                  <th>중간, 기말 평가 자료실</th>
+                  <td><img src="/assets/images/middle/icon-main-test-reference.svg" alt="중간, 기말 평가 자료실 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-bookmark-on</th>
+                  <th>교과활동</th>
+                  <td>
+                    <img src="/assets/images/middle/icon-bookmark-on.svg" alt="꿈 나침판 아이콘" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>high</h3>
+            <table class="guide-table">
+              <tbody>
+                <tr>
+                  <th>icon-caution-filled</th>
+                  <th></th>
+                  <td><img src="/assets/images/high/icon-caution-filled.svg" alt="caution success 아이콘" /></td>
+                  <th>icon-caution-line</th>
+                  <th></th>
+                  <td><img src="/assets/images/high/icon-caution-line.svg" alt="caution line 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-main-dvd</th>
+                  <th>교사용 DVD 다운로드</th>
+                  <td>
+                    <img src="/assets/images/high/icon-main-dvd.svg" alt="교사용 DVD 다운로드 아이콘" />
+                  </td>
+                  <th>icon-main-reference</th>
+                  <th>수행평가 자료실</th>
+                  <td><img src="/assets/images/high/icon-main-reference.svg" alt="수행평가 자료실 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-main-compass</th>
+                  <th>꿈 나침판</th>
+                  <td><img src="/assets/images/high/icon-main-compass.svg" alt="꿈 나침판 아이콘" /></td>
+                  <th>icon-main-test-reference</th>
+                  <th>중간, 기말 평가 자료실</th>
+                  <td><img src="/assets/images/high/icon-main-test-reference.svg" alt="중간, 기말 평가 자료실 아이콘" /></td>
+                </tr>
+                <tr>
+                  <th>icon-bookmark-on</th>
+                  <th>교과활동</th>
+                  <td>
+                    <img src="/assets/images/high/icon-bookmark-on.svg" alt="꿈 나침판 아이콘" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h2>
+              svg sprite icon
+              <small>초/중/고 개별 컬러값 아이콘 추가 시 svg-sprite-xxx.svg 하단에 심볼 추가하고 아이디값 정의 / 컬러값을 currentColor로 변경</small>
+            </h2>
+            <h3>svg-sprite-solid</h3>
+            <table class="guide-table">
+              <colgroup>
+                <col style="width: 25%;" span="4" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>#icon-close-round</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-close-round</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-close-round" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-check</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-check</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-check" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-plus</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-plus</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-plus" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-close</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-close</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-close" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-search</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-search</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-search" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-file</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-file</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-file" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-folder</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - 자료</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-folder" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-pin</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - 스크랩</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-pin" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-pin-diagonal</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - 스크랩</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-pin-diagonal" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-download</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - 다운로드</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-download" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-copy</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-copy</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-copy" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-book</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-book</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-book" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-board-list</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-board-list</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-board-list" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-menu</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-menu</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-menu" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-pause</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-pause</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-pause" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-play</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-play</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-play" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-link</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-link</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-link" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-new-windows</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-new-windows</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-new-windows" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-share</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-share</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-share" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-home</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-home</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-home" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-file-filled</th>
+                  <td class="fill-dark">
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-file-filled</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-file-filled" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-setting</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-setting</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-setting" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-myfile</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-myfile</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-myfile" />
+                      </svg>
+                    </button>
+                  </td>
+
+                  <th>#icon-faq</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-faq</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-faq" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-ask</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-ask</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-ask" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-remote</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-remote</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-remote" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-map</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-map</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-map" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-telephone</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-telephone</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-telephone" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-kakao</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-kakao</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-kakao" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-star</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-star</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-star" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-quick-miraen</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-quick-miraen</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-quick-miraen" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-quick-user</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-quick-user</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-quick-user" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-quick-password</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-quick-password</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-quick-password" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-circle-plus</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-circle-plus</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-circle-plus" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-circle-minus</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-circle-minus</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-circle-minus" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-gallery</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-gallery</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-gallery"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-kebab</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-kebab</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-kebab" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-like</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-like</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-like"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-modify</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-modify</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-modify" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-del</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-del</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-del" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-inquire</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-inquire</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-inquire" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-close-white</th>
+                  <td class="fill-dark">
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-close-white</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-close-white" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-list</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-list</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-list" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-folder-arrow-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-folder-arrow-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-folder-arrow-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-logout</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-logout</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-logout" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-login</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-login</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-login" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-minus</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-minus</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-minus" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-trash-can</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-trash-can</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-trash-can" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-new-windows-single</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-new-windows-single</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-new-windows-single" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-question</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-question</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-search-lg</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-search-lg</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-search-lg" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-check-half-rounded</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-check-half-rounded</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-check-half-rounded" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-reple</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-reple</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-reple" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-tv</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-tv</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-tv" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-play-rounded</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-play-rounded</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-play-rounded" />
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#logo-mirae-n</th>
+                  <td>
+                    <svg>
+                      <title>mirae N</title>
+                      <use href="/assets/images/svg-sprite-solid.svg#logo-mirae-n"></use>
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-user</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-user</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-user"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-history</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-history</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-history"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-home-lined</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-home-lined</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-home-lined"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-filter</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-filter</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-filter"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-rewind</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-rewind</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-rewind"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-forward</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-forward</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-forward"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>svg-sprite-arrow</h3>
+            <table class="guide-table">
+              <tbody>
+                <tr>
+                  <th>icon-chevron-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-chevron-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-chevron-down</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-chevron-down</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-chevron-right</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-chevron-right</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-chevron-left</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-chevron-left</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-chevron-double-right</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-chevron-double-right</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-right"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-chevron-double-left</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-chevron-double-left</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-double-left"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-circle-line-chevron-down</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-circle-line-chevron-down</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-circle-line-chevron-down"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-circle-line-chevron-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-circle-line-chevron-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-circle-line-chevron-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-circle-line-chevron-left</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - 이전항목</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-circle-line-chevron-left"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-circle-line-chevron-right</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - 다음항목</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-circle-line-chevron-right"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-circle-chevron-right</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-circle-chevron-right</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-circle-chevron-right"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-circle-chevron-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-circle-chevron-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-circle-chevron-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-arrow-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-arrow-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-arrow-right</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-arrow-right</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-arrow-left</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-arrow-left</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-left"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-caret-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-caret-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-caret-down</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-caret-down</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-down"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>#icon-reload</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-reload</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-reload"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>#icon-back</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-back</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-back"></use>
+                      </svg>
+                    </button>
+                  </td>
+                  <th>icon-caret-radius-up</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-caret-radius-up</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-radius-up"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>icon-caret-radius-down</th>
+                  <td>
+                    <button class="icon-button">
+                      <svg>
+                        <title>아이콘 - icon-caret-radius-down</title>
+                        <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-caret-radius-down"></use>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <button class="icon-button">
+                <svg>
+                  <title>아이콘 - icon-setting</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                </svg>
+              </button>
+              <button class="icon-button" title="버튼명">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-down" />
+                </svg>
+              </button>
+
+              <!-- disabled -->
+              <button class="icon-button">
+                <svg>
+                  <title>아이콘 - icon-setting</title>
+                  <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-setting"></use>
+                </svg>
+              </button>
+              <button class="icon-button" title="버튼명" disabled="disabled">
+                <svg>
+                  <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-arrow-down" />
+                </svg>
+              </button>
+            </pre>
+          </section>
+          <section>
+            <h2>.icon</h2>
+            <h3>default
+              <small>기본 사이즈 넓이, 높이 20px</small>
+            </h3>
+            <table class="guide-table">
+              <colgroup>
+                <col width="15%" />
+                <col span="2" width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>.size-sm <br/>(width, height 12px)</th>
+                  <th>default <br/>(width, height 20px)</th>
+                  <th>.size-md <br/>(width, height 24px)</th>
+                  <th>.size-lg <br/>(width, height 40px)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>default</th>
+                  <td>
+                    <i class="icon size-sm">
+                      <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+                    </i>
+                    <i class="icon size-sm">
+                      <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+                    </i>
+                    <i class="icon size-sm">
+                      <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+                    </i>
+                    <i class="icon size-sm">
+                      <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘">
+                    </i>
+                    <i class="icon size-sm">
+                      <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘">
+                    </i>
+                    <i class="icon size-sm">
+                      <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘">
+                    </i>
+                  </td>
+                  <td>
+                    <i class="icon">
+                      <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+                    </i>
+                    <i class="icon">
+                      <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+                    </i>
+                    <i class="icon">
+                      <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+                    </i>
+                    <i class="icon">
+                      <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘">
+                    </i>
+                    <i class="icon">
+                      <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘">
+                    </i>
+                    <i class="icon">
+                      <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘">
+                    </i>
+                  </td>
+                  <td>
+                    <i class="icon size-md">
+                      <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+                    </i>
+                    <i class="icon size-md">
+                      <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+                    </i>
+                    <i class="icon size-md">
+                      <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+                    </i>
+                    <i class="icon size-md">
+                      <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘">
+                    </i>
+                    <i class="icon size-md">
+                      <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘">
+                    </i>
+                    <i class="icon size-md">
+                      <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘">
+                    </i>
+                  </td>
+                  <td>
+                    <i class="icon size-lg">
+                      <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+                    </i>
+                    <i class="icon size-lg">
+                      <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+                    </i>
+                    <i class="icon size-lg">
+                      <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+                    </i>
+                    <i class="icon size-lg">
+                      <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘">
+                    </i>
+                    <i class="icon size-lg">
+                      <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘">
+                    </i>
+                    <i class="icon size-lg">
+                      <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘">
+                    </i>
+                  </td>
+                </tr>
+                <tr>
+                  <th>type-rounded</th>
+                  <td>
+                    <i class="icon size-sm type-rounded">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                  </td>
+                  <td>
+                    <i class="icon type-rounded">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                  </td>
+                  <td>
+                    <i class="icon size-md type-rounded">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                  </td>
+                  <td>
+                    <i class="icon size-lg type-rounded">
+                      <svg>
+                        <title>Q 아이콘</title>
+                        <use href="/assets/images/svg-sprite-solid.svg#icon-question"></use>
+                      </svg>
+                    </i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pre class="brush:html">
+              <!-- default -->
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+              </i>
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+              </i>
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-FB-round.svg" alt="페이스북 아이콘">
+              </i>
+
+              <!-- .size-sm -->
+              <i class="icon size-sm">
+                <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+              </i>
+              <i class="icon size-sm">
+                <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+              </i>
+
+              <!-- .size-md -->
+              <i class="icon size-md">
+                <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+              </i>
+              <i class="icon size-md">
+                <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+              </i>
+
+              <!-- .size-lg -->
+              <i class="icon size-lg">
+                <img src="/assets/images/common/icon-sns-NA-round.svg" alt="네이버 아이콘">
+              </i>
+              <i class="icon size-lg">
+                <img src="/assets/images/common/icon-sns-KA-round.svg" alt="카카오톡 아이콘">
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-GO-round.svg" alt="구글 아이콘">
+              </i>
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-WH-round.svg" alt="웨일 아이콘">
+              </i>
+              <i class="icon">
+                <img src="/assets/images/common/icon-sns-IA-round.svg" alt="아이엠 티처 아이콘">
+              </i>
+            </pre>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
