@@ -1,1 +1,6 @@
 /* Container 2024 */
+
+.container-wrapper img {
+  border: 1px solid #ddd;
+  font-size: 11px;
+}
