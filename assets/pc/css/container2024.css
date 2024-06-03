@@ -1,6 +1,210 @@
 /* Container 2024 */
 
+.container-wrapper {
+  position: relative;
+  min-width: 1024px;
+  height: 100vh;
+  color: #333;
+}
+
+.container-wrapper * {
+  box-sizing: border-box;
+}
+
+.container-wrapper button {
+  border: 1px solid #666;
+  padding: 3px 5px;
+  border-radius: 5px;
+  height: 30px;
+  vertical-align: middle;
+}
+.container-wrapper button:hover {
+  background: #E9EDF3;
+}
+
 .container-wrapper img {
   border: 1px solid #ddd;
   font-size: 11px;
+}
+
+.container-wrapper .container-header {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.container-wrapper .container-header .title h1 {
+  font-size: 18px;
+  display: inline-block;
+}
+.container-wrapper .container-header .radius {
+  padding: 5px 10px;
+  border: 1px solid #999;
+  border-radius: 24px;
+  vertical-align: middle;
+}
+
+.container-wrapper .container-main {
+  background: #f4f4f4;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 104px);
+}
+
+.container-wrapper .container-main .contents-list-wrap {
+  background: #fff;
+  width: 300px;
+  position: relative;
+}
+
+.container-wrapper .container-main .contents-list-wrap .top {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.container-wrapper .container-main .contents-list-wrap .top span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container-wrapper .container-main .contents-list-wrap .contents-list {
+  max-height: calc(100vh - 205px);
+  overflow-y: auto;
+}
+
+.container-wrapper .container-main .contents-list-wrap .contents-list > div {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.container-wrapper .container-main .contents-list-wrap .contents-list span.title {
+  display: block;
+  font-weight: bold;
+  color: #1E51A1;
+  padding: 5px 10px 5px 20px;
+}
+
+.container-wrapper .container-main .contents-list-wrap .contents-list a {
+  display: block;
+  padding: 5px 10px 5px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list a:hover {
+  background: #E9EDF3;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list a.active {
+  background: #9BB6E2;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list span.min-label {
+  font-size: 11px;
+  border: 1px solid #333;
+  color: #fff;
+  background: #999;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.container-wrapper .container-main .contents-list-wrap .bottom {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background: #fff;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  gap: 8px;
+}
+.container-wrapper .container-main .contents-list-wrap .bottom button {
+  flex-grow: 1;
+}
+
+.container-wrapper .container-main .viewer-wrap {
+  position: relative;
+}
+
+.container-wrapper .container-main .viewer-wrap .view-content-area {
+  text-align: center;
+  position: relative;
+  align-content: center;
+  height: calc(100% - 51px);
+}
+
+.container-wrapper .container-main .viewer-wrap .view-content-area button {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.container-wrapper .container-main .viewer-wrap button.btn-view-prev {
+  left: 0;
+}
+
+.container-wrapper .container-main .viewer-wrap button.btn-view-next {
+  right: 0;
+}
+
+.container-wrapper .container-main .viewer-control {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: #eee;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+.container-wrapper .container-main .viewer-control * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.container-wrapper .container-main .viewer-control .center-item {
+  margin: 0 auto;
+  text-align: center;
+}
+.container-wrapper .container-main .viewer-control .right-item {
+  position: absolute;
+  right: 10px;
+}
+
+.container-wrapper .container-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 52px;
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+}
+
+.container-wrapper .container-footer * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container-wrapper .container-footer .left-item {
+  position: absolute;
+  left: 10px;
+}
+
+.container-wrapper .container-footer .center-item {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-wrapper .container-footer .right-item {
+  position: absolute;
+  right: 10px;
 }
