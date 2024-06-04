@@ -15,7 +15,7 @@
   border: 1px solid #666;
   padding: 3px 5px;
   border-radius: 5px;
-  height: 30px;
+  height: 34px;
   vertical-align: middle;
 }
 .container-wrapper button:hover {
@@ -29,15 +29,16 @@
 
 .container-wrapper .container-header {
   width: 100%;
-  height: 52px;
+  height: 60px;
   display: flex;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 13px;
+  background: #E9EDF3;
+  border-bottom: 1px solid #D7E2F0;
   align-content: center;
   justify-content: space-between;
 }
 
-.container-wrapper .container-header .title h1 {
+.container-wrapper .container-header .left-item h1 {
   font-size: 18px;
   display: inline-block;
 }
@@ -52,7 +53,7 @@
   background: #f4f4f4;
   display: flex;
   flex-wrap: wrap;
-  height: calc(100vh - 104px);
+  height: calc(100vh - 120px);
 }
 
 .container-wrapper .container-main .contents-list-wrap {
@@ -64,6 +65,7 @@
 .container-wrapper .container-main .contents-list-wrap .top {
   position: sticky;
   top: 0;
+  height: 64px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -77,7 +79,7 @@
 }
 
 .container-wrapper .container-main .contents-list-wrap .contents-list {
-  max-height: calc(100vh - 205px);
+  max-height: calc(100vh - 243px);
   overflow-y: auto;
 }
 
@@ -118,6 +120,7 @@
 .container-wrapper .container-main .contents-list-wrap .bottom {
   position: absolute;
   bottom: 0;
+  height: 60px;
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
@@ -138,7 +141,7 @@
   text-align: center;
   position: relative;
   align-content: center;
-  height: calc(100% - 51px);
+  height: calc(100% - 60px);
 }
 
 .container-wrapper .container-main .viewer-wrap .view-content-area button {
@@ -159,6 +162,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 60px;
   display: flex;
   background: #eee;
   padding: 10px;
@@ -181,7 +185,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 52px;
+  height: 60px;
   display: flex;
   padding: 10px;
   border-top: 1px solid #ddd;
