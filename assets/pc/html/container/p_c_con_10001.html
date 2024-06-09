@@ -27,25 +27,25 @@
     <div class="container-wrapper">
       <header class="container-header">
         <div class="left-item">
-          <button type="button" class="">전체목차</button>
+          <button type="button" class="btn menu">전체목차</button> <!-- 전체목차 펼침 상태 active 추가 -->
           <div class="" style="display: none;">(전체목차 펼침영역)</div>
-          <h1>[3~4차시] 느낌을 살려 사물 표현하기</h1>
-          <span class="radius">교과서 수업</span>
-          <button type="button" class="">북마크</button>
+          <h1>[12342343~4차시] 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기</h1>
+          <span class="label-category">교과서 수업</span>
+          <button type="button" class="btn bookmark">북마크</button> <!-- 북마크 설정시 active 추가 -->
         </div>
         <div class="right-item">
-          <span class="radius">국어 110~120쪽</span>
-          <span class="radius">국어 활동 110~112쪽</span>
-          <button type="button" class="">진도 저장</button>
-          <button type="button" class="">도움말</button>
+          <span class="label-pages">국어 110~120쪽</span>
+          <span class="label-pages">국어 활동 110~112쪽</span>
+          <button type="button" class="btn save-class">진도 저장</button>
+          <button type="button" class="icon-help">도움말</button>
         </div>
       </header>
       <main class="container-main">
         <!-- 학습목차 목록 -->
         <div class="contents-list-wrap" style="display: block;">
           <div class="top">
-            <span class="">학습목차</span>
-            <button type="button" class="">닫기</button>
+            <span class="contents-list-title">학습목차</span>
+            <button type="button" class="btn close">닫기</button>
           </div>
           <div class="contents-list">
             <div>
@@ -60,9 +60,9 @@
               <span class="title">전개</span>
               <ul>
                 <li><a href="#">대화에서 알맞은 높임 표현 대화에서 알맞은 높임 표현</a></li>
-                <li><a href="#"><span class="min-label">국어활동</span>내 단원 학습 목표</a></li>
-                <li><a href="#"><span class="min-label">교사maker</span>내 등록 자료</a></li>
-                <li><a href="#"><span class="min-label">국어활동</span><span class="min-label">저작도구</span>이번 시간</a></li>
+                <li><a href="#"><span class="tag violet">국어활동</span>내 단원 학습 목표</a></li>
+                <li><a href="#"><span class="tag blue">교사maker</span>내 등록 자료</a></li>
+                <li><a href="#" class="active"><span class="tag violet">국어활동</span><span class="tag pink">저작도구</span>이번 시간</a></li>
               </ul>
             </div>
             <div>
@@ -75,8 +75,8 @@
             </div>
           </div>
           <div class="bottom">
-            <button type="button" class="">교과서</button>
-            <button type="button" class="">국어활동</button>
+            <button type="button" class="btn blue">교과서</button>
+            <button type="button" class="btn blue-outline">국어활동</button>
           </div>
         </div>
         <div class="viewer-wrap" style="width: calc(100% - 300px);">
@@ -114,15 +114,15 @@
       </main>
       <footer class="container-footer">
         <div class="left-item">
-          <button type="button" class="">목차</button>
-          <button type="button" class="">
+          <button type="button" class="btn list active">목차</button><!-- 학습목차 펼침 상태 active 추가 -->
+          <button type="button" class="btn note">
             <span>수업노트</span>
           </button>
-          <button type="button" class="">
+          <button type="button" class="btn drawing">
             <span>그리기</span>
           </button>
           <div class="" style="display: none;">(그리기 툴바)</div>
-          <button type="button" class="">
+          <button type="button" class="btn mathtool">
             <span>수학교구</span>
           </button>
           <div class="" style="display: none;">
@@ -159,11 +159,11 @@
           </div>
         </div>
         <div class="center-item">
-          <button type="button" class="">이전 페이지로 이동</button>
+          <button type="button" class="btn paging prev">이전 페이지로 이동</button>
           <div>
             <strong>24</strong>/<span>125</span>
           </div>
-          <button type="button" class="">다음 페이지로 이동</button>
+          <button type="button" class="btn paging next blue">다음 페이지로 이동</button>
         </div>
         <div class="right-item">
           <div>
@@ -177,8 +177,8 @@
             </div>
             <button type="button" class="">확대</button>
           </div>
-          <button type="button" class="">화면 최대화</button>
-          <button type="button" class="">
+          <button type="button" class="btn full-screen">화면 최대화</button>
+          <button type="button" class="btn class-tool open">
             <span>수업도구</span>
           </button>
           <div class="" style="display: none;">
@@ -221,7 +221,7 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="">설정</button>
+          <button type="button" class="btn setting">설정</button>
         </div>
       </footer>
     </div>
