@@ -1,0 +1,11 @@
+/* Container 2024 */
+
+@import url(./container2024_tablet.css);
+
+/* Tablet ver. */
+@media (max-width: 1319px) and (min-width: 1024px) {
+}
+
+/* Mobile ver. */
+@media (max-width: 1023px) {
+}
