@@ -29,8 +29,8 @@
         <div class="left-item">
           <button type="button" class="btn menu">전체목차</button> <!-- 전체목차 펼침 상태 active 추가 -->
           <div class="" style="display: none;">(전체목차 펼침영역)</div>
-          <h1>[12342343~4차시] 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기</h1>
           <span class="label-category">교과서 수업</span>
+          <h1>[12342343~4차시] 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기</h1>
           <button type="button" class="btn bookmark">북마크</button> <!-- 북마크 설정시 active 추가 -->
         </div>
         <div class="right-item">
@@ -62,8 +62,13 @@
                 <li><a href="#">대화에서 알맞은 높임 표현 대화에서 알맞은 높임 표현</a></li>
                 <li><a href="#"><span class="tag violet">국어활동</span>내 단원 학습 목표</a></li>
                 <li><a href="#"><span class="tag blue">교사maker</span>내 등록 자료</a></li>
-                <li><a href="#" class="active"><span class="tag violet">국어활동</span><span class="tag pink">저작도구</span>이번 시간</a></li>
+                <li><a href="#" class="active"><span class="tag violet">국어활동</span><span class="tag pink">저작도구</span>이번 시간은 대화에서 알맞은 높임 표현 고르고 물음에 답해보기</a></li>
               </ul>
+              <!-- 목차 mouse over 시 말풍선 노출 위치 script 작업 필요 -->
+              <div class="overthumb" style="display: block;">
+                <img src="../../../images/container/thumb01.png" class="img-thumb" alt="목차 썸네일">
+                <span class="">이야기에서 인상 깊은 장면 정리하기</span>
+              </div>
             </div>
             <div>
               <span class="title">정리</span>
@@ -74,7 +79,7 @@
               </ul>
             </div>
           </div>
-          <div class="bottom">
+          <div class="bottom" style="display: none;">
             <button type="button" class="btn blue">교과서</button>
             <button type="button" class="btn blue-outline">국어활동</button>
           </div>
@@ -82,32 +87,32 @@
         <div class="viewer-wrap" style="width: calc(100% - 300px);">
           <div class="view-content-area">
             <button type="button" class="btn-view-prev">이전 페이지로 이동</button>
-            <div class="" style="display: none;">
+            <div class="overthumb prev" style="display: block;">
               <span class="">이전</span>
-              <img src="" alt="이전 페이지 썸네일">
+              <img src="../../../images/container/thumb01.png" class="img-thumb" alt="이전 페이지 썸네일">
             </div>
             <div>
               학습콘텐츠(Viewer) 영역
             </div>
-            <button type="button" class="btn-view-next">다음 페이지로 이동</button>
-            <div class="" style="display: none;">
+            <button type="button" class="btn-view-next active">다음 페이지로 이동</button>
+            <div class="overthumb next" style="display: block;">
               <span class="">다음</span>
-              <img src="" alt="다음 페이지 썸네일">
+              <img src="../../../images/container/thumb01.png" class="img-thumb" alt="다음 페이지 썸네일">
             </div>
           </div>
           <!-- 뷰어 내부 컨트롤 영역 -->
           <div class="viewer-control">
             <div class="center-item">
-              <button type="button" class="">이전</button>
-              <button type="button" class="">다음</button>
-              <a href="#">링크 바로가기</a>
+              <button type="button" class="btn prev">이전</button>
+              <button type="button" class="btn next">다음</button>
+              <!--<a href="#" class="link">링크 바로가기</a>-->
             </div>
             <div class="right-item">
-              <button type="button" class="">이전 페이지로 이동</button>
-              <div>
+              <div class="paging">
                 <strong>1</strong>/<span>3</span>
               </div>
-              <button type="button" class="">다음 페이지로 이동</button>
+              <button type="button" class="btn prev disabled">이전 페이지로 이동</button>
+              <button type="button" class="btn next">다음 페이지로 이동</button>
             </div>
           </div>
         </div>
@@ -125,35 +130,30 @@
           <button type="button" class="btn mathtool">
             <span>수학교구</span>
           </button>
-          <div class="" style="display: none;">
+          <div class="mathtool-menu" style="display: block;">
             <ul>
               <li>
-                <button type="button" class="">
-                  <img src="" alt="각도기">
+                <button type="button" class="btn deg">
                   <span>각도기</span>
                 </button>
               </li>
               <li>
-                <button type="button" class="">
-                  <img src="" alt="자">
+                <button type="button" class="btn ruler">
                   <span>자</span>
                 </button>
               </li>
               <li>
-                <button type="button" class="">
-                  <img src="" alt="삼각자">
+                <button type="button" class="btn tri">
                   <span>삼각자</span>
                 </button>
               </li>
               <li>
-                <button type="button" class="">
-                  <img src="" alt="계산기">
+                <button type="button" class="btn calc">
                   <span>계산기</span>
                 </button>
               </li>
             </ul>
-            <button type="button" class="">
-              <img src="" alt="닫기">
+            <button type="button" class="btn close">
               <span>닫기</span>
             </button>
           </div>
@@ -167,57 +167,58 @@
         </div>
         <div class="right-item">
           <div>
-            <button type="button" class="">다시하기</button>
-            <button type="button" class="">정답확인</button>
+            <!--<button type="button" class="btn download">다운로드</button>-->
+            <button type="button" class="btn retry"><span>다시하기</span></button>
+            <button type="button" class="btn a-check"><span>정답확인</span></button>
           </div>
-          <div>
-            <button type="button" class="">축소</button>
+          <div class="zoom-group">
+            <button type="button" class="btn zoomout">축소</button>
             <div>
               <span>100%</span>
             </div>
-            <button type="button" class="">확대</button>
+            <button type="button" class="btn zoomin">확대</button>
           </div>
           <button type="button" class="btn full-screen">화면 최대화</button>
-          <button type="button" class="btn class-tool open">
+          <button type="button" class="btn classtool">
             <span>수업도구</span>
           </button>
-          <div class="" style="display: none;">
+          <div class="classtool-menu" style="display: block;">
             <ul>
               <li>
-                <button type="button" class="">
+                <button type="button" class="btn write">
                   <span>판서</span>
                 </button>
-                <input type="checkbox" class=""><!-- 즐겨찾기 아이콘 -->
+                <input type="checkbox" class="btn-favorite"><!-- 즐겨찾기 아이콘 -->
               </li>
               <li>
-                <button type="button" class="">
+                <button type="button" class="btn timer">
                   <span>타이머</span>
                 </button>
-                <input type="checkbox" class=""><!-- 즐겨찾기 아이콘 -->
+                <input type="checkbox" class="btn-favorite"><!-- 즐겨찾기 아이콘 -->
               </li>
               <li>
-                <button type="button" class="">
+                <button type="button" class="btn blind">
                   <span>깜깜이</span>
                 </button>
-                <input type="checkbox" class=""><!-- 즐겨찾기 아이콘 -->
+                <input type="checkbox" class="btn-favorite"><!-- 즐겨찾기 아이콘 -->
               </li>
               <li>
-                <button type="button" class="">
+                <button type="button" class="btn attention">
                   <span>주의집중</span>
                 </button>
-                <input type="checkbox" class=""><!-- 즐겨찾기 아이콘 -->
+                <input type="checkbox" class="btn-favorite"><!-- 즐겨찾기 아이콘 -->
               </li>
               <li>
-                <button type="button" class="">
+                <button type="button" class="btn present">
                   <span>발표자선정</span>
                 </button>
-                <input type="checkbox" class=""><!-- 즐겨찾기 아이콘 -->
+                <input type="checkbox" class="btn-favorite"><!-- 즐겨찾기 아이콘 -->
               </li>
               <li>
-                <button type="button" class="">
+                <button type="button" class="btn score">
                   <span>모둠점수판</span>
                 </button>
-                <input type="checkbox" class=""><!-- 즐겨찾기 아이콘 -->
+                <input type="checkbox" class="btn-favorite"><!-- 즐겨찾기 아이콘 -->
               </li>
             </ul>
           </div>
