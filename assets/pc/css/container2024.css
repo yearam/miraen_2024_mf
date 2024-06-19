@@ -1173,7 +1173,7 @@
 }
 
 /* Tablet ver. */
-@media (min-width: 1024px) and (max-width: 1319px) {
+@media (max-width: 1319px) {
   .container-wrapper .container-header .right-item {
     padding-right: 16px;
   }
