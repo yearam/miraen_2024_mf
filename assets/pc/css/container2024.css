@@ -314,6 +314,7 @@
 .container-wrapper .container-main .contents-list .overthumb .img-thumb {
   width: 160px;
   height: auto;
+  border-radius: 12px;
 }
 .container-wrapper .container-main .contents-list .overthumb span {
   display: block;
@@ -503,6 +504,7 @@
   height: auto;
   border: 1px solid #ddd;
   vertical-align: top;
+  border-radius: 12px;
 }
 
 .container-wrapper .container-main .viewer-control {
