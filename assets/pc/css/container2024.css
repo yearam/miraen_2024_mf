@@ -1087,6 +1087,26 @@ outline: none;
   background: #1E51A1 url('../../images/container/icon-con-footer-btn-setting-white.svg') center center no-repeat;
 }
 
+/* basic css edit */
+.container-wrapper .other-lesson .item-wrap {
+  padding: 0;
+}
+.container-wrapper .other-lesson .item-wrap::before {
+  background-color: #1E51A1;
+}
+.container-wrapper .other-lesson .item a:hover, .other-lesson .item a.active {
+  background-color: #E9EDF3;
+}
+.container-wrapper .other-lesson .item a:hover,
+.container-wrapper .other-lesson .item a.active,
+.container-wrapper .other-lesson .sub-item a:hover,
+.container-wrapper .other-lesson .sub-item a.active {
+  color: #1E51A1;
+}
+.container-wrapper .other-lesson .item a::after {
+  background-color: #1E51A1;
+}
+
 /* middle ver. */
 @media (min-width: 1320px) and (max-width: 1919px) {
   .container-wrapper .container-header .right-item {
