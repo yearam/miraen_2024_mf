@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - common</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/common2024.css" rel="stylesheet" />
+    <link href="/assets/pc/css/container2024.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png"><!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+  </head>
+  <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+  <body class="theme-common">
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <button type="button" class="button size-md" target-obj="select-tex-info">진도 저장</button>
+        </main>
+      </div>
+    </div>
+    <div class="popup" id="select-tex-info" init-show>
+      <div class="popup-container size-sm">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          <h3>진도 저장</h3>
+        </div>
+        <form action="submit">
+          <div class="body">
+            
+            <div class="save-class">
+              <div class="ox-group">
+                <span class="ox">
+                    <input type="radio" name="radio1" id="ox-radio1-1" checked="">
+                    <label for="ox-radio1-1">이어서 저장</label>
+                </span>
+              </div>
+              <select name="" id="" class="size-xl">
+                <option>선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택선택</option>
+              </select>
+            </div>
+            <div class="save-class">
+              <div class="ox-group">
+                <span class="ox">
+                    <input type="radio" name="radio1" id="ox-radio1-2" checked="">
+                    <label for="ox-radio1-2">신규 저장</label>
+                </span>
+              </div>
+              <select name="" id="" class="size-xl">
+                <option>선택</option>
+              </select>
+              <span class="h3">학년</span>
+              <select name="" id="" class="size-xl">
+                <option>선택</option>
+              </select>
+              <span class="h3">반</span>
+            </div>
+
+          </div>
+          <div class="footer">
+            <button class="button size-xl type-primary">현재 위치 저장</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

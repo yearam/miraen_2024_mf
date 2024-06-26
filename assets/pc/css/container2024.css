@@ -4,7 +4,7 @@
 
 .container-wrapper {
   position: relative;
-  min-width: 1024px;
+  min-width: 1320px;
   height: 100vh;
   color: #333;
   overflow: hidden;
@@ -251,6 +251,7 @@ outline: none;
   background: #9BB6E2;
 }
 .container-wrapper .container-main .contents-list-wrap .contents-list .tag {
+  display: inline-block;
   padding: 2px 5px;
   font-size: 11px;
   color: #fff;
@@ -258,6 +259,15 @@ outline: none;
   border: 1px solid #333;
   border-radius: 4px;
   margin-right: 4px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list .tag.circle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 0;
 }
 .container-wrapper .container-main .contents-list-wrap .contents-list .tag:last-child {
   margin-right: 8px;
@@ -276,6 +286,36 @@ outline: none;
   color: #fff;
   background: #F28B9C;
   border: 1px solid #D97D8C;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list .tag.green {
+  color: #fff;
+  background: #64AE7F;
+  border: 1px solid #5A9C72;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list .tag.navy {
+  color: #fff;
+  background: #1E51A1;
+  border: 1px solid #1C4991;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list .tag.maker:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 11px;
+  background: url('../../images/container/icon-con-list-tag-maker.svg') center center no-repeat;
+}
+.container-wrapper .container-main .contents-list-wrap .contents-list .tag.share:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 1px);
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: url('../../images/container/icon-con-list-tag-share.svg') center center no-repeat;
 }
 
 .container-wrapper .container-main .contents-list .overthumb {
@@ -667,44 +707,44 @@ outline: none;
   background: #1E51A1 url('../../images/container/icon-con-footer-list-on.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .left-item .btn:before {
+.container-wrapper .container-footer .btn:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
 }
 
-.container-wrapper .container-footer .left-item .btn.note:before {
+.container-wrapper .container-footer .btn.note:before {
   width: 16px;
   height: 17px;
   background: url('../../images/container/icon-con-footer-btn-note.svg') left center no-repeat;
 }
-.container-wrapper .container-footer .left-item .btn.note:hover:before,
-.container-wrapper .container-footer .left-item .btn.note.active:before {
+.container-wrapper .container-footer .btn.note:hover:before,
+.container-wrapper .container-footer .btn.note.active:before {
   background: url('../../images/container/icon-con-footer-btn-note-white.svg') left center no-repeat;
 }
 
-.container-wrapper .container-footer .left-item .btn.drawing:before {
+.container-wrapper .container-footer .btn.drawing:before {
   width: 17px;
   height: 17px;
   background: url('../../images/container/icon-con-footer-btn-drawing.svg') left center no-repeat;
 }
-.container-wrapper .container-footer .left-item .btn.drawing:hover:before,
-.container-wrapper .container-footer .left-item .btn.drawing.active:before {
+.container-wrapper .container-footer .btn.drawing:hover:before,
+.container-wrapper .container-footer .btn.drawing.active:before {
   background: url('../../images/container/icon-con-footer-btn-drawing-white.svg') left center no-repeat;
 }
 
-.container-wrapper .container-footer .left-item .btn.mathtool:before {
+.container-wrapper .container-footer .btn.mathtool:before {
   width: 18px;
   height: 18px;
   background: url('../../images/container/icon-con-footer-btn-mathtool.svg') left center no-repeat;
 }
-.container-wrapper .container-footer .left-item .btn.mathtool:hover:before,
-.container-wrapper .container-footer .left-item .btn.mathtool.active:before {
+.container-wrapper .container-footer .btn.mathtool:hover:before,
+.container-wrapper .container-footer .btn.mathtool.active:before {
   background: url('../../images/container/icon-con-footer-btn-mathtool-white.svg') left center no-repeat;
 }
 
-.container-wrapper .container-footer .left-item .mathtool-menu {
+.container-wrapper .container-footer .mathtool-menu {
   position: absolute;
   width: max-content;
   left: calc(118px * 2 + 60px);
@@ -714,7 +754,7 @@ outline: none;
   border: 1px solid #1E51A1;
   z-index: 4;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu:before {
+.container-wrapper .container-footer .mathtool-menu:before {
   content: "";
   display: block;
   position: absolute;
@@ -725,53 +765,53 @@ outline: none;
   border-right: 6px solid transparent;
   border-bottom: 10px solid transparent;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul {
+.container-wrapper .container-footer .mathtool-menu ul {
   display: flex;
   width: 100%;
 }
 
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.deg:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.deg:before {
   width: 14px;
   height: 19px;
   background: url('../../images/container/icon-con-footer-btn-mathtool-deg.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.deg:hover:before,
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.deg.active:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.deg:hover:before,
+.container-wrapper .container-footer .mathtool-menu ul li .btn.deg.active:before {
   background: url('../../images/container/icon-con-footer-btn-mathtool-deg-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.ruler:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.ruler:before {
   width: 19px;
   height: 19px;
   background: url('../../images/container/icon-con-footer-btn-mathtool-ruler.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.ruler:hover:before,
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.ruler.active:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.ruler:hover:before,
+.container-wrapper .container-footer .mathtool-menu ul li .btn.ruler.active:before {
   background: url('../../images/container/icon-con-footer-btn-mathtool-ruler-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.tri:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.tri:before {
   width: 19px;
   height: 19px;
   background: url('../../images/container/icon-con-footer-btn-mathtool-tri.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.tri:hover:before,
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.tri.active:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.tri:hover:before,
+.container-wrapper .container-footer .mathtool-menu ul li .btn.tri.active:before {
   background: url('../../images/container/icon-con-footer-btn-mathtool-tri-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.calc:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.calc:before {
   width: 14px;
   height: 19px;
   background: url('../../images/container/icon-con-footer-btn-mathtool-calc.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.calc:hover:before,
-.container-wrapper .container-footer .left-item .mathtool-menu ul li .btn.calc.active:before {
+.container-wrapper .container-footer .mathtool-menu ul li .btn.calc:hover:before,
+.container-wrapper .container-footer .mathtool-menu ul li .btn.calc.active:before {
   background: url('../../images/container/icon-con-footer-btn-mathtool-calc-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .left-item .mathtool-menu ul li:last-child .btn,
+.container-wrapper .container-footer .mathtool-menu ul li:last-child .btn,
 #viewer-tool li:last-child > button {
   border-right: 0;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu .btn.close {
+.container-wrapper .container-footer .mathtool-menu .btn.close {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -782,7 +822,7 @@ outline: none;
   background: #154591;
   opacity: 1;
 }
-.container-wrapper .container-footer .left-item .mathtool-menu .btn.close:before {
+.container-wrapper .container-footer .mathtool-menu .btn.close:before {
   content: "";
   display: block;
   width: 13px;
@@ -913,54 +953,54 @@ outline: none;
   margin-right: 8px;
 }
 
-.container-wrapper .container-footer .right-item .btn.download:before {
+.container-wrapper .container-footer .btn.download:before {
   width: 17px;
   height: 17px;
   background: transparent url('../../images/container/icon-con-footer-btn-download.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.download:hover:before,
-.container-wrapper .container-footer .right-item .btn.download.active:before {
+.container-wrapper .container-footer .btn.download:hover:before,
+.container-wrapper .container-footer .btn.download.active:before {
   background: transparent url('../../images/container/icon-con-footer-btn-download-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.retry:before {
+.container-wrapper .container-footer .btn.retry:before {
   width: 16px;
   height: 15px;
   background: transparent url('../../images/container/icon-con-footer-btn-retry.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.retry:hover:before,
-.container-wrapper .container-footer .right-item .btn.retry.active:before {
+.container-wrapper .container-footer .btn.retry:hover:before,
+.container-wrapper .container-footer .btn.retry.active:before {
   background: transparent url('../../images/container/icon-con-footer-btn-retry-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.a-check:before {
+.container-wrapper .container-footer .btn.a-check:before {
   width: 17px;
   height: 16px;
   background: transparent url('../../images/container/icon-con-footer-btn-a-check.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.a-check:hover:before,
-.container-wrapper .container-footer .right-item .btn.a-check.active:before {
+.container-wrapper .container-footer .btn.a-check:hover:before,
+.container-wrapper .container-footer .btn.a-check.active:before {
   background: transparent url('../../images/container/icon-con-footer-btn-a-check-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.full-screen {
+.container-wrapper .container-footer .btn.full-screen {
   width: 60px;
   font-size: 0;
   background: transparent url('../../images/container/icon-con-footer-btn-full-screen.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.full-screen:hover,
-.container-wrapper .container-footer .right-item .btn.full-screen.active {
+.container-wrapper .container-footer .btn.full-screen:hover,
+.container-wrapper .container-footer .btn.full-screen.active {
   background: #1E51A1 url('../../images/container/icon-con-footer-btn-full-screen-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.classtool:before {
+.container-wrapper .container-footer .btn.classtool:before {
   width: 18px;
   height: 17px;
   margin-right: 2px;
-  background: url('../../images/container/icon-con-footer-btn-classtool.svg') left center no-repeat;
+  background: url('../../images/container/icon-con-footer-btn-classtool.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.classtool:after {
+.container-wrapper .container-footer .btn.classtool:after {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -969,46 +1009,71 @@ outline: none;
   height: 17px;
   background: url('../../images/container/icon-con-footer-btn-classtool-arrow.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.classtool:hover,
-.container-wrapper .container-footer .right-item .btn.classtool.open {
+.container-wrapper .container-footer .btn.classtool:hover,
+.container-wrapper .container-footer .btn.classtool.active {
   background-color: #000;
 }
-.container-wrapper .container-footer .right-item .btn.classtool:hover:before,
-.container-wrapper .container-footer .right-item .btn.classtool.open:before {
-  background: url('../../images/container/icon-con-footer-btn-classtool-white.svg') left center no-repeat;
+.container-wrapper .container-footer .btn.classtool:hover:before,
+.container-wrapper .container-footer .btn.classtool.active:before {
+  background: url('../../images/container/icon-con-footer-btn-classtool-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.classtool:hover:after,
-.container-wrapper .container-footer .right-item .btn.classtool.open:after {
+.container-wrapper .container-footer .btn.classtool:hover:after,
+.container-wrapper .container-footer .btn.classtool.active:after {
   background: url('../../images/container/icon-con-footer-btn-classtool-arrow-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.classtool.open:after {
+.container-wrapper .container-footer .btn.classtool.active:after {
   transform: rotate(180deg);
 }
 
-.container-wrapper .container-footer .right-item .classtool-menu {
+.container-wrapper .container-footer .classtool-menu.pop {
   position: absolute;
   z-index: 2;
-  right: 10px;
+  left: 60px;
   bottom: 70px;
-  padding: 16px 24px;
-  background-color: rgba(255, 255, 255, 0.65);
+  padding: 24px 24px 16px;
+  background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid #ddd;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 }
-.container-wrapper .container-footer .right-item .classtool-menu ul li {
+.container-wrapper .container-footer .classtool-menu.pop .info {
+  display: block;
+  width: 170px;
+  margin: 0 -14px 14px;
+  padding: 0 0 16px 34px;
+  font-size: 12px;
+  color: #838383;
+  border-bottom: 1px solid #E6E6E6;
+}
+.container-wrapper .container-footer .classtool-menu.pop .info:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: -3px;
+  margin-right: 6px;
+  margin-left: -20px;
+  background: url('../../images/container/icon-con-footer-btn-classtool-caution.svg') center center no-repeat;
+  vertical-align: middle;
+}
+.container-wrapper .container-footer .classtool-menu.pop .info strong {
+  vertical-align: baseline;
+  color: #1E51A1;
+}
+
+.container-wrapper .container-footer .classtool-menu.pop ul li {
   display: block;
 }
-.container-wrapper .container-footer .right-item .classtool-menu ul li .btn {
+.container-wrapper .container-footer .classtool-menu.pop ul li .btn {
   text-align: left;
   border: 0;
   width: 120px;
   height: 34px;
   background: transparent;
 }
-.container-wrapper .container-footer .right-item .classtool-menu ul li .btn:hover,
-.container-wrapper .container-footer .right-item .classtool-menu ul li .btn.active {
+.container-wrapper .container-footer .classtool-menu ul li .btn:hover,
+.container-wrapper .container-footer .classtool-menu ul li .btn.active {
   color: #1E51A1;
   background: none;
 }
@@ -1036,35 +1101,35 @@ outline: none;
   background: url('../../images/container/icon-con-footer-btn-classtool-score.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .left-item .classtool-menu {
+.container-wrapper .container-footer .classtool-menu.favorite {
   display: flex;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn:hover {
+.container-wrapper .container-footer .classtool-menu.favorite .btn:hover {
   background: #1E51A1;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn:before {
   margin-right: 8px;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn.write:hover:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn.write:hover:before {
   background: url('../../images/container/icon-con-footer-btn-classtool-write-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn.timer:hover:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn.timer:hover:before {
   background: url('../../images/container/icon-con-footer-btn-classtool-timer-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn.blind:hover:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn.blind:hover:before {
   background: url('../../images/container/icon-con-footer-btn-classtool-blind-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn.attention:hover:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn.attention:hover:before {
   background: url('../../images/container/icon-con-footer-btn-classtool-attention-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn.present:hover:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn.present:hover:before {
   background: url('../../images/container/icon-con-footer-btn-classtool-present-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .left-item .classtool-menu .btn.score:hover:before {
+.container-wrapper .container-footer .classtool-menu.favorite .btn.score:hover:before {
   background: url('../../images/container/icon-con-footer-btn-classtool-score-white.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .classtool-menu ul li .btn-favorite {
+.container-wrapper .container-footer .classtool-menu ul li .btn-favorite {
   width: 20px;
   height: 20px;
   margin: 0;
@@ -1073,17 +1138,17 @@ outline: none;
   background: url('../../images/container/icon-con-footer-btn-favorite-off.svg') center center no-repeat;
   cursor: pointer;
 }
-.container-wrapper .container-footer .right-item .classtool-menu ul li .btn-favorite:checked {
+.container-wrapper .container-footer .classtool-menu ul li .btn-favorite:checked {
   background: url('../../images/container/icon-con-footer-btn-favorite-on.svg') center center no-repeat;
 }
 
-.container-wrapper .container-footer .right-item .btn.setting {
+.container-wrapper .container-footer .btn.setting {
   width: 60px;
   font-size: 0;
   background: transparent url('../../images/container/icon-con-footer-btn-setting.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .right-item .btn.setting:hover,
-.container-wrapper .container-footer .right-item .btn.setting.active {
+.container-wrapper .container-footer .btn.setting:hover,
+.container-wrapper .container-footer .btn.setting.active {
   background: #1E51A1 url('../../images/container/icon-con-footer-btn-setting-white.svg') center center no-repeat;
 }
 
@@ -1107,29 +1172,94 @@ outline: none;
   background-color: #1E51A1;
 }
 
+
+.container-settings {
+  display: flex;
+  gap: 20px;
+  padding: 0 50px;
+}
+.container-settings > div {
+  width: 50%;
+  text-align: center;
+}
+.container-settings input[type="radio"] {
+  display: block;
+  border: 0;
+  padding: 0;
+  width: 100px;
+  height: 90px;
+  border-radius: 0px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.container-settings input[type="radio"]#rate01 {
+  background: url('../../images/container/icon-con-setting-rate01-off.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#rate01:checked {
+  background: url('../../images/container/icon-con-setting-rate01-on.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#rate02 {
+  background: url('../../images/container/icon-con-setting-rate02-off.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#rate02:checked {
+  background: url('../../images/container/icon-con-setting-rate02-on.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#way01 {
+  background: url('../../images/container/icon-con-setting-way01-off.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#way01:checked {
+  background: url('../../images/container/icon-con-setting-way01-on.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#way02 {
+  background: url('../../images/container/icon-con-setting-way02-off.svg') center center no-repeat;
+}
+.container-settings input[type="radio"]#way02:checked {
+  background: url('../../images/container/icon-con-setting-way02-on.svg') center center no-repeat;
+}
+.container-settings label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #838383;
+  cursor: pointer;
+}
+.container-settings input[type="radio"]:checked + label {
+  color: #02A39F;
+}
+
+.save-class {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+}
+.save-class .ox-group {
+  flex-shrink: 0;
+	width: 150px;
+}
+
 /* middle ver. */
 @media (min-width: 1320px) and (max-width: 1919px) {
   .container-wrapper .container-header .right-item {
     padding-right: 16px;
   }
-  .container-wrapper .container-footer .left-item .classtool-menu .btn,
-  .container-wrapper .container-footer .right-item > .btn:not(.classtool),
+  .container-wrapper .container-footer .left-item .classtool-menu.favorite .btn,
+  .container-wrapper .container-footer .right-item > .btn,
   .container-wrapper .container-footer .right-item .contents-control .btn {
     position: relative;
     width: 60px;
   }
-  .container-wrapper .container-footer .left-item .classtool-menu .btn:before,
-  .container-wrapper .container-footer .right-item .contents-control .btn:before {
+  .container-wrapper .container-footer .left-item .classtool-menu.favorite .btn:before,
+  .container-wrapper .container-footer .right-item .btn:before {
     margin: 0;
   }
-  .container-wrapper .container-footer .left-item .classtool-menu .btn span,
-  .container-wrapper .container-footer .right-item > .btn:not(.classtool) span,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn span {
+  .container-wrapper .container-footer .left-item .classtool-menu.favorite .btn span,
+  .container-wrapper .container-footer .right-item > .btn span,
+  .container-wrapper .container-footer .right-item > div .btn span {
     display: none;
   }
-  .container-wrapper .container-footer .left-item .classtool-menu .btn:hover span,
-  .container-wrapper .container-footer .right-item > .btn:not(.classtool):hover span,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:hover span {
+  .container-wrapper .container-footer .left-item .classtool-menu.favorite .btn:hover span,
+  .container-wrapper .container-footer .right-item > .btn:hover span,
+  .container-wrapper .container-footer .right-item > div .btn:hover span {
     display: block;
     position: absolute;
     width: max-content;
@@ -1144,10 +1274,9 @@ outline: none;
     background: #fff;
     z-index: 5;
   }
-  .container-wrapper .container-footer .left-item .classtool-menu .btn:hover span:before,
+  .container-wrapper .container-footer .left-item .classtool-menu.favorite .btn:hover span:before,
   .container-wrapper .container-footer .right-item > .btn:hover span:before,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:hover span:before,
-  .container-wrapper .container-footer .right-item .btn.classtool:hover span:before {
+  .container-wrapper .container-footer .right-item > div .btn:hover span:before {
     content: "";
     display: block;
     position: absolute;
@@ -1160,8 +1289,8 @@ outline: none;
     border-bottom: 1px solid #8CD5D3;
     background: #fff;
   }
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:before
-  .container-wrapper .container-footer .right-item .btn:not(.classtool):before {
+  .container-wrapper .container-footer .right-item > div .btn:before
+  .container-wrapper .container-footer .right-item .btn:before {
     display: block;
     position: absolute;
     top: 50%;
@@ -1184,40 +1313,39 @@ outline: none;
   }
 }
 
-/* Tablet ver. */
+/* minimal ver. */
 @media (max-width: 1319px) {
   .container-wrapper .container-header .right-item {
     padding-right: 16px;
   }
   .container-wrapper .container-footer .left-item > .btn ,
-  .container-wrapper .container-footer .left-item .classtool-menu .btn ,
+  .container-wrapper .container-footer .classtool-menu.favorite .btn ,
   .container-wrapper .container-footer .right-item .btn {
     position: relative;
     width: 60px;
   }
   .container-wrapper .container-footer .left-item > .btn:before,
-  .container-wrapper .container-footer .left-item .classtool-menu .btn:before,
+  .container-wrapper .container-footer .classtool-menu.favorite .btn:before,
   .container-wrapper .container-footer .right-item > .btn:before,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:before,
-  .container-wrapper .container-footer .right-item .btn.classtool:before {
+  .container-wrapper .container-footer .right-item > div .btn:before {
     margin: 0;
   }
   .container-wrapper .container-footer .left-item > .btn,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn {
+  .container-wrapper .container-footer .classtool-menu.favorite .btn,
+  .container-wrapper .container-footer .right-item > .btn,
+  .container-wrapper .container-footer .right-item > div .btn {
     position: relative;
   }
   .container-wrapper .container-footer .left-item > .btn span,
-  .container-wrapper .container-footer .left-item .classtool-menu .btn span,
+  .container-wrapper .container-footer .classtool-menu.favorite .btn span,
   .container-wrapper .container-footer .right-item > .btn span,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn span,
-  .container-wrapper .container-footer .right-item .btn.classtool span {
+  .container-wrapper .container-footer .right-item > div .btn span {
     display: none;
   }
   .container-wrapper .container-footer .left-item > .btn:hover span,
-  .container-wrapper .container-footer .left-item .classtool-menu .btn:hover span,
+  .container-wrapper .container-footer .left-item .classtool-menu.favorite .btn:hover span,
   .container-wrapper .container-footer .right-item > .btn:hover span,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:hover span,
-  .container-wrapper .container-footer .right-item .btn.classtool:hover span {
+  .container-wrapper .container-footer .right-item > div .btn:hover span {
     display: block;
     position: absolute;
     width: max-content;
@@ -1233,10 +1361,9 @@ outline: none;
     z-index: 5;
   }
   .container-wrapper .container-footer .left-item > .btn:hover span:before,
-  .container-wrapper .container-footer .left-item .classtool-menu .btn:hover span:before,
+  .container-wrapper .container-footer .classtool-menu.favorite .btn:hover span:before,
   .container-wrapper .container-footer .right-item > .btn:hover span:before,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:hover span:before,
-  .container-wrapper .container-footer .right-item .btn.classtool:hover span:before {
+  .container-wrapper .container-footer .right-item > div .btn:hover span:before {
     content: "";
     display: block;
     position: absolute;
@@ -1250,8 +1377,8 @@ outline: none;
     background: #fff;
   }
   .container-wrapper .container-footer .left-item > .btn:before,
-  .container-wrapper .container-footer .right-item > div:not(.classtool-menu) .btn:before
-  .container-wrapper .container-footer .right-item .btn:not(.classtool):before {
+  .container-wrapper .container-footer .right-item > div .btn:before
+  .container-wrapper .container-footer .right-item .btn:before {
     display: block;
     position: absolute;
     top: 50%;
@@ -1272,7 +1399,7 @@ outline: none;
   .container-wrapper .container-footer .left-item .mathtool-menu ul li .btn span:before {
     margin-right: 8px;
   }
-  .container-wrapper .container-footer .right-item .btn.classtool:after {
+  .container-wrapper .container-footer .btn.classtool:after {
     display: none;
   }
 }
