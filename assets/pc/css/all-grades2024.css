@@ -13870,3 +13870,259 @@ span.like {
 body{
 
 }
+
+/* MF */
+
+.wrapper-lesson .contents-header .header-inner .badge.title {
+  padding: 9px 12px;
+  font-size: 14px;
+  color: #838383;
+  border: 1px solid #D5D5D5;
+  border-radius: 17px;
+  background: #EFEFEF;
+}
+
+.badge-lesson {
+  display: flex;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  padding: 4px 18px 4px 12px;
+  width: 54px;
+  height: 37px;
+  background: url('../../images/title/title-badge-lesson-bg.svg') no-repeat;
+  background-size: 54px 37px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.badge-lesson::before {
+  content: none;
+}
+.number-pages {
+  border-radius: 0;
+}
+
+.lesson-header .btn-wrap {
+  position: relative;
+  display: flex;
+  gap: 4px;
+}
+.lesson-header button i[class^="icon-"] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.lesson-header button i.icon-edit {
+  background: url('../../images/title/icon-edit.svg') no-repeat;
+}
+.lesson-header button i.icon-share {
+  background: url('../../images/title/icon-share.svg') no-repeat;
+}
+.lesson-header .icon-caution {
+  font-size: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('../../images/title/icon-caution.svg') no-repeat;
+}
+.lesson-header .btn-wrap .tooltip {
+  position: absolute;
+  right: -6px;
+  top: 38px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #8CD5D3;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+
+.lesson-header .btn-wrap .tooltip::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 10px;
+  border-bottom: 8px solid #8CD5D3;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.lesson-header .btn-wrap .tooltip::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 10px;
+  border-bottom: 8px solid white;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+
+.lesson-items .item {
+  padding-left: 88px;
+}
+.lesson-items .item::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 58px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #4ABBB8;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+.lesson-items .item::after {
+  content: "";
+  position: absolute;
+  top: 49px;
+  left: 62px;
+  width: 2px;
+  height: calc(100% + 32px);
+  background-color: #4ABBB8;
+}
+
+.lesson-data .data {
+  gap: 20px;
+}
+.lesson-data .data a,
+.lesson-data .data a .number-pages {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lesson-data .data .badges {
+  display: inline-flex;
+  width: fit-content;
+  margin-right: 4px;
+}
+.lesson-data .data strong {
+  word-break: break-all;
+}
+.lesson-data .data .inner-wrap {
+  overflow: hidden;
+}
+.lesson-data .data .ellipsis-wrap:not(.double) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lesson-data .data .ellipsis-wrap.double {
+  overflow:hidden;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.lesson-data .data .icon-wrap {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.lesson-data .data .icon-wrap i {
+  font-size: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.lesson-data .data .icon-wrap i + button {
+  margin-left: 8px;
+}
+.lesson-data .data .icon-wrap i.icon-edit {
+  background: #eee url('../../images/title/icon-edit-small.svg') center center no-repeat;
+}
+.lesson-data .data .icon-wrap i.icon-share {
+  background: #eee url('../../images/title/icon-share-small.svg') left+3px center no-repeat;
+}
+
+.period-contents .period-float {
+  position: absolute;
+  min-width: inherit;
+  bottom: 0;
+}
+
+.period-contents .period-float .float-inner {
+  height: 70px;
+  padding: 12px 20px;
+  justify-content: space-between;
+  border: 1px solid #E3E3E3;
+}
+.period-contents .period-float .float-inner h4 {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+.period-contents .period-float .float-inner .button {
+  min-width: 100px;
+}
+
+.sub-lessons {
+  position: relative;
+}
+
+.sub-lessons h4 .num {
+  color: #01A39F;
+  margin-left: 4px;
+}
+.sub-lessons .data i.icon-new {
+  font-size: 0;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  background: url('../../images/title/icon-new2.svg') no-repeat;
+  vertical-align: middle;
+}
+
+.sub-lessons .btn-more {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 16px 0 32px;
+  font-size: 12px;
+  color: #000;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  background: #fff;
+  transform: translate(-50%, 50%);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+.sub-lessons .btn-more::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  width: 1px;
+  height: 10px;
+  background: #000;
+  transform: translate(-50%, -50%);
+}
+.sub-lessons .btn-more::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  width: 10px;
+  height: 1px;
+  background: #000;
+  transform: translate(-50%, -50%);
+}
+.sub-lessons .btn-more strong {
+  margin: 0 2px 0 4px;
+}
+.sub-lessons .btn-more span {
+  color: #a4a4a4;
+  margin: 0 4px 0 2px;
+}
