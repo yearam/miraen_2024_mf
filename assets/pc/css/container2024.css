@@ -2,6 +2,10 @@
 
 @import url(./container2024_tablet.css);
 
+body.bg-default-img {
+  background:url(../../images/container/bg-default-img@2x.png) center center no-repeat; background-size:cover;
+}
+
 .container-wrapper {
   position: relative;
   min-width: 1320px;
@@ -195,7 +199,7 @@
 }
 
 .container-wrapper .container-main {
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   flex-wrap: wrap;
   height: calc(100vh - 120px);
@@ -526,13 +530,20 @@
 .container-wrapper .container-main .viewer-wrap .viewer-item-scrap {width:50px; height:72px; position:absolute; right:80px; top:0; background:url(../../images/container/icon-item-scrap.svg) 0 0 no-repeat; background-size:100%; z-index:1;}
 .container-wrapper .container-main .viewer-wrap .viewer-item-scrap:before {content:''; width:24px; height:24px; display:block; position:absolute; left:50%; top:20px; transform:translateX(-50%); background:url(../../images/container/icon-item-scrap-bell.svg) 0 0 no-repeat; background-size:100%;}
 .container-wrapper .container-main .viewer-wrap .viewer-item-scrap.active {background-image:url(../../images/container/icon-item-scrap-active.svg)}
-
+.container-wrapper .container-main .viewer-wrap .view-content-head {height:60px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #EDEDED; background-color:#F5F5F5;}
+.container-wrapper .container-main .viewer-wrap .view-content-head .view-content_doc_title {font-size:18px; font-weight:500; color:#000;}
 .container-wrapper .container-main .viewer-wrap .view-content-area {
   text-align: center;
   position: relative;
   align-content: center;
   height: calc(100% - 60px);
   /* background: #eee; */
+}
+.container-wrapper .container-main .viewer-wrap .view-content-area.height-full {
+  height:100%;
+}
+.container-wrapper .container-main .viewer-wrap .view-content-area.height-type-both {
+  height: calc(100% - 120px);
 }
 
 .container-wrapper .container-main .viewer-wrap .view-content-area .btn-view-prev {}
@@ -683,6 +694,7 @@
 .container-wrapper .container-main .viewer-control .center-item a.link {
   font-size: 16px;
   color: #717171;
+  font-weight:500;
   text-decoration: underline;
 }
 .container-wrapper .container-main .viewer-control .center-item a.link:after {
@@ -1502,5 +1514,29 @@
 #viewer-area.with-bottom {
   height: calc(100vh - 181px);
 }
+.content-item-name {
+  margin-bottom:32px;
+  font-size:25px;
+  font-weight:700;
+  color:#000;
+  line-height:36px;
+}
 
+.table-items.table-custom-style td.l {text-align:left;}
+.table-items.table-custom-style td.txt-black {color:#000;}
+
+.container-wrapper .view-content-thumb {max-width:calc(100% - 40px); margin:0 auto; vertical-align: top; border:0;}
+.content-flex-container {display:flex; justify-content: center; align-items: center; flex-direction: column;}
+.content-center-box {width:320px; height:200px; position:relative; display:flex; flex-direction: column; align-items: center; justify-content: center; border:1px solid #CAD7DB; border-radius:10px; background-color:#E9EDF3;}
+.content-center-box .content-center-txt {margin-top:6px; font-size:20px; line-height:29px; font-weight:500; color:#CAD7DB;}
+.content-center-box .content-center-icon {display:block; background-position:0 0; background-repeat:no-repeat; background-size:100%;}
+.content-center-box .content-center-icon.ico-file {width:60px; height:51px; background-image:url(../../images/container/icon-content-folder.svg);}
+.content-center-box .content-center-icon.ico-link {width:66px; height:59px; background-image:url(../../images/container/icon-content-link.svg);}
+.content-center-box .content-center-icon.ico-ebook {width:73px; height:62px; background-image:url(../../images/container/icon-content-ebook.svg);}
+.content-center-box .content-center-icon.ico-mydata {width:66px; height:56px; background-image:url(../../images/container/ico-mydata.svg)}
+.content-center-box .content-center-icon.ico-aiclass {width:173px; height:71px; position:absolute; left:67px; top:75px; background-image:url(../../images/container/logo-aiclass-logo@2x.png);}
+.content-btn-link {margin-top:25px; display:inline-flex; align-items: center; padding:0 32px; height:46px; line-height:46px; border:1px solid #0000001A; background-color:#1E51A1; text-align: center; font-size:18px; font-weight:500; color:#fff; border-radius:4px;}
+.content-btn-link .ico-content-link {width:16px; height:16px; margin-left:9px; display:block; background:url(../../images/container/ico-content-btn-link.svg) 0 0 no-repeat; background-size:100%;}
+.content-btm-desc {font-size:20px; line-height:29px; font-size:20px; color:#000; margin-top:32px; font-weight:500;}
+.media-play-control-area {margin-top:16px;}
 .txt-hidden {font-size:0; width:0; height:0; position:absolute; left:-9999px;}
