@@ -7,7 +7,7 @@ function accordionInit(){
         return false;
     }
 
-    $btn.on('click' , function(){
+    $btn.off().on('click' , function(){
         if($(this).hasClass('active')){
             $(this).removeClass('active');
             $(this).next('ul').slideUp(300);
