@@ -64,6 +64,7 @@ body.bg-default-img {
   overflow: hidden;
   text-overflow: ellipsis;
   color:#000;
+  cursor:pointer;
 }
 
 .container-wrapper .container-header .left-item .menu {
