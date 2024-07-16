@@ -548,7 +548,9 @@ body.bg-default-img {
 .container-wrapper .container-main .viewer-wrap .view-content-area.height-type-both {
   height: calc(100% - 120px);
 }
-
+.container-wrapper .container-main .viewer-wrap .view-content-area.height-type2-both {
+  height: calc(100% - 180px);
+}
 .container-wrapper .container-main .viewer-wrap .view-content-area .btn-view-prev {}
 .container-wrapper .container-main .viewer-wrap .view-content-area [class^="btn-view-"] {width:60px; height:100%; position:absolute; top:0;}
 .container-wrapper .container-main .viewer-wrap .view-content-area [class^="btn-view-"]:hover {background-color:#FAFAFA;}
