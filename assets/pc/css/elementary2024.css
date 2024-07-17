@@ -34,7 +34,8 @@
 body.lesson-2024 {}
 body.lesson-2024 h3,
 body.lesson-2024 .h3 {font-weight:700;}
-body.lesson-2024 .wrapper-lesson {overflow:initial;}
+body.lesson-2024 .wrapper-lesson {min-width:1320px; overflow:initial;}
+body.lesson-2024::-webkit-scrollbar:vertical {display: none;}
 
 body.lesson-2024 .period-contents {gap:26px;}
 
