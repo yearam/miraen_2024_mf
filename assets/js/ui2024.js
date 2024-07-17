@@ -1,14 +1,14 @@
-function accordionInit(){
+function accordionInit() {
     var $target = $('.contents-list-wrap .item-group-list'),
         $btn = $target.find('button'),
         $panel = $target.find('ul');
 
-    if(!$target.length){
+    if (!$target.length) {
         return false;
     }
 
-    $btn.off().on('click' , function(){
-        if($(this).hasClass('active')){
+    $btn.off().on('click', function () {
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             $(this).next('ul').slideUp(300);
         } else {
@@ -18,8 +18,12 @@ function accordionInit(){
             $(this).next('ul').slideDown(300);
         }
     })
-  }
+}
 
-  $(function(){
+
+
+$(function () {
     accordionInit();
-  })
+    $('.swiper-button-prev,.swiper-button-next').show();
+    $('.tooltip-trigger').webuiPopover();
+})

@@ -1,14 +1,14 @@
 $(function () {
   var headerHeight = $("header.header").height();
   const targetPos = $("header.header").height() - $(".header-contents").height();
-  
+
   // header scroll
   $(window).on("scroll", scrollSticky = function() {
     // var headerHeight =  $(".lnb-bg").hasClass("active") ? $("header.header").height() + $(".lnb-bg").height() : $("header.header").height();
     // var contentsHeight = $(".lnb-bg").length > 0 ? $(".header-contents").height() + $(".lnb-bg").height() : $(".header-contents").height();
     var contentsHeight = $(".header-contents").height();
     headerHeight = targetPos + contentsHeight;
-    
+
     if ($(this).scrollTop() > targetPos) {
       $("body").css({"padding-top" : `${headerHeight}px`});
       $('header.header').addClass('fixed');
@@ -111,7 +111,7 @@ const renderHeader = function () {
   $(`header.header:not(".util-menu")`).find('.gnb > ul > li > a').each(function (index, element) {
     $(element).on('click', function (e) {
       if($(this).attr("href").startsWith("#")){
-        e.preventDefault();  
+        e.preventDefault();
         if(!$(this).parents("header.header").hasClass("teacher-live")){
         }
         if ($(this).closest('.gnb-wrap').find('.site-map .icon-button').hasClass('active')) {
@@ -160,7 +160,7 @@ const renderHeader = function () {
       $('.site-map .icon-button use').attr('xlink:href' , '/assets/images/svg-sprite-solid.svg#icon-close');
     }
   });
-  
+
   // $('.gnb-dim').on('click', function () {
   //   $('.gnb .close-button').trigger('click');
   //   $('.site-map .close-button').trigger('click');
@@ -204,11 +204,11 @@ const renderFileUpload = function (item) {
       .children('.inner-form')
       .prepend("<div class='placeholder'>" + $placeholder + '</div>');
 
-  
+
     $(item).on('click','.placeholder', function () {
         $(this).parents(item).find("input[type='file']").trigger('click');
     });
-  
+
     $(item).find("input[type='file']").on('change', function () {
         $(document).find(this).siblings('.placeholder').remove();
         // $(this).addClass('text-black');
@@ -275,7 +275,7 @@ const tabs = function (item) {
     }
 
   });
-  
+
   function checkActive(item, showType) {
     if ($(item).find('li').hasClass('active')) {
       $target = $(item).find('.active > a').attr('href');
@@ -389,7 +389,7 @@ const renderSelect2 = function () {
 
   for(var i = 0; i < $(".select2").length; i++){
     var select = $(".select2").eq(i);
-    // if(select.parent().css("display") !== "flex"){ 
+    // if(select.parent().css("display") !== "flex"){
       select.css({"width": `${parseFloat(select.css("width")) + parseFloat(select.find(".select2-selection__rendered").css("paddingRight")) + parseFloat(select.find(".select2-selection__rendered").css("paddingLeft"))}`});
     // }
   }
@@ -489,8 +489,8 @@ const selectFunc = function(){
     for(var i = 0; i < $(option_btn).length; i++){
       var this_btn = $(option_btn).eq(i);
       var sum = 0;
-      
-      
+
+
       for(var j = 0; j < $(this_btn).children().length; j++){
         var child = $(this_btn.children().eq(j));
         sum += Math.ceil(child.outerWidth()) + parseFloat($(el).find(".select-button").css("gap"));
@@ -500,9 +500,9 @@ const selectFunc = function(){
         total = sum;
       }
     }
-    
+
     $(el).css({"width": `${(total) + parseFloat($(el).find(".select-button").css("paddingLeft")) + parseFloat($(el).find(".select-button").css("paddingRight"))}px`});
-    
+
     $(el).find(".options").hide();
 
     $(el).not(".disabled").find(".select-button").on("click", function(){
@@ -540,7 +540,7 @@ const selectFunc = function(){
 // swiper //////////////////////////////////////////////////////////////////////////////////////////////////////////
 const renderSwiper = function (){
   //슬라이더 갯수 체크 변수값 이상인 경우 슬라이더 동작하도록 .active 부여
-  sliderMinCheck('.slider-view-auto', 9); 
+  sliderMinCheck('.slider-view-auto', 9);
   sliderMinCheck('.slider-view-auto.type-card', 5);
   sliderMinCheck('.review-slider', 3);
   // sliderMinCheck('.period-slider', 4);
@@ -566,13 +566,13 @@ const renderSwiper = function (){
 
   // 특화자료실 사회 자료협조 슬라이더
   sliderLoop('.helpers-slider', 4, 8); //item, view number , gap
-  
+
   // 쌤OTT 채널 슬라이더
   sliderPerView('.recommend-channel .slider', 6, 6, 36); //item, slidesPerView, slidesPerGroup, gap
-  
+
   //고객센터 faq
   sliderFaq('.faq-section .slides', 5, 12); //item, view number , gap
-  
+
   // 혁신수업 N
   // 독자후기
   sliderReview('.review-slider .slides.move', 3, 16); //item, view number , gap
@@ -581,14 +581,14 @@ const renderSwiper = function (){
 
   //서비스 안내
   sliderService(".service-slider .slides");
-  
+
   // M카이브 배너 슬라이더
   sliderDefault({item: ".banner-slider .slides", pagination: true,});
-  
+
   // M카이브 gnb 슬라이더
   sliderDefault({item: ".header-mchive .gnb.slides", navigation: true, slidesPerView: 9, spaceBetween: 60,});
   sliderMinCheck('.header-mchive .gnb.slides', 9);
-  
+
   // M카이브 팝업 슬라이더
   sliderDefault({item: ".ignore-duration .slides", navigation: true, pagination: true, autoHeight: true,});
 }
@@ -964,13 +964,13 @@ const setOptions = function(data){
 }
 
 const openPopup = function(obj){
-  
+
   let object = setOptions(obj);
-  
-  
+
+
   object.popup.addClass("display-show");
   object.popup.attr("showed-obj", "");
-  
+
   $('html').addClass('active-overlay');
   renderSelect2();
   selectFunc();
@@ -982,11 +982,11 @@ const closePopup = function(obj){
       popupArr[i].popup.removeClass("display-show");
       popupArr[i].popup.removeAttr("showed-obj");
       popupArr[i].popup.find(".dimd").remove();
-          
+
       if(popupArr[i].btnType === "toggle"){
         popupArr[i].btn.removeClass("active");
       }
-      
+
       popupArr.splice(i, 1);
 
     }
