@@ -52,10 +52,9 @@
 		<main id="main-contents" class="scrollable-container">
 			<div class="contents-header">
 				<div class="header-inner">
-					<h2>[1~2 차시] 덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대 55자</h2>
+					<h2><span class="title-item">교과서 수업</span>[3~4차시] 느낌을 살려 사물 표현하기</h2>
 					<div class="number-pages">
-						<span class="badge fill-light"> 수학 255~300 쪽 </span>
-						<span class="badge fill-light"> 수학 익힘 240~266 쪽 </span>
+						(국어 44~46쪽, 국어활동 5~16쪽)
 					</div>
 				</div>
 				<div class="buttons">
@@ -164,85 +163,36 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="period-contents">
 				<section class="scrollable-container">
 					<div class="lesson-header">
-						<h3>학습 목차</h3>
-						<button class="button size-md">
-							저장목차보기
-							<svg>
-								<title>리스트 아이콘</title>
-								<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-list"></use>
-							</svg>
-						</button>
+						<h3>
+							학습 목차
+							<div class="lesson-head-toggle-btn">
+								<input type="checkbox" id="btn-toggle">
+								<label for="btn-toggle" class="lesson-head-toggle">
+									<span class="toggle-txt default">기본</span>
+									<span class="toggle-txt">MY</span>
+								</label>
+							</div>
+						</h3>
+
+						<div class="lesson-header-buttons">
+							<button class="button size-md">
+								내용 편집
+								<i class="ico-head-edit"></i>
+							</button>
+							<button class="button size-md">
+								학생 공유
+								<i class="ico-head-share"></i>
+							</button>
+							<button type="button" class="btn-caution">
+								<img src="/assets/images/subject/icon-caution-white.svg" alt="caution success 아이콘" class="icon-size-md">
+							</button>
+						</div>
 					</div>
 					<div class="lesson-items scrollable">
-						<div class="item">
-							<span class="badge-lesson">단원 도입</span>
-							<div class="lesson-data">
-								<!-- !NOTE 코너명 + 수업명이 짧은 경우 입니다. -->
-								<div class="data">
-									<div class="inner-wrap">
-										<div class="image-wrap">
-											<img src="/assets/images/temp/img-lesson01.png" alt="">
-											<div class="image-wrap-buttons-group">
-												<button tyle="button" class="badge type-round-box btn-doc-edit">
-													<img src="../../../images/subject/icon-doc-share.svg" alt="공유">
-												</button>
-												<button tyle="button" class="badge type-round-box btn-doc-edit">
-													<img src="../../../images/subject/icon-doc-edit.svg" alt="내용편집">
-												</button>
-											</div>
-										</div>
-										<a href="/">
-											<div class="badges">
-												<!-- !NOTE : 관리자에서 컬러값 받는다고 합니다. -->
-												<span class="badge type-round-box" style="background-color: #C43CB4;">GUIDE</span>
-											</div>
-											<strong>수업명 최대 60자를 말줄임 없이 출력</strong>
-											<div class="number-pages">
-												<span class="badge fill-light"> 실험 관찰 999~999p </span>
-												<span class="badge fill-light"> 과학 999~999p </span>
-											</div>
-										</a>
-									</div>
-									<button class="icon-button">
-										<svg>
-											<title>삭제 아이콘</title>
-												<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close-round">
-											</use>
-										</svg>
-									</button>
-								</div><!-- //.data -->
-								<!-- !NOTE 코너명 + 수업명이 긴 경우 입니다. -->
-								<div class="data">
-									<div class="inner-wrap">
-										<div class="image-wrap">
-											<img src="/assets/images/temp/img-lesson02.png" alt="">
-										</div>
-										<a href="/">
-											<div class="badges">
-												<span class="badge type-round-box" style="background-color: #36BAC1;">코너명 최대 10자</span>
-											</div>
-											<strong>
-												수업명 최대 60자를 말줄임 없이 출력 총 80자 출력 수업명 최대 60자를 말줄임 없이 출력 총 80자 출력
-											</strong>
-											<div class="number-pages">
-												<span class="badge fill-light"> 실험 관찰 999~999p </span>
-												<span class="badge fill-light"> 과학 999~999p </span>
-											</div>
-										</a>
-									</div>
-									<button class="icon-button">
-										<svg>
-											<title>삭제 아이콘</title>
-												<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-close-round">
-											</use>
-										</svg>
-									</button>
-								</div><!-- //.data -->
-							</div>
-						</div><!-- //.item -->
 						<div class="item">
 							<span class="badge-lesson">도입</span>
 							<div class="lesson-data">
@@ -522,10 +472,10 @@
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<div class="image-wrap-buttons-group">
-														<button tyle="button" class="badge type-round-box btn-doc-edit">
+														<button type="button" class="badge type-round-box btn-doc-edit">
 															<img src="../../../images/subject/icon-doc-share.svg" alt="공유">
 														</button>
-														<button tyle="button" class="badge type-round-box btn-doc-edit">
+														<button type="button" class="badge type-round-box btn-doc-edit">
 															<img src="../../../images/subject/icon-doc-edit.svg" alt="내용편집">
 														</button>
 													</div>
@@ -1294,7 +1244,7 @@
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<div class="image-wrap-buttons-group">
-														<button tyle="button" class="badge type-round-box btn-doc-edit">
+														<button type="button" class="badge type-round-box btn-doc-edit">
 															<img src="../../../images/subject/icon-doc-share.svg" alt="공유">
 														</button>
 													</div>
@@ -1535,7 +1485,7 @@
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<div class="image-wrap-buttons-group">
-														<button tyle="button" class="badge type-round-box btn-doc-edit">
+														<button type="button" class="badge type-round-box btn-doc-edit">
 															<img src="../../../images/subject/icon-doc-edit.svg" alt="내용편집">
 														</button>
 													</div>
@@ -1559,7 +1509,7 @@
 												<div class="image-wrap">
 													<img src="/assets/images/temp/img-lesson02.png" alt="">
 													<div class="image-wrap-buttons-group">
-														<button tyle="button" class="badge type-round-box btn-doc-edit">
+														<button type="button" class="badge type-round-box btn-doc-edit">
 															<img src="../../../images/subject/icon-doc-edit.svg" alt="내용편집">
 														</button>
 													</div>
@@ -1716,7 +1666,7 @@
 				</div><!-- //. float-inner-->
 			</div>
 		</main>
-		<footer class="period-footer">
+		<footer class="period-footer" style="display:none">
 			<div class="period-inner">
 				<div class="buttons">
 					<button class="button size-lg type-secondary">
