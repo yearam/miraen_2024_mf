@@ -1514,7 +1514,7 @@ body.bg-default-img {
 #viewer-area {
   width: 100%;
   height: calc(100vh - 121px);
-  background-color: #eee;
+  background-color: #fff;
 }
 #viewer-area.with-bottom {
   height: calc(100vh - 181px);
