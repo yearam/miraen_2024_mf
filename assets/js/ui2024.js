@@ -45,7 +45,7 @@ function dataGroupSlide(){
         }
     });
 
-	$btn.on('click' , function(e){
+	$btn.off().on('click' , function(e){
 		e.preventDefault();
 		if($(this).parents('.data.group-content').hasClass('active')){
 			$(this).parents($obj).removeClass('active');
