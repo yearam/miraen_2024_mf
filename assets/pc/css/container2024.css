@@ -1519,6 +1519,7 @@ body.bg-default-img {
 #viewer-area.with-bottom {
   height: calc(100vh - 181px);
 }
+#viewer-area .content-flex-align-item {height:100%; display:flex; justify-content: center; align-items: center;}
 .content-item-name {
   margin-bottom:32px;
   font-size:25px;
