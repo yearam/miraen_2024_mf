@@ -132,6 +132,7 @@ body.lesson-2024 .button.type-icon.size-sm.ico-favorite:hover:before {background
 body.lesson-2024 .button.type-icon.size-sm.ico-download:before {width:13px; height:13px; background-image:url(../../images/subject/icon-download-default.svg)}
 body.lesson-2024 .button.type-icon.size-sm.ico-download:hover:before {background-image:url(../../images/subject/icon-download-active.svg)}
 
+body.lesson-2024 .webui-popover {z-index:1001;}
 body.lesson-2024 .webui-popover-inner {margin:16px;}
 body.lesson-2024 h3.webui-popover-title {margin:0 0 8px; font-size:16px; color:#000; line-height:24px; font-weight:500;}
 body.lesson-2024 .webui-popover .webui-popover-content {margin:0;}
@@ -215,6 +216,8 @@ body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data:hover {}
 body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data .inner-wrap {flex:1;}
 body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data .inner-wrap a {display:block; padding:15px 20px;}
 body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data .inner-wrap a strong {color:#626262;}
+body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data.no-draggable {pointer-events: none;}
+body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data.no-draggable:hover {pointer-events:initial;}
 body.lesson-2024 .lesson-items .item:before {left:30px;}
 body.lesson-2024 .lesson-items .item:after {left:34px; top:8px; border-color:#02A39F; background-color:#b7e2e1;}
 body.lesson-2024 .lesson-items .item:last-child:after {display:none;}
@@ -225,9 +228,10 @@ body.lesson-2024 .lesson-items .item:last-child .badge-lesson:after {content: ''
 .lesson-float-buttons .float-btn.float-confirm {border-color:#0000001A; background-color:#37BAC1; color:#fff;}
 .lesson-float-buttons .float-btn.float-confirm .lessong-btn-icon {width:16px; height:16px; display:block; background:url(../../images/subject/icon-float-btn.svg) #47474733 center center no-repeat; border-radius:50%;}
 
-.accordion .active .action {
+body.lesson-2024 .accordion .active .action {
   background-color: var(--color-primary-150);
 }
+
 .max-width-1500 {display:none;}
 @media (max-width:1500px) {
   .max-width-1500 {display:block;}
