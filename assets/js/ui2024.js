@@ -73,11 +73,39 @@ function txtEllipsis(){
 	})
 }
 
+function popOverInit(){
+    $('.tooltip-trigger').each(function(){
+        $(this).webuiPopover();
+    });
+}
+
+function radioTabInit(){
+    var $radio = $('.data-upload-category input[type="radio"]'),
+        $panel = $('.data-upload-category-parent').children()
+
+    if(!$('.data-upload-category').length){
+        return false;
+    }
+
+    $radio.each(function(){
+        var $idx = $('.data-upload-category input[type="radio"]:checked').parent().index();
+        $panel.removeClass('active');
+        $panel.eq($idx).addClass('active');
+    })
+
+    $radio.on('click' , function(){
+        var $idx = $(this).parent().index();
+        $panel.removeClass('active');
+        $panel.eq($idx).addClass('active');
+    });
+}
+
 $(function () {
     accordionInit();
     $('.swiper-button-prev,.swiper-button-next').show();
-    $('.tooltip-trigger').webuiPopover();
+    popOverInit();
     txtLineBr();
     dataGroupSlide();
     txtEllipsis();
+    radioTabInit();
 });
