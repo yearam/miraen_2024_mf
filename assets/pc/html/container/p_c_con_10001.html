@@ -282,5 +282,33 @@
         </div>
       </footer>
     </div>
+<style>
+
+</style>
+    <div class="popup-alert" id="sample-id">
+      <div class="popup-container">
+        <div class="body flag-negative">
+          문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다.
+        </div>
+      </div>
+    </div>
+
+<script>
+function modalActive(){
+  var $target = $('#sample-id');
+
+  $target.addClass('display-show');
+
+  setTimeout(function(){
+    $target.removeClass('display-show');
+  }, 3000);
+
+}
+
+$(function(){
+  modalActive();
+})
+</script>
+
   </body>
 </html>
