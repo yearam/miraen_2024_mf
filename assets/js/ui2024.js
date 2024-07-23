@@ -100,6 +100,25 @@ function radioTabInit(){
     });
 }
 
+function getScrXH(){
+	var wIh = $(window).innerHeight();
+	var wOh = $(window).outerHeight();
+	var target = $('body.lesson-2024 .wrapper-lesson');
+
+	function setScrH(){
+		var wIh = $(window).innerHeight();
+		var wOh = $(window).outerHeight();
+
+		target.css('--scroll-height' , wOh - wIh  + 'px')
+	}
+
+	setScrH();
+
+	$(window).on('resize' , function(){
+		setScrH();
+	})
+}
+
 $(function () {
     accordionInit();
     $('.swiper-button-prev,.swiper-button-next').show();
@@ -108,4 +127,5 @@ $(function () {
     dataGroupSlide();
     txtEllipsis();
     radioTabInit();
+    getScrXH();
 });

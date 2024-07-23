@@ -31,11 +31,14 @@
   --bg-loading: url("/assets/images/elementary/bg-loading.png");
 }
 
-body.lesson-2024 {}
+body.lesson-2024 {
+  background-color: #f8f8f8;
+  overscroll-behavior: none;
+  /*touch-action: none;*/
+}
 body.lesson-2024 h3,
 body.lesson-2024 .h3 {font-weight:700;}
-body.lesson-2024 .wrapper-lesson {min-width:1320px; overflow:initial; padding-bottom:0;}
-body.lesson-2024::-webkit-scrollbar:vertical {display: none;}
+body.lesson-2024 .wrapper-lesson {min-width:1320px; height:calc(100vh - var(--scroll-height)); overflow:initial; padding-bottom:0; padding-top:0;}
 
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner {}
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner h2 {line-height:40px;}
@@ -45,6 +48,7 @@ body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson {}
 body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson .button:hover {background-color:#fff;}
 body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson .button.active svg {transform:rotate(180deg)}
 
+body.lesson-2024 .period-header {position:sticky; z-index:200;}
 body.lesson-2024 .period-contents {gap:26px;}
 
 body.lesson-2024 .sub-lessons:last-child {border-bottom: 1px solid #e6e6e6; margin-bottom:60px;}
@@ -86,8 +90,17 @@ body.lesson-2024 .data.active-horizontal {border-color:#8CD5D3; background-color
 body.lesson-2024 .data .image-wrap {min-height:64px; max-height:64px; border:1px solid #ddd; display: block; background-image:url(/assets/images/subject/icon-no-image-default.svg); background-size:21px 18px;}
 body.lesson-2024 .data .image-wrap img {height: 100%; max-height: 100%; vertical-align: top; position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);}
 body.lesson-2024 .data .image-wrap .ox {position:absolute; left:6px; top:6px;}
-body.lesson-2024 .data a {}
-body.lesson-2024 .data a > span {display:inline-flex; align-items: center; font-weight:500;}
+
+body.lesson-2024 .data .inner-wrap {width:100%;}
+body.lesson-2024 .data a > span {display:block; align-items: center; font-weight:500;}
+body.lesson-2024 .data a strong.title-ellipsis {width:auto; display: inline-block; max-width:calc(100% - 26px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle;}
+body.lesson-2024 .data a .txt-badge {display:inline-flex; justify-content: center;}
+/*
+
+display: inline-block;
+vertical-align: middle;
+
+*/
 body.lesson-2024 .data a .badges .badge {border-color:rgba(0,0,0,0.5)}
 body.lesson-2024 .data.no-link .image-wrap,
 body.lesson-2024 .gu-mirror.no-link .inner-wrap .image-wrap {background-image:url(/assets/images/subject/icon-no-image-link.svg); background-size:25px 23px;} /* 25 23 */
@@ -115,7 +128,7 @@ body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn-doc-edit img {width:12px; height:12px;}
 
 body.lesson-2024 [aria-disabled="true"] {opacity: 0.5;}
-body.lesson-2024 .gu-mirror {position: fixed !important; z-index: 9999 !important; opacity: 80% !important; transform: none !important; display: flex !important; justify-content: space-between!important; align-items: center!important; gap: 20px!important; padding: 15px 20px!important; min-height: 94px!important; border: 1px solid #8CD5D3!important; border-radius: 4px!important; background-color: white!important; color: #838383!important; text-align: left!important;}
+body.lesson-2024 .gu-mirror {position: fixed !important; z-index: 1000 !important; opacity: 80% !important; transform: none !important; display: flex !important; justify-content: space-between!important; align-items: center!important; gap: 20px!important; padding: 15px 20px!important; min-height: 94px!important; border: 1px solid #8CD5D3!important; border-radius: 4px!important; background-color: white!important; color: #838383!important; text-align: left!important; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror .active-vertical,
 body.lesson-2024 .gu-mirror .active-horizontal {position: relative; border-color:#8CD5D3; background-color:#F2FAFA; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror.active-vertical::before,
@@ -124,17 +137,18 @@ body.lesson-2024 .gu-mirror.active-horizontal::before {background-image: url("/a
 body.lesson-2024 .gu-mirror .inner-wrap {display: inline-flex; align-items: center; gap: 20px; overflow: hidden;}
 body.lesson-2024 .gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
 body.lesson-2024 .gu-mirror img {vertical-align: top;}
-body.lesson-2024 .gu-mirror a {display: inline-flex!important; flex-wrap: wrap!important; align-items: center!important; gap: 4px 10px!important; width: 100%!important;}
-body.lesson-2024 .gu-mirror .badges {width: 100%!important;}
+body.lesson-2024 .gu-mirror a {display:block !important; flex-wrap: wrap!important; align-items: center!important; gap: 4px 10px!important; width: 100%!important; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+body.lesson-2024 .gu-mirror .badges {display: inline-flex; width: fit-content; margin-right: 4px;}
 body.lesson-2024 .gu-mirror a strong {font-weight:500;}
-body.lesson-2024 .gu-mirror .title-ellipsis {white-space: normal!important; display: -webkit-box!important; line-height: 1.5!important; -webkit-line-clamp: 2!important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width: 100%!important;}
+body.lesson-2024 .gu-mirror .title-ellipsis {white-space:nowrap!important; display:inline-block!important; line-height: 1.5!important; -webkit-line-clamp:1 !important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width:auto!important;}
 body.lesson-2024 .gu-hide{display:none!important}
-body.lesson-2024 .gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important}
+body.lesson-2024 .gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important; -webkit-touch-callout: none;}
 body.lesson-2024 .gu-transit {opacity: .3!important; box-sizing: border-box!important; border: 2px dashed #e6e6e6!important; background-color: #f6f6f6!important;}
 body.lesson-2024 .gu-mirror .buttons{flex-shrink: 0;}
-
+body.lesson-2024 .group-content.gu-mirror {display:block !important;}
 body.lesson-2024 .type-filter.both-type {padding:19px 30px 19px 0; gap:0;}
 body.lesson-2024 .type-filter.both-type .nav-slider {flex:1;}
+body.lesson-2024 .data i.icon-new {font-size: 0; display: inline-block; width: 12px; height: 12px; margin-left: 4px; background: url(/assets/images/title/icon-new2.svg) no-repeat; vertical-align: middle;}
 
 body.lesson-2024 .nav-slider.type-filter {padding:19px 74px;}
 body.lesson-2024 .nav-slider.type-filter .swiper-slide label {padding-top:8px; padding-bottom:6px;}
@@ -273,6 +287,20 @@ body.lesson-2024 .dropdown-select .options span span {font-size:12px; color:#A4A
 
 .max-width-1500 {display:none;}
 .icon-size-20 {width: 20px; height: 20px; vertical-align: top;}
+
+/*
+    display: inline-block;
+    max-width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+*/
+
+/*
+display: inline-block;
+vertical-align: middle;
+*/
 
 @media (max-width:1500px) {
   .max-width-1500 {display:block;}
