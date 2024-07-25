@@ -35,10 +35,13 @@ body.lesson-2024 {
   background-color: #f8f8f8;
   overscroll-behavior: none;
   /*touch-action: none;*/
+  -webkit-touch-callout: none;
 }
 body.lesson-2024 h3,
 body.lesson-2024 .h3 {font-weight:700;}
-body.lesson-2024 .wrapper-lesson {min-width:1320px; height:calc(100vh - var(--scroll-height)); overflow:initial; padding-bottom:0; padding-top:0;}
+body.lesson-2024 .wrapper-lesson {min-width:1320px; height:calc(100vh - var(--scroll-height)); height:calc(var(--vh, 1vh) * 100); overflow:initial; padding-bottom:0; padding-top:0;}
+
+@supports (-webkit-touch-callout: none) {height:calc(var(--vh, 1vh) * 100 - 51px)}
 
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner {}
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner h2 {line-height:40px;}
@@ -114,7 +117,7 @@ body.lesson-2024 .data.no-pdf .image-wrap,
 body.lesson-2024 .gu-mirror.no-pdf .inner-wrap .image-wrap {background-image:url(/assets/images/subject/icon-no-image-pdf.svg); background-size:24px 32px;} /* 24 32 */
 body.lesson-2024 .data.aiclass .image-wrap,
 body.lesson-2024 .gu-mirror.aiclass .inner-wrap .image-wrap {background-image:url(/assets/images/subject/logo-aiclass-logo@2x.png); background-size:62px 25px; background-position:25px 24px;} /* 24 32 */
-body.lesson-2024 .data strong {font-size:16px;}
+body.lesson-2024 .data strong {font-size:16px; vertical-align: -3px;}
 body.lesson-2024 .data a .number-pages {display:block;}
 body.lesson-2024 .data a .number-pages .badge {font-size:14px; color:#A4A4A4; padding:0; background-color:transparent; line-height:20px; min-height:auto;}
 body.lesson-2024 .data .title-ellipsis {font-size:16px; line-height:24px; }
