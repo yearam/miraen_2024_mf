@@ -1,6 +1,6 @@
 /* Container 2024 */
 
-@import url(./container2024_tablet.css);
+@import url(/assets/pc/css/container2024_tablet.css);
 
 body.bg-default-img {
   background:url(/assets/images/container/bg-default-img@2x.png) center center no-repeat; background-size:cover;
@@ -1320,6 +1320,7 @@ body.bg-default-img {
 }
 .container-wrapper .other-lesson .item a::after {
   background-color: #1E51A1;
+  display:none;
 }
 
 

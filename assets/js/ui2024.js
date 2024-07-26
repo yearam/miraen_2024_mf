@@ -32,8 +32,8 @@ function txtLineBr(){
 
 function dataGroupSlide(){
 	var $obj = $('.data.group-content'),
-		$btn = $obj.find('.inner-wrap a'),
-		$panel = $obj.find('.data-group-child-area');
+		$btn = $obj.find('.group-content-slide-btn'),
+		$panel = $obj.find('.data-group-child-area')
 
     if (!$obj.length) {
         return false;
@@ -50,18 +50,6 @@ function dataGroupSlide(){
 
         $(this).parents($obj).toggleClass('active');
         $(this).parents('.data.group-content').find('.data-group-child-area').slideToggle(300);
-
-        /*
-		if($(this).parents('.data.group-content').hasClass('active')){
-			$(this).parents($obj).removeClass('active');
-			$(this).parents('.data.group-content').find('.data-group-child-area').slideUp(300);
-		} else {
-			$obj.removeClass('active');
-			$(this).parents($obj).addClass('active');
-			$panel.slideUp(300);
-			$(this).parents('.data.group-content').find('.data-group-child-area').slideDown(300);
-		}
-        */
 	});
 }
 
