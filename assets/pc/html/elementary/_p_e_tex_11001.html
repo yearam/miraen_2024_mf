@@ -27,132 +27,6 @@
 	<!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
 </head>
 <!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
-
-<style>
-	[aria-disabled="true"] {
-		opacity: 0.5;
-	}
-
-	.gu-mirror{
-		position: fixed !important;
-		/*margin: 0 !important;*/
-		z-index: 9999 !important;
-		opacity: 80% !important;
-		/*width: auto !important;*/
-		/*height: auto !important;*/
-		transform: none !important;
-		display: flex !important;
-		justify-content: space-between!important;
-		align-items: center!important;
-		gap: 20px!important;
-		padding: 16px 20px!important;
-		min-height: 94px!important;
-		border: 1px solid #02a39f!important;
-		border-radius: 18px!important;
-		background-color: white!important;
-		color: #838383!important;
-		text-align: left!important;
-	}
-
-	.gu-mirror .active-vertical, .gu-mirror .active-horizontal {
-	  position: relative;
-	  border-color: var(--color-primary);
-	  background-color: var(--color-primary-150);
-	  box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);
-	}
-
-	.gu-mirror.active-vertical::before, .gu-mirror.active-horizontal::before {
-	  content: "" !important;
-	  position: absolute !important;
-	  top: 50% !important;
-	  left: 0 !important;
-	  width: 30px !important;
-	  height: 30px !important;
-	  border-radius: 100% !important;
-	  background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important;
-	  background-position: center!important;
-	  background-repeat: no-repeat!important;
-	  background-size: contain!important;
-	  box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important;
-	  transform: translate(-50%, -50%)!important;
-	}
-	.gu-mirror.active-horizontal::before {
-	  background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;
-	}
-
-	.gu-mirror img {
-		width: auto !important;
-		height: auto !important;
-	}
-
-	.gu-mirror .inner-wrap {
-		display: inline-flex!important;
-		align-items: center!important;
-		gap: 20px!important;
-	}
-
-	.gu-mirror a {
-		display: inline-flex!important;
-		flex-wrap: wrap!important;
-		align-items: center!important;
-		gap: 4px 10px!important;
-		width: 100%!important;
-	}
-
-	.gu-mirror .badges {
-		width: 100%!important;
-	}
-
-	.gu-mirror .title-ellipsis {
-		white-space: normal!important;
-		display: -webkit-box!important;
-		line-height: 1.5!important;
-		-webkit-line-clamp: 2!important;
-		-webkit-box-orient: vertical!important;
-		overflow: hidden!important;
-		text-overflow: ellipsis!important;
-		width: 100%!important;
-	}
-
-	/*.gu-mirror .buttons {*/
-	/*    flex-shrink: 0!important;*/
-	/*}*/
-
-	.gu-mirror .image-wrap {
-		flex-shrink: 0;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		overflow: hidden;
-		width: 119px;
-		min-height: 62px;
-		border-radius: 10px;
-		background-image: url("/assets/images/common/img-no-img.png");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.gu-hide{
-		display:none!important
-	}
-
-	.gu-unselectable {
-		-webkit-user-select:none!important;
-		-moz-user-select:none!important;
-		-ms-user-select:none!important;
-		user-select:none!important
-	}
-
-	.gu-transit {
-		opacity: .3!important;
-		box-sizing: border-box!important;
-		border: 2px dashed #e6e6e6!important; /* 드롭 가능한 영역의 테두리 스타일 */
-		background-color: #f6f6f6!important;
-	}
-</style>
-
 <link href="/assets/pc/css/pages/elementary/period-guide.css" rel="stylesheet" />
 
 <body class="theme-elementary lesson-2024"> <!-- lesson-2024 클래스 추가 -->
@@ -337,148 +211,8 @@
 						<div class="item">
 							<span class="badge-lesson">도입</span>
 							<div class="lesson-data" id="sample-scroll1">
-
-								<!-- 편집 -->
-								<div class="data">
-									<div class="inner-wrap">
-										<div class="image-wrap">
-											<img src="/assets/images/temp/img-lesson01.png" alt="">
-											<div class="image-wrap-buttons-group">
-												<button type="button" class="badge type-round-box btn-doc-edit">
-													<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
-												</button>
-											</div>
-										</div>
-										<a href="/">
-											<div class="badges">
-												<span class="badge type-round-box">탐구해요</span>
-											</div>
-											<strong>편집 편집</strong>
-											<div class="number-pages">
-												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
-											</div>
-										</a>
-									</div>
-									<div class="buttons">
-										<button type="button" class="button type-icon size-sm ico-list-edit full-size">
-											<span class="txt-hidden">편집</span>
-										</button>
-									</div>
-								</div><!-- //.data -->
-
-								<!-- 그룹 편집 -->
-								<div class="data group-content active">
-									<div class="outer-wrap">
-										<div class="inner-wrap">
-											<div class="image-wrap">
-												<img src="/assets/images/temp/img-lesson01.png" alt="">
-											</div>
-											<a href="/">
-												<strong>그룹 편집 active</strong>
-												<div class="number-pages">
-													<span class="badge">&lt;div class="data group-content active"&gt;</span>
-												</div>
-											</a>
-										</div>
-									</div>
-
-									<div class="data-group-child-area">
-										<ul class="child-list">
-											<li class="active">
-												<a href="/">[단원 평가] 그룹 체크 체크 체크</a>
-											</li>
-											<li>
-												<a href="/">[학습 퀴즈] 시에 나타난 감작적 표현 알기 학습 퀴즈</a>
-											</li>
-											<li>
-												<a href="/">[학습 노트] 학습 정리 문제</a>
-											</li>
-										</ul>
-									</div>
-								</div><!-- //.data -->
-
-								<!-- 체크 -->
-								<div class="data group-content active">
-									<div class="outer-wrap">
-										<div class="inner-wrap">
-											<div class="image-wrap">
-												<img src="/assets/images/temp/img-lesson01.png" alt="">
-											</div>
-											<a href="/">
-												<strong>그룹 컨텐츠 active</strong>
-												<div class="number-pages">
-													<span class="badge">&lt;div class="data group-content active"&gt;</span>
-												</div>
-											</a>
-										</div>
-
-										<div class="buttons">
-											<span class="full-size-ox">
-												<input type="checkbox" id="group-checkbox1" checked>
-												<label for="group-checkbox1"><span class="txt-hidden"></span></label>
-											</span>
-										</div>
-									</div>
-
-									<div class="data-group-child-area">
-										<ul class="child-list">
-											<li class="active">
-												<a href="/">[단원 평가] 그룹 체크 체크 체크</a>
-												<span class="ox child-btns">
-													<input type="checkbox" id="child-check1">
-													<label for="child-check1"></label>
-												</span>
-											</li>
-											<li>
-												<a href="/">[학습 퀴즈] 시에 나타난 감작적 표현 알기 학습 퀴즈</a>
-												<span class="ox child-btns">
-													<input type="checkbox" id="child-check2">
-													<label for="child-check2"></label>
-												</span>
-											</li>
-											<li>
-												<a href="/">[학습 노트] 학습 정리 문제</a>
-												<span class="ox child-btns">
-													<input type="checkbox" id="child-check3">
-													<label for="child-check3"></label>
-												</span>
-											</li>
-										</ul>
-									</div>
-								</div><!-- //.data -->
-
 								<div class="data no-draggable">
-									<div class="inner-wrap">
-										<div class="image-wrap">
-											<img src="/assets/images/temp/img-lesson01.png" alt="">
-											<span class="ox">
-												<input type="checkbox" id="ox1" checked="">
-												<label for="ox1"></label>
-											</span>
-											<div class="image-wrap-buttons-group">
-												<button type="button" class="badge type-round-box btn-doc-edit">
-													<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
-												</button>
-											</div>
-										</div>
-										<a href="/">
-											<div class="badges">
-												<span class="badge type-round-box">탐구해요</span>
-											</div>
-											<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
-											<div class="number-pages">
-												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
-											</div>
-										</a>
-									</div>
-									<div class="buttons">
-										<button type="button" class="button type-icon size-sm ico-delete">
-											<span class="txt-hidden">삭제</span>
-										</button>
-									</div>
-								</div><!-- //.data -->
-
-								<div class="data no-draggable">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -510,7 +244,7 @@
 								</div><!-- //.data -->
 
 								<div class="data">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -546,7 +280,7 @@
 
 								<!-- 교과서 페이지 정보가 없을경우 strong에 ellipsis-multi class 추가 -->
 								<div class="data">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -566,7 +300,7 @@
 								</div><!-- //.data -->
 
 								<div class="data active-vertical">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -586,7 +320,7 @@
 								</div><!-- //.data -->
 
 								<div class="data active-horizontal">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -606,7 +340,7 @@
 								</div><!-- //.data -->
 
 								<div class="data disabled">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -626,7 +360,7 @@
 								</div><!-- //.data -->
 
 								<div class="data active">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="inner-wrap">
 										<div class="image-wrap">
 											<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -646,7 +380,7 @@
 								</div><!-- //.data -->
 
 								<div class="data group-content active">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="outer-wrap">
 										<div class="inner-wrap">
 											<div class="image-wrap">
@@ -676,7 +410,7 @@
 								</div><!-- //.data -->
 
 								<div class="data group-content">
-
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 									<div class="outer-wrap">
 										<div class="inner-wrap">
 											<div class="image-wrap">
@@ -1028,7 +762,7 @@
 									<div class="lesson-data" id="sample-scroll2">
 										<!-- !NOTE 등록된 이미지가 없을 경우 -->
 										<div class="data">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<div class="image-wrap-buttons-group">
@@ -1065,7 +799,7 @@
 
 										<!-- !NOTE 수업 보충 자료 > 내 자료에 이미지 첨부 파일이 없는 경우 .no-image class 추가 -->
 										<div class="data no-image">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<span class="badge type-round-box">함께 보기</span>
@@ -1093,7 +827,7 @@
 
 										<!-- !NOTE 수업 보충 자료 > 내 자료에 첨부 파일이 없는 경우 .no-file class 추가 -->
 										<div class="data no-file">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 
@@ -1121,7 +855,7 @@
 
 										<!-- !NOTE 수업 보충 자료 > 내 자료에 스크랩 첨부 파일이 없는 경우 .no-scrap class 추가 -->
 										<div class="data no-scrap">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 
@@ -1149,7 +883,7 @@
 
 										<!-- !NOTE 수업 보충 자료 > 내 자료에 링크가 없는 경우 .no-link class 추가 -->
 										<div class="data no-link">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 
@@ -1177,7 +911,7 @@
 
 										<!-- !NOTE 수업 보충 자료 > 내 자료에 pdf가 없는 경우 .no-pdf class 추가 -->
 										<div class="data no-pdf">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 
@@ -1205,7 +939,7 @@
 
 										<!-- !NOTE al class 일경우 -->
 										<div class="data aiclass">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 
@@ -1233,7 +967,7 @@
 
 										<!-- !NOTE 자료명이 짧은 경우 입니다. -->
 										<div class="data">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<!-- <img src="/assets/images/temp/img-lesson01.png" alt=""> -->
@@ -1268,7 +1002,7 @@
 
 										<!-- active / hover / focus -->
 										<div class="data active">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<img src="https://via.placeholder.com/100x30" alt="">
@@ -1297,7 +1031,7 @@
 
 										<!-- 가로 드래그 -->
 										<div class="data active-horizontal">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<img src="https://via.placeholder.com/300x200" alt="">
@@ -1319,7 +1053,7 @@
 
 										<!-- 세로 드래그 -->
 										<div class="data active-vertical">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 													<img src="/assets/images/temp/img-lesson01.png" alt="">
@@ -1338,7 +1072,7 @@
 
 										<!-- !NOTE 자료명이 긴, 이미지가 없는 경우 입니다. -->
 										<div class="data">
-
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
 											<div class="inner-wrap">
 												<div class="image-wrap">
 												</div>
@@ -2440,7 +2174,6 @@
 </body>
 
 <script>
-
 /*
 let classLayerScreen = {
 	v : {
@@ -2503,17 +2236,27 @@ $(function(){
 		[
 			document.querySelector('#sample-scroll1'), document.querySelector('#sample-scroll2')
 		],
+		{
+			moves: function(el, source, handle, sibling) {
+				return !!handle.closest('.drag-handle')
+			},revertOnSpill: true}
 	);
 
 	var dragScroll = autoScroll([
 			window, document.querySelector('#left-area'), document.querySelector('#right-area')
 		],{
-		margin: 200,
+		margin: 50,
 		maxSpeed : 6,
 		autoScroll: function(){
 			return this.down && drake.dragging;
 		}
 	});
+
+	document.addEventListener('touchmove', function(e) {
+		if($('body').hasClass('gu-unselectable')){
+			e.preventDefault();
+		}
+	}, { passive:false });
 
 })
 

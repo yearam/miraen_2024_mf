@@ -47,6 +47,11 @@ function dataGroupSlide(){
 
 	$btn.off().on('click' , function(e){
 		e.preventDefault();
+
+        $(this).parents($obj).toggleClass('active');
+        $(this).parents('.data.group-content').find('.data-group-child-area').slideToggle(300);
+
+        /*
 		if($(this).parents('.data.group-content').hasClass('active')){
 			$(this).parents($obj).removeClass('active');
 			$(this).parents('.data.group-content').find('.data-group-child-area').slideUp(300);
@@ -56,6 +61,7 @@ function dataGroupSlide(){
 			$panel.slideUp(300);
 			$(this).parents('.data.group-content').find('.data-group-child-area').slideDown(300);
 		}
+        */
 	});
 }
 
@@ -100,16 +106,23 @@ function radioTabInit(){
     });
 }
 
-function getScrXH(){
+function getWindowHeight(){
 	var wIh = $(window).innerHeight();
 	var wOh = $(window).outerHeight();
 	var target = $('body.lesson-2024 .wrapper-lesson');
 
 	function setScrH(){
+        var wWidth = $(window).width();
 		var wIh = $(window).innerHeight();
 		var wOh = $(window).outerHeight();
+        var scrH = wOh - wIh;
+        var vh = window.innerHeight * 0.01;
 
-		target.css('--scroll-height' , wOh - wIh  + 'px')
+        if(wWidth > 1320){
+            target.css('--vh',`${vh}px`)
+        }
+
+        target.css('--scroll-height',`${scrH}px`)
 	}
 
 	setScrH();
@@ -127,5 +140,5 @@ $(function () {
     dataGroupSlide();
     txtEllipsis();
     radioTabInit();
-    getScrXH();
+    getWindowHeight();
 });

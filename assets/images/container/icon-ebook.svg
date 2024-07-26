@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18.086" height="15.302" viewBox="0 0 18.086 15.302">
-  <path id="icon-ebook" d="M19.818,5.643l-7.4,1.391-7.4-1.391A1.533,1.533,0,0,0,3.375,7.278v10.63c0,.9.7,1.417,1.643,1.635l7.4,1.387,7.4-1.391c.948-.217,1.643-.735,1.643-1.635V7.278A1.533,1.533,0,0,0,19.818,5.643Zm0,12.26-6.574,1.391V8.665l6.574-1.391Zm-8.226,1.391L5.018,17.9V7.278l6.574,1.391Z" transform="translate(-3.375 -5.627)" fill="#707070"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="17.7" viewBox="0 0 19.5 17.7">
+  <g id="icon-ebook" transform="translate(20.912 -3.75)">
+    <path id="패스_5556" data-name="패스 5556" d="M27,4.5H21.6A3.6,3.6,0,0,0,18,8.1V20.7A2.7,2.7,0,0,1,20.7,18H27Z" transform="translate(-29.162)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="패스_5557" data-name="패스 5557" d="M18,4.5h5.4A3.6,3.6,0,0,1,27,8.1V20.7A2.7,2.7,0,0,0,24.3,18H18Z" transform="translate(-38.162)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="선_54" data-name="선 54" x2="3" transform="translate(-8 9.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="선_55" data-name="선 55" x2="3" transform="translate(-8 12.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="선_56" data-name="선 56" x2="3" transform="translate(-17 9.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="선_57" data-name="선 57" x2="3" transform="translate(-17 12.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
 </svg>
