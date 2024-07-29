@@ -37,7 +37,7 @@
         <div class="right-item">
           <a href="#" class="label-pages"><i></i>국어 110~120쪽</a>
           <a href="#" class="label-pages"><i></i>국어 활동 110~112쪽</a>
-          <button type="button" class="btn save-class">진도 저장하기</button>
+          <button type="button" class="btn save-class">진도 저장</button>
           <button type="button" class="icon-help">도움말</button>
         </div>
       </header>
@@ -85,7 +85,7 @@
                 <span class="">이야기에서 인상 깊은 장면 정리하기</span>
               </div>
             </div>
-            <div>
+s            <div>
               <span class="title">정리</span>
               <ul>
                 <li><a href="#">비주얼씽킹으로 핵심 정리</a></li>
@@ -121,17 +121,25 @@
           <div class="view-content-head">
             <p class="view-content_doc_title">[활동자료 pdf] 쓰기 일기장</p>
           </div>
-          <div class="view-content-area height-type-both"><!-- 내부문서 페이징 기능이 있고, 상단 타이틀 영역이 있는 경우 height-type-both 클래스 추가 -->
+          <div class="view-content-area height-type2-both"><!-- 내부문서 페이징 기능이 있고, 상단 타이틀 영역이 있는 경우 height-type2-both 클래스 추가 -->
             <div>
                 문서
             </div>
           </div>
           <!-- 뷰어 내부 컨트롤 영역 -->
-          <div class="viewer-control">
+
+          <div class="btm-page-cont-btns">
+            <button type="button" class="page-control-btn page-prev"><span class="txt-hidden">이전</span></button>
+            <div class="btm-page-number">
+                <strong>25</strong> / <span>125</span>
+            </div>
+            <button type="button" class="page-control-btn page-next"><span class="txt-hidden">다음</span></button>
+          </div>
+
+          <div class="viewer-control" style="display:none;">
             <div class="center-item">
               <!-- <button type="button" class="btn prev">이전</button>
               <button type="button" class="btn next">다음</button> -->
-              <a href="#" class="link">링크 바로가기</a>
             </div>
             <div class="right-item">
                 <div class="paging">

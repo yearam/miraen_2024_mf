@@ -687,7 +687,7 @@ body.bg-default-img {
   height: auto;
   border: 1px solid #ddd;
   vertical-align: top;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .container-wrapper .container-main .viewer-control {
@@ -1580,16 +1580,32 @@ body.bg-default-img {
 .container-wrapper .view-content-thumb {max-width:calc(100% - 40px); margin:0 auto; vertical-align: top; border:0;}
 .content-flex-container {display:flex; justify-content: center; align-items: center; flex-direction: column;}
 .content-center-box {width:320px; height:200px; position:relative; display:flex; flex-direction: column; align-items: center; justify-content: center; border:1px solid #CAD7DB; border-radius:10px; background-color:#E9EDF3;}
+.content-center-box.type01 {box-shadow: 3px 3px 18px #00000014; border: 1px solid #1E51A12F; border-radius: 10px; background-color:#fff;}
 .content-center-box .content-center-txt {margin-top:6px; font-size:20px; line-height:29px; font-weight:500; color:#CAD7DB;}
+.content-center-box.type01 .content-center-txt {color:#41449B;}
 .content-center-box .content-center-icon {display:block; background-position:0 0; background-repeat:no-repeat; background-size:100%;}
 .content-center-box .content-center-icon.ico-file {width:60px; height:51px; background-image:url(/assets/images/container/icon-content-folder.svg);}
 .content-center-box .content-center-icon.ico-link {width:66px; height:59px; background-image:url(/assets/images/container/icon-content-link.svg);}
 .content-center-box .content-center-icon.ico-ebook {width:73px; height:62px; background-image:url(/assets/images/container/icon-content-ebook.svg);}
 .content-center-box .content-center-icon.ico-mydata {width:66px; height:56px; background-image:url(/assets/images/container/ico-mydata.svg)}
 .content-center-box .content-center-icon.ico-aiclass {width:173px; height:71px; position:absolute; left:67px; top:75px; background-image:url(/assets/images/container/logo-aiclass-logo@2x.png);}
+.content-center-box .content-center-icon.ico-content-link2 {width:66px; height:59px; background-image:url(/assets/images/container/ico-content-link.svg);}
 .content-btn-link {margin-top:25px; display:inline-flex; align-items: center; padding:0 32px; height:46px; line-height:46px; border:1px solid #0000001A; background-color:#1E51A1; text-align: center; font-size:18px; font-weight:500; color:#fff; border-radius:4px;}
 .content-btn-link .ico-content-link {width:16px; height:16px; margin-left:9px; display:block; background:url(/assets/images/container/ico-content-btn-link.svg) 0 0 no-repeat; background-size:100%;}
 .content-btm-desc {font-size:20px; line-height:29px; font-size:20px; color:#000; margin-top:32px; font-weight:500;}
+
+.btn-full-screen-end {position: fixed; left: 50%; top: -100%; transform: translateX(-50%); z-index: 1000; opacity:0; transition:opacity ease-in-out .5s;}
+.btn-full-screen-end.active {top:32px; opacity:1;}
+.btn-full-screen-end .btn-full-screen-end-txt {width:498px; height:56px; text-align:center; border-radius:4px; background-color:#000; color:#fff; font-size:16px; font-weight:500; line-height:56px;}
+.btn-full-screen-end .btn-full-screen-close {width:56px; height:56px; position:absolute; right:-88px; top:0; border-radius:50%; background:url(/assets/images/container/icon-full-screen-end.svg) #000 center center no-repeat;}
+
+.btm-page-cont-btns {height:28px; padding:0 4px; display:flex; align-items:center; position:absolute; left:50%; bottom:16px; transform:translateX(-50%); box-shadow: inset 0px 1px 3px #0000001A; border-radius: 19px; background-color:rgba(0,0,0,0.5)}
+.btm-page-cont-btns .page-control-btn {width:19px; height:18px; border: 1px solid rgba(229,229,229,.3); border-radius:50%; background-position:center center; background-repeat:no-repeat; }
+.btm-page-cont-btns .page-control-btn.page-prev {background-image:url(/assets/images/container/ico-page-control-prev.svg)}
+.btm-page-cont-btns .page-control-btn.page-next {background-image:url(/assets/images/container/ico-page-control-next.svg)}
+.btm-page-number {padding:0 12px; font-size:12px; color:#fff;}
+.btm-page-number strong {margin-right:10px; font-size:13px; font-weight:700; color:#fff;}
+.btm-page-number span {margin-left:10px; font-size:13px; font-weight:400; color:rgba(255,255,255,.7)}
 
 .popup-alert.display-show:before {content:''; width:100%; height:100%; display:block; position:absolute; left:0; top:0; background-color:rgba(0,0,0,0.5); z-index: 2000;}
 
