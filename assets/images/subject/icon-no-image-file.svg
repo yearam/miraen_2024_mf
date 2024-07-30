@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24.033" height="20.7" viewBox="0 0 24.033 20.7">
-  <path id="icon-file" d="M1,2H9.911l2.029,3.28H24.333V22H1ZM2.667,3.667V20.333h20V6.946H11.011L8.982,3.667Z" transform="translate(-0.65 -1.65)" fill="#c1d8d8" stroke="#c1d8d8" stroke-width="0.7" fill-rule="evenodd"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24.03" height="20.7" viewBox="0 0 24.03 20.7"><path fill="#c1d8d8" fill-rule="evenodd" stroke="#c1d8d8" stroke-width=".7" d="M.35.35h8.911l2.029 3.28h12.393v16.72H.35zm1.667 1.667v16.666h20V5.296H10.361L8.332 2.017z"/></svg>

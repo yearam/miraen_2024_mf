@@ -24,8 +24,10 @@ function txtLineBr(){
     var $target = $('.badge-lesson');
     $target.each(function(){
         var $len = $(this).text().length;
-        if($len > 2){
+        if($len > 2 && $(this).parent().hasClass('item-style1')){
             $(this).addClass('txt-br');
+        } else if($len > 2){
+            $(this).addClass('line-br')
         }
     })
 }

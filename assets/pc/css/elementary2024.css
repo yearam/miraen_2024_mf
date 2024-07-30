@@ -401,6 +401,7 @@ body.lesson-2024 .lesson-items .item.item-style1 {padding-bottom:10px;}
 body.lesson-2024 .lesson-items .item.item-style1:before {top:27px; border-color:#d2d2d2;}
 body.lesson-2024 .lesson-items .item.item-style1:after {top:37px; background-color:#d2d2d2;}
 body.lesson-2024 .lesson-items .item.item-style1 .badge-lesson.txt-br {top:16px; color:#bfbfbf; min-width:26px; width:26px; display:block;}
+body.lesson-2024 .lesson-items .item .badge-lesson.line-br {top:27px; min-width:26px; width:26px; display:block;}
 body.lesson-2024 .lesson-items .item.item-style1 .lesson-data.no-draggable {pointer-events: none;}
 body.lesson-2024 .lesson-items .item.item-style1:hover .lesson-data.no-draggable {pointer-events:inherit;}
 body.lesson-2024 .lesson-items .item.item-style1 .lesson-data .data {min-height:auto; padding:0; background-color:#FAFAFA; border:1px solid #E6E6E6;}
