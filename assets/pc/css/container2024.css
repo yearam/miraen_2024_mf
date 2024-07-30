@@ -1090,6 +1090,7 @@ body.bg-default-img {
   border-left: 1px solid #e6e6e6;
   vertical-align: middle;
   background-color: #fff;
+  position: relative;
 }
 .container-wrapper .container-footer .right-item .btn:hover {
   color: #fff;
