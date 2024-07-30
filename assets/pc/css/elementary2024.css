@@ -60,6 +60,10 @@ body.lesson-2024 .lesson-header .lesson-header-buttons {display:flex; align-item
 body.lesson-2024 .lesson-header .lesson-header-buttons button i {width:20px; height:20px; display:block; background-position:0 0; background-repeat:no-repeat; background-size:100%;}
 body.lesson-2024 .lesson-header .lesson-header-buttons button i.ico-head-edit {background-image:url(/assets/images/subject/icon-head-edit.svg)}
 body.lesson-2024 .lesson-header .lesson-header-buttons button i.ico-head-share {background-image:url(/assets/images/subject/icon-head-share.svg)}
+body.lesson-2024 .lesson-header .lesson-header-buttons button#listEditBtn.active {border-color:#000; color:#000;}
+body.lesson-2024 .lesson-header .lesson-header-buttons button#listEditBtn.active i {background-image:url(/assets/images/subject/icon-list-edit.svg)}
+body.lesson-2024 .lesson-header .lesson-header-buttons button#listShareBtn:disabled {background-color:#76696B; border-color:#555555; color:#EFEFEF; opacity:1;}
+body.lesson-2024 .lesson-header .lesson-header-buttons button#listShareBtn:disabled i {background-image:url(/assets/images/subject/icon-head-share-disabled.svg)}
 
 body.lesson-2024 .lesson-header h3 {display:flex; align-items:center;}
 
@@ -95,9 +99,13 @@ body.lesson-2024 .data .image-wrap img {height: 100%; max-height: 100%; vertical
 body.lesson-2024 .data .image-wrap .ox {position:absolute; left:6px; top:6px;}
 
 body.lesson-2024 .data .inner-wrap {width:100%;}
-body.lesson-2024 .data a > span {display:block; align-items: center; font-weight:500;}
-body.lesson-2024 .data a strong.title-ellipsis {width:auto; display: inline-block; max-width:calc(100% - 26px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle;}
+body.lesson-2024 .data a > span {display:block; align-items: center; font-weight:500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+body.lesson-2024 .data a strong.title-ellipsis {width:auto; display: inline-block; max-width:calc(100% - 26px); margin-top:4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle;}
 body.lesson-2024 .data a .txt-badge {display:inline-flex; justify-content: center;}
+
+body.lesson-2024 .lesson-data .data a .study-label {position:relative; margin-right:5px; padding-right:8px; font-size:12px; font-weight:500; color:#01A39F; vertical-align: 0;}
+body.lesson-2024 .lesson-data .data a .study-label:after {content:''; width:1px; height:8px; display:block; position:absolute; right:0px; top:50%; transform:translateY(-50%); background-color:#E6E6E6;}
+body.lesson-2024 .lesson-data .data a .study-depth {font-size:12px; font-weight:500; color:#838383;}
 /*
 
 display: inline-block;
@@ -123,7 +131,7 @@ body.lesson-2024 .data a .number-pages .badge {font-size:14px; color:#A4A4A4; pa
 body.lesson-2024 .data .title-ellipsis {font-size:16px; line-height:24px; }
 body.lesson-2024 .data-afterimage,
 body.lesson-2024 .no-data {border-radius:4px;}
-body.lesson-2024 .image-wrap {border-radius:4px;}
+body.lesson-2024 .image-wrap {border-radius:0px;}
 body.lesson-2024 .image-wrap .badge.type-round-box {min-height:20px; padding: 2px 5px 0px; left:4px; top:4px; right:auto; bottom:auto;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group {position:absolute; right:4px; top:4px;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge {position:relative; left:auto; top:auto; right:auto; bottom:auto;}
@@ -131,8 +139,126 @@ body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn-doc-edit img {width:12px; height:12px;}
 
 /*
+
+
+	[aria-disabled="true"] {
+		opacity: 0.5;
+	}
+
+	.gu-mirror{
+		z-index: 9999 !important;
+		opacity: 80% !important;
+		transform: none !important;
+		display: flex !important;
+		justify-content: space-between!important;
+		align-items: center!important;
+		gap: 20px!important;
+		padding: 16px 20px!important;
+		min-height: 94px!important;
+		border: 1px solid #02a39f!important;
+		border-radius: 18px!important;
+		background-color: white!important;
+		color: #838383!important;
+		text-align: left!important;
+	}
+
+	.gu-mirror .active-vertical, .gu-mirror .active-horizontal {
+	  position: relative;
+	  border-color: var(--color-primary);
+	  background-color: var(--color-primary-150);
+	  box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);
+	}
+
+	.gu-mirror.active-vertical::before, .gu-mirror.active-horizontal::before {
+	  content: "" !important;
+	  position: absolute !important;
+	  top: 50% !important;
+	  left: 0 !important;
+	  width: 30px !important;
+	  height: 30px !important;
+	  border-radius: 100% !important;
+	  background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important;
+	  background-position: center!important;
+	  background-repeat: no-repeat!important;
+	  background-size: contain!important;
+	  box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important;
+	  transform: translate(-50%, -50%)!important;
+	}
+	.gu-mirror.active-horizontal::before {
+	  background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;
+	}
+
+	.gu-mirror img {
+		width: auto !important;
+		height: auto !important;
+	}
+
+	.gu-mirror .inner-wrap {
+		display: inline-flex!important;
+		align-items: center!important;
+		gap: 20px!important;
+	}
+
+	.gu-mirror a {
+		display: inline-flex!important;
+		flex-wrap: wrap!important;
+		align-items: center!important;
+		gap: 4px 10px!important;
+		width: 100%!important;
+	}
+
+	.gu-mirror .badges {
+		width: 100%!important;
+	}
+
+	.gu-mirror .title-ellipsis {
+		white-space: normal!important;
+		display: -webkit-box!important;
+		line-height: 1.5!important;
+		-webkit-line-clamp: 2!important;
+		-webkit-box-orient: vertical!important;
+		overflow: hidden!important;
+		text-overflow: ellipsis!important;
+		width: 100%!important;
+	}
+
+	.gu-mirror .image-wrap {
+		flex-shrink: 0;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		width: 119px;
+		min-height: 62px;
+		border-radius: 10px;
+		background-image: url("/assets/images/common/img-no-img.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.gu-hide{
+		display:none!important
+	}
+
+	.gu-unselectable {
+		-webkit-user-select:none!important;
+		-moz-user-select:none!important;
+		-ms-user-select:none!important;
+		user-select:none!important
+	}
+
+	.gu-transit {
+		opacity: .3!important;
+		box-sizing: border-box!important;
+		border: 2px dashed #e6e6e6!important;
+		background-color: #f6f6f6!important;
+	}
+*/
+
 body.lesson-2024 [aria-disabled="true"] {opacity: 0.5;}
-body.lesson-2024 .gu-mirror {position: fixed !important; z-index: 1000 !important; opacity: 80% !important; transform: none !important; display: flex !important; justify-content: space-between!important; align-items: center!important; gap: 20px!important; padding: 15px 20px!important; min-height: 94px!important; border: 1px solid #8CD5D3!important; border-radius: 4px!important; background-color: white!important; color: #838383!important; text-align: left!important; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
+body.lesson-2024 .gu-mirror {position: fixed !important; opacity: 80% !important; transform: none !important; display: flex !important; justify-content: space-between!important; align-items: center!important; gap: 20px!important; padding: 15px 20px!important; min-height: 94px!important; border: 1px solid #8CD5D3!important; border-radius: 4px!important; background-color: white!important; color: #838383!important; text-align: left!important; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror .active-vertical,
 body.lesson-2024 .gu-mirror .active-horizontal {position: relative; border-color:#8CD5D3; background-color:#F2FAFA; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror.active-vertical::before,
@@ -147,10 +273,10 @@ body.lesson-2024 .gu-mirror a strong {font-weight:500;}
 body.lesson-2024 .gu-mirror .title-ellipsis {white-space:nowrap!important; display:inline-block!important; line-height: 1.5!important; -webkit-line-clamp:1 !important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width:auto!important;}
 body.lesson-2024 .gu-hide{display:none!important}
 body.lesson-2024 .gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important; -webkit-touch-callout: none;}
-body.lesson-2024 .gu-transit {opacity: .3!important; box-sizing: border-box!important; border: 2px dashed #e6e6e6!important; background-color: #f6f6f6!important;}
+body.lesson-2024 .gu-transit {opacity: .3!important; box-sizing: border-box!important; border: 1px dashed #e6e6e6!important; background-color: #f6f6f6!important;}
 body.lesson-2024 .gu-mirror .buttons{flex-shrink: 0;}
 body.lesson-2024 .group-content.gu-mirror {display:block !important;}
-*/
+
 body.lesson-2024 .type-filter.both-type {padding:19px 30px 19px 0; gap:0;}
 body.lesson-2024 .type-filter.both-type .nav-slider {flex:1;}
 body.lesson-2024 .data i.icon-new {font-size: 0; display: inline-block; width: 12px; height: 12px; margin-left: 4px; background: url(/assets/images/title/icon-new2.svg) no-repeat; vertical-align: middle;}
@@ -186,11 +312,12 @@ body.lesson-2024 .button.type-icon.ico-list-edit.full-size.active {background-co
 body.lesson-2024 .buttons .full-size-ox input[type="checkbox"] {position:absolute; left:-9999px;}
 body.lesson-2024 .buttons input[type="checkbox"] {position:absolute; left:-9999px;}
 body.lesson-2024 .buttons input[type="checkbox"] + .button.type-icon.ico-list-checkbox.full-size {width:28px; height:28px; position:static; align-self: center; background: url(/assets/images/common/icon-check.svg) #fff center center no-repeat; border-radius:50%; border: 1px solid #d2d2d2; background-color: white;}
-body.lesson-2024 .buttons input[type="checkbox"]:checked + .button.type-icon.ico-list-checkbox.full-size {background-color:#02a39f;}
+body.lesson-2024 .buttons input[type="checkbox"]:checked + .button.type-icon.ico-list-checkbox.full-size {background-color:#02a39f; border-color:#02a39f;}
 body.lesson-2024 .buttons input[type="checkbox"] + .button.type-icon.ico-list-checkbox.full-size:after {content:''; width:100%; height:96px; display:block; position:absolute; left:0; top:0; z-index:10; cursor:pointer;}
 body.lesson-2024 .buttons input[type="checkbox"] + .button.type-icon.ico-list-checkbox.full-size.active {background-color:#E8F6F6; border-color:#01A39F;}
 
-body.lesson-2024 .data-group-child-area .button.type-icon.ico-list-edit.full-size:after {height:64px;}
+body.lesson-2024 .data-group-child-area .button.type-icon.ico-list-edit.full-size:after,
+body.lesson-2024 .data-group-child-area .buttons input[type="checkbox"] + .button.type-icon.ico-list-checkbox.full-size:after {height:64px;}
 body.lesson-2024 .data-group-child-area .button.type-icon.ico-list-edit:before {position:static;}
 
 body.lesson-2024 .webui-popover {z-index:1001;}
@@ -200,21 +327,8 @@ body.lesson-2024 .webui-popover .webui-popover-content {margin:0;}
 body.lesson-2024 .webui-popover .webui-popover-content .ul-dot {}
 body.lesson-2024 .webui-popover .webui-popover-content .ul-dot > li {padding-left:16px; color:#838383; line-height:20px;}
 body.lesson-2024 .webui-popover .webui-popover-content .ul-dot > li::before {top:8px;}
-
-body.lesson-2024 .float-button {
-  width:68px; height:68px;
-  right:20px; bottom:20px;
-  background: transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 5px 5px 20px #17807D33;
-  border: 1px solid #0000000A;
-  font-size:11px; line-height:12px;
-  z-index:1;
-}
-body.lesson-2024 .float-button:after,
-body.lesson-2024 .float-button:before {content:''; width:3px; height:20px; display:block; position:absolute; background-color:#fff; border-radius:3px;}
-body.lesson-2024 .float-button:after {}
-body.lesson-2024 .float-button:before {transform:rotate(90deg)}
-body.lesson-2024 .float-button .float-txt {width: max-content; position:absolute; left:-96px; top:50%; transform:translateY(-50%); font-size:14px; font-weight:500; color:#159EA0;}
+body.lesson-2024 .webui-popover .webui-popover-content .ul-dot > li.no-dot {color:#BBBBBB;}
+body.lesson-2024 .webui-popover .webui-popover-content .ul-dot > li.no-dot:before {display:none;}
 
 body.lesson-2024 .buttons.type-rounded label {border-radius:18px;}
 
@@ -276,10 +390,13 @@ body.lesson-2024 .icon-button.c-black {color:#000;}
 
 body.lesson-2024 .breadcrumbs.type-period li {font-size:15px;}
 body.lesson-2024 .lesson-data {gap:16px;}
+body.lesson-2024 .sub-lessons .lesson-data {gap:10px;}
+body.lesson-2024 .sub-lessons .lesson-data .data {border-color:transparent;}
 body.lesson-2024 .badge-lesson {background: none; color: #02A39F; padding: 0; width: auto; height: auto; left: 0; top: 37px; font-size: 13px; font-weight: 700;}
 body.lesson-2024 .badge-lesson.txt-br {top:29px;}
 body.lesson-2024 .lesson-items.potiion-relative {position:relative;}
 body.lesson-2024 .lesson-items .item {padding-left:60px;}
+body.lesson-2024 .lesson-items .item:first-child:not(.item-style1):after {top:40px}
 body.lesson-2024 .lesson-items .item.item-style1 {padding-bottom:10px;}
 body.lesson-2024 .lesson-items .item.item-style1:before {top:27px; border-color:#d2d2d2;}
 body.lesson-2024 .lesson-items .item.item-style1:after {top:37px; background-color:#d2d2d2;}
@@ -320,9 +437,32 @@ body.lesson-2024 .dropdown-select .options span span {font-size:12px; color:#A4A
 
 body.lesson-2024 .period-guide {width:1920px; height:1080px;}
 
+body.lesson-2024 .float-bottom-buttons {width:68px; position:absolute; right:20px; bottom:20px; z-index:15}
+body.lesson-2024 .float-bottom-buttons .float-button {width:68px; height:68px; right:0px; bottom:0px; background: transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box; box-shadow: 5px 5px 20px #17807D33; border: 1px solid #0000000A; font-size:11px; line-height:12px; z-index:1;}
+body.lesson-2024 .float-bottom-buttons.active .float-button {background:#747474;}
+body.lesson-2024 .float-bottom-buttons .float-button:after,
+body.lesson-2024 .float-bottom-buttons .float-button:before {content:''; width:3px; height:20px; display:block; position:absolute; background-color:#fff; border-radius:3px; transition:transform ease-in-out .3s}
+body.lesson-2024 .float-bottom-buttons .float-button:after {}
+body.lesson-2024 .float-bottom-buttons .float-button:before {transform:rotate(90deg)}
+body.lesson-2024 .float-bottom-buttons.active .float-button:after,
+body.lesson-2024 .float-bottom-buttons.active .float-button:before {transition:transform ease-in-out .3s}
+body.lesson-2024 .float-bottom-buttons.active .float-button:after {transform:rotate(45deg)}
+body.lesson-2024 .float-bottom-buttons.active .float-button:before {transform:rotate(135deg)}
+body.lesson-2024 .float-bottom-buttons .float-txt {width: max-content; position:absolute; right:77px; top:50%; transform:translateY(-50%); font-size:14px; font-weight:500; color:#159EA0;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu .float-txt {color:#626262; right:70px;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu {width:56px; height:56px; position:absolute; left:50%; bottom:20px; background:transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box; box-shadow: 0px 2px 6px #0000001A; border: 1px solid #0000000A; border-radius: 40px; transform:translateX(-50%); background-position:center center; background-repeat:no-repeat;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu:before {content:''; display:block; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background-repeat:no-repeat; background-position:0 0;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-1 {bottom:0px; opacity:0; transition:all ease-in-out .3s;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-2 {bottom:0px; opacity:0; transition:all ease-in-out .3s;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-1:before {width:16px; height:20px; background-image:url(/assets/images/subject/icon-upload-make-ppt.svg)}
+body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-2:before {width:19px; height:17px; background-image:url(/assets/images/subject/icon-upload-folder-arrow-up.svg)}
+body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-1 {bottom:80px; opacity:1; transition:all ease-in-out .3s;}
+body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-2 {bottom:148px; opacity:1; transition:all ease-in-out .3s;}
+
 .max-width-1500 {display:none;}
 .icon-size-20 {width: 20px; height: 20px; vertical-align: top;}
 
+body.lesson-2024 .other-lesson .item a::after {display:none;}
 /*
     display: inline-block;
     max-width: 95%;

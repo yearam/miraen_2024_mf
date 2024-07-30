@@ -120,6 +120,14 @@ function getWindowHeight(){
 	})
 }
 
+function myUploadBtnSlide(){
+	var $obj = $('.float-bottom-buttons'),
+		$btn = $obj.find('.float-button');
+	$btn.on('click' , function(){
+		$obj.toggleClass('active');
+	})
+}
+
 $(function () {
     accordionInit();
     $('.swiper-button-prev,.swiper-button-next').show();
@@ -129,4 +137,5 @@ $(function () {
     txtEllipsis();
     radioTabInit();
     getWindowHeight();
+    myUploadBtnSlide();
 });
