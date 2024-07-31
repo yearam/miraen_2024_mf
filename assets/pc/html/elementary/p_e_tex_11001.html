@@ -30,6 +30,168 @@
 
 <link href="/assets/pc/css/pages/elementary/period-guide.css" rel="stylesheet" />
 
+
+    <style>
+
+[aria-disabled="true"] {opacity: 0.5;}
+
+
+/*
+.gu-mirror {
+	position: fixed !important;
+	opacity: 80% !important;
+	transform: none !important;
+	display: flex !important;
+	justify-content: space-between!important;
+	align-items: center!important;
+	gap: 20px!important;
+	padding: 15px 20px!important;
+	min-height: 94px!important;
+	border: 1px solid #8CD5D3!important;
+	border-radius: 4px!important;
+	background-color: white!important;
+	color: #838383!important;
+	text-align: left!important;
+	box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);
+}
+.gu-mirror .active-vertical,
+.gu-mirror .active-horizontal {position: relative; border-color:#8CD5D3; background-color:#F2FAFA; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
+.gu-mirror.active-vertical::before,
+.gu-mirror.active-horizontal::before {content: "" !important; position: absolute !important; top: 50% !important; left: 0 !important; width: 30px !important; height: 30px !important; border-radius: 100% !important; background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important; background-position: center!important; background-repeat: no-repeat!important; background-size: contain!important; box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important; transform: translate(-50%, -50%)!important; background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;}
+.gu-mirror .inner-wrap {display: inline-flex; align-items: center; gap: 20px; overflow: hidden;}
+.gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
+.gu-mirror img {vertical-align: top;}
+.gu-mirror a {display:block !important; flex-wrap: wrap!important; align-items: center!important; gap: 4px 10px!important; width: 100%!important; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+.gu-mirror .badges {display: inline-flex; width: fit-content; margin-right: 4px;}
+.gu-mirror a strong {font-weight:500;}
+.gu-mirror .title-ellipsis {white-space:nowrap!important; display:inline-block!important; line-height: 1.5!important; -webkit-line-clamp:1 !important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width:auto!important;}
+.gu-hide{display:none!important}
+.gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important; -webkit-touch-callout: none;}
+.gu-transit {opacity: .3!important; box-sizing: border-box!important; border: 1px dashed #e6e6e6!important; background-color: #f6f6f6!important;}
+.gu-mirror .buttons{flex-shrink: 0;}
+.group-content.gu-mirror {display:block !important;}
+*/
+        .gu-mirror{
+            position: fixed !important;
+            /*margin: 0 !important;*/
+            z-index: 9999 !important;
+            opacity: 80% !important;
+            /*width: auto !important;*/
+            /*height: auto !important;*/
+            transform: none !important;
+            display: flex !important;
+            justify-content: space-between!important;
+            align-items: center!important;
+            gap: 20px!important;
+	padding: 15px 20px!important;
+	min-height: 94px!important;
+	border: 1px solid #8CD5D3!important;
+	border-radius: 4px!important;
+	background-color: white!important;
+	color: #838383!important;
+	text-align: left!important;
+	box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);
+        }
+
+        .gu-mirror .active-vertical, .gu-mirror .active-horizontal {
+          position: relative;
+          border-color: var(--color-primary);
+          background-color: var(--color-primary-150);
+          box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);
+        }
+
+        .gu-mirror.active-vertical::before, .gu-mirror.active-horizontal::before {
+          content: "" !important;
+          position: absolute !important;
+          top: 50% !important;
+          left: 0 !important;
+          width: 30px !important;
+          height: 30px !important;
+          border-radius: 100% !important;
+          background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important;
+          background-position: center!important;
+          background-repeat: no-repeat!important;
+          background-size: contain!important;
+          box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important;
+          transform: translate(-50%, -50%)!important;
+        }
+        .gu-mirror.active-horizontal::before {
+          background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;
+        }
+
+        .gu-mirror img {
+            width: auto !important;
+            height: auto !important;
+        }
+
+        .gu-mirror .inner-wrap {
+            display: inline-flex!important;
+            align-items: center!important;
+            gap: 20px!important;
+        }
+
+        .gu-mirror a {
+            display: inline-flex!important;
+            flex-wrap: wrap!important;
+            align-items: center!important;
+            gap: 4px 10px!important;
+            width: 100%!important;
+        }
+
+        .gu-mirror .badges {
+            width: 100%!important;
+        }
+
+        .gu-mirror .title-ellipsis {
+            white-space: normal!important;
+            display: -webkit-box!important;
+            line-height: 1.5!important;
+            -webkit-line-clamp: 2!important;
+            -webkit-box-orient: vertical!important;
+            overflow: hidden!important;
+            text-overflow: ellipsis!important;
+            width: 100%!important;
+        }
+
+        /*.gu-mirror .buttons {*/
+        /*    flex-shrink: 0!important;*/
+        /*}*/
+
+        .gu-mirror .image-wrap {
+            flex-shrink: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            width: 119px;
+            min-height: 62px;
+            border-radius: 10px;
+            background-image: url("/assets/images/common/img-no-img.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .gu-hide{
+            display:none!important
+        }
+
+        .gu-unselectable {
+            -webkit-user-select:none!important;
+            -moz-user-select:none!important;
+            -ms-user-select:none!important;
+            user-select:none!important
+        }
+
+        .gu-transit {
+            opacity: .3!important;
+            box-sizing: border-box!important;
+            border: 2px dashed #e6e6e6!important; /* 드롭 가능한 영역의 테두리 스타일 */
+            background-color: #f6f6f6!important;
+        }
+    </style>
+
 <body class="theme-elementary lesson-2024"> <!-- lesson-2024 클래스 추가 -->
 	<div class="wrapper-lesson" style="--scroll-height:100vh">
 		<header class="period-header">
