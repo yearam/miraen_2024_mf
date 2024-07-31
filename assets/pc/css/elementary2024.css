@@ -1,4 +1,4 @@
-@import url(./all-grades2024.css);
+@import url(./all-grades2024.css);9000
 :root {
   --color-primary: #02a39f;
   --color-primary-bg: #e6f4f4;
@@ -50,6 +50,7 @@ body.lesson-2024 .wrapper-lesson .contents-header .number-pages {color:#626262;}
 body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson {}
 body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson .button:hover {background-color:#fff;}
 body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson .button.active svg {transform:rotate(180deg)}
+body.lesson-2024 .wrapper-lesson .contents-header .buttons .other-lesson .item a::after {display:none;}
 
 body.lesson-2024 .period-header {position:sticky; z-index:200;}
 body.lesson-2024 .period-contents {gap:26px;}
@@ -112,7 +113,7 @@ display: inline-block;
 vertical-align: middle;
 
 */
-body.lesson-2024 .data a .badges .badge {border-color:rgba(0,0,0,0.5)}
+body.lesson-2024 .data a .badges .badge {border-color:rgba(0,0,0,0.5); z-index:0;}
 body.lesson-2024 .data.no-link .image-wrap,
 body.lesson-2024 .gu-mirror.no-link .inner-wrap .image-wrap {background-image:url(/assets/images/subject/icon-no-image-link.svg); background-size:25px 23px;} /* 25 23 */
 body.lesson-2024 .data.no-file .image-wrap,
@@ -133,137 +134,17 @@ body.lesson-2024 .data-afterimage,
 body.lesson-2024 .no-data {border-radius:4px;}
 body.lesson-2024 .image-wrap {border-radius:0px;}
 body.lesson-2024 .image-wrap .badge.type-round-box {min-height:20px; padding: 2px 5px 0px; left:4px; top:4px; right:auto; bottom:auto;}
-body.lesson-2024 .image-wrap .image-wrap-buttons-group {position:absolute; right:4px; top:4px;}
+body.lesson-2024 .image-wrap .image-wrap-buttons-group {position:absolute; right:4px; top:4px; z-index:0;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge {position:relative; left:auto; top:auto; right:auto; bottom:auto;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn-doc-edit {width:20px; height:20px; border-radius:4px;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn-doc-edit img {width:12px; height:12px;}
-
-/*
-
-
-	[aria-disabled="true"] {
-		opacity: 0.5;
-	}
-
-	.gu-mirror{
-		z-index: 9999 !important;
-		opacity: 80% !important;
-		transform: none !important;
-		display: flex !important;
-		justify-content: space-between!important;
-		align-items: center!important;
-		gap: 20px!important;
-		padding: 16px 20px!important;
-		min-height: 94px!important;
-		border: 1px solid #02a39f!important;
-		border-radius: 18px!important;
-		background-color: white!important;
-		color: #838383!important;
-		text-align: left!important;
-	}
-
-	.gu-mirror .active-vertical, .gu-mirror .active-horizontal {
-	  position: relative;
-	  border-color: var(--color-primary);
-	  background-color: var(--color-primary-150);
-	  box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);
-	}
-
-	.gu-mirror.active-vertical::before, .gu-mirror.active-horizontal::before {
-	  content: "" !important;
-	  position: absolute !important;
-	  top: 50% !important;
-	  left: 0 !important;
-	  width: 30px !important;
-	  height: 30px !important;
-	  border-radius: 100% !important;
-	  background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important;
-	  background-position: center!important;
-	  background-repeat: no-repeat!important;
-	  background-size: contain!important;
-	  box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important;
-	  transform: translate(-50%, -50%)!important;
-	}
-	.gu-mirror.active-horizontal::before {
-	  background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;
-	}
-
-	.gu-mirror img {
-		width: auto !important;
-		height: auto !important;
-	}
-
-	.gu-mirror .inner-wrap {
-		display: inline-flex!important;
-		align-items: center!important;
-		gap: 20px!important;
-	}
-
-	.gu-mirror a {
-		display: inline-flex!important;
-		flex-wrap: wrap!important;
-		align-items: center!important;
-		gap: 4px 10px!important;
-		width: 100%!important;
-	}
-
-	.gu-mirror .badges {
-		width: 100%!important;
-	}
-
-	.gu-mirror .title-ellipsis {
-		white-space: normal!important;
-		display: -webkit-box!important;
-		line-height: 1.5!important;
-		-webkit-line-clamp: 2!important;
-		-webkit-box-orient: vertical!important;
-		overflow: hidden!important;
-		text-overflow: ellipsis!important;
-		width: 100%!important;
-	}
-
-	.gu-mirror .image-wrap {
-		flex-shrink: 0;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		overflow: hidden;
-		width: 119px;
-		min-height: 62px;
-		border-radius: 10px;
-		background-image: url("/assets/images/common/img-no-img.png");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.gu-hide{
-		display:none!important
-	}
-
-	.gu-unselectable {
-		-webkit-user-select:none!important;
-		-moz-user-select:none!important;
-		-ms-user-select:none!important;
-		user-select:none!important
-	}
-
-	.gu-transit {
-		opacity: .3!important;
-		box-sizing: border-box!important;
-		border: 2px dashed #e6e6e6!important;
-		background-color: #f6f6f6!important;
-	}
-*/
 
 body.lesson-2024 [aria-disabled="true"] {opacity: 0.5;}
 body.lesson-2024 .gu-mirror {position: fixed !important; opacity: 80% !important; transform: none !important; display: flex !important; justify-content: space-between!important; align-items: center!important; gap: 20px!important; padding: 15px 20px!important; min-height: 94px!important; border: 1px solid #8CD5D3!important; border-radius: 4px!important; background-color: white!important; color: #838383!important; text-align: left!important; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror .active-vertical,
 body.lesson-2024 .gu-mirror .active-horizontal {position: relative; border-color:#8CD5D3; background-color:#F2FAFA; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror.active-vertical::before,
-body.lesson-2024 .gu-mirror.active-horizontal::before {content: "" !important; position: absolute !important; top: 50% !important; left: 0 !important; width: 30px !important; height: 30px !important; border-radius: 100% !important; background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important; background-position: center!important; background-repeat: no-repeat!important; background-size: contain!important; box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important; transform: translate(-50%, -50%)!important;}
-body.lesson-2024 .gu-mirror.active-horizontal::before {background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;}
+body.lesson-2024 .gu-mirror.active-horizontal::before {content: "" !important; position: absolute !important; top: 50% !important; left: 0 !important; width: 30px !important; height: 30px !important; border-radius: 100% !important; background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important; background-position: center!important; background-repeat: no-repeat!important; background-size: contain!important; box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important; transform: translate(-50%, -50%)!important; background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;}
 body.lesson-2024 .gu-mirror .inner-wrap {display: inline-flex; align-items: center; gap: 20px; overflow: hidden;}
 body.lesson-2024 .gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
 body.lesson-2024 .gu-mirror img {vertical-align: top;}
@@ -351,6 +232,7 @@ body.lesson-2024 .icon-button.c-black {color:#000;}
 .lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle:before {left:calc(100% / 2 - 4px); transition:left ease-in-out .3s;}
 .lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle .toggle-txt {color:#000; transition: color ease-in-out .3s;}
 .lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle .toggle-txt.default {color:#fff; transition: color ease-in-out .3s;}
+
 
 .data.group-content {display:block;}
 .data.group-content .outer-wrap {display:flex; align-items:center; gap:20px;}
@@ -464,19 +346,6 @@ body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-2 {bottom:
 .icon-size-20 {width: 20px; height: 20px; vertical-align: top;}
 
 body.lesson-2024 .other-lesson .item a::after {display:none;}
-/*
-    display: inline-block;
-    max-width: 95%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: middle;
-*/
-
-/*
-display: inline-block;
-vertical-align: middle;
-*/
 
 @media (max-width:1500px) {
   .max-width-1500 {display:block;}
