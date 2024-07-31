@@ -1617,8 +1617,6 @@ body.bg-default-img {
 .btm-page-number span {margin-left:10px; font-size:13px; font-weight:400; color:rgba(255,255,255,.7)}
 
 .popup-alert.display-show:before {content:''; width:100%; height:100%; display:block; position:absolute; left:0; top:0; background-color:rgba(0,0,0,0.5); z-index: 2000;}
-#notebox:before {content: ''; width: 100%; height: 100%; display: block; position: fixed; left: 0; top: 0; background-color: rgba(0, 0, 0, .5);}
-#notebox .popup-container {}
 .popover-body > img {border-radius:0 !important;}
 
 .media-play-control-area {margin-top:16px;}
