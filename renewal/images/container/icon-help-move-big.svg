@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102" height="46" viewBox="0 0 102 46">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#efefef"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_1676" data-name="그룹 1676" transform="translate(-45 -14)">
+    <g id="이전버튼" transform="translate(45 14)">
+      <g id="그룹_1663" data-name="그룹 1663">
+        <g id="타원_247" data-name="타원 247" stroke="#eee" stroke-width="1" fill="url(#linear-gradient)">
+          <circle cx="23" cy="23" r="23" stroke="none"/>
+          <circle cx="23" cy="23" r="22.5" fill="none"/>
+        </g>
+        <path id="패스_4406" data-name="패스 4406" d="M35.553,571.18l11.892-12.553,1.789,1.7L38.947,571.18l10.287,10.858-1.789,1.7Z" transform="translate(-20.945 -548.563)" fill-rule="evenodd" opacity="0.2"/>
+      </g>
+    </g>
+    <g id="다음버튼" transform="translate(101 14)">
+      <g id="그룹_1664" data-name="그룹 1664">
+        <g id="타원_247-2" data-name="타원 247" stroke="#eee" stroke-width="1" fill="url(#linear-gradient)">
+          <circle cx="23" cy="23" r="23" stroke="none"/>
+          <circle cx="23" cy="23" r="22.5" fill="none"/>
+        </g>
+        <path id="패스_4406-2" data-name="패스 4406" d="M49.234,571.18,37.342,558.627l-1.789,1.7L45.839,571.18,35.553,582.039l1.789,1.7Z" transform="translate(-17.879 -548.563)" fill="#1e51a1" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

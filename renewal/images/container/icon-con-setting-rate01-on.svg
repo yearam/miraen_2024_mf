@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="90" viewBox="0 0 100 90">
+  <g id="icon" transform="translate(-75 -319)">
+    <rect id="사각형_3806" data-name="사각형 3806" width="98" height="88" transform="translate(76 320)" fill="none" stroke="#02a39f" stroke-width="2"/>
+    <path id="패스_5460" data-name="패스 5460" d="M147,345.052l17.347-17.346,2.2,2.2L149.2,347.25Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5461" data-name="패스 5461" d="M163.891,330.359h-8.405V327.25H167v11.514h-3.109Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5462" data-name="패스 5462" d="M147,383.448l17.347,17.346,2.2-2.2L149.2,381.25Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5463" data-name="패스 5463" d="M163.891,398.141h-8.405v3.109H167V389.736h-3.109Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5464" data-name="패스 5464" d="M103,345.052,85.653,327.706l-2.2,2.2L100.8,347.25Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5465" data-name="패스 5465" d="M86.109,330.359h8.405V327.25H83v11.514h3.109Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5466" data-name="패스 5466" d="M103,383.448,85.653,400.794l-2.2-2.2L100.8,381.25Z" fill="#02a39f" fill-rule="evenodd"/>
+    <path id="패스_5467" data-name="패스 5467" d="M86.109,398.141h8.405v3.109H83V389.736h3.109Z" fill="#02a39f" fill-rule="evenodd"/>
+  </g>
+</svg>

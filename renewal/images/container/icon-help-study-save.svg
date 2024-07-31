@@ -1,0 +1,9 @@
+<svg id="line" xmlns="http://www.w3.org/2000/svg" width="104" height="36" viewBox="0 0 104 36">
+  <g id="사각형_3874" data-name="사각형 3874" fill="#fff" stroke="#d2d2d2" stroke-width="1">
+    <rect width="104" height="36" rx="4" stroke="none"/>
+    <rect x="0.5" y="0.5" width="103" height="35" rx="3.5" fill="none"/>
+  </g>
+  <g id="그룹_1546" data-name="그룹 1546" transform="translate(28.5 0.5)">
+    <text id="진도_저장하기" data-name="진도 저장하기" transform="translate(63.5 23.5)" fill="#626262" font-size="14" font-family="NotoSansKR-Medium, Noto Sans KR" font-weight="500"><tspan x="-80" y="0">진도 저장하기</tspan></text>
+  </g>
+</svg>
