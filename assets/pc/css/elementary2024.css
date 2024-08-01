@@ -144,11 +144,10 @@ body.lesson-2024 .gu-mirror.active-horizontal::before {content: "" !important; p
 body.lesson-2024 .gu-mirror .inner-wrap {display: inline-flex; align-items: center; gap: 20px; overflow: hidden;}
 body.lesson-2024 .gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
 body.lesson-2024 .gu-mirror img {vertical-align: top;}
-body.lesson-2024 .gu-mirror a {display:block !important; flex-wrap: wrap!important; align-items: center!important; gap: 4px 10px!important; width: 100%!important; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
 body.lesson-2024 .gu-mirror .badges {display: inline-flex; width: fit-content; margin-right: 4px;}
-body.lesson-2024 .gu-mirror a strong {font-weight:500;}
-body.lesson-2024 .gu-mirror a > span[style*="display: none"] + strong.title-ellipsis {width:calc(100% - 20px) !important; max-width:100%; display:block !important; display: -webkit-box !important; margin-top:0; -webkit-line-clamp: 2 !important; white-space: normal !important;}
-body.lesson-2024 .gu-mirror .title-ellipsis {white-space:nowrap!important; display:inline-block!important; line-height: 1.5!important; -webkit-line-clamp:1 !important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width:auto!important;}
+body.lesson-2024 .gu-mirror a {display:block; flex-wrap: wrap; align-items: center; gap: 4px 10px; width: 100%; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+body.lesson-2024 .gu-mirror a > span[style*="display: none"] + strong.title-ellipsis {width:calc(100% - 20px); max-width:100%; display:block; display: -webkit-box; margin-top:0; -webkit-line-clamp: 2; white-space: normal;}
+body.lesson-2024 .gu-mirror .title-ellipsis {width:calc(100% - 20px); white-space:nowrap; display:inline-block; line-height: 1.5!important; -webkit-line-clamp:1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; width:auto;}
 body.lesson-2024 .gu-hide{display:none!important}
 body.lesson-2024 .gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important; -webkit-touch-callout: none;}
 body.lesson-2024 .gu-transit {opacity: .3!important; box-sizing: border-box!important; border: 1px dashed #e6e6e6!important; background-color: #f6f6f6!important;}
