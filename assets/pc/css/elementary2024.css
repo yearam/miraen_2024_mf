@@ -1,4 +1,4 @@
-@import url(./all-grades2024.css);9000
+@import url(./all-grades2024.css);
 :root {
   --color-primary: #02a39f;
   --color-primary-bg: #e6f4f4;
@@ -102,6 +102,7 @@ body.lesson-2024 .data .image-wrap .ox {position:absolute; left:6px; top:6px;}
 body.lesson-2024 .data .inner-wrap {width:100%;}
 body.lesson-2024 .data a > span {display:block; align-items: center; font-weight:500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 body.lesson-2024 .data a strong.title-ellipsis {width:auto; display: inline-block; max-width:calc(100% - 26px); margin-top:4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle;}
+body.lesson-2024 .data a > span[style*="display: none"] + strong.title-ellipsis {max-width:100%; margin-top:0; display: block; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: normal;}
 body.lesson-2024 .data a .txt-badge {display:inline-flex; justify-content: center;}
 
 body.lesson-2024 .lesson-data .data a .study-label {position:relative; margin-right:5px; padding-right:8px; font-size:12px; font-weight:500; color:#01A39F; vertical-align: 0;}
@@ -128,7 +129,7 @@ body.lesson-2024 .data .title-ellipsis {font-size:16px; line-height:24px; }
 body.lesson-2024 .data-afterimage,
 body.lesson-2024 .no-data {border-radius:4px;}
 body.lesson-2024 .image-wrap {border-radius:0px;}
-body.lesson-2024 .image-wrap .badge.type-round-box {min-height:20px; padding: 2px 5px 0px; left:4px; top:4px; right:auto; bottom:auto;}
+body.lesson-2024 .image-wrap .badge.type-round-box {min-height:20px; padding: 2px 5px 0px; left:4px; top:4px; right:auto; bottom:auto; border-color:rgba(0,0,0,.15)}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group {position:absolute; right:4px; top:4px; z-index:0;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge {position:relative; left:auto; top:auto; right:auto; bottom:auto;}
 body.lesson-2024 .image-wrap .image-wrap-buttons-group .badge.type-round-box.btn-doc-edit {width:20px; height:20px; border-radius:4px;}
@@ -146,6 +147,7 @@ body.lesson-2024 .gu-mirror img {vertical-align: top;}
 body.lesson-2024 .gu-mirror a {display:block !important; flex-wrap: wrap!important; align-items: center!important; gap: 4px 10px!important; width: 100%!important; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
 body.lesson-2024 .gu-mirror .badges {display: inline-flex; width: fit-content; margin-right: 4px;}
 body.lesson-2024 .gu-mirror a strong {font-weight:500;}
+body.lesson-2024 .gu-mirror a > span[style*="display: none"] + strong.title-ellipsis {width:calc(100% - 20px) !important; max-width:100%; display:block !important; display: -webkit-box !important; margin-top:0; -webkit-line-clamp: 2 !important; white-space: normal !important;}
 body.lesson-2024 .gu-mirror .title-ellipsis {white-space:nowrap!important; display:inline-block!important; line-height: 1.5!important; -webkit-line-clamp:1 !important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width:auto!important;}
 body.lesson-2024 .gu-hide{display:none!important}
 body.lesson-2024 .gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important; -webkit-touch-callout: none;}
@@ -157,7 +159,7 @@ body.lesson-2024 .group-content.gu-mirror .data-group-child-area {width:100%;}
 
 body.lesson-2024 .type-filter.both-type {padding:19px 30px 19px 0; gap:0;}
 body.lesson-2024 .type-filter.both-type .nav-slider {flex:1;}
-body.lesson-2024 .data i.icon-new {font-size: 0; display: inline-block; width: 12px; height: 12px; margin-left: 4px; background: url(/assets/images/title/icon-new2.svg) no-repeat; vertical-align: middle;}
+body.lesson-2024 .data i.icon-new {font-size: 0; display: inline-block; width: 12px; height: 12px; margin-left: 4px; background: url(/assets/images/title/icon-new2.svg) no-repeat; transform: translateY(2px);}
 
 body.lesson-2024 .nav-slider.type-filter {padding:19px 74px;}
 body.lesson-2024 .nav-slider.type-filter .swiper-slide label {padding-top:8px; padding-bottom:6px;}
@@ -276,7 +278,8 @@ body.lesson-2024 .badge-lesson.txt-br {top:29px;}
 body.lesson-2024 .lesson-items.potiion-relative {position:relative;}
 body.lesson-2024 .lesson-items .item {padding-left:60px;}
 body.lesson-2024 .lesson-items .item:first-child:not(.item-style1):after {top:40px}
-body.lesson-2024 .lesson-items .item.item-style1 {padding-bottom:10px;}
+/* body.lesson-2024 .lesson-items .item.item-style1:last-child {padding-bottom:0;} */
+body.lesson-2024 .lesson-items .item.item-style1 {padding-bottom:16px;}
 body.lesson-2024 .lesson-items .item.item-style1:before {top:27px; border-color:#d2d2d2;}
 body.lesson-2024 .lesson-items .item.item-style1:after {top:37px; background-color:#d2d2d2;}
 body.lesson-2024 .lesson-items .item.item-style1 .badge-lesson.txt-br {top:16px; color:#bfbfbf; min-width:26px; width:26px; display:block;}
