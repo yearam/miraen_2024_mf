@@ -130,6 +130,22 @@ function myUploadBtnSlide(){
 	})
 }
 
+function pdfLenChk(){
+    var $obj = $('.item-group-list ul li'),
+        $btnsLen = $obj.find('button');
+
+    if(!$btnsLen.length){
+        return false;
+    }
+
+    $obj.each(function(){
+        var $len = $(this).find('button').length;
+        if(!$len == 0){
+            $(this).addClass('item-len-' + $len);
+        };
+    });
+}
+
 $(function () {
     accordionInit();
     $('.swiper-button-prev,.swiper-button-next').show();
@@ -140,4 +156,5 @@ $(function () {
     radioTabInit();
     getWindowHeight();
     myUploadBtnSlide();
+    pdfLenChk();
 });
