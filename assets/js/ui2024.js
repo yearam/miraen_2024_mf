@@ -131,7 +131,7 @@ function myUploadBtnSlide(){
 }
 
 function pdfLenChk(){
-    var $obj = $('.item-group-list ul li'),
+    var $obj = $('.contents-list ul li'),
         $btnsLen = $obj.find('button');
 
     if(!$btnsLen.length){

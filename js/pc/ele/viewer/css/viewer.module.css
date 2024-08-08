@@ -104,7 +104,7 @@
     height: auto;
 }
 
-/* 
+/*
 #download {
     position: absolute;
     right: 35px;
@@ -124,8 +124,8 @@
 /* video */
 .video-title{line-height: 79px;font-size: 36px}
 .icon-video {width: 75px;height: 79px;background:url('../img/common/icon-video.png') no-repeat 0 50%/100% auto;margin-right: 20px;vertical-align: top}
-.video-player{margin: 0px; border:20px solid #00bd76;border-radius:10px;}
-.video-js{color:rgba(255,255,255,.5)}
+.video-player{margin: 0px; border:20px solid #00bd76;}
+.video-js{color:rgba(255,255,255,.5); border-radius:8px 8px 0 0;}
 .video-js .vjs-button > .vjs-icon-placeholder:before, .vjs-icon-volume-mute:before, .video-js .vjs-mute-control .vjs-icon-placeholder:before{content: '' !important}
 .video-js .vjs-big-play-button{z-index:10; font-size: 0;top: 50%;left: 50%;width: 124px;height: 124px;background: url('../img/common/btn-play.png') no-repeat 0 0/100% auto;margin: -62px;}
 .video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus{background-color: transparent}

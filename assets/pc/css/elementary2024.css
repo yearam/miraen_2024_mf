@@ -37,12 +37,19 @@ body.lesson-2024 {
   /*touch-action: none;*/
   -webkit-touch-callout: none;
 }
+html.header-overlay,
+html.active-overlay {scrollbar-gutter: auto;}
+
 body.lesson-2024 h3,
 body.lesson-2024 .h3 {font-weight:700;}
 body.lesson-2024 .wrapper-lesson {min-width:1320px; height:calc(100vh - var(--scroll-height)); overflow:initial; padding-bottom:0; padding-top:0;}
+body.lesson-2024 .wrapper-lesson main {padding:15px 0 24px;}
 
 @supports (-webkit-touch-callout: none) {height:calc(var(--vh, 1vh) * 100 - 51px)}
 
+body.lesson-2024 .other-lesson .other-items {padding-top:15px;}
+
+body.lesson-2024 .wrapper-lesson .contents-header {margin-bottom:15px;}
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner {}
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner h2 {line-height:40px;}
 body.lesson-2024 .wrapper-lesson .contents-header .header-inner h2 .title-item {min-width:100px; height:40px; margin-right:10px; display:inline-flex; justify-content: center; align-items: center; line-height:40px; background-color:#EFEFEF; border:1px solid #D5D5D5; border-radius:30px; font-size:16px; color:#838383; font-weight:500; transform:translateY(-2px)}
@@ -61,11 +68,14 @@ body.lesson-2024 .lesson-header .lesson-header-buttons {display:flex; align-item
 body.lesson-2024 .lesson-header .lesson-header-buttons button i {width:20px; height:20px; display:block; background-position:0 0; background-repeat:no-repeat; background-size:100%;}
 body.lesson-2024 .lesson-header .lesson-header-buttons button i.ico-head-edit {background-image:url(/assets/images/subject/icon-head-edit.svg)}
 body.lesson-2024 .lesson-header .lesson-header-buttons button i.ico-head-share {background-image:url(/assets/images/subject/icon-head-share.svg)}
+/*
 body.lesson-2024 .lesson-header .lesson-header-buttons button#listEditBtn.active {border-color:#000; color:#000;}
 body.lesson-2024 .lesson-header .lesson-header-buttons button#listEditBtn.active i {background-image:url(/assets/images/subject/icon-list-edit.svg)}
 body.lesson-2024 .lesson-header .lesson-header-buttons button#listShareBtn:disabled {background-color:#76696B; border-color:#555555; color:#EFEFEF; opacity:1;}
 body.lesson-2024 .lesson-header .lesson-header-buttons button#listShareBtn:disabled i {background-image:url(/assets/images/subject/icon-head-share-disabled.svg)}
-
+body.lesson-2024 .lesson-header .lesson-header-buttons button#listEditBtn:disabled {background-color:#76696B; border-color:#555555; color:#EFEFEF; opacity:1;}
+body.lesson-2024 .lesson-header .lesson-header-buttons button#listEditBtn:disabled i {background-image:url(/assets/images/subject/icon-head-edit.svg)}
+*/
 body.lesson-2024 .lesson-header h3 {display:flex; align-items:center;}
 
 body.lesson-2024 .lesson-header .lesson-header-buttons .btn-caution img {vertical-align:top;}
@@ -109,7 +119,7 @@ body.lesson-2024 .lesson-data .data a .study-label {position:relative; margin-ri
 body.lesson-2024 .lesson-data .data a .study-label:after {content:''; width:1px; height:8px; display:block; position:absolute; right:0px; top:50%; transform:translateY(-50%); background-color:#E6E6E6;}
 body.lesson-2024 .lesson-data .data a .study-depth {font-size:12px; font-weight:500; color:#838383;}
 
-body.lesson-2024 .data a .badges .badge {border-color:rgba(0,0,0,0.15); z-index:0;}
+body.lesson-2024 .data a .badges .badge {border-color:rgba(0,0,0,0.15); z-index:0; margin-bottom:4px;}
 body.lesson-2024 .data.no-link .image-wrap,
 body.lesson-2024 .gu-mirror.no-link .inner-wrap .image-wrap {background-image:url(/assets/images/subject/icon-no-image-link.svg); background-size:25px 23px;} /* 25 23 */
 body.lesson-2024 .data.no-file .image-wrap,
@@ -145,6 +155,7 @@ body.lesson-2024 .gu-mirror .inner-wrap {display: inline-flex; align-items: cent
 body.lesson-2024 .gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
 body.lesson-2024 .gu-mirror img {vertical-align: top;}
 body.lesson-2024 .gu-mirror .badges {display: inline-flex; width: fit-content; margin-right: 4px;}
+body.lesson-2024 .data.gu-mirror a .badges .badge {margin-bottom:4px;}
 body.lesson-2024 .gu-mirror a {display:block; flex-wrap: wrap; align-items: center; gap: 4px 10px; width: 100%; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
 body.lesson-2024 .gu-mirror a > span[style*="display: none"] + strong.title-ellipsis {width:calc(100% - 20px); max-width:100%; display:block; display: -webkit-box; margin-top:0; -webkit-line-clamp: 2; white-space: normal;}
 body.lesson-2024 .gu-mirror .title-ellipsis {width:calc(100% - 20px); white-space:nowrap; display:inline-block; line-height: 1.5!important; -webkit-line-clamp:1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; width:auto;}
@@ -223,14 +234,13 @@ body.lesson-2024 .icon-button.c-black {color:#000;}
 .lesson-head-toggle-btn input[type="checkbox"] {display:none;}
 .lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle .toggle-txt.default {position:relative; z-index:1;}
 .lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle .toggle-txt {position:relative; z-index:1;}
-.lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle {width:121px; height:36px; position:relative; display:inline-flex; align-items: center; justify-content: space-around; box-shadow: inset 0px 3px 6px #D15B5B19; border: 2px solid #FFFFFF; border-radius: 18px; cursor:pointer;}
-.lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle .toggle-txt {font-size:15px; color:#fff; font-weight:700; transition: color ease-in-out .3s;}
-.lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle .toggle-txt.default {color:#000; transition: color ease-in-out .3s;}
+.lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle {width:121px; height:30px; position:relative; display:inline-flex; align-items: center; justify-content: space-around; box-shadow: inset 0px 3px 6px #D15B5B19; border: 2px solid #FFFFFF; border-radius: 18px; cursor:pointer;}
+.lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle .toggle-txt {font-size:15px; font-weight:700; transition: color ease-in-out .3s;}
+.lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle .toggle-txt.default {color:#E36F82; transition: color ease-in-out .3s;}
 .lesson-head-toggle-btn input[type="checkbox"] + .lesson-head-toggle:before {content:''; width:68px; height:calc(100% + 4px); display:block; position:absolute; left:-2px; top:-2px; background-color:#fff; box-shadow: 0px 3px 3px #00000029; border-radius:18px; transition:left ease-in-out .3s;}
 .lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle:before {left:calc(100% / 2 - 4px); transition:left ease-in-out .3s;}
-.lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle .toggle-txt {color:#000; transition: color ease-in-out .3s;}
+.lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle .toggle-txt {color:#E36F82; transition: color ease-in-out .3s;}
 .lesson-head-toggle-btn input[type="checkbox"]:checked + .lesson-head-toggle .toggle-txt.default {color:#fff; transition: color ease-in-out .3s;}
-
 
 .data.group-content {display:block;}
 .data.group-content .outer-wrap {display:flex; align-items:center; gap:20px;}
@@ -253,6 +263,10 @@ body.lesson-2024 .icon-button.c-black {color:#000;}
 .data.group-content .group-content-slide-btn:before {content: ''; border-width: 0 1px 1px 0; border-style: solid; border-color: #4B4B4B; padding: 3px; display: inline-block; position: absolute; left: 50%; top:5px; transform: translateX(-50%) rotate(45deg);}
 .data.group-content.active .group-content-slide-btn:before {top:8px; transform:translateX(-50%) rotate(225deg)}
 
+body.lesson-2024 .data.group-content.disabled {overflow:visible}
+body.lesson-2024 .data.group-content.disabled .group-content-slide-btn {pointer-events: none; z-index:11; overflow:hidden;}
+body.lesson-2024 .data.group-content.disabled .group-content-slide-btn:after {content: ''; width: 100%; height: 100%; display: block; position: absolute; left: 0; top: 0; background-color: rgba(246, 246, 246, .5);}
+
 .scrollable-container.has-bottom-toast-pop {overflow:hidden;}
 .buttom-toast-area {width:100%; height:70px; padding:0 20px; display:flex; align-items: center; justify-content: space-between; position:absolute; left:0; bottom:0; transform:translateY(100%); background-color:rgba(240,241,241,0.9); border:1px solid #E3E3E3; z-index:20; transition:transform ease-in-out .3s;}
 .buttom-toast-area.active {transform:translateY(0); transition:transform ease-in-out .3s;}
@@ -263,15 +277,17 @@ body.lesson-2024 .icon-button.c-black {color:#000;}
 .buttom-toast-area .toast-buttons .toast-button.toast-confirm {background-color:#01A39F; border-color:#0000001A; color:#fff;}
 .buttom-toast-area .toast-buttons .toast-button.toast-confirm:disabled {background-color:#E6E6E6; color:#A4A4A4;}
 .buttom-toast-area .toast-buttons .toast-button.toast-confirm:hover:not(:disabled) {background-color:#015C61;}
-.toast-edit-revert {width: 259px; height: 44px; position: absolute; left: 50%; bottom: 86px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 4px; background-color: rgba(0, 0, 0, 0.8); transform: translateX(-50%); font-weight: 500; color: #fff; opacity:0; transition:opacity ease-in-out .3s; z-index:12;}
-.toast-edit-revert.active {opacity:1; transition:opacity ease-in-out .3s;}
+.toast-edit-revert {width: 259px; height: 44px; position: absolute; left: 50%; bottom: -100px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 4px; background-color: rgba(0, 0, 0, 0.8); transform: translateX(-50%); font-weight: 500; color: #fff; opacity:0; transition:opacity ease-in-out .3s; z-index:12;}
+.toast-edit-revert.active {opacity:1; bottom: 86px; transition:opacity ease-in-out .3s;}
 .toast-edit-revert i {height:16px; display:block;}
 .toast-edit-revert i img {vertical-align: top;}
 
 body.lesson-2024 .breadcrumbs.type-period li {font-size:15px;}
+body.lesson-2024 .breadcrumbs.type-period li a {pointer-events:none;}
 body.lesson-2024 .lesson-data {gap:16px;}
 body.lesson-2024 .sub-lessons .lesson-data {gap:10px;}
 body.lesson-2024 .sub-lessons .lesson-data .data {border-color:transparent;}
+body.lesson-2024 .sub-lessons .lesson-data .data:hover {border-color:#8CD5D3;}
 body.lesson-2024 .badge-lesson {background: none; color: #02A39F; padding: 0; width: auto; height: auto; left: 0; top: 37px; font-size: 13px; font-weight: 700;}
 body.lesson-2024 .badge-lesson.txt-br {top:29px;}
 body.lesson-2024 .lesson-items.potiion-relative {position:relative;}
@@ -319,27 +335,29 @@ body.lesson-2024 .dropdown-select .options span span {font-size:12px; color:#A4A
 
 body.lesson-2024 .period-guide {width:1920px; height:1080px;}
 
-body.lesson-2024 .float-bottom-buttons {width:68px; position:absolute; right:20px; bottom:20px; z-index:15}
-body.lesson-2024 .float-bottom-buttons .float-button {width:68px; height:68px; right:0px; bottom:0px; background: transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box; box-shadow: 5px 5px 20px #17807D33; border: 1px solid #0000000A; font-size:11px; line-height:12px; z-index:1;}
+body.lesson-2024 .float-bottom-buttons {width:80px; position:absolute; right:20px; bottom:20px; z-index:15}
+body.lesson-2024 .float-bottom-buttons .float-button {width:80px; height:80px; right:0px; bottom:0px; background: transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box; box-shadow: 5px 5px 20px #17807D33; border: 1px solid #0000000A; font-size:11px; line-height:12px; z-index:1;}
 body.lesson-2024 .float-bottom-buttons.active .float-button {background:#747474;}
-body.lesson-2024 .float-bottom-buttons .float-button:after,
-body.lesson-2024 .float-bottom-buttons .float-button:before {content:''; width:3px; height:20px; display:block; position:absolute; background-color:#fff; border-radius:3px; transition:transform ease-in-out .3s}
-body.lesson-2024 .float-bottom-buttons .float-button:after {}
-body.lesson-2024 .float-bottom-buttons .float-button:before {transform:rotate(90deg)}
-body.lesson-2024 .float-bottom-buttons.active .float-button:after,
-body.lesson-2024 .float-bottom-buttons.active .float-button:before {transition:transform ease-in-out .3s}
-body.lesson-2024 .float-bottom-buttons.active .float-button:after {transform:rotate(45deg)}
-body.lesson-2024 .float-bottom-buttons.active .float-button:before {transform:rotate(135deg)}
-body.lesson-2024 .float-bottom-buttons .float-txt {width: max-content; position:absolute; right:77px; top:50%; transform:translateY(-50%); font-size:14px; font-weight:500; color:#159EA0;}
-body.lesson-2024 .float-bottom-buttons .float-button-menu .float-txt {color:#626262; right:70px;}
-body.lesson-2024 .float-bottom-buttons .float-button-menu {width:56px; height:56px; position:absolute; left:50%; bottom:20px; background:transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box; box-shadow: 0px 2px 6px #0000001A; border: 1px solid #0000000A; border-radius: 40px; transform:translateX(-50%); background-position:center center; background-repeat:no-repeat;}
+body.lesson-2024 .float-bottom-buttons .float-button .ico-line {width:26px; height:26px; display:block; position:relative;}
+body.lesson-2024 .float-bottom-buttons .float-button .ico-line:after,
+body.lesson-2024 .float-bottom-buttons .float-button .ico-line:before {content:''; width:3px; height:20px; display:block; position:absolute; left:50%; margin-left:-1px; background-color:#fff; border-radius:3px; transition:transform ease-in-out .3s}
+body.lesson-2024 .float-bottom-buttons .float-button .ico-line:after {}
+body.lesson-2024 .float-bottom-buttons .float-button .ico-line:before {transform:rotate(90deg)}
+body.lesson-2024 .float-bottom-buttons.active .float-button .ico-line:after,
+body.lesson-2024 .float-bottom-buttons.active .float-button .ico-line:before {transition:transform ease-in-out .3s}
+body.lesson-2024 .float-bottom-buttons.active .float-button .ico-line:after {transform:rotate(45deg)}
+body.lesson-2024 .float-bottom-buttons.active .float-button .ico-line:before {transform:rotate(135deg)}
+body.lesson-2024 .float-bottom-buttons .float-txt {font-size:12px; font-weight:500; color:#fff; line-height:14px;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu {width:56px; height:56px; position:absolute; left:50%; bottom:20px; background: transparent linear-gradient(135deg, #36BAC1 0%, #02A39F 100%) 0% 0% no-repeat padding-box; box-shadow: 5px 5px 15px #17807D33; border: 1px solid #0000000A; border-radius: 40px; transform:translateX(-50%); background-position:center center; background-repeat:no-repeat;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu .float-txt {width: max-content; opacity:0; visibility: hidden; padding:6px 7px; color:#fff; position: absolute; right: 64px; bottom: 14px; background: #000000 0% 0% no-repeat padding-box; border-radius: 4px; transition:all ease-out .3s;}
+body.lesson-2024 .float-bottom-buttons .float-button-menu:hover .float-txt {opacity: 0.65; visibility: visible; transition:all ease-in .3s;}
 body.lesson-2024 .float-bottom-buttons .float-button-menu:before {content:''; display:block; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background-repeat:no-repeat; background-position:0 0;}
 body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-1 {bottom:0px; opacity:0; transition:all ease-in-out .3s;}
 body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-2 {bottom:0px; opacity:0; transition:all ease-in-out .3s;}
 body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-1:before {width:16px; height:20px; background-image:url(/assets/images/subject/icon-upload-make-ppt.svg)}
 body.lesson-2024 .float-bottom-buttons .float-button-menu.menu-2:before {width:19px; height:17px; background-image:url(/assets/images/subject/icon-upload-folder-arrow-up.svg)}
-body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-1 {bottom:80px; opacity:1; transition:all ease-in-out .3s;}
-body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-2 {bottom:148px; opacity:1; transition:all ease-in-out .3s;}
+body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-1 {bottom:92px; opacity:1; transition:all ease-in-out .3s;}
+body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-2 {bottom:158px; opacity:1; transition:all ease-in-out .3s;}
 
 .max-width-1500 {display:none;}
 .icon-size-20 {width: 20px; height: 20px; vertical-align: top;}
