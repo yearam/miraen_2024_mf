@@ -150,7 +150,9 @@ body.lesson-2024 .gu-mirror {position: fixed !important; opacity: 80% !important
 body.lesson-2024 .gu-mirror .active-vertical,
 body.lesson-2024 .gu-mirror .active-horizontal {position: relative; border-color:#8CD5D3; background-color:#F2FAFA; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
 body.lesson-2024 .gu-mirror.active-vertical::before,
-body.lesson-2024 .gu-mirror.active-horizontal::before {content: "" !important; position: absolute !important; top: 50% !important; left: 0 !important; width: 30px !important; height: 30px !important; border-radius: 100% !important; background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important; background-position: center!important; background-repeat: no-repeat!important; background-size: contain!important; box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important; transform: translate(-50%, -50%)!important; background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;}
+body.lesson-2024 .gu-mirror.active-horizontal::before {content: "" !important; position: absolute !important; top: 50% !important; left: 0 !important; width: 30px !important; height: 30px !important; border-radius: 100% !important; background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important; background-position: center!important; background-repeat: no-repeat!important; background-size: contain!important; box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important; transform: translate(-50%, -50%)!important;}
+body.lesson-2024 .gu-mirror.active-vertical::before {background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important;}
+body.lesson-2024 .gu-mirror.active-horizontal::before {background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;}
 body.lesson-2024 .gu-mirror .inner-wrap {display: inline-flex; align-items: center; gap: 20px; overflow: hidden;}
 body.lesson-2024 .gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
 body.lesson-2024 .gu-mirror img {vertical-align: top;}
@@ -364,7 +366,7 @@ body.lesson-2024 .float-bottom-buttons.active .float-button-menu.menu-2 {bottom:
 
 body.lesson-2024 .other-lesson .item a::after {display:none;}
 
-.drag-handle {width:150px; height:100%; display:block; position:absolute; left:0; top:0;}
+.drag-handle {width:150px; height:100%; display:block; position:absolute; left:0; top:0; z-index:1;}
 .drag-handle:before {
   content: "";
   position: absolute;
@@ -373,13 +375,14 @@ body.lesson-2024 .other-lesson .item a::after {display:none;}
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background-image: url("/assets/images/common/icon-chevron-up-down.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2);
   transform: translate(-50%, -50%);
 }
+.lesson-items .lesson-data .drag-handle:before {background-image: url("/assets/images/common/icon-chevron-up-down.svg");}
+.sub-lessons .lesson-data .drag-handle:before {background-image: url("/assets/images/common/icon-chevron-left-right.svg");}
 
 @media (max-width:1500px) {
   .max-width-1500 {display:block;}
