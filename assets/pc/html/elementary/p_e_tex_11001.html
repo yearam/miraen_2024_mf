@@ -520,8 +520,8 @@
 									</div>
 
 									<div class="data-group-child-area">
-										<ul class="child-list">
-											<li class="disabled"><!-- disabled class 추가 -->
+										<div class="child-list">
+											<div class="child-list-item disabled"><!-- disabled class 추가 -->
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -538,8 +538,8 @@
 														<span class="txt-hidden">편집</span>
 													</button>
 												</div>
-											</li>
-											<li>
+											</div>
+											<div class="child-list-item">
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -556,8 +556,8 @@
 														<span class="txt-hidden">편집</span>
 													</button>
 												</div>
-											</li>
-											<li>
+											</div>
+											<div class="child-list-item">
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -569,8 +569,8 @@
 														</div>
 													</a>
 												</div>
-											</li>
-										</ul>
+											</div>
+										</div>
 									</div>
 									<button type="button" class="group-content-slide-btn"><span class="txt-hidden"></span></button>
 								</div><!-- //.data -->
@@ -599,8 +599,8 @@
 									</div>
 
 									<div class="data-group-child-area">
-										<ul class="child-list">
-											<li class="disabled"><!-- disabled class 추가 -->
+										<div class="child-list">
+											<div class="child-list-item disabled"><!-- disabled class 추가 -->
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -618,8 +618,26 @@
 														<span class="txt-hidden">체크박스</span>
 													</label>
 												</div>
-											</li>
-											<li>
+											</div>
+											<div class="child-list-item gu-mirror" style="width: 417px; height: 66px; left: 175px; top: 591px;">
+												<div class="inner-wrap">
+													<div class="image-wrap">
+														<img src="/assets/images/temp/img-lesson02.png" alt="">
+													</div>
+													<a href="/">
+														<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
+														<div class="number-pages">
+															<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+														</div>
+													</a>
+												</div>
+												<div class="buttons">
+													<button type="button" class="button type-icon size-sm ico-list-edit full-size">
+														<span class="txt-hidden">편집</span>
+													</button>
+												</div>
+											</div>
+											<div class="child-list-item">
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -637,8 +655,8 @@
 														<span class="txt-hidden">체크박스</span>
 													</label>
 												</div>
-											</li>
-											<li>
+											</div>
+											<div class="child-list-item">
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -656,8 +674,8 @@
 														<span class="txt-hidden">체크박스</span>
 													</label>
 												</div>
-											</li>
-										</ul>
+											</div>
+										</div>
 									</div>
 									<button type="button" class="group-content-slide-btn"><span class="txt-hidden"></span></button>
 								</div><!-- //.data -->
@@ -2504,7 +2522,7 @@ $(function(){
 
 	var drake = dragula(
 		[
-			document.querySelector('#sample-scroll1'), document.querySelector('#sample-scroll2')
+			document.querySelector('#sample-scroll1'), document.querySelector('#sample-scroll2'), document.querySelector('.child-list')
 		],
 	);
 
