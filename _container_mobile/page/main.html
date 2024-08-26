@@ -10,7 +10,9 @@
     <title>엠티처 mobile - container</title>
     <script src="../js/jquery-3.7.0.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
     <link href="../css/style.css" rel="stylesheet">
+
     <!-- 바로가기 아이콘 -->
     <link rel="shortcut icon" type="image/png" href="../images/common/img-shortcut-common.png">
     <!-- 180x180 이미지를 권장합니다. -->
@@ -38,8 +40,8 @@
 
                 <div class="viewer-contents">
                     <!-- 뷰어 영역 시작 -->
-                    <div style="width:100%; height:100%;">
-                        <iframe id="web_document_iframe" width="100%" height="100%" scrolling="yes" allowfullscreen="" allowtransparency="true" src="./page10.html" style="border: 0;overflow: hidden;"></iframe>
+                    <div style="width:100%; height:100%;" id="panzoom-element">
+                        <iframe style="width:100%;height:100%;" src="./page11.html" frameborder="0"></iframe>
                     </div>
 
                     <div class="viewer-contents-paging">
@@ -73,6 +75,12 @@
                             역사로 탐구하는 현대세계 444~446쪽
                         </p>
                     </div>
+
+                    <div class="button-group">
+                        <button type="button" class="button icon-group-btns"><span class="txt-hidden">준비물 꾸러미 아이콘</span></button>
+                        <button type="button" class="button icon-group-btns"><span class="txt-hidden">준비물 꾸러미 아이콘</span></button>
+                        <button type="button" class="button icon-group-btns"><span class="txt-hidden">준비물 꾸러미 아이콘</span></button>
+                    </div>
                 </div>
             </div><!-- #contents -->
         </section><!-- #container -->
@@ -100,25 +108,27 @@
                     </button>
                 </div>
 
-                <button type="button" class="button btn-answer-check"><!-- 활성 : active class -->
-                    <i class="icon-answer-check position-unset"></i>
-                    <span>정답 확인</span>
-                </button>
+                <div class="right-btns">
+                    <button type="button" class="button btn-answer-check"><!-- 활성 : active class -->
+                        <i class="icon-answer-check position-unset"></i>
+                        <span>정답 확인</span>
+                    </button>
 
-                <button type="button" class="button btn-answer-retry" style="display:none"><!-- 활성 : active class -->
-                    <i class="icon-answer-retry position-unset"></i>
-                    <span>다시하기</span>
-                </button>
+                    <button type="button" class="button btn-answer-retry"><!-- 활성 : active class -->
+                        <i class="icon-answer-retry position-unset"></i>
+                        <span>다시하기</span>
+                    </button>
 
-                <button type="button" class="button btn-download" style="display:none"><!-- 활성 : active class -->
-                    <i class="icon-download position-unset"></i>
-                    <span>다운로드</span>
-                </button>
+                    <button type="button" class="button btn-download" style="display:none"><!-- 활성 : active class -->
+                        <i class="icon-download position-unset"></i>
+                        <span>다운로드</span>
+                    </button>
 
-                <button type="button" class="button btn-new-window" style="display:none"><!-- 활성 : active class -->
-                    <i class="icon-new-window position-unset"></i>
-                    <span>바로가기</span>
-                </button>
+                    <button type="button" class="button btn-new-window" style="display:none"><!-- 활성 : active class -->
+                        <i class="icon-new-window position-unset"></i>
+                        <span>바로가기</span>
+                    </button>
+                </div>
             </div><!-- .footer-inner -->
         </footer><!-- #footer -->
     </div><!-- // #wrap -->
@@ -341,6 +351,45 @@
         </div>
     </div>
 
-</body>
+    <!--
+    layerOpen('.layer-04');
+    layerClose('.layer-04');
+    -->
+    <div class="layer-popup is-package layer-04"><!-- 활성 : active class -->
+        <div class="layer-inner">
+            <div class="layer-header">
+                <div class="header-inner">
+                    <h1 class="header-title">준비물 꾸러미</h1>
+                    <button type="button" class="button btn-window-close" onclick="layerClose('.layer-04')"><!-- 팝업 닫기 layerClose(대상) -->
+                        <i class="icon-window-close"></i>
+                        <span class="txt-hidden">창 닫기</span>
+                    </button>
+                </div>
+            </div>
 
+            <div class="layer-body">
+                <div class="layer-body-inner">
+                    <div>
+                        <!-- 내용이 들어갑니다. -->
+                        준비물 꾸러미
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+const elem = document.getElementById('panzoom-element')
+const panzoom = Panzoom(elem, {
+  maxScale: 5
+})
+panzoom.pan(10, 10)
+panzoom.zoom(1, { animate: true })
+
+// Panning and pinch zooming are bound automatically (unless disablePan is true).
+// There are several available methods for zooming
+// that can be bound on button clicks or mousewheel.
+
+</script>
 </html>

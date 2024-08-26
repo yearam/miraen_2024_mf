@@ -20,16 +20,25 @@ function accordionInit() {
     })
 }
 
-function txtLineBr(){
-    var $target = $('.badge-lesson');
-    $target.each(function(){
-        var $len = $(this).text().length;
-        if($len > 2 && $(this).parent().hasClass('item-style1')){
-            $(this).addClass('txt-br');
-        } else if($len > 2){
-            $(this).addClass('line-br')
+function txtLineBr() {
+    $('.badge-lesson').each(function () {
+        var $this = $(this);
+        var len = $this.text().length;
+
+        if(len == 3){
+            $this.addClass('txt-3'); // 3글자, 1줄
+        } else if (len > 2 && len <= 5) {
+            $this.addClass('line-br'); // 2글자, 2줄
+        } else if (len > 5 && len <= 6) {
+            $this.removeClass('line-br').addClass('line-br-3txt'); // 3글자 2줄
+        } else if (len > 6 && len <= 15) {
+            $this.removeClass('line-br').addClass('line-br2-3txt'); // 3글자 3줄
         }
-    })
+
+        if ($this.parent().hasClass('item-style1') && len > 2) {
+            $this.addClass('txt-br').removeClass('line-br'); // 이전주제, 다음주제 2글자, 2줄
+        }
+    });
 }
 
 function dataGroupSlide(){
@@ -146,6 +155,12 @@ function pdfLenChk(){
     });
 }
 
+function menuDimHide(){
+    $(document).on('click', '#other-items .dimd' , function(e){
+        closePopup({id: "other-items"});
+    });
+}
+
 $(function () {
     accordionInit();
     $('.swiper-button-prev,.swiper-button-next').show();
@@ -157,4 +172,5 @@ $(function () {
     getWindowHeight();
     myUploadBtnSlide();
     pdfLenChk();
+    menuDimHide();
 });

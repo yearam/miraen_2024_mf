@@ -1,5 +1,5 @@
 function getWindowHeight(){
-	var target = $('.viewer-contents, .layer-popup .layer-body .layer-body-inner');
+	var target = $('body');
 	function setScrH(){
         var vh = window.innerHeight * 0.01;
         target.css('--vh',`${vh}px`)
@@ -45,8 +45,20 @@ function layerClose(target){
     target.removeClass('active');
 }
 
+function btnLenChk(){
+    var btns = $('.footer-inner'),
+        target = $('#footer .right-btns button:visible').length;
+
+    if(target == 2){
+        btns.addClass('type01');
+    } else {
+        btns.removeClass('type01');
+    }
+};
+
 $(function(){
     getWindowHeight();
     layerChk();
     viewStudyInfo();
+    btnLenChk();
 })

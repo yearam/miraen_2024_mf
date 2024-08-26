@@ -10479,6 +10479,8 @@ span.like {
   color: #a4a4a4;
   z-index: 3;
 }
+.popup-container .close-button {width:40px; height:40px; right:13px; top:16px;}
+.popup-container .close-button svg {width:36px; height:36px; stroke-width:0.7px;}
 .popup-container .header, .iframe-container .header {
   text-align: center;
   font-weight: 500;
@@ -11594,7 +11596,7 @@ span.like {
 }
 .nav-slider .swiper-button svg {
   width: 14px;
-  height: auto;
+  /* height: auto; */
 }
 .nav-slider .swiper-button-prev {
   left: 30px;

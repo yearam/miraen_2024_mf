@@ -641,6 +641,8 @@ const sliderNav = function (item, count, leftMargin, rightMargin) {
     // freeMode: true,
       // watchSlidesProgress: true,
   });
+
+  console.log(swiper)
 };
 
 const sliderQuickmenu = function () {
