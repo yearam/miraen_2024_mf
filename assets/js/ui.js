@@ -642,7 +642,6 @@ const sliderNav = function (item, count, leftMargin, rightMargin) {
       // watchSlidesProgress: true,
   });
 
-  console.log(swiper)
 };
 
 const sliderQuickmenu = function () {

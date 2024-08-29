@@ -13,6 +13,12 @@
     <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/assets/js/ui.js" type="text/javascript"></script>
     <script src="/assets/js/ui2024.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <link href="/assets/pc/css/common2024.css" rel="stylesheet" />
     <link href="/assets/pc/css/container2024.css" rel="stylesheet" />
     <!-- 바로가기 아이콘 -->
@@ -38,6 +44,20 @@
           <a href="#" class="label-pages"><i></i>국어 110~120쪽</a>
           <a href="#" class="label-pages"><i></i>국어 활동 110~112쪽</a>
           <button type="button" class="btn save-class">진도 저장</button>
+          <div class="btn-ai-class-area active">
+            <button type="button" class="btn btn-ai-class">
+              <img src="/assets/images/container/logo-aiclass-logo@2x.png" alt="AI CLASS">
+              <i class="icon-ai-class-arrow"></i>
+            </button>
+            <div class="al-class-menus-area">
+              <ul class="al-class-menus">
+                <li><button type="button">QR코드</button></li>
+                <li><button type="button">공유</button></li>
+                <li><button type="button">리포트<i class="icon-new-window"></i></button></li>
+                <li><button type="button">실시간 수업 현황<i class="icon-new-window"></i></button></li>
+              </ul>
+            </div>
+          </div>
           <button type="button" class="icon-help">도움말</button>
         </div>
       </header>
@@ -243,9 +263,18 @@
           </button>
           <div class="" style="display: none;">(그리기 툴바)</div>
           <button type="button" class="btn fix mathtool"><!-- fix 클래스 추가 -->
-            <span>수학교구</span>
+            <span>수학 교구</span>
           </button>
-          <div class="mathtool-menu" style="display: none;">
+
+          <button type="button" class="btn fix chinese-chr"><!-- fix 클래스 추가 -->
+            <span>자전</span>
+          </button>
+
+          <button type="button" class="btn fix voca-list"><!-- fix 클래스 추가 -->
+            <span>단어장</span>
+          </button>
+
+          <div class="mathtool-menu">
             <ul>
               <li>
                 <button type="button" class="btn deg">
@@ -303,7 +332,7 @@
         <div class="right-item">
           <div class="contents-control"><!-- contents-control 클래스 추가 -->
             <!--<button type="button" class="btn download"><span>다운로드</span></button>-->
-            <button type="button" class="btn retry"><span>다시하기</span></button>
+            <button type="button" class="btn retry"><span>다시 하기</span></button>
             <button type="button" class="btn a-check"><span>정답 확인</span></button>
           </div>
           <div class="zoom-group">
@@ -374,8 +403,21 @@ function modalActive(){
 
 }
 
+function getWindowHeight(){
+	var target = $('body');
+	function setScrH(){
+        var vh = window.innerHeight * 0.01;
+        target.css('--vh',`${vh}px`)
+	}
+	setScrH();
+	$(window).on('resize' , function(){
+		setScrH();
+	})
+}
+
 $(function(){
   //modalActive();
+  getWindowHeight();
 })
 </script>
 

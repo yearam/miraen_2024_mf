@@ -104,7 +104,7 @@ function radioTabInit(){
         $panel.eq($idx).addClass('active');
     });
 }
-
+/*
 function getWindowHeight(){
 	var wIh = $(window).innerHeight();
 	var wOh = $(window).outerHeight();
@@ -126,6 +126,25 @@ function getWindowHeight(){
 
 	setScrH();
 
+	$(window).on('resize' , function(){
+		setScrH();
+	})
+}
+*/
+function getWindowHeight(){
+	var target = $('body');
+    var wIh = $(window).innerHeight();
+    var wOh = $(window).outerHeight();
+    var scrH = wOh - wIh;
+
+	function setScrH(){
+        var vh = window.innerHeight * 0.01;
+        target.css({
+            '--vh' : `${vh}px`,
+            '--scroll-height':`${scrH}px`
+        })
+	}
+	setScrH();
 	$(window).on('resize' , function(){
 		setScrH();
 	})
@@ -161,6 +180,25 @@ function menuDimHide(){
     });
 }
 
+function topAiClassMenu(){
+    var $obj = $('.btn-ai-class-area'),
+        $btn = $obj.find('.btn-ai-class');
+
+    if(!$obj.length){
+        return false;
+    }
+
+    $btn.on('click' , function(){
+        $obj.toggleClass('active');
+    });
+
+    $(document).on('click' , function(e){
+        if($(e.target).parents('.btn-ai-class-area').length < 1){
+            $obj.removeClass('active');
+        }
+    });
+}
+
 $(function () {
     accordionInit();
     $('.swiper-button-prev,.swiper-button-next').show();
@@ -173,4 +211,5 @@ $(function () {
     myUploadBtnSlide();
     pdfLenChk();
     menuDimHide();
+    topAiClassMenu();
 });

@@ -31,7 +31,7 @@
 <link href="/assets/pc/css/pages/elementary/period-guide.css" rel="stylesheet" />
 
 <body class="theme-elementary lesson-2024"> <!-- lesson-2024 클래스 추가 -->
-	<div class="wrapper-lesson" style="--scroll-height:100vh">
+	<div class="wrapper-lesson">
 		<header class="period-header">
 			<div class="period-inner">
 				<!-- 교과활동 수업하기 차시창 -->
@@ -54,6 +54,11 @@
 
 		<main id="main-contents" class="scrollable-container">
 			<div class="contents-header">
+				<div class="subject-msg-layer active">
+					<i class="icon-monitor"></i>
+					<p class="subject-msg-txt">선생님의 수업에 맞춰 재구성하고 학생과 공유할 수 있는 미래엔의 새로운 스마트수업을 체험해 보세요.</p>
+					<button type="button" class="btn-subject-msg-close"><span class="txt-hidden">닫기</span></button>
+				</div>
 				<div class="header-inner">
 					<h2><!--<span class="title-item">교과서 수업</span>-->[3~4차시] 느낌을 살려 사물 표현하기</h2>
 					<div class="number-pages">
@@ -522,6 +527,7 @@
 									<div class="data-group-child-area">
 										<div class="child-list">
 											<div class="child-list-item disabled"><!-- disabled class 추가 -->
+												<span class="drag-handle"></span>
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -540,6 +546,7 @@
 												</div>
 											</div>
 											<div class="child-list-item">
+												<span class="drag-handle"></span>
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -558,6 +565,7 @@
 												</div>
 											</div>
 											<div class="child-list-item">
+												<span class="drag-handle"></span>
 												<div class="inner-wrap">
 													<div class="image-wrap">
 														<img src="/assets/images/temp/img-lesson02.png" alt="">
@@ -617,24 +625,6 @@
 													<label for="group-checkbox2" class="button type-icon size-sm ico-list-checkbox full-size">
 														<span class="txt-hidden">체크박스</span>
 													</label>
-												</div>
-											</div>
-											<div class="child-list-item gu-mirror" style="width: 417px; height: 66px; left: 175px; top: 591px;">
-												<div class="inner-wrap">
-													<div class="image-wrap">
-														<img src="/assets/images/temp/img-lesson02.png" alt="">
-													</div>
-													<a href="/">
-														<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
-														<div class="number-pages">
-															<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
-														</div>
-													</a>
-												</div>
-												<div class="buttons">
-													<button type="button" class="button type-icon size-sm ico-list-edit full-size">
-														<span class="txt-hidden">편집</span>
-													</button>
 												</div>
 											</div>
 											<div class="child-list-item">
@@ -2513,7 +2503,24 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="child-list-item gu-mirror" style="width: 417px; height: 66px; left: 175px; top: 591px;">
+		<div class="inner-wrap">
+			<div class="image-wrap">
+				<img src="/assets/images/temp/img-lesson02.png" alt="">
+			</div>
+			<a href="/">
+				<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
+				<div class="number-pages">
+					<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+				</div>
+			</a>
+		</div>
+		<div class="buttons">
+			<button type="button" class="button type-icon size-sm ico-list-edit full-size">
+				<span class="txt-hidden">편집</span>
+			</button>
+		</div>
+	</div>
 </body>
 
 <script>
@@ -2541,7 +2548,9 @@ $(function(){
 $('#other-items .dimd').on('click' , function(){
 	closePopup({id: "other-items"});
 })
-
+$('.subject-msg-layer button').on('click' , function(){
+	$(this).parent().hide();
+})
 //openPopup({id: "popup-default"});
 //closePopup({id: "popup-default"});
 

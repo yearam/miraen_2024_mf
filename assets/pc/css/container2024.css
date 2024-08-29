@@ -2,6 +2,10 @@
 
 @import url(./container2024_tablet.css);
 
+:root {
+  --vh:var(--vh);
+}
+
 body.bg-default-img {
   background:url(/renewal/images/container/bg-default-img@2x.png) center center no-repeat; background-size:cover;
 }
@@ -10,6 +14,7 @@ body.bg-default-img {
   position: relative;
   /* min-width: 1320px; */
   height: 100vh;
+  height:calc(var(--vh, 1vh) * 100);
   color: #333;
   overflow: hidden;
 }
@@ -217,6 +222,7 @@ body.bg-default-img {
   display: flex;
   flex-wrap: wrap;
   height: calc(100vh - 120px);
+  height:calc(var(--vh, 1vh) * 100 - 120px);
 }
 
 .container-wrapper .container-main .contents-list-wrap {
@@ -264,6 +270,7 @@ body.bg-default-img {
 
 .container-wrapper .container-main .contents-list-wrap .contents-list {
   max-height: calc(100vh - 181px);
+  max-height:calc(var(--vh, 1vh) * 100 - 181px);
   overflow: auto;
 }
 
@@ -613,9 +620,11 @@ body.bg-default-img {
 }
 .container-wrapper .container-main .viewer-wrap .view-content-area.height-type-both {
   height: calc(100vh - 120px);
+  height:calc(var(--vh, 1vh) * 100 - 120px);
 }
 .container-wrapper .container-main .viewer-wrap .view-content-area.height-type2-both {
   height: calc(100vh - 180px);
+  height:calc(var(--vh, 1vh) * 100 - 180px);
 }
 .container-wrapper .container-main .viewer-wrap .view-content-area .btn-view-prev {}
 .container-wrapper .container-main .viewer-wrap .view-content-area [class^="btn-view-"] {width:60px; height:100%; position:absolute; top:0;}
@@ -947,14 +956,34 @@ body.bg-default-img {
   width: 100%;
 }
 
+.container-wrapper .container-footer .btn.chinese-chr:before {
+  width:16.6px;
+  height:18.1px;
+  background: url('/renewal/images/container/icon-chinese-chr.svg') center center no-repeat;
+}
+
+.container-wrapper .container-footer .btn.chinese-chr:hover:before,
+.container-wrapper .container-footer .btn.chinese-chr:focus:before {
+  background: url('/renewal/images/container/icon-chinese-chr-white.svg') center center no-repeat;
+}
+.container-wrapper .container-footer .btn.voca-list:before {
+  width:15.8px;
+  height:18.1px;
+  background: url('/renewal/images/container/icon-voca-list.svg') center center no-repeat;
+}
+.container-wrapper .container-footer .btn.voca-list:hover:before,
+.container-wrapper .container-footer .btn.voca-list:focus:before {
+  background: url('/renewal/images/container/icon-voca-list-white.svg') center center no-repeat;
+}
+
 .container-wrapper .container-footer .mathtool-menu ul li .btn.deg:before {
-  width: 14px;
-  height: 19px;
-  background: url('/renewal/images/container/icon-con-footer-btn-mathtool-deg.svg') center center no-repeat;
+  width: 21px;
+  height: 15.6px;
+  background: url('/renewal/images/container/icon-mathtool-deg.svg') center center no-repeat;
 }
 .container-wrapper .container-footer .mathtool-menu ul li .btn.deg:hover:before,
 .container-wrapper .container-footer .mathtool-menu ul li .btn.deg.active:before {
-  background: url('/renewal/images/container/icon-con-footer-btn-mathtool-deg-white.svg') center center no-repeat;
+  background: url('/renewal/images/container/icon-mathtool-deg-white.svg') center center no-repeat;
 }
 .container-wrapper .container-footer .mathtool-menu ul li .btn.ruler:before {
   width: 19px;
@@ -1432,6 +1461,25 @@ body.bg-default-img {
 	width: 150px;
 }
 
+.container-wrapper .btn-ai-class-area {position:relative;}
+.container-wrapper .btn-ai-class-area .btn-ai-class {display:flex; align-items: center; margin:0 4px 0 16px; padding:0 16px 0 12px; position:relative;}
+.container-wrapper .btn-ai-class-area .btn-ai-class:before,
+.container-wrapper .btn-ai-class-area .btn-ai-class:after {content: ''; width: 1px; height: 23px; display: block; position: absolute; top: 50%; transform: translateY(-50%); background-color: #D0D0D0;}
+.container-wrapper .btn-ai-class-area .btn-ai-class:before {left:0;}
+.container-wrapper .btn-ai-class-area .btn-ai-class:after {right:0;}
+.container-wrapper .btn-ai-class-area .btn-ai-class .icon-ai-class-arrow {width:10px; height:10px; margin-left:8px; display:inline-flex; background:url(/renewal/images/container/icon-ai-class-arrow.svg) 0 0 no-repeat; background-size:100%; transform:translateY(-1px) rotate(0deg)}
+.container-wrapper .btn-ai-class-area .btn-ai-class img {width:80px; border:0; transform: translateY(3px);}
+.container-wrapper .btn-ai-class-area .al-class-menus-area {width:max-content; display:none; padding:18px 24px; position:absolute; right:0; top:56px; text-align:left; border: 1px solid #ddd; border-radius: 6px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); background: #fff; z-index:1;}
+.container-wrapper .btn-ai-class-area .al-class-menus-area .al-class-menus {gap:16px 0; flex-direction: column;}
+.container-wrapper .btn-ai-class-area .al-class-menus-area .al-class-menus li {}
+.container-wrapper .btn-ai-class-area .al-class-menus-area .al-class-menus li button {display:flex; align-items: center; gap:0 8px; font-size:15px; font-weight:500; color:#000;}
+.container-wrapper .btn-ai-class-area .al-class-menus-area .al-class-menus li button:hover,
+.container-wrapper .btn-ai-class-area .al-class-menus-area .al-class-menus li button:focus {color:#1E51A1;}
+.container-wrapper .btn-ai-class-area .al-class-menus-area .al-class-menus li button i {width:13.5px; height:13.5px; display:inline-flex; background:url(/renewal/images/container/icon-con-viewer-control-link.svg) 0 0 no-repeat; background-size:100%;}
+
+.container-wrapper .btn-ai-class-area.active .btn-ai-class .icon-ai-class-arrow {transform:translateY(-1px) rotate(-180deg)}
+.container-wrapper .btn-ai-class-area.active .al-class-menus-area {display:block;}
+
 .container-wrapper .container-footer .right-item > div.contents-control .btn { width: 110px; }
 
 /* middle ver. */
@@ -1610,10 +1658,12 @@ body.bg-default-img {
 #viewer-area {
   width: 100%;
   height: calc(100vh - 121px);
+  height:calc(var(--vh, 1vh) * 100 - 121px);
   background-color: #fff;
 }
 #viewer-area.with-bottom {
   height: calc(100vh - 181px);
+  height:calc(var(--vh, 1vh) * 100 - 181px);
 }
 #viewer-area .content-flex-align-item {height:100%; display:flex; justify-content: center; align-items: center;}
 .content-item-name {

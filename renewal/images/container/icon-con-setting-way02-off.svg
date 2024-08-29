@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="90" viewBox="0 0 100 90">
   <g id="icon" transform="translate(-75 -319)">
     <rect id="사각형_3806" data-name="사각형 3806" width="98" height="88" transform="translate(76 320)" fill="none" stroke="#838383" stroke-width="2"/>
-    <g id="페이징" transform="translate(-288 -183)">
+    <g id="페이징" transform="translate(-293 -183)">
       <text id="_1_2" data-name="1 / 2" transform="translate(414 581.5)" fill="#c7c7c7" font-size="12" font-family="Outfit-Medium, Outfit" font-weight="500" letter-spacing="-0.014em"><tspan x="-9.846" y="0">1 /</tspan><tspan y="0" xml:space="preserve" fill="#838383"> 2</tspan></text>
       <path id="패스_5520" data-name="패스 5520" d="M84.414,328.665h3.824V327.25H83v5.239h1.415Z" transform="translate(101.91 404.738) rotate(-45)" fill="#afafaf" fill-rule="evenodd"/>
-      <path id="패스_5521" data-name="패스 5521" d="M1.415,3.825H5.239V5.24H0V0H1.414Z" transform="translate(431.704 581.154) rotate(-135)" fill="#838383" fill-rule="evenodd"/>
+      <path id="패스_5521" data-name="패스 5521" d="M1.415,3.825H5.239V5.24H0V0H1.414Z" transform="translate(438.704 581.154) rotate(-135)" fill="#838383" fill-rule="evenodd"/>
     </g>
   </g>
 </svg>
