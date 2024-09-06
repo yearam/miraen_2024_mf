@@ -963,19 +963,20 @@ body.bg-default-img {
 }
 
 .container-wrapper .container-footer .btn.chinese-chr:hover:before,
-.container-wrapper .container-footer .btn.chinese-chr:focus:before {
+/* .container-wrapper .container-footer .btn.chinese-chr:focus:before, */
+.container-wrapper .container-footer .btn.chinese-chr.active:before {
   background: url('/renewal/images/container/icon-chinese-chr-white.svg') center center no-repeat;
 }
-.container-wrapper .container-footer .btn.voca-list:before {
-  width:15.8px;
-  height:18.1px;
-  background: url('/renewal/images/container/icon-voca-list.svg') center center no-repeat;
-}
-.container-wrapper .container-footer .btn.voca-list:hover:before,
-.container-wrapper .container-footer .btn.voca-list:focus:before {
-  background: url('/renewal/images/container/icon-voca-list-white.svg') center center no-repeat;
-}
 
+.container-wrapper .container-footer .btn.voca-en:before {width:15.8px; height:18.1px; background: url('/renewal/images/container/icon-voca-list.svg') center center no-repeat;}
+.container-wrapper .container-footer .btn.voca-en:hover:before,
+.container-wrapper .container-footer .btn.voca-en.active:before {background: url('/renewal/images/container/icon-voca-list-white.svg') center center no-repeat;}
+.container-wrapper .container-footer .btn.voca-zh:before {width:16.4px; height:18.6px; background: url('/renewal/images/container/icon-voca-zh.svg') center center no-repeat;}
+.container-wrapper .container-footer .btn.voca-zh:hover:before,
+.container-wrapper .container-footer .btn.voca-zh.active:before {background: url('/renewal/images/container/icon-voca-zh-white.svg') center center no-repeat;}
+.container-wrapper .container-footer .btn.voca-ja:before {width:15.6px; height:16.4px; background: url('/renewal/images/container/icon-voca-ja.svg') center center no-repeat;}
+.container-wrapper .container-footer .btn.voca-ja:hover:before,
+.container-wrapper .container-footer .btn.voca-ja.active:before {background: url('/renewal/images/container/icon-voca-ja-white.svg') center center no-repeat;}
 .container-wrapper .container-footer .mathtool-menu ul li .btn.deg:before {
   width: 21px;
   height: 15.6px;
@@ -1722,5 +1723,25 @@ html.header-overlay .gnb-dim {background-color:rgba(0,0,0,.7)}
 .popup.open-alert .popup-container .body .open-alert-txt2 {margin-top:16px; font-size:15px; color:#000;}
 .popup.open-alert .popup-container .body .btn-open-alert {width:140px; height:40px; margin-top:24px; border-radius:4px; border:1px solid #0000001A; background-color:#01A39F; font-size:14px; font-weight:500; color:#fff;}
 
+.popup .popup-container.pop-voca-list {width: 1100px; height: 650px;}
+.popup .popup-container.pop-voca-list .body {max-height:100%; height:100%; overflow-y:auto;}
+
 .media-play-control-area {margin-top:16px;}
 .txt-hidden {font-size:0; width:0; height:0; position:absolute; left:-9999px;}
+
+.head-toggle-btn {position:absolute; right:70px; bottom:20px;}
+.head-toggle-btn .icon-toggle-viewer {display:block; background-position:0 0; background-repeat:no-repeat;}
+.head-toggle-btn .icon-toggle-viewer.icon-drag {width:18px; height:18px; background-image:url(/renewal/images/container/icon-drag-active.svg); opacity:1; transition:opacity ease-in-out .2s;}
+.head-toggle-btn .icon-toggle-viewer.icon-click {width:15px; height:25px; background-image:url(/renewal/images/container/icon-click.svg); transform:translateY(-3px); opacity:1; transition:opacity ease-in-out .2s;}
+.head-toggle-btn input[type="checkbox"] {display:none;}
+.head-toggle-btn input[type="checkbox"] + .head-toggle .toggle-txt.is-drag,
+.head-toggle-btn input[type="checkbox"]:checked + .head-toggle .toggle-txt {position:relative; z-index:1;}
+.head-toggle-btn input[type="checkbox"] + .head-toggle {width:180px; height:40px; position:relative; display:inline-flex; align-items: center; justify-content: space-around; box-shadow: 0px 3px 6px #00000012; border:1px solid #00000033; background-color:rgba(255,255,255,0.7); border-radius: 50px; cursor:pointer;}
+.head-toggle-btn input[type="checkbox"] + .head-toggle .toggle-txt {width:95px; display:flex; justify-content: center; align-items:center; gap:4px; font-size:16px; font-weight:500; color:#a4a4a4; transition: color ease-in-out .3s;}
+.head-toggle-btn input[type="checkbox"] + .head-toggle .toggle-txt.is-drag {color:#fff; transition: color ease-in-out .3s;}
+.head-toggle-btn input[type="checkbox"] + .head-toggle:before {content:''; width:95px; height:100%; display:block; position:absolute; left:-2px; top:0; background-color:#01A39F; border-radius:50px; transition:left ease-in-out .2s;}
+.head-toggle-btn input[type="checkbox"]:checked + .head-toggle:before {left:calc(100% / 2); transition:left ease-in-out .2s;}
+.head-toggle-btn input[type="checkbox"]:checked + .head-toggle .toggle-txt {color:#fff; transition: color ease-in-out .3s;}
+.head-toggle-btn input[type="checkbox"]:checked + .head-toggle .toggle-txt .icon-toggle-viewer.icon-click {background-image:url(/renewal/images/container/icon-click-active.svg); opacity:1; transition:opacity ease-in-out .2s;}
+.head-toggle-btn input[type="checkbox"]:checked + .head-toggle .toggle-txt.is-drag {color:#a4a4a4; transition: color ease-in-out .3s;}
+.head-toggle-btn input[type="checkbox"]:checked + .head-toggle .toggle-txt.is-drag .icon-toggle-viewer.icon-drag {background-image:url(/renewal/images/container/icon-drag.svg); opacity:1; transition:opacity ease-in-out .2s;}

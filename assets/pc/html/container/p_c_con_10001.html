@@ -44,7 +44,7 @@
           <a href="#" class="label-pages"><i></i>국어 110~120쪽</a>
           <a href="#" class="label-pages"><i></i>국어 활동 110~112쪽</a>
           <button type="button" class="btn save-class">진도 저장</button>
-          <div class="btn-ai-class-area active">
+          <div class="btn-ai-class-area">
             <button type="button" class="btn btn-ai-class">
               <img src="/assets/images/container/logo-aiclass-logo@2x.png" alt="AI CLASS">
               <i class="icon-ai-class-arrow"></i>
@@ -187,6 +187,13 @@
             </div>
             <div>
               학습콘텐츠(Viewer) 영역
+              <div class="head-toggle-btn">
+								<input type="checkbox" id="btn-toggle">
+								<label for="btn-toggle" class="head-toggle">
+									<span class="toggle-txt is-drag"><i class="icon-toggle-viewer icon-drag"></i>드래그</span>
+									<span class="toggle-txt"><i class="icon-toggle-viewer icon-click"></i>클릭</span>
+								</label>
+							</div>
             </div>
             <button type="button" class="btn-view-next active"><span class="txt-hidden">다음 페이지로 이동</span></button><!-- 클릭시 active 클래시 추가 및 disabled -->
             <div class="overthumb next" style="display: block;">
@@ -270,7 +277,11 @@
             <span>자전</span>
           </button>
 
-          <button type="button" class="btn fix voca-list"><!-- fix 클래스 추가 -->
+          <!-- 국가 언어별 코드-->
+          <!-- voca-en 영어 -->
+          <!-- voca-zh 중국어 -->
+          <!-- voca-ja 일본어 -->
+          <button type="button" class="btn fix voca-ja"><!-- fix 클래스 추가 -->
             <span>단어장</span>
           </button>
 
@@ -390,6 +401,28 @@
         </div>
       </div>
     </div>
+
+    <div class="popup" id="popup-voca-list">
+      <div class="popup-container pop-voca-list">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          단어장
+        </div>
+        <div class="body">
+          <iframe style="width:100%;height:100%;border:0;vertical-align:top;" src="https://contents.m-teacher.co.kr/cms/smartppt/etarae/web/high/chinese_character/tool/ops/06_a_a1_01_dic.html" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    openPopup({id: "popup-voca-list"});
+    closePopup("popup-voca-list");
+    -->
 
 <script>
 function modalActive(){
