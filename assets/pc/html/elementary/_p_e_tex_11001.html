@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>엠티처 pc - elementary</title>
+	<script src="/assets/js/jquery-3.7.0.min.js"></script>
+	<script src="/assets/js/plugin/select2.min.js"></script>
+	<script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+	<script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+	<script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+	<script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/assets/js/ui.js" type="text/javascript"></script>
+	<script src="/assets/js/ui2024.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/dragula@3.7.2/dist/dragula.js"></script>
+	<script src="https://unpkg.com/dom-autoscroller@2.2.3/dist/dom-autoscroller.js"></script>
+	<link href="/assets/pc/css/elementary2024.css" rel="stylesheet" />
+	<!-- 바로가기 아이콘 -->
+	<link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-elementary.png">
+	<!-- 180x180 이미지를 권장합니다. -->
+	<link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-elementary.png">
+	<!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+	<!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+</head>
+<!-- !NOTE : 초등 theme-elementary / 중학 theme-middle / 고등 theme-high 로 붙습니다. -->
+<link href="/assets/pc/css/pages/elementary/period-guide.css" rel="stylesheet" />
+
+<body class="theme-elementary lesson-2024"> <!-- lesson-2024 클래스 추가 -->
+	<div class="wrapper-lesson" style="--scroll-height:100vh">
+		<header class="period-header">
+			<div class="period-inner">
+				<!-- 교과활동 수업하기 차시창 -->
+				<div class="breadcrumbs type-period">
+					<ul>
+						<li><a href="/">학년</a></li>
+						<li><a href="/">학기</a></li>
+						<li><a href="/">과목</a></li>
+						<li><a href="/">대분류명</a></li>
+						<li><a href="/">중분류명</a></li>
+						<li class="current">소분류명</li>
+					</ul>
+				</div>
+				<div class="buttons">
+					<button class="button size-sm" target-obj="period-guide">이용안내</button>
+					<button class="button size-sm">문의하기</button>
+				</div>
+			</div>
+		</header>
+
+		<main id="main-contents" class="scrollable-container">
+			<div class="contents-header">
+				<div class="header-inner">
+					<h2><span class="title-item">교과서 수업</span>[3~4차시] 느낌을 살려 사물 표현하기</h2>
+					<div class="number-pages">
+						(국어 44~46쪽, 국어활동 5~16쪽)
+					</div>
+				</div>
+				<div class="buttons">
+					<div class="toggle-group">
+						<button class="button size-lg type-icon">
+							<svg>
+								<title>이전 아이콘</title>
+								<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+							</svg>
+						</button>
+						<!-- !NOTE : 선택된 항목에 active -->
+						<button class="button size-lg type-icon">
+							<svg>
+								<title>다음 아이콘</title>
+								<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="other-lesson">
+						<button class="button size-lg" method-type="toggle" target-obj="other-items">
+							다른 차시 보기
+							<svg>
+								<title>아래 아이콘</title>
+								<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-down"></use>
+							</svg>
+						</button>
+						<div id="other-items" class="other-items">
+							<div class="item-wrap">
+								<div class="item grow-2">
+									<strong>학년</strong>
+									<div class="depth-2">
+										<a href="">1학년</a>
+										<a href="">2학년</a>
+										<a href="">3학년</a>
+										<a href="">4학년</a>
+										<a href="">5학년</a>
+										<a href="">6학년</a>
+										<a href="" class="active">active sample</a>
+									</div>
+								</div><!-- //.item -->
+								<div class="item grow-2">
+									<strong>학기</strong>
+									<div class="depth-2">
+										<a href="">1학기</a>
+										<a href="">2학기</a>
+										<a href="" class="active">active sample</a>
+									</div>
+								</div><!-- //.item -->
+								<div class="sub-item grow-2">
+									<strong>과목</strong>
+									<div class="depth-2 scrollbar-styled">
+										<a href="">교과서명 최대 25자 (저자명 5자)</a>
+										<a href="">국어 (가)</a>
+										<a href="" class="active">active sample</a>
+										<a href="">수학 (장혜원)</a>
+										<a href="">사회 (전종한)</a>
+										<a href="">과학 (신동훈)</a>
+									</div>
+								</div><!-- //.sub-item -->
+								<div class="sub-item grow-4">
+									<strong>대단원</strong>
+									<div class="depth-2 scrollbar-styled">
+										<a href="">대다원 이름 정보 최대 50자 말줄임 없이 출력</a>
+										<a href="">1. 작품속 인물과 나</a>
+										<a href="" class="active">2. active sample</a>
+										<a href="">4. 효과적으로 발표해요</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+										<a href="">5. 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요. 안그럼 선생님한테 혼자요 알죠</a>
+									</div>
+								</div><!-- //.sub-item -->
+								<div class="sub-item grow-4">
+									<strong>중단원</strong>
+									<div class="depth-2 scrollbar-styled">
+										<a href="">NNN. 중단원 이름 정보 최대 35자 말줄임 없이 출력</a>
+										<a href="" class="active">1. active sample</a>
+										<a href="">2. 일이삼사오육칠팔구십일이삼사오육칠팔구십 일이삼사오육칠팔구십일이삼사오</a>
+									</div>
+								</div><!-- //.sub-item -->
+								<div class="sub-item grow-3">
+									<strong>소단원</strong>
+									<div class="depth-2 scrollbar-styled">
+										<a href="">NNN. 소단원 이름 정보 최대 20자 말줄임 없이 출력</a>
+										<a href="" class="active">1. active sample</a>
+										<a href="">2. 일이삼사오육칠팔구십일이삼사 오육칠팔구십</a>
+									</div>
+								</div><!-- //.sub-item -->
+								<div class="sub-item">
+									<strong>차시</strong>
+									<div class="depth-2 scrollbar-styled">
+										<a href="">[NNN~NNN차시] 주제명 정보 최대 55자 말줄임 없이 출력 주제명 정보 최대 55자 말줄임 없이 출력</a>
+										<a href="" class="active">[1~2차시] active sample</a>
+										<a href="">[3~4차시] 작품을 읽고 인물이 추구하는 삶 파악하기</a>
+										<a href="">[5~6차시] 인물의 삶과 자신의 삶 관련지어 말하기</a>
+										<a href="">[7~8차시] 인물의 삶과 자신의 삶을 비교하여 작품을 읽고 자신의 생각 쓰기</a>
+										<a href="">[9~10차시] 자신이 꿈꾸는 삶을 작품으로 표현하기</a>
+										<a href="">[11~12차시] 작품속 인물과 나, 관용과 표현을 활용해요. 타당한 근거로 글을 써서 효과적으로 발표해야되요 안그럼 선생님한테 혼자요 알죠</a>
+									</div>
+								</div><!-- //.sub-item -->
+								<button type="button" class="close-button" close-obj="">닫기</button>
+							</div><!-- //.item-wrap -->
+						</div><!-- //.other-items -->
+					</div>
+				</div>
+			</div>
+
+			<div class="period-contents">
+				<section class="scrollable-container has-bottom-toast-pop" id="dragContainer1">
+					<div class="lesson-header">
+						<h3>
+							학습 목차
+							<div class="lesson-head-toggle-btn">
+								<input type="checkbox" id="btn-toggle">
+								<label for="btn-toggle" class="lesson-head-toggle">
+									<span class="toggle-txt default">기본</span>
+									<span class="toggle-txt">MY</span>
+								</label>
+							</div>
+						</h3>
+
+						<div class="lesson-header-buttons">
+							<button class="button size-md">
+								내용 편집
+								<i class="ico-head-edit"></i>
+							</button>
+							<button class="button size-md">
+								학생 공유
+								<i class="ico-head-share"></i>
+							</button>
+							<button type="button" class="btn-caution">
+								<img src="/assets/images/subject/icon-caution-white.svg" alt="caution success 아이콘" class="icon-size-md">
+							</button>
+						</div>
+					</div>
+					<div class="lesson-items scrollable" id="left-area">
+						<div class="item item-style1"><!-- 이전주제, 다음주제 item-style1 클래스 추가 -->
+							<span class="badge-lesson">이전주제</span>
+							<div class="lesson-data">
+								<div class="data">
+									<div class="inner-wrap">
+										<a href="/">
+											<strong>[1~2주제] 햇비</strong>
+										</a>
+									</div>
+								</div><!-- //.data -->
+							</div>
+						</div><!-- //.item -->
+						<div class="item">
+							<span class="badge-lesson">도입</span>
+							<div class="lesson-data" id="sample-scroll1">
+								<div class="data no-draggable">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+											<span class="ox">
+												<input type="checkbox" id="ox1" checked="">
+												<label for="ox1"></label>
+											</span>
+											<div class="image-wrap-buttons-group">
+												<button type="button" class="badge type-round-box btn-doc-edit">
+													<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+												</button>
+											</div>
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">탐구해요</span>
+											</div>
+											<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+											<span class="ox">
+												<input type="checkbox" id="ox2">
+												<label for="ox2"></label>
+											</span>
+											<div class="image-wrap-buttons-group">
+												<button type="button" class="badge type-round-box btn-doc-edit">
+													<img src="/assets/images/subject/icon-doc-share.svg" alt="공유">
+												</button>
+												<button type="button" class="badge type-round-box btn-doc-edit">
+													<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+												</button>
+											</div>
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">단원정리</span>
+											</div>
+											<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<!-- 교과서 페이지 정보가 없을경우 strong에 ellipsis-multi class 추가 -->
+								<div class="data">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<strong>교과서 페이지 표시가 없을 경우 ellipsis-multi class 추가 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우 교과서 페이지 표시가 없을 경우</strong>
+											<div class="number-pages">
+
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data active-vertical">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<strong>세로 드래그</strong>
+											<div class="number-pages">
+												<span class="badge">&lt;div class="data active-vertical"&gt;</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data active-horizontal">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<strong>가로 드래그</strong>
+											<div class="number-pages">
+												<span class="badge">&lt;div class="data active-horizontal"&gt;</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data disabled">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<strong>.disabled</strong>
+											<div class="number-pages">
+												<span class="badge">&lt;div class="data disabled"&gt;</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data active">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<strong>active</strong>
+											<div class="number-pages">
+												<span class="badge">&lt;div class="data active"&gt;</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data group-content active">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="outer-wrap">
+										<div class="inner-wrap">
+											<div class="image-wrap">
+												<img src="/assets/images/temp/img-lesson01.png" alt="">
+											</div>
+											<a href="/">
+												<strong>그룹 컨텐츠 active</strong>
+												<div class="number-pages">
+													<span class="badge">&lt;div class="data group-content active"&gt;</span>
+												</div>
+											</a>
+										</div>
+										<div class="buttons">
+											<button type="button" class="button type-icon size-sm ico-delete">
+												<span class="txt-hidden">삭제</span>
+											</button>
+										</div>
+									</div>
+
+									<div class="data-group-child-area">
+										<ul class="child-list">
+											<li class="active"><a href="/">[단원 평가] 시에 나타난 감각적 표현 알기 단원 평가 문제(1) 시에 나타난 감각적 표현 알기 단원 평가 문제(1)</a></li>
+											<li><a href="/">[학습 퀴즈] 시에 나타난 감작적 표현 알기 학습 퀴즈</a></li>
+											<li><a href="/">[학습 노트] 학습 정리 문제</a></li>
+										</ul>
+									</div>
+								</div><!-- //.data -->
+
+								<div class="data group-content">
+									<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+									<div class="outer-wrap">
+										<div class="inner-wrap">
+											<div class="image-wrap">
+												<img src="/assets/images/temp/img-lesson01.png" alt="">
+											</div>
+											<a href="/">
+												<strong>그룹 컨텐츠 기본</strong>
+												<div class="number-pages">
+													<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+												</div>
+											</a>
+										</div>
+										<div class="buttons">
+											<button type="button" class="button type-icon size-sm ico-delete">
+												<span class="txt-hidden">삭제</span>
+											</button>
+										</div>
+									</div>
+
+									<div class="data-group-child-area">
+										<ul class="child-list">
+											<li class="active"><a href="/">[단원 평가] 시에 나타난 감각적 표현 알기 단원 평가 문제(1) 시에 나타난 감각적 표현 알기 단원 평가 문제(1)</a></li>
+											<li><a href="/">[학습 퀴즈] 시에 나타난 감작적 표현 알기 학습 퀴즈</a></li>
+										</ul>
+									</div>
+								</div><!-- //.data -->
+
+							</div>
+						</div><!-- //.item -->
+						<div class="item">
+							<span class="badge-lesson">전개</span>
+							<div class="lesson-data">
+								<!-- !NOTE 자료가 없는 경우 -->
+								<div class="no-data">
+									<strong>자료를 드래그하여 추가할 수 있습니다.</strong>
+								</div>
+								<!-- //.no-data -->
+
+								<div class="data">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson02.png" alt="">
+											<span class="ox">
+												<input type="checkbox" id="ox3" checked>
+												<label for="ox3"></label>
+											</span>
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">탐구해요</span>
+											</div>
+											<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+
+								<!-- !NOTE 이미지가 없는 경우 -->
+								<div class="data">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<span class="ox">
+												<input type="checkbox" id="ox4">
+												<label for="ox4"></label>
+											</span>
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">탐구해요</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+								<!-- !NOTE 비디오가 없는 경우 -->
+								<div class="data no-video">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">생각열기</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+								<!-- !NOTE 압축파일이 없는 경우 -->
+								<div class="data no-zip">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">학습영상</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+								<!-- !NOTE 링크기 없는 경우 -->
+								<div class="data no-link">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">학습영상</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+								<!-- !NOTE 기본형 -->
+								<div class="data">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">학습영상</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+							</div>
+						</div><!-- //.item -->
+						<div class="item">
+							<span class="badge-lesson">정리</span>
+							<div class="lesson-data">
+								<div class="data">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+											<div class="image-wrap-buttons-group">
+												<button type="button" class="badge type-round-box btn-doc-edit">
+													<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+												</button>
+											</div>
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">탐구해요</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+								<div class="data">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+											<div class="image-wrap-buttons-group">
+												<button type="button" class="badge type-round-box btn-doc-edit">
+													<img src="/assets/images/subject/icon-doc-share.svg" alt="공유">
+												</button>
+												<button type="button" class="badge type-round-box btn-doc-edit">
+													<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+												</button>
+											</div>
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">생각열기</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+								<div class="data">
+									<div class="inner-wrap">
+										<div class="image-wrap">
+											<img src="/assets/images/temp/img-lesson01.png" alt="">
+										</div>
+										<a href="/">
+											<div class="badges">
+												<span class="badge type-round-box">학습영상</span>
+											</div>
+											<strong>[탐구해요] 고조선의 건국 이야기 살펴보기</strong>
+											<div class="number-pages">
+												<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+											</div>
+										</a>
+									</div>
+									<div class="buttons">
+										<button type="button" class="button type-icon size-sm ico-delete">
+											<span class="txt-hidden">삭제</span>
+										</button>
+									</div>
+								</div><!-- //.data -->
+							</div>
+						</div><!-- //.item -->
+						<div class="item item-style1"><!-- 이전주제, 다음주제 item-style1 클래스 추가 -->
+							<span class="badge-lesson">다음주제</span>
+							<div class="lesson-data">
+								<div class="data">
+									<div class="inner-wrap">
+										<a href="/">
+											<strong>[1~2주제] 햇비</strong>
+										</a>
+									</div>
+								</div><!-- //.data -->
+							</div>
+						</div><!-- //.item -->
+					</div><!-- //.lesson-items -->
+
+					<div class="buttom-toast-area"><!-- active 클래스 추가 시 보임 -->
+						<p class="toast-msg">목차 편집이 완료되면 <span>‘저장’</span>버튼을 클릭해주세요!</p>
+						<div class="toast-buttons">
+							<button type="button" class="toast-button">취소</button>
+							<button type="button" class="toast-button toast-confirm">저장하기</button>
+						</div>
+					</div>
+
+					<button type="button" class="toast-edit-revert active"><!-- active 클래스 추가 시 보임 -->
+						<i><img src="/assets/images/subject/icon-edit-revert.svg" alt="되돌리기"></i>
+						이전 편집 내용 취소
+					</button>
+
+					<div class="buttom-toast-area active"><!-- active 클래스 추가 시 보임 -->
+						<p class="toast-msg">선택한 자료를 편집하려면 <span>‘편집’</span>버튼을 클릭해주세요!</p>
+						<div class="toast-buttons">
+							<button type="button" class="toast-button">취소</button>
+							<button type="button" class="toast-button toast-confirm">편집하기</button>
+						</div>
+					</div>
+
+					<div class="buttom-toast-area"><!-- active 클래스 추가 시 보임 -->
+						<p class="toast-msg">선택한 수업을 AI클래스로 공유하려면 <br class="max-width-1500"><span>‘공유’</span>버튼을 클릭해주세요!</p>
+						<div class="toast-buttons">
+							<button type="button" class="toast-button">취소</button>
+							<button type="button" class="toast-button toast-confirm">수업 공유하기</button>
+						</div>
+					</div>
+
+					<div class="lesson-float-buttons">
+						<button type="button" class="float-btn">저장 진도 보기</button>
+						<button type="button" class="float-btn float-confirm">수업하기 <i class="lessong-btn-icon"></i></button>
+					</div>
+				</section>
+				<section class="scrollable-container type-primary" id="dragContainer2">
+					<div class="lesson-header">
+						<h3>수업 보충 자료</h3>
+						<div class="input-inner-extra">
+							<input type="search" name="" id="" placeholder="검색어를 입력하세요.">
+							<button class="icon-button" title="검색">
+								<svg>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-search"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- <div class="lesson-contents"> -->
+					<div class="tabs type-line fluid scrollable-container">
+						<!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+						<!-- case 1/2 default tab -->
+						<div class="tab type01">
+							<ul>
+								<li class="active"><a href="#tab4-1">전체</a></li>
+								<li><a href="#tab4-2">멀티미디어</a></li>
+								<li><a href="#tab4-3">수업자료</a></li>
+								<li><a href="#tab4-4">평가 자료</a></li>
+								<li><a href="#tab4-5">연구 자료</a></li>
+								<li><a href="#tab4-6">내 자료</a></li>
+							</ul>
+						</div>
+						<!-- case 2/2 scroll tab ex. -->
+						<!-- <div class="tab nav-slider">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#tab4-1">전체</a></li>
+                    <li class="swiper-slide"><a href="#tab4-2">멀티미디어2</a></li>
+                    <li class="swiper-slide"><a href="#tab4-3">수업자료</a></li>
+                    <li class="swiper-slide"><a href="#tab4-4">평가 자료</a></li>
+                    <li class="swiper-slide"><a href="#tab4-5">5분 놀이</a></li>
+                    <li class="swiper-slide"><a href="#tab4-6">연구 자료</a></li>
+                    <li class="swiper-slide"><a href="#tab4-7">내 자료</a></li>
+                  </ul>
+                </div> -->
+						<div class="pane-wrap scrollable" id="right-area">
+							<div id="tab4-1" class="pane">
+								<!-- tab content -->
+								<div class="sub-lessons">
+									<h4>멀티미디어 자료 <strong>(2)</strong></h4>
+									<div class="lesson-data" id="sample-scroll2">
+										<!-- !NOTE 등록된 이미지가 없을 경우 -->
+										<div class="data">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<div class="image-wrap-buttons-group">
+														<button type="button" class="badge type-round-box btn-doc-edit">
+															<img src="/assets/images/subject/icon-doc-share.svg" alt="공유">
+														</button>
+														<button type="button" class="badge type-round-box btn-doc-edit">
+															<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+														</button>
+													</div>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">
+														이미지 없는 경우
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite active"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE 수업 보충 자료 > 내 자료에 이미지 첨부 파일이 없는 경우 .no-image class 추가 -->
+										<div class="data no-image">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<span class="badge type-round-box">함께 보기</span>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">첨부된 이미지 없는 경우</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE 수업 보충 자료 > 내 자료에 첨부 파일이 없는 경우 .no-file class 추가 -->
+										<div class="data no-file">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">첨부 파일이 없는 경우</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download" disabled>
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite" disabled><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share" disabled>
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete" disabled>
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE 수업 보충 자료 > 내 자료에 스크랩 첨부 파일이 없는 경우 .no-scrap class 추가 -->
+										<div class="data no-scrap">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">스크랩 첨부 파일이 없는 경우</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE 수업 보충 자료 > 내 자료에 링크가 없는 경우 .no-link class 추가 -->
+										<div class="data no-link">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">링크가 없는 경우</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE 수업 보충 자료 > 내 자료에 pdf가 없는 경우 .no-pdf class 추가 -->
+										<div class="data no-pdf">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">pdf 첨부 파일이 없는 경우</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE al class 일경우 -->
+										<div class="data aiclass">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">aiclass</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<!-- !NOTE 자료명이 짧은 경우 입니다. -->
+										<div class="data">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<!-- <img src="/assets/images/temp/img-lesson01.png" alt=""> -->
+													 <img src="https://via.placeholder.com/200x200" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">
+														GUIDE
+														<span class="txt-badge">수동채점</span>
+														<span class="txt-badge blue-box">자동채점</span>
+													</span>
+													<strong class="title-ellipsis">200 x 200자료명 이름 정보를 최대 2줄 출력 2줄 초과 시 말줄임 ‘…’ 표기 출력</strong>
+													<i class="icon-new">new</i><!-- 새글일 경우 이미지 추가 -->
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share">
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+
+										</div> <!-- //.data -->
+
+										<!-- active / hover / focus -->
+										<div class="data active">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="https://via.placeholder.com/100x30" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">세로 드래그 100 x 30 자료명 이름 정보를 최대 1줄 출력 ‘…’ 표기 자료명 이름 정보를 최대 1줄 출력 ‘…’ 표기 자료명 이름 정보를 최대 1줄 출력 ‘…’ 표기 자료명 이름 정보를 최대 1줄 출력 ‘…’ 표기</strong>
+													<i class="icon-new">new</i><!-- 새글일 경우 이미지 추가 -->
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download" disabled>
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite" disabled>
+													<span class="txt-hidden">스크랩</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-share" disabled>
+													<span class="txt-hidden">공유</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete" disabled>
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div> <!-- //.data -->
+
+										<!-- 가로 드래그 -->
+										<div class="data active-horizontal">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="https://via.placeholder.com/300x200" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">
+														GUIDE
+													</span>
+													<strong class="title-ellipsis">세로 드래그</strong>
+													<i class="icon-new">new</i><!-- 새글일 경우 이미지 추가 -->
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div> <!-- //.data -->
+
+										<!-- 세로 드래그 -->
+										<div class="data active-vertical">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">GUIDE</span>
+													<strong class="title-ellipsis">세로 드래그</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div> <!-- //.data -->
+
+										<!-- !NOTE 자료명이 긴, 이미지가 없는 경우 입니다. -->
+										<div class="data">
+											<button type="button" class="drag-handle" style="width:50px; height:50px; position:absolute; right:0; top:0; background-color:#000;"></button>
+											<div class="inner-wrap">
+												<div class="image-wrap">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">국어 작품 감상실</span>
+													<strong class="title-ellipsis">
+														[측정] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈, 나눗셈이
+														섞여 있는 식을 계산해요. 주제 정보 최대
+														55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹네 무...
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<button type="button" class="btn-more">
+											더보기 (<strong>12</strong><span>/ 256</span>)
+										</button>
+
+									</div>
+								</div><!-- //.sub-lessons -->
+								<div class="sub-lessons">
+									<h4>수업 자료 <strong>(2)</strong></h4>
+									<div class="lesson-data">
+										<!-- !NOTE 수업 보충 자료 편집 드래그시 .active-horizontal 가 추가 됩니다. -->
+										<div class="data active-horizontal">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">[동영상] 10~11차시 세계속의 코리아, 고려</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<button type="button" class="btn-more">
+											더보기 (<strong>12</strong><span>/ 256</span>)
+										</button>
+
+									</div>
+								</div><!-- //.sub-lessons -->
+								<div class="sub-lessons">
+									<h4>평가 자료 <strong>(2)</strong></h4>
+									<div class="lesson-data">
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">[동영상] 10~11차시 세계속의 코리아, 고려</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">[동영상] 10~11차시 세계속의 코리아, 고려</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+									</div>
+
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+
+								</div><!-- //.sub-lessons -->
+							</div>
+							<div id="tab4-2" class="pane">
+								<!-- tab content -->
+								<div class="type-filter nav-slider">
+									<div class="buttons type-rounded type-primary swiper-wrapper">
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-1" checked="">
+											<label for="buttons2-1">전체</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-2">
+											<label for="buttons2-2">교과서자료</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-3">
+											<label for="buttons2-3">국어 작품 감상실</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-4">
+											<label for="buttons2-4">수학 스마트 교구</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-5">
+											<label for="buttons2-5">사회 디지털 지역 교과서</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-6">
+											<label for="buttons2-6">과학 디지털 실험실</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-7">
+											<label for="buttons2-7">개념영상 & 마인드맵</label>
+										</span>
+										<span class="swiper-slide">
+											<input type="radio" name="radio2" id="buttons2-8">
+											<label for="buttons2-8">창의적 체험활동</label>
+										</span>
+									</div>
+
+									<button class="swiper-button swiper-button-prev">
+										<svg>
+											<title>아이콘</title>
+											<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+										</svg>
+									</button>
+									<button class="swiper-button swiper-button-next">
+										<svg>
+											<title>아이콘</title>
+											<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+										</svg>
+									</button>
+
+								</div>
+								<div class="sub-lessons">
+									<div class="lesson-data">
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">[5~6차시] 일본도 자국민 ‘무료' 이송..”한국인 20명 탑승"</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">국어 작품 감상실</span>
+													<strong class="title-ellipsis">
+														[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈,
+														나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대
+														55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹...
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">사회 디지털 교과서</span>
+													<strong class="title-ellipsis">
+														[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">개념영상&마인드맵</span>
+													<strong class="title-ellipsis">
+														국비 지원받아 백번 넘게 ‘한우 회식'..과연 기술 개발은
+														했을까?
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">사회 디지털 교과서</span>
+													<strong class="title-ellipsis">
+														[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+									</div><!-- //.lesson-data-->
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+								</div><!-- //.sub-lessons -->
+							</div>
+							<div id="tab4-3" class="pane">
+								<!-- tab content -->
+								<div class="filters">
+									<div class="buttons type-rounded type-primary">
+										<span>
+											<input type="radio" name="radio3" id="filter3-1" checked="">
+											<label for="filter3-1">전체</label>
+										</span>
+										<span>
+											<input type="radio" name="radio3" id="filter3-2">
+											<label for="filter3-2">교과서자료</label>
+										</span>
+									</div>
+								</div>
+								<div class="sub-lessons">
+									<div class="lesson-data">
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														[5~6차시] 일본도 자국민 ‘무료' 이송..”한국인 20명
+														탑승"
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈,
+														나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대
+														55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹...
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														국비 지원받아 백번 넘게 ‘한우 회식'..과연 기술 개발은
+														했을까?
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+									</div><!-- //.lesson-data-->
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+								</div><!-- //.sub-lessons -->
+							</div>
+							<div id="tab4-4" class="pane">
+								<!-- tab content -->
+								<div class="filters">
+									<div class="buttons type-rounded type-primary">
+										<span>
+											<input type="radio" name="radio4" id="filter4-1" checked="">
+											<label for="filter4-1">전체</label>
+										</span>
+										<span>
+											<input type="radio" name="radio4" id="filter4-2">
+											<label for="filter4-2">교과서자료</label>
+										</span>
+										<span>
+											<input type="radio" name="radio4" id="filter4-3">
+											<label for="filter4-3">퀴즈온</label>
+										</span>
+									</div>
+								</div>
+								<div class="sub-lessons">
+									<h4>교과서 자료 <strong>(2)</strong></h4>
+									<div class="lesson-data">
+										<div class="data aiclass">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료 <span class="txt-badge">수동채점</span></span>
+													<strong class="title-ellipsis">
+														[5~6차시] 일본도 자국민 ‘무료' 이송..”한국인 20명
+														탑승"
+													</strong>
+												</a>
+											</div>
+
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료 <span class="txt-badge blue-box">자동채점</span></span>
+													<strong class="title-ellipsis">
+														[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈,
+														나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대
+														55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹...
+													</strong>
+												</a>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite active"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">
+														[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite"><!-- 스크랩시 active 클래스 추가 -->
+													<span class="txt-hidden">스크랩</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+									</div><!-- //.lesson-data-->
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+								</div><!-- //.sub-lessons -->
+
+								<div class="sub-lessons">
+									<h4>퀴즈온 <strong>(2)</strong></h4>
+									<div class="lesson-data">
+										<div class="data aiclass">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<div class="image-wrap-buttons-group">
+														<button type="button" class="badge type-round-box btn-doc-edit">
+															<img src="/assets/images/subject/icon-doc-share.svg" alt="공유">
+														</button>
+													</div>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">퀴즈온</span>
+													<strong class="title-ellipsis">
+														[진단평가(1회)] 시에 나타난 감각적 표현 알기 [진단평가(1회)] 시에 나타난 감각적 표현 알기 [진단평가(1회)] 시에 나타난 감각적 표현 알기
+													</strong>
+												</a>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">퀴즈온</span>
+													<strong class="title-ellipsis">
+														[진단평가(1회)] 시에 나타난 감각적 표현 알기
+													</strong>
+												</a>
+											</div>
+										</div><!-- //.data -->
+									</div><!-- //.lesson-data-->
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+								</div><!-- //.sub-lessons -->
+							</div>
+							<div id="tab4-5" class="pane">
+								<!-- tab content -->
+								<div class="filters">
+									<div class="buttons type-rounded type-primary">
+										<span>
+											<input type="radio" name="radio6" id="filter6-1" checked="">
+											<label for="filter6-1">전체</label>
+										</span>
+										<span>
+											<input type="radio" name="radio6" id="filter6-2">
+											<label for="filter6-2">교과서 자료</label>
+										</span>
+										<span>
+											<input type="radio" name="radio6" id="filter6-3">
+											<label for="filter6-3">실험 동영상</label>
+										</span>
+										<span>
+											<input type="radio" name="radio6" id="filter6-4">
+											<label for="filter6-4">유투브 영상</label>
+										</span>
+										<span>
+											<input type="radio" name="radio6" id="filter6-5">
+											<label for="filter6-5">Phase Name</label>
+										</span>
+									</div>
+								</div>
+								<div class="sub-lessons">
+									<div class="lesson-data">
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">교과서 자료</span>
+													<strong class="title-ellipsis">[5~6차시] 일본도 자국민 ‘무료' 이송..”한국인 20명
+														탑승"</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">실험 동영상</span>
+													<strong class="title-ellipsis">[7~8차시] 올림, 버림, 반올림의 활용덧셈, 뺄셈, 곱셈,
+														나눗셈이 섞여 있는 식을 계산해요. 주제 정보 최대
+														55자, 동해물과 백산이 마르고 닳도록 하느님이 보우하사 뭘 보우하사 나라 말아먹...</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">유투브 영상</span>
+													<strong class="title-ellipsis">[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">Phase Name</span>
+													<strong class="title-ellipsis">국비 지원받아 백번 넘게 ‘한우 회식'..과연 기술 개발은
+														했을까?</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">Phase Name</span>
+													<strong class="title-ellipsis">[9~10차시] 일본 정부가 이스라엘에서 자위대 수송기를 급파해
+														자국민을 데려오기로 한 가운데</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+									</div><!-- //.lesson-data-->
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+								</div><!-- //.sub-lessons -->
+							</div>
+							<div id="tab4-6" class="pane">
+								<!-- tab content -->
+								<div class="flex-item-buttons">
+									<div class="type-filter nav-slider">
+										<div class="buttons type-rounded type-primary swiper-wrapper">
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-1" checked="">
+												<label for="filter2-1">전체</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-2">
+												<label for="filter2-2">내 링크 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-3">
+												<label for="filter2-3">스크랩 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-4">
+												<label for="filter2-4">스크랩 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-5">
+												<label for="filter2-5">스크랩 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-6">
+												<label for="filter2-">스크랩 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-7">
+												<label for="filter2-7">스크랩 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-8">
+												<label for="filter2-">스크랩 자료</label>
+											</span>
+											<span class="swiper-slide">
+												<input type="radio" name="radio7" id="filter2-9">
+												<label for="filter2-9">스크랩 자료</label>
+											</span>
+										</div>
+
+										 <button class="swiper-button swiper-button-prev">
+											 <svg>
+												 <title>아이콘</title>
+												 <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+											 </svg>
+										 </button>
+										 <button class="swiper-button swiper-button-next">
+											 <svg>
+												 <title>아이콘</title>
+												 <use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+											 </svg>
+										 </button>
+									 </div>
+
+									 <div class="buttons type01">
+										<button type="button" class="button size-md">
+											내 자료 관리
+											<img src="/assets/images/subject/icon-my-data-mag.svg" alt="내 자료 관리">
+										</button>
+
+										<!-- data-trigger="hover" 로 이벤트를 제어 합니다. -->
+										<button type="button" class="tooltip-trigger" data-trigger="hover" data-title="업로드 자료 안내" data-placement="auto-bottom" data-style="theme-primary">
+											<img src="/assets/images/elementary/icon-caution-filled.svg" alt="caution success 아이콘" class="icon-size-md">
+										</button>
+										<div class="webui-popover-content">
+											<ul class="ul-dot">
+												<li>내가 업로드한 모든 자료가 목록에 보여 집니다.</li>
+												<li>업로드 자료의 ‘삭제, 미리보기, 다운로드’ 가 가능 합니다.</li>
+											</ul>
+										</div>
+									</div>
+								 </div>
+
+								 <button type="button" class="float-button">
+									내 자료<br>업로드
+								</button>
+
+								<div class="sub-lessons">
+									<div class="lesson-data">
+
+										<!-- !NOTE 등록된 이미지가 없을 경우 -->
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<div class="image-wrap-buttons-group">
+														<button type="button" class="badge type-round-box btn-doc-edit">
+															<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+														</button>
+													</div>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">내용 편집 자료</span>
+													<strong class="title-ellipsis">
+														오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+													<div class="image-wrap-buttons-group">
+														<button type="button" class="badge type-round-box btn-doc-edit">
+															<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+														</button>
+													</div>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">내용 편집 자료</span>
+													<strong class="title-ellipsis">
+														오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈 오늘의 퀴즈
+													</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data no-link">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<span class="badge type-round-box">함께 보기</span>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">내 링크 자료</span>
+													<strong class="title-ellipsis">수업 링크 자료</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">내 링크 자료</span>
+													<strong class="title-ellipsis">수업 링크 자료</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data no-file">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+													<span class="badge type-round-box">함께 보기</span>
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">업로드 자료</span>
+													<strong class="title-ellipsis">학습 참고 자료</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">삭제</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data no-file">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson02.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">업로드 자료</span>
+													<strong class="title-ellipsis">학습 참고 자료</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-delete">
+													<span class="txt-hidden">삭제</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data no-scrap">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">스크랩 자료</span>
+													<strong class="title-ellipsis">[동영상] 대화에서 알맞은 표현을 고르고 물음에 답해 보기</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite active">
+													<span class="txt-hidden">스크랩</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+										<div class="data">
+											<div class="inner-wrap">
+												<div class="image-wrap">
+													<img src="/assets/images/temp/img-lesson01.png" alt="">
+												</div>
+												<a href="/">
+													<span class="text-primary text-xs">스크랩 자료</span>
+													<strong class="title-ellipsis">[동영상] 대화에서 알맞은 표현을 고르고 물음에 답해 보기</strong>
+												</a>
+											</div>
+											<div class="buttons">
+												<button type="button" class="button type-icon size-sm ico-download">
+													<span class="txt-hidden">다운로드</span>
+												</button>
+												<button type="button" class="button type-icon size-sm ico-favorite">
+													<span class="txt-hidden">스크랩</span>
+												</button>
+											</div>
+										</div><!-- //.data -->
+
+									</div><!-- //.lesson-data-->
+									<button type="button" class="btn-more">
+										더보기 (<strong>12</strong><span>/ 256</span>)
+									</button>
+								</div><!-- //.sub-lessons -->
+
+							</div>
+						</div>
+					</div>
+					<!-- </div> -->
+				</section>
+			</div>
+			<div class="period-float" style="display:none;">
+				<!-- !NOTE 학습 목차, 수업 보충 자료 드래그시 class="float-inner"에 .active가 추가 됩니다. -->
+				<div class="float-inner active">
+					<h4>목차 편집이 완료되면 ‘<span class="text-primary">저장</span>'버튼을 클릭해주세요!</h4>
+					<div class="buttons">
+						<button class="button size-xl">취소</button>
+						<button class="button size-xl type-primary">저장하기</button>
+					</div>
+				</div><!-- //. float-inner-->
+			</div>
+		</main>
+		<footer class="period-footer" style="display:none">
+			<div class="period-inner">
+				<div class="buttons">
+					<button class="button size-lg type-secondary">
+						수업하기
+						<svg>
+							<title>파일 아이콘</title>
+							<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-file-filled"></use>
+						</svg>
+					</button>
+					<button class="button size-lg">
+						수업공유하기
+						<svg>
+							<title>공유 아이콘</title>
+							<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-share"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="period-slider">
+					<!-- <div class="slides"> -->
+					<!-- !NOTE : 4개 이상일 때 동작하도록 ui.js에서 처리되어 있음-->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button class="button size-md"> 과학 디지털 실험실
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="button size-md"> 슬기로운 탐구 생활
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="button size-md"> 교과단원특화링크
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="button size-md"> 과학 디지털 실험실
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="button size-md"> 과학 디지털 실험실
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="button size-md"> 과학 디지털 실험실
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="button size-md"> 슬기로운 탐구 생활
+								<svg>
+									<title>새창 아이콘</title>
+									<use xlink:href="/assets/images/svg-sprite-solid.svg#icon-new-windows"></use>
+								</svg>
+							</button>
+						</div>
+					</div><!-- //.swiper-wrapper -->
+					<button class="swiper-button-prev">
+						<svg>
+							<title>이전 아이콘</title>
+							<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-left"></use>
+						</svg>
+					</button>
+					<button class="swiper-button-next">
+						<svg>
+							<title>다음 아이콘</title>
+							<use xlink:href="/assets/images/svg-sprite-arrow.svg#icon-chevron-right"></use>
+						</svg>
+					</button>
+					<!-- </div> -->
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="period-guide-layer" id="period-guide" no-dimd>
+		<div class="period-guide">
+			<div class="guide-content">
+				<button class="icon-button close-button" close-obj>
+					<svg>
+						<use href="/assets/images/svg-sprite-solid.svg#icon-close-white" />
+					</svg>
+				</button>
+				<div class="helper helper-01">
+					<h3>기본/저장 목차 보기</h3>
+					<p>해당 차시의 기본/저장 학습 목차를 확인할 수 있습니다.</p>
+					<p class="">저장된 목차가 있는 경우에만 노출됩니다.</p>
+				</div>
+				<div class="helper helper-02">
+					<h3>차시 이동</h3>
+					<p>다른 학년/과목의 차시나,<br />이전/다음 차시로 이동합니다.</p>
+				</div>
+				<div class="helper helper-03">
+					<h3>보충 자료 추가</h3>
+					<p>원하는 보충자료를 학습목차(완료)로<br />드래그하여 추가할 수 있습니다.</p>
+				</div>
+				<div class="helper helper-04">
+					<h3>학습 목차 편집</h3>
+					<p>상하로 드래그하여 순서를 변경하거나 삭제 버튼으로 자료를 삭제할 수 있습니다.<br />자료명을 클릭하면 해당 위치부터 수업을 시작할 수 있습니다.</p>
+				</div>
+				<div class="helper helper-05">
+					<h3>내 링크 등록</h3>
+					<p>수업에 활용할 자료의 링크를<br />직접 등록 할 수 있습니다.</p>
+				</div>
+				<div class="helper helper-06">
+					<h3>수업 시작 / 수업공유 하기</h3>
+					<p><span class="text-tertiary">수업시작하기</span> : 학습 목차의 첫 번째 자료부터 수업을 시작합니다.</p>
+					<p><span class="text-tertiary">수업공유하기</span> : 수업을 AI클래스를 통해 학생에게 공유합니다.</p>
+				</div>
+				<div class="helper helper-07">
+					<h3>특화자료</h3>
+					<p>교과별 수업에 이용 가능한<br />엠티처 특화 서비스를 안내합니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 미러 샘플 코드 -->
+	<!--
+
+	<div class="data group-content active gu-mirror" style="width: 543.5px; height: 214px; left: 164px; top: 416px;">
+		<div class="outer-wrap active">
+			<div class="inner-wrap active">
+				<div class="image-wrap">
+					<img src="/assets/images/temp/img-lesson01.png" alt="">
+				</div>
+				<a href="/">
+					<strong>그룹 컨텐츠 active</strong>
+					<div class="number-pages">
+						<span class="badge">&lt;div class="data group-content active"&gt;</span>
+					</div>
+				</a>
+			</div>
+			<div class="buttons">
+				<button type="button" class="button type-icon size-sm ico-delete">
+					<span class="txt-hidden">삭제</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="data-group-child-area" style="display: block;">
+			<ul class="child-list">
+				<li class="active"><a href="/">[단원 평가] 시에 나타난 감각적 표현 알기 단원 평가 문제(1) 시에 나타난 감각적 표현 알기 단원 평가 문제(1)</a></li>
+				<li><a href="/">[학습 퀴즈] 시에 나타난 감작적 표현 알기 학습 퀴즈</a></li>
+				<li><a href="/">[학습 노트] 학습 정리 문제</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="data gu-mirror" style="width: 528px; height: 98px; left: 138px; top: 498px;">
+		<div class="inner-wrap">
+			<div class="image-wrap">
+				<img src="/assets/images/temp/img-lesson01.png" alt="">
+				<span class="ox">
+					<input type="checkbox" id="ox1" checked="">
+					<label for="ox1"></label>
+				</span>
+				<div class="image-wrap-buttons-group">
+					<button type="button" class="badge type-round-box btn-doc-edit">
+						<img src="/assets/images/subject/icon-doc-edit.svg" alt="내용편집">
+					</button>
+				</div>
+			</div>
+			<a href="/">
+				<div class="badges">
+					<span class="badge type-round-box">탐구해요</span>
+				</div>
+				<strong>대화에서 알맞은 높임 표현을 고르고 물음에 답해보기 물음에 답해보기</strong>
+				<div class="number-pages">
+					<span class="badge">(국어 44~46쪽, 국어활동 5~16쪽)</span>
+				</div>
+			</a>
+		</div>
+		<div class="buttons">
+			<button type="button" class="button type-icon size-sm ico-delete">
+				<span class="txt-hidden">삭제</span>
+			</button>
+		</div>
+	</div>
+-->
+
+</body>
+
+<script>
+/*
+let classLayerScreen = {
+	v : {
+		drake : ''
+	},
+	f : {
+		dragDrop: function () {
+			if (classLayerScreen.v.drake) {
+                classLayerScreen.v.drake.destroy();
+            }
+
+			classLayerScreen.v.drake = dragula({
+
+                copy: function (el, source) {
+                    return $(el).closest('section').attr('id') === 'dragContainer2';
+                },
+
+				moves : function(el, container, handle, sibling){
+					console.log('moves')
+					return !!handle.closest('.drag-handle');
+				},revertOnSpill: true
+            });
+
+			classLayerScreen.v.drake.containers = [];
+
+			$('.lesson-data').each(function () {
+                classLayerScreen.v.drake.containers.push(this);
+            });
+
+			var dragScroll = autoScroll([
+					window, document.querySelector('#left-area'), document.querySelector('#right-area')
+				],
+				{
+					margin: 50,
+					maxSpeed : 6,
+					autoScroll: function(){
+						console.log('scroll')
+						return this.down && classLayerScreen.v.drake.dragging;
+					}
+				}
+			);
+
+			document.addEventListener('touchmove', function(e) {
+				if($('body').hasClass('gu-unselectable')){
+					e.preventDefault();
+					console.log('touchmove');
+				}
+			}, { passive:false });
+
+		}
+	}
+}
+
+classLayerScreen.f.dragDrop();
+*/
+
+$(function(){
+
+	var drake = dragula(
+		[
+			document.querySelector('#sample-scroll1'), document.querySelector('#sample-scroll2')
+		],
+		{
+			moves: function(el, source, handle, sibling) {
+				return !!handle.closest('.drag-handle')
+			},revertOnSpill: true}
+	);
+
+	var dragScroll = autoScroll([
+			window, document.querySelector('#left-area'), document.querySelector('#right-area')
+		],{
+		margin: 50,
+		maxSpeed : 6,
+		autoScroll: function(){
+			return this.down && drake.dragging;
+		}
+	});
+
+	document.addEventListener('touchmove', function(e) {
+		if($('body').hasClass('gu-unselectable')){
+			e.preventDefault();
+		}
+	}, { passive:false });
+
+})
+
+
+</script>
+<style>
+body.lesson-2024 [aria-disabled="true"] {opacity: 0.5;}
+body.lesson-2024 .gu-mirror {position: fixed !important; z-index: 1000 !important; opacity: 80% !important; transform: none !important; display: flex !important; justify-content: space-between!important; align-items: center!important; gap: 20px!important; padding: 15px 20px!important; min-height: 94px!important; border: 1px solid #8CD5D3!important; border-radius: 4px!important; background-color: white!important; color: #838383!important; text-align: left!important; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
+body.lesson-2024 .gu-mirror .active-vertical,
+body.lesson-2024 .gu-mirror .active-horizontal {position: relative; border-color:#8CD5D3; background-color:#F2FAFA; box-shadow: 5px 5px 10px 0px rgba(93, 144, 149, 0.2);}
+body.lesson-2024 .gu-mirror.active-vertical::before,
+body.lesson-2024 .gu-mirror.active-horizontal::before {content: "" !important; position: absolute !important; top: 50% !important; left: 0 !important; width: 30px !important; height: 30px !important; border-radius: 100% !important; background-image: url("/assets/images/common/icon-chevron-up-down.svg")!important; background-position: center!important; background-repeat: no-repeat!important; background-size: contain!important; box-shadow: 5px 5px 20px 0px rgba(23, 128, 125, 0.2)!important; transform: translate(-50%, -50%)!important;}
+body.lesson-2024 .gu-mirror.active-horizontal::before {background-image: url("/assets/images/common/icon-chevron-left-right.svg")!important;}
+body.lesson-2024 .gu-mirror .inner-wrap {display: inline-flex; align-items: center; gap: 20px; overflow: hidden;}
+body.lesson-2024 .gu-mirror .inner-wrap .image-wrap {width:119px; min-height: 64px; max-height: 64px; border: 1px solid #ddd; display: block; background-image: url(/assets/images/subject/icon-no-image-default.svg); background-size: 21px 18px; border-radius:4px;}
+body.lesson-2024 .gu-mirror img {vertical-align: top;}
+body.lesson-2024 .gu-mirror a {display:block !important; flex-wrap: wrap!important; align-items: center!important; gap: 4px 10px!important; width: 100%!important; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+body.lesson-2024 .gu-mirror .badges {display: inline-flex; width: fit-content; margin-right: 4px;}
+body.lesson-2024 .gu-mirror a strong {font-weight:500;}
+body.lesson-2024 .gu-mirror .title-ellipsis {white-space:nowrap!important; display:inline-block!important; line-height: 1.5!important; -webkit-line-clamp:1 !important; -webkit-box-orient: vertical!important; overflow: hidden!important; text-overflow: ellipsis!important; width:auto!important;}
+body.lesson-2024 .gu-hide{display:none!important}
+body.lesson-2024 .gu-unselectable {-webkit-user-select:none!important; -moz-user-select:none!important; -ms-user-select:none!important; user-select:none!important; -webkit-touch-callout: none;}
+body.lesson-2024 .gu-transit {opacity: .3!important; box-sizing: border-box!important; border: 2px dashed #e6e6e6!important; background-color: #f6f6f6!important;}
+body.lesson-2024 .gu-mirror .buttons{flex-shrink: 0;}
+body.lesson-2024 .group-content.gu-mirror {display:block !important;}
+</style>
+<!--
+<style>
+	.wrapper-lesson:before {content:''; width:100%; height:100%; display:block; position:fixed; left:0; top:0; background-color:rgba(0,0,0,0.9); z-index:9999}
+</style>
+-->
+</html>

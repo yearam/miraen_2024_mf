@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover'">
+    <meta name="apple-mobile-web-app-title" content="엠티처 컨테이너 모바일">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <title>엠티처 mobile - container</title>
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="../images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="../images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/common/img-shortcut-common.png">
+    <!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+</head>
+<style>
+
+#mobile-list-area {width:100vw; height:100vh; display:flex; align-items: center; justify-content: center; flex-direction: column;}
+#mobile-list-area h1 {font-size:20px; font-weight:700;}
+#mobile-list-area ul {margin-top:15px;}
+#mobile-list-area ul li {}
+#mobile-list-area ul li + li {margin-top:5px;}
+#mobile-list-area ul li:before {content:'-'; margin-right:10px;}
+#mobile-list-area ul li.check:before {content:'*'; font-size:20px;}
+#mobile-list-area ul li a {color:#000; font-size:14px; text-decoration:none;}
+#mobile-list-area ul li.check a {text-underline-offset:3px; text-decoration: underline; font-weight:700;}
+
+</style>
+<body>
+    <div id="mobile-list-area">
+        <h1>컨테이너 모바일 목록</h1>
+        <ul>
+            <li><a href="./main.html" target="_blank">메인 (main.html)</a></li>
+            <li><a href="./page1.html" target="_blank">CMS 웹문서 일반 콘텐츠 (page1.html)</a></li>
+            <li><a href="./page2.html" target="_blank">CMS 웹문서 문항 콘텐츠 (page2.html)</a></li>
+            <li><a href="./page3.html" target="_blank">CMS 콘텐츠 이미지 (page3.html)</a></li>
+            <li class="check"><a href="#" target="_blank">CMS 콘텐츠 음원 (개발 후 보정)</a></li>
+            <li class="check"><a href="#" target="_blank">CMS 콘텐츠 영상 (개발 후 보정)</a></li>
+            <li><a href="./page4.html" target="_blank">CMS 콘텐츠 문서 (page4.html)</a></li>
+            <li><a href="./page5.html" target="_blank">CMS 파일모음 (page5.html)</a></li>
+            <li><a href="./page6.html" target="_blank">CMS 링크 임베디드 (page6.html)</a></li>
+            <li><a href="./page7.html" target="_blank">CMS 링크 새창 (page7.html)</a></li>
+            <li><a href="./page8.html" target="_blank">CMS ebook 콘텐츠 (page8.html)</a></li>
+            <li><a href="./page9.html" target="_blank">CMS 내자료 업로드,링크 (page9.html)</a></li>
+            <li><a href="./page10.html" target="_blank">AI 클래스 학습지 (page10.html)</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

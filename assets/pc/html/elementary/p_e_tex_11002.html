@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>엠티처 pc - elementary</title>
+    <script src="/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/plugin/select2.min.js"></script>
+    <script src="/assets/js/plugin/swiper-bundle-v8.js"></script>
+    <script src="/assets/js/plugin/jquery.bart.dropdown.js"></script>
+    <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
+    <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <script src="/assets/js/ui2024.js" type="text/javascript"></script>
+    <link href="/assets/pc/css/elementary2024.css" rel="stylesheet" />
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/images/common/img-shortcut-common.png">
+    <!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+</head>
+<!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
+
+<body class="theme-elementary lesson-2024"> <!-- lesson-2024 클래스 추가 -->
+    <div class="wrapper">
+        <div class="container">
+            <main>
+                <button type="button" class="button size-md" target-obj="select-tex-info">저장 진도 보기</button>
+            </main>
+        </div>
+    </div>
+    <div class="popup" id="select-tex-info" init-show>
+        <div class="popup-container size-xl">
+            <button class="icon-button close-button" close-obj>
+                <svg>
+                    <title>아이콘 - icon-close</title>
+                    <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+                </svg>
+            </button>
+            <div class="header">
+                <h3>저장 진도 보기</h3>
+            </div>
+<style>
+#tab-rounded-1 table td {height:auto;}
+</style>
+            <form action="submit">
+                <div class="body">
+                    <div class="tabs type-line">
+                        <!-- !NOTE .tab의 href의 값과 .pane의 ID 이 동일해야 합니다. -->
+                        <div class="tab">
+                            <ul>
+                                <li class="active"><a href="#tab-rounded-1">스마트 PPT</a></li>
+                                <li><a href="#tab-rounded-2">ebook</a></li>
+                            </ul>
+                        </div>
+                        <div class="pane-wrap margin-top-lg">
+                            <div id="tab-rounded-1" class="pane">
+                                <div class="table-items margin-top-lg"><!--  margin-top-lg -->
+                                    <table>
+                                        <caption>저장 진도 보기 스마트 PPT</caption>
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="*">
+                                            <col width="15%">
+                                            <col width="15%">
+                                            <col width="10%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">학년</th>
+                                                <th scope="col">반</th>
+                                                <th scope="col">학습 목차</th>
+                                                <th scope="col">저장일</th>
+                                                <th scope="col">수업하기</th>
+                                                <th scope="col">삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">1반</p></td>
+                                                <td class="text-left"><p class="title">단원 열기</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">진학반</p></td>
+                                                <td class="text-left"><p class="title">이번 시간에 배울 내용</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">진학반</p></td>
+                                                <td class="text-left"><p class="title">감각적 표현의 느낌 살려 소나기 낭송하기 감각적 표현의 느낌 살려 소나기 낭송하기</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">진학반</p></td>
+                                                <td class="text-left"><p class="title">감각적 표현의 느낌 살려 소나기 낭송하기 감각적 표현의 느낌 살려 소나기 낭송하기</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="tab-rounded-2" class="pane">
+                                <div class="table-items margin-top-lg"><!--  margin-top-lg -->
+                                    <table>
+                                        <caption>저장 진도 보기 ebook</caption>
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="*">
+                                            <col width="15%">
+                                            <col width="15%">
+                                            <col width="10%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">학년</th>
+                                                <th scope="col">반</th>
+                                                <th scope="col">학습 목차</th>
+                                                <th scope="col">저장일</th>
+                                                <th scope="col">수업하기</th>
+                                                <th scope="col">삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">1반</p></td>
+                                                <td class="text-left"><p class="title">단원 열기 ebook</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">진학반</p></td>
+                                                <td class="text-left"><p class="title">이번 시간에 배울 내용 ebook</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">진학반</p></td>
+                                                <td class="text-left"><p class="title">감각적 표현의 느낌 살려 소나기 낭송하기 감각적 표현의 느낌 살려 소나기 낭송하기 ebook</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="title text-center">1학년</p></td>
+                                                <td class="text-left"><p class="title">진학반</p></td>
+                                                <td class="text-left"><p class="title">감각적 표현의 느낌 살려 소나기 낭송하기 감각적 표현의 느낌 살려 소나기 낭송하기 ebook</p></td>
+                                                <td>2024-06-30</td>
+                                                <td>
+                                                    <button class="button size-md type01">수업하기</button>
+                                                </td>
+                                                <td>
+                                                    <button class="icon-button c-black" title="삭제">
+                                                        <svg>
+                                                            <use xlink:href="/assets/images/svg-sprite-solid.svg#icon-trash-can"></use>
+                                                        </svg>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button class="button size-xl type-dark">닫기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

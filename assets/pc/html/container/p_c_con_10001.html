@@ -12,6 +12,13 @@
     <script src="/assets/js/plugin/jquery.webui-popover.js"></script>
     <script src="/assets/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/assets/js/ui.js" type="text/javascript"></script>
+    <script src="/assets/js/ui2024.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <link href="/assets/pc/css/common2024.css" rel="stylesheet" />
     <link href="/assets/pc/css/container2024.css" rel="stylesheet" />
     <!-- 바로가기 아이콘 -->
@@ -23,20 +30,34 @@
     <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
   </head>
   <!-- !NOTE : theme 4 case : 초등 theme-elementary, 중학 theme-middle, 고등 theme-high, 유틸공통 theme-common -->
-  <body class="theme-common">
+    <body class="theme-common">
     <div class="container-wrapper">
       <header class="container-header">
         <div class="left-item">
           <button type="button" class="btn menu">전체목차</button> <!-- 전체목차 펼침 상태 active 추가 -->
           <div class="" style="display: none;">(전체목차 펼침영역)</div>
-          <span class="label-category">교과서 수업</span>
+          <!-- <span class="label-category">교과서 수업</span> -->
           <h1>[12342343~4차시] 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기 [3~4차시] 느낌을 살려 사물 표현하기</h1>
-          <button type="button" class="btn bookmark active">북마크</button> <!-- 북마크 설정시 active 추가 -->
+          <!--<button type="button" class="btn bookmark active">북마크</button>--> <!-- 북마크 설정시 active 추가 -->
         </div>
         <div class="right-item">
-          <span class="label-pages">국어 110~120쪽</span>
-          <span class="label-pages">국어 활동 110~112쪽</span>
+          <a href="#" class="label-pages"><i></i>국어 110~120쪽</a>
+          <a href="#" class="label-pages"><i></i>국어 활동 110~112쪽</a>
           <button type="button" class="btn save-class">진도 저장</button>
+          <div class="btn-ai-class-area">
+            <button type="button" class="btn btn-ai-class">
+              <img src="/assets/images/container/logo-aiclass-logo@2x.png" alt="AI CLASS">
+              <i class="icon-ai-class-arrow"></i>
+            </button>
+            <div class="al-class-menus-area">
+              <ul class="al-class-menus">
+                <li><button type="button">QR코드</button></li>
+                <li><button type="button">공유</button></li>
+                <li><button type="button">리포트<i class="icon-new-window"></i></button></li>
+                <li><button type="button">실시간 수업 현황<i class="icon-new-window"></i></button></li>
+              </ul>
+            </div>
+          </div>
           <button type="button" class="icon-help">도움말</button>
         </div>
       </header>
@@ -44,12 +65,12 @@
         <!-- 학습목차 목록 -->
         <div class="contents-list-wrap" style="display: block;">
           <div class="top">
-            <span class="contents-list-title">학습목차</span>
+            <span class="contents-list-title">학습 목차</span>
             <button type="button" class="btn close">닫기</button>
           </div>
           <div class="contents-list">
             <div>
-              <span class="title">도입</span>
+              <span class="title">단원도입</span>
               <ul>
                 <li><a href="#">단원 열기</a></li>
                 <li class="active"><a href="#">단원 학습 목표</a></li>
@@ -57,12 +78,47 @@
               </ul>
             </div>
             <div>
+              <span class="title">도입</span>
+              <ul>
+                <li><a href="#">생각 열기</a></li>
+                <li><a href="#">이번 시간에 배울 내용</a></li>
+                <li><a href="#">내 등록 자료</a></li>
+              </ul>
+            </div>
+            <div>
               <span class="title">전개</span>
               <ul>
-                <li><a href="#">대화에서 알맞은 높임 표현 대화에서 알맞은 높임 표현</a></li>
+                <li>
+                  <a href="#">1. 봄이 오는 소리를 어떻게 표현 했는 봄이 오는 소리를 어떻게 표현 했는</a>
+                </li>
                 <li><a href="#"><span class="tag green">국어활동</span>내 단원 학습 목표</a></li>
-                <li><a href="#">내 등록 자료</a></li>
-                <li class="active"><a href="#"><span class="tag violet">탐구해요</span>이번 시간은 대화에서 알맞은 높임 표현 고르고 물음에 답해보기</a><span class="tag icon red pdf">공유</span><span class="tag icon blue maker">교사maker</span><span class="tag icon navy share">공유</span></li>
+                <li class="active">
+                  <a href="#">
+                    <span class="tag violet">탐구해요</span>이번 시간은 대화에서 알맞은 높임 표현 고르고 물음에 답해보기
+                  </a>
+                  <div class="group-child-buttons">
+                    <button type="button" class="tag icon red pdf">PDF</button>
+                    <button type="button" class="tag icon red pdf">PDF</button>
+                    <button type="button" class="tag icon red pdf">PDF</button>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="tag violet">탐구해요</span>이번 시간은 대화에서 알맞은 높임 표현 고르고 물음에 답해보기
+                  </a>
+                  <div class="group-child-buttons">
+                    <button type="button" class="tag icon red pdf">PDF</button>
+                    <button type="button" class="tag icon red pdf">PDF</button>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="tag violet">탐구해요</span>이번 시간은 대화에서 알맞은 높임 표현 고르고 물음에 답해보기
+                  </a>
+                  <div class="group-child-buttons">
+                    <button type="button" class="tag icon red pdf">PDF</button>
+                  </div>
+                </li>
               </ul>
               <!-- 목차 mouse over 시 말풍선 노출 위치 script 작업 필요 -->
               <div class="overthumb" style="display: block;">
@@ -73,9 +129,42 @@
             <div>
               <span class="title">정리</span>
               <ul>
-                <li><a href="#">대화에서 알맞은 높임 표현 고르고 물음에 답해보기 1</a></li>
-                <li><a href="#"><span class="tag icon blue maker">교사maker</span>대화에서 알맞은 높임 표현 고르고 물음에 답해보기 2</a></li>
-                <li><a href="#">대화에서 알맞은 높임 표현 고르고 물음에 답해보기 3</a></li>
+                <li><a href="#">비주얼씽킹으로 핵심 정리</a></li>
+                <li><a href="#">대화에서 알맞은 높임 표현 고르고 물음에 답해보기 2</a></li>
+                <li class="item-group-list">
+                  <button type="button" class="item-group-title"><i class="icon-item-group"></i>다음 시간에 배울 내용</button>
+                  <ul>
+                    <li class="active">
+                      <a href="#"><i class="icon-group-child"></i>그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다.</a>
+                      <div class="group-child-buttons">
+                        <button type="button" class="tag icon red pdf">PDF</button>
+                        <button type="button" class="tag icon red pdf">PDF</button>
+                        <button type="button" class="tag icon red pdf">PDF</button>
+                      </div>
+                    </li><!-- 활성화 active 클래스 추가-->
+                    <li>
+                      <a href="#"><i class="icon-group-child"></i>그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다.</a>
+                      <div class="group-child-buttons">
+                        <button type="button" class="tag icon red pdf">PDF</button>
+                        <button type="button" class="tag icon red pdf">PDF</button>
+                      </div>
+                    </li><!-- 활성화 active 클래스 추가-->
+                    <li>
+                      <a href="#"><i class="icon-group-child"></i>그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다. 그룹 1입니다.</a>
+                      <div class="group-child-buttons">
+                        <button type="button" class="tag icon red pdf">PDF</button>
+                      </div>
+                    </li><!-- 활성화 active 클래스 추가-->
+                    <li><a href="#"><i class="icon-group-child"></i>그룹 2입니다.</a></li><!-- 활성화 active 클래스 추가-->
+                  </ul>
+                </li>
+                <li class="item-group-list">
+                  <button type="button" class="item-group-title"><i class="icon-item-group"></i>다음 시간에 배울 내용</button>
+                  <ul>
+                    <li><a href="#"><i class="icon-group-child"></i>그룹 1입니다.</a></li><!-- 활성화 active 클래스 추가-->
+                    <li><a href="#"><i class="icon-group-child"></i>그룹 2입니다.</a></li><!-- 활성화 active 클래스 추가-->
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -85,16 +174,28 @@
           </div>
         </div>
         <div class="viewer-wrap"><!-- 목차 닫힌 경우 wide 클래스 추가-->
+          <!--
+          <button type="button" class="viewer-item-scrap"> 스크랩 버튼 클릭 시 active 클래스 추가
+            <span class="txt-hidden">스크랩</span>
+          </button>
+          -->
           <div class="view-content-area">
-            <button type="button" class="btn-view-prev">이전 페이지로 이동</button>
+            <button type="button" class="btn-view-prev"><span class="txt-hidden">이전 페이지로 이동</span></button><!-- 클릭시 active 클래시 추가 및 disabled -->
             <div class="overthumb prev" style="display: block;">
               <span class="">이전</span>
               <img src="../../../images/container/thumb01.png" class="img-thumb" alt="이전 페이지 썸네일">
             </div>
             <div>
               학습콘텐츠(Viewer) 영역
+              <div class="head-toggle-btn">
+								<input type="checkbox" id="btn-toggle">
+								<label for="btn-toggle" class="head-toggle">
+									<span class="toggle-txt is-drag"><i class="icon-toggle-viewer icon-drag"></i>드래그</span>
+									<span class="toggle-txt"><i class="icon-toggle-viewer icon-click"></i>클릭</span>
+								</label>
+							</div>
             </div>
-            <button type="button" class="btn-view-next active">다음 페이지로 이동</button>
+            <button type="button" class="btn-view-next active"><span class="txt-hidden">다음 페이지로 이동</span></button><!-- 클릭시 active 클래시 추가 및 disabled -->
             <div class="overthumb next" style="display: block;">
               <span class="">다음</span>
               <img src="../../../images/container/thumb01.png" class="img-thumb" alt="다음 페이지 썸네일">
@@ -103,15 +204,15 @@
           <!-- 뷰어 내부 컨트롤 영역 -->
           <div class="viewer-control">
             <div class="center-item">
-              <button type="button" class="btn prev">이전</button>
-              <button type="button" class="btn next">다음</button>
-              <!--<a href="#" class="link">링크 바로가기</a>-->
+              <!-- <button type="button" class="btn prev">이전</button>
+              <button type="button" class="btn next">다음</button> -->
+              <!-- <a href="#" class="link">링크 바로가기</a> -->
             </div>
             <div class="right-item">
               <div class="paging">
                 <strong>1</strong>/<span>3</span>
               </div>
-              <button type="button" class="btn prev disabled">이전 페이지로 이동</button>
+              <button type="button" class="btn prev" disabled>이전 페이지로 이동</button>
               <button type="button" class="btn next">다음 페이지로 이동</button>
             </div>
           </div>
@@ -121,9 +222,9 @@
         <div class="left-item">
           <button type="button" class="btn list active">목차</button><!-- 학습목차 펼침 상태 active 추가 -->
           <button type="button" class="btn classtool"><!-- 수업도구 펼침 상태 active 추가 -->
-            <span>수업도구</span>
+            <span>수업 도구</span>
           </button>
-          <div class="classtool-menu pop" style="display: block;">
+          <div class="classtool-menu pop" style="display:none">
             <div class="info">수업 도구를 <strong>즐겨찾기</strong> 해 주세요.</div>
             <ul>
               <li>
@@ -169,9 +270,22 @@
           </button>
           <div class="" style="display: none;">(그리기 툴바)</div>
           <button type="button" class="btn fix mathtool"><!-- fix 클래스 추가 -->
-            <span>수학교구</span>
+            <span>수학 교구</span>
           </button>
-          <div class="mathtool-menu" style="display: none;">
+
+          <button type="button" class="btn fix chinese-chr"><!-- fix 클래스 추가 -->
+            <span>자전</span>
+          </button>
+
+          <!-- 국가 언어별 코드-->
+          <!-- voca-en 영어 -->
+          <!-- voca-zh 중국어 -->
+          <!-- voca-ja 일본어 -->
+          <button type="button" class="btn fix voca-ja"><!-- fix 클래스 추가 -->
+            <span>단어장</span>
+          </button>
+
+          <div class="mathtool-menu">
             <ul>
               <li>
                 <button type="button" class="btn deg">
@@ -220,17 +334,17 @@
           </div>
         </div>
         <div class="center-item">
-          <button type="button" class="btn paging prev">이전 페이지로 이동</button>
+          <button type="button" class="btn paging prev">이전 페이지로 이동</button><!-- 클릭시 active 클래스 추가 및 disabled 속성 -->
           <div>
             <strong>24</strong>/<span>125</span>
           </div>
-          <button type="button" class="btn paging next blue">다음 페이지로 이동</button>
+          <button type="button" class="btn paging next">다음 페이지로 이동</button><!-- 클릭시 active 클래스 추가 및 disabled 속성 -->
         </div>
         <div class="right-item">
           <div class="contents-control"><!-- contents-control 클래스 추가 -->
             <!--<button type="button" class="btn download"><span>다운로드</span></button>-->
-            <button type="button" class="btn retry"><span>다시하기</span></button>
-            <button type="button" class="btn a-check"><span>정답확인</span></button>
+            <button type="button" class="btn retry"><span>다시 하기</span></button>
+            <button type="button" class="btn a-check"><span>정답 확인</span></button>
           </div>
           <div class="zoom-group">
             <button type="button" class="btn zoomout">축소</button>
@@ -243,7 +357,7 @@
             <span>화면 최대화</span><!-- span 태그 추가 -->
           </button>
           <button type="button" class="btn note">
-            <span>수업노트</span>
+            <span>수업 노트</span>
           </button>
           <button type="button" class="btn setting">
             <span>설정</span><!-- span 태그 추가 -->
@@ -251,5 +365,94 @@
         </div>
       </footer>
     </div>
+<style>
+
+</style>
+    <div class="popup-alert" id="sample-id">
+      <div class="popup-container">
+        <div class="body flag-negative">
+          문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다. 문구가 들어갑니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-full-screen-end active" style="display:none"><!-- active class 추가 시 표시 -->
+      <p class="btn-full-screen-end-txt">전체 화면을 종료하려면 ESC 키를 눌러주세요.</p>
+      <button type="button" class="btn-full-screen-close"><span class="txt-hidden">전체 화면 종료</span></button>
+    </div>
+
+    <!--
+    openPopup({id: "popup-default"});
+    closePopup({id: "popup-default"});
+    -->
+    <div class="popup open-alert" id="popup-default">
+      <!-- !NOTE : popup-container에 .size-sm = width : 484 / .size-lg = width: 700 / .fluid = width : 100% -->
+      <div class="popup-container">
+        <div class="body">
+          <div class="open-alert-image">
+            <img src="../../../images/container/image-open-alert.svg" alt="">
+          </div>
+          <p class="open-alert-txt1"><strong>2025년 신학기</strong>에 서비스됩니다.</p>
+          <p class="open-alert-txt2">
+            새로운 미래엔 교과서로 편리한 <br>
+            수업을 하실 수 있도록 노력하겠습니다.
+          </p>
+          <button type="button" class="btn-open-alert" close-obj="popup-default">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-voca-list">
+      <div class="popup-container pop-voca-list">
+        <button class="icon-button close-button" close-obj>
+          <svg>
+            <title>아이콘 - icon-close</title>
+            <use href="/assets/images/svg-sprite-solid.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header">
+          단어장
+        </div>
+        <div class="body">
+          <iframe style="width:100%;height:100%;border:0;vertical-align:top;" src="https://contents.m-teacher.co.kr/cms/smartppt/etarae/web/high/chinese_character/tool/ops/06_a_a1_01_dic.html" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    openPopup({id: "popup-voca-list"});
+    closePopup("popup-voca-list");
+    -->
+
+<script>
+function modalActive(){
+  var $target = $('#sample-id');
+
+  $target.addClass('display-show');
+
+  setTimeout(function(){
+    $target.removeClass('display-show');
+  }, 3000);
+
+}
+
+function getWindowHeight(){
+	var target = $('body');
+	function setScrH(){
+        var vh = window.innerHeight * 0.01;
+        target.css('--vh',`${vh}px`)
+	}
+	setScrH();
+	$(window).on('resize' , function(){
+		setScrH();
+	})
+}
+
+$(function(){
+  //modalActive();
+  getWindowHeight();
+})
+</script>
+
   </body>
 </html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover'">
+    <meta name="apple-mobile-web-app-title" content="엠티처 컨테이너 모바일">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <title>엠티처 mobile - container</title>
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- 바로가기 아이콘 -->
+    <link rel="shortcut icon" type="image/png" href="../images/common/img-shortcut-common.png">
+    <!-- 180x180 이미지를 권장합니다. -->
+    <link rel="icon" type="image/png" sizes="180x180" href="../images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/common/img-shortcut-common.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/common/img-shortcut-common.png">
+    <!-- ios 기기에서 홈화면에 추가할 때 보여질 아이콘 이미지 -->
+    <!-- ios 기기에서 홈화면에 추가할 때 앱 이름을 정의 할 수 있다. -->
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-inner">
+                <h1 class="header-title">[3~4차시] 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기 느낌을 살려 사물 표현하기</h1>
+                <button type="button" class="button btn-window-close">
+                    <i class="icon-window-close"></i>
+                    <span class="txt-hidden">창 닫기</span>
+                </button>
+            </div>
+        </header><!-- #header -->
+
+        <section id="container">
+            <div id="contents">
+
+                <div class="viewer-contents">
+                    <!-- 뷰어 영역 시작 -->
+                    <div>
+                        Html 콘텐츠<br>
+                        (web_document_문항 콘텐츠)
+                    </div>
+
+                    <div class="viewer-contents-paging">
+                        <button type="button" class="viewer-contents-prev">
+                            <i class="icon-viewer-prev"></i>
+                            <span class="txt-hidden">이전</span>
+                        </button>
+
+                        <div class="viewer-num">
+                            <strong>25</strong>
+                            <em>/</em>
+                            <span>125</span>
+                        </div>
+
+                        <button type="button" class="viewer-contents-next">
+                            <i class="icon-viewer-next"></i>
+                            <span class="txt-hidden">다음</span>
+                        </button>
+                    </div>
+                    <!-- 뷰어 영역 끝 -->
+                </div><!-- .viewer-contents -->
+
+                <div class="btm-study-area">
+                    <button type="button" class="button btn-study-info">
+                        <i class="icon-study-info"></i>
+                        <span class="txt-hidden">페이지 정보</span>
+                    </button>
+                    <div class="layer-study-info">
+                        <p class="info-page-num">국어 44~46쪽</p>
+                        <p class="info-page-text"><!-- 해당 영역 내용이 없을 경우 display:none -->
+                            역사로 탐구하는 현대세계 444~446쪽
+                        </p>
+                    </div>
+                </div>
+            </div><!-- #contents -->
+        </section><!-- #container -->
+
+        <footer id="footer">
+            <div class="footer-inner">
+                <button type="button" class="button btn-study-list" onclick="layerOpen('.layer-01')"><!-- 활성 : active class --><!-- 팝업 열기 layerOpen(대상) -->
+                    <i class="icon-study-list position-unset"></i>
+                    <span>학습목차</span>
+                </button>
+
+                <div class="study-control-page">
+                    <button type="button" class="button btn-page-prev" onclick="layerOpen('.layer-02')"><!-- 활성 : active class / 비활성 : disabled 속성-->
+                        <i class="icon-page-prev"></i>
+                        <span class="txt-hidden">이전</span>
+                    </button>
+
+                    <div class="study-paging">
+                        <strong>13</strong> <em>/</em> <span>125</span>
+                    </div>
+
+                    <button type="button" class="button btn-page-next" onclick="layerOpen('.layer-03')"><!-- 활성 : active class / 비활성 : disabled 속성-->
+                        <i class="icon-page-next"></i>
+                        <span class="txt-hidden">다음</span>
+                    </button>
+                </div>
+
+                <button type="button" class="button btn-answer-check"><!-- 활성 : active class -->
+                    <i class="icon-answer-check position-unset"></i>
+                    <span>정답 확인</span>
+                </button>
+
+                <button type="button" class="button btn-answer-retry" style="display:none"><!-- 활성 : active class -->
+                    <i class="icon-answer-retry position-unset"></i>
+                    <span>다시 하기</span>
+                </button>
+
+                <button type="button" class="button btn-download" style="display:none"><!-- 활성 : active class -->
+                    <i class="icon-download position-unset"></i>
+                    <span>다운로드</span>
+                </button>
+
+                <button type="button" class="button btn-new-window" style="display:none"><!-- 활성 : active class -->
+                    <i class="icon-new-window position-unset"></i>
+                    <span>바로가기</span>
+                </button>
+            </div><!-- .footer-inner -->
+        </footer><!-- #footer -->
+    </div><!-- // #wrap -->
+
+    <div class="layer-popup layer-01"><!-- 활성 : active class -->
+        <div class="layer-inner">
+            <div class="layer-header">
+                <div class="header-inner">
+                    <h1 class="header-title">학습목차</h1>
+                    <button type="button" class="button btn-window-close" onclick="layerClose('.layer-01')"><!-- 팝업 닫기 layerClose(대상) -->
+                        <i class="icon-window-close"></i>
+                        <span class="txt-hidden">창 닫기</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="layer-body">
+                <div class="layer-body-inner">
+                    <ul class="study-item-list">
+                        <li class="active"><!-- 활성 : active class -->
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/800/700" alt="">
+                                </div>
+                                <p class="item-text">1</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/320/420" alt="">
+                                </div>
+                                <p class="item-text">2</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/510/210" alt="">
+                                </div>
+                                <p class="item-text">3</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/830/730" alt="">
+                                </div>
+                                <p class="item-text">4</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/540/240" alt="">
+                                </div>
+                                <p class="item-text">5</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/350/450" alt="">
+                                </div>
+                                <p class="item-text">6</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/860/760" alt="">
+                                </div>
+                                <p class="item-text">7</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/570/270" alt="">
+                                </div>
+                                <p class="item-text">8</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/380/480" alt="">
+                                </div>
+                                <p class="item-text">9</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/890/790" alt="">
+                                </div>
+                                <p class="item-text">10</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/568/268" alt="">
+                                </div>
+                                <p class="item-text">11</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/378/478" alt="">
+                                </div>
+                                <p class="item-text">12</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/380/480" alt="">
+                                </div>
+                                <p class="item-text">13</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/570/270" alt="">
+                                </div>
+                                <p class="item-text">14</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/800/700" alt="">
+                                </div>
+                                <p class="item-text">15</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/320/420" alt="">
+                                </div>
+                                <p class="item-text">16</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/510/210" alt="">
+                                </div>
+                                <p class="item-text">17</p>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button">
+                                <div class="image-wrap">
+                                    <img src="https://picsum.photos/830/730" alt="">
+                                </div>
+                                <p class="item-text">18</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer-popup is-confirm layer-02">
+        <div class="layer-inner">
+            <div class="layer-body">
+                <div class="layer-msg-box">
+                    <i class="icon-confirm-check"></i>
+                    <p class="layer-msg-text">
+                        첫 페이지 입니다. <br>
+                        이전 학습 주제로 이동하시겠습니까?
+                    </p>
+                    <div class="btn-area">
+                        <button type="button" class="button btn-cancel" onclick="layerClose('.layer-02')">취소</button>
+                        <button type="button" class="button btn-confirm">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer-popup is-confirm layer-03">
+        <div class="layer-inner">
+            <div class="layer-body">
+                <div class="layer-msg-box">
+                    <i class="icon-confirm-check"></i>
+                    <p class="layer-msg-text">
+                        마지막 페이지 입니다. <br>
+                        다음 학습 주제로 이동하시겠습니까?
+                    </p>
+                    <div class="btn-area">
+                        <button type="button" class="button btn-cancel" onclick="layerClose('.layer-03')">취소</button>
+                        <button type="button" class="button btn-confirm">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
